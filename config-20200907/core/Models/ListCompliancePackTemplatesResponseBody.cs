@@ -10,78 +10,78 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListCompliancePackTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the compliance pack templates.</para>
+        /// <para>The information about the compliance package templates returned.</para>
         /// </summary>
         [NameInMap("CompliancePackTemplatesResult")]
         [Validation(Required=false)]
         public ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResult CompliancePackTemplatesResult { get; set; }
         public class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResult : TeaModel {
             /// <summary>
-            /// <para>A list of compliance pack templates.</para>
+            /// <para>The compliance package templates.</para>
             /// </summary>
             [NameInMap("CompliancePackTemplates")]
             [Validation(Required=false)]
             public List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplates> CompliancePackTemplates { get; set; }
             public class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplates : TeaModel {
                 /// <summary>
-                /// <para>The ID of the compliance pack template.</para>
+                /// <para>The ID of the compliance package template.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ct-5f26ff4e06a300c4****</para>
+                /// <para>ct-d254ff4e06a300cf****</para>
                 /// </summary>
                 [NameInMap("CompliancePackTemplateId")]
                 [Validation(Required=false)]
                 public string CompliancePackTemplateId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the compliance pack template.</para>
+                /// <para>The name of the compliance package template.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ClassifiedProtectionPreCheck</para>
+                /// <para>BestPracticesForResourceStability</para>
                 /// </summary>
                 [NameInMap("CompliancePackTemplateName")]
                 [Validation(Required=false)]
                 public string CompliancePackTemplateName { get; set; }
 
                 /// <summary>
-                /// <para>A list of default rules in the compliance pack.</para>
+                /// <para>The default rules in the compliance package.</para>
                 /// </summary>
                 [NameInMap("ConfigRules")]
                 [Validation(Required=false)]
                 public List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules> ConfigRules { get; set; }
                 public class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRules : TeaModel {
                     /// <summary>
-                    /// <para>The parameters of the managed rule.</para>
+                    /// <para>The input parameter of the managed rule.</para>
                     /// </summary>
                     [NameInMap("ConfigRuleParameters")]
                     [Validation(Required=false)]
                     public List<ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRulesConfigRuleParameters> ConfigRuleParameters { get; set; }
                     public class ListCompliancePackTemplatesResponseBodyCompliancePackTemplatesResultCompliancePackTemplatesConfigRulesConfigRuleParameters : TeaModel {
                         /// <summary>
-                        /// <para>The name of the parameter for the managed rule.</para>
+                        /// <para>The name of the input parameter of the managed rule.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>necessity</para>
+                        /// <para>days</para>
                         /// </summary>
                         [NameInMap("ParameterName")]
                         [Validation(Required=false)]
                         public string ParameterName { get; set; }
 
                         /// <summary>
-                        /// <para>The value of the parameter for the managed rule.</para>
+                        /// <para>The value of the input parameter of the managed rule.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>asap</para>
+                        /// <para>90</para>
                         /// </summary>
                         [NameInMap("ParameterValue")]
                         [Validation(Required=false)]
                         public string ParameterValue { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the parameter is required for the managed rule. Valid values:</para>
+                        /// <para>Indicates whether the parameter is required in the managed rule. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>true: The parameter is required.</description></item>
-                        /// <item><description>false: The parameter is not required.</description></item>
+                        /// <item><description>true: required</description></item>
+                        /// <item><description>false: optional</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -94,33 +94,33 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     }
 
                     /// <summary>
-                    /// <para>The description of the control. This parameter is returned only for compliance packs that are created based on a regulation.</para>
+                    /// <para>The description of the regulation. This parameter is available only for regulation compliance packages.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>e) Possible known vulnerabilities should be found and remedied in a timely manner after adequate testing and evaluation.\nf) It shall be able to detect intrusion into important nodes and provide an alarm in case of serious intrusion events.</para>
+                    /// <para>No classic networks exist.</para>
                     /// </summary>
                     [NameInMap("ControlDescription")]
                     [Validation(Required=false)]
                     public string ControlDescription { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the control.</para>
+                    /// <para>The regulation ID.</para>
                     /// <remarks>
-                    /// <para>This parameter appears only for regulatory compliance packages.</para>
+                    /// <para> This parameter is available only for regulation compliance packages.</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>8.1.4.4</para>
+                    /// <para>3.1</para>
                     /// </summary>
                     [NameInMap("ControlId")]
                     [Validation(Required=false)]
                     public string ControlId { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the rule can be quickly enabled. Valid values:</para>
+                    /// <para>Indicates whether the rules are enabled together with the compliance package. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>true: The rule can be quickly enabled.</description></item>
-                    /// <item><description>false: The rule cannot be quickly enabled.</description></item>
+                    /// <item><description>true</description></item>
+                    /// <item><description>false</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <para>The description of the rule.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>If no vulnerabilities that are of the specified type and severity level and to be fixed exist on the running ECS instances that are protected by Security Center, the configuration is considered compliant. This rule does not apply to ECS instances that are not in the running state.</para>
+                    /// <para>If the expiration time of the SLB certificate is later than the specified number of days after the check time, the configuration is considered compliant. Default value: 90 days.</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <para>The identifier of the managed rule.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>ecs-instance-updated-security-vul</para>
+                    /// <para>slb-servercertificate-expired-check</para>
                     /// </summary>
                     [NameInMap("ManagedRuleIdentifier")]
                     [Validation(Required=false)]
@@ -154,17 +154,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// <para>The name of the managed rule.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>ecs-instance-updated-security-vul</para>
+                    /// <para>slb-servercertificate-expired-check</para>
                     /// </summary>
                     [NameInMap("ManagedRuleName")]
                     [Validation(Required=false)]
                     public string ManagedRuleName { get; set; }
 
                     /// <summary>
-                    /// <para>The resource types that are evaluated by the rule.</para>
+                    /// <para>The types of the resources evaluated based on the rule.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>ACS::ECS::Instance</para>
+                    /// <para>ACS::SLB::ServerCertificate</para>
                     /// </summary>
                     [NameInMap("ResourceTypesScope")]
                     [Validation(Required=false)]
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                     /// </list>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>2</para>
+                    /// <para>1</para>
                     /// </summary>
                     [NameInMap("RiskLevel")]
                     [Validation(Required=false)]
@@ -188,37 +188,37 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 }
 
                 /// <summary>
-                /// <para>The description of the compliance pack.</para>
+                /// <para>The description of the compliance package.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Checks the compliance of Alibaba Cloud resources based on the specific requirements of MLPS 2.0 Level 3.</para>
+                /// <para>example-description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The classification labels of the compliance pack.</para>
+                /// <para>The tag of the compliance package.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Regulation</para>
+                /// <para>tagKey-1</para>
                 /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
                 public string Labels { get; set; }
 
                 /// <summary>
-                /// <para>The UNIX timestamp when the compliance pack was last updated.</para>
+                /// <para>The time when the compliance package was last updated.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1747983081</para>
+                /// <para>1663408308</para>
                 /// </summary>
                 [NameInMap("LastUpdate")]
                 [Validation(Required=false)]
                 public int? LastUpdate { get; set; }
 
                 /// <summary>
-                /// <para>The risk level of the rules in the compliance pack. Valid values:</para>
+                /// <para>The risk level of the managed rule in the compliance package. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>1: high</description></item>
                 /// <item><description>2: medium</description></item>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of compliance pack templates.</para>
+            /// <para>The total number of the compliance package templates returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D67FC82F-25AE-4268-A94C-3348340748F9</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The members in the account group.</para>
         /// <remarks>
-        /// <para>You can leave this parameter empty to skip updating the member list. To update the member list, you must specify both <c>AccountId</c> and <c>AccountType</c>.</para>
+        /// <para> When you modify the configurations of an account group, this parameter can be left empty. In this case, the member list is not updated. If you want to update the member list, you must configure both the <c>AccountId</c> and <c>AccountType</c> parameters.</para>
         /// </remarks>
         /// 
         /// <b>if can be null:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <para>The ID of the member.</para>
             /// <para>For more information about how to obtain the ID of a member, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</para>
             /// <remarks>
-            /// <para>To update the member list, you must specify both <c>AccountId</c> and <c>AccountType</c>.</para>
+            /// <para> If you want to update the member list, you must configure both the <c>AccountId</c> and <c>AccountType</c> parameters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// <para>The name of the member.</para>
+            /// <para>The display name of the member.</para>
             /// <para>For more information about how to obtain the name of a member, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</para>
             /// <remarks>
-            /// <para>To update the member list, you must specify both <c>AccountId</c> and <c>AccountType</c>.</para>
+            /// <para> If you want to update the member list, you must configure both the <c>AccountId</c> and <c>AccountType</c> parameters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -51,9 +51,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The affiliation of the member. Only ResourceDirectory is supported.</para>
+            /// <para>The resource directory to which the member belongs. Valid value: ResourceDirectory. ResourceDirectory indicates that the member belongs to a resource directory.</para>
             /// <remarks>
-            /// <para>To update the member list, you must specify both <c>AccountId</c> and <c>AccountType</c>.</para>
+            /// <para> If you want to update the member list, you must configure both the <c>AccountId</c> and <c>AccountType</c> parameters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorName { get; set; }
 
         /// <summary>
-        /// <para>A client token that ensures the idempotence of the request. Generate a unique token for each request. The token can contain only ASCII characters and must be no more than 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1594295238-f9361358-5843-4294-8d30-b5183fac****</para>
@@ -103,14 +103,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <para>For more information about how to obtain the description of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试组</para>
+        /// <para>Test_Aggregator_Description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the folder. You can enter multiple folder IDs. Separate the IDs with commas (,).</para>
+        /// <para>The folder ID. Separate multiple folder IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>fd-brHdgv****,fd-brHdgk****</para>
@@ -122,8 +122,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The tags of the resource. This parameter is deprecated and no longer takes effect. Ignore this parameter.</para>
-        /// <para>You can attach up to 20 tags.</para>
+        /// <para>The tags of the resource.</para>
+        /// <para>You can add up to 20 tags to a resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -131,8 +131,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<UpdateAggregatorRequestTag> Tag { get; set; }
         public class UpdateAggregatorRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag. A tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys.</para>
+            /// <para>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs</c>:. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key-1</para>
@@ -142,7 +142,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag values.</para>
+            /// <para>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each key-value must be unique. You can specify at most 20 tag values in each call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value-1</para>

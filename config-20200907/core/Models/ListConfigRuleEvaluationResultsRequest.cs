@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListConfigRuleEvaluationResultsRequest : TeaModel {
         /// <summary>
-        /// <para>The compliance package ID.</para>
-        /// <para>For more information about how to obtain a compliance package ID, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</para>
+        /// <para>The ID of the compliance package.</para>
+        /// <para>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cp-f1e3326622af00cb****</para>
@@ -21,18 +21,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string CompliancePackId { get; set; }
 
         /// <summary>
-        /// <para>The compliance evaluation result. Valid values:</para>
+        /// <para>The compliance evaluation result of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>COMPLIANT: The resource is compliant.</para>
-        /// </description></item>
-        /// <item><description><para>NON_COMPLIANT: The resource is non-compliant.</para>
-        /// </description></item>
-        /// <item><description><para>NOT_APPLICABLE: The rule does not apply to the resource.</para>
-        /// </description></item>
-        /// <item><description><para>INSUFFICIENT_DATA: No data is available.</para>
-        /// </description></item>
-        /// <item><description><para>IGNORED: The evaluation result is ignored.</para>
-        /// </description></item>
+        /// <item><description>COMPLIANT: The resource is evaluated as compliant.</description></item>
+        /// <item><description>NON_COMPLIANT: The resource is evaluated as non-compliant.</description></item>
+        /// <item><description>NOT_APPLICABLE: The rule does not apply to the resources.</description></item>
+        /// <item><description>INSUFFICIENT_DATA: No data is available.</description></item>
+        /// <item><description>IGNORED: The resource is ignored during compliance evaluation.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +42,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The rule ID.</para>
-        /// <para>For more information about how to obtain a rule ID, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a> operation to obtain the rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cr-cac56457e0d900d3****</para>
@@ -57,7 +52,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page. Valid values: 1 to 100.</para>
+        /// <para>The maximum number of entries to return in a request. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -67,7 +62,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>If the response is truncated, use the <c>NextToken</c> to retrieve the next page of results.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IWBjqMYSy0is7zSMGu16****</para>
@@ -77,7 +72,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region where the evaluated resource resides. Separate multiple regions with commas (,).</para>
+        /// <para>The ID of the region where the resources that you want to evaluate reside. Separate multiple region IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -87,7 +82,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Regions { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the evaluated resource belongs. Separate multiple resource group IDs with commas (,).</para>
+        /// <para>The ID of the resource group to which the resources that you want to evaluate belong. Separate multiple resource group IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2indxn3g****</para>
@@ -97,10 +92,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the evaluated resource. Separate multiple resource types with commas (,).</para>
+        /// <para>The type of the resources that you want to evaluate. Separate multiple resource types with commas (,).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ACS::ECS::Instance</para>
+        /// <para>ACS::ECS::Instane</para>
         /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]

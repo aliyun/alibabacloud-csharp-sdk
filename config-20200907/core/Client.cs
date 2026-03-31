@@ -44,8 +44,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用账号组规则</para>
+        /// <para>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActiveAggregateConfigRulesRequest
@@ -94,8 +99,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用账号组规则</para>
+        /// <para>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActiveAggregateConfigRulesRequest
@@ -144,8 +154,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用账号组规则</para>
+        /// <para>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActiveAggregateConfigRulesRequest
@@ -162,8 +177,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用账号组规则</para>
+        /// <para>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Enables one or more rules in an account group. After a rule is enabled, the rule continues to automatically evaluate resources based on the trigger mechanism.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActiveAggregateConfigRulesRequest
@@ -180,8 +200,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用指定规则</para>
+        /// <para>Enables a rule in Cloud Config. After a rule is enabled, Cloud Config automatically evaluates the compliance of a resource based on the trigger mechanism of the rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The rule is in the <c>INACTIVE</c> state.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActiveConfigRulesRequest
@@ -226,8 +252,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用指定规则</para>
+        /// <para>Enables a rule in Cloud Config. After a rule is enabled, Cloud Config automatically evaluates the compliance of a resource based on the trigger mechanism of the rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The rule is in the <c>INACTIVE</c> state.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActiveConfigRulesRequest
@@ -272,8 +304,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用指定规则</para>
+        /// <para>Enables a rule in Cloud Config. After a rule is enabled, Cloud Config automatically evaluates the compliance of a resource based on the trigger mechanism of the rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The rule is in the <c>INACTIVE</c> state.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActiveConfigRulesRequest
@@ -290,8 +328,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用指定规则</para>
+        /// <para>Enables a rule in Cloud Config. After a rule is enabled, Cloud Config automatically evaluates the compliance of a resource based on the trigger mechanism of the rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The rule is in the <c>INACTIVE</c> state.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActiveConfigRulesRequest
@@ -308,8 +352,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定账号组规则加入指定账号组合规包</para>
+        /// <para>Adds one or more rules in an account group to a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The sample request in this topic shows you how to add the <c>cr-6cc4626622af00e7****</c> rule in the <c>ca-75b4626622af00c3****</c> account group to the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachAggregateConfigRuleToCompliancePackRequest
@@ -358,8 +407,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定账号组规则加入指定账号组合规包</para>
+        /// <para>Adds one or more rules in an account group to a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The sample request in this topic shows you how to add the <c>cr-6cc4626622af00e7****</c> rule in the <c>ca-75b4626622af00c3****</c> account group to the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachAggregateConfigRuleToCompliancePackRequest
@@ -408,8 +462,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定账号组规则加入指定账号组合规包</para>
+        /// <para>Adds one or more rules in an account group to a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The sample request in this topic shows you how to add the <c>cr-6cc4626622af00e7****</c> rule in the <c>ca-75b4626622af00c3****</c> account group to the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachAggregateConfigRuleToCompliancePackRequest
@@ -426,8 +485,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定账号组规则加入指定账号组合规包</para>
+        /// <para>Adds one or more rules in an account group to a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The sample request in this topic shows you how to add the <c>cr-6cc4626622af00e7****</c> rule in the <c>ca-75b4626622af00c3****</c> account group to the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachAggregateConfigRuleToCompliancePackRequest
@@ -444,8 +508,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定规则加入指定合规包</para>
+        /// <para>Adds one or more rules to a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to add the <c>cr-6cc4626622af00e7****</c> rule to the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachConfigRuleToCompliancePackRequest
@@ -490,8 +559,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定规则加入指定合规包</para>
+        /// <para>Adds one or more rules to a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to add the <c>cr-6cc4626622af00e7****</c> rule to the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachConfigRuleToCompliancePackRequest
@@ -536,8 +610,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定规则加入指定合规包</para>
+        /// <para>Adds one or more rules to a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to add the <c>cr-6cc4626622af00e7****</c> rule to the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachConfigRuleToCompliancePackRequest
@@ -554,8 +633,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定规则加入指定合规包</para>
+        /// <para>Adds one or more rules to a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to add the <c>cr-6cc4626622af00e7****</c> rule to the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachConfigRuleToCompliancePackRequest
@@ -572,7 +656,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>合规包复制</para>
+        /// <para>Replicates compliance packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -622,7 +706,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>合规包复制</para>
+        /// <para>Replicates compliance packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -672,7 +756,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>合规包复制</para>
+        /// <para>Replicates compliance packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -690,7 +774,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>合规包复制</para>
+        /// <para>Replicates compliance packages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -708,7 +792,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>规则复制</para>
+        /// <para>Replicates rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -758,7 +842,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>规则复制</para>
+        /// <para>Replicates rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -808,7 +892,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>规则复制</para>
+        /// <para>Replicates rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -826,7 +910,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>规则复制</para>
+        /// <para>Replicates rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -844,7 +928,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成当前账号搜索结果下载文件</para>
+        /// <para>Creates a downloadable resource file for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -886,7 +970,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成当前账号搜索结果下载文件</para>
+        /// <para>Creates a downloadable resource file for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -928,7 +1012,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成当前账号搜索结果下载文件</para>
+        /// <para>Creates a downloadable resource file for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -946,7 +1030,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成当前账号搜索结果下载文件</para>
+        /// <para>Creates a downloadable resource file for the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -964,12 +1048,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a downloadable file of advanced search results for resources in an account group.</para>
+        /// <para>Creates a downloadable resource file for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query for ECS instances in the account group <c>ca-edd3626622af00b3****</c> and create a downloadable file of the search results.</para>
+        /// <para>This topic provides an example on how to create a downloadable resource file for an account group whose ID is <c>ca-edd3626622af00b3****</c>. The resource file includes all the ECS instances in the account group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1015,12 +1099,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a downloadable file of advanced search results for resources in an account group.</para>
+        /// <para>Creates a downloadable resource file for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query for ECS instances in the account group <c>ca-edd3626622af00b3****</c> and create a downloadable file of the search results.</para>
+        /// <para>This topic provides an example on how to create a downloadable resource file for an account group whose ID is <c>ca-edd3626622af00b3****</c>. The resource file includes all the ECS instances in the account group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1066,12 +1150,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a downloadable file of advanced search results for resources in an account group.</para>
+        /// <para>Creates a downloadable resource file for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query for ECS instances in the account group <c>ca-edd3626622af00b3****</c> and create a downloadable file of the search results.</para>
+        /// <para>This topic provides an example on how to create a downloadable resource file for an account group whose ID is <c>ca-edd3626622af00b3****</c>. The resource file includes all the ECS instances in the account group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1089,12 +1173,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a downloadable file of advanced search results for resources in an account group.</para>
+        /// <para>Creates a downloadable resource file for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query for ECS instances in the account group <c>ca-edd3626622af00b3****</c> and create a downloadable file of the search results.</para>
+        /// <para>This topic provides an example on how to create a downloadable resource file for an account group whose ID is <c>ca-edd3626622af00b3****</c>. The resource file includes all the ECS instances in the account group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1112,15 +1196,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a compliance pack for a specified account group.</para>
+        /// <para>Creates a compliance package for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A compliance pack is a collection of rules. When you create a compliance pack, you can select default rules from a compliance pack template. You can also select rules from rule templates and the list of existing rules.
-        /// After a compliance pack is created, its rules are evaluated once by default. Subsequent evaluations are automatically triggered based on the trigger mechanism of the rules. You can also manually trigger an evaluation.
-        /// A compliance pack template is a collection of rules created by CloudConfig for a specific compliance scenario.
-        /// This topic provides an example of how to create a compliance pack for the account group <c>ca-f632626622af0079****</c> using the compliance pack template <c>ClassifiedProtectionPreCheck</c> (Classified Protection Level 3 Pre-check).</para>
+        /// <para>This topic provides an example on how to create a compliance package for the account group <c>ca-f632626622af0079****</c> by using the compliance package template <c>ClassifiedProtectionPreCheck</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1256,15 +1337,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a compliance pack for a specified account group.</para>
+        /// <para>Creates a compliance package for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A compliance pack is a collection of rules. When you create a compliance pack, you can select default rules from a compliance pack template. You can also select rules from rule templates and the list of existing rules.
-        /// After a compliance pack is created, its rules are evaluated once by default. Subsequent evaluations are automatically triggered based on the trigger mechanism of the rules. You can also manually trigger an evaluation.
-        /// A compliance pack template is a collection of rules created by CloudConfig for a specific compliance scenario.
-        /// This topic provides an example of how to create a compliance pack for the account group <c>ca-f632626622af0079****</c> using the compliance pack template <c>ClassifiedProtectionPreCheck</c> (Classified Protection Level 3 Pre-check).</para>
+        /// <para>This topic provides an example on how to create a compliance package for the account group <c>ca-f632626622af0079****</c> by using the compliance package template <c>ClassifiedProtectionPreCheck</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1400,15 +1478,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a compliance pack for a specified account group.</para>
+        /// <para>Creates a compliance package for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A compliance pack is a collection of rules. When you create a compliance pack, you can select default rules from a compliance pack template. You can also select rules from rule templates and the list of existing rules.
-        /// After a compliance pack is created, its rules are evaluated once by default. Subsequent evaluations are automatically triggered based on the trigger mechanism of the rules. You can also manually trigger an evaluation.
-        /// A compliance pack template is a collection of rules created by CloudConfig for a specific compliance scenario.
-        /// This topic provides an example of how to create a compliance pack for the account group <c>ca-f632626622af0079****</c> using the compliance pack template <c>ClassifiedProtectionPreCheck</c> (Classified Protection Level 3 Pre-check).</para>
+        /// <para>This topic provides an example on how to create a compliance package for the account group <c>ca-f632626622af0079****</c> by using the compliance package template <c>ClassifiedProtectionPreCheck</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1426,15 +1501,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a compliance pack for a specified account group.</para>
+        /// <para>Creates a compliance package for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A compliance pack is a collection of rules. When you create a compliance pack, you can select default rules from a compliance pack template. You can also select rules from rule templates and the list of existing rules.
-        /// After a compliance pack is created, its rules are evaluated once by default. Subsequent evaluations are automatically triggered based on the trigger mechanism of the rules. You can also manually trigger an evaluation.
-        /// A compliance pack template is a collection of rules created by CloudConfig for a specific compliance scenario.
-        /// This topic provides an example of how to create a compliance pack for the account group <c>ca-f632626622af0079****</c> using the compliance pack template <c>ClassifiedProtectionPreCheck</c> (Classified Protection Level 3 Pre-check).</para>
+        /// <para>This topic provides an example on how to create a compliance package for the account group <c>ca-f632626622af0079****</c> by using the compliance package template <c>ClassifiedProtectionPreCheck</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1452,24 +1524,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a delivery channel for a specified account group to deliver resource data to Simple Log Service (SLS), Object Storage Service (OSS), or Simple Message Queue (formerly MNS).</para>
+        /// <para>Creates a delivery channel for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Deliver to Simple Log Service (SLS)
-        /// To deliver configuration history, non-compliance events, and scheduled resource snapshots to a Logstore in Simple Log Service (SLS), you must first create a log project and a Logstore. This lets you query and analyze logs. For examples of the content in JSON format, see <a href="https://help.aliyun.com/document_detail/308347.html">Example of resource configuration change history</a>, <a href="https://help.aliyun.com/document_detail/307122.html">Example of resource non-compliance event</a>, and <a href="https://help.aliyun.com/document_detail/611894.html">Example of scheduled resource snapshot</a>.</description></item>
-        /// <item><description>Deliver to Object Storage Service (OSS)
-        /// To deliver scheduled resource snapshots or configuration history to a specified location in Object Storage Service (OSS), you must first create a bucket. This lets you view or download files in JSON format. For examples of the content in JSON format, see <a href="https://help.aliyun.com/document_detail/305669.html">Example of scheduled resource snapshot</a> and <a href="https://help.aliyun.com/document_detail/189738.html">Example of resource configuration change history</a>.</description></item>
-        /// <item><description>Deliver to Simple Message Queue (MNS)
-        /// To deliver resource configuration change history and resource non-compliance events to a specified topic in Simple Message Queue (formerly MNS), you must first create a topic. This lets you configure the push method and content for the topic. For examples of the content in JSON format, see <a href="https://help.aliyun.com/document_detail/309462.html">Example of resource configuration change history</a> and <a href="https://help.aliyun.com/document_detail/309463.html">Example of resource non-compliance event</a>.</description></item>
-        /// </list>
-        /// <h3>Limits</h3>
-        /// <para>You can create a maximum of five delivery channels for each account group.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This example shows how to create a delivery channel of the <c>OSS</c> type for the account group <c>ca-a4e5626622af0079****</c>. The Amazon Resource Name (ARN) of the delivery destination is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The response shows that the delivery channel is created and its ID is <c>cdc-8e45ff4e06a3a8****</c>.</para>
+        /// <para>In this example, a delivery channel is created for an account group. The ID of the account group is <c>ca-a4e5626622af0079****</c>. The type of the delivery channel is <c>OSS</c> and the Alibaba Cloud Resource Name (ARN) of the delivery destination is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The result indicates that the delivery channel is created. The ID of the delivery channel is <c>cdc-8e45ff4e06a3a8****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1559,24 +1619,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a delivery channel for a specified account group to deliver resource data to Simple Log Service (SLS), Object Storage Service (OSS), or Simple Message Queue (formerly MNS).</para>
+        /// <para>Creates a delivery channel for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Deliver to Simple Log Service (SLS)
-        /// To deliver configuration history, non-compliance events, and scheduled resource snapshots to a Logstore in Simple Log Service (SLS), you must first create a log project and a Logstore. This lets you query and analyze logs. For examples of the content in JSON format, see <a href="https://help.aliyun.com/document_detail/308347.html">Example of resource configuration change history</a>, <a href="https://help.aliyun.com/document_detail/307122.html">Example of resource non-compliance event</a>, and <a href="https://help.aliyun.com/document_detail/611894.html">Example of scheduled resource snapshot</a>.</description></item>
-        /// <item><description>Deliver to Object Storage Service (OSS)
-        /// To deliver scheduled resource snapshots or configuration history to a specified location in Object Storage Service (OSS), you must first create a bucket. This lets you view or download files in JSON format. For examples of the content in JSON format, see <a href="https://help.aliyun.com/document_detail/305669.html">Example of scheduled resource snapshot</a> and <a href="https://help.aliyun.com/document_detail/189738.html">Example of resource configuration change history</a>.</description></item>
-        /// <item><description>Deliver to Simple Message Queue (MNS)
-        /// To deliver resource configuration change history and resource non-compliance events to a specified topic in Simple Message Queue (formerly MNS), you must first create a topic. This lets you configure the push method and content for the topic. For examples of the content in JSON format, see <a href="https://help.aliyun.com/document_detail/309462.html">Example of resource configuration change history</a> and <a href="https://help.aliyun.com/document_detail/309463.html">Example of resource non-compliance event</a>.</description></item>
-        /// </list>
-        /// <h3>Limits</h3>
-        /// <para>You can create a maximum of five delivery channels for each account group.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This example shows how to create a delivery channel of the <c>OSS</c> type for the account group <c>ca-a4e5626622af0079****</c>. The Amazon Resource Name (ARN) of the delivery destination is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The response shows that the delivery channel is created and its ID is <c>cdc-8e45ff4e06a3a8****</c>.</para>
+        /// <para>In this example, a delivery channel is created for an account group. The ID of the account group is <c>ca-a4e5626622af0079****</c>. The type of the delivery channel is <c>OSS</c> and the Alibaba Cloud Resource Name (ARN) of the delivery destination is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The result indicates that the delivery channel is created. The ID of the delivery channel is <c>cdc-8e45ff4e06a3a8****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1666,24 +1714,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a delivery channel for a specified account group to deliver resource data to Simple Log Service (SLS), Object Storage Service (OSS), or Simple Message Queue (formerly MNS).</para>
+        /// <para>Creates a delivery channel for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Deliver to Simple Log Service (SLS)
-        /// To deliver configuration history, non-compliance events, and scheduled resource snapshots to a Logstore in Simple Log Service (SLS), you must first create a log project and a Logstore. This lets you query and analyze logs. For examples of the content in JSON format, see <a href="https://help.aliyun.com/document_detail/308347.html">Example of resource configuration change history</a>, <a href="https://help.aliyun.com/document_detail/307122.html">Example of resource non-compliance event</a>, and <a href="https://help.aliyun.com/document_detail/611894.html">Example of scheduled resource snapshot</a>.</description></item>
-        /// <item><description>Deliver to Object Storage Service (OSS)
-        /// To deliver scheduled resource snapshots or configuration history to a specified location in Object Storage Service (OSS), you must first create a bucket. This lets you view or download files in JSON format. For examples of the content in JSON format, see <a href="https://help.aliyun.com/document_detail/305669.html">Example of scheduled resource snapshot</a> and <a href="https://help.aliyun.com/document_detail/189738.html">Example of resource configuration change history</a>.</description></item>
-        /// <item><description>Deliver to Simple Message Queue (MNS)
-        /// To deliver resource configuration change history and resource non-compliance events to a specified topic in Simple Message Queue (formerly MNS), you must first create a topic. This lets you configure the push method and content for the topic. For examples of the content in JSON format, see <a href="https://help.aliyun.com/document_detail/309462.html">Example of resource configuration change history</a> and <a href="https://help.aliyun.com/document_detail/309463.html">Example of resource non-compliance event</a>.</description></item>
-        /// </list>
-        /// <h3>Limits</h3>
-        /// <para>You can create a maximum of five delivery channels for each account group.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This example shows how to create a delivery channel of the <c>OSS</c> type for the account group <c>ca-a4e5626622af0079****</c>. The Amazon Resource Name (ARN) of the delivery destination is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The response shows that the delivery channel is created and its ID is <c>cdc-8e45ff4e06a3a8****</c>.</para>
+        /// <para>In this example, a delivery channel is created for an account group. The ID of the account group is <c>ca-a4e5626622af0079****</c>. The type of the delivery channel is <c>OSS</c> and the Alibaba Cloud Resource Name (ARN) of the delivery destination is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The result indicates that the delivery channel is created. The ID of the delivery channel is <c>cdc-8e45ff4e06a3a8****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1701,24 +1737,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a delivery channel for a specified account group to deliver resource data to Simple Log Service (SLS), Object Storage Service (OSS), or Simple Message Queue (formerly MNS).</para>
+        /// <para>Creates a delivery channel for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Deliver to Simple Log Service (SLS)
-        /// To deliver configuration history, non-compliance events, and scheduled resource snapshots to a Logstore in Simple Log Service (SLS), you must first create a log project and a Logstore. This lets you query and analyze logs. For examples of the content in JSON format, see <a href="https://help.aliyun.com/document_detail/308347.html">Example of resource configuration change history</a>, <a href="https://help.aliyun.com/document_detail/307122.html">Example of resource non-compliance event</a>, and <a href="https://help.aliyun.com/document_detail/611894.html">Example of scheduled resource snapshot</a>.</description></item>
-        /// <item><description>Deliver to Object Storage Service (OSS)
-        /// To deliver scheduled resource snapshots or configuration history to a specified location in Object Storage Service (OSS), you must first create a bucket. This lets you view or download files in JSON format. For examples of the content in JSON format, see <a href="https://help.aliyun.com/document_detail/305669.html">Example of scheduled resource snapshot</a> and <a href="https://help.aliyun.com/document_detail/189738.html">Example of resource configuration change history</a>.</description></item>
-        /// <item><description>Deliver to Simple Message Queue (MNS)
-        /// To deliver resource configuration change history and resource non-compliance events to a specified topic in Simple Message Queue (formerly MNS), you must first create a topic. This lets you configure the push method and content for the topic. For examples of the content in JSON format, see <a href="https://help.aliyun.com/document_detail/309462.html">Example of resource configuration change history</a> and <a href="https://help.aliyun.com/document_detail/309463.html">Example of resource non-compliance event</a>.</description></item>
-        /// </list>
-        /// <h3>Limits</h3>
-        /// <para>You can create a maximum of five delivery channels for each account group.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This example shows how to create a delivery channel of the <c>OSS</c> type for the account group <c>ca-a4e5626622af0079****</c>. The Amazon Resource Name (ARN) of the delivery destination is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The response shows that the delivery channel is created and its ID is <c>cdc-8e45ff4e06a3a8****</c>.</para>
+        /// <para>In this example, a delivery channel is created for an account group. The ID of the account group is <c>ca-a4e5626622af0079****</c>. The type of the delivery channel is <c>OSS</c> and the Alibaba Cloud Resource Name (ARN) of the delivery destination is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The result indicates that the delivery channel is created. The ID of the delivery channel is <c>cdc-8e45ff4e06a3a8****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1736,23 +1760,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a rule for a specified account group. You can create a rule from a template or create a custom rule using Function Compute. The rule checks your resources for compliance. After a rule is created, it automatically runs once. Cloud Config then runs evaluations based on the rule\&quot;s trigger. You can also run evaluations manually.</para>
+        /// <para>Creates a rule for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Limits</h3>
-        /// <para>Each management account and delegated administrator account can have up to 200 rules.</para>
-        /// <h3>Background information</h3>
-        /// <para>Cloud Config supports the following methods for creating rules:</para>
-        /// <list type="bullet">
-        /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). Use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">the referenced document</a>.</description></item>
-        /// <item><description>Create rules based on functions in Function Compute
-        /// Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">the referenced document</a>.</description></item>
-        /// </list>
+        /// <para>You can create up to 200 rules for each management account.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This example shows how to create a rule for the account group <c>ca-a4e5626622af0079****</c> using the \<c>required-tags\\</c> template. The response shows that the rule is created with the ID <c>cr-4e3d626622af0080****</c>.</para>
+        /// <para>This topic provides an example on how to create a rule based on the required-tags managed rule in the <c>ca-a4e5626622af0079****</c> account group. The returned result shows that the rule is created and its ID is <c>cr-4e3d626622af0080****</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1932,23 +1948,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a rule for a specified account group. You can create a rule from a template or create a custom rule using Function Compute. The rule checks your resources for compliance. After a rule is created, it automatically runs once. Cloud Config then runs evaluations based on the rule\&quot;s trigger. You can also run evaluations manually.</para>
+        /// <para>Creates a rule for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Limits</h3>
-        /// <para>Each management account and delegated administrator account can have up to 200 rules.</para>
-        /// <h3>Background information</h3>
-        /// <para>Cloud Config supports the following methods for creating rules:</para>
-        /// <list type="bullet">
-        /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). Use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">the referenced document</a>.</description></item>
-        /// <item><description>Create rules based on functions in Function Compute
-        /// Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">the referenced document</a>.</description></item>
-        /// </list>
+        /// <para>You can create up to 200 rules for each management account.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This example shows how to create a rule for the account group <c>ca-a4e5626622af0079****</c> using the \<c>required-tags\\</c> template. The response shows that the rule is created with the ID <c>cr-4e3d626622af0080****</c>.</para>
+        /// <para>This topic provides an example on how to create a rule based on the required-tags managed rule in the <c>ca-a4e5626622af0079****</c> account group. The returned result shows that the rule is created and its ID is <c>cr-4e3d626622af0080****</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -2128,23 +2136,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a rule for a specified account group. You can create a rule from a template or create a custom rule using Function Compute. The rule checks your resources for compliance. After a rule is created, it automatically runs once. Cloud Config then runs evaluations based on the rule\&quot;s trigger. You can also run evaluations manually.</para>
+        /// <para>Creates a rule for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Limits</h3>
-        /// <para>Each management account and delegated administrator account can have up to 200 rules.</para>
-        /// <h3>Background information</h3>
-        /// <para>Cloud Config supports the following methods for creating rules:</para>
-        /// <list type="bullet">
-        /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). Use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">the referenced document</a>.</description></item>
-        /// <item><description>Create rules based on functions in Function Compute
-        /// Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">the referenced document</a>.</description></item>
-        /// </list>
+        /// <para>You can create up to 200 rules for each management account.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This example shows how to create a rule for the account group <c>ca-a4e5626622af0079****</c> using the \<c>required-tags\\</c> template. The response shows that the rule is created with the ID <c>cr-4e3d626622af0080****</c>.</para>
+        /// <para>This topic provides an example on how to create a rule based on the required-tags managed rule in the <c>ca-a4e5626622af0079****</c> account group. The returned result shows that the rule is created and its ID is <c>cr-4e3d626622af0080****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2162,23 +2162,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a rule for a specified account group. You can create a rule from a template or create a custom rule using Function Compute. The rule checks your resources for compliance. After a rule is created, it automatically runs once. Cloud Config then runs evaluations based on the rule\&quot;s trigger. You can also run evaluations manually.</para>
+        /// <para>Creates a rule for an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Limits</h3>
-        /// <para>Each management account and delegated administrator account can have up to 200 rules.</para>
-        /// <h3>Background information</h3>
-        /// <para>Cloud Config supports the following methods for creating rules:</para>
-        /// <list type="bullet">
-        /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions that Cloud Config provides in Function Compute (FC). Use rule templates to create rules quickly. For more information about rules, see <a href="https://help.aliyun.com/document_detail/128273.html">the referenced document</a>.</description></item>
-        /// <item><description>Create rules based on functions in Function Compute
-        /// Custom function rules are rules whose code is hosted in FC functions. If the predefined rule templates in Cloud Config do not meet your compliance requirements, write function code to check compliance in complex scenarios. For more information about custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">the referenced document</a>.</description></item>
-        /// </list>
+        /// <para>You can create up to 200 rules for each management account.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This example shows how to create a rule for the account group <c>ca-a4e5626622af0079****</c> using the \<c>required-tags\\</c> template. The response shows that the rule is created with the ID <c>cr-4e3d626622af0080****</c>.</para>
+        /// <para>This topic provides an example on how to create a rule based on the required-tags managed rule in the <c>ca-a4e5626622af0079****</c> account group. The returned result shows that the rule is created and its ID is <c>cr-4e3d626622af0080****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2196,20 +2188,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a remediation for a rule in a specified account group.</para>
+        /// <para>Creates a remediation template for a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Template-based remediation: Uses public templates provided by Operation Orchestration Service (OOS) to quickly remediate non-compliant resources.
-        /// Only one remediation can be created for a rule. This type of remediation is supported only for rules that are created from specific templates.</description></item>
-        /// <item><description>Custom remediation: Runs custom code in Function Compute (FC) to quickly remediate non-compliant resources.
-        /// Only one remediation can be created for a rule. This type of remediation is supported for rules created from templates and for custom rules.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to create a remediation for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>. The response shows that the remediation is created and its ID is <c>crr-909ba2d4716700eb****</c>.</para>
+        /// <para>This topic provides an example on how to create a remediation template for the rule whose ID is <c>cr-6b7c626622af00b4****</c> in the account group whose ID is <c>ca-6b4a626622af0012****</c>. The returned result shows that a remediation template is created and the ID of the remediation template is <c>crr-909ba2d4716700eb****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2279,20 +2263,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a remediation for a rule in a specified account group.</para>
+        /// <para>Creates a remediation template for a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Template-based remediation: Uses public templates provided by Operation Orchestration Service (OOS) to quickly remediate non-compliant resources.
-        /// Only one remediation can be created for a rule. This type of remediation is supported only for rules that are created from specific templates.</description></item>
-        /// <item><description>Custom remediation: Runs custom code in Function Compute (FC) to quickly remediate non-compliant resources.
-        /// Only one remediation can be created for a rule. This type of remediation is supported for rules created from templates and for custom rules.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to create a remediation for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>. The response shows that the remediation is created and its ID is <c>crr-909ba2d4716700eb****</c>.</para>
+        /// <para>This topic provides an example on how to create a remediation template for the rule whose ID is <c>cr-6b7c626622af00b4****</c> in the account group whose ID is <c>ca-6b4a626622af0012****</c>. The returned result shows that a remediation template is created and the ID of the remediation template is <c>crr-909ba2d4716700eb****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2362,20 +2338,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a remediation for a rule in a specified account group.</para>
+        /// <para>Creates a remediation template for a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Template-based remediation: Uses public templates provided by Operation Orchestration Service (OOS) to quickly remediate non-compliant resources.
-        /// Only one remediation can be created for a rule. This type of remediation is supported only for rules that are created from specific templates.</description></item>
-        /// <item><description>Custom remediation: Runs custom code in Function Compute (FC) to quickly remediate non-compliant resources.
-        /// Only one remediation can be created for a rule. This type of remediation is supported for rules created from templates and for custom rules.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to create a remediation for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>. The response shows that the remediation is created and its ID is <c>crr-909ba2d4716700eb****</c>.</para>
+        /// <para>This topic provides an example on how to create a remediation template for the rule whose ID is <c>cr-6b7c626622af00b4****</c> in the account group whose ID is <c>ca-6b4a626622af0012****</c>. The returned result shows that a remediation template is created and the ID of the remediation template is <c>crr-909ba2d4716700eb****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2393,20 +2361,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a remediation for a rule in a specified account group.</para>
+        /// <para>Creates a remediation template for a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Template-based remediation: Uses public templates provided by Operation Orchestration Service (OOS) to quickly remediate non-compliant resources.
-        /// Only one remediation can be created for a rule. This type of remediation is supported only for rules that are created from specific templates.</description></item>
-        /// <item><description>Custom remediation: Runs custom code in Function Compute (FC) to quickly remediate non-compliant resources.
-        /// Only one remediation can be created for a rule. This type of remediation is supported for rules created from templates and for custom rules.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to create a remediation for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>. The response shows that the remediation is created and its ID is <c>crr-909ba2d4716700eb****</c>.</para>
+        /// <para>This topic provides an example on how to create a remediation template for the rule whose ID is <c>cr-6b7c626622af00b4****</c> in the account group whose ID is <c>ca-6b4a626622af0012****</c>. The returned result shows that a remediation template is created and the ID of the remediation template is <c>crr-909ba2d4716700eb****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2424,31 +2384,19 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A management account or a delegated administrator account in a resource directory can create an account group to centrally manage resources, compliance packages, and rules across multiple member accounts.</para>
+        /// <para>Creates an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>A management account or a delegated administrator account can create a maximum of 5 account groups. Each account group can contain a maximum of 200 member accounts.</para>
-        /// <h3>Background information</h3>
-        /// <para>For more information about account groups, including their concepts, use cases, and the impact of member account changes on Cloud Config, see <a href="https://help.aliyun.com/document_detail/211534.html">Overview</a>.
+        /// <para>Each management account can create a maximum of five account groups. Each account group can contain a maximum of 200 member accounts.
         /// Cloud Config supports the following types of account groups:</para>
         /// <list type="bullet">
-        /// <item><description>Global account group: A global account group contains all members in a resource directory and automatically synchronizes member changes. A management account or a delegated administrator account can create only one global account group.</description></item>
-        /// <item><description>Custom account group: To create a custom account group, a management account or a delegated administrator account selects some or all member accounts from the resource directory.<list type="bullet">
-        /// <item><description>If a new member is added to the resource directory, the change is not automatically synchronized. The management account or delegated administrator account must manually add the new member to the account group.</description></item>
-        /// <item><description>If a member is removed from the resource directory, the management account or delegated administrator account loses the permissions to manage that member\&quot;s compliance. The custom account group automatically detects this change and removes the member from the group.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>Folder account group: When an account group is created from a folder, it automatically detects and synchronizes changes to the members within that folder. The members in a folder account group are always consistent with the members in the selected folder.
-        /// A management account or a delegated administrator account can select only one non-empty folder to create a folder account group.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to use a management account to create a custom account group of the <c>CUSTOM</c> type. The account group is named <c>Test_Group</c> and has the description <c>Test Group</c>. The member accounts are as follows:</para>
-        /// <list type="bullet">
-        /// <item><description>The member account ID is <c>171322098523****</c> and the member account name is <c>Alice</c>.</description></item>
-        /// <item><description>The member account ID is <c>100532098349****</c> and the member account name is <c>Tom</c>.</description></item>
+        /// <item><description>Global account group: The global account group contains all the member accounts that are added to the resource directory. A management account can create only one global account group.</description></item>
+        /// <item><description>Custom account group: If you create a custom account group, you must manually add all or specific member accounts from the resource directory to the custom account group.
+        /// This topic provides an example on how to create an account group of the <c>CUSTOM</c> type. The custom account group is named <c>Test_Group</c>, and its description is <c>Test account group</c>. The custom account group contains the following two member accounts:</description></item>
+        /// <item><description>Member account ID: <c>171322098523****</c>. Member account name: <c>Alice</c>.</description></item>
+        /// <item><description>Member account ID: <c>100532098349****</c>. Member account name: <c>Tom</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2527,31 +2475,19 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A management account or a delegated administrator account in a resource directory can create an account group to centrally manage resources, compliance packages, and rules across multiple member accounts.</para>
+        /// <para>Creates an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>A management account or a delegated administrator account can create a maximum of 5 account groups. Each account group can contain a maximum of 200 member accounts.</para>
-        /// <h3>Background information</h3>
-        /// <para>For more information about account groups, including their concepts, use cases, and the impact of member account changes on Cloud Config, see <a href="https://help.aliyun.com/document_detail/211534.html">Overview</a>.
+        /// <para>Each management account can create a maximum of five account groups. Each account group can contain a maximum of 200 member accounts.
         /// Cloud Config supports the following types of account groups:</para>
         /// <list type="bullet">
-        /// <item><description>Global account group: A global account group contains all members in a resource directory and automatically synchronizes member changes. A management account or a delegated administrator account can create only one global account group.</description></item>
-        /// <item><description>Custom account group: To create a custom account group, a management account or a delegated administrator account selects some or all member accounts from the resource directory.<list type="bullet">
-        /// <item><description>If a new member is added to the resource directory, the change is not automatically synchronized. The management account or delegated administrator account must manually add the new member to the account group.</description></item>
-        /// <item><description>If a member is removed from the resource directory, the management account or delegated administrator account loses the permissions to manage that member\&quot;s compliance. The custom account group automatically detects this change and removes the member from the group.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>Folder account group: When an account group is created from a folder, it automatically detects and synchronizes changes to the members within that folder. The members in a folder account group are always consistent with the members in the selected folder.
-        /// A management account or a delegated administrator account can select only one non-empty folder to create a folder account group.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to use a management account to create a custom account group of the <c>CUSTOM</c> type. The account group is named <c>Test_Group</c> and has the description <c>Test Group</c>. The member accounts are as follows:</para>
-        /// <list type="bullet">
-        /// <item><description>The member account ID is <c>171322098523****</c> and the member account name is <c>Alice</c>.</description></item>
-        /// <item><description>The member account ID is <c>100532098349****</c> and the member account name is <c>Tom</c>.</description></item>
+        /// <item><description>Global account group: The global account group contains all the member accounts that are added to the resource directory. A management account can create only one global account group.</description></item>
+        /// <item><description>Custom account group: If you create a custom account group, you must manually add all or specific member accounts from the resource directory to the custom account group.
+        /// This topic provides an example on how to create an account group of the <c>CUSTOM</c> type. The custom account group is named <c>Test_Group</c>, and its description is <c>Test account group</c>. The custom account group contains the following two member accounts:</description></item>
+        /// <item><description>Member account ID: <c>171322098523****</c>. Member account name: <c>Alice</c>.</description></item>
+        /// <item><description>Member account ID: <c>100532098349****</c>. Member account name: <c>Tom</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2630,31 +2566,19 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A management account or a delegated administrator account in a resource directory can create an account group to centrally manage resources, compliance packages, and rules across multiple member accounts.</para>
+        /// <para>Creates an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>A management account or a delegated administrator account can create a maximum of 5 account groups. Each account group can contain a maximum of 200 member accounts.</para>
-        /// <h3>Background information</h3>
-        /// <para>For more information about account groups, including their concepts, use cases, and the impact of member account changes on Cloud Config, see <a href="https://help.aliyun.com/document_detail/211534.html">Overview</a>.
+        /// <para>Each management account can create a maximum of five account groups. Each account group can contain a maximum of 200 member accounts.
         /// Cloud Config supports the following types of account groups:</para>
         /// <list type="bullet">
-        /// <item><description>Global account group: A global account group contains all members in a resource directory and automatically synchronizes member changes. A management account or a delegated administrator account can create only one global account group.</description></item>
-        /// <item><description>Custom account group: To create a custom account group, a management account or a delegated administrator account selects some or all member accounts from the resource directory.<list type="bullet">
-        /// <item><description>If a new member is added to the resource directory, the change is not automatically synchronized. The management account or delegated administrator account must manually add the new member to the account group.</description></item>
-        /// <item><description>If a member is removed from the resource directory, the management account or delegated administrator account loses the permissions to manage that member\&quot;s compliance. The custom account group automatically detects this change and removes the member from the group.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>Folder account group: When an account group is created from a folder, it automatically detects and synchronizes changes to the members within that folder. The members in a folder account group are always consistent with the members in the selected folder.
-        /// A management account or a delegated administrator account can select only one non-empty folder to create a folder account group.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to use a management account to create a custom account group of the <c>CUSTOM</c> type. The account group is named <c>Test_Group</c> and has the description <c>Test Group</c>. The member accounts are as follows:</para>
-        /// <list type="bullet">
-        /// <item><description>The member account ID is <c>171322098523****</c> and the member account name is <c>Alice</c>.</description></item>
-        /// <item><description>The member account ID is <c>100532098349****</c> and the member account name is <c>Tom</c>.</description></item>
+        /// <item><description>Global account group: The global account group contains all the member accounts that are added to the resource directory. A management account can create only one global account group.</description></item>
+        /// <item><description>Custom account group: If you create a custom account group, you must manually add all or specific member accounts from the resource directory to the custom account group.
+        /// This topic provides an example on how to create an account group of the <c>CUSTOM</c> type. The custom account group is named <c>Test_Group</c>, and its description is <c>Test account group</c>. The custom account group contains the following two member accounts:</description></item>
+        /// <item><description>Member account ID: <c>171322098523****</c>. Member account name: <c>Alice</c>.</description></item>
+        /// <item><description>Member account ID: <c>100532098349****</c>. Member account name: <c>Tom</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2673,31 +2597,19 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A management account or a delegated administrator account in a resource directory can create an account group to centrally manage resources, compliance packages, and rules across multiple member accounts.</para>
+        /// <para>Creates an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>A management account or a delegated administrator account can create a maximum of 5 account groups. Each account group can contain a maximum of 200 member accounts.</para>
-        /// <h3>Background information</h3>
-        /// <para>For more information about account groups, including their concepts, use cases, and the impact of member account changes on Cloud Config, see <a href="https://help.aliyun.com/document_detail/211534.html">Overview</a>.
+        /// <para>Each management account can create a maximum of five account groups. Each account group can contain a maximum of 200 member accounts.
         /// Cloud Config supports the following types of account groups:</para>
         /// <list type="bullet">
-        /// <item><description>Global account group: A global account group contains all members in a resource directory and automatically synchronizes member changes. A management account or a delegated administrator account can create only one global account group.</description></item>
-        /// <item><description>Custom account group: To create a custom account group, a management account or a delegated administrator account selects some or all member accounts from the resource directory.<list type="bullet">
-        /// <item><description>If a new member is added to the resource directory, the change is not automatically synchronized. The management account or delegated administrator account must manually add the new member to the account group.</description></item>
-        /// <item><description>If a member is removed from the resource directory, the management account or delegated administrator account loses the permissions to manage that member\&quot;s compliance. The custom account group automatically detects this change and removes the member from the group.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>Folder account group: When an account group is created from a folder, it automatically detects and synchronizes changes to the members within that folder. The members in a folder account group are always consistent with the members in the selected folder.
-        /// A management account or a delegated administrator account can select only one non-empty folder to create a folder account group.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to use a management account to create a custom account group of the <c>CUSTOM</c> type. The account group is named <c>Test_Group</c> and has the description <c>Test Group</c>. The member accounts are as follows:</para>
-        /// <list type="bullet">
-        /// <item><description>The member account ID is <c>171322098523****</c> and the member account name is <c>Alice</c>.</description></item>
-        /// <item><description>The member account ID is <c>100532098349****</c> and the member account name is <c>Tom</c>.</description></item>
+        /// <item><description>Global account group: The global account group contains all the member accounts that are added to the resource directory. A management account can create only one global account group.</description></item>
+        /// <item><description>Custom account group: If you create a custom account group, you must manually add all or specific member accounts from the resource directory to the custom account group.
+        /// This topic provides an example on how to create an account group of the <c>CUSTOM</c> type. The custom account group is named <c>Test_Group</c>, and its description is <c>Test account group</c>. The custom account group contains the following two member accounts:</description></item>
+        /// <item><description>Member account ID: <c>171322098523****</c>. Member account name: <c>Alice</c>.</description></item>
+        /// <item><description>Member account ID: <c>100532098349****</c>. Member account name: <c>Tom</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2716,8 +2628,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为当前账号创建合规包</para>
+        /// <para>Creates a compliance package for the current account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Each ordinary account can create up to five compliance packages.
+        /// This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck. The compliance package contains a managed rule named <c>eip-bandwidth-limit</c>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateCompliancePackRequest
@@ -2848,8 +2766,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为当前账号创建合规包</para>
+        /// <para>Creates a compliance package for the current account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Each ordinary account can create up to five compliance packages.
+        /// This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck. The compliance package contains a managed rule named <c>eip-bandwidth-limit</c>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateCompliancePackRequest
@@ -2980,8 +2904,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为当前账号创建合规包</para>
+        /// <para>Creates a compliance package for the current account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Each ordinary account can create up to five compliance packages.
+        /// This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck. The compliance package contains a managed rule named <c>eip-bandwidth-limit</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCompliancePackRequest
@@ -2998,8 +2928,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为当前账号创建合规包</para>
+        /// <para>Creates a compliance package for the current account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Each ordinary account can create up to five compliance packages.
+        /// This topic provides an example on how to create a compliance package named ClassifiedProtectionPreCheck. The compliance package contains a managed rule named <c>eip-bandwidth-limit</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCompliancePackRequest
@@ -3016,24 +2952,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a delivery channel to deliver resource data to Simple Log Service (SLS), Object Storage Service (OSS), or Simple Message Queue (formerly MNS).</para>
+        /// <para>Creates a delivery channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Deliver to Simple Log Service (SLS)
-        /// When you deliver resource configuration histories, non-compliant events, and scheduled snapshots to a Logstore in SLS, you must first create a project and a Logstore. This lets you query and analyze logs. For examples of the content of the JSON files, see <a href="https://help.aliyun.com/document_detail/308347.html">Resource configuration history examples</a>, <a href="https://help.aliyun.com/document_detail/307122.html">Non-compliant event examples</a>, and <a href="https://help.aliyun.com/document_detail/611894.html">Scheduled resource snapshot examples</a>.</description></item>
-        /// <item><description>Deliver to Object Storage Service (OSS)
-        /// When you deliver scheduled resource snapshots or configuration histories to a specified location in OSS, you must first create a bucket. This lets you view or download the JSON files. For examples of the content of the JSON files, see <a href="https://help.aliyun.com/document_detail/305669.html">Scheduled resource snapshot examples</a> and <a href="https://help.aliyun.com/document_detail/189738.html">Resource configuration history examples</a>.</description></item>
-        /// <item><description>Deliver to Simple Message Queue (formerly MNS)
-        /// When you deliver resource configuration histories and non-compliant events to a specified topic in MNS, you must first create a topic. This lets you set the push method and content for the topic. For examples of the content of the JSON files, see <a href="https://help.aliyun.com/document_detail/309462.html">Resource configuration history examples</a> and <a href="https://help.aliyun.com/document_detail/309463.html">Non-compliant event examples</a>.</description></item>
-        /// </list>
-        /// <h3>Limits</h3>
-        /// <para>You can create a maximum of 5 delivery channels.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to create a delivery channel. In this example, the channel type is <c>OSS</c> and the destination ARN is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The response shows that a delivery channel with the ID <c>cdc-8e45ff4e06a3a8****</c> is created.</para>
+        /// <para>In this example, a delivery channel is created. The type of the delivery channel is <c>OSS</c> and the Alibaba Cloud Resource Name (ARN) of the delivery destination is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The result indicates that the delivery channel is created, and the ID of the delivery channel is <c>cdc-8e45ff4e06a3a8****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3119,24 +3043,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a delivery channel to deliver resource data to Simple Log Service (SLS), Object Storage Service (OSS), or Simple Message Queue (formerly MNS).</para>
+        /// <para>Creates a delivery channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Deliver to Simple Log Service (SLS)
-        /// When you deliver resource configuration histories, non-compliant events, and scheduled snapshots to a Logstore in SLS, you must first create a project and a Logstore. This lets you query and analyze logs. For examples of the content of the JSON files, see <a href="https://help.aliyun.com/document_detail/308347.html">Resource configuration history examples</a>, <a href="https://help.aliyun.com/document_detail/307122.html">Non-compliant event examples</a>, and <a href="https://help.aliyun.com/document_detail/611894.html">Scheduled resource snapshot examples</a>.</description></item>
-        /// <item><description>Deliver to Object Storage Service (OSS)
-        /// When you deliver scheduled resource snapshots or configuration histories to a specified location in OSS, you must first create a bucket. This lets you view or download the JSON files. For examples of the content of the JSON files, see <a href="https://help.aliyun.com/document_detail/305669.html">Scheduled resource snapshot examples</a> and <a href="https://help.aliyun.com/document_detail/189738.html">Resource configuration history examples</a>.</description></item>
-        /// <item><description>Deliver to Simple Message Queue (formerly MNS)
-        /// When you deliver resource configuration histories and non-compliant events to a specified topic in MNS, you must first create a topic. This lets you set the push method and content for the topic. For examples of the content of the JSON files, see <a href="https://help.aliyun.com/document_detail/309462.html">Resource configuration history examples</a> and <a href="https://help.aliyun.com/document_detail/309463.html">Non-compliant event examples</a>.</description></item>
-        /// </list>
-        /// <h3>Limits</h3>
-        /// <para>You can create a maximum of 5 delivery channels.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to create a delivery channel. In this example, the channel type is <c>OSS</c> and the destination ARN is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The response shows that a delivery channel with the ID <c>cdc-8e45ff4e06a3a8****</c> is created.</para>
+        /// <para>In this example, a delivery channel is created. The type of the delivery channel is <c>OSS</c> and the Alibaba Cloud Resource Name (ARN) of the delivery destination is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The result indicates that the delivery channel is created, and the ID of the delivery channel is <c>cdc-8e45ff4e06a3a8****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3222,24 +3134,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a delivery channel to deliver resource data to Simple Log Service (SLS), Object Storage Service (OSS), or Simple Message Queue (formerly MNS).</para>
+        /// <para>Creates a delivery channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Deliver to Simple Log Service (SLS)
-        /// When you deliver resource configuration histories, non-compliant events, and scheduled snapshots to a Logstore in SLS, you must first create a project and a Logstore. This lets you query and analyze logs. For examples of the content of the JSON files, see <a href="https://help.aliyun.com/document_detail/308347.html">Resource configuration history examples</a>, <a href="https://help.aliyun.com/document_detail/307122.html">Non-compliant event examples</a>, and <a href="https://help.aliyun.com/document_detail/611894.html">Scheduled resource snapshot examples</a>.</description></item>
-        /// <item><description>Deliver to Object Storage Service (OSS)
-        /// When you deliver scheduled resource snapshots or configuration histories to a specified location in OSS, you must first create a bucket. This lets you view or download the JSON files. For examples of the content of the JSON files, see <a href="https://help.aliyun.com/document_detail/305669.html">Scheduled resource snapshot examples</a> and <a href="https://help.aliyun.com/document_detail/189738.html">Resource configuration history examples</a>.</description></item>
-        /// <item><description>Deliver to Simple Message Queue (formerly MNS)
-        /// When you deliver resource configuration histories and non-compliant events to a specified topic in MNS, you must first create a topic. This lets you set the push method and content for the topic. For examples of the content of the JSON files, see <a href="https://help.aliyun.com/document_detail/309462.html">Resource configuration history examples</a> and <a href="https://help.aliyun.com/document_detail/309463.html">Non-compliant event examples</a>.</description></item>
-        /// </list>
-        /// <h3>Limits</h3>
-        /// <para>You can create a maximum of 5 delivery channels.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to create a delivery channel. In this example, the channel type is <c>OSS</c> and the destination ARN is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The response shows that a delivery channel with the ID <c>cdc-8e45ff4e06a3a8****</c> is created.</para>
+        /// <para>In this example, a delivery channel is created. The type of the delivery channel is <c>OSS</c> and the Alibaba Cloud Resource Name (ARN) of the delivery destination is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The result indicates that the delivery channel is created, and the ID of the delivery channel is <c>cdc-8e45ff4e06a3a8****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3257,24 +3157,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a delivery channel to deliver resource data to Simple Log Service (SLS), Object Storage Service (OSS), or Simple Message Queue (formerly MNS).</para>
+        /// <para>Creates a delivery channel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Deliver to Simple Log Service (SLS)
-        /// When you deliver resource configuration histories, non-compliant events, and scheduled snapshots to a Logstore in SLS, you must first create a project and a Logstore. This lets you query and analyze logs. For examples of the content of the JSON files, see <a href="https://help.aliyun.com/document_detail/308347.html">Resource configuration history examples</a>, <a href="https://help.aliyun.com/document_detail/307122.html">Non-compliant event examples</a>, and <a href="https://help.aliyun.com/document_detail/611894.html">Scheduled resource snapshot examples</a>.</description></item>
-        /// <item><description>Deliver to Object Storage Service (OSS)
-        /// When you deliver scheduled resource snapshots or configuration histories to a specified location in OSS, you must first create a bucket. This lets you view or download the JSON files. For examples of the content of the JSON files, see <a href="https://help.aliyun.com/document_detail/305669.html">Scheduled resource snapshot examples</a> and <a href="https://help.aliyun.com/document_detail/189738.html">Resource configuration history examples</a>.</description></item>
-        /// <item><description>Deliver to Simple Message Queue (formerly MNS)
-        /// When you deliver resource configuration histories and non-compliant events to a specified topic in MNS, you must first create a topic. This lets you set the push method and content for the topic. For examples of the content of the JSON files, see <a href="https://help.aliyun.com/document_detail/309462.html">Resource configuration history examples</a> and <a href="https://help.aliyun.com/document_detail/309463.html">Non-compliant event examples</a>.</description></item>
-        /// </list>
-        /// <h3>Limits</h3>
-        /// <para>You can create a maximum of 5 delivery channels.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to create a delivery channel. In this example, the channel type is <c>OSS</c> and the destination ARN is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The response shows that a delivery channel with the ID <c>cdc-8e45ff4e06a3a8****</c> is created.</para>
+        /// <para>In this example, a delivery channel is created. The type of the delivery channel is <c>OSS</c> and the Alibaba Cloud Resource Name (ARN) of the delivery destination is <c>acs:oss:cn-shanghai:100931896542****:new-bucket</c>. The result indicates that the delivery channel is created, and the ID of the delivery channel is <c>cdc-8e45ff4e06a3a8****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3292,23 +3180,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a rule from a template or a custom rule using Function Compute to check resource compliance. After you create a rule, Cloud Config runs an initial evaluation and then automatically triggers subsequent evaluations based on the rule\&quot;s trigger. You can also run evaluations manually.</para>
+        /// <para>Creates a rule for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>You can create up to 200 rules per account.</para>
-        /// <h3>Background information</h3>
-        /// <para>You can create rules in Cloud Config in two ways:</para>
-        /// <list type="bullet">
-        /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions provided by Cloud Config in Function Compute. You can use rule templates to quickly create rules. For more information, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</description></item>
-        /// <item><description>Create custom rules using Function Compute
-        /// Custom rules use Function Compute functions to host your rule code. If Cloud Config\&quot;s predefined rule templates do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic demonstrates how to create a rule from the \<c>required-tags\\</c> template. The response confirms that the rule was created successfully. Its ID is <c>cr-5772ba41209e007b****</c>.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can use a common account to create up to 200 rules.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3468,23 +3346,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a rule from a template or a custom rule using Function Compute to check resource compliance. After you create a rule, Cloud Config runs an initial evaluation and then automatically triggers subsequent evaluations based on the rule\&quot;s trigger. You can also run evaluations manually.</para>
+        /// <para>Creates a rule for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>You can create up to 200 rules per account.</para>
-        /// <h3>Background information</h3>
-        /// <para>You can create rules in Cloud Config in two ways:</para>
-        /// <list type="bullet">
-        /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions provided by Cloud Config in Function Compute. You can use rule templates to quickly create rules. For more information, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</description></item>
-        /// <item><description>Create custom rules using Function Compute
-        /// Custom rules use Function Compute functions to host your rule code. If Cloud Config\&quot;s predefined rule templates do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic demonstrates how to create a rule from the \<c>required-tags\\</c> template. The response confirms that the rule was created successfully. Its ID is <c>cr-5772ba41209e007b****</c>.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can use a common account to create up to 200 rules.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -3644,23 +3512,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a rule from a template or a custom rule using Function Compute to check resource compliance. After you create a rule, Cloud Config runs an initial evaluation and then automatically triggers subsequent evaluations based on the rule\&quot;s trigger. You can also run evaluations manually.</para>
+        /// <para>Creates a rule for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>You can create up to 200 rules per account.</para>
-        /// <h3>Background information</h3>
-        /// <para>You can create rules in Cloud Config in two ways:</para>
-        /// <list type="bullet">
-        /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions provided by Cloud Config in Function Compute. You can use rule templates to quickly create rules. For more information, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</description></item>
-        /// <item><description>Create custom rules using Function Compute
-        /// Custom rules use Function Compute functions to host your rule code. If Cloud Config\&quot;s predefined rule templates do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic demonstrates how to create a rule from the \<c>required-tags\\</c> template. The response confirms that the rule was created successfully. Its ID is <c>cr-5772ba41209e007b****</c>.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can use a common account to create up to 200 rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3678,23 +3536,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a rule from a template or a custom rule using Function Compute to check resource compliance. After you create a rule, Cloud Config runs an initial evaluation and then automatically triggers subsequent evaluations based on the rule\&quot;s trigger. You can also run evaluations manually.</para>
+        /// <para>Creates a rule for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>You can create up to 200 rules per account.</para>
-        /// <h3>Background information</h3>
-        /// <para>You can create rules in Cloud Config in two ways:</para>
-        /// <list type="bullet">
-        /// <item><description>Create rules from templates
-        /// Rule templates are predefined rule functions provided by Cloud Config in Function Compute. You can use rule templates to quickly create rules. For more information, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</description></item>
-        /// <item><description>Create custom rules using Function Compute
-        /// Custom rules use Function Compute functions to host your rule code. If Cloud Config\&quot;s predefined rule templates do not meet your compliance requirements, you can write your own function code to check compliance in complex scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and working principles of custom rules</a>.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic demonstrates how to create a rule from the \<c>required-tags\\</c> template. The response confirms that the rule was created successfully. Its ID is <c>cr-5772ba41209e007b****</c>.</para>
+        /// <h2>Limits</h2>
+        /// <para>You can use a common account to create up to 200 rules.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3712,20 +3560,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a remediation for an existing rule.</para>
+        /// <para>Creates a remediation template for a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Template-based remediation: Uses public templates from Operation Orchestration Service (OOS) to remediate non-compliant resources.
-        /// Each rule supports only one remediation. This remediation type is available only for rules created from specific templates.</description></item>
-        /// <item><description>Custom remediation: Uses custom code in Function Compute (FC) to remediate non-compliant resources.
-        /// Each rule supports only one remediation. This remediation type is available for rules created from templates and custom rules.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>In this example, a remediation is created for the rule <c>cr-8a973ac2e2be00a2****</c>. The sample response shows that the remediation is created and has the ID <c>crr-909ba2d4716700eb****</c>.</para>
+        /// <para>This topic provides an example on how to create a remediation template for the rule <c>cr-8a973ac2e2be00a2****</c>. The returned result shows that a remediation template is created and the ID of the remediation template is <c>crr-909ba2d4716700eb****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3791,20 +3631,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a remediation for an existing rule.</para>
+        /// <para>Creates a remediation template for a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Template-based remediation: Uses public templates from Operation Orchestration Service (OOS) to remediate non-compliant resources.
-        /// Each rule supports only one remediation. This remediation type is available only for rules created from specific templates.</description></item>
-        /// <item><description>Custom remediation: Uses custom code in Function Compute (FC) to remediate non-compliant resources.
-        /// Each rule supports only one remediation. This remediation type is available for rules created from templates and custom rules.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>In this example, a remediation is created for the rule <c>cr-8a973ac2e2be00a2****</c>. The sample response shows that the remediation is created and has the ID <c>crr-909ba2d4716700eb****</c>.</para>
+        /// <para>This topic provides an example on how to create a remediation template for the rule <c>cr-8a973ac2e2be00a2****</c>. The returned result shows that a remediation template is created and the ID of the remediation template is <c>crr-909ba2d4716700eb****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3870,20 +3702,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a remediation for an existing rule.</para>
+        /// <para>Creates a remediation template for a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Template-based remediation: Uses public templates from Operation Orchestration Service (OOS) to remediate non-compliant resources.
-        /// Each rule supports only one remediation. This remediation type is available only for rules created from specific templates.</description></item>
-        /// <item><description>Custom remediation: Uses custom code in Function Compute (FC) to remediate non-compliant resources.
-        /// Each rule supports only one remediation. This remediation type is available for rules created from templates and custom rules.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>In this example, a remediation is created for the rule <c>cr-8a973ac2e2be00a2****</c>. The sample response shows that the remediation is created and has the ID <c>crr-909ba2d4716700eb****</c>.</para>
+        /// <para>This topic provides an example on how to create a remediation template for the rule <c>cr-8a973ac2e2be00a2****</c>. The returned result shows that a remediation template is created and the ID of the remediation template is <c>crr-909ba2d4716700eb****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3901,20 +3725,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a remediation for an existing rule.</para>
+        /// <para>Creates a remediation template for a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <list type="bullet">
-        /// <item><description>Template-based remediation: Uses public templates from Operation Orchestration Service (OOS) to remediate non-compliant resources.
-        /// Each rule supports only one remediation. This remediation type is available only for rules created from specific templates.</description></item>
-        /// <item><description>Custom remediation: Uses custom code in Function Compute (FC) to remediate non-compliant resources.
-        /// Each rule supports only one remediation. This remediation type is available for rules created from templates and custom rules.</description></item>
-        /// </list>
-        /// <h3>Usage notes</h3>
-        /// <para>In this example, a remediation is created for the rule <c>cr-8a973ac2e2be00a2****</c>. The sample response shows that the remediation is created and has the ID <c>crr-909ba2d4716700eb****</c>.</para>
+        /// <para>This topic provides an example on how to create a remediation template for the rule <c>cr-8a973ac2e2be00a2****</c>. The returned result shows that a remediation template is created and the ID of the remediation template is <c>crr-909ba2d4716700eb****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3932,7 +3748,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a compliance report template for the current UID.</para>
+        /// <para>为当前UID创建合规报告模版</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4004,7 +3820,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a compliance report template for the current UID.</para>
+        /// <para>为当前UID创建合规报告模版</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4076,7 +3892,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a compliance report template for the current UID.</para>
+        /// <para>为当前UID创建合规报告模版</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4094,7 +3910,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a compliance report template for the current UID.</para>
+        /// <para>为当前UID创建合规报告模版</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4112,8 +3928,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用账号组规则</para>
+        /// <para>Disables one or more rules in an account group. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The status of the rule is <c>ACTIVE</c>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to disable the <c>cr-5772ba41209e007b****</c> rule in the <c>ca-04b3fd170e340007****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeactiveAggregateConfigRulesRequest
@@ -4162,8 +3986,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用账号组规则</para>
+        /// <para>Disables one or more rules in an account group. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The status of the rule is <c>ACTIVE</c>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to disable the <c>cr-5772ba41209e007b****</c> rule in the <c>ca-04b3fd170e340007****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeactiveAggregateConfigRulesRequest
@@ -4212,8 +4044,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用账号组规则</para>
+        /// <para>Disables one or more rules in an account group. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The status of the rule is <c>ACTIVE</c>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to disable the <c>cr-5772ba41209e007b****</c> rule in the <c>ca-04b3fd170e340007****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeactiveAggregateConfigRulesRequest
@@ -4230,8 +4070,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用账号组规则</para>
+        /// <para>Disables one or more rules in an account group. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The status of the rule is <c>ACTIVE</c>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to disable the <c>cr-5772ba41209e007b****</c> rule in the <c>ca-04b3fd170e340007****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeactiveAggregateConfigRulesRequest
@@ -4248,8 +4096,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用指定规则</para>
+        /// <para>Disables a rule. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The status of the rule is <c>ACTIVE</c>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to disable the <c>cr-19a56457e0d90058****</c> rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeactiveConfigRulesRequest
@@ -4294,8 +4150,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用指定规则</para>
+        /// <para>Disables a rule. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The status of the rule is <c>ACTIVE</c>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to disable the <c>cr-19a56457e0d90058****</c> rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeactiveConfigRulesRequest
@@ -4340,8 +4204,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用指定规则</para>
+        /// <para>Disables a rule. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The status of the rule is <c>ACTIVE</c>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to disable the <c>cr-19a56457e0d90058****</c> rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeactiveConfigRulesRequest
@@ -4358,8 +4230,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用指定规则</para>
+        /// <para>Disables a rule. After a rule is disabled, the resource in the rule is no longer evaluated. The compliance evaluation results before the rule is disabled are still displayed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The status of the rule is <c>ACTIVE</c>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to disable the <c>cr-19a56457e0d90058****</c> rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeactiveConfigRulesRequest
@@ -4376,8 +4256,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定账号组内的合规包。删除合规包后，该合规包的检查结果和检查报告也自动被删除</para>
+        /// <para>Deletes the compliance packages of an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cp-541e626622af0087****</c> compliance package from the <c>ca-04b3fd170e340007****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregateCompliancePacksRequest
@@ -4430,8 +4315,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定账号组内的合规包。删除合规包后，该合规包的检查结果和检查报告也自动被删除</para>
+        /// <para>Deletes the compliance packages of an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cp-541e626622af0087****</c> compliance package from the <c>ca-04b3fd170e340007****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregateCompliancePacksRequest
@@ -4484,8 +4374,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定账号组内的合规包。删除合规包后，该合规包的检查结果和检查报告也自动被删除</para>
+        /// <para>Deletes the compliance packages of an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cp-541e626622af0087****</c> compliance package from the <c>ca-04b3fd170e340007****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregateCompliancePacksRequest
@@ -4502,8 +4397,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定账号组内的合规包。删除合规包后，该合规包的检查结果和检查报告也自动被删除</para>
+        /// <para>Deletes the compliance packages of an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cp-541e626622af0087****</c> compliance package from the <c>ca-04b3fd170e340007****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregateCompliancePacksRequest
@@ -4520,8 +4420,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组删除投递渠道</para>
+        /// <para>Deletes a delivery channel from an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cdc-38c3013b46c9002c****</c> delivery channel from the <c>ca-23c6626622af0041****</c> account group. The returned result shows that the <c>cdc-38c3013b46c9002c****</c> delivery channel is deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregateConfigDeliveryChannelRequest
@@ -4566,8 +4471,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组删除投递渠道</para>
+        /// <para>Deletes a delivery channel from an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cdc-38c3013b46c9002c****</c> delivery channel from the <c>ca-23c6626622af0041****</c> account group. The returned result shows that the <c>cdc-38c3013b46c9002c****</c> delivery channel is deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregateConfigDeliveryChannelRequest
@@ -4612,8 +4522,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组删除投递渠道</para>
+        /// <para>Deletes a delivery channel from an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cdc-38c3013b46c9002c****</c> delivery channel from the <c>ca-23c6626622af0041****</c> account group. The returned result shows that the <c>cdc-38c3013b46c9002c****</c> delivery channel is deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregateConfigDeliveryChannelRequest
@@ -4630,8 +4545,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组删除投递渠道</para>
+        /// <para>Deletes a delivery channel from an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cdc-38c3013b46c9002c****</c> delivery channel from the <c>ca-23c6626622af0041****</c> account group. The returned result shows that the <c>cdc-38c3013b46c9002c****</c> delivery channel is deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregateConfigDeliveryChannelRequest
@@ -4648,8 +4568,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定账号组内的规则。删除规则后，其配置信息不再保留</para>
+        /// <para>Deletes one or more rules from an account group. You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cr-4e3d626622af0080****</c> rule from the <c>ca-a4e5626622af0079****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregateConfigRulesRequest
@@ -4694,8 +4619,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定账号组内的规则。删除规则后，其配置信息不再保留</para>
+        /// <para>Deletes one or more rules from an account group. You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cr-4e3d626622af0080****</c> rule from the <c>ca-a4e5626622af0079****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregateConfigRulesRequest
@@ -4740,8 +4670,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定账号组内的规则。删除规则后，其配置信息不再保留</para>
+        /// <para>Deletes one or more rules from an account group. You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cr-4e3d626622af0080****</c> rule from the <c>ca-a4e5626622af0079****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregateConfigRulesRequest
@@ -4758,8 +4693,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定账号组内的规则。删除规则后，其配置信息不再保留</para>
+        /// <para>Deletes one or more rules from an account group. You can delete a rule in the Cloud Config console. After you delete the rule, the configurations of the rule are deleted.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cr-4e3d626622af0080****</c> rule from the <c>ca-a4e5626622af0079****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregateConfigRulesRequest
@@ -4776,12 +4716,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the remediation settings for a rule in a specified account group.</para>
+        /// <para>Deletes one or more remediation templates from a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to delete the remediation setting <c>crr-909ba2d4716700eb****</c> for a rule in the account group <c>ca-6b4a626622af0012****</c>. The response shows that the remediation setting is deleted.</para>
+        /// <para>This topic provides an example on how to delete the remediation template whose ID is <c>crr-909ba2d4716700eb****</c> from the account group whose ID is <c>ca-6b4a626622af0012****</c>. The returned result shows that the remediation template whose ID is <c>crr-909ba2d4716700eb****</c> is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4827,12 +4767,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the remediation settings for a rule in a specified account group.</para>
+        /// <para>Deletes one or more remediation templates from a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to delete the remediation setting <c>crr-909ba2d4716700eb****</c> for a rule in the account group <c>ca-6b4a626622af0012****</c>. The response shows that the remediation setting is deleted.</para>
+        /// <para>This topic provides an example on how to delete the remediation template whose ID is <c>crr-909ba2d4716700eb****</c> from the account group whose ID is <c>ca-6b4a626622af0012****</c>. The returned result shows that the remediation template whose ID is <c>crr-909ba2d4716700eb****</c> is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4878,12 +4818,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the remediation settings for a rule in a specified account group.</para>
+        /// <para>Deletes one or more remediation templates from a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to delete the remediation setting <c>crr-909ba2d4716700eb****</c> for a rule in the account group <c>ca-6b4a626622af0012****</c>. The response shows that the remediation setting is deleted.</para>
+        /// <para>This topic provides an example on how to delete the remediation template whose ID is <c>crr-909ba2d4716700eb****</c> from the account group whose ID is <c>ca-6b4a626622af0012****</c>. The returned result shows that the remediation template whose ID is <c>crr-909ba2d4716700eb****</c> is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4901,12 +4841,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the remediation settings for a rule in a specified account group.</para>
+        /// <para>Deletes one or more remediation templates from a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to delete the remediation setting <c>crr-909ba2d4716700eb****</c> for a rule in the account group <c>ca-6b4a626622af0012****</c>. The response shows that the remediation setting is deleted.</para>
+        /// <para>This topic provides an example on how to delete the remediation template whose ID is <c>crr-909ba2d4716700eb****</c> from the account group whose ID is <c>ca-6b4a626622af0012****</c>. The returned result shows that the remediation template whose ID is <c>crr-909ba2d4716700eb****</c> is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4924,8 +4864,22 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账号组</para>
+        /// <para>The management account or delegated administrator account of a resource directory can delete an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Background information</h3>
+        /// <para>After you delete an account group, the following changes occur to Cloud Config:</para>
+        /// <list type="bullet">
+        /// <item><description>The rules and compliance packages of the account group are deleted and cannot be recovered.</description></item>
+        /// <item><description>All compliance results generated in the account group are automatically deleted and cannot be recovered.</description></item>
+        /// <item><description>Service-linked roles for Cloud Config of member accounts in the account group are retained.</description></item>
+        /// <item><description>If the account groups to which a member belongs are all deleted, the member account uses Cloud Config as an independent Alibaba Cloud account.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to delete the account group whose ID is <c>ca-9190626622af00a9****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregatorsRequest
@@ -4970,8 +4924,22 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账号组</para>
+        /// <para>The management account or delegated administrator account of a resource directory can delete an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Background information</h3>
+        /// <para>After you delete an account group, the following changes occur to Cloud Config:</para>
+        /// <list type="bullet">
+        /// <item><description>The rules and compliance packages of the account group are deleted and cannot be recovered.</description></item>
+        /// <item><description>All compliance results generated in the account group are automatically deleted and cannot be recovered.</description></item>
+        /// <item><description>Service-linked roles for Cloud Config of member accounts in the account group are retained.</description></item>
+        /// <item><description>If the account groups to which a member belongs are all deleted, the member account uses Cloud Config as an independent Alibaba Cloud account.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to delete the account group whose ID is <c>ca-9190626622af00a9****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregatorsRequest
@@ -5016,8 +4984,22 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账号组</para>
+        /// <para>The management account or delegated administrator account of a resource directory can delete an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Background information</h3>
+        /// <para>After you delete an account group, the following changes occur to Cloud Config:</para>
+        /// <list type="bullet">
+        /// <item><description>The rules and compliance packages of the account group are deleted and cannot be recovered.</description></item>
+        /// <item><description>All compliance results generated in the account group are automatically deleted and cannot be recovered.</description></item>
+        /// <item><description>Service-linked roles for Cloud Config of member accounts in the account group are retained.</description></item>
+        /// <item><description>If the account groups to which a member belongs are all deleted, the member account uses Cloud Config as an independent Alibaba Cloud account.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to delete the account group whose ID is <c>ca-9190626622af00a9****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregatorsRequest
@@ -5034,8 +5016,22 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除账号组</para>
+        /// <para>The management account or delegated administrator account of a resource directory can delete an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Background information</h3>
+        /// <para>After you delete an account group, the following changes occur to Cloud Config:</para>
+        /// <list type="bullet">
+        /// <item><description>The rules and compliance packages of the account group are deleted and cannot be recovered.</description></item>
+        /// <item><description>All compliance results generated in the account group are automatically deleted and cannot be recovered.</description></item>
+        /// <item><description>Service-linked roles for Cloud Config of member accounts in the account group are retained.</description></item>
+        /// <item><description>If the account groups to which a member belongs are all deleted, the member account uses Cloud Config as an independent Alibaba Cloud account.</description></item>
+        /// </list>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to delete the account group whose ID is <c>ca-9190626622af00a9****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAggregatorsRequest
@@ -5052,8 +5048,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除合规包</para>
+        /// <para>Deletes one or more compliance packages.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cp-541e626622af0087****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCompliancePacksRequest
@@ -5102,8 +5103,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除合规包</para>
+        /// <para>Deletes one or more compliance packages.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cp-541e626622af0087****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCompliancePacksRequest
@@ -5152,8 +5158,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除合规包</para>
+        /// <para>Deletes one or more compliance packages.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cp-541e626622af0087****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCompliancePacksRequest
@@ -5170,8 +5181,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除合规包</para>
+        /// <para>Deletes one or more compliance packages.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cp-541e626622af0087****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCompliancePacksRequest
@@ -5188,8 +5204,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>当前账号删除投递渠道</para>
+        /// <para>Deletes a delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cdc-38c3013b46c9002c****</c> delivery channel. The returned result shows that the <c>cdc-38c3013b46c9002c****</c> delivery channel is deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteConfigDeliveryChannelRequest
@@ -5230,8 +5251,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>当前账号删除投递渠道</para>
+        /// <para>Deletes a delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cdc-38c3013b46c9002c****</c> delivery channel. The returned result shows that the <c>cdc-38c3013b46c9002c****</c> delivery channel is deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteConfigDeliveryChannelRequest
@@ -5272,8 +5298,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>当前账号删除投递渠道</para>
+        /// <para>Deletes a delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cdc-38c3013b46c9002c****</c> delivery channel. The returned result shows that the <c>cdc-38c3013b46c9002c****</c> delivery channel is deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteConfigDeliveryChannelRequest
@@ -5290,8 +5321,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>当前账号删除投递渠道</para>
+        /// <para>Deletes a delivery channel.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to delete the <c>cdc-38c3013b46c9002c****</c> delivery channel. The returned result shows that the <c>cdc-38c3013b46c9002c****</c> delivery channel is deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteConfigDeliveryChannelRequest
@@ -5308,8 +5344,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除规则</para>
+        /// <para>Deletes rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this example, the rule whose ID is cr-9908626622af0035\<em>\</em>\<em>\</em> is deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteConfigRulesRequest
@@ -5350,8 +5391,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除规则</para>
+        /// <para>Deletes rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this example, the rule whose ID is cr-9908626622af0035\<em>\</em>\<em>\</em> is deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteConfigRulesRequest
@@ -5392,8 +5438,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除规则</para>
+        /// <para>Deletes rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this example, the rule whose ID is cr-9908626622af0035\<em>\</em>\<em>\</em> is deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteConfigRulesRequest
@@ -5410,8 +5461,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除规则</para>
+        /// <para>Deletes rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this example, the rule whose ID is cr-9908626622af0035\<em>\</em>\<em>\</em> is deleted.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteConfigRulesRequest
@@ -5428,12 +5484,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes specified remediation settings.</para>
+        /// <para>Deletes one or more configured remediation templates that are associated with a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to delete a remediation setting for a rule. In this example, the remediation setting with the ID <c>crr-909ba2d4716700eb****</c> is deleted. The response indicates that the operation is successful.</para>
+        /// <para>This topic provides an example on how to delete the remediation template <c>crr-909ba2d4716700eb****</c>. The returned result shows that the remediation template whose ID is <c>crr-909ba2d4716700eb****</c> is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5475,12 +5531,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes specified remediation settings.</para>
+        /// <para>Deletes one or more configured remediation templates that are associated with a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to delete a remediation setting for a rule. In this example, the remediation setting with the ID <c>crr-909ba2d4716700eb****</c> is deleted. The response indicates that the operation is successful.</para>
+        /// <para>This topic provides an example on how to delete the remediation template <c>crr-909ba2d4716700eb****</c>. The returned result shows that the remediation template whose ID is <c>crr-909ba2d4716700eb****</c> is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5522,12 +5578,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes specified remediation settings.</para>
+        /// <para>Deletes one or more configured remediation templates that are associated with a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to delete a remediation setting for a rule. In this example, the remediation setting with the ID <c>crr-909ba2d4716700eb****</c> is deleted. The response indicates that the operation is successful.</para>
+        /// <para>This topic provides an example on how to delete the remediation template <c>crr-909ba2d4716700eb****</c>. The returned result shows that the remediation template whose ID is <c>crr-909ba2d4716700eb****</c> is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5545,12 +5601,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes specified remediation settings.</para>
+        /// <para>Deletes one or more configured remediation templates that are associated with a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to delete a remediation setting for a rule. In this example, the remediation setting with the ID <c>crr-909ba2d4716700eb****</c> is deleted. The response indicates that the operation is successful.</para>
+        /// <para>This topic provides an example on how to delete the remediation template <c>crr-909ba2d4716700eb****</c>. The returned result shows that the remediation template whose ID is <c>crr-909ba2d4716700eb****</c> is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5568,7 +5624,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a compliance report template.</para>
+        /// <para>删除合规报告模版</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5610,7 +5666,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a compliance report template.</para>
+        /// <para>删除合规报告模版</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5652,7 +5708,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a compliance report template.</para>
+        /// <para>删除合规报告模版</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5670,7 +5726,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a compliance report template.</para>
+        /// <para>删除合规报告模版</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5688,7 +5744,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves the details of multiple resources in a batch.</para>
+        /// <para>批量获取资源详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5738,7 +5794,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves the details of multiple resources in a batch.</para>
+        /// <para>批量获取资源详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5788,7 +5844,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves the details of multiple resources in a batch.</para>
+        /// <para>批量获取资源详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5806,7 +5862,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves the details of multiple resources in a batch.</para>
+        /// <para>批量获取资源详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5824,7 +5880,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorization status of an integrated cloud service.</para>
+        /// <para>查询用户集成云产品的授权状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5866,7 +5922,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorization status of an integrated cloud service.</para>
+        /// <para>查询用户集成云产品的授权状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5908,7 +5964,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorization status of an integrated cloud service.</para>
+        /// <para>查询用户集成云产品的授权状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5926,7 +5982,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorization status of an integrated cloud service.</para>
+        /// <para>查询用户集成云产品的授权状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5944,7 +6000,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取修正详情</para>
+        /// <para>This topic provides an example on how to query the details of a remediation configuration whose ID is crr-f381cf0c1c2f004e\\<em>\\</em>\\<em>\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5982,7 +6038,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取修正详情</para>
+        /// <para>This topic provides an example on how to query the details of a remediation configuration whose ID is crr-f381cf0c1c2f004e\\<em>\\</em>\\<em>\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6020,7 +6076,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取修正详情</para>
+        /// <para>This topic provides an example on how to query the details of a remediation configuration whose ID is crr-f381cf0c1c2f004e\\<em>\\</em>\\<em>\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6038,7 +6094,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取修正详情</para>
+        /// <para>This topic provides an example on how to query the details of a remediation configuration whose ID is crr-f381cf0c1c2f004e\\<em>\\</em>\\<em>\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6056,8 +6112,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定账号组规则从指定账号组合规包中移出</para>
+        /// <para>Removes one or more rules in an account group from a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <para>One or more rules are added to a compliance package.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>The sample request in this topic shows you how to remove the <c>cr-6cc4626622af00e7****</c> rule in the <c>ca-75b4626622af00c3****</c> account group from the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DetachAggregateConfigRuleToCompliancePackRequest
@@ -6106,8 +6170,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定账号组规则从指定账号组合规包中移出</para>
+        /// <para>Removes one or more rules in an account group from a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <para>One or more rules are added to a compliance package.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>The sample request in this topic shows you how to remove the <c>cr-6cc4626622af00e7****</c> rule in the <c>ca-75b4626622af00c3****</c> account group from the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DetachAggregateConfigRuleToCompliancePackRequest
@@ -6156,8 +6228,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定账号组规则从指定账号组合规包中移出</para>
+        /// <para>Removes one or more rules in an account group from a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <para>One or more rules are added to a compliance package.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>The sample request in this topic shows you how to remove the <c>cr-6cc4626622af00e7****</c> rule in the <c>ca-75b4626622af00c3****</c> account group from the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DetachAggregateConfigRuleToCompliancePackRequest
@@ -6174,8 +6254,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定账号组规则从指定账号组合规包中移出</para>
+        /// <para>Removes one or more rules in an account group from a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <para>One or more rules are added to a compliance package.</para>
+        /// <h3>Usage notes</h3>
+        /// <para>The sample request in this topic shows you how to remove the <c>cr-6cc4626622af00e7****</c> rule in the <c>ca-75b4626622af00c3****</c> account group from the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DetachAggregateConfigRuleToCompliancePackRequest
@@ -6192,15 +6280,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation detaches one or more rules from a compliance package.</para>
+        /// <para>Removes one or more rules from a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Prerequisites</h3>
-        /// <para>Make sure that the destination compliance package contains rules.</para>
+        /// <para>One or more rules are added to a compliance package.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of detaching the rule <c>cr-6cc4626622af00e7****</c> from the compliance package <c>cp-5bb1626622af00bd****</c>.</para>
+        /// <para>This topic provides an example on how to remove the <c>cr-6cc4626622af00e7****</c> rule from the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6246,15 +6334,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation detaches one or more rules from a compliance package.</para>
+        /// <para>Removes one or more rules from a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Prerequisites</h3>
-        /// <para>Make sure that the destination compliance package contains rules.</para>
+        /// <para>One or more rules are added to a compliance package.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of detaching the rule <c>cr-6cc4626622af00e7****</c> from the compliance package <c>cp-5bb1626622af00bd****</c>.</para>
+        /// <para>This topic provides an example on how to remove the <c>cr-6cc4626622af00e7****</c> rule from the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6300,15 +6388,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation detaches one or more rules from a compliance package.</para>
+        /// <para>Removes one or more rules from a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Prerequisites</h3>
-        /// <para>Make sure that the destination compliance package contains rules.</para>
+        /// <para>One or more rules are added to a compliance package.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of detaching the rule <c>cr-6cc4626622af00e7****</c> from the compliance package <c>cp-5bb1626622af00bd****</c>.</para>
+        /// <para>This topic provides an example on how to remove the <c>cr-6cc4626622af00e7****</c> rule from the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6326,15 +6414,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation detaches one or more rules from a compliance package.</para>
+        /// <para>Removes one or more rules from a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Prerequisites</h3>
-        /// <para>Make sure that the destination compliance package contains rules.</para>
+        /// <para>One or more rules are added to a compliance package.</para>
         /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of detaching the rule <c>cr-6cc4626622af00e7****</c> from the compliance package <c>cp-5bb1626622af00bd****</c>.</para>
+        /// <para>This topic provides an example on how to remove the <c>cr-6cc4626622af00e7****</c> rule from the <c>cp-5bb1626622af00bd****</c> compliance package.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6352,7 +6440,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API performs a dry run on rules for proactive compliance pre-checks.</para>
+        /// <para>试运行事前合规预检的规则</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6398,7 +6486,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API performs a dry run on rules for proactive compliance pre-checks.</para>
+        /// <para>试运行事前合规预检的规则</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6444,7 +6532,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API performs a dry run on rules for proactive compliance pre-checks.</para>
+        /// <para>试运行事前合规预检的规则</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6462,7 +6550,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API performs a dry run on rules for proactive compliance pre-checks.</para>
+        /// <para>试运行事前合规预检的规则</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6480,14 +6568,8 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes evaluation rules to perform compliance pre-checks on resources.</para>
+        /// <para>Executes evaluation rules to evaluate resources.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>For more information about the concepts, operating principles, and integration process of evaluation rules, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and operating principles of evaluation rules</a>.
-        /// After you create an evaluation rule, a managed rule with the same settings is created. This managed rule can continuously check the compliance of resources after they are created.</para>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// EvaluatePreConfigRulesRequest
@@ -6542,14 +6624,8 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes evaluation rules to perform compliance pre-checks on resources.</para>
+        /// <para>Executes evaluation rules to evaluate resources.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>For more information about the concepts, operating principles, and integration process of evaluation rules, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and operating principles of evaluation rules</a>.
-        /// After you create an evaluation rule, a managed rule with the same settings is created. This managed rule can continuously check the compliance of resources after they are created.</para>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// EvaluatePreConfigRulesRequest
@@ -6604,14 +6680,8 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes evaluation rules to perform compliance pre-checks on resources.</para>
+        /// <para>Executes evaluation rules to evaluate resources.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>For more information about the concepts, operating principles, and integration process of evaluation rules, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and operating principles of evaluation rules</a>.
-        /// After you create an evaluation rule, a managed rule with the same settings is created. This managed rule can continuously check the compliance of resources after they are created.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// EvaluatePreConfigRulesRequest
@@ -6628,14 +6698,8 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes evaluation rules to perform compliance pre-checks on resources.</para>
+        /// <para>Executes evaluation rules to evaluate resources.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>For more information about the concepts, operating principles, and integration process of evaluation rules, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and operating principles of evaluation rules</a>.
-        /// After you create an evaluation rule, a managed rule with the same settings is created. This managed rule can continuously check the compliance of resources after they are created.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// EvaluatePreConfigRulesRequest
@@ -6652,14 +6716,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an assessment report for a specified compliance package in a specified account group.</para>
+        /// <para>Generates a compliance evaluation report based on a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation only generates the latest assessment report. You need to call the GetAggregateCompliancePackReport operation to download the assessment report. For more information, see <a href="https://help.aliyun.com/document_detail/262699.html">GetAggregateCompliancePackReport</a>.
-        /// This topic provides an example that shows how to generate an assessment report for the compliance package <c>cp-fdc8626622af00f9****</c> in the account group <c>ca-f632626622af0079****</c>.</para>
+        /// <para>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/262699.html">GetAggregateCompliancePackReport</a>.
+        /// This topic provides an example on how to generate a compliance evaluation report based on the <c>cp-fdc8626622af00f9****</c> compliance package in the <c>ca-f632626622af0079****</c> account group.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6714,14 +6778,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an assessment report for a specified compliance package in a specified account group.</para>
+        /// <para>Generates a compliance evaluation report based on a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation only generates the latest assessment report. You need to call the GetAggregateCompliancePackReport operation to download the assessment report. For more information, see <a href="https://help.aliyun.com/document_detail/262699.html">GetAggregateCompliancePackReport</a>.
-        /// This topic provides an example that shows how to generate an assessment report for the compliance package <c>cp-fdc8626622af00f9****</c> in the account group <c>ca-f632626622af0079****</c>.</para>
+        /// <para>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/262699.html">GetAggregateCompliancePackReport</a>.
+        /// This topic provides an example on how to generate a compliance evaluation report based on the <c>cp-fdc8626622af00f9****</c> compliance package in the <c>ca-f632626622af0079****</c> account group.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6776,14 +6840,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an assessment report for a specified compliance package in a specified account group.</para>
+        /// <para>Generates a compliance evaluation report based on a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation only generates the latest assessment report. You need to call the GetAggregateCompliancePackReport operation to download the assessment report. For more information, see <a href="https://help.aliyun.com/document_detail/262699.html">GetAggregateCompliancePackReport</a>.
-        /// This topic provides an example that shows how to generate an assessment report for the compliance package <c>cp-fdc8626622af00f9****</c> in the account group <c>ca-f632626622af0079****</c>.</para>
+        /// <para>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/262699.html">GetAggregateCompliancePackReport</a>.
+        /// This topic provides an example on how to generate a compliance evaluation report based on the <c>cp-fdc8626622af00f9****</c> compliance package in the <c>ca-f632626622af0079****</c> account group.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6802,14 +6866,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates an assessment report for a specified compliance package in a specified account group.</para>
+        /// <para>Generates a compliance evaluation report based on a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation only generates the latest assessment report. You need to call the GetAggregateCompliancePackReport operation to download the assessment report. For more information, see <a href="https://help.aliyun.com/document_detail/262699.html">GetAggregateCompliancePackReport</a>.
-        /// This topic provides an example that shows how to generate an assessment report for the compliance package <c>cp-fdc8626622af00f9****</c> in the account group <c>ca-f632626622af0079****</c>.</para>
+        /// <para>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/262699.html">GetAggregateCompliancePackReport</a>.
+        /// This topic provides an example on how to generate a compliance evaluation report based on the <c>cp-fdc8626622af00f9****</c> compliance package in the <c>ca-f632626622af0079****</c> account group.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -6828,8 +6892,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成指定账号组的合规报告</para>
+        /// <para>Generates a compliance evaluation report for the rules in a specified account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/262706.html">GetAggregateConfigRulesReport</a>.
+        /// The topic provides an example on how to generate a compliance evaluation report based on all rules in the <c>ca-f632626622af0079****</c> account group.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateAggregateConfigRulesReportRequest
@@ -6878,8 +6950,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成指定账号组的合规报告</para>
+        /// <para>Generates a compliance evaluation report for the rules in a specified account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/262706.html">GetAggregateConfigRulesReport</a>.
+        /// The topic provides an example on how to generate a compliance evaluation report based on all rules in the <c>ca-f632626622af0079****</c> account group.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateAggregateConfigRulesReportRequest
@@ -6928,8 +7008,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成指定账号组的合规报告</para>
+        /// <para>Generates a compliance evaluation report for the rules in a specified account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/262706.html">GetAggregateConfigRulesReport</a>.
+        /// The topic provides an example on how to generate a compliance evaluation report based on all rules in the <c>ca-f632626622af0079****</c> account group.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateAggregateConfigRulesReportRequest
@@ -6946,8 +7034,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成指定账号组的合规报告</para>
+        /// <para>Generates a compliance evaluation report for the rules in a specified account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetAggregateConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/262706.html">GetAggregateConfigRulesReport</a>.
+        /// The topic provides an example on how to generate a compliance evaluation report based on all rules in the <c>ca-f632626622af0079****</c> account group.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateAggregateConfigRulesReportRequest
@@ -6964,8 +7060,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组资源清单生成</para>
+        /// <para>Generates a downloadable inventory for global resources in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateAggregateResourceInventoryRequest
@@ -7022,8 +7123,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组资源清单生成</para>
+        /// <para>Generates a downloadable inventory for global resources in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateAggregateResourceInventoryRequest
@@ -7080,8 +7186,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组资源清单生成</para>
+        /// <para>Generates a downloadable inventory for global resources in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateAggregateResourceInventoryRequest
@@ -7098,8 +7209,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组资源清单生成</para>
+        /// <para>Generates a downloadable inventory for global resources in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example to show how to generate a downloadable inventory for global resources in the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateAggregateResourceInventoryRequest
@@ -7116,8 +7232,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成合规包的合规包报告</para>
+        /// <para>Generates a compliance evaluation report based on a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetCompliancePackReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/263347.html">GetCompliancePackReport</a>.
+        /// This topic provides an example on how to generate a compliance evaluation report based on the <c>cp-a8a8626622af0082****</c> compliance package.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateCompliancePackReportRequest
@@ -7162,8 +7286,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成合规包的合规包报告</para>
+        /// <para>Generates a compliance evaluation report based on a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetCompliancePackReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/263347.html">GetCompliancePackReport</a>.
+        /// This topic provides an example on how to generate a compliance evaluation report based on the <c>cp-a8a8626622af0082****</c> compliance package.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateCompliancePackReportRequest
@@ -7208,8 +7340,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成合规包的合规包报告</para>
+        /// <para>Generates a compliance evaluation report based on a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetCompliancePackReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/263347.html">GetCompliancePackReport</a>.
+        /// This topic provides an example on how to generate a compliance evaluation report based on the <c>cp-a8a8626622af0082****</c> compliance package.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateCompliancePackReportRequest
@@ -7226,8 +7366,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成合规包的合规包报告</para>
+        /// <para>Generates a compliance evaluation report based on a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetCompliancePackReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/263347.html">GetCompliancePackReport</a>.
+        /// This topic provides an example on how to generate a compliance evaluation report based on the <c>cp-a8a8626622af0082****</c> compliance package.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateCompliancePackReportRequest
@@ -7244,8 +7392,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成规则的合规评估报告</para>
+        /// <para>Generates a compliance evaluation report for a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/263608.html">GetConfigRulesReport</a>.
+        /// This topic provides an example of how to generate a compliance evaluation report based on all existing rules.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateConfigRulesReportRequest
@@ -7290,8 +7446,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成规则的合规评估报告</para>
+        /// <para>Generates a compliance evaluation report for a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/263608.html">GetConfigRulesReport</a>.
+        /// This topic provides an example of how to generate a compliance evaluation report based on all existing rules.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateConfigRulesReportRequest
@@ -7336,8 +7500,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成规则的合规评估报告</para>
+        /// <para>Generates a compliance evaluation report for a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/263608.html">GetConfigRulesReport</a>.
+        /// This topic provides an example of how to generate a compliance evaluation report based on all existing rules.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateConfigRulesReportRequest
@@ -7354,8 +7526,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成规则的合规评估报告</para>
+        /// <para>Generates a compliance evaluation report for a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> You can call this operation to generate the latest compliance evaluation report. To download the report, call the GetConfigRulesReport operation. For more information, see <a href="https://help.aliyun.com/document_detail/263608.html">GetConfigRulesReport</a>.
+        /// This topic provides an example of how to generate a compliance evaluation report based on all existing rules.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GenerateConfigRulesReportRequest
@@ -7372,7 +7552,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate a report ID from a report template.</para>
+        /// <para>基于报告模版生成报告Id</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7414,7 +7594,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate a report ID from a report template.</para>
+        /// <para>基于报告模版生成报告Id</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7456,7 +7636,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate a report ID from a report template.</para>
+        /// <para>基于报告模版生成报告Id</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7474,7 +7654,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate a report ID from a report template.</para>
+        /// <para>基于报告模版生成报告Id</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7492,12 +7672,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a downloadable inventory of global resources.</para>
+        /// <para>Generates a resource inventory for global resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to generate a downloadable inventory of global resources for the current account.</para>
+        /// <para>This topic provides an example on how to generate a resource inventory for global resources of the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7547,12 +7727,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a downloadable inventory of global resources.</para>
+        /// <para>Generates a resource inventory for global resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to generate a downloadable inventory of global resources for the current account.</para>
+        /// <para>This topic provides an example on how to generate a resource inventory for global resources of the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7602,12 +7782,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a downloadable inventory of global resources.</para>
+        /// <para>Generates a resource inventory for global resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to generate a downloadable inventory of global resources for the current account.</para>
+        /// <para>This topic provides an example on how to generate a resource inventory for global resources of the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7625,12 +7805,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generates a downloadable inventory of global resources.</para>
+        /// <para>Generates a resource inventory for global resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to generate a downloadable inventory of global resources for the current account.</para>
+        /// <para>This topic provides an example on how to generate a resource inventory for global resources of the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7648,8 +7828,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高级搜索 获取搜索结果下载文件地址</para>
+        /// <para>Obtains the last resource advanced search file that is generated within the current account. You can call this operation to obtain the URL of the resource advanced search file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>You must call the <a href="https://help.aliyun.com/document_detail/2511967.html">CreateAdvancedSearchFile</a> operation to create a resource advanced search file. Then, you can call this operation to obtain the URL of the resource advanced search file.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAdvancedSearchFileRequest
@@ -7681,8 +7867,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高级搜索 获取搜索结果下载文件地址</para>
+        /// <para>Obtains the last resource advanced search file that is generated within the current account. You can call this operation to obtain the URL of the resource advanced search file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>You must call the <a href="https://help.aliyun.com/document_detail/2511967.html">CreateAdvancedSearchFile</a> operation to create a resource advanced search file. Then, you can call this operation to obtain the URL of the resource advanced search file.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAdvancedSearchFileRequest
@@ -7714,8 +7906,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高级搜索 获取搜索结果下载文件地址</para>
+        /// <para>Obtains the last resource advanced search file that is generated within the current account. You can call this operation to obtain the URL of the resource advanced search file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>You must call the <a href="https://help.aliyun.com/document_detail/2511967.html">CreateAdvancedSearchFile</a> operation to create a resource advanced search file. Then, you can call this operation to obtain the URL of the resource advanced search file.</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetAdvancedSearchFileResponse
@@ -7728,8 +7926,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高级搜索 获取搜索结果下载文件地址</para>
+        /// <para>Obtains the last resource advanced search file that is generated within the current account. You can call this operation to obtain the URL of the resource advanced search file.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>You must call the <a href="https://help.aliyun.com/document_detail/2511967.html">CreateAdvancedSearchFile</a> operation to create a resource advanced search file. Then, you can call this operation to obtain the URL of the resource advanced search file.</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetAdvancedSearchFileResponse
@@ -7742,8 +7946,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定账号组内指定合规包中成员账号的合规结果</para>
+        /// <para>Queries the compliance evaluation results of member accounts for which a compliance package takes effect in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of member accounts for which the <c>cp-541e626622af0087****</c> compliance package takes effect in the <c>ca-04b3fd170e340007****</c> account group. The returned result shows that two member accounts are monitored by the compliance package and they are both evaluated as compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateAccountComplianceByPackRequest
@@ -7780,8 +7989,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定账号组内指定合规包中成员账号的合规结果</para>
+        /// <para>Queries the compliance evaluation results of member accounts for which a compliance package takes effect in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of member accounts for which the <c>cp-541e626622af0087****</c> compliance package takes effect in the <c>ca-04b3fd170e340007****</c> account group. The returned result shows that two member accounts are monitored by the compliance package and they are both evaluated as compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateAccountComplianceByPackRequest
@@ -7818,8 +8032,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定账号组内指定合规包中成员账号的合规结果</para>
+        /// <para>Queries the compliance evaluation results of member accounts for which a compliance package takes effect in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of member accounts for which the <c>cp-541e626622af0087****</c> compliance package takes effect in the <c>ca-04b3fd170e340007****</c> account group. The returned result shows that two member accounts are monitored by the compliance package and they are both evaluated as compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateAccountComplianceByPackRequest
@@ -7836,8 +8055,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定账号组内指定合规包中成员账号的合规结果</para>
+        /// <para>Queries the compliance evaluation results of member accounts for which a compliance package takes effect in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of member accounts for which the <c>cp-541e626622af0087****</c> compliance package takes effect in the <c>ca-04b3fd170e340007****</c> account group. The returned result shows that two member accounts are monitored by the compliance package and they are both evaluated as compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateAccountComplianceByPackRequest
@@ -7854,7 +8078,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高级搜获取搜索结果下载文件地址</para>
+        /// <para>Obtains the most recently generated resource advanced search file within a specific account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7896,7 +8120,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高级搜获取搜索结果下载文件地址</para>
+        /// <para>Obtains the most recently generated resource advanced search file within a specific account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7938,7 +8162,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高级搜获取搜索结果下载文件地址</para>
+        /// <para>Obtains the most recently generated resource advanced search file within a specific account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7956,7 +8180,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高级搜获取搜索结果下载文件地址</para>
+        /// <para>Obtains the most recently generated resource advanced search file within a specific account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7974,12 +8198,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a compliance pack in a specified account group.</para>
+        /// <para>Queries the details of a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to retrieve the details of the compliance pack <c>cp-fdc8626622af00f9****</c> in the account group <c>ca-f632626622af0079****</c>.</para>
+        /// <para>The topic provides an example on how to query the details of a compliance package whose ID is <c>cp-fdc8626622af00f9****</c> in an account group whose ID is <c>ca-f632626622af0079****</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8023,12 +8247,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a compliance pack in a specified account group.</para>
+        /// <para>Queries the details of a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to retrieve the details of the compliance pack <c>cp-fdc8626622af00f9****</c> in the account group <c>ca-f632626622af0079****</c>.</para>
+        /// <para>The topic provides an example on how to query the details of a compliance package whose ID is <c>cp-fdc8626622af00f9****</c> in an account group whose ID is <c>ca-f632626622af0079****</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8072,12 +8296,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a compliance pack in a specified account group.</para>
+        /// <para>Queries the details of a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to retrieve the details of the compliance pack <c>cp-fdc8626622af00f9****</c> in the account group <c>ca-f632626622af0079****</c>.</para>
+        /// <para>The topic provides an example on how to query the details of a compliance package whose ID is <c>cp-fdc8626622af00f9****</c> in an account group whose ID is <c>ca-f632626622af0079****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8095,12 +8319,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a compliance pack in a specified account group.</para>
+        /// <para>Queries the details of a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to retrieve the details of the compliance pack <c>cp-fdc8626622af00f9****</c> in the account group <c>ca-f632626622af0079****</c>.</para>
+        /// <para>The topic provides an example on how to query the details of a compliance package whose ID is <c>cp-fdc8626622af00f9****</c> in an account group whose ID is <c>ca-f632626622af0079****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8118,8 +8342,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定账号组内指定合规包的评估报告</para>
+        /// <para>Queries the compliance evaluation report that is generated based on a compliance package of an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, you must call the GenerateAggregateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see <a href="https://help.aliyun.com/document_detail/262687.html">GenerateAggregateCompliancePackReport</a>.
+        /// This topic provides an example on how to query the compliance evaluation report that is generated based on the <c>cp-fdc8626622af00f9****</c> compliance package in the <c>ca-f632626622af0079****</c> account group.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateCompliancePackReportRequest
@@ -8156,8 +8388,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定账号组内指定合规包的评估报告</para>
+        /// <para>Queries the compliance evaluation report that is generated based on a compliance package of an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, you must call the GenerateAggregateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see <a href="https://help.aliyun.com/document_detail/262687.html">GenerateAggregateCompliancePackReport</a>.
+        /// This topic provides an example on how to query the compliance evaluation report that is generated based on the <c>cp-fdc8626622af00f9****</c> compliance package in the <c>ca-f632626622af0079****</c> account group.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateCompliancePackReportRequest
@@ -8194,8 +8434,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定账号组内指定合规包的评估报告</para>
+        /// <para>Queries the compliance evaluation report that is generated based on a compliance package of an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, you must call the GenerateAggregateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see <a href="https://help.aliyun.com/document_detail/262687.html">GenerateAggregateCompliancePackReport</a>.
+        /// This topic provides an example on how to query the compliance evaluation report that is generated based on the <c>cp-fdc8626622af00f9****</c> compliance package in the <c>ca-f632626622af0079****</c> account group.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateCompliancePackReportRequest
@@ -8212,8 +8460,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定账号组内指定合规包的评估报告</para>
+        /// <para>Queries the compliance evaluation report that is generated based on a compliance package of an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, you must call the GenerateAggregateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see <a href="https://help.aliyun.com/document_detail/262687.html">GenerateAggregateCompliancePackReport</a>.
+        /// This topic provides an example on how to query the compliance evaluation report that is generated based on the <c>cp-fdc8626622af00f9****</c> compliance package in the <c>ca-f632626622af0079****</c> account group.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateCompliancePackReportRequest
@@ -8230,12 +8486,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance summary for a specified account group.</para>
+        /// <para>Queries the compliance statistics of an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance summary by resource and by rule for the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// <para>This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8277,12 +8533,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance summary for a specified account group.</para>
+        /// <para>Queries the compliance statistics of an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance summary by resource and by rule for the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// <para>This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8324,12 +8580,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance summary for a specified account group.</para>
+        /// <para>Queries the compliance statistics of an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance summary by resource and by rule for the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// <para>This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8347,12 +8603,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance summary for a specified account group.</para>
+        /// <para>Queries the compliance statistics of an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance summary by resource and by rule for the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// <para>This topic provides an example on how to query the compliance statistics of resources and rules in the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8370,7 +8626,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组查询单个投递渠道</para>
+        /// <para>Queries the information about a delivery channel in an account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8416,7 +8672,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组查询单个投递渠道</para>
+        /// <para>Queries the information about a delivery channel in an account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8462,7 +8718,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组查询单个投递渠道</para>
+        /// <para>Queries the information about a delivery channel in an account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8480,7 +8736,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组查询单个投递渠道</para>
+        /// <para>Queries the information about a delivery channel in an account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8498,12 +8754,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific rule in a specified account group.</para>
+        /// <para>Queries the details of a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the rule <c>cr-7f7d626622af0041****</c> in the account group <c>ca-7f00626622af0041****</c>.</para>
+        /// <para>This example shows how to query the details of the <c>cr-7f7d626622af0041****</c> rule in the <c>ca-7f00626622af0041****</c> account group.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8559,12 +8815,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific rule in a specified account group.</para>
+        /// <para>Queries the details of a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the rule <c>cr-7f7d626622af0041****</c> in the account group <c>ca-7f00626622af0041****</c>.</para>
+        /// <para>This example shows how to query the details of the <c>cr-7f7d626622af0041****</c> rule in the <c>ca-7f00626622af0041****</c> account group.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8620,12 +8876,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific rule in a specified account group.</para>
+        /// <para>Queries the details of a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the rule <c>cr-7f7d626622af0041****</c> in the account group <c>ca-7f00626622af0041****</c>.</para>
+        /// <para>This example shows how to query the details of the <c>cr-7f7d626622af0041****</c> rule in the <c>ca-7f00626622af0041****</c> account group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8643,12 +8899,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific rule in a specified account group.</para>
+        /// <para>Queries the details of a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the rule <c>cr-7f7d626622af0041****</c> in the account group <c>ca-7f00626622af0041****</c>.</para>
+        /// <para>This example shows how to query the details of the <c>cr-7f7d626622af0041****</c> rule in the <c>ca-7f00626622af0041****</c> account group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8666,12 +8922,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance results of rules in a specified compliance pack within a specified account group.</para>
+        /// <para>Queries compliance evaluation results based on the rules in a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance results of rules in the compliance pack <c>cp-541e626622af0087****</c> for the account group <c>ca-04b3fd170e340007****</c>. The response returns a total of <c>1</c> rule and <c>0</c> non-compliant rules.</para>
+        /// <para>The sample request in this topic shows you how to query the compliance evaluation results based on rules in the <c>cp-541e626622af0087****</c> compliance package that is created for the <c>ca-04b3fd170e340007****</c> account group. The return result shows a total of <c>one</c> rule. <c>No resources</c> are evaluated as non-compliant based on the rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8709,12 +8965,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance results of rules in a specified compliance pack within a specified account group.</para>
+        /// <para>Queries compliance evaluation results based on the rules in a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance results of rules in the compliance pack <c>cp-541e626622af0087****</c> for the account group <c>ca-04b3fd170e340007****</c>. The response returns a total of <c>1</c> rule and <c>0</c> non-compliant rules.</para>
+        /// <para>The sample request in this topic shows you how to query the compliance evaluation results based on rules in the <c>cp-541e626622af0087****</c> compliance package that is created for the <c>ca-04b3fd170e340007****</c> account group. The return result shows a total of <c>one</c> rule. <c>No resources</c> are evaluated as non-compliant based on the rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8752,12 +9008,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance results of rules in a specified compliance pack within a specified account group.</para>
+        /// <para>Queries compliance evaluation results based on the rules in a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance results of rules in the compliance pack <c>cp-541e626622af0087****</c> for the account group <c>ca-04b3fd170e340007****</c>. The response returns a total of <c>1</c> rule and <c>0</c> non-compliant rules.</para>
+        /// <para>The sample request in this topic shows you how to query the compliance evaluation results based on rules in the <c>cp-541e626622af0087****</c> compliance package that is created for the <c>ca-04b3fd170e340007****</c> account group. The return result shows a total of <c>one</c> rule. <c>No resources</c> are evaluated as non-compliant based on the rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8775,12 +9031,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance results of rules in a specified compliance pack within a specified account group.</para>
+        /// <para>Queries compliance evaluation results based on the rules in a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance results of rules in the compliance pack <c>cp-541e626622af0087****</c> for the account group <c>ca-04b3fd170e340007****</c>. The response returns a total of <c>1</c> rule and <c>0</c> non-compliant rules.</para>
+        /// <para>The sample request in this topic shows you how to query the compliance evaluation results based on rules in the <c>cp-541e626622af0087****</c> compliance package that is created for the <c>ca-04b3fd170e340007****</c> account group. The return result shows a total of <c>one</c> rule. <c>No resources</c> are evaluated as non-compliant based on the rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8798,8 +9054,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定风险等级的账号组规则合规统计</para>
+        /// <para>Queries the summary of compliance evaluation results by rule risk level in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the summary of compliance evaluation results by rule risk level in the <c>ca-3a58626622af0005****</c> account group. The returned result shows four rules that are specified with the high risk level. One of the rules detects non-compliant resources, and the resources evaluated by the remaining three are compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateConfigRuleSummaryByRiskLevelRequest
@@ -8840,8 +9101,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定风险等级的账号组规则合规统计</para>
+        /// <para>Queries the summary of compliance evaluation results by rule risk level in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the summary of compliance evaluation results by rule risk level in the <c>ca-3a58626622af0005****</c> account group. The returned result shows four rules that are specified with the high risk level. One of the rules detects non-compliant resources, and the resources evaluated by the remaining three are compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateConfigRuleSummaryByRiskLevelRequest
@@ -8882,8 +9148,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定风险等级的账号组规则合规统计</para>
+        /// <para>Queries the summary of compliance evaluation results by rule risk level in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the summary of compliance evaluation results by rule risk level in the <c>ca-3a58626622af0005****</c> account group. The returned result shows four rules that are specified with the high risk level. One of the rules detects non-compliant resources, and the resources evaluated by the remaining three are compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateConfigRuleSummaryByRiskLevelRequest
@@ -8900,8 +9171,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定风险等级的账号组规则合规统计</para>
+        /// <para>Queries the summary of compliance evaluation results by rule risk level in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the summary of compliance evaluation results by rule risk level in the <c>ca-3a58626622af0005****</c> account group. The returned result shows four rules that are specified with the high risk level. One of the rules detects non-compliant resources, and the resources evaluated by the remaining three are compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateConfigRuleSummaryByRiskLevelRequest
@@ -8918,8 +9194,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载Excel格式的规则合规评估报告到本地，便于您云下分配任务并跟进不合规资源配置的修改</para>
+        /// <para>Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, you must call the GenerateAggregateConfigRulesReport operation to generate the latest compliance evaluation report based on all rules in an account group. For more information, see <a href="https://help.aliyun.com/document_detail/262701.html">GenerateAggregateConfigRulesReport</a>.
+        /// This topic provides an example on how to query the compliance evaluation report that is generated based on all rules in the <c>ca-f632626622af0079****</c> account group.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateConfigRulesReportRequest
@@ -8964,8 +9248,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载Excel格式的规则合规评估报告到本地，便于您云下分配任务并跟进不合规资源配置的修改</para>
+        /// <para>Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, you must call the GenerateAggregateConfigRulesReport operation to generate the latest compliance evaluation report based on all rules in an account group. For more information, see <a href="https://help.aliyun.com/document_detail/262701.html">GenerateAggregateConfigRulesReport</a>.
+        /// This topic provides an example on how to query the compliance evaluation report that is generated based on all rules in the <c>ca-f632626622af0079****</c> account group.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateConfigRulesReportRequest
@@ -9010,8 +9302,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载Excel格式的规则合规评估报告到本地，便于您云下分配任务并跟进不合规资源配置的修改</para>
+        /// <para>Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, you must call the GenerateAggregateConfigRulesReport operation to generate the latest compliance evaluation report based on all rules in an account group. For more information, see <a href="https://help.aliyun.com/document_detail/262701.html">GenerateAggregateConfigRulesReport</a>.
+        /// This topic provides an example on how to query the compliance evaluation report that is generated based on all rules in the <c>ca-f632626622af0079****</c> account group.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateConfigRulesReportRequest
@@ -9028,8 +9328,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载Excel格式的规则合规评估报告到本地，便于您云下分配任务并跟进不合规资源配置的修改</para>
+        /// <para>Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, you must call the GenerateAggregateConfigRulesReport operation to generate the latest compliance evaluation report based on all rules in an account group. For more information, see <a href="https://help.aliyun.com/document_detail/262701.html">GenerateAggregateConfigRulesReport</a>.
+        /// This topic provides an example on how to query the compliance evaluation report that is generated based on all rules in the <c>ca-f632626622af0079****</c> account group.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateConfigRulesReportRequest
@@ -9051,7 +9359,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the details of an ECS instance <c>i-bp12g4xbl4i0brkn****</c> in the Hangzhou region within the account group <c>ca-5885626622af0008****</c>.</para>
+        /// <para>This topic provides an example on how to query the details of an Elastic Compute Service (ECS) instance <c>i-bp12g4xbl4i0brkn****</c> that resides in the China (Hangzhou) region in the account group <c>ca-5885626622af0008****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9122,7 +9430,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the details of an ECS instance <c>i-bp12g4xbl4i0brkn****</c> in the Hangzhou region within the account group <c>ca-5885626622af0008****</c>.</para>
+        /// <para>This topic provides an example on how to query the details of an Elastic Compute Service (ECS) instance <c>i-bp12g4xbl4i0brkn****</c> that resides in the China (Hangzhou) region in the account group <c>ca-5885626622af0008****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9193,7 +9501,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the details of an ECS instance <c>i-bp12g4xbl4i0brkn****</c> in the Hangzhou region within the account group <c>ca-5885626622af0008****</c>.</para>
+        /// <para>This topic provides an example on how to query the details of an Elastic Compute Service (ECS) instance <c>i-bp12g4xbl4i0brkn****</c> that resides in the China (Hangzhou) region in the account group <c>ca-5885626622af0008****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9216,7 +9524,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the details of an ECS instance <c>i-bp12g4xbl4i0brkn****</c> in the Hangzhou region within the account group <c>ca-5885626622af0008****</c>.</para>
+        /// <para>This topic provides an example on how to query the details of an Elastic Compute Service (ECS) instance <c>i-bp12g4xbl4i0brkn****</c> that resides in the China (Hangzhou) region in the account group <c>ca-5885626622af0008****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9234,8 +9542,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多账号规则合规情况</para>
+        /// <para>Queries compliance evaluation results based on the rules in a compliance package in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation results based on the <c>cr-d369626622af008e****</c> rule in the <c>ca-a4e5626622af0079****</c> account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceComplianceByConfigRuleRequest
@@ -9292,8 +9605,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多账号规则合规情况</para>
+        /// <para>Queries compliance evaluation results based on the rules in a compliance package in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation results based on the <c>cr-d369626622af008e****</c> rule in the <c>ca-a4e5626622af0079****</c> account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceComplianceByConfigRuleRequest
@@ -9350,8 +9668,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多账号规则合规情况</para>
+        /// <para>Queries compliance evaluation results based on the rules in a compliance package in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation results based on the <c>cr-d369626622af008e****</c> rule in the <c>ca-a4e5626622af0079****</c> account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceComplianceByConfigRuleRequest
@@ -9368,8 +9691,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多账号规则合规情况</para>
+        /// <para>Queries compliance evaluation results based on the rules in a compliance package in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation results based on the <c>cr-d369626622af008e****</c> rule in the <c>ca-a4e5626622af0079****</c> account group. The returned result shows that a total of 10 resources are evaluated by the rule and five of them are evaluated as compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceComplianceByConfigRuleRequest
@@ -9386,12 +9714,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance statistics for resources in a specified compliance package within a specified account group.</para>
+        /// <para>Queries the compliance evaluation results of resources evaluated based on a compliance package of an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance results for resources in the compliance package <c>cp-fdc8626622af00f9****</c> within the account group <c>ca-f632626622af0079****</c>. The response shows that of a total of <c>10</c> resources, <c>7</c> are non-compliant.</para>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of resources monitored based on the <c>cp-fdc8626622af00f9****</c> compliance package in the <c>ca-f632626622af0079****</c>account group. The returned result shows that the total number of monitored resources is <c>10</c> and the number of non-compliant resources is <c>7</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9429,12 +9757,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance statistics for resources in a specified compliance package within a specified account group.</para>
+        /// <para>Queries the compliance evaluation results of resources evaluated based on a compliance package of an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance results for resources in the compliance package <c>cp-fdc8626622af00f9****</c> within the account group <c>ca-f632626622af0079****</c>. The response shows that of a total of <c>10</c> resources, <c>7</c> are non-compliant.</para>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of resources monitored based on the <c>cp-fdc8626622af00f9****</c> compliance package in the <c>ca-f632626622af0079****</c>account group. The returned result shows that the total number of monitored resources is <c>10</c> and the number of non-compliant resources is <c>7</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9472,12 +9800,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance statistics for resources in a specified compliance package within a specified account group.</para>
+        /// <para>Queries the compliance evaluation results of resources evaluated based on a compliance package of an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance results for resources in the compliance package <c>cp-fdc8626622af00f9****</c> within the account group <c>ca-f632626622af0079****</c>. The response shows that of a total of <c>10</c> resources, <c>7</c> are non-compliant.</para>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of resources monitored based on the <c>cp-fdc8626622af00f9****</c> compliance package in the <c>ca-f632626622af0079****</c>account group. The returned result shows that the total number of monitored resources is <c>10</c> and the number of non-compliant resources is <c>7</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9495,12 +9823,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance statistics for resources in a specified compliance package within a specified account group.</para>
+        /// <para>Queries the compliance evaluation results of resources evaluated based on a compliance package of an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance results for resources in the compliance package <c>cp-fdc8626622af00f9****</c> within the account group <c>ca-f632626622af0079****</c>. The response shows that of a total of <c>10</c> resources, <c>7</c> are non-compliant.</para>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of resources monitored based on the <c>cp-fdc8626622af00f9****</c> compliance package in the <c>ca-f632626622af0079****</c>account group. The returned result shows that the total number of monitored resources is <c>10</c> and the number of non-compliant resources is <c>7</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9518,7 +9846,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定账号组内规则对资源的评估结果，评估结果按资源所属地域进行分组展示</para>
+        /// <para>Queries the evaluation results grouped by resource type for an account group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9564,7 +9892,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定账号组内规则对资源的评估结果，评估结果按资源所属地域进行分组展示</para>
+        /// <para>Queries the evaluation results grouped by resource type for an account group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9610,7 +9938,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定账号组内规则对资源的评估结果，评估结果按资源所属地域进行分组展示</para>
+        /// <para>Queries the evaluation results grouped by resource type for an account group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9628,7 +9956,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定账号组内规则对资源的评估结果，评估结果按资源所属地域进行分组展示</para>
+        /// <para>Queries the evaluation results grouped by resource type for an account group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9646,7 +9974,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定账号组内规则对资源的评估结果，评估结果按资源类型进行分组展示</para>
+        /// <para>Queries the evaluation results grouped by resource type for an account group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9692,7 +10020,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定账号组内规则对资源的评估结果，评估结果按资源类型进行分组展示</para>
+        /// <para>Queries the evaluation results grouped by resource type for an account group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9738,7 +10066,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定账号组内规则对资源的评估结果，评估结果按资源类型进行分组展示</para>
+        /// <para>Queries the evaluation results grouped by resource type for an account group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9756,7 +10084,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定账号组内规则对资源的评估结果，评估结果按资源类型进行分组展示</para>
+        /// <para>Queries the evaluation results grouped by resource type for an account group rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9774,13 +10102,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance timeline of a specific resource in an account group. A compliance timeline is a set of compliance evaluation records for a resource. Each record includes the time and content of an evaluation.</para>
+        /// <para>Queries the compliance timeline of a resource in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In Cloud Config, each resource has its own compliance timeline, which is composed of compliance evaluation records. A record is generated each time a rule is triggered to evaluate the resource. Rules can be triggered by configuration changes, periodic executions, or manual executions.
-        /// This topic provides an example of how to query the compliance timeline for the resource <c>new-bucket</c> (an OSS bucket). The resource is in the <c>cn-hangzhou</c> region and belongs to the member account <c>100931896542****</c> within the account group <c>ca-5885626622af0008****</c>. The response shows that the resource\&quot;s compliance timeline includes records with the timestamps <c>1625200295276</c> (UTC+8: 2021-07-02 12:31:35) and <c>1625200228510</c> (UTC+8: 2021-07-02 12:30:28).</para>
+        /// <para>The sample request in this topic shows you how to query the compliance timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region within the <c>100931896542****</c> member account of the <c>ca-5885626622af0008****</c> account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: <c>1625200295276</c> and <c>1625200228510</c>. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9818,13 +10145,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance timeline of a specific resource in an account group. A compliance timeline is a set of compliance evaluation records for a resource. Each record includes the time and content of an evaluation.</para>
+        /// <para>Queries the compliance timeline of a resource in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In Cloud Config, each resource has its own compliance timeline, which is composed of compliance evaluation records. A record is generated each time a rule is triggered to evaluate the resource. Rules can be triggered by configuration changes, periodic executions, or manual executions.
-        /// This topic provides an example of how to query the compliance timeline for the resource <c>new-bucket</c> (an OSS bucket). The resource is in the <c>cn-hangzhou</c> region and belongs to the member account <c>100931896542****</c> within the account group <c>ca-5885626622af0008****</c>. The response shows that the resource\&quot;s compliance timeline includes records with the timestamps <c>1625200295276</c> (UTC+8: 2021-07-02 12:31:35) and <c>1625200228510</c> (UTC+8: 2021-07-02 12:30:28).</para>
+        /// <para>The sample request in this topic shows you how to query the compliance timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region within the <c>100931896542****</c> member account of the <c>ca-5885626622af0008****</c> account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: <c>1625200295276</c> and <c>1625200228510</c>. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9862,13 +10188,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance timeline of a specific resource in an account group. A compliance timeline is a set of compliance evaluation records for a resource. Each record includes the time and content of an evaluation.</para>
+        /// <para>Queries the compliance timeline of a resource in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In Cloud Config, each resource has its own compliance timeline, which is composed of compliance evaluation records. A record is generated each time a rule is triggered to evaluate the resource. Rules can be triggered by configuration changes, periodic executions, or manual executions.
-        /// This topic provides an example of how to query the compliance timeline for the resource <c>new-bucket</c> (an OSS bucket). The resource is in the <c>cn-hangzhou</c> region and belongs to the member account <c>100931896542****</c> within the account group <c>ca-5885626622af0008****</c>. The response shows that the resource\&quot;s compliance timeline includes records with the timestamps <c>1625200295276</c> (UTC+8: 2021-07-02 12:31:35) and <c>1625200228510</c> (UTC+8: 2021-07-02 12:30:28).</para>
+        /// <para>The sample request in this topic shows you how to query the compliance timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region within the <c>100931896542****</c> member account of the <c>ca-5885626622af0008****</c> account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: <c>1625200295276</c> and <c>1625200228510</c>. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9886,13 +10211,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance timeline of a specific resource in an account group. A compliance timeline is a set of compliance evaluation records for a resource. Each record includes the time and content of an evaluation.</para>
+        /// <para>Queries the compliance timeline of a resource in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In Cloud Config, each resource has its own compliance timeline, which is composed of compliance evaluation records. A record is generated each time a rule is triggered to evaluate the resource. Rules can be triggered by configuration changes, periodic executions, or manual executions.
-        /// This topic provides an example of how to query the compliance timeline for the resource <c>new-bucket</c> (an OSS bucket). The resource is in the <c>cn-hangzhou</c> region and belongs to the member account <c>100931896542****</c> within the account group <c>ca-5885626622af0008****</c>. The response shows that the resource\&quot;s compliance timeline includes records with the timestamps <c>1625200295276</c> (UTC+8: 2021-07-02 12:31:35) and <c>1625200228510</c> (UTC+8: 2021-07-02 12:30:28).</para>
+        /// <para>The sample request in this topic shows you how to query the compliance timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region within the <c>100931896542****</c> member account of the <c>ca-5885626622af0008****</c> account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: <c>1625200295276</c> and <c>1625200228510</c>. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8), and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9910,17 +10234,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration history of a specific resource in a specified account group. After you enable Cloud Config, the service records all configuration and relationship changes for your resources and organizes them into a configuration history. This history is saved for 10 years by default.</para>
+        /// <para>Queries the configuration timeline of a resource in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud Config provides a configuration history for each resource within the monitoring scope:</para>
-        /// <list type="bullet">
-        /// <item><description>For resources that already exist when you enable Cloud Config, the configuration history begins when the service is enabled.</description></item>
-        /// <item><description>For resources that are created after you enable Cloud Config, the configuration history begins when the resources are created. Cloud Config records resource configuration changes every 10 minutes. When the configuration of a resource changes, a node appears in the configuration history. This node contains the resource configuration details, change details, and the related management event.
-        /// This topic provides an example of how to query the configuration history of an OSS bucket named <c>new-bucket</c>. The bucket is in the <c>cn-hangzhou</c> region, belongs to the member account <c>100931896542****</c>, and is part of the account group <c>ca-5885626622af0008****</c>. The returned result indicates that a configuration change for the resource was recorded at the UNIX timestamp <c>1624961112000</c> (UTC+8: 2021-06-29 18:05:12).</description></item>
-        /// </list>
+        /// <para>The sample request in this topic shows you how to query the configuration timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region within the <c>100931896542****</c> member account of the <c>ca-5885626622af0008****</c> account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is <c>1624961112000</c>. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9958,17 +10277,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration history of a specific resource in a specified account group. After you enable Cloud Config, the service records all configuration and relationship changes for your resources and organizes them into a configuration history. This history is saved for 10 years by default.</para>
+        /// <para>Queries the configuration timeline of a resource in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud Config provides a configuration history for each resource within the monitoring scope:</para>
-        /// <list type="bullet">
-        /// <item><description>For resources that already exist when you enable Cloud Config, the configuration history begins when the service is enabled.</description></item>
-        /// <item><description>For resources that are created after you enable Cloud Config, the configuration history begins when the resources are created. Cloud Config records resource configuration changes every 10 minutes. When the configuration of a resource changes, a node appears in the configuration history. This node contains the resource configuration details, change details, and the related management event.
-        /// This topic provides an example of how to query the configuration history of an OSS bucket named <c>new-bucket</c>. The bucket is in the <c>cn-hangzhou</c> region, belongs to the member account <c>100931896542****</c>, and is part of the account group <c>ca-5885626622af0008****</c>. The returned result indicates that a configuration change for the resource was recorded at the UNIX timestamp <c>1624961112000</c> (UTC+8: 2021-06-29 18:05:12).</description></item>
-        /// </list>
+        /// <para>The sample request in this topic shows you how to query the configuration timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region within the <c>100931896542****</c> member account of the <c>ca-5885626622af0008****</c> account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is <c>1624961112000</c>. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10006,17 +10320,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration history of a specific resource in a specified account group. After you enable Cloud Config, the service records all configuration and relationship changes for your resources and organizes them into a configuration history. This history is saved for 10 years by default.</para>
+        /// <para>Queries the configuration timeline of a resource in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud Config provides a configuration history for each resource within the monitoring scope:</para>
-        /// <list type="bullet">
-        /// <item><description>For resources that already exist when you enable Cloud Config, the configuration history begins when the service is enabled.</description></item>
-        /// <item><description>For resources that are created after you enable Cloud Config, the configuration history begins when the resources are created. Cloud Config records resource configuration changes every 10 minutes. When the configuration of a resource changes, a node appears in the configuration history. This node contains the resource configuration details, change details, and the related management event.
-        /// This topic provides an example of how to query the configuration history of an OSS bucket named <c>new-bucket</c>. The bucket is in the <c>cn-hangzhou</c> region, belongs to the member account <c>100931896542****</c>, and is part of the account group <c>ca-5885626622af0008****</c>. The returned result indicates that a configuration change for the resource was recorded at the UNIX timestamp <c>1624961112000</c> (UTC+8: 2021-06-29 18:05:12).</description></item>
-        /// </list>
+        /// <para>The sample request in this topic shows you how to query the configuration timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region within the <c>100931896542****</c> member account of the <c>ca-5885626622af0008****</c> account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is <c>1624961112000</c>. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10034,17 +10343,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration history of a specific resource in a specified account group. After you enable Cloud Config, the service records all configuration and relationship changes for your resources and organizes them into a configuration history. This history is saved for 10 years by default.</para>
+        /// <para>Queries the configuration timeline of a resource in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud Config provides a configuration history for each resource within the monitoring scope:</para>
-        /// <list type="bullet">
-        /// <item><description>For resources that already exist when you enable Cloud Config, the configuration history begins when the service is enabled.</description></item>
-        /// <item><description>For resources that are created after you enable Cloud Config, the configuration history begins when the resources are created. Cloud Config records resource configuration changes every 10 minutes. When the configuration of a resource changes, a node appears in the configuration history. This node contains the resource configuration details, change details, and the related management event.
-        /// This topic provides an example of how to query the configuration history of an OSS bucket named <c>new-bucket</c>. The bucket is in the <c>cn-hangzhou</c> region, belongs to the member account <c>100931896542****</c>, and is part of the account group <c>ca-5885626622af0008****</c>. The returned result indicates that a configuration change for the resource was recorded at the UNIX timestamp <c>1624961112000</c> (UTC+8: 2021-06-29 18:05:12).</description></item>
-        /// </list>
+        /// <para>The sample request in this topic shows you how to query the configuration timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region within the <c>100931896542****</c> member account of the <c>ca-5885626622af0008****</c> account group. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is <c>1624961112000</c>. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10062,8 +10366,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从地域维度查询指定账号组内资源的统计结果</para>
+        /// <para>Queries the statistics on the resources in an account group by region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the statistics on the resources in an account group named <c>ca-a260626622af0005****</c> by region. The returned result shows that a total of <c>10</c> resources exist in the <c>cn-hangzhou</c> region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceCountsGroupByRegionRequest
@@ -10120,8 +10429,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从地域维度查询指定账号组内资源的统计结果</para>
+        /// <para>Queries the statistics on the resources in an account group by region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the statistics on the resources in an account group named <c>ca-a260626622af0005****</c> by region. The returned result shows that a total of <c>10</c> resources exist in the <c>cn-hangzhou</c> region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceCountsGroupByRegionRequest
@@ -10178,8 +10492,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从地域维度查询指定账号组内资源的统计结果</para>
+        /// <para>Queries the statistics on the resources in an account group by region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the statistics on the resources in an account group named <c>ca-a260626622af0005****</c> by region. The returned result shows that a total of <c>10</c> resources exist in the <c>cn-hangzhou</c> region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceCountsGroupByRegionRequest
@@ -10196,8 +10515,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从地域维度查询指定账号组内资源的统计结果</para>
+        /// <para>Queries the statistics on the resources in an account group by region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the statistics on the resources in an account group named <c>ca-a260626622af0005****</c> by region. The returned result shows that a total of <c>10</c> resources exist in the <c>cn-hangzhou</c> region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceCountsGroupByRegionRequest
@@ -10214,8 +10538,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从资源类型维度查询指定账号组内资源的统计结果</para>
+        /// <para>Queries the statistics on the resources in an account group by resource type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the statistics on the resources in an account group whose ID is <c>ca-a260626622af0005****</c> by resource type. The returned result shows that the account group has a total of <c>seven</c> resources of the <c>ACS::RAM::Role</c> resource type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceCountsGroupByResourceTypeRequest
@@ -10272,8 +10601,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从资源类型维度查询指定账号组内资源的统计结果</para>
+        /// <para>Queries the statistics on the resources in an account group by resource type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the statistics on the resources in an account group whose ID is <c>ca-a260626622af0005****</c> by resource type. The returned result shows that the account group has a total of <c>seven</c> resources of the <c>ACS::RAM::Role</c> resource type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceCountsGroupByResourceTypeRequest
@@ -10330,8 +10664,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从资源类型维度查询指定账号组内资源的统计结果</para>
+        /// <para>Queries the statistics on the resources in an account group by resource type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the statistics on the resources in an account group whose ID is <c>ca-a260626622af0005****</c> by resource type. The returned result shows that the account group has a total of <c>seven</c> resources of the <c>ACS::RAM::Role</c> resource type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceCountsGroupByResourceTypeRequest
@@ -10348,8 +10687,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从资源类型维度查询指定账号组内资源的统计结果</para>
+        /// <para>Queries the statistics on the resources in an account group by resource type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the statistics on the resources in an account group whose ID is <c>ca-a260626622af0005****</c> by resource type. The returned result shows that the account group has a total of <c>seven</c> resources of the <c>ACS::RAM::Role</c> resource type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceCountsGroupByResourceTypeRequest
@@ -10366,8 +10710,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号组内全局资源下载清单信息。</para>
+        /// <para>Obtains the last resource inventory that is generated on the Global Resources page within the current account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/2398353.html">GenerateAggregateResourceInventory</a> operation is called to generate a resource inventory. Then, this operation is called to obtain the URL of the resource inventory.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to obtain the last resource inventory that is generated within the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceInventoryRequest
@@ -10408,8 +10760,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号组内全局资源下载清单信息。</para>
+        /// <para>Obtains the last resource inventory that is generated on the Global Resources page within the current account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/2398353.html">GenerateAggregateResourceInventory</a> operation is called to generate a resource inventory. Then, this operation is called to obtain the URL of the resource inventory.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to obtain the last resource inventory that is generated within the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceInventoryRequest
@@ -10450,8 +10810,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号组内全局资源下载清单信息。</para>
+        /// <para>Obtains the last resource inventory that is generated on the Global Resources page within the current account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/2398353.html">GenerateAggregateResourceInventory</a> operation is called to generate a resource inventory. Then, this operation is called to obtain the URL of the resource inventory.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to obtain the last resource inventory that is generated within the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceInventoryRequest
@@ -10468,8 +10836,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账号组内全局资源下载清单信息。</para>
+        /// <para>Obtains the last resource inventory that is generated on the Global Resources page within the current account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/2398353.html">GenerateAggregateResourceInventory</a> operation is called to generate a resource inventory. Then, this operation is called to obtain the URL of the resource inventory.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to obtain the last resource inventory that is generated within the account group ca-a91d626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAggregateResourceInventoryRequest
@@ -10486,12 +10862,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the name, creation time, members, and type of an account group.</para>
+        /// <para>Queries the details of an account group. You can query the name, creation time, member, and type of an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the account group <c>ca-88ea626622af0055****</c>. The response shows that the account group name is <c>Test_Group</c>, the description is <c>Test Group</c>, the type is <c>CUSTOM</c> (custom account group), and the status is <c>1</c> (created).</para>
+        /// <para>The sample request in this topic shows you how to query the details of the <c>ca-88ea626622af0055****</c> account group. The return result shows that the account group is named <c>Test_Group</c>, its description is <c>Test account group</c>, and it is of the <c>CUSTOM</c> type. The account group is in the <c>1</c> state, which indicates that it is created.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10543,12 +10919,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the name, creation time, members, and type of an account group.</para>
+        /// <para>Queries the details of an account group. You can query the name, creation time, member, and type of an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the account group <c>ca-88ea626622af0055****</c>. The response shows that the account group name is <c>Test_Group</c>, the description is <c>Test Group</c>, the type is <c>CUSTOM</c> (custom account group), and the status is <c>1</c> (created).</para>
+        /// <para>The sample request in this topic shows you how to query the details of the <c>ca-88ea626622af0055****</c> account group. The return result shows that the account group is named <c>Test_Group</c>, its description is <c>Test account group</c>, and it is of the <c>CUSTOM</c> type. The account group is in the <c>1</c> state, which indicates that it is created.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10600,12 +10976,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the name, creation time, members, and type of an account group.</para>
+        /// <para>Queries the details of an account group. You can query the name, creation time, member, and type of an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the account group <c>ca-88ea626622af0055****</c>. The response shows that the account group name is <c>Test_Group</c>, the description is <c>Test Group</c>, the type is <c>CUSTOM</c> (custom account group), and the status is <c>1</c> (created).</para>
+        /// <para>The sample request in this topic shows you how to query the details of the <c>ca-88ea626622af0055****</c> account group. The return result shows that the account group is named <c>Test_Group</c>, its description is <c>Test account group</c>, and it is of the <c>CUSTOM</c> type. The account group is in the <c>1</c> state, which indicates that it is created.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10623,12 +10999,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the name, creation time, members, and type of an account group.</para>
+        /// <para>Queries the details of an account group. You can query the name, creation time, member, and type of an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the account group <c>ca-88ea626622af0055****</c>. The response shows that the account group name is <c>Test_Group</c>, the description is <c>Test Group</c>, the type is <c>CUSTOM</c> (custom account group), and the status is <c>1</c> (created).</para>
+        /// <para>The sample request in this topic shows you how to query the details of the <c>ca-88ea626622af0055****</c> account group. The return result shows that the account group is named <c>Test_Group</c>, its description is <c>Test account group</c>, and it is of the <c>CUSTOM</c> type. The account group is in the <c>1</c> state, which indicates that it is created.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10646,12 +11022,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific compliance package.</para>
+        /// <para>Queries the details of a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the compliance package <c>cp-fdc8626622af00f9****</c>. The response indicates that the compliance package is named <c>MLPS 2.0 Level 3 Pre-check Compliance Package</c>, its status is <c>ACTIVE</c>, and the risk level of its rules is <c>1</c> (high risk).</para>
+        /// <para>This topic provides an example on how to query the details of a compliance package whose ID is <c>cp-fdc8626622af00f9****</c>. The returned result shows that the name of the compliance package is <c>ClassifiedProtectionPreCheck</c>, the compliance package is in the <c>ACTIVE</c> state, and the risk level of the rules in the compliance package is <c>1</c>, which indicates high risk level.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10695,12 +11071,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific compliance package.</para>
+        /// <para>Queries the details of a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the compliance package <c>cp-fdc8626622af00f9****</c>. The response indicates that the compliance package is named <c>MLPS 2.0 Level 3 Pre-check Compliance Package</c>, its status is <c>ACTIVE</c>, and the risk level of its rules is <c>1</c> (high risk).</para>
+        /// <para>This topic provides an example on how to query the details of a compliance package whose ID is <c>cp-fdc8626622af00f9****</c>. The returned result shows that the name of the compliance package is <c>ClassifiedProtectionPreCheck</c>, the compliance package is in the <c>ACTIVE</c> state, and the risk level of the rules in the compliance package is <c>1</c>, which indicates high risk level.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10744,12 +11120,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific compliance package.</para>
+        /// <para>Queries the details of a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the compliance package <c>cp-fdc8626622af00f9****</c>. The response indicates that the compliance package is named <c>MLPS 2.0 Level 3 Pre-check Compliance Package</c>, its status is <c>ACTIVE</c>, and the risk level of its rules is <c>1</c> (high risk).</para>
+        /// <para>This topic provides an example on how to query the details of a compliance package whose ID is <c>cp-fdc8626622af00f9****</c>. The returned result shows that the name of the compliance package is <c>ClassifiedProtectionPreCheck</c>, the compliance package is in the <c>ACTIVE</c> state, and the risk level of the rules in the compliance package is <c>1</c>, which indicates high risk level.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10767,12 +11143,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specific compliance package.</para>
+        /// <para>Queries the details of a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the compliance package <c>cp-fdc8626622af00f9****</c>. The response indicates that the compliance package is named <c>MLPS 2.0 Level 3 Pre-check Compliance Package</c>, its status is <c>ACTIVE</c>, and the risk level of its rules is <c>1</c> (high risk).</para>
+        /// <para>This topic provides an example on how to query the details of a compliance package whose ID is <c>cp-fdc8626622af00f9****</c>. The returned result shows that the name of the compliance package is <c>ClassifiedProtectionPreCheck</c>, the compliance package is in the <c>ACTIVE</c> state, and the risk level of the rules in the compliance package is <c>1</c>, which indicates high risk level.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10790,8 +11166,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取合规包的评估报告</para>
+        /// <para>Queries the compliance evaluation report that is generated based on a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, you must call the GenerateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see <a href="https://help.aliyun.com/document_detail/263525.html">GenerateCompliancePackReport</a>.
+        /// This topic provides an example on how to query the compliance evaluation report that is generated based on the <c>cp-fdc8626622af00f9****</c> compliance package.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCompliancePackReportRequest
@@ -10828,8 +11212,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取合规包的评估报告</para>
+        /// <para>Queries the compliance evaluation report that is generated based on a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, you must call the GenerateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see <a href="https://help.aliyun.com/document_detail/263525.html">GenerateCompliancePackReport</a>.
+        /// This topic provides an example on how to query the compliance evaluation report that is generated based on the <c>cp-fdc8626622af00f9****</c> compliance package.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCompliancePackReportRequest
@@ -10866,8 +11258,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取合规包的评估报告</para>
+        /// <para>Queries the compliance evaluation report that is generated based on a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, you must call the GenerateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see <a href="https://help.aliyun.com/document_detail/263525.html">GenerateCompliancePackReport</a>.
+        /// This topic provides an example on how to query the compliance evaluation report that is generated based on the <c>cp-fdc8626622af00f9****</c> compliance package.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCompliancePackReportRequest
@@ -10884,8 +11284,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取合规包的评估报告</para>
+        /// <para>Queries the compliance evaluation report that is generated based on a compliance package.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Before you call this operation, you must call the GenerateCompliancePackReport operation to generate the latest compliance evaluation report based on a compliance package. For more information, see <a href="https://help.aliyun.com/document_detail/263525.html">GenerateCompliancePackReport</a>.
+        /// This topic provides an example on how to query the compliance evaluation report that is generated based on the <c>cp-fdc8626622af00f9****</c> compliance package.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCompliancePackReportRequest
@@ -10902,12 +11310,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance summary for the current account.</para>
+        /// <para>Queries the summary of compliance statistics within the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance summary by resource and rule for an account group.</para>
+        /// <para>This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10940,12 +11348,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance summary for the current account.</para>
+        /// <para>Queries the summary of compliance statistics within the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance summary by resource and rule for an account group.</para>
+        /// <para>This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10978,12 +11386,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance summary for the current account.</para>
+        /// <para>Queries the summary of compliance statistics within the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance summary by resource and rule for an account group.</para>
+        /// <para>This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.</para>
         /// </description>
         /// 
         /// <returns>
@@ -10997,12 +11405,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance summary for the current account.</para>
+        /// <para>Queries the summary of compliance statistics within the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance summary by resource and rule for an account group.</para>
+        /// <para>This topic provides an example on how to query the compliance statistics of resources and rules in the current account group.</para>
         /// </description>
         /// 
         /// <returns>
@@ -11016,7 +11424,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified delivery channel.</para>
+        /// <para>Queries the information about a delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11058,7 +11466,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified delivery channel.</para>
+        /// <para>Queries the information about a delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11100,7 +11508,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified delivery channel.</para>
+        /// <para>Queries the information about a delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11118,7 +11526,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified delivery channel.</para>
+        /// <para>Queries the information about a delivery channel.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11136,12 +11544,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified rule.</para>
+        /// <para>Queries the details of a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the rule <c>cr-7f7d626622af0041****</c>.</para>
+        /// <para>This topic provides an example on how to query the details of the <c>cr-7f7d626622af0041****</c> rule.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11193,12 +11601,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified rule.</para>
+        /// <para>Queries the details of a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the rule <c>cr-7f7d626622af0041****</c>.</para>
+        /// <para>This topic provides an example on how to query the details of the <c>cr-7f7d626622af0041****</c> rule.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11250,12 +11658,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified rule.</para>
+        /// <para>Queries the details of a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the rule <c>cr-7f7d626622af0041****</c>.</para>
+        /// <para>This topic provides an example on how to query the details of the <c>cr-7f7d626622af0041****</c> rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11273,12 +11681,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified rule.</para>
+        /// <para>Queries the details of a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the rule <c>cr-7f7d626622af0041****</c>.</para>
+        /// <para>This topic provides an example on how to query the details of the <c>cr-7f7d626622af0041****</c> rule.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11296,12 +11704,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance statistics for rules in a specified compliance package.</para>
+        /// <para>Queries compliance evaluation results based on the rules in a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This example shows how to query the compliance results for rules in the compliance package <c>cp-541e626622af0087****</c>. The response shows that the total number of rules is 1 and the number of non-compliant rules is 0.</para>
+        /// <para>In this topic, the <c>cp-541e626622af0087****</c> compliance package is used as an example. The return result shows a total of one rule against which specific resources are evaluated as compliant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11339,12 +11747,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance statistics for rules in a specified compliance package.</para>
+        /// <para>Queries compliance evaluation results based on the rules in a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This example shows how to query the compliance results for rules in the compliance package <c>cp-541e626622af0087****</c>. The response shows that the total number of rules is 1 and the number of non-compliant rules is 0.</para>
+        /// <para>In this topic, the <c>cp-541e626622af0087****</c> compliance package is used as an example. The return result shows a total of one rule against which specific resources are evaluated as compliant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11382,12 +11790,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance statistics for rules in a specified compliance package.</para>
+        /// <para>Queries compliance evaluation results based on the rules in a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This example shows how to query the compliance results for rules in the compliance package <c>cp-541e626622af0087****</c>. The response shows that the total number of rules is 1 and the number of non-compliant rules is 0.</para>
+        /// <para>In this topic, the <c>cp-541e626622af0087****</c> compliance package is used as an example. The return result shows a total of one rule against which specific resources are evaluated as compliant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11405,12 +11813,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance statistics for rules in a specified compliance package.</para>
+        /// <para>Queries compliance evaluation results based on the rules in a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This example shows how to query the compliance results for rules in the compliance package <c>cp-541e626622af0087****</c>. The response shows that the total number of rules is 1 and the number of non-compliant rules is 0.</para>
+        /// <para>In this topic, the <c>cp-541e626622af0087****</c> compliance package is used as an example. The return result shows a total of one rule against which specific resources are evaluated as compliant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11542,8 +11950,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载Excel格式的规则合规评估报告到本地，便于您云下分配任务并跟进不合规资源配置的修改</para>
+        /// <para>Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> Before you call this operation, you must call the GenerateConfigRulesReport operation to generate the latest compliance evaluation report based on all existing rules. For more information, see <a href="https://help.aliyun.com/document_detail/263601.html">GenerateConfigRulesReport</a>.
+        /// This topic provides an example of how to query the compliance evaluation report that is generated based on all existing rules.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetConfigRulesReportRequest
@@ -11584,8 +12000,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载Excel格式的规则合规评估报告到本地，便于您云下分配任务并跟进不合规资源配置的修改</para>
+        /// <para>Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> Before you call this operation, you must call the GenerateConfigRulesReport operation to generate the latest compliance evaluation report based on all existing rules. For more information, see <a href="https://help.aliyun.com/document_detail/263601.html">GenerateConfigRulesReport</a>.
+        /// This topic provides an example of how to query the compliance evaluation report that is generated based on all existing rules.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetConfigRulesReportRequest
@@ -11626,8 +12050,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载Excel格式的规则合规评估报告到本地，便于您云下分配任务并跟进不合规资源配置的修改</para>
+        /// <para>Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> Before you call this operation, you must call the GenerateConfigRulesReport operation to generate the latest compliance evaluation report based on all existing rules. For more information, see <a href="https://help.aliyun.com/document_detail/263601.html">GenerateConfigRulesReport</a>.
+        /// This topic provides an example of how to query the compliance evaluation report that is generated based on all existing rules.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetConfigRulesReportRequest
@@ -11644,8 +12076,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载Excel格式的规则合规评估报告到本地，便于您云下分配任务并跟进不合规资源配置的修改</para>
+        /// <para>Downloads the compliance evaluation report in the Excel format to your on-premises machine. This allows you to assign tasks and modify incompliant resource configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> Before you call this operation, you must call the GenerateConfigRulesReport operation to generate the latest compliance evaluation report based on all existing rules. For more information, see <a href="https://help.aliyun.com/document_detail/263601.html">GenerateConfigRulesReport</a>.
+        /// This topic provides an example of how to query the compliance evaluation report that is generated based on all existing rules.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetConfigRulesReportRequest
@@ -11662,12 +12102,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the Cloud Config service and the resource monitoring scope for the current account.</para>
+        /// <para>Queries the activation status and resource monitoring scope of Cloud Config for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the status of the Cloud Config service and the resource monitoring scope for the current account.</para>
+        /// <para>This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11700,12 +12140,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the Cloud Config service and the resource monitoring scope for the current account.</para>
+        /// <para>Queries the activation status and resource monitoring scope of Cloud Config for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the status of the Cloud Config service and the resource monitoring scope for the current account.</para>
+        /// <para>This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11738,12 +12178,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the Cloud Config service and the resource monitoring scope for the current account.</para>
+        /// <para>Queries the activation status and resource monitoring scope of Cloud Config for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the status of the Cloud Config service and the resource monitoring scope for the current account.</para>
+        /// <para>This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.</para>
         /// </description>
         /// 
         /// <returns>
@@ -11757,12 +12197,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of the Cloud Config service and the resource monitoring scope for the current account.</para>
+        /// <para>Queries the activation status and resource monitoring scope of Cloud Config for the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the status of the Cloud Config service and the resource monitoring scope for the current account.</para>
+        /// <para>This topic provides an example on how to query the activation status and resource monitoring scope of Cloud Config for the current account.</para>
         /// </description>
         /// 
         /// <returns>
@@ -11781,7 +12221,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the ECS instance <c>i-bp12g4xbl4i0brkn****</c> in the China (Hangzhou) region.</para>
+        /// <para>This topic provides an example on how to query the details of the Elastic Compute Service (ECS) instance <c>i-bp12g4xbl4i0brkn****</c> that resides in the China (Hangzhou) region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11840,7 +12280,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the ECS instance <c>i-bp12g4xbl4i0brkn****</c> in the China (Hangzhou) region.</para>
+        /// <para>This topic provides an example on how to query the details of the Elastic Compute Service (ECS) instance <c>i-bp12g4xbl4i0brkn****</c> that resides in the China (Hangzhou) region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11899,7 +12339,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the ECS instance <c>i-bp12g4xbl4i0brkn****</c> in the China (Hangzhou) region.</para>
+        /// <para>This topic provides an example on how to query the details of the Elastic Compute Service (ECS) instance <c>i-bp12g4xbl4i0brkn****</c> that resides in the China (Hangzhou) region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11922,7 +12362,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the ECS instance <c>i-bp12g4xbl4i0brkn****</c> in the China (Hangzhou) region.</para>
+        /// <para>This topic provides an example on how to query the details of the Elastic Compute Service (ECS) instance <c>i-bp12g4xbl4i0brkn****</c> that resides in the China (Hangzhou) region.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11940,8 +12380,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从地域维度查询资源的统计结果</para>
+        /// <para>Queries the statistics on resources by region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the <c>cn-hangzhou</c> region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDiscoveredResourceCountsGroupByRegionRequest
@@ -11982,8 +12427,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从地域维度查询资源的统计结果</para>
+        /// <para>Queries the statistics on resources by region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the <c>cn-hangzhou</c> region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDiscoveredResourceCountsGroupByRegionRequest
@@ -12024,8 +12474,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从地域维度查询资源的统计结果</para>
+        /// <para>Queries the statistics on resources by region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the <c>cn-hangzhou</c> region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDiscoveredResourceCountsGroupByRegionRequest
@@ -12042,8 +12497,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从地域维度查询资源的统计结果</para>
+        /// <para>Queries the statistics on resources by region.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example to demonstrate how to query the statistics on resources by region. The returned result shows that a total of 10 resources exist in the <c>cn-hangzhou</c> region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDiscoveredResourceCountsGroupByRegionRequest
@@ -12060,8 +12520,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从资源类型维度查询资源的统计结果</para>
+        /// <para>Queries the statistics on resources by resource type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic describes how to query the statistics on resources by resource type. The returned result shows that a total of 10 resources of the <c>ACS::ECS::Instance</c> resource type exist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDiscoveredResourceCountsGroupByResourceTypeRequest
@@ -12102,8 +12567,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从资源类型维度查询资源的统计结果</para>
+        /// <para>Queries the statistics on resources by resource type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic describes how to query the statistics on resources by resource type. The returned result shows that a total of 10 resources of the <c>ACS::ECS::Instance</c> resource type exist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDiscoveredResourceCountsGroupByResourceTypeRequest
@@ -12144,8 +12614,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从资源类型维度查询资源的统计结果</para>
+        /// <para>Queries the statistics on resources by resource type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic describes how to query the statistics on resources by resource type. The returned result shows that a total of 10 resources of the <c>ACS::ECS::Instance</c> resource type exist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDiscoveredResourceCountsGroupByResourceTypeRequest
@@ -12162,8 +12637,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从资源类型维度查询资源的统计结果</para>
+        /// <para>Queries the statistics on resources by resource type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic describes how to query the statistics on resources by resource type. The returned result shows that a total of 10 resources of the <c>ACS::ECS::Instance</c> resource type exist.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDiscoveredResourceCountsGroupByResourceTypeRequest
@@ -12180,7 +12660,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户集成云产品的授权状态</para>
+        /// <para>Queries the integration status of a specific cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12222,7 +12702,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户集成云产品的授权状态</para>
+        /// <para>Queries the integration status of a specific cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12264,7 +12744,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户集成云产品的授权状态</para>
+        /// <para>Queries the integration status of a specific cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12282,7 +12762,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户集成云产品的授权状态</para>
+        /// <para>Queries the integration status of a specific cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12300,12 +12780,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified rule template.</para>
+        /// <para>Queries the details of a specific managed rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the rule template <c>cdn-domain-https-enabled</c>.</para>
+        /// <para>This topic provides an example on how to query the details of the managed rule <c>cdn-domain-https-enabled</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12347,12 +12827,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified rule template.</para>
+        /// <para>Queries the details of a specific managed rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the rule template <c>cdn-domain-https-enabled</c>.</para>
+        /// <para>This topic provides an example on how to query the details of the managed rule <c>cdn-domain-https-enabled</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12394,12 +12874,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified rule template.</para>
+        /// <para>Queries the details of a specific managed rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the rule template <c>cdn-domain-https-enabled</c>.</para>
+        /// <para>This topic provides an example on how to query the details of the managed rule <c>cdn-domain-https-enabled</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12417,12 +12897,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified rule template.</para>
+        /// <para>Queries the details of a specific managed rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of the rule template <c>cdn-domain-https-enabled</c>.</para>
+        /// <para>This topic provides an example on how to query the details of the managed rule <c>cdn-domain-https-enabled</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12445,7 +12925,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to query the details of the <c>ACS-ALB-BulkyEnableDeletionProtection</c> automatic remediation template.</para>
+        /// <para>This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12492,7 +12972,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to query the details of the <c>ACS-ALB-BulkyEnableDeletionProtection</c> automatic remediation template.</para>
+        /// <para>This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12539,7 +13019,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to query the details of the <c>ACS-ALB-BulkyEnableDeletionProtection</c> automatic remediation template.</para>
+        /// <para>This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12562,7 +13042,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to query the details of the <c>ACS-ALB-BulkyEnableDeletionProtection</c> automatic remediation template.</para>
+        /// <para>This topic provides an example on how to query the details of the automatic remediation template ACS-ALB-BulkyEnableDeletionProtection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12580,7 +13060,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a report generated from a report template.</para>
+        /// <para>获取基于报告模版生成的报告</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12622,7 +13102,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a report generated from a report template.</para>
+        /// <para>获取基于报告模版生成的报告</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12664,7 +13144,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a report generated from a report template.</para>
+        /// <para>获取基于报告模版生成的报告</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12682,7 +13162,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a report generated from a report template.</para>
+        /// <para>获取基于报告模版生成的报告</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12700,7 +13180,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details of a compliance report template.</para>
+        /// <para>获取合规报告模版详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12742,7 +13222,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details of a compliance report template.</para>
+        /// <para>获取合规报告模版详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12784,7 +13264,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details of a compliance report template.</para>
+        /// <para>获取合规报告模版详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12802,7 +13282,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve details of a compliance report template.</para>
+        /// <para>获取合规报告模版详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12820,8 +13300,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从规则的合规评估结果维度查询合规概要</para>
+        /// <para>Queries the compliance summary based on the compliance evaluation result of a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this topic, the <c>cr-d369626622af008e****</c> rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and <c>five</c> of them are evaluated as compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetResourceComplianceByConfigRuleRequest
@@ -12858,8 +13343,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从规则的合规评估结果维度查询合规概要</para>
+        /// <para>Queries the compliance summary based on the compliance evaluation result of a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this topic, the <c>cr-d369626622af008e****</c> rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and <c>five</c> of them are evaluated as compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetResourceComplianceByConfigRuleRequest
@@ -12896,8 +13386,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从规则的合规评估结果维度查询合规概要</para>
+        /// <para>Queries the compliance summary based on the compliance evaluation result of a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this topic, the <c>cr-d369626622af008e****</c> rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and <c>five</c> of them are evaluated as compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetResourceComplianceByConfigRuleRequest
@@ -12914,8 +13409,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从规则的合规评估结果维度查询合规概要</para>
+        /// <para>Queries the compliance summary based on the compliance evaluation result of a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this topic, the <c>cr-d369626622af008e****</c> rule is used as an example. The return result shows that a total of 10 resources are evaluated by the rule and <c>five</c> of them are evaluated as compliant.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetResourceComplianceByConfigRuleRequest
@@ -12932,12 +13432,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance results for resources in a compliance package.</para>
+        /// <para>Queries the compliance evaluation results of resources evaluated based on a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance results for resources in the compliance package <c>cp-541e626622af0087****</c>. The response shows that 7 of the 10 resources are non-compliant.</para>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of resources monitored by using the <c>cp-541e626622af0087****</c> compliance package. The returned result shows a total of 10 resources and seven of them are evaluated as non-compliant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12975,12 +13475,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance results for resources in a compliance package.</para>
+        /// <para>Queries the compliance evaluation results of resources evaluated based on a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance results for resources in the compliance package <c>cp-541e626622af0087****</c>. The response shows that 7 of the 10 resources are non-compliant.</para>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of resources monitored by using the <c>cp-541e626622af0087****</c> compliance package. The returned result shows a total of 10 resources and seven of them are evaluated as non-compliant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13018,12 +13518,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance results for resources in a compliance package.</para>
+        /// <para>Queries the compliance evaluation results of resources evaluated based on a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance results for resources in the compliance package <c>cp-541e626622af0087****</c>. The response shows that 7 of the 10 resources are non-compliant.</para>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of resources monitored by using the <c>cp-541e626622af0087****</c> compliance package. The returned result shows a total of 10 resources and seven of them are evaluated as non-compliant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13041,12 +13541,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance results for resources in a compliance package.</para>
+        /// <para>Queries the compliance evaluation results of resources evaluated based on a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance results for resources in the compliance package <c>cp-541e626622af0087****</c>. The response shows that 7 of the 10 resources are non-compliant.</para>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of resources monitored by using the <c>cp-541e626622af0087****</c> compliance package. The returned result shows a total of 10 resources and seven of them are evaluated as non-compliant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13064,7 +13564,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询合规情况按照地域分组统计</para>
+        /// <para>Queries compliance evaluation results of resources based on a rule and displays the evaluation results grouped by region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13106,7 +13606,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询合规情况按照地域分组统计</para>
+        /// <para>Queries compliance evaluation results of resources based on a rule and displays the evaluation results grouped by region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13148,7 +13648,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询合规情况按照地域分组统计</para>
+        /// <para>Queries compliance evaluation results of resources based on a rule and displays the evaluation results grouped by region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13166,7 +13666,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询合规情况按照地域分组统计</para>
+        /// <para>Queries compliance evaluation results of resources based on a rule and displays the evaluation results grouped by region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13184,7 +13684,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规则对资源的评估结果，评估结果按资源类型进行分组展示</para>
+        /// <para>Queries compliance evaluation results of resources based on a rule and displays the evaluation results grouped by resource type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13226,7 +13726,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规则对资源的评估结果，评估结果按资源类型进行分组展示</para>
+        /// <para>Queries compliance evaluation results of resources based on a rule and displays the evaluation results grouped by resource type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13268,7 +13768,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规则对资源的评估结果，评估结果按资源类型进行分组展示</para>
+        /// <para>Queries compliance evaluation results of resources based on a rule and displays the evaluation results grouped by resource type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13286,7 +13786,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规则对资源的评估结果，评估结果按资源类型进行分组展示</para>
+        /// <para>Queries compliance evaluation results of resources based on a rule and displays the evaluation results grouped by resource type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13304,13 +13804,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance evaluation history of a specified resource. The history is a set of compliance evaluation records that contain the timestamp and details of each evaluation.</para>
+        /// <para>Queries the compliance timeline of a resource. The compliance timeline of a resource indicates the compliance evaluation record of the resource. A compliance timeline includes points and the content on the compliance timeline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In Cloud Config, each resource has its own compliance evaluation history. A compliance evaluation record is generated when a rule is triggered to evaluate a resource. The collection of these records forms the compliance evaluation history of the resource. Rules can be triggered by configuration changes, periodic execution, or manual execution.
-        /// This topic provides an example of how to query the compliance evaluation history of the resource <c>new-bucket</c>, which is an Object Storage Service (OSS) bucket in the <c>cn-hangzhou</c> region. The returned result shows that the compliance evaluation history of the resource includes records with the timestamps <c>1625200295276</c> (UTC+8: 2021-07-02 12:31:35) and <c>1625200228510</c> (UTC+8: 2021-07-02 12:30:28).</para>
+        /// <para>In Cloud Config, each resource has a compliance timeline. Cloud Config generates a compliance evaluation record for a resource each time the resource is evaluated based on a rule. The compliance evaluation records of a resource are displayed in a compliance timeline. You can configure Cloud Config to execute a rule to evaluate a resource on a regular basis or each time you change the resource configuration. You can also manually execute a rule to evaluate a resource.
+        /// This topic provides an example on how to query the compliance timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region. The resource is an Object Storage Service (OSS) bucket. The returned result shows the following two timestamps on the compliance timeline: <c>1625200295276</c> and <c>1625200228510</c>. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8) and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13348,13 +13848,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance evaluation history of a specified resource. The history is a set of compliance evaluation records that contain the timestamp and details of each evaluation.</para>
+        /// <para>Queries the compliance timeline of a resource. The compliance timeline of a resource indicates the compliance evaluation record of the resource. A compliance timeline includes points and the content on the compliance timeline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In Cloud Config, each resource has its own compliance evaluation history. A compliance evaluation record is generated when a rule is triggered to evaluate a resource. The collection of these records forms the compliance evaluation history of the resource. Rules can be triggered by configuration changes, periodic execution, or manual execution.
-        /// This topic provides an example of how to query the compliance evaluation history of the resource <c>new-bucket</c>, which is an Object Storage Service (OSS) bucket in the <c>cn-hangzhou</c> region. The returned result shows that the compliance evaluation history of the resource includes records with the timestamps <c>1625200295276</c> (UTC+8: 2021-07-02 12:31:35) and <c>1625200228510</c> (UTC+8: 2021-07-02 12:30:28).</para>
+        /// <para>In Cloud Config, each resource has a compliance timeline. Cloud Config generates a compliance evaluation record for a resource each time the resource is evaluated based on a rule. The compliance evaluation records of a resource are displayed in a compliance timeline. You can configure Cloud Config to execute a rule to evaluate a resource on a regular basis or each time you change the resource configuration. You can also manually execute a rule to evaluate a resource.
+        /// This topic provides an example on how to query the compliance timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region. The resource is an Object Storage Service (OSS) bucket. The returned result shows the following two timestamps on the compliance timeline: <c>1625200295276</c> and <c>1625200228510</c>. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8) and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13392,13 +13892,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance evaluation history of a specified resource. The history is a set of compliance evaluation records that contain the timestamp and details of each evaluation.</para>
+        /// <para>Queries the compliance timeline of a resource. The compliance timeline of a resource indicates the compliance evaluation record of the resource. A compliance timeline includes points and the content on the compliance timeline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In Cloud Config, each resource has its own compliance evaluation history. A compliance evaluation record is generated when a rule is triggered to evaluate a resource. The collection of these records forms the compliance evaluation history of the resource. Rules can be triggered by configuration changes, periodic execution, or manual execution.
-        /// This topic provides an example of how to query the compliance evaluation history of the resource <c>new-bucket</c>, which is an Object Storage Service (OSS) bucket in the <c>cn-hangzhou</c> region. The returned result shows that the compliance evaluation history of the resource includes records with the timestamps <c>1625200295276</c> (UTC+8: 2021-07-02 12:31:35) and <c>1625200228510</c> (UTC+8: 2021-07-02 12:30:28).</para>
+        /// <para>In Cloud Config, each resource has a compliance timeline. Cloud Config generates a compliance evaluation record for a resource each time the resource is evaluated based on a rule. The compliance evaluation records of a resource are displayed in a compliance timeline. You can configure Cloud Config to execute a rule to evaluate a resource on a regular basis or each time you change the resource configuration. You can also manually execute a rule to evaluate a resource.
+        /// This topic provides an example on how to query the compliance timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region. The resource is an Object Storage Service (OSS) bucket. The returned result shows the following two timestamps on the compliance timeline: <c>1625200295276</c> and <c>1625200228510</c>. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8) and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13416,13 +13916,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance evaluation history of a specified resource. The history is a set of compliance evaluation records that contain the timestamp and details of each evaluation.</para>
+        /// <para>Queries the compliance timeline of a resource. The compliance timeline of a resource indicates the compliance evaluation record of the resource. A compliance timeline includes points and the content on the compliance timeline.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>In Cloud Config, each resource has its own compliance evaluation history. A compliance evaluation record is generated when a rule is triggered to evaluate a resource. The collection of these records forms the compliance evaluation history of the resource. Rules can be triggered by configuration changes, periodic execution, or manual execution.
-        /// This topic provides an example of how to query the compliance evaluation history of the resource <c>new-bucket</c>, which is an Object Storage Service (OSS) bucket in the <c>cn-hangzhou</c> region. The returned result shows that the compliance evaluation history of the resource includes records with the timestamps <c>1625200295276</c> (UTC+8: 2021-07-02 12:31:35) and <c>1625200228510</c> (UTC+8: 2021-07-02 12:30:28).</para>
+        /// <para>In Cloud Config, each resource has a compliance timeline. Cloud Config generates a compliance evaluation record for a resource each time the resource is evaluated based on a rule. The compliance evaluation records of a resource are displayed in a compliance timeline. You can configure Cloud Config to execute a rule to evaluate a resource on a regular basis or each time you change the resource configuration. You can also manually execute a rule to evaluate a resource.
+        /// This topic provides an example on how to query the compliance timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region. The resource is an Object Storage Service (OSS) bucket. The returned result shows the following two timestamps on the compliance timeline: <c>1625200295276</c> and <c>1625200228510</c>. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8) and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13440,7 +13940,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation obtains configuration samples for a specified resource type.</para>
+        /// <para>获取资源配置样例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13486,7 +13986,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation obtains configuration samples for a specified resource type.</para>
+        /// <para>获取资源配置样例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13532,7 +14032,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation obtains configuration samples for a specified resource type.</para>
+        /// <para>获取资源配置样例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13550,7 +14050,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation obtains configuration samples for a specified resource type.</para>
+        /// <para>获取资源配置样例</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13568,17 +14068,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration history of a specified resource. Cloud Config records every configuration and relationship change for a resource in a configuration history. Recording starts after you enable the Cloud Config service. By default, the history is retained for 10 years.</para>
+        /// <para>Queries the configuration timeline of a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud Config provides a configuration history for each resource that it monitors. The details are as follows:</para>
-        /// <list type="bullet">
-        /// <item><description>For existing resources, the configuration history starts when you enable the Cloud Config service.</description></item>
-        /// <item><description>For new resources created after you enable the service, the configuration history starts when the resource is created. Cloud Config records configuration changes every 10 minutes. When a configuration changes, a new node appears in the history. This node contains the resource configuration details, change details, and the associated management event.
-        /// This topic provides an example of how to query the configuration history for a resource named <c>new-bucket</c>. The resource is a bucket in the <c>cn-hangzhou</c> region. The response shows that the creation time of the resource is <c>1624961112000</c> (18:05:12 on June 29, 2021, UTC+8).</description></item>
-        /// </list>
+        /// <para>The sample request in this topic shows you how to query the configuration timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is <c>1624961112000</c>. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13616,17 +14111,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration history of a specified resource. Cloud Config records every configuration and relationship change for a resource in a configuration history. Recording starts after you enable the Cloud Config service. By default, the history is retained for 10 years.</para>
+        /// <para>Queries the configuration timeline of a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud Config provides a configuration history for each resource that it monitors. The details are as follows:</para>
-        /// <list type="bullet">
-        /// <item><description>For existing resources, the configuration history starts when you enable the Cloud Config service.</description></item>
-        /// <item><description>For new resources created after you enable the service, the configuration history starts when the resource is created. Cloud Config records configuration changes every 10 minutes. When a configuration changes, a new node appears in the history. This node contains the resource configuration details, change details, and the associated management event.
-        /// This topic provides an example of how to query the configuration history for a resource named <c>new-bucket</c>. The resource is a bucket in the <c>cn-hangzhou</c> region. The response shows that the creation time of the resource is <c>1624961112000</c> (18:05:12 on June 29, 2021, UTC+8).</description></item>
-        /// </list>
+        /// <para>The sample request in this topic shows you how to query the configuration timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is <c>1624961112000</c>. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13664,17 +14154,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration history of a specified resource. Cloud Config records every configuration and relationship change for a resource in a configuration history. Recording starts after you enable the Cloud Config service. By default, the history is retained for 10 years.</para>
+        /// <para>Queries the configuration timeline of a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud Config provides a configuration history for each resource that it monitors. The details are as follows:</para>
-        /// <list type="bullet">
-        /// <item><description>For existing resources, the configuration history starts when you enable the Cloud Config service.</description></item>
-        /// <item><description>For new resources created after you enable the service, the configuration history starts when the resource is created. Cloud Config records configuration changes every 10 minutes. When a configuration changes, a new node appears in the history. This node contains the resource configuration details, change details, and the associated management event.
-        /// This topic provides an example of how to query the configuration history for a resource named <c>new-bucket</c>. The resource is a bucket in the <c>cn-hangzhou</c> region. The response shows that the creation time of the resource is <c>1624961112000</c> (18:05:12 on June 29, 2021, UTC+8).</description></item>
-        /// </list>
+        /// <para>The sample request in this topic shows you how to query the configuration timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is <c>1624961112000</c>. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13692,17 +14177,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration history of a specified resource. Cloud Config records every configuration and relationship change for a resource in a configuration history. Recording starts after you enable the Cloud Config service. By default, the history is retained for 10 years.</para>
+        /// <para>Queries the configuration timeline of a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud Config provides a configuration history for each resource that it monitors. The details are as follows:</para>
-        /// <list type="bullet">
-        /// <item><description>For existing resources, the configuration history starts when you enable the Cloud Config service.</description></item>
-        /// <item><description>For new resources created after you enable the service, the configuration history starts when the resource is created. Cloud Config records configuration changes every 10 minutes. When a configuration changes, a new node appears in the history. This node contains the resource configuration details, change details, and the associated management event.
-        /// This topic provides an example of how to query the configuration history for a resource named <c>new-bucket</c>. The resource is a bucket in the <c>cn-hangzhou</c> region. The response shows that the creation time of the resource is <c>1624961112000</c> (18:05:12 on June 29, 2021, UTC+8).</description></item>
-        /// </list>
+        /// <para>The sample request in this topic shows you how to query the configuration timeline of the <c>new-bucket</c> resource that resides in the <c>cn-hangzhou</c> region. The new-bucket resource is an Object Storage Service (OSS) bucket. The return result shows that the timestamp when the resource configuration changes is <c>1624961112000</c>. The timestamp indicates 18:05:12 on June 29, 2021 (UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13720,15 +14200,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the most recently generated global resource inventory for the current account.</para>
+        /// <para>Obtains the last resource inventory that is generated within the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2398354.html">GenerateResourceInventory</a> operation to generate a global resource inventory. You can then call this operation to obtain the URL of the global resource inventory.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query the most recently generated global resource inventory for the current account.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2398354.html">GenerateResourceInventory</a> operation to generate a resource inventory. Then, you can call the GetResourceInventory operation to obtain the URL of the resource inventory.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to obtain the last resource inventory that is generated within the current Alibaba Cloud account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13761,15 +14241,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the most recently generated global resource inventory for the current account.</para>
+        /// <para>Obtains the last resource inventory that is generated within the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2398354.html">GenerateResourceInventory</a> operation to generate a global resource inventory. You can then call this operation to obtain the URL of the global resource inventory.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query the most recently generated global resource inventory for the current account.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2398354.html">GenerateResourceInventory</a> operation to generate a resource inventory. Then, you can call the GetResourceInventory operation to obtain the URL of the resource inventory.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to obtain the last resource inventory that is generated within the current Alibaba Cloud account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13802,15 +14282,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the most recently generated global resource inventory for the current account.</para>
+        /// <para>Obtains the last resource inventory that is generated within the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2398354.html">GenerateResourceInventory</a> operation to generate a global resource inventory. You can then call this operation to obtain the URL of the global resource inventory.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query the most recently generated global resource inventory for the current account.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2398354.html">GenerateResourceInventory</a> operation to generate a resource inventory. Then, you can call the GetResourceInventory operation to obtain the URL of the resource inventory.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to obtain the last resource inventory that is generated within the current Alibaba Cloud account.</para>
         /// </description>
         /// 
         /// <returns>
@@ -13824,15 +14304,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the most recently generated global resource inventory for the current account.</para>
+        /// <para>Obtains the last resource inventory that is generated within the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2398354.html">GenerateResourceInventory</a> operation to generate a global resource inventory. You can then call this operation to obtain the URL of the global resource inventory.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query the most recently generated global resource inventory for the current account.</para>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2398354.html">GenerateResourceInventory</a> operation to generate a resource inventory. Then, you can call the GetResourceInventory operation to obtain the URL of the resource inventory.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to obtain the last resource inventory that is generated within the current Alibaba Cloud account.</para>
         /// </description>
         /// 
         /// <returns>
@@ -13846,7 +14326,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves the property descriptions for a specified resource type.</para>
+        /// <para>获取资源类型的属性配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13884,7 +14364,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves the property descriptions for a specified resource type.</para>
+        /// <para>获取资源类型的属性配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13922,7 +14402,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves the property descriptions for a specified resource type.</para>
+        /// <para>获取资源类型的属性配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13940,7 +14420,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves the property descriptions for a specified resource type.</para>
+        /// <para>获取资源类型的属性配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13958,12 +14438,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported resource relations for a specified resource type.</para>
+        /// <para>Queries the resource relationships supported by a resource type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the resource relations supported by the ACS::ECS::Instance resource type.</para>
+        /// <para>This topic provides an example to show how to query the resource relationships that are supported by the ACS::ECS::Instance resource type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14005,12 +14485,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported resource relations for a specified resource type.</para>
+        /// <para>Queries the resource relationships supported by a resource type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the resource relations supported by the ACS::ECS::Instance resource type.</para>
+        /// <para>This topic provides an example to show how to query the resource relationships that are supported by the ACS::ECS::Instance resource type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14052,12 +14532,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported resource relations for a specified resource type.</para>
+        /// <para>Queries the resource relationships supported by a resource type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the resource relations supported by the ACS::ECS::Instance resource type.</para>
+        /// <para>This topic provides an example to show how to query the resource relationships that are supported by the ACS::ECS::Instance resource type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14075,12 +14555,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the supported resource relations for a specified resource type.</para>
+        /// <para>Queries the resource relationships supported by a resource type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the resource relations supported by the ACS::ECS::Instance resource type.</para>
+        /// <para>This topic provides an example to show how to query the resource relationships that are supported by the ACS::ECS::Instance resource type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14098,8 +14578,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>忽略评估结果增加截止时间</para>
+        /// <para>Ignores the evaluation results of some resources in an account group based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
+        /// This example shows how to ignore the <c>lb-hp3a3b4ztyfm2plgm****</c> incompliant resource that is evaluated by using the <c>cr-7e72626622af0051***</c> rule in the <c>120886317861****</c> member account of the <c>ca-5b6c626622af008f****</c> account group. The ID of the region where the resource resides is <c>cn-beijing</c>, and the type of the resource is <c>ACS::SLB::LoadBalancer</c>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// IgnoreAggregateEvaluationResultsRequest
@@ -14162,8 +14648,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>忽略评估结果增加截止时间</para>
+        /// <para>Ignores the evaluation results of some resources in an account group based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
+        /// This example shows how to ignore the <c>lb-hp3a3b4ztyfm2plgm****</c> incompliant resource that is evaluated by using the <c>cr-7e72626622af0051***</c> rule in the <c>120886317861****</c> member account of the <c>ca-5b6c626622af008f****</c> account group. The ID of the region where the resource resides is <c>cn-beijing</c>, and the type of the resource is <c>ACS::SLB::LoadBalancer</c>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// IgnoreAggregateEvaluationResultsRequest
@@ -14226,8 +14718,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>忽略评估结果增加截止时间</para>
+        /// <para>Ignores the evaluation results of some resources in an account group based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
+        /// This example shows how to ignore the <c>lb-hp3a3b4ztyfm2plgm****</c> incompliant resource that is evaluated by using the <c>cr-7e72626622af0051***</c> rule in the <c>120886317861****</c> member account of the <c>ca-5b6c626622af008f****</c> account group. The ID of the region where the resource resides is <c>cn-beijing</c>, and the type of the resource is <c>ACS::SLB::LoadBalancer</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// IgnoreAggregateEvaluationResultsRequest
@@ -14244,8 +14742,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>忽略评估结果增加截止时间</para>
+        /// <para>Ignores the evaluation results of some resources in an account group based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
+        /// This example shows how to ignore the <c>lb-hp3a3b4ztyfm2plgm****</c> incompliant resource that is evaluated by using the <c>cr-7e72626622af0051***</c> rule in the <c>120886317861****</c> member account of the <c>ca-5b6c626622af008f****</c> account group. The ID of the region where the resource resides is <c>cn-beijing</c>, and the type of the resource is <c>ACS::SLB::LoadBalancer</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// IgnoreAggregateEvaluationResultsRequest
@@ -14262,13 +14766,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores the evaluation results of a rule for specific resources. You can also set a time period to ignore the rule. When the ignore period expires, the system automatically resumes displaying the evaluation results of the rule for the resources.</para>
+        /// <para>Ignores the evaluation results of some resources based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a non-compliant resource is ignored, the rule still evaluates the resource. The evaluation result is Ignored.
-        /// This topic provides an example of how to ignore the evaluation results of the rule <c>cr-7e72626622af0051****</c> for a specified non-compliant resource in the Alibaba Cloud account <c>100931896542****</c>. The region ID of the resource is <c>cn-beijing</c>, the resource type is <c>ACS::SLB::LoadBalancer</c>, and the resource ID is <c>lb-hp3a3b4ztyfm2plgm****</c>.</para>
+        /// <para>After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
+        /// This example shows how to ignore the <c>lb-hp3a3b4ztyfm2plgm****</c> resource that is evaluated as incompliant by using the <c>cr-7e72626622af0051****</c> rule in the <c>100931896542****</c> account. The ID of the region in which the resource resides is <c>cn-beijing</c>, and the type of the resource is <c>ACS::SLB::LoadBalancer</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14328,13 +14832,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores the evaluation results of a rule for specific resources. You can also set a time period to ignore the rule. When the ignore period expires, the system automatically resumes displaying the evaluation results of the rule for the resources.</para>
+        /// <para>Ignores the evaluation results of some resources based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a non-compliant resource is ignored, the rule still evaluates the resource. The evaluation result is Ignored.
-        /// This topic provides an example of how to ignore the evaluation results of the rule <c>cr-7e72626622af0051****</c> for a specified non-compliant resource in the Alibaba Cloud account <c>100931896542****</c>. The region ID of the resource is <c>cn-beijing</c>, the resource type is <c>ACS::SLB::LoadBalancer</c>, and the resource ID is <c>lb-hp3a3b4ztyfm2plgm****</c>.</para>
+        /// <para>After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
+        /// This example shows how to ignore the <c>lb-hp3a3b4ztyfm2plgm****</c> resource that is evaluated as incompliant by using the <c>cr-7e72626622af0051****</c> rule in the <c>100931896542****</c> account. The ID of the region in which the resource resides is <c>cn-beijing</c>, and the type of the resource is <c>ACS::SLB::LoadBalancer</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14394,13 +14898,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores the evaluation results of a rule for specific resources. You can also set a time period to ignore the rule. When the ignore period expires, the system automatically resumes displaying the evaluation results of the rule for the resources.</para>
+        /// <para>Ignores the evaluation results of some resources based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a non-compliant resource is ignored, the rule still evaluates the resource. The evaluation result is Ignored.
-        /// This topic provides an example of how to ignore the evaluation results of the rule <c>cr-7e72626622af0051****</c> for a specified non-compliant resource in the Alibaba Cloud account <c>100931896542****</c>. The region ID of the resource is <c>cn-beijing</c>, the resource type is <c>ACS::SLB::LoadBalancer</c>, and the resource ID is <c>lb-hp3a3b4ztyfm2plgm****</c>.</para>
+        /// <para>After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
+        /// This example shows how to ignore the <c>lb-hp3a3b4ztyfm2plgm****</c> resource that is evaluated as incompliant by using the <c>cr-7e72626622af0051****</c> rule in the <c>100931896542****</c> account. The ID of the region in which the resource resides is <c>cn-beijing</c>, and the type of the resource is <c>ACS::SLB::LoadBalancer</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14418,13 +14922,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Ignores the evaluation results of a rule for specific resources. You can also set a time period to ignore the rule. When the ignore period expires, the system automatically resumes displaying the evaluation results of the rule for the resources.</para>
+        /// <para>Ignores the evaluation results of some resources based on a specific rule. You can also specify a time period for ignoring the evaluation results. After the period elapses, the evaluation results of the resources based on the rule are automatically displayed.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a non-compliant resource is ignored, the rule still evaluates the resource. The evaluation result is Ignored.
-        /// This topic provides an example of how to ignore the evaluation results of the rule <c>cr-7e72626622af0051****</c> for a specified non-compliant resource in the Alibaba Cloud account <c>100931896542****</c>. The region ID of the resource is <c>cn-beijing</c>, the resource type is <c>ACS::SLB::LoadBalancer</c>, and the resource ID is <c>lb-hp3a3b4ztyfm2plgm****</c>.</para>
+        /// <para>After you ignore a resource that is evaluated as incompliant by using a rule, the resource is still evaluated by using the rule, but the compliance result is Ignored.
+        /// This example shows how to ignore the <c>lb-hp3a3b4ztyfm2plgm****</c> resource that is evaluated as incompliant by using the <c>cr-7e72626622af0051****</c> rule in the <c>100931896542****</c> account. The ID of the region in which the resource resides is <c>cn-beijing</c>, and the type of the resource is <c>ACS::SLB::LoadBalancer</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14442,12 +14946,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance packs in a specified account group.</para>
+        /// <para>Queries a list of compliance packages in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance packs in the account group <c>ca-f632626622af0079****</c>. The response shows that the account group contains the compliance pack <c>cp-fdc8626622af00f9****</c>.</para>
+        /// <para>In this topic, the <c>ca-f632626622af0079****</c> account group is used as an example. The return result shows one compliance package whose ID is <c>cp-fdc8626622af00f9****</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14515,12 +15019,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance packs in a specified account group.</para>
+        /// <para>Queries a list of compliance packages in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance packs in the account group <c>ca-f632626622af0079****</c>. The response shows that the account group contains the compliance pack <c>cp-fdc8626622af00f9****</c>.</para>
+        /// <para>In this topic, the <c>ca-f632626622af0079****</c> account group is used as an example. The return result shows one compliance package whose ID is <c>cp-fdc8626622af00f9****</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14588,12 +15092,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance packs in a specified account group.</para>
+        /// <para>Queries a list of compliance packages in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance packs in the account group <c>ca-f632626622af0079****</c>. The response shows that the account group contains the compliance pack <c>cp-fdc8626622af00f9****</c>.</para>
+        /// <para>In this topic, the <c>ca-f632626622af0079****</c> account group is used as an example. The return result shows one compliance package whose ID is <c>cp-fdc8626622af00f9****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14611,12 +15115,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance packs in a specified account group.</para>
+        /// <para>Queries a list of compliance packages in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the compliance packs in the account group <c>ca-f632626622af0079****</c>. The response shows that the account group contains the compliance pack <c>cp-fdc8626622af00f9****</c>.</para>
+        /// <para>In this topic, the <c>ca-f632626622af0079****</c> account group is used as an example. The return result shows one compliance package whose ID is <c>cp-fdc8626622af00f9****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14634,7 +15138,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组查询投递渠道列表</para>
+        /// <para>Queries the information about all delivery channels in an account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14680,7 +15184,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组查询投递渠道列表</para>
+        /// <para>Queries the information about all delivery channels in an account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14726,7 +15230,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组查询投递渠道列表</para>
+        /// <para>Queries the information about all delivery channels in an account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14744,7 +15248,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组查询投递渠道列表</para>
+        /// <para>Queries the information about all delivery channels in an account group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14762,8 +15266,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the evaluation results of a rule for resources in a specified account group.</para>
+        /// <para>Queries the compliance evaluation results of resources based on a rule in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of resources based on the <c>cr-888f626622af00ae****</c> rule in the <c>ca-d1e3326622af00cb****</c> account group. The returned result indicates that the <c>Bucket-test</c> resource is evaluated as <c>NON_COMPLIANT</c> by using the rule. The resource is an Object Storage Service (OSS) bucket.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateConfigRuleEvaluationResultsRequest
@@ -14844,8 +15353,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the evaluation results of a rule for resources in a specified account group.</para>
+        /// <para>Queries the compliance evaluation results of resources based on a rule in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of resources based on the <c>cr-888f626622af00ae****</c> rule in the <c>ca-d1e3326622af00cb****</c> account group. The returned result indicates that the <c>Bucket-test</c> resource is evaluated as <c>NON_COMPLIANT</c> by using the rule. The resource is an Object Storage Service (OSS) bucket.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateConfigRuleEvaluationResultsRequest
@@ -14926,8 +15440,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the evaluation results of a rule for resources in a specified account group.</para>
+        /// <para>Queries the compliance evaluation results of resources based on a rule in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of resources based on the <c>cr-888f626622af00ae****</c> rule in the <c>ca-d1e3326622af00cb****</c> account group. The returned result indicates that the <c>Bucket-test</c> resource is evaluated as <c>NON_COMPLIANT</c> by using the rule. The resource is an Object Storage Service (OSS) bucket.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateConfigRuleEvaluationResultsRequest
@@ -14944,8 +15463,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the evaluation results of a rule for resources in a specified account group.</para>
+        /// <para>Queries the compliance evaluation results of resources based on a rule in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation results of resources based on the <c>cr-888f626622af00ae****</c> rule in the <c>ca-d1e3326622af00cb****</c> account group. The returned result indicates that the <c>Bucket-test</c> resource is evaluated as <c>NON_COMPLIANT</c> by using the rule. The resource is an Object Storage Service (OSS) bucket.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateConfigRuleEvaluationResultsRequest
@@ -14962,8 +15486,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>透出用户账号组维度的评估结果统计</para>
+        /// <para>Queries the statistics of compliance evaluation results of an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateConfigRuleEvaluationStatisticsRequest
@@ -15004,8 +15533,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>透出用户账号组维度的评估结果统计</para>
+        /// <para>Queries the statistics of compliance evaluation results of an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateConfigRuleEvaluationStatisticsRequest
@@ -15046,8 +15580,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>透出用户账号组维度的评估结果统计</para>
+        /// <para>Queries the statistics of compliance evaluation results of an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateConfigRuleEvaluationStatisticsRequest
@@ -15064,8 +15603,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>透出用户账号组维度的评估结果统计</para>
+        /// <para>Queries the statistics of compliance evaluation results of an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the statistics of compliance evaluation results of an account group whose ID is ca-edd3626622af00b3\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateConfigRuleEvaluationStatisticsRequest
@@ -15082,12 +15626,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules in a specified account group.</para>
+        /// <para>Queries a list of rules in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the rules in the account group <c>ca-f632626622af0079****</c>. The response shows that the account group contains one rule. This rule evaluates two resources, and the compliance result is <c>COMPLIANT</c>.</para>
+        /// <para>This topic provides an example on how to query the rules in an account group whose ID is <c>ca-f632626622af0079****</c>. The returned result shows a total of one rule and two evaluated resources. The resources are both evaluated as <c>COMPLIANT</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15179,12 +15723,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules in a specified account group.</para>
+        /// <para>Queries a list of rules in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the rules in the account group <c>ca-f632626622af0079****</c>. The response shows that the account group contains one rule. This rule evaluates two resources, and the compliance result is <c>COMPLIANT</c>.</para>
+        /// <para>This topic provides an example on how to query the rules in an account group whose ID is <c>ca-f632626622af0079****</c>. The returned result shows a total of one rule and two evaluated resources. The resources are both evaluated as <c>COMPLIANT</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15276,12 +15820,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules in a specified account group.</para>
+        /// <para>Queries a list of rules in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the rules in the account group <c>ca-f632626622af0079****</c>. The response shows that the account group contains one rule. This rule evaluates two resources, and the compliance result is <c>COMPLIANT</c>.</para>
+        /// <para>This topic provides an example on how to query the rules in an account group whose ID is <c>ca-f632626622af0079****</c>. The returned result shows a total of one rule and two evaluated resources. The resources are both evaluated as <c>COMPLIANT</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15299,12 +15843,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules in a specified account group.</para>
+        /// <para>Queries a list of rules in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the rules in the account group <c>ca-f632626622af0079****</c>. The response shows that the account group contains one rule. This rule evaluates two resources, and the compliance result is <c>COMPLIANT</c>.</para>
+        /// <para>This topic provides an example on how to query the rules in an account group whose ID is <c>ca-f632626622af0079****</c>. The returned result shows a total of one rule and two evaluated resources. The resources are both evaluated as <c>COMPLIANT</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15322,15 +15866,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources in a specified account group.</para>
+        /// <para>Obtains a list of resources aggregated across regions within all member accounts of a specific account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>The resource checklist displays only some of your resources because Cloud Config supports only specific Alibaba Cloud services and resource types. For more information about the supported services and resource types, see <a href="https://help.aliyun.com/document_detail/127411.html">Supported resource types and resource relationships</a>.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query the resources of a member with the ID <c>100931896542****</c> in the account group <c>ca-c560626622af0005****</c>. The response indicates that there are eight resources in total.</para>
+        /// <para>This topic provides an example on how to query the resources within the member account <c>100931896542****</c> of the account group <c>ca-c560626622af0005****</c>. The result indicates that eight resources are queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15420,15 +15961,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources in a specified account group.</para>
+        /// <para>Obtains a list of resources aggregated across regions within all member accounts of a specific account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>The resource checklist displays only some of your resources because Cloud Config supports only specific Alibaba Cloud services and resource types. For more information about the supported services and resource types, see <a href="https://help.aliyun.com/document_detail/127411.html">Supported resource types and resource relationships</a>.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query the resources of a member with the ID <c>100931896542****</c> in the account group <c>ca-c560626622af0005****</c>. The response indicates that there are eight resources in total.</para>
+        /// <para>This topic provides an example on how to query the resources within the member account <c>100931896542****</c> of the account group <c>ca-c560626622af0005****</c>. The result indicates that eight resources are queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15518,15 +16056,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources in a specified account group.</para>
+        /// <para>Obtains a list of resources aggregated across regions within all member accounts of a specific account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>The resource checklist displays only some of your resources because Cloud Config supports only specific Alibaba Cloud services and resource types. For more information about the supported services and resource types, see <a href="https://help.aliyun.com/document_detail/127411.html">Supported resource types and resource relationships</a>.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query the resources of a member with the ID <c>100931896542****</c> in the account group <c>ca-c560626622af0005****</c>. The response indicates that there are eight resources in total.</para>
+        /// <para>This topic provides an example on how to query the resources within the member account <c>100931896542****</c> of the account group <c>ca-c560626622af0005****</c>. The result indicates that eight resources are queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15544,15 +16079,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources in a specified account group.</para>
+        /// <para>Obtains a list of resources aggregated across regions within all member accounts of a specific account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>The resource checklist displays only some of your resources because Cloud Config supports only specific Alibaba Cloud services and resource types. For more information about the supported services and resource types, see <a href="https://help.aliyun.com/document_detail/127411.html">Supported resource types and resource relationships</a>.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query the resources of a member with the ID <c>100931896542****</c> in the account group <c>ca-c560626622af0005****</c>. The response indicates that there are eight resources in total.</para>
+        /// <para>This topic provides an example on how to query the resources within the member account <c>100931896542****</c> of the account group <c>ca-c560626622af0005****</c>. The result indicates that eight resources are queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15570,14 +16102,8 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves the list of recommended managed rules for an account group.</para>
+        /// <para>获取推荐的托管规则列表-多账号</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>For more information about the concepts, working principles, and integration process of dry run rules, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and working principles of dry run rules</a>.
-        /// Dry run rules and rule templates are based on the same underlying rule definitions. After you create a resource, a dry run rule continuously checks the resource for compliance.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateRecommendManagedRulesRequest
@@ -15654,14 +16180,8 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves the list of recommended managed rules for an account group.</para>
+        /// <para>获取推荐的托管规则列表-多账号</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>For more information about the concepts, working principles, and integration process of dry run rules, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and working principles of dry run rules</a>.
-        /// Dry run rules and rule templates are based on the same underlying rule definitions. After you create a resource, a dry run rule continuously checks the resource for compliance.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateRecommendManagedRulesRequest
@@ -15738,14 +16258,8 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves the list of recommended managed rules for an account group.</para>
+        /// <para>获取推荐的托管规则列表-多账号</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>For more information about the concepts, working principles, and integration process of dry run rules, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and working principles of dry run rules</a>.
-        /// Dry run rules and rule templates are based on the same underlying rule definitions. After you create a resource, a dry run rule continuously checks the resource for compliance.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateRecommendManagedRulesRequest
@@ -15762,14 +16276,8 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation retrieves the list of recommended managed rules for an account group.</para>
+        /// <para>获取推荐的托管规则列表-多账号</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>For more information about the concepts, working principles, and integration process of dry run rules, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and working principles of dry run rules</a>.
-        /// Dry run rules and rule templates are based on the same underlying rule definitions. After you create a resource, a dry run rule continuously checks the resource for compliance.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateRecommendManagedRulesRequest
@@ -15786,8 +16294,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组规则修正执行历史</para>
+        /// <para>Queries the remediation records of a rule in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the remediation records of the <c>cr-d04a626622af00af****</c> rule in the <c>ca-edd3626622af00b3****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateRemediationExecutionsRequest
@@ -15848,8 +16361,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组规则修正执行历史</para>
+        /// <para>Queries the remediation records of a rule in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the remediation records of the <c>cr-d04a626622af00af****</c> rule in the <c>ca-edd3626622af00b3****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateRemediationExecutionsRequest
@@ -15910,8 +16428,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组规则修正执行历史</para>
+        /// <para>Queries the remediation records of a rule in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the remediation records of the <c>cr-d04a626622af00af****</c> rule in the <c>ca-edd3626622af00b3****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateRemediationExecutionsRequest
@@ -15928,8 +16451,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组规则修正执行历史</para>
+        /// <para>Queries the remediation records of a rule in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the remediation records of the <c>cr-d04a626622af00af****</c> rule in the <c>ca-edd3626622af00b3****</c> account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateRemediationExecutionsRequest
@@ -15946,12 +16474,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the remediations in a specified account group.</para>
+        /// <para>Queries a list of remediation templates for a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the remediation settings for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>.</para>
+        /// <para>This topic provides an example on how to query the remediation templates of the rule whose ID is <c>cr-6b7c626622af00b4****</c> in the account group whose ID is <c>ca-6b4a626622af0012****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15997,12 +16525,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the remediations in a specified account group.</para>
+        /// <para>Queries a list of remediation templates for a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the remediation settings for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>.</para>
+        /// <para>This topic provides an example on how to query the remediation templates of the rule whose ID is <c>cr-6b7c626622af00b4****</c> in the account group whose ID is <c>ca-6b4a626622af0012****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16048,12 +16576,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the remediations in a specified account group.</para>
+        /// <para>Queries a list of remediation templates for a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the remediation settings for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>.</para>
+        /// <para>This topic provides an example on how to query the remediation templates of the rule whose ID is <c>cr-6b7c626622af00b4****</c> in the account group whose ID is <c>ca-6b4a626622af0012****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16071,12 +16599,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the remediations in a specified account group.</para>
+        /// <para>Queries a list of remediation templates for a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the remediation settings for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>.</para>
+        /// <para>This topic provides an example on how to query the remediation templates of the rule whose ID is <c>cr-6b7c626622af00b4****</c> in the account group whose ID is <c>ca-6b4a626622af0012****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16094,8 +16622,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rule evaluation results for resources in a specified account group.</para>
+        /// <para>Queries the compliance evaluation results of resources in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This example shows how to query the compliance evaluation result of the <c>23642660635396****</c> resource in the <c>ca-7f00626622af0041****</c> account group. The resource is a RAM user. The returned result indicates that the resource is evaluated as <c>NON_COMPLIANT</c> by using the <c>cr-7f7d626622af0041****</c> rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateResourceEvaluationResultsRequest
@@ -16168,8 +16701,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rule evaluation results for resources in a specified account group.</para>
+        /// <para>Queries the compliance evaluation results of resources in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This example shows how to query the compliance evaluation result of the <c>23642660635396****</c> resource in the <c>ca-7f00626622af0041****</c> account group. The resource is a RAM user. The returned result indicates that the resource is evaluated as <c>NON_COMPLIANT</c> by using the <c>cr-7f7d626622af0041****</c> rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateResourceEvaluationResultsRequest
@@ -16242,8 +16780,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rule evaluation results for resources in a specified account group.</para>
+        /// <para>Queries the compliance evaluation results of resources in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This example shows how to query the compliance evaluation result of the <c>23642660635396****</c> resource in the <c>ca-7f00626622af0041****</c> account group. The resource is a RAM user. The returned result indicates that the resource is evaluated as <c>NON_COMPLIANT</c> by using the <c>cr-7f7d626622af0041****</c> rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateResourceEvaluationResultsRequest
@@ -16260,8 +16803,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rule evaluation results for resources in a specified account group.</para>
+        /// <para>Queries the compliance evaluation results of resources in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This example shows how to query the compliance evaluation result of the <c>23642660635396****</c> resource in the <c>ca-7f00626622af0041****</c> account group. The resource is a RAM user. The returned result indicates that the resource is evaluated as <c>NON_COMPLIANT</c> by using the <c>cr-7f7d626622af0041****</c> rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateResourceEvaluationResultsRequest
@@ -16278,8 +16826,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源关系列表</para>
+        /// <para>Queries a list of the resources of a specific resource in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance in an account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateResourceRelationsRequest
@@ -16356,8 +16909,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源关系列表</para>
+        /// <para>Queries a list of the resources of a specific resource in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance in an account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateResourceRelationsRequest
@@ -16434,8 +16992,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源关系列表</para>
+        /// <para>Queries a list of the resources of a specific resource in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance in an account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateResourceRelationsRequest
@@ -16452,8 +17015,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源关系列表</para>
+        /// <para>Queries a list of the resources of a specific resource in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the disks that are associated with an Elastic Compute Service (ECS) instance in an account group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregateResourceRelationsRequest
@@ -16470,21 +17038,19 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can use SQL Select statements to search for resources in a specific account group based on fields in the resource properties.</para>
+        /// <para>Obtains resources in a specific account group based on the fields in the resource properties by using a SELECT statement.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you write an SQL <c>Select</c> statement, you can retrieve the search fields and their types from the property file of the target resource type. For more information about resource property files, see <a href="https://github.com/aliyun/alibabacloud-config-resource-schema">alibabacloud-config-resource-schema</a>.</para>
+        /// <para>When you write a <c>SELECT</c> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see<a href="https://github.com/aliyun/alibabacloud-config-resource-schema"> Alibaba Cloud Config Resource Schema</a></para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description><para>The resource property files contain all resource types that are supported by Cloud Config. These files are named after their corresponding resource types. For example, the property file for the <c>ACS::ECS::Instance</c> resource type is <c>ACS_ECS_Instance.properties.json</c>. The path to the property files is <c>config/properties/resource-types</c>.</para>
-        /// </description></item>
-        /// <item><description><para>For more information about SQL search examples and limits, see <a href="https://help.aliyun.com/document_detail/398718.html">SQL search examples</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits of SQL search</a>.
-        /// This topic provides an example of an advanced search query. The query finds all resources in the account group <c>ca-4b05626622af000c****</c> that have a tag key of <c>business</c> and a tag value of <c>online</c>.</para>
-        /// </description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the <c>ACS::ECS::Instance</c> resource type is named <c>ACS_ECS_Instance.properties.json</c>. Property files of different resource types are placed under the <c>config/properties/resource-types</c> path.</description></item>
+        /// <item><description>For more information about the examples and limits on SQL query statements, see <a href="https://help.aliyun.com/document_detail/398718.html">Examples of SQL query statements</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits on SQL query statements</a>.
+        /// This topic provides an example on how to obtain all resources whose tag key is <c>business</c> and whose tag value is <c>online</c> in the account group <c>ca-4b05626622af000c****</c> by using the advanced search feature.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -16530,21 +17096,19 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can use SQL Select statements to search for resources in a specific account group based on fields in the resource properties.</para>
+        /// <para>Obtains resources in a specific account group based on the fields in the resource properties by using a SELECT statement.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you write an SQL <c>Select</c> statement, you can retrieve the search fields and their types from the property file of the target resource type. For more information about resource property files, see <a href="https://github.com/aliyun/alibabacloud-config-resource-schema">alibabacloud-config-resource-schema</a>.</para>
+        /// <para>When you write a <c>SELECT</c> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see<a href="https://github.com/aliyun/alibabacloud-config-resource-schema"> Alibaba Cloud Config Resource Schema</a></para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description><para>The resource property files contain all resource types that are supported by Cloud Config. These files are named after their corresponding resource types. For example, the property file for the <c>ACS::ECS::Instance</c> resource type is <c>ACS_ECS_Instance.properties.json</c>. The path to the property files is <c>config/properties/resource-types</c>.</para>
-        /// </description></item>
-        /// <item><description><para>For more information about SQL search examples and limits, see <a href="https://help.aliyun.com/document_detail/398718.html">SQL search examples</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits of SQL search</a>.
-        /// This topic provides an example of an advanced search query. The query finds all resources in the account group <c>ca-4b05626622af000c****</c> that have a tag key of <c>business</c> and a tag value of <c>online</c>.</para>
-        /// </description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the <c>ACS::ECS::Instance</c> resource type is named <c>ACS_ECS_Instance.properties.json</c>. Property files of different resource types are placed under the <c>config/properties/resource-types</c> path.</description></item>
+        /// <item><description>For more information about the examples and limits on SQL query statements, see <a href="https://help.aliyun.com/document_detail/398718.html">Examples of SQL query statements</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits on SQL query statements</a>.
+        /// This topic provides an example on how to obtain all resources whose tag key is <c>business</c> and whose tag value is <c>online</c> in the account group <c>ca-4b05626622af000c****</c> by using the advanced search feature.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -16590,21 +17154,19 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can use SQL Select statements to search for resources in a specific account group based on fields in the resource properties.</para>
+        /// <para>Obtains resources in a specific account group based on the fields in the resource properties by using a SELECT statement.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you write an SQL <c>Select</c> statement, you can retrieve the search fields and their types from the property file of the target resource type. For more information about resource property files, see <a href="https://github.com/aliyun/alibabacloud-config-resource-schema">alibabacloud-config-resource-schema</a>.</para>
+        /// <para>When you write a <c>SELECT</c> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see<a href="https://github.com/aliyun/alibabacloud-config-resource-schema"> Alibaba Cloud Config Resource Schema</a></para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description><para>The resource property files contain all resource types that are supported by Cloud Config. These files are named after their corresponding resource types. For example, the property file for the <c>ACS::ECS::Instance</c> resource type is <c>ACS_ECS_Instance.properties.json</c>. The path to the property files is <c>config/properties/resource-types</c>.</para>
-        /// </description></item>
-        /// <item><description><para>For more information about SQL search examples and limits, see <a href="https://help.aliyun.com/document_detail/398718.html">SQL search examples</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits of SQL search</a>.
-        /// This topic provides an example of an advanced search query. The query finds all resources in the account group <c>ca-4b05626622af000c****</c> that have a tag key of <c>business</c> and a tag value of <c>online</c>.</para>
-        /// </description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the <c>ACS::ECS::Instance</c> resource type is named <c>ACS_ECS_Instance.properties.json</c>. Property files of different resource types are placed under the <c>config/properties/resource-types</c> path.</description></item>
+        /// <item><description>For more information about the examples and limits on SQL query statements, see <a href="https://help.aliyun.com/document_detail/398718.html">Examples of SQL query statements</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits on SQL query statements</a>.
+        /// This topic provides an example on how to obtain all resources whose tag key is <c>business</c> and whose tag value is <c>online</c> in the account group <c>ca-4b05626622af000c****</c> by using the advanced search feature.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -16622,21 +17184,19 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can use SQL Select statements to search for resources in a specific account group based on fields in the resource properties.</para>
+        /// <para>Obtains resources in a specific account group based on the fields in the resource properties by using a SELECT statement.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you write an SQL <c>Select</c> statement, you can retrieve the search fields and their types from the property file of the target resource type. For more information about resource property files, see <a href="https://github.com/aliyun/alibabacloud-config-resource-schema">alibabacloud-config-resource-schema</a>.</para>
+        /// <para>When you write a <c>SELECT</c> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see<a href="https://github.com/aliyun/alibabacloud-config-resource-schema"> Alibaba Cloud Config Resource Schema</a></para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description><para>The resource property files contain all resource types that are supported by Cloud Config. These files are named after their corresponding resource types. For example, the property file for the <c>ACS::ECS::Instance</c> resource type is <c>ACS_ECS_Instance.properties.json</c>. The path to the property files is <c>config/properties/resource-types</c>.</para>
-        /// </description></item>
-        /// <item><description><para>For more information about SQL search examples and limits, see <a href="https://help.aliyun.com/document_detail/398718.html">SQL search examples</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits of SQL search</a>.
-        /// This topic provides an example of an advanced search query. The query finds all resources in the account group <c>ca-4b05626622af000c****</c> that have a tag key of <c>business</c> and a tag value of <c>online</c>.</para>
-        /// </description></item>
-        /// </list>
         /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the <c>ACS::ECS::Instance</c> resource type is named <c>ACS_ECS_Instance.properties.json</c>. Property files of different resource types are placed under the <c>config/properties/resource-types</c> path.</description></item>
+        /// <item><description>For more information about the examples and limits on SQL query statements, see <a href="https://help.aliyun.com/document_detail/398718.html">Examples of SQL query statements</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits on SQL query statements</a>.
+        /// This topic provides an example on how to obtain all resources whose tag key is <c>business</c> and whose tag value is <c>online</c> in the account group <c>ca-4b05626622af000c****</c> by using the advanced search feature.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -16654,8 +17214,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号组列表</para>
+        /// <para>Queries all account groups within the current management account or delegated administrator account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The sample request in this topic shows you how to query account groups. A maximum of 10 entries can be returned for the request. As shown in the responses, the account group returned is named as <c>Test_Group</c>, its description is <c>Test account group</c>, and it is of the <c>CUSTOM</c> type, which indicates a custom account group. The account group contains two member accounts.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListAggregatorsRequest
@@ -16710,8 +17275,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号组列表</para>
+        /// <para>Queries all account groups within the current management account or delegated administrator account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The sample request in this topic shows you how to query account groups. A maximum of 10 entries can be returned for the request. As shown in the responses, the account group returned is named as <c>Test_Group</c>, its description is <c>Test account group</c>, and it is of the <c>CUSTOM</c> type, which indicates a custom account group. The account group contains two member accounts.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListAggregatorsRequest
@@ -16766,8 +17336,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号组列表</para>
+        /// <para>Queries all account groups within the current management account or delegated administrator account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The sample request in this topic shows you how to query account groups. A maximum of 10 entries can be returned for the request. As shown in the responses, the account group returned is named as <c>Test_Group</c>, its description is <c>Test account group</c>, and it is of the <c>CUSTOM</c> type, which indicates a custom account group. The account group contains two member accounts.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregatorsRequest
@@ -16784,8 +17359,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号组列表</para>
+        /// <para>Queries all account groups within the current management account or delegated administrator account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The sample request in this topic shows you how to query account groups. A maximum of 10 entries can be returned for the request. As shown in the responses, the account group returned is named as <c>Test_Group</c>, its description is <c>Test account group</c>, and it is of the <c>CUSTOM</c> type, which indicates a custom account group. The account group contains two member accounts.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAggregatorsRequest
@@ -16802,12 +17382,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all compliance pack templates provided by CloudConfig.</para>
+        /// <para>Queries all compliance package templates provided by Cloud Config and the details of the compliance package templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A compliance pack template is a collection of rules customized by CloudConfig for compliance scenarios.</para>
+        /// <para>A compliance package template is a collection of rules that Cloud Config can create based on compliance scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16869,12 +17449,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all compliance pack templates provided by CloudConfig.</para>
+        /// <para>Queries all compliance package templates provided by Cloud Config and the details of the compliance package templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A compliance pack template is a collection of rules customized by CloudConfig for compliance scenarios.</para>
+        /// <para>A compliance package template is a collection of rules that Cloud Config can create based on compliance scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16936,12 +17516,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all compliance pack templates provided by CloudConfig.</para>
+        /// <para>Queries all compliance package templates provided by Cloud Config and the details of the compliance package templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A compliance pack template is a collection of rules customized by CloudConfig for compliance scenarios.</para>
+        /// <para>A compliance package template is a collection of rules that Cloud Config can create based on compliance scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16959,12 +17539,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all compliance pack templates provided by CloudConfig.</para>
+        /// <para>Queries all compliance package templates provided by Cloud Config and the details of the compliance package templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A compliance pack template is a collection of rules customized by CloudConfig for compliance scenarios.</para>
+        /// <para>A compliance package template is a collection of rules that Cloud Config can create based on compliance scenarios.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16982,12 +17562,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the compliance packs for the current account.</para>
+        /// <para>Queries a list of compliance packages.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to list compliance packs. The response returns one compliance pack record: <c>cp-fdc8626622af00f9****</c>.</para>
+        /// <para>This topic provides an example of how to query compliance packages. The return result shows the details of the <c>cp-fdc8626622af00f9****</c> compliance package.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17051,12 +17631,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the compliance packs for the current account.</para>
+        /// <para>Queries a list of compliance packages.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to list compliance packs. The response returns one compliance pack record: <c>cp-fdc8626622af00f9****</c>.</para>
+        /// <para>This topic provides an example of how to query compliance packages. The return result shows the details of the <c>cp-fdc8626622af00f9****</c> compliance package.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17120,12 +17700,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the compliance packs for the current account.</para>
+        /// <para>Queries a list of compliance packages.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to list compliance packs. The response returns one compliance pack record: <c>cp-fdc8626622af00f9****</c>.</para>
+        /// <para>This topic provides an example of how to query compliance packages. The return result shows the details of the <c>cp-fdc8626622af00f9****</c> compliance package.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17143,12 +17723,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the compliance packs for the current account.</para>
+        /// <para>Queries a list of compliance packages.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to list compliance packs. The response returns one compliance pack record: <c>cp-fdc8626622af00f9****</c>.</para>
+        /// <para>This topic provides an example of how to query compliance packages. The return result shows the details of the <c>cp-fdc8626622af00f9****</c> compliance package.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17166,7 +17746,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of delivery channels.</para>
+        /// <para>Queries a list of delivery channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17208,7 +17788,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of delivery channels.</para>
+        /// <para>Queries a list of delivery channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17250,7 +17830,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of delivery channels.</para>
+        /// <para>Queries a list of delivery channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17268,7 +17848,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of delivery channels.</para>
+        /// <para>Queries a list of delivery channels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17286,8 +17866,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance evaluation results of a rule.</para>
+        /// <para>Queries the compliance evaluation results of resources based on a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation result of resources based on a rule whose ID is <c>cr-cac56457e0d900d3****</c>. The returned result indicates that the <c>i-hp3e4kvhzqn2s11t****</c> resource is evaluated as <c>NON_COMPLIANT</c> by using the rule. The resource is an Elastic Compute Service (ECS) instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConfigRuleEvaluationResultsRequest
@@ -17356,8 +17941,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance evaluation results of a rule.</para>
+        /// <para>Queries the compliance evaluation results of resources based on a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation result of resources based on a rule whose ID is <c>cr-cac56457e0d900d3****</c>. The returned result indicates that the <c>i-hp3e4kvhzqn2s11t****</c> resource is evaluated as <c>NON_COMPLIANT</c> by using the rule. The resource is an Elastic Compute Service (ECS) instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConfigRuleEvaluationResultsRequest
@@ -17426,8 +18016,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance evaluation results of a rule.</para>
+        /// <para>Queries the compliance evaluation results of resources based on a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation result of resources based on a rule whose ID is <c>cr-cac56457e0d900d3****</c>. The returned result indicates that the <c>i-hp3e4kvhzqn2s11t****</c> resource is evaluated as <c>NON_COMPLIANT</c> by using the rule. The resource is an Elastic Compute Service (ECS) instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConfigRuleEvaluationResultsRequest
@@ -17444,8 +18039,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance evaluation results of a rule.</para>
+        /// <para>Queries the compliance evaluation results of resources based on a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the compliance evaluation result of resources based on a rule whose ID is <c>cr-cac56457e0d900d3****</c>. The returned result indicates that the <c>i-hp3e4kvhzqn2s11t****</c> resource is evaluated as <c>NON_COMPLIANT</c> by using the rule. The resource is an Elastic Compute Service (ECS) instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConfigRuleEvaluationResultsRequest
@@ -17462,7 +18062,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>透出用户维度的历史评估结果统计</para>
+        /// <para>Queries the statistics of compliance evaluation results of the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17495,7 +18095,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>透出用户维度的历史评估结果统计</para>
+        /// <para>Queries the statistics of compliance evaluation results of the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17528,7 +18128,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>透出用户维度的历史评估结果统计</para>
+        /// <para>Queries the statistics of compliance evaluation results of the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -17542,7 +18142,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>透出用户维度的历史评估结果统计</para>
+        /// <para>Queries the statistics of compliance evaluation results of the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -17556,7 +18156,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the operators available for Cloud Config rules.</para>
+        /// <para>规则支持的操作符列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17589,7 +18189,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the operators available for Cloud Config rules.</para>
+        /// <para>规则支持的操作符列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17622,7 +18222,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the operators available for Cloud Config rules.</para>
+        /// <para>规则支持的操作符列表</para>
         /// </summary>
         /// 
         /// <returns>
@@ -17636,7 +18236,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the operators available for Cloud Config rules.</para>
+        /// <para>规则支持的操作符列表</para>
         /// </summary>
         /// 
         /// <returns>
@@ -17650,12 +18250,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of rules.</para>
+        /// <para>Queries the rules of the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the list of rules for the current account. The sample response indicates that the rule list contains one rule, three resources are evaluated, and the compliance result is COMPLIANT.</para>
+        /// <para>This topic provides an example on how to query the rules of the current account. The response shows that the current account has a total of one rule and three evaluated resources. The resources are evaluated as compliant.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17743,12 +18343,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of rules.</para>
+        /// <para>Queries the rules of the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the list of rules for the current account. The sample response indicates that the rule list contains one rule, three resources are evaluated, and the compliance result is COMPLIANT.</para>
+        /// <para>This topic provides an example on how to query the rules of the current account. The response shows that the current account has a total of one rule and three evaluated resources. The resources are evaluated as compliant.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17836,12 +18436,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of rules.</para>
+        /// <para>Queries the rules of the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the list of rules for the current account. The sample response indicates that the rule list contains one rule, three resources are evaluated, and the compliance result is COMPLIANT.</para>
+        /// <para>This topic provides an example on how to query the rules of the current account. The response shows that the current account has a total of one rule and three evaluated resources. The resources are evaluated as compliant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17859,12 +18459,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of rules.</para>
+        /// <para>Queries the rules of the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the list of rules for the current account. The sample response indicates that the rule list contains one rule, three resources are evaluated, and the compliance result is COMPLIANT.</para>
+        /// <para>This topic provides an example on how to query the rules of the current account. The response shows that the current account has a total of one rule and three evaluated resources. The resources are evaluated as compliant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17882,15 +18482,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resources that are aggregated across regions in the current Alibaba Cloud account.</para>
+        /// <para>Obtains a list of resources aggregated across regions within an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>Cloud Config supports only specific Alibaba Cloud services and resource types. The returned resource list includes only these supported resources. For more information about supported services and resource types, see <a href="https://help.aliyun.com/document_detail/127411.html">Supported resource types and resource relationships</a>.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query the resources in your account. The sample response shows that eight resources are returned.</para>
+        /// <para>This topic provides an example on how to call the ListDiscoveredResources operation to query the resources in the current Alibaba Cloud account. The returned result indicates that a total of eight resources exist in the account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17968,15 +18565,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resources that are aggregated across regions in the current Alibaba Cloud account.</para>
+        /// <para>Obtains a list of resources aggregated across regions within an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>Cloud Config supports only specific Alibaba Cloud services and resource types. The returned resource list includes only these supported resources. For more information about supported services and resource types, see <a href="https://help.aliyun.com/document_detail/127411.html">Supported resource types and resource relationships</a>.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query the resources in your account. The sample response shows that eight resources are returned.</para>
+        /// <para>This topic provides an example on how to call the ListDiscoveredResources operation to query the resources in the current Alibaba Cloud account. The returned result indicates that a total of eight resources exist in the account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18054,15 +18648,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resources that are aggregated across regions in the current Alibaba Cloud account.</para>
+        /// <para>Obtains a list of resources aggregated across regions within an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>Cloud Config supports only specific Alibaba Cloud services and resource types. The returned resource list includes only these supported resources. For more information about supported services and resource types, see <a href="https://help.aliyun.com/document_detail/127411.html">Supported resource types and resource relationships</a>.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query the resources in your account. The sample response shows that eight resources are returned.</para>
+        /// <para>This topic provides an example on how to call the ListDiscoveredResources operation to query the resources in the current Alibaba Cloud account. The returned result indicates that a total of eight resources exist in the account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18080,15 +18671,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resources that are aggregated across regions in the current Alibaba Cloud account.</para>
+        /// <para>Obtains a list of resources aggregated across regions within an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Limits</h3>
-        /// <para>Cloud Config supports only specific Alibaba Cloud services and resource types. The returned resource list includes only these supported resources. For more information about supported services and resource types, see <a href="https://help.aliyun.com/document_detail/127411.html">Supported resource types and resource relationships</a>.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query the resources in your account. The sample response shows that eight resources are returned.</para>
+        /// <para>This topic provides an example on how to call the ListDiscoveredResources operation to query the resources in the current Alibaba Cloud account. The returned result indicates that a total of eight resources exist in the account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18106,8 +18694,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services integrated with CloudConfig and their statuses.</para>
+        /// <para>Queries a list of cloud services that are integrated with Cloud Config and the status of each cloud service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListIntegratedServiceRequest
@@ -18139,8 +18732,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services integrated with CloudConfig and their statuses.</para>
+        /// <para>Queries a list of cloud services that are integrated with Cloud Config and the status of each cloud service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListIntegratedServiceRequest
@@ -18172,8 +18770,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services integrated with CloudConfig and their statuses.</para>
+        /// <para>Queries a list of cloud services that are integrated with Cloud Config and the status of each cloud service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.</para>
+        /// </description>
         /// 
         /// <returns>
         /// ListIntegratedServiceResponse
@@ -18186,8 +18789,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the services integrated with CloudConfig and their statuses.</para>
+        /// <para>Queries a list of cloud services that are integrated with Cloud Config and the status of each cloud service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the cloud services that can be integrated by the current Alibaba Cloud account.</para>
+        /// </description>
         /// 
         /// <returns>
         /// ListIntegratedServiceResponse
@@ -18200,15 +18808,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rule templates that are supported by Cloud Config.</para>
+        /// <para>Queries a list of managed rules supported by Cloud Config.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <para>For more information about rule definitions, working principles, and templates, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query all rule templates that contain the keyword <c>CDN</c>. The sample response shows that a total of 21 rule templates are returned.</para>
+        /// <h3><a href="#"></a>Background information</h3>
+        /// <para>For more information about how to define, execute, and integrate a managed rule, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and execution of rules</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to query all managed rules whose keyword is <c>CDN</c>. The response shows that 21 managed rules exist.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18270,15 +18878,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rule templates that are supported by Cloud Config.</para>
+        /// <para>Queries a list of managed rules supported by Cloud Config.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <para>For more information about rule definitions, working principles, and templates, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query all rule templates that contain the keyword <c>CDN</c>. The sample response shows that a total of 21 rule templates are returned.</para>
+        /// <h3><a href="#"></a>Background information</h3>
+        /// <para>For more information about how to define, execute, and integrate a managed rule, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and execution of rules</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to query all managed rules whose keyword is <c>CDN</c>. The response shows that 21 managed rules exist.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18340,15 +18948,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rule templates that are supported by Cloud Config.</para>
+        /// <para>Queries a list of managed rules supported by Cloud Config.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <para>For more information about rule definitions, working principles, and templates, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query all rule templates that contain the keyword <c>CDN</c>. The sample response shows that a total of 21 rule templates are returned.</para>
+        /// <h3><a href="#"></a>Background information</h3>
+        /// <para>For more information about how to define, execute, and integrate a managed rule, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and execution of rules</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to query all managed rules whose keyword is <c>CDN</c>. The response shows that 21 managed rules exist.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18366,15 +18974,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rule templates that are supported by Cloud Config.</para>
+        /// <para>Queries a list of managed rules supported by Cloud Config.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Background information</h3>
-        /// <para>For more information about rule definitions, working principles, and templates, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and working principles of rules</a>.</para>
-        /// <h3>Usage notes</h3>
-        /// <para>This topic provides an example of how to query all rule templates that contain the keyword <c>CDN</c>. The sample response shows that a total of 21 rule templates are returned.</para>
+        /// <h3><a href="#"></a>Background information</h3>
+        /// <para>For more information about how to define, execute, and integrate a managed rule, see <a href="https://help.aliyun.com/document_detail/128273.html">Definition and execution of rules</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to query all managed rules whose keyword is <c>CDN</c>. The response shows that 21 managed rules exist.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18392,13 +19000,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the proactive rules supported by Cloud Config.</para>
+        /// <para>Queries a list of evaluation rules supported by Cloud Config.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about the concepts, working principles, and integration procedure of proactive rules, see <a href="https://help.aliyun.com/document_detail/470802.html">Definitions and working principles of proactive rules</a>.
-        /// Proactive rules and rule templates originate from the same source rules. After you create resources, proactive rules continuously check your resources for compliance.</para>
+        /// <para>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.
+        /// After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -18454,13 +19062,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the proactive rules supported by Cloud Config.</para>
+        /// <para>Queries a list of evaluation rules supported by Cloud Config.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about the concepts, working principles, and integration procedure of proactive rules, see <a href="https://help.aliyun.com/document_detail/470802.html">Definitions and working principles of proactive rules</a>.
-        /// Proactive rules and rule templates originate from the same source rules. After you create resources, proactive rules continuously check your resources for compliance.</para>
+        /// <para>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.
+        /// After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -18516,13 +19124,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the proactive rules supported by Cloud Config.</para>
+        /// <para>Queries a list of evaluation rules supported by Cloud Config.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about the concepts, working principles, and integration procedure of proactive rules, see <a href="https://help.aliyun.com/document_detail/470802.html">Definitions and working principles of proactive rules</a>.
-        /// Proactive rules and rule templates originate from the same source rules. After you create resources, proactive rules continuously check your resources for compliance.</para>
+        /// <para>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.
+        /// After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18540,13 +19148,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the proactive rules supported by Cloud Config.</para>
+        /// <para>Queries a list of evaluation rules supported by Cloud Config.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For more information about the concepts, working principles, and integration procedure of proactive rules, see <a href="https://help.aliyun.com/document_detail/470802.html">Definitions and working principles of proactive rules</a>.
-        /// Proactive rules and rule templates originate from the same source rules. After you create resources, proactive rules continuously check your resources for compliance.</para>
+        /// <para>For more information about how to define, execute, and integrate an evaluation rule, see <a href="https://help.aliyun.com/document_detail/470802.html">Definition and execution of evaluation rules</a>.
+        /// After you create an evaluation rule, a managed rule that has the same settings as the evaluation rule is created. After you create a resource, the managed rule can be used to continuously check the compliance of the resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18564,7 +19172,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation obtains a list of recommended managed rules.</para>
+        /// <para>获取推荐的托管规则列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18638,7 +19246,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation obtains a list of recommended managed rules.</para>
+        /// <para>获取推荐的托管规则列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18712,7 +19320,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation obtains a list of recommended managed rules.</para>
+        /// <para>获取推荐的托管规则列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18730,7 +19338,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation obtains a list of recommended managed rules.</para>
+        /// <para>获取推荐的托管规则列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18748,8 +19356,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修正执行历史</para>
+        /// <para>Queries the remediation records of a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRemediationExecutionsRequest
@@ -18802,8 +19415,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修正执行历史</para>
+        /// <para>Queries the remediation records of a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRemediationExecutionsRequest
@@ -18856,8 +19474,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修正执行历史</para>
+        /// <para>Queries the remediation records of a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRemediationExecutionsRequest
@@ -18874,8 +19497,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修正执行历史</para>
+        /// <para>Queries the remediation records of a rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the remediation records of the rule cr-5392626622af0000\<em>\</em>\<em>\</em>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRemediationExecutionsRequest
@@ -18892,8 +19520,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修正模版列表</para>
+        /// <para>Queries a list of remediation templates for a managed rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this topic, the <c>oss-bucket-public-write-prohibited</c> managed rule is used as an example. The return result shows the details of the remediation template of the <c>OOS</c> type for the managed rule. OOS represents Operation Orchestration Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRemediationTemplatesRequest
@@ -18946,8 +19579,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修正模版列表</para>
+        /// <para>Queries a list of remediation templates for a managed rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this topic, the <c>oss-bucket-public-write-prohibited</c> managed rule is used as an example. The return result shows the details of the remediation template of the <c>OOS</c> type for the managed rule. OOS represents Operation Orchestration Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRemediationTemplatesRequest
@@ -19000,8 +19638,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修正模版列表</para>
+        /// <para>Queries a list of remediation templates for a managed rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this topic, the <c>oss-bucket-public-write-prohibited</c> managed rule is used as an example. The return result shows the details of the remediation template of the <c>OOS</c> type for the managed rule. OOS represents Operation Orchestration Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRemediationTemplatesRequest
@@ -19018,8 +19661,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修正模版列表</para>
+        /// <para>Queries a list of remediation templates for a managed rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this topic, the <c>oss-bucket-public-write-prohibited</c> managed rule is used as an example. The return result shows the details of the remediation template of the <c>OOS</c> type for the managed rule. OOS represents Operation Orchestration Service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRemediationTemplatesRequest
@@ -19036,8 +19684,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规则的修正</para>
+        /// <para>Queries the information about the execution of remediation templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the remediation templates for the rule whose ID is <c>cr-6b7c626622af00b4****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRemediationsRequest
@@ -19086,8 +19739,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规则的修正</para>
+        /// <para>Queries the information about the execution of remediation templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the remediation templates for the rule whose ID is <c>cr-6b7c626622af00b4****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRemediationsRequest
@@ -19136,8 +19794,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规则的修正</para>
+        /// <para>Queries the information about the execution of remediation templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the remediation templates for the rule whose ID is <c>cr-6b7c626622af00b4****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRemediationsRequest
@@ -19154,8 +19817,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询规则的修正</para>
+        /// <para>Queries the information about the execution of remediation templates.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to query the remediation templates for the rule whose ID is <c>cr-6b7c626622af00b4****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRemediationsRequest
@@ -19172,7 +19840,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of compliance report templates in batches.</para>
+        /// <para>批量获取合规报告模版详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19222,7 +19890,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of compliance report templates in batches.</para>
+        /// <para>批量获取合规报告模版详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19272,7 +19940,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of compliance report templates in batches.</para>
+        /// <para>批量获取合规报告模版详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19290,7 +19958,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of compliance report templates in batches.</para>
+        /// <para>批量获取合规报告模版详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19308,8 +19976,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the evaluation results for a resource based on a rule.</para>
+        /// <para>Queries the compliance evaluation results of resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this example, the compliance evaluation result of the <c>23642660635396****</c> resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as <c>NON_COMPLIANT</c> by using the <c>cr-7f7d626622af0041****</c> rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceEvaluationResultsRequest
@@ -19378,8 +20051,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the evaluation results for a resource based on a rule.</para>
+        /// <para>Queries the compliance evaluation results of resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this example, the compliance evaluation result of the <c>23642660635396****</c> resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as <c>NON_COMPLIANT</c> by using the <c>cr-7f7d626622af0041****</c> rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceEvaluationResultsRequest
@@ -19448,8 +20126,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the evaluation results for a resource based on a rule.</para>
+        /// <para>Queries the compliance evaluation results of resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this example, the compliance evaluation result of the <c>23642660635396****</c> resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as <c>NON_COMPLIANT</c> by using the <c>cr-7f7d626622af0041****</c> rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceEvaluationResultsRequest
@@ -19466,8 +20149,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the evaluation results for a resource based on a rule.</para>
+        /// <para>Queries the compliance evaluation results of resources.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In this example, the compliance evaluation result of the <c>23642660635396****</c> resource is queried and the resource is a RAM user. The returned result indicates that the resource is evaluated as <c>NON_COMPLIANT</c> by using the <c>cr-7f7d626622af0041****</c> rule.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceEvaluationResultsRequest
@@ -19484,8 +20172,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源关系列表</para>
+        /// <para>Queries a list of resources that associate with a specific resource.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the Alibaba Cloud services and resource types supported by Cloud Config, see <a href="https://help.aliyun.com/document_detail/127411.html">Alibaba Cloud services and resource types supported by Cloud Config</a>.
+        /// This topic provides an example on how to query the information about the disks that are attached to an Elastic Compute Service (ECS) instance named <c>i-j6cajg9yrfoh4sas****</c> that is created by the current Alibaba Cloud account in the China (Shanghai) region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceRelationsRequest
@@ -19554,8 +20248,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源关系列表</para>
+        /// <para>Queries a list of resources that associate with a specific resource.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the Alibaba Cloud services and resource types supported by Cloud Config, see <a href="https://help.aliyun.com/document_detail/127411.html">Alibaba Cloud services and resource types supported by Cloud Config</a>.
+        /// This topic provides an example on how to query the information about the disks that are attached to an Elastic Compute Service (ECS) instance named <c>i-j6cajg9yrfoh4sas****</c> that is created by the current Alibaba Cloud account in the China (Shanghai) region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceRelationsRequest
@@ -19624,8 +20324,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源关系列表</para>
+        /// <para>Queries a list of resources that associate with a specific resource.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the Alibaba Cloud services and resource types supported by Cloud Config, see <a href="https://help.aliyun.com/document_detail/127411.html">Alibaba Cloud services and resource types supported by Cloud Config</a>.
+        /// This topic provides an example on how to query the information about the disks that are attached to an Elastic Compute Service (ECS) instance named <c>i-j6cajg9yrfoh4sas****</c> that is created by the current Alibaba Cloud account in the China (Shanghai) region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceRelationsRequest
@@ -19642,8 +20348,14 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取资源关系列表</para>
+        /// <para>Queries a list of resources that associate with a specific resource.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For information about the Alibaba Cloud services and resource types supported by Cloud Config, see <a href="https://help.aliyun.com/document_detail/127411.html">Alibaba Cloud services and resource types supported by Cloud Config</a>.
+        /// This topic provides an example on how to query the information about the disks that are attached to an Elastic Compute Service (ECS) instance named <c>i-j6cajg9yrfoh4sas****</c> that is created by the current Alibaba Cloud account in the China (Shanghai) region.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourceRelationsRequest
@@ -19660,8 +20372,20 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源列表高级搜索接口</para>
+        /// <para>Obtains resources based on the fields in the resource properties by using a SELECT statement.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you write a <c>SELECT</c> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see <a href="https://github.com/aliyun/alibabacloud-config-resource-schema">Alibaba Cloud Config Resource Schema</a>.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the <c>ACS::ECS::Instance</c> resource type is named <c>ACS_ECS_Instance.properties.json</c>. Property files of different resource types are placed under the <c>config/properties/resource-types</c> path.</description></item>
+        /// <item><description>For more information about the examples and limits on SQL query statements, see <a href="https://help.aliyun.com/document_detail/398718.html">Examples of SQL query statements</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits on SQL query statements</a>.
+        /// This topic provides an example on how to obtain all resources whose tag key is <c>business</c> and whose tag value is <c>online</c> within the current account by using the advanced search feature.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourcesByAdvancedSearchRequest
@@ -19702,8 +20426,20 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源列表高级搜索接口</para>
+        /// <para>Obtains resources based on the fields in the resource properties by using a SELECT statement.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you write a <c>SELECT</c> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see <a href="https://github.com/aliyun/alibabacloud-config-resource-schema">Alibaba Cloud Config Resource Schema</a>.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the <c>ACS::ECS::Instance</c> resource type is named <c>ACS_ECS_Instance.properties.json</c>. Property files of different resource types are placed under the <c>config/properties/resource-types</c> path.</description></item>
+        /// <item><description>For more information about the examples and limits on SQL query statements, see <a href="https://help.aliyun.com/document_detail/398718.html">Examples of SQL query statements</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits on SQL query statements</a>.
+        /// This topic provides an example on how to obtain all resources whose tag key is <c>business</c> and whose tag value is <c>online</c> within the current account by using the advanced search feature.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourcesByAdvancedSearchRequest
@@ -19744,8 +20480,20 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源列表高级搜索接口</para>
+        /// <para>Obtains resources based on the fields in the resource properties by using a SELECT statement.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you write a <c>SELECT</c> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see <a href="https://github.com/aliyun/alibabacloud-config-resource-schema">Alibaba Cloud Config Resource Schema</a>.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the <c>ACS::ECS::Instance</c> resource type is named <c>ACS_ECS_Instance.properties.json</c>. Property files of different resource types are placed under the <c>config/properties/resource-types</c> path.</description></item>
+        /// <item><description>For more information about the examples and limits on SQL query statements, see <a href="https://help.aliyun.com/document_detail/398718.html">Examples of SQL query statements</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits on SQL query statements</a>.
+        /// This topic provides an example on how to obtain all resources whose tag key is <c>business</c> and whose tag value is <c>online</c> within the current account by using the advanced search feature.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourcesByAdvancedSearchRequest
@@ -19762,8 +20510,20 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>资源列表高级搜索接口</para>
+        /// <para>Obtains resources based on the fields in the resource properties by using a SELECT statement.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you write a <c>SELECT</c> statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see <a href="https://github.com/aliyun/alibabacloud-config-resource-schema">Alibaba Cloud Config Resource Schema</a>.</para>
+        /// <remarks>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the <c>ACS::ECS::Instance</c> resource type is named <c>ACS_ECS_Instance.properties.json</c>. Property files of different resource types are placed under the <c>config/properties/resource-types</c> path.</description></item>
+        /// <item><description>For more information about the examples and limits on SQL query statements, see <a href="https://help.aliyun.com/document_detail/398718.html">Examples of SQL query statements</a> and <a href="https://help.aliyun.com/document_detail/398750.html">Limits on SQL query statements</a>.
+        /// This topic provides an example on how to obtain all resources whose tag key is <c>business</c> and whose tag value is <c>online</c> within the current account by using the advanced search feature.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListResourcesByAdvancedSearchRequest
@@ -19928,7 +20688,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags attached to resources in Cloud Config.</para>
+        /// <para>Queries the tags that are added to a resource in Cloud Config.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19992,7 +20752,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags attached to resources in Cloud Config.</para>
+        /// <para>Queries the tags that are added to a resource in Cloud Config.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -20056,7 +20816,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags attached to resources in Cloud Config.</para>
+        /// <para>Queries the tags that are added to a resource in Cloud Config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20074,7 +20834,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags attached to resources in Cloud Config.</para>
+        /// <para>Queries the tags that are added to a resource in Cloud Config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20092,8 +20852,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义规则评估结果回调</para>
+        /// <para>Submits the evaluation results of a rule from Function Compute.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the definition, use scenarios, and execution of custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and execution of custom function rules</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutEvaluationsRequest
@@ -20142,8 +20907,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义规则评估结果回调</para>
+        /// <para>Submits the evaluation results of a rule from Function Compute.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the definition, use scenarios, and execution of custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and execution of custom function rules</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutEvaluationsRequest
@@ -20192,8 +20962,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义规则评估结果回调</para>
+        /// <para>Submits the evaluation results of a rule from Function Compute.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the definition, use scenarios, and execution of custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and execution of custom function rules</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutEvaluationsRequest
@@ -20210,8 +20985,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义规则评估结果回调</para>
+        /// <para>Submits the evaluation results of a rule from Function Compute.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>For more information about the definition, use scenarios, and execution of custom function rules, see <a href="https://help.aliyun.com/document_detail/127405.html">Definition and execution of custom function rules</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutEvaluationsRequest
@@ -20228,8 +21008,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消评估结果的忽略状态</para>
+        /// <para>Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule in an account group are resumed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see <a href="https://help.aliyun.com/document_detail/607054.html">IgnoreAggregateEvaluationResults</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to re-evaluate the non-compliant resource that is evaluated by the <c>cr-7e72626622af0051****</c> rule of the <c>120886317861****</c> member in the <c>ca-5b6c626622af008f****</c> group account. The ID of the region in which the resource resides is <c>cn-beijing</c>, the type of the resource is <c>ACS::SLB::LoadBalancer</c>, and the ID of the resource is <c>lb-hp3a3b4ztyfm2plgm****</c>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RevertAggregateEvaluationResultsRequest
@@ -20284,8 +21072,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消评估结果的忽略状态</para>
+        /// <para>Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule in an account group are resumed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see <a href="https://help.aliyun.com/document_detail/607054.html">IgnoreAggregateEvaluationResults</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to re-evaluate the non-compliant resource that is evaluated by the <c>cr-7e72626622af0051****</c> rule of the <c>120886317861****</c> member in the <c>ca-5b6c626622af008f****</c> group account. The ID of the region in which the resource resides is <c>cn-beijing</c>, the type of the resource is <c>ACS::SLB::LoadBalancer</c>, and the ID of the resource is <c>lb-hp3a3b4ztyfm2plgm****</c>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RevertAggregateEvaluationResultsRequest
@@ -20340,8 +21136,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消评估结果的忽略状态</para>
+        /// <para>Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule in an account group are resumed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see <a href="https://help.aliyun.com/document_detail/607054.html">IgnoreAggregateEvaluationResults</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to re-evaluate the non-compliant resource that is evaluated by the <c>cr-7e72626622af0051****</c> rule of the <c>120886317861****</c> member in the <c>ca-5b6c626622af008f****</c> group account. The ID of the region in which the resource resides is <c>cn-beijing</c>, the type of the resource is <c>ACS::SLB::LoadBalancer</c>, and the ID of the resource is <c>lb-hp3a3b4ztyfm2plgm****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RevertAggregateEvaluationResultsRequest
@@ -20358,8 +21162,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消评估结果的忽略状态</para>
+        /// <para>Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule in an account group are resumed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see <a href="https://help.aliyun.com/document_detail/607054.html">IgnoreAggregateEvaluationResults</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to re-evaluate the non-compliant resource that is evaluated by the <c>cr-7e72626622af0051****</c> rule of the <c>120886317861****</c> member in the <c>ca-5b6c626622af008f****</c> group account. The ID of the region in which the resource resides is <c>cn-beijing</c>, the type of the resource is <c>ACS::SLB::LoadBalancer</c>, and the ID of the resource is <c>lb-hp3a3b4ztyfm2plgm****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RevertAggregateEvaluationResultsRequest
@@ -20376,8 +21188,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复已忽略的某条规则对某些资源的评估结果后，继续显示该规则对资源的评估结果</para>
+        /// <para>Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule are resumed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see <a href="https://help.aliyun.com/document_detail/606990.html">IgnoreEvaluationResults</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to re-evaluate the <c>lb-hp3a3b4ztyfm2plgm****</c> non-compliant resource that is evaluated by the <c>cr-7e72626622af0051****</c> rule. The ID of the region in which the resource resides is<c>cn-beijing</c>, the type of the resource is <c>ACS::SLB::LoadBalancer</c>, and the ID of the resource is <c>lb-hp3a3b4ztyfm2plgm****</c>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RevertEvaluationResultsRequest
@@ -20428,8 +21248,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复已忽略的某条规则对某些资源的评估结果后，继续显示该规则对资源的评估结果</para>
+        /// <para>Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule are resumed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see <a href="https://help.aliyun.com/document_detail/606990.html">IgnoreEvaluationResults</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to re-evaluate the <c>lb-hp3a3b4ztyfm2plgm****</c> non-compliant resource that is evaluated by the <c>cr-7e72626622af0051****</c> rule. The ID of the region in which the resource resides is<c>cn-beijing</c>, the type of the resource is <c>ACS::SLB::LoadBalancer</c>, and the ID of the resource is <c>lb-hp3a3b4ztyfm2plgm****</c>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RevertEvaluationResultsRequest
@@ -20480,8 +21308,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复已忽略的某条规则对某些资源的评估结果后，继续显示该规则对资源的评估结果</para>
+        /// <para>Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule are resumed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see <a href="https://help.aliyun.com/document_detail/606990.html">IgnoreEvaluationResults</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to re-evaluate the <c>lb-hp3a3b4ztyfm2plgm****</c> non-compliant resource that is evaluated by the <c>cr-7e72626622af0051****</c> rule. The ID of the region in which the resource resides is<c>cn-beijing</c>, the type of the resource is <c>ACS::SLB::LoadBalancer</c>, and the ID of the resource is <c>lb-hp3a3b4ztyfm2plgm****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RevertEvaluationResultsRequest
@@ -20498,8 +21334,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复已忽略的某条规则对某些资源的评估结果后，继续显示该规则对资源的评估结果</para>
+        /// <para>Re-evaluates resources that are evaluated based on a rule after the evaluation results on some resources of an ignored rule are resumed.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><a href="#"></a>Prerequisites</h3>
+        /// <para>One or more non-compliant resources that are evaluated by a rule are ignored. For more information, see <a href="https://help.aliyun.com/document_detail/606990.html">IgnoreEvaluationResults</a>.</para>
+        /// <h3><a href="#"></a>Description</h3>
+        /// <para>This topic provides an example on how to re-evaluate the <c>lb-hp3a3b4ztyfm2plgm****</c> non-compliant resource that is evaluated by the <c>cr-7e72626622af0051****</c> rule. The ID of the region in which the resource resides is<c>cn-beijing</c>, the type of the resource is <c>ACS::SLB::LoadBalancer</c>, and the ID of the resource is <c>lb-hp3a3b4ztyfm2plgm****</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RevertEvaluationResultsRequest
@@ -20516,8 +21360,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新审计指定账号组内的某条规则或某个合规包中的所有规则</para>
+        /// <para>Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package in a specific account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the rule, call the ListAggregateConfigRuleEvaluationResults operation. For more information, see <a href="https://help.aliyun.com/document_detail/265979.html">ListAggregateConfigRuleEvaluationResults</a>.
+        /// The sample request in this topic shows how to use the <c>cr-c169626622af009f****</c> rule in the <c>ca-3a58626622af0005****</c> account group to evaluate resources.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAggregateConfigRuleEvaluationRequest
@@ -20570,8 +21422,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新审计指定账号组内的某条规则或某个合规包中的所有规则</para>
+        /// <para>Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package in a specific account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the rule, call the ListAggregateConfigRuleEvaluationResults operation. For more information, see <a href="https://help.aliyun.com/document_detail/265979.html">ListAggregateConfigRuleEvaluationResults</a>.
+        /// The sample request in this topic shows how to use the <c>cr-c169626622af009f****</c> rule in the <c>ca-3a58626622af0005****</c> account group to evaluate resources.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAggregateConfigRuleEvaluationRequest
@@ -20624,8 +21484,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新审计指定账号组内的某条规则或某个合规包中的所有规则</para>
+        /// <para>Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package in a specific account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the rule, call the ListAggregateConfigRuleEvaluationResults operation. For more information, see <a href="https://help.aliyun.com/document_detail/265979.html">ListAggregateConfigRuleEvaluationResults</a>.
+        /// The sample request in this topic shows how to use the <c>cr-c169626622af009f****</c> rule in the <c>ca-3a58626622af0005****</c> account group to evaluate resources.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAggregateConfigRuleEvaluationRequest
@@ -20642,8 +21510,16 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新审计指定账号组内的某条规则或某个合规包中的所有规则</para>
+        /// <para>Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package in a specific account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>After you call this operation, the compliance evaluation is performed only once. To query the compliance evaluation results returned by the rule, call the ListAggregateConfigRuleEvaluationResults operation. For more information, see <a href="https://help.aliyun.com/document_detail/265979.html">ListAggregateConfigRuleEvaluationResults</a>.
+        /// The sample request in this topic shows how to use the <c>cr-c169626622af009f****</c> rule in the <c>ca-3a58626622af0005****</c> account group to evaluate resources.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAggregateConfigRuleEvaluationRequest
@@ -20660,12 +21536,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually run remediation for a specified account group rule.</para>
+        /// <para>Performs a remediation operation by using a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to manually run remediation once for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>. The response indicates that remediation completed successfully.</para>
+        /// <para>This topic provides an example on how to manually perform a remediation operation by using the rule whose ID is <c>cr-6b7c626622af00b4****</c> in the account group whose ID is <c>ca-6b4a626622af0012****</c>. The return result shows that the manual execution is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20727,12 +21603,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually run remediation for a specified account group rule.</para>
+        /// <para>Performs a remediation operation by using a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to manually run remediation once for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>. The response indicates that remediation completed successfully.</para>
+        /// <para>This topic provides an example on how to manually perform a remediation operation by using the rule whose ID is <c>cr-6b7c626622af00b4****</c> in the account group whose ID is <c>ca-6b4a626622af0012****</c>. The return result shows that the manual execution is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20794,12 +21670,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually run remediation for a specified account group rule.</para>
+        /// <para>Performs a remediation operation by using a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to manually run remediation once for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>. The response indicates that remediation completed successfully.</para>
+        /// <para>This topic provides an example on how to manually perform a remediation operation by using the rule whose ID is <c>cr-6b7c626622af00b4****</c> in the account group whose ID is <c>ca-6b4a626622af0012****</c>. The return result shows that the manual execution is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20817,12 +21693,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually run remediation for a specified account group rule.</para>
+        /// <para>Performs a remediation operation by using a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic describes how to manually run remediation once for the rule <c>cr-6b7c626622af00b4****</c> in the account group <c>ca-6b4a626622af0012****</c>. The response indicates that remediation completed successfully.</para>
+        /// <para>This topic provides an example on how to manually perform a remediation operation by using the rule whose ID is <c>cr-6b7c626622af00b4****</c> in the account group whose ID is <c>ca-6b4a626622af0012****</c>. The return result shows that the manual execution is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20840,12 +21716,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-evaluates a specific rule or all rules in a compliance package.</para>
+        /// <para>Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to re-evaluate the rule cr-9920626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// <para>In this example, the cr-9920626622af0035\<em>\</em>\<em>\</em> rule is used to re-evaluate the compliance of resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20895,12 +21771,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-evaluates a specific rule or all rules in a compliance package.</para>
+        /// <para>Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to re-evaluate the rule cr-9920626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// <para>In this example, the cr-9920626622af0035\<em>\</em>\<em>\</em> rule is used to re-evaluate the compliance of resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20950,12 +21826,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-evaluates a specific rule or all rules in a compliance package.</para>
+        /// <para>Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to re-evaluate the rule cr-9920626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// <para>In this example, the cr-9920626622af0035\<em>\</em>\<em>\</em> rule is used to re-evaluate the compliance of resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20973,12 +21849,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-evaluates a specific rule or all rules in a compliance package.</para>
+        /// <para>Re-evaluates the compliance of resources based on a rule or based on all rules in a compliance package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to re-evaluate the rule cr-9920626622af0035\<em>\</em>\<em>\</em>.</para>
+        /// <para>In this example, the cr-9920626622af0035\<em>\</em>\<em>\</em> rule is used to re-evaluate the compliance of resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20996,7 +21872,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a re-evaluation of a single resource.</para>
+        /// <para>触发单资源重新评估</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21038,7 +21914,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a re-evaluation of a single resource.</para>
+        /// <para>触发单资源重新评估</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21080,7 +21956,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a re-evaluation of a single resource.</para>
+        /// <para>触发单资源重新评估</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21098,7 +21974,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a re-evaluation of a single resource.</para>
+        /// <para>触发单资源重新评估</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21116,8 +21992,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用配置审计服务</para>
+        /// <para>Enables Cloud Config to monitor the resources of your Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartConfigurationRecorderRequest
@@ -21149,8 +22030,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用配置审计服务</para>
+        /// <para>Enables Cloud Config to monitor the resources of your Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartConfigurationRecorderRequest
@@ -21182,8 +22068,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用配置审计服务</para>
+        /// <para>Enables Cloud Config to monitor the resources of your Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.</para>
+        /// </description>
         /// 
         /// <returns>
         /// StartConfigurationRecorderResponse
@@ -21196,8 +22087,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用配置审计服务</para>
+        /// <para>Enables Cloud Config to monitor the resources of your Alibaba Cloud account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to enable Cloud Config to monitor the resources of your Alibaba Cloud account.</para>
+        /// </description>
         /// 
         /// <returns>
         /// StartConfigurationRecorderResponse
@@ -21210,12 +22106,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually execute the specified rule remediation.</para>
+        /// <para>Performs a remediation operation based on a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of a manual remediation for rule <c>cr-8a973ac2e2be00a2****</c>. The returned result indicates a successful manual remediation.</para>
+        /// <para>This topic provides an example on how to perform a remediation operation by using the rule whose ID is <c>cr-8a973ac2e2be00a2****</c>. The returned result shows that the manual execution is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21269,12 +22165,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually execute the specified rule remediation.</para>
+        /// <para>Performs a remediation operation based on a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of a manual remediation for rule <c>cr-8a973ac2e2be00a2****</c>. The returned result indicates a successful manual remediation.</para>
+        /// <para>This topic provides an example on how to perform a remediation operation by using the rule whose ID is <c>cr-8a973ac2e2be00a2****</c>. The returned result shows that the manual execution is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21328,12 +22224,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually execute the specified rule remediation.</para>
+        /// <para>Performs a remediation operation based on a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of a manual remediation for rule <c>cr-8a973ac2e2be00a2****</c>. The returned result indicates a successful manual remediation.</para>
+        /// <para>This topic provides an example on how to perform a remediation operation by using the rule whose ID is <c>cr-8a973ac2e2be00a2****</c>. The returned result shows that the manual execution is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21351,12 +22247,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manually execute the specified rule remediation.</para>
+        /// <para>Performs a remediation operation based on a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of a manual remediation for rule <c>cr-8a973ac2e2be00a2****</c>. The returned result indicates a successful manual remediation.</para>
+        /// <para>This topic provides an example on how to perform a remediation operation by using the rule whose ID is <c>cr-8a973ac2e2be00a2****</c>. The returned result shows that the manual execution is successful.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21374,8 +22270,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用配置审计服务</para>
+        /// <para>Deactivates Cloud Config.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After you deactivate Cloud Config, the resource configurations, created rules, and compliance evaluation results that are stored in Cloud Config are automatically cleared and cannot be restored. Proceed with caution.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopConfigurationRecorderRequest
@@ -21407,8 +22310,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用配置审计服务</para>
+        /// <para>Deactivates Cloud Config.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After you deactivate Cloud Config, the resource configurations, created rules, and compliance evaluation results that are stored in Cloud Config are automatically cleared and cannot be restored. Proceed with caution.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopConfigurationRecorderRequest
@@ -21440,8 +22350,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用配置审计服务</para>
+        /// <para>Deactivates Cloud Config.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After you deactivate Cloud Config, the resource configurations, created rules, and compliance evaluation results that are stored in Cloud Config are automatically cleared and cannot be restored. Proceed with caution.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <returns>
         /// StopConfigurationRecorderResponse
@@ -21454,8 +22371,15 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停用配置审计服务</para>
+        /// <para>Deactivates Cloud Config.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para> After you deactivate Cloud Config, the resource configurations, created rules, and compliance evaluation results that are stored in Cloud Config are automatically cleared and cannot be restored. Proceed with caution.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <returns>
         /// StopConfigurationRecorderResponse
@@ -21468,7 +22392,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches tags to CloudConfig rules, account groups, and compliance packages.</para>
+        /// <para>Adds tags to a rule, an account group, and a compliance package of Cloud Config.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21528,7 +22452,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches tags to CloudConfig rules, account groups, and compliance packages.</para>
+        /// <para>Adds tags to a rule, an account group, and a compliance package of Cloud Config.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21588,7 +22512,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches tags to CloudConfig rules, account groups, and compliance packages.</para>
+        /// <para>Adds tags to a rule, an account group, and a compliance package of Cloud Config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21606,7 +22530,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches tags to CloudConfig rules, account groups, and compliance packages.</para>
+        /// <para>Adds tags to a rule, an account group, and a compliance package of Cloud Config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21624,7 +22548,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a real-time test notification.</para>
+        /// <para>实时测试通知</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21666,7 +22590,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a real-time test notification.</para>
+        /// <para>实时测试通知</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21708,7 +22632,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a real-time test notification.</para>
+        /// <para>实时测试通知</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21726,7 +22650,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a real-time test notification.</para>
+        /// <para>实时测试通知</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21744,7 +22668,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches tags from resources in Cloud Config.</para>
+        /// <para>Removes tags from a resource in Cloud Config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21802,7 +22726,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches tags from resources in Cloud Config.</para>
+        /// <para>Removes tags from a resource in Cloud Config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21860,7 +22784,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches tags from resources in Cloud Config.</para>
+        /// <para>Removes tags from a resource in Cloud Config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21878,7 +22802,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detaches tags from resources in Cloud Config.</para>
+        /// <para>Removes tags from a resource in Cloud Config.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21896,12 +22820,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a compliance pack in a specified account group.</para>
+        /// <para>Modifies the configurations of a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the value of a parameter for the <c>eip-bandwidth-limit</c> rule template to <c>20</c> in the <c>cp-fdc8626622af00f9****</c> compliance pack that belongs to the <c>ca-f632626622af0079****</c> account group.</para>
+        /// <para>This topic provides an example on how to change the value of the <c>eip-bandwidth-limit</c> parameter in the rule template of the compliance package <c>cp-fdc8626622af00f9****</c> in the account group <c>ca-f632626622af0079****</c> to <c>20</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22029,12 +22953,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a compliance pack in a specified account group.</para>
+        /// <para>Modifies the configurations of a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the value of a parameter for the <c>eip-bandwidth-limit</c> rule template to <c>20</c> in the <c>cp-fdc8626622af00f9****</c> compliance pack that belongs to the <c>ca-f632626622af0079****</c> account group.</para>
+        /// <para>This topic provides an example on how to change the value of the <c>eip-bandwidth-limit</c> parameter in the rule template of the compliance package <c>cp-fdc8626622af00f9****</c> in the account group <c>ca-f632626622af0079****</c> to <c>20</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22162,12 +23086,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a compliance pack in a specified account group.</para>
+        /// <para>Modifies the configurations of a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the value of a parameter for the <c>eip-bandwidth-limit</c> rule template to <c>20</c> in the <c>cp-fdc8626622af00f9****</c> compliance pack that belongs to the <c>ca-f632626622af0079****</c> account group.</para>
+        /// <para>This topic provides an example on how to change the value of the <c>eip-bandwidth-limit</c> parameter in the rule template of the compliance package <c>cp-fdc8626622af00f9****</c> in the account group <c>ca-f632626622af0079****</c> to <c>20</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22185,12 +23109,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a compliance pack in a specified account group.</para>
+        /// <para>Modifies the configurations of a compliance package in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the value of a parameter for the <c>eip-bandwidth-limit</c> rule template to <c>20</c> in the <c>cp-fdc8626622af00f9****</c> compliance pack that belongs to the <c>ca-f632626622af0079****</c> account group.</para>
+        /// <para>This topic provides an example on how to change the value of the <c>eip-bandwidth-limit</c> parameter in the rule template of the compliance package <c>cp-fdc8626622af00f9****</c> in the account group <c>ca-f632626622af0079****</c> to <c>20</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22208,8 +23132,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组修改投递渠道</para>
+        /// <para>Modifies a delivery channel in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to disable a delivery channel in an account group. The ID of the account group is <c>ca-a4e5626622af0079****</c>, and the ID of the delivery channel is <c>cdc-8e45ff4e06a3a8****</c>. The Status parameter is set to <c>0</c>. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops resource data delivery.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateAggregateConfigDeliveryChannelRequest
@@ -22302,8 +23231,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组修改投递渠道</para>
+        /// <para>Modifies a delivery channel in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to disable a delivery channel in an account group. The ID of the account group is <c>ca-a4e5626622af0079****</c>, and the ID of the delivery channel is <c>cdc-8e45ff4e06a3a8****</c>. The Status parameter is set to <c>0</c>. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops resource data delivery.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateAggregateConfigDeliveryChannelRequest
@@ -22396,8 +23330,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组修改投递渠道</para>
+        /// <para>Modifies a delivery channel in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to disable a delivery channel in an account group. The ID of the account group is <c>ca-a4e5626622af0079****</c>, and the ID of the delivery channel is <c>cdc-8e45ff4e06a3a8****</c>. The Status parameter is set to <c>0</c>. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops resource data delivery.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateAggregateConfigDeliveryChannelRequest
@@ -22414,8 +23353,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>账号组修改投递渠道</para>
+        /// <para>Modifies a delivery channel in an account group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to disable a delivery channel in an account group. The ID of the account group is <c>ca-a4e5626622af0079****</c>, and the ID of the delivery channel is <c>cdc-8e45ff4e06a3a8****</c>. The Status parameter is set to <c>0</c>. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops resource data delivery.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateAggregateConfigDeliveryChannelRequest
@@ -22432,12 +23376,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description, input parameters, and risk level of a rule in a specified account group.</para>
+        /// <para>Modifies the description, input parameters, and risk level of a rule in a specific account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the risk level of the rule <c>cr-4e3d626622af0080****</c> in the account group <c>ca-a4e5626622af0079****</c> to <c>3</c> (low risk).</para>
+        /// <para>This topic provides an example on how to change the risk level of the rule <c>cr-4e3d626622af0080****</c> in an account group <c>ca-a4e5626622af0079****</c> to <c>3</c>, which indicates low risk level.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22609,12 +23553,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description, input parameters, and risk level of a rule in a specified account group.</para>
+        /// <para>Modifies the description, input parameters, and risk level of a rule in a specific account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the risk level of the rule <c>cr-4e3d626622af0080****</c> in the account group <c>ca-a4e5626622af0079****</c> to <c>3</c> (low risk).</para>
+        /// <para>This topic provides an example on how to change the risk level of the rule <c>cr-4e3d626622af0080****</c> in an account group <c>ca-a4e5626622af0079****</c> to <c>3</c>, which indicates low risk level.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -22786,12 +23730,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description, input parameters, and risk level of a rule in a specified account group.</para>
+        /// <para>Modifies the description, input parameters, and risk level of a rule in a specific account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the risk level of the rule <c>cr-4e3d626622af0080****</c> in the account group <c>ca-a4e5626622af0079****</c> to <c>3</c> (low risk).</para>
+        /// <para>This topic provides an example on how to change the risk level of the rule <c>cr-4e3d626622af0080****</c> in an account group <c>ca-a4e5626622af0079****</c> to <c>3</c>, which indicates low risk level.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22809,12 +23753,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description, input parameters, and risk level of a rule in a specified account group.</para>
+        /// <para>Modifies the description, input parameters, and risk level of a rule in a specific account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the risk level of the rule <c>cr-4e3d626622af0080****</c> in the account group <c>ca-a4e5626622af0079****</c> to <c>3</c> (low risk).</para>
+        /// <para>This topic provides an example on how to change the risk level of the rule <c>cr-4e3d626622af0080****</c> in an account group <c>ca-a4e5626622af0079****</c> to <c>3</c>, which indicates low risk level.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22832,12 +23776,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified rule remediation.</para>
+        /// <para>Modifies a remediation template for a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the execution mode of the remediation <c>crr-909ba2d4716700eb****</c> to <c>AUTO_EXECUTION</c> (automatic execution) for a rule in the account group <c>ca-6b4a626622af0012****</c>.</para>
+        /// <para>This topic describes how to change the execution mode of the <c>crr-909ba2d4716700eb****</c> remediation setting for a rule in the <c>ca-6b4a626622af0012****</c> account group to <c>AUTO_EXECUTION</c>, which specifies automatic remediation. This topic also provides a sample request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22903,12 +23847,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified rule remediation.</para>
+        /// <para>Modifies a remediation template for a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the execution mode of the remediation <c>crr-909ba2d4716700eb****</c> to <c>AUTO_EXECUTION</c> (automatic execution) for a rule in the account group <c>ca-6b4a626622af0012****</c>.</para>
+        /// <para>This topic describes how to change the execution mode of the <c>crr-909ba2d4716700eb****</c> remediation setting for a rule in the <c>ca-6b4a626622af0012****</c> account group to <c>AUTO_EXECUTION</c>, which specifies automatic remediation. This topic also provides a sample request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22974,12 +23918,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified rule remediation.</para>
+        /// <para>Modifies a remediation template for a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the execution mode of the remediation <c>crr-909ba2d4716700eb****</c> to <c>AUTO_EXECUTION</c> (automatic execution) for a rule in the account group <c>ca-6b4a626622af0012****</c>.</para>
+        /// <para>This topic describes how to change the execution mode of the <c>crr-909ba2d4716700eb****</c> remediation setting for a rule in the <c>ca-6b4a626622af0012****</c> account group to <c>AUTO_EXECUTION</c>, which specifies automatic remediation. This topic also provides a sample request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22997,12 +23941,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a specified rule remediation.</para>
+        /// <para>Modifies a remediation template for a rule in an account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the execution mode of the remediation <c>crr-909ba2d4716700eb****</c> to <c>AUTO_EXECUTION</c> (automatic execution) for a rule in the account group <c>ca-6b4a626622af0012****</c>.</para>
+        /// <para>This topic describes how to change the execution mode of the <c>crr-909ba2d4716700eb****</c> remediation setting for a rule in the <c>ca-6b4a626622af0012****</c> account group to <c>AUTO_EXECUTION</c>, which specifies automatic remediation. This topic also provides a sample request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23020,12 +23964,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The management account or a delegated administrator account of a resource directory can modify the name and description of an account group, and add or remove members.</para>
+        /// <para>The management account or delegated administrator account of a resource directory can be used to modify the name and description of an account group. The management account or delegated administrator account can also be used to add or remove members from the account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to add a member to the account group <c>ca-dacf86d8314e00eb****</c>. The member has an ID of <c>173808452267****</c>, a name of <c>Tony</c>, and an account type of <c>ResourceDirectory</c>.</para>
+        /// <para>This topic provides an example on how to add a member to the account group <c>ca-dacf86d8314e00eb****</c>. The member ID is <c>173808452267****</c>, the member name is <c>Tony</c>, and the member belongs to the resource directory <c>ResourceDirectory</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23103,12 +24047,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The management account or a delegated administrator account of a resource directory can modify the name and description of an account group, and add or remove members.</para>
+        /// <para>The management account or delegated administrator account of a resource directory can be used to modify the name and description of an account group. The management account or delegated administrator account can also be used to add or remove members from the account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to add a member to the account group <c>ca-dacf86d8314e00eb****</c>. The member has an ID of <c>173808452267****</c>, a name of <c>Tony</c>, and an account type of <c>ResourceDirectory</c>.</para>
+        /// <para>This topic provides an example on how to add a member to the account group <c>ca-dacf86d8314e00eb****</c>. The member ID is <c>173808452267****</c>, the member name is <c>Tony</c>, and the member belongs to the resource directory <c>ResourceDirectory</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23186,12 +24130,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The management account or a delegated administrator account of a resource directory can modify the name and description of an account group, and add or remove members.</para>
+        /// <para>The management account or delegated administrator account of a resource directory can be used to modify the name and description of an account group. The management account or delegated administrator account can also be used to add or remove members from the account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to add a member to the account group <c>ca-dacf86d8314e00eb****</c>. The member has an ID of <c>173808452267****</c>, a name of <c>Tony</c>, and an account type of <c>ResourceDirectory</c>.</para>
+        /// <para>This topic provides an example on how to add a member to the account group <c>ca-dacf86d8314e00eb****</c>. The member ID is <c>173808452267****</c>, the member name is <c>Tony</c>, and the member belongs to the resource directory <c>ResourceDirectory</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23209,12 +24153,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The management account or a delegated administrator account of a resource directory can modify the name and description of an account group, and add or remove members.</para>
+        /// <para>The management account or delegated administrator account of a resource directory can be used to modify the name and description of an account group. The management account or delegated administrator account can also be used to add or remove members from the account group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to add a member to the account group <c>ca-dacf86d8314e00eb****</c>. The member has an ID of <c>173808452267****</c>, a name of <c>Tony</c>, and an account type of <c>ResourceDirectory</c>.</para>
+        /// <para>This topic provides an example on how to add a member to the account group <c>ca-dacf86d8314e00eb****</c>. The member ID is <c>173808452267****</c>, the member name is <c>Tony</c>, and the member belongs to the resource directory <c>ResourceDirectory</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23232,12 +24176,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified compliance pack in the current account.</para>
+        /// <para>Modifies the configurations of a specific compliance package in the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the parameter value for the <c>eip-bandwidth-limit</c> rule to <c>20</c> in the compliance pack <c>cp-a8a8626622af0082****</c>.</para>
+        /// <para>This topic provides an example on how to change the value of the <c>eip-bandwidth-limit</c> parameter of a rule in the compliance package <c>cp-a8a8626622af0082****</c> to <c>20</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23361,12 +24305,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified compliance pack in the current account.</para>
+        /// <para>Modifies the configurations of a specific compliance package in the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the parameter value for the <c>eip-bandwidth-limit</c> rule to <c>20</c> in the compliance pack <c>cp-a8a8626622af0082****</c>.</para>
+        /// <para>This topic provides an example on how to change the value of the <c>eip-bandwidth-limit</c> parameter of a rule in the compliance package <c>cp-a8a8626622af0082****</c> to <c>20</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23490,12 +24434,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified compliance pack in the current account.</para>
+        /// <para>Modifies the configurations of a specific compliance package in the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the parameter value for the <c>eip-bandwidth-limit</c> rule to <c>20</c> in the compliance pack <c>cp-a8a8626622af0082****</c>.</para>
+        /// <para>This topic provides an example on how to change the value of the <c>eip-bandwidth-limit</c> parameter of a rule in the compliance package <c>cp-a8a8626622af0082****</c> to <c>20</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23513,12 +24457,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a specified compliance pack in the current account.</para>
+        /// <para>Modifies the configurations of a specific compliance package in the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the parameter value for the <c>eip-bandwidth-limit</c> rule to <c>20</c> in the compliance pack <c>cp-a8a8626622af0082****</c>.</para>
+        /// <para>This topic provides an example on how to change the value of the <c>eip-bandwidth-limit</c> parameter of a rule in the compliance package <c>cp-a8a8626622af0082****</c> to <c>20</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23536,12 +24480,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation modifies a delivery channel for the current account.</para>
+        /// <para>Modifies a delivery channel by using the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the status of the delivery channel <c>cdc-8e45ff4e06a3a8****</c> to <c>0</c> (disabled). After you disable the delivery channel, Cloud Config retains the most recent delivery configuration and stops delivering resource data.</para>
+        /// <para>In this example, a delivery channel is disabled. The ID of the delivery channel is `cdc-8e45ff4e06a3a8****```. The Status parameter is set to 0. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops the delivery of resource data.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23631,12 +24575,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation modifies a delivery channel for the current account.</para>
+        /// <para>Modifies a delivery channel by using the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the status of the delivery channel <c>cdc-8e45ff4e06a3a8****</c> to <c>0</c> (disabled). After you disable the delivery channel, Cloud Config retains the most recent delivery configuration and stops delivering resource data.</para>
+        /// <para>In this example, a delivery channel is disabled. The ID of the delivery channel is `cdc-8e45ff4e06a3a8****```. The Status parameter is set to 0. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops the delivery of resource data.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23726,12 +24670,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation modifies a delivery channel for the current account.</para>
+        /// <para>Modifies a delivery channel by using the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the status of the delivery channel <c>cdc-8e45ff4e06a3a8****</c> to <c>0</c> (disabled). After you disable the delivery channel, Cloud Config retains the most recent delivery configuration and stops delivering resource data.</para>
+        /// <para>In this example, a delivery channel is disabled. The ID of the delivery channel is `cdc-8e45ff4e06a3a8****```. The Status parameter is set to 0. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops the delivery of resource data.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23749,12 +24693,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation modifies a delivery channel for the current account.</para>
+        /// <para>Modifies a delivery channel by using the current account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the status of the delivery channel <c>cdc-8e45ff4e06a3a8****</c> to <c>0</c> (disabled). After you disable the delivery channel, Cloud Config retains the most recent delivery configuration and stops delivering resource data.</para>
+        /// <para>In this example, a delivery channel is disabled. The ID of the delivery channel is `cdc-8e45ff4e06a3a8****```. The Status parameter is set to 0. After the delivery channel is disabled, Cloud Config retains the most recent delivery configuration and stops the delivery of resource data.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23777,7 +24721,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic shows how to change the risk level of rule <c>cr-a260626622af0005****</c> to <c>3</c>, which indicates low risk.</para>
+        /// <para>This topic provides an example on how to change the risk level of the rule <c>cr-a260626622af0005****</c> to <c>3</c>, which indicates low risk level.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -23938,7 +24882,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic shows how to change the risk level of rule <c>cr-a260626622af0005****</c> to <c>3</c>, which indicates low risk.</para>
+        /// <para>This topic provides an example on how to change the risk level of the rule <c>cr-a260626622af0005****</c> to <c>3</c>, which indicates low risk level.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -24099,7 +25043,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic shows how to change the risk level of rule <c>cr-a260626622af0005****</c> to <c>3</c>, which indicates low risk.</para>
+        /// <para>This topic provides an example on how to change the risk level of the rule <c>cr-a260626622af0005****</c> to <c>3</c>, which indicates low risk level.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24122,7 +25066,7 @@ namespace AlibabaCloud.SDK.Config20200907
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic shows how to change the risk level of rule <c>cr-a260626622af0005****</c> to <c>3</c>, which indicates low risk.</para>
+        /// <para>This topic provides an example on how to change the risk level of the rule <c>cr-a260626622af0005****</c> to <c>3</c>, which indicates low risk level.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24140,8 +25084,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改配置审计监控资源范围</para>
+        /// <para>Modifies the resource monitoring scope of the current account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateConfigurationRecorderRequest
@@ -24182,8 +25131,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改配置审计监控资源范围</para>
+        /// <para>Modifies the resource monitoring scope of the current account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateConfigurationRecorderRequest
@@ -24224,8 +25178,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改配置审计监控资源范围</para>
+        /// <para>Modifies the resource monitoring scope of the current account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateConfigurationRecorderRequest
@@ -24242,8 +25201,13 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改配置审计监控资源范围</para>
+        /// <para>Modifies the resource monitoring scope of the current account.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example on how to change the resource monitoring scope of the current account to ACS::ECS::Instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateConfigurationRecorderRequest
@@ -24260,7 +25224,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云产品集成用户状态</para>
+        /// <para>Enables or disables the integration of a cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24314,7 +25278,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云产品集成用户状态</para>
+        /// <para>Enables or disables the integration of a cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24368,7 +25332,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云产品集成用户状态</para>
+        /// <para>Enables or disables the integration of a cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24386,7 +25350,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改云产品集成用户状态</para>
+        /// <para>Enables or disables the integration of a cloud service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24404,12 +25368,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specified remediation setting.</para>
+        /// <para>Updates a remediation template for a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the execution mode for the remediation setting <c>crr-909ba2d4716700eb****</c> to <c>AUTO_EXECUTION</c> (automatic execution).</para>
+        /// <para>This topic describes how to change the execution mode of the <c>crr-909ba2d4716700eb****</c> remediation setting to <c>AUTO_EXECUTION</c>, which specifies automatic remediation. This topic also provides a sample request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24475,12 +25439,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specified remediation setting.</para>
+        /// <para>Updates a remediation template for a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the execution mode for the remediation setting <c>crr-909ba2d4716700eb****</c> to <c>AUTO_EXECUTION</c> (automatic execution).</para>
+        /// <para>This topic describes how to change the execution mode of the <c>crr-909ba2d4716700eb****</c> remediation setting to <c>AUTO_EXECUTION</c>, which specifies automatic remediation. This topic also provides a sample request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24546,12 +25510,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specified remediation setting.</para>
+        /// <para>Updates a remediation template for a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the execution mode for the remediation setting <c>crr-909ba2d4716700eb****</c> to <c>AUTO_EXECUTION</c> (automatic execution).</para>
+        /// <para>This topic describes how to change the execution mode of the <c>crr-909ba2d4716700eb****</c> remediation setting to <c>AUTO_EXECUTION</c>, which specifies automatic remediation. This topic also provides a sample request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24569,12 +25533,12 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the specified remediation setting.</para>
+        /// <para>Updates a remediation template for a rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to change the execution mode for the remediation setting <c>crr-909ba2d4716700eb****</c> to <c>AUTO_EXECUTION</c> (automatic execution).</para>
+        /// <para>This topic describes how to change the execution mode of the <c>crr-909ba2d4716700eb****</c> remediation setting to <c>AUTO_EXECUTION</c>, which specifies automatic remediation. This topic also provides a sample request.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24592,7 +25556,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a compliance report template.</para>
+        /// <para>更新合规报告模版</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24668,7 +25632,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a compliance report template.</para>
+        /// <para>更新合规报告模版</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24744,7 +25708,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a compliance report template.</para>
+        /// <para>更新合规报告模版</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24762,7 +25726,7 @@ namespace AlibabaCloud.SDK.Config20200907
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a compliance report template.</para>
+        /// <para>更新合规报告模版</para>
         /// </summary>
         /// 
         /// <param name="request">

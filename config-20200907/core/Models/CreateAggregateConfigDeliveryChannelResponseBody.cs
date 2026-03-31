@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string DeliveryChannelId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A7A0FFF8-0B44-40C6-8BBF-3A185EFDERTHG</para>

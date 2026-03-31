@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GenerateResourceInventoryRequest : TeaModel {
         /// <summary>
-        /// <para>The regions where the resources are located. Separate multiple regions with commas (,).</para>
+        /// <para>The region IDs of the resources. Separate multiple region IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Regions { get; set; }
 
         /// <summary>
-        /// <para>The resource status. Valid values:</para>
+        /// <para>Indicates whether the resource is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1 (default): The resource is retained.</para>
-        /// </description></item>
-        /// <item><description><para>0: The resource is deleted.</para>
-        /// </description></item>
+        /// <item><description>1 (default): The resource is retained.</description></item>
+        /// <item><description>0: The resource is deleted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

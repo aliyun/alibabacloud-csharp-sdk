@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateAggregateCompliancePackResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the compliance pack.</para>
+        /// <para>The compliance package ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cp-fc56626622af00f9****</para>

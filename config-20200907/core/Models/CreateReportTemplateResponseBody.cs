@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateReportTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>Report template ID</para>
-        /// 
         /// <b>Example:</b>
         /// <para>crt-xxx</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ReportTemplateId { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>A7A0FFF8-0B44-40C6-8BBF-3A185EFDFXXX</para>
         /// </summary>

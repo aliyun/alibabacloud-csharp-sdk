@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DeleteRemediationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the delete operation.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("RemediationDeleteResults")]
         [Validation(Required=false)]
         public List<DeleteRemediationsResponseBodyRemediationDeleteResults> RemediationDeleteResults { get; set; }
         public class DeleteRemediationsResponseBodyRemediationDeleteResults : TeaModel {
             /// <summary>
-            /// <para>The error code.</para>
+            /// <para>The error code returned.</para>
             /// <list type="bullet">
-            /// <item><description><para>This parameter is empty if the remediation setting is successfully deleted.</para>
-            /// </description></item>
-            /// <item><description><para>This parameter returns an error code if the operation fails. For more information about error codes, see &lt;props=&quot;intl&quot;&gt;<a href="https://error-center.alibabacloud.com/status/product/Config">Error Center</a>.</para>
-            /// </description></item>
+            /// <item><description>If the remediation template is deleted, no error code is returned.</description></item>
+            /// <item><description>If the remediation template fails to be deleted, an error code is returned. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +31,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The remediation setting ID.</para>
+            /// <para>The ID of the remediation template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crr-909ba2d4716700eb****</para>
@@ -43,12 +41,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string RemediationId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the operation was successful. Valid values:</para>
+            /// <para>Indicates whether the request was successful. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: The operation was successful.</para>
-            /// </description></item>
-            /// <item><description><para>false: The operation failed.</para>
-            /// </description></item>
+            /// <item><description>true: The request was successful.</description></item>
+            /// <item><description>false: The request failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

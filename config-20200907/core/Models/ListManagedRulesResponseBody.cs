@@ -10,41 +10,41 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListManagedRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The rule templates.</para>
+        /// <para>The managed rules.</para>
         /// </summary>
         [NameInMap("ManagedRules")]
         [Validation(Required=false)]
         public ListManagedRulesResponseBodyManagedRules ManagedRules { get; set; }
         public class ListManagedRulesResponseBodyManagedRules : TeaModel {
             /// <summary>
-            /// <para>The details of the rule templates.</para>
+            /// <para>The details of the managed rule.</para>
             /// </summary>
             [NameInMap("ManagedRuleList")]
             [Validation(Required=false)]
             public List<ListManagedRulesResponseBodyManagedRulesManagedRuleList> ManagedRuleList { get; set; }
             public class ListManagedRulesResponseBodyManagedRulesManagedRuleList : TeaModel {
                 /// <summary>
-                /// <para>The name of the rule template.</para>
+                /// <para>The name of the managed rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>CDN域名开启HTTPS加密</para>
+                /// <para>test-rule-name</para>
                 /// </summary>
                 [NameInMap("ConfigRuleName")]
                 [Validation(Required=false)]
                 public string ConfigRuleName { get; set; }
 
                 /// <summary>
-                /// <para>The description of the rule template.</para>
+                /// <para>The description of the managed rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>CDN域名开启HTTPS协议加密，视为“合规”。</para>
+                /// <para>The description of the test rule.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the document that provides remediation guidance.</para>
+                /// <para>The URL of the topic that describes how the managed rule remediates the incompliant configurations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.aliyundoc.com">https://example.aliyundoc.com</a></para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string HelpUrls { get; set; }
 
                 /// <summary>
-                /// <para>The unique identifier of the rule template.</para>
+                /// <para>The unique identifier of the managed rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cdn-domain-https-enabled</para>
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Identifier { get; set; }
 
                 /// <summary>
-                /// <para>The list of labels of the rule template.</para>
+                /// <para>The classification description of the managed rule.</para>
                 /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
                 public List<string> Labels { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the supported remediation template.</para>
+                /// <para>The ID of the remediation template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACS-CDN-SetDomainServerCertificate</para>
@@ -81,24 +81,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string RemediationTemplateIdentifier { get; set; }
 
                 /// <summary>
-                /// <para>The name of the supported remediation template.</para>
+                /// <para>The name of the remediation template.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>开启CDN域名HTTPS监听</para>
+                /// <para>Configure encryption rules for OSS buckets</para>
                 /// </summary>
                 [NameInMap("RemediationTemplateName")]
                 [Validation(Required=false)]
                 public string RemediationTemplateName { get; set; }
 
                 /// <summary>
-                /// <para>The risk level of the rule. Valid values:</para>
+                /// <para>The risk level of the resources that do not comply with the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>1: high</para>
-                /// </description></item>
-                /// <item><description><para>2: medium</para>
-                /// </description></item>
-                /// <item><description><para>3: low</para>
-                /// </description></item>
+                /// <item><description>1: high</description></item>
+                /// <item><description>2: medium</description></item>
+                /// <item><description>3: low</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -109,14 +106,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public int? RiskLevel { get; set; }
 
                 /// <summary>
-                /// <para>The effective scope of the rule template.</para>
+                /// <para>The effective scope of the managed rule.</para>
                 /// </summary>
                 [NameInMap("Scope")]
                 [Validation(Required=false)]
                 public ListManagedRulesResponseBodyManagedRulesManagedRuleListScope Scope { get; set; }
                 public class ListManagedRulesResponseBodyManagedRulesManagedRuleListScope : TeaModel {
                     /// <summary>
-                    /// <para>The types of resources that are evaluated based on the rule template.</para>
+                    /// <para>The types of resources to which the managed rule applies.</para>
                     /// </summary>
                     [NameInMap("ComplianceResourceTypes")]
                     [Validation(Required=false)]
@@ -125,12 +122,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the rule supports dry runs. Valid values:</para>
+                /// <para>Indicates whether precheck is supported. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>true: The rule supports dry runs.</para>
-                /// </description></item>
-                /// <item><description><para>false: The rule does not support dry runs.</para>
-                /// </description></item>
+                /// <item><description>true</description></item>
+                /// <item><description>false</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -143,8 +138,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
-            /// <para>The value must be greater than or equal to 1.</para>
+            /// <para>The page number.</para>
+            /// <para>Page start from page 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -164,10 +159,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of rule templates.</para>
+            /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>21</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -176,7 +171,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B3E605AB-63D5-1EE0-BFA6-0BAC247B0461</para>

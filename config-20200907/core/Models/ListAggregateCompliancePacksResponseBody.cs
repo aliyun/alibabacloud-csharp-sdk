@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateCompliancePacksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The results of the query.</para>
+        /// <para>The compliance packages returned.</para>
         /// </summary>
         [NameInMap("CompliancePacksResult")]
         [Validation(Required=false)]
         public ListAggregateCompliancePacksResponseBodyCompliancePacksResult CompliancePacksResult { get; set; }
         public class ListAggregateCompliancePacksResponseBodyCompliancePacksResult : TeaModel {
             /// <summary>
-            /// <para>The compliance packs.</para>
+            /// <para>The compliance packages.</para>
             /// </summary>
             [NameInMap("CompliancePacks")]
             [Validation(Required=false)]
             public List<ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks> CompliancePacks { get; set; }
             public class ListAggregateCompliancePacksResponseBodyCompliancePacksResultCompliancePacks : TeaModel {
                 /// <summary>
-                /// <para>The ID of the management account to which the compliance pack belongs.</para>
+                /// <para>The ID of the management account to which the compliance package belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100931896542****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string AggregatorId { get; set; }
 
                 /// <summary>
-                /// <para>The compliance pack ID.</para>
+                /// <para>The ID of the compliance package.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cp-fdc8626622af00f9****</para>
@@ -54,27 +54,27 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string CompliancePackId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the compliance pack.</para>
+                /// <para>The name of the compliance package.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>BestPracticesForResourceStability</para>
+                /// <para>example-name</para>
                 /// </summary>
                 [NameInMap("CompliancePackName")]
                 [Validation(Required=false)]
                 public string CompliancePackName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the compliance pack template.</para>
+                /// <para>The ID of the compliance package template.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ct-484cff4e06a30062****</para>
+                /// <para>ct-5f26ff4e06a300c4****</para>
                 /// </summary>
                 [NameInMap("CompliancePackTemplateId")]
                 [Validation(Required=false)]
                 public string CompliancePackTemplateId { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the compliance pack was created. Unit: milliseconds.</para>
+                /// <para>The timestamp when the compliance package was created. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1624243657000</para>
@@ -84,24 +84,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The description of the compliance pack.</para>
+                /// <para>The description of the compliance package.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Check the stability of Alibaba Cloud resources based on the high-availability infrastructure, capacity protection, change management, monitoring management, backup management, and fault isolation. This helps you identify issues at the earliest opportunity and improve stability and the efficiency of O&amp;M.</para>
+                /// <para>example-description</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The risk level of the compliance pack. Valid values:</para>
+                /// <para>The risk level of the resources that are not compliant with the managed rules in the compliance package. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>1: high</para>
-                /// </description></item>
-                /// <item><description><para>2: medium</para>
-                /// </description></item>
-                /// <item><description><para>3: low</para>
-                /// </description></item>
+                /// <item><description>1: high risk level.</description></item>
+                /// <item><description>2: medium risk level.</description></item>
+                /// <item><description>3: low risk level.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -112,12 +109,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public int? RiskLevel { get; set; }
 
                 /// <summary>
-                /// <para>The status of the compliance pack. Valid values:</para>
+                /// <para>The status of the compliance package. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>ACTIVE: The compliance pack is active.</para>
-                /// </description></item>
-                /// <item><description><para>CREATING: The compliance pack is being created.</para>
-                /// </description></item>
+                /// <item><description>ACTIVE: The compliance package is available for use.</description></item>
+                /// <item><description>CREATING: The compliance package is being created.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -128,7 +123,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The tag of the resource.</para>
+                /// <para>The tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
@@ -159,7 +154,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the returned page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -179,7 +174,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of compliance packs.</para>
+            /// <para>The total number of compliance packages returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -191,7 +186,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B5806142-3090-4F86-A84E-12B3FE52C1C4</para>

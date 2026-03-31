@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateResourceComplianceByPackResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6EC7AED1-172F-42AE-9C12-295BC2ADB751</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The compliance results of the resources in the compliance package.</para>
+        /// <para>The compliance evaluation results returned.</para>
         /// </summary>
         [NameInMap("ResourceComplianceResult")]
         [Validation(Required=false)]
@@ -36,32 +36,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string CompliancePackId { get; set; }
 
-            /// <summary>
-            /// <para>The total number of compliant resources.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("CompliantCount")]
             [Validation(Required=false)]
             public int? CompliantCount { get; set; }
 
-            /// <summary>
-            /// <para>The total number of ignored resources.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("IgnoredCount")]
             [Validation(Required=false)]
             public int? IgnoredCount { get; set; }
 
-            /// <summary>
-            /// <para>The total number of resources for which the evaluation data is insufficient.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("InsufficientDataCount")]
             [Validation(Required=false)]
             public int? InsufficientDataCount { get; set; }
@@ -76,18 +58,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public int? NonCompliantCount { get; set; }
 
-            /// <summary>
-            /// <para>The total number of resources that are not applicable.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("NotApplicableCount")]
             [Validation(Required=false)]
             public int? NotApplicableCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of resources evaluated by the compliance package.</para>
+            /// <para>The total number of resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

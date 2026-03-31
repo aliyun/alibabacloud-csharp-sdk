@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListConfigRulesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the compliance package.</para>
+        /// <para>The compliance package ID.</para>
+        /// <para>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/606968.html">ListCompliancePacks</a>.</para>
+        /// <remarks>
+        /// <para> You must configure either the <c>CompliancePackId</c> or <c>ConfigRuleId</c> parameter.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cp-fe416457e0d90022****</para>
@@ -22,14 +26,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The compliance evaluation result of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>COMPLIANT: Compliant.</para>
-        /// </description></item>
-        /// <item><description><para>NON_COMPLIANT: Non-compliant.</para>
-        /// </description></item>
-        /// <item><description><para>NOT_APPLICABLE: Not applicable.</para>
-        /// </description></item>
-        /// <item><description><para>INSUFFICIENT_DATA: Insufficient data.</para>
-        /// </description></item>
+        /// <item><description>COMPLIANT: The resources are evaluated as compliant.</description></item>
+        /// <item><description>NON_COMPLIANT: The resources are evaluated as non-compliant.</description></item>
+        /// <item><description>NOT_APPLICABLE: The rule does not apply to the resources.</description></item>
+        /// <item><description>INSUFFICIENT_DATA: No resource data is available.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,23 +43,19 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <para>The name of the rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The name of the rule.</para>
+        /// <para>test-rule-name</para>
         /// </summary>
         [NameInMap("ConfigRuleName")]
         [Validation(Required=false)]
         public string ConfigRuleName { get; set; }
 
         /// <summary>
-        /// <para>The state of the rule. Valid values:</para>
+        /// <para>The status of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ACTIVE: The rule is enabled.</para>
-        /// </description></item>
-        /// <item><description><para>DELETING: The rule is being deleted.</para>
-        /// </description></item>
-        /// <item><description><para>EVALUATING: The rule is being evaluated.</para>
-        /// </description></item>
-        /// <item><description><para>INACTIVE: The rule is disabled.</para>
-        /// </description></item>
+        /// <item><description>ACTIVE: The rule is enabled.</description></item>
+        /// <item><description>DELETING: The rule is being deleted.</description></item>
+        /// <item><description>EVALUATING: The rule is being used to evaluate resource configurations.</description></item>
+        /// <item><description>INACTIVE: The rule is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,8 +66,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleState { get; set; }
 
         /// <summary>
-        /// <para>The keyword for the fuzzy query.</para>
-        /// <para>Supports fuzzy queries by rule ID, rule name, rule description, or rule template identifier.</para>
+        /// <para>The query keyword.</para>
+        /// <para>You can perform a fuzzy search by rule ID, rule name, rule description, or managed rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -82,7 +78,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The page number.</para>
-        /// <para>The default value is 1.</para>
+        /// <para>Page numbers start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -92,8 +88,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries per page.</para>
+        /// <para>Valid values: 1 to 100. A minimum of 1 entry can be returned per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -103,7 +99,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of resource evaluated by the rule.</para>
+        /// <para>The type of the resources to be evaluated based on the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACS::ECS::Instance</para>
@@ -113,14 +109,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the rule. Valid values:</para>
+        /// <para>The risk level of the resources that are not compliant with the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: High risk.</para>
-        /// </description></item>
-        /// <item><description><para>2: Medium risk.</para>
-        /// </description></item>
-        /// <item><description><para>3: Low risk.</para>
-        /// </description></item>
+        /// <item><description>1: high</description></item>
+        /// <item><description>2: medium</description></item>
+        /// <item><description>3: low</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,19 +123,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
 
-        /// <summary>
-        /// <para>The sorting method. This parameter is not required. Set the value to <c>CreateDate-Desc</c> to sort the rules by creation time in descending order.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>CreateDate-Desc</para>
-        /// </summary>
         [NameInMap("SortBy")]
         [Validation(Required=false)]
         public string SortBy { get; set; }
 
         /// <summary>
         /// <para>The tags of the resource.</para>
-        /// <para>A maximum of 20 tags can be attached.</para>
+        /// <para>You can add up to 20 tags to a resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

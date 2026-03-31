@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to detach all tags from the resources. Valid values:</para>
+        /// <para>Specifies whether to remove all tags from the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: Detach all tags from the resources.</para>
-        /// </description></item>
-        /// <item><description><para>false (default): Detach the specified tags.</para>
-        /// </description></item>
+        /// <item><description>true: All tags are removed from the resource.</description></item>
+        /// <item><description>false (default): The specified tags are removed from the resource.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID of the tag.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,8 +35,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resources. You can specify a maximum of 50 resource IDs.</para>
-        /// <para>You can detach tags from up to 50 resources at a time.</para>
+        /// <para>The resource ID.</para>
+        /// <para>You can remove tags from up to 50 resources at a time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -46,18 +44,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the CloudConfig resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ACS::Config::Rule</c>: a rule for a single account.</para>
-        /// </description></item>
-        /// <item><description><para><c>ACS::Config::AggregateConfigRule</c>: a rule for multiple accounts.</para>
-        /// </description></item>
-        /// <item><description><para><c>ACS::Config::Aggregator</c>: an account group.</para>
-        /// </description></item>
-        /// <item><description><para><c>ACS::Config::CompliancePack</c>: a compliance package for a single account.</para>
-        /// </description></item>
-        /// <item><description><para><c>ACS::Config::AggregateCompliancePack</c>: a compliance package for multiple accounts.</para>
-        /// </description></item>
+        /// <item><description><c>ACS::Config::Rule</c></description></item>
+        /// <item><description><c>ACS::Config::AggregateConfigRule</c></description></item>
+        /// <item><description><c>ACS::Config::Aggregator</c></description></item>
+        /// <item><description><c>ACS::Config::CompliancePack</c></description></item>
+        /// <item><description><c>ACS::Config::AggregateCompliancePack</c></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +62,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag keys of the tags to detach.</para>
+        /// <para>The tags of the resource.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

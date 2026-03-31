@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// <remarks>
-        /// <para>This parameter is empty when there are no more results to return.</para>
+        /// <para>If NextToken is empty, no next page exists.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

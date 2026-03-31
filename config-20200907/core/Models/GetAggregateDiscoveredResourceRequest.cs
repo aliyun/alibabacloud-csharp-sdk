@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateDiscoveredResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The account group ID.</para>
-        /// <para>For more information about how to obtain the account group ID, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
+        /// <para>The ID of the account group.</para>
+        /// <para>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>Specifies whether to query the compliance results of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0 (default): does not query the compliance results of the resource.</para>
-        /// </description></item>
-        /// <item><description><para>1: queries the compliance results of the resource.</para>
-        /// </description></item>
+        /// <item><description>0 (default): does not query the compliance results of the resource.</description></item>
+        /// <item><description>1: queries the compliance results of the resource.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,8 +36,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? ComplianceOption { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource.</para>
-        /// <para>For more information about how to obtain the region ID of the resource, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</para>
+        /// <para>The ID of the region in which the resource resides.</para>
+        /// <para>For more information about how to query the ID of a region in which the resource resides, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +48,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>Required. The ID of the Alibaba Cloud account to which the resource to be queried belongs in the account group.</para>
+        /// <para>Required. The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100931896542****</para>
@@ -61,11 +59,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The resource ID.</para>
-        /// <para>For more information about how to obtain the resource ID, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</para>
+        /// <para>For more information about how to obtain the ID of a resource, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i-bp12g4xbl4i0brkn****</para>
+        /// <para>new-bucket</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -78,12 +76,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
-        /// <para>For more information about how to obtain the resource type, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</para>
+        /// <para>The type of the resource.</para>
+        /// <para>For more information about how to obtain the type of a resource, see <a href="https://help.aliyun.com/document_detail/411691.html">ListAggregateDiscoveredResources</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ACS::ECS::Instance</para>
+        /// <para>ACS::OSS::Bucket</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

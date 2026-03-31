@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <para>Valid values: 1 to 500. Default value: 200.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]

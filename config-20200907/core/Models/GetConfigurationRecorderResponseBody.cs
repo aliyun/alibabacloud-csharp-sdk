@@ -10,23 +10,19 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetConfigurationRecorderResponseBody : TeaModel {
         /// <summary>
-        /// <para>The resource monitoring information.</para>
+        /// <para>The details of the configuration recorder that monitors resources.</para>
         /// </summary>
         [NameInMap("ConfigurationRecorder")]
         [Validation(Required=false)]
         public GetConfigurationRecorderResponseBodyConfigurationRecorder ConfigurationRecorder { get; set; }
         public class GetConfigurationRecorderResponseBodyConfigurationRecorder : TeaModel {
             /// <summary>
-            /// <para>The status of resource monitoring. Valid values:</para>
+            /// <para>The status of the configuration recorder. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>REGISTRABLE: Not registered.</para>
-            /// </description></item>
-            /// <item><description><para>BUILDING: Building.</para>
-            /// </description></item>
-            /// <item><description><para>REGISTERED: Registered.</para>
-            /// </description></item>
-            /// <item><description><para>REBUILDING: Rebuilding.</para>
-            /// </description></item>
+            /// <item><description>REGISTRABLE: The configuration recorder has not been registered.</description></item>
+            /// <item><description>BUILDING: The configuration recorder is being deployed.</description></item>
+            /// <item><description>REGISTERED: The configuration recorder has been registered.</description></item>
+            /// <item><description>REBUILDING: The configuration recorder is being redeployed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -37,7 +33,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ConfigurationRecorderStatus { get; set; }
 
             /// <summary>
-            /// <para>A list of monitored resource types.</para>
+            /// <para>The types of resources that are monitored.</para>
             /// </summary>
             [NameInMap("ResourceTypes")]
             [Validation(Required=false)]

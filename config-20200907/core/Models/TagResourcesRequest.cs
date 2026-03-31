@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID of the tags.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource ID.</para>
+        /// <para>The resource IDs. You can add tags to up to 50 resources.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -29,18 +29,13 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource in CloudConfig. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ACS::Config::Rule</c>: a rule for a single account.</para>
-        /// </description></item>
-        /// <item><description><para><c>ACS::Config::AggregateConfigRule</c>: a rule for multiple accounts.</para>
-        /// </description></item>
-        /// <item><description><para><c>ACS::Config::Aggregator</c>: an account group.</para>
-        /// </description></item>
-        /// <item><description><para><c>ACS::Config::CompliancePack</c>: a compliance package for a single account.</para>
-        /// </description></item>
-        /// <item><description><para><c>ACS::Config::AggregateCompliancePack</c>: a compliance package for multiple accounts.</para>
-        /// </description></item>
+        /// <item><description><c>ACS::Config::Rule</c></description></item>
+        /// <item><description><c>ACS::Config::AggregateConfigRule</c></description></item>
+        /// <item><description><c>ACS::Config::Aggregator</c></description></item>
+        /// <item><description><c>ACS::Config::CompliancePack</c></description></item>
+        /// <item><description><c>ACS::Config::AggregateCompliancePack</c></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,8 +47,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags of the resource.</para>
-        /// <para>You can attach a maximum of 20 tags.</para>
+        /// <para>The tag value of the resource.</para>
+        /// <para>You can specify up to 20 tag values.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -61,8 +56,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource.</para>
-            /// <para>You can attach a maximum of 20 tag keys.</para>
+            /// <para>The key of the tag that is added to the resource.</para>
+            /// <para>You can add up to 20 tag keys to a resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Env</para>
@@ -72,8 +67,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource.</para>
-            /// <para>You can attach a maximum of 20 tag values.</para>
+            /// <para>The value of the tag that is added to the resource.</para>
+            /// <para>You can add up to 20 tag values to a resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prod</para>

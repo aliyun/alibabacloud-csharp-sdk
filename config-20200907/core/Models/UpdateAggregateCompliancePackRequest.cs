@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class UpdateAggregateCompliancePackRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the account group.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
+        /// <para>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// <para>A client token. It is used to ensure the idempotence of the request. Generate a value that is unique among different requests. The <c>ClientToken</c> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that you want to use to ensure the idempotency of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.``</para>
         /// 
         /// <b>Example:</b>
         /// <para>1594295238-f9361358-5843-4294-8d30-b5183fac****</para>
@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the compliance pack.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</para>
+        /// <para>The ID of the compliance package.</para>
+        /// <para>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,27 +44,27 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string CompliancePackId { get; set; }
 
         /// <summary>
-        /// <para>The name of the compliance pack.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</para>
+        /// <para>The name of the compliance package.</para>
+        /// <para>For more information about how to obtain the name of a compliance package, see <a href="https://help.aliyun.com/document_detail/262059.html">ListAggregateCompliancePacks</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>等保三级预检合规包</para>
+        /// <para>test-pack-name</para>
         /// </summary>
         [NameInMap("CompliancePackName")]
         [Validation(Required=false)]
         public string CompliancePackName { get; set; }
 
         /// <summary>
-        /// <para>The rules in the compliance pack.</para>
-        /// <para>If you leave this parameter empty when you modify the compliance pack, the existing rules are not changed. If you specify new rules, the new rules replace the existing ones.</para>
+        /// <para>The rules in the compliance package.</para>
+        /// <para>If you leave this parameter empty, the rules in the compliance package remain unchanged. If you set this parameter, Cloud Config replaces the existing rules in the compliance package with the specified rules.</para>
         /// </summary>
         [NameInMap("ConfigRules")]
         [Validation(Required=false)]
         public List<UpdateAggregateCompliancePackRequestConfigRules> ConfigRules { get; set; }
         public class UpdateAggregateCompliancePackRequestConfigRules : TeaModel {
             /// <summary>
-            /// <para>The rule ID. CloudConfig adds the existing rule to the compliance pack.</para>
-            /// <para>You must specify either <c>ManagedRuleIdentifier</c> or <c>ConfigRuleId</c>. If you specify both parameters, <c>ConfigRuleId</c> takes precedence. For more information, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</para>
+            /// <para>The rule ID. If you specify this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.</para>
+            /// <para>You only need to configure the <c>ManagedRuleIdentifier</c> or <c>ConfigRuleId</c> parameter. If you configure both parameters, the value of the <c>ConfigRuleId</c> parameter takes precedence. For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cr-e918626622af000f****</para>
@@ -74,25 +74,25 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ConfigRuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the rule.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>检测闲置弹性公网IP</para>
+            /// <para>test-rule-name</para>
             /// </summary>
             [NameInMap("ConfigRuleName")]
             [Validation(Required=false)]
             public string ConfigRuleName { get; set; }
 
             /// <summary>
-            /// <para>The parameters of the rule.</para>
+            /// <para>The details of the input parameter of the rule.</para>
             /// </summary>
             [NameInMap("ConfigRuleParameters")]
             [Validation(Required=false)]
             public List<UpdateAggregateCompliancePackRequestConfigRulesConfigRuleParameters> ConfigRuleParameters { get; set; }
             public class UpdateAggregateCompliancePackRequestConfigRulesConfigRuleParameters : TeaModel {
                 /// <summary>
-                /// <para>The name of the rule parameter.</para>
-                /// <para>You must specify <c>ParameterName</c> and <c>ParameterValue</c> together, or leave both empty. If a rule template has a parameter without a default value, you must specify the parameter. For more information, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</para>
+                /// <para>The name of the input parameter.</para>
+                /// <para>You must specify both <c>ParameterName</c> and <c>ParameterValue</c> or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bandwidth</para>
@@ -102,8 +102,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ParameterName { get; set; }
 
                 /// <summary>
-                /// <para>The value of the rule parameter.</para>
-                /// <para>You must specify <c>ParameterName</c> and <c>ParameterValue</c> together, or leave both empty. If a rule template has a parameter without a default value, you must specify the parameter. For more information, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</para>
+                /// <para>The value of the input parameter.</para>
+                /// <para>You must specify both <c>ParameterName</c> and <c>ParameterValue</c> or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -115,18 +115,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The description of the rule.</para>
+            /// <para>The rule description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>弹性公网已绑定到ECS或者NAT实例，非闲置状态，视为“合规”。</para>
+            /// <para>The description of the test rule.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the rule template. CloudConfig automatically creates a rule based on the rule template identifier and adds the rule to the compliance pack.</para>
-            /// <para>You must specify either <c>ManagedRuleIdentifier</c> or <c>ConfigRuleId</c>. If you specify both parameters, <c>ConfigRuleId</c> takes precedence. For more information, see <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a>.</para>
+            /// <para>The identifier of the managed rule. Cloud Config automatically creates a rule based on the identifier of the managed rule and adds the rule to the current compliance package.</para>
+            /// <para>You need to only configure the <c>ManagedRuleIdentifier</c> or <c>ConfigRuleId</c> parameter. If you configure both parameters, the value of the <c>ConfigRuleId</c> parameter takes precedence. You can call the <a href="https://help.aliyun.com/document_detail/261176.html">ListCompliancePackTemplates</a> operation to obtain the identifier of the managed rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eip-bandwidth-limit</para>
@@ -136,14 +136,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ManagedRuleIdentifier { get; set; }
 
             /// <summary>
-            /// <para>The risk level of the rule. Valid values:</para>
+            /// <para>The risk level of the resources that do not comply with the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>1: high risk.</para>
-            /// </description></item>
-            /// <item><description><para>2: medium risk.</para>
-            /// </description></item>
-            /// <item><description><para>3: low risk.</para>
-            /// </description></item>
+            /// <item><description>1: high risk level</description></item>
+            /// <item><description>2: medium risk level</description></item>
+            /// <item><description>3: low risk level</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -156,17 +153,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The description of the compliance pack.</para>
+        /// <para>The description of the compliance package.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>基于等保2.0三级标准，提供持续检测合规性的建议模板，帮助您提前自检并修复问题，以便快速通过正式检测。</para>
+        /// <para>Test compliance pack description.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The rules are not effective for resources in the specified regions. Resources in these regions are not evaluated. Separate multiple region IDs with commas (,).</para>
+        /// <para>The IDs of the regions to which the rule not applies. Separate multiple region IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -176,7 +173,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeRegionIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The rules are not effective for resources in the specified resource groups. Resources in these resource groups are not evaluated. Separate multiple resource group IDs with commas (,).</para>
+        /// <para>ExcludeResourceGroupIdsScope. Separate multiple resource group IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bnczc6r7rml****</para>
@@ -186,7 +183,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeResourceGroupIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The compliance pack is not effective for the specified resources. The specified resources are not evaluated. Separate multiple resource IDs with commas (,).</para>
+        /// <para>The ID of the resource that you do not want to evaluate by using the compliance package. Separate multiple resource IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>eip-8vbf3x310fn56ijfd****</para>
@@ -196,7 +193,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeResourceIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The excluded tag scope.</para>
+        /// <para>ExcludeTagsScope</para>
         /// </summary>
         [NameInMap("ExcludeTagsScope")]
         [Validation(Required=false)]
@@ -225,7 +222,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The compliance pack is effective only for resources in the specified regions. Separate multiple region IDs with commas (,).</para>
+        /// <para>The ID of the region whose resources you want to evaluate by using the compliance package. Separate multiple region IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -235,7 +232,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RegionIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The compliance pack is effective only for resources in the specified resource groups. Separate multiple resource group IDs with commas (,).</para>
+        /// <para>The ID of the resource group whose resources you want to evaluate by using the compliance package. Separate multiple resource group IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzc7r7rhx****</para>
@@ -245,7 +242,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceGroupIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The rules are effective only for the specified resources. Separate multiple resource IDs with commas (,).</para>
+        /// <para>The IDs of the resources included from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-5cmbowstbkss9ta03****</para>
@@ -255,14 +252,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the compliance pack. Valid values:</para>
+        /// <para>The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: high risk.</para>
-        /// </description></item>
-        /// <item><description><para>2: medium risk.</para>
-        /// </description></item>
-        /// <item><description><para>3: low risk.</para>
-        /// </description></item>
+        /// <item><description>1: high risk level</description></item>
+        /// <item><description>2: medium risk level</description></item>
+        /// <item><description>3: low risk level</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -275,8 +269,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The tags of the resource. This parameter is deprecated and no longer takes effect.</para>
-        /// <para>You can add up to 20 tags.</para>
+        /// <para>The tags of the resource.</para>
+        /// <para>You can add up to 20 tags to a resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -284,8 +278,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<UpdateAggregateCompliancePackRequestTag> Tag { get; set; }
         public class UpdateAggregateCompliancePackRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource.</para>
-            /// <para>You can add up to 20 tag keys.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys.</para>
+            /// <para>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs</c>:. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key-1</para>
@@ -295,8 +289,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource.</para>
-            /// <para>You can add up to 20 tag values.</para>
+            /// <para>The tag values.</para>
+            /// <para>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each key-value must be unique. You can specify at most 20 tag values in each call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value-1</para>
@@ -308,7 +303,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The compliance pack is effective only for resources that have the specified tag key.</para>
+        /// <para>The tag key of the resource that you want to evaluate by using the compliance package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS</para>
@@ -318,9 +313,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string TagKeyScope { get; set; }
 
         /// <summary>
-        /// <para>The compliance pack is effective only for resources that have the specified tag key and tag value.</para>
+        /// <para>The tag value of the resource that you want to evaluate by using the compliance package.</para>
         /// <remarks>
-        /// <para>You must specify TagValueScope together with TagKeyScope.</para>
+        /// <para> You must configure the TagValueScope parameter together with the TagKeyScope parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -331,7 +326,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string TagValueScope { get; set; }
 
         /// <summary>
-        /// <para>The tag scope.</para>
+        /// <para>TagsScope</para>
         /// </summary>
         [NameInMap("TagsScope")]
         [Validation(Required=false)]

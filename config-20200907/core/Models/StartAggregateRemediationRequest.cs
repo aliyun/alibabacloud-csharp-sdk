@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class StartAggregateRemediationRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the account group.</para>
-        /// <para>To get the account group ID, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
+        /// <para>For information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the rule.</para>
-        /// <para>To get the rule ID, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</para>
+        /// <para>The rule ID.</para>
+        /// <para>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/264148.html">ListAggregateConfigRules</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

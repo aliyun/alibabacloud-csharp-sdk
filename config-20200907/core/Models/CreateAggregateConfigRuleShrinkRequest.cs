@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateAggregateConfigRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The rule applies only to resources of the specified member accounts. Separate multiple member account IDs with commas (,).</para>
-        /// <remarks>
-        /// <para>This parameter applies only to rule templates.</para>
-        /// </remarks>
+        /// <para>The IDs of the member accounts to which the rule applies, which means that the resources within the member accounts are evaluated based on the rule. Separate multiple member account IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>115748125982****</para>
@@ -24,7 +21,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The ID of the account group.</para>
-        /// <para>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">the referenced document</a>.</para>
+        /// <para>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +32,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// <para>A client token that ensures the request is idempotent. Generate a unique value from your client for each request. The <c>ClientToken</c> parameter must contain only ASCII characters and be no more than 64 characters long.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <c>token</c> can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1594295238-f9361358-5843-4294-8d30-b5183fac****</para>
@@ -45,8 +42,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The conditions for a custom condition rule, in JSON format.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>{&quot;ComplianceConditions&quot;:&quot;{\&quot;operator\&quot;:\&quot;and\&quot;,\&quot;children\&quot;:[{\&quot;operator\&quot;:\&quot;StringEquals\&quot;,\&quot;featurePath\&quot;:\&quot;$.Status\&quot;,\&quot;desired\&quot;:\&quot;1\&quot;,\&quot;featureSource\&quot;:\&quot;CONFIGURATION\&quot;}]}&quot;}</para>
         /// </summary>
@@ -55,23 +50,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Conditions { get; set; }
 
         /// <summary>
-        /// <para>The name of the rule.</para>
+        /// <para>The rule name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>存在所有指定标签</para>
+        /// <para>oss-default-encryption-kms</para>
         /// </summary>
         [NameInMap("ConfigRuleName")]
         [Validation(Required=false)]
         public string ConfigRuleName { get; set; }
 
         /// <summary>
-        /// <para>The trigger type for the rule. Valid values:</para>
+        /// <para>The trigger type of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ConfigurationItemChangeNotification: The rule triggers when a resource configuration changes.</para>
-        /// </description></item>
-        /// <item><description><para>ScheduledNotification: The rule triggers on a schedule.</para>
-        /// </description></item>
+        /// <item><description>ConfigurationItemChangeNotification: The rule is triggered by configuration changes.</description></item>
+        /// <item><description>ScheduledNotification: The rule is periodically triggered.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,19 +76,19 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleTriggerTypes { get; set; }
 
         /// <summary>
-        /// <para>A description of the rule.</para>
+        /// <para>The description of the rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>最多可以定义6组标签。如果资源同时具有指定的所有标签，则视为“合规”。</para>
+        /// <para>description of rule</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The rule does not apply to resources of the specified member accounts. Resources in these accounts are not evaluated. Separate multiple member account IDs with commas (,).</para>
+        /// <para>The ID of the member account to which the rule does not apply, which means that the resources within the member account are not evaluated based on the rule. Separate multiple member account IDs with commas (,).</para>
         /// <remarks>
-        /// <para>This parameter applies only to rule templates.</para>
+        /// <para>This parameter applies only to a managed rule.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -106,15 +99,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeAccountIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The rule does not apply to resources of member accounts in the specified folders. Resources in these folders are not evaluated. Separate multiple folder IDs with commas (,).</para>
+        /// <para>The ID of the resource directory to which the rule does not apply, which means that the resources within member accounts in the resource directory are not evaluated based on the rule. Separate multiple resource directory IDs with commas (,).</para>
         /// <remarks>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter applies only to global account group rules.</para>
+        /// <item><description><para>This parameter applies only to a rule of a global account group.</para>
         /// </description></item>
-        /// <item><description><para>This parameter applies only to rule templates.</para>
+        /// <item><description><para>This parameter applies only to a managed rule.</para>
         /// </description></item>
         /// </list>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>fd-pWmkqZ****</para>
@@ -124,7 +117,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeFolderIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The rule does not apply to resources in the specified regions. Resources in these regions are not evaluated. Separate multiple region IDs with commas (,).</para>
+        /// <para>The IDs of the regions to which the rule not applies. Separate multiple region IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -134,7 +127,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeRegionIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The rule does not apply to resources in the specified resource groups. Resources in these groups are not evaluated. Separate multiple resource group IDs with commas (,).</para>
+        /// <para>ExcludeResourceGroupIdsScope. Separate multiple resource group IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bnczc6r7rml****</para>
@@ -144,7 +137,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeResourceGroupIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The rule does not apply to the specified resources. These resources are not evaluated. Separate multiple resource IDs with commas (,).</para>
+        /// <para>The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</para>
+        /// <remarks>
+        /// <para>This parameter applies only to a managed rule.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>lb-t4nbowvtbkss7t326****</para>
@@ -154,14 +150,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeResourceIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The scope of tags to exclude.</para>
+        /// <para>The scope of the tag that is excluded.</para>
         /// </summary>
         [NameInMap("ExcludeTagsScope")]
         [Validation(Required=false)]
         public List<CreateAggregateConfigRuleShrinkRequestExcludeTagsScope> ExcludeTagsScope { get; set; }
         public class CreateAggregateConfigRuleShrinkRequestExcludeTagsScope : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource to exclude.</para>
+            /// <para>The tag key of the resource that you want to exclude.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key-2</para>
@@ -171,7 +167,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource to exclude.</para>
+            /// <para>The tag value of the resource that you want to exclude.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value-2</para>
@@ -183,7 +179,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>Extended content. This parameter currently supports only setting the trigger time for rules that run on a 24-hour cycle.</para>
+        /// <para>The extended content, which is temporarily only used to configure the trigger time with a 24-hour cycle trigger.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;fixedHour&quot;:&quot;12&quot;}</para>
@@ -193,15 +189,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExtendContent { get; set; }
 
         /// <summary>
-        /// <para>The rule applies only to resources of member accounts in the specified folders. Separate multiple folder IDs with commas (,).</para>
+        /// <para>The ID of the resource directory to which the rule applies, which means that the resources within member accounts in the resource directory are evaluated based on the rule.</para>
         /// <remarks>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter applies only to global account group rules.</para>
+        /// <item><description><para>This parameter applies only to a rule of a global account group.</para>
         /// </description></item>
-        /// <item><description><para>This parameter applies only to rule templates.</para>
+        /// <item><description><para>This parameter applies only to a managed rule.</para>
         /// </description></item>
         /// </list>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>fd-ZtHsRH****</para>
@@ -211,7 +207,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string FolderIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The input parameters for the rule.</para>
+        /// <para>The input parameter of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;tag1Key&quot;:&quot;ECS&quot;,&quot;tag1Value&quot;:&quot;test&quot;}</para>
@@ -221,21 +217,16 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string InputParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The frequency at which the rule runs. Valid values:</para>
+        /// <para>The interval at which the rule is triggered. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>One_Hour: 1 hour.</para>
-        /// </description></item>
-        /// <item><description><para>Three_Hours: 3 hours.</para>
-        /// </description></item>
-        /// <item><description><para>Six_Hours: 6 hours.</para>
-        /// </description></item>
-        /// <item><description><para>Twelve_Hours: 12 hours.</para>
-        /// </description></item>
-        /// <item><description><para>TwentyFour_Hours (default): 24 hours.</para>
-        /// </description></item>
+        /// <item><description>One_Hour</description></item>
+        /// <item><description>Three_Hours</description></item>
+        /// <item><description>Six_Hours</description></item>
+        /// <item><description>Twelve_Hours</description></item>
+        /// <item><description>TwentyFour_Hours (default)</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Set this parameter if you set <c>ConfigRuleTriggerTypes</c> to <c>ScheduledNotification</c>.</para>
+        /// <para> This parameter is required if the <c>ConfigRuleTriggerTypes</c> parameter is set to <c>ScheduledNotification</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -246,7 +237,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string MaximumExecutionFrequency { get; set; }
 
         /// <summary>
-        /// <para>The rule applies only to resources in the specified regions. Separate multiple region IDs with commas (,).</para>
+        /// <para>The ID of the region to which the rule applies. Separate multiple region IDs with commas (,).</para>
+        /// <remarks>
+        /// <para>This parameter applies only to a managed rule.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -256,7 +250,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RegionIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The rule applies only to resources in the specified resource groups. Separate multiple resource group IDs with commas (,).</para>
+        /// <para>The ID of the resource group to which the rule applies. Separate multiple resource group IDs with commas (,).</para>
+        /// <remarks>
+        /// <para>This parameter applies only to a managed rule.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzc7r7rhx****</para>
@@ -266,7 +263,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceGroupIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The rule applies only to the specified resources. Separate multiple resource IDs with commas (,).</para>
+        /// <para>The IDs of the resources included from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-5cmbowstbkss9ta03****</para>
@@ -276,7 +273,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceIdsScope { get; set; }
 
         /// <summary>
-        /// <para>The rule applies only to resources with the specified names.</para>
+        /// <para>The names of the resource to which the rule applies.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-xxx</para>
@@ -289,7 +286,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceNameScope { get; set; }
 
         /// <summary>
-        /// <para>The resource types to evaluate. Separate multiple types with commas (,).</para>
+        /// <para>The type of the resource evaluated by the rule. Separate multiple resource types with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -300,14 +297,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceTypesScopeShrink { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the rule. Valid values:</para>
+        /// <para>The risk level of the resources that do not comply with the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>1: high</para>
-        /// </description></item>
-        /// <item><description><para>2: medium</para>
-        /// </description></item>
-        /// <item><description><para>3: low</para>
-        /// </description></item>
+        /// <item><description>1: high</description></item>
+        /// <item><description>2: medium</description></item>
+        /// <item><description>3: low</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -321,20 +315,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The identifier of the rule.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>SourceOwner</c> is <c>ALIYUN</c>, enter the identifier of the rule template, such as <c>required-tags</c>.</para>
-        /// <remarks>
-        /// <para>For more information about how to query rule template identifiers, see <a href="https://help.aliyun.com/document_detail/127404.html">the referenced document</a>.</para>
-        /// </remarks>
-        /// </description></item>
-        /// <item><description><para>If <c>SourceOwner</c> is <c>CUSTOM_CONFIGURATION</c>, enter <c>acs-config-configuration</c>.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>SourceOwner</c> is <c>CUSTOM_FC</c>, enter the Alibaba Cloud Resource Name (ARN) of the Function Compute function.</para>
-        /// <para>The ARN format is <c>acs:fc:{region}:{accountId}:services/{serviceName}.LATEST/functions/{functionName}</c>. For example, <c>acs:fc:cn-hangzhou:120886317861****:services/service-test.LATEST/functions/config-test</c>.</para>
-        /// <remarks>
-        /// <para>For more information about how to obtain a function ARN, see <a href="https://help.aliyun.com/document_detail/415752.html">the referenced document</a>.</para>
-        /// </remarks>
-        /// </description></item>
+        /// <item><description>If you set the SourceOwner parameter to ALIYUN, set this parameter to the name of the managed rule.</description></item>
+        /// <item><description>If you set the SourceOwner parameter to CUSTOM_FC, set this parameter to the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.</description></item>
         /// </list>
+        /// <para>For more information about how to query the name of a managed rule, see <a href="https://help.aliyun.com/document_detail/127404.html">Managed rules</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -345,14 +329,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string SourceIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The type of rule. Valid values:</para>
+        /// <para>The type of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ALIYUN: rule template</para>
-        /// </description></item>
-        /// <item><description><para>CUSTOM_FC: custom Function Compute rule</para>
-        /// </description></item>
-        /// <item><description><para>CUSTOM_CONFIGURATION: custom condition rule</para>
-        /// </description></item>
+        /// <item><description>ALIYUN: a managed rule.</description></item>
+        /// <item><description>CUSTOM_FC: a custom rule.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -364,20 +344,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string SourceOwner { get; set; }
 
         /// <summary>
-        /// <para>The tag of the rule.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public string TagShrink { get; set; }
 
         /// <summary>
-        /// <para>The logical relationship between multiple tags in the <c>TagsScope</c> parameter. For example, if you set <c>TagsScope</c> to <c>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;,&quot;TagsScope.1.TagValue&quot;:&quot;a&quot;,&quot;TagsScope.2.TagKey&quot;:&quot;b&quot;,&quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</c> and set this parameter to <c>AND</c>, the rule applies only to resources that have both the <c>a:a</c> and <c>b:b</c> tags. The default value is <c>OR</c>.</para>
-        /// <para>You can also use this parameter with the deprecated <c>TagKeyScope</c> parameter, but this is not recommended. For example, if you set <c>TagKeyScope</c> to <c>ECS,OSS</c> and set this parameter to <c>AND</c>, the rule applies only to resources that have both the <c>ECS</c> and <c>OSS</c> tags.</para>
-        /// <para>Valid values:</para>
+        /// <para>The logical relationship when parameter <c>TagsScope</c> takes multiple values, for example: When the parameter <c>TagsScope</c> is <c>&quot;TagsScope.1.TagKey&quot;:&quot;a&quot;, &quot;TagsScope.1.TagValue&quot;:&quot;a&quot;, &quot;TagsScope.2.TagKey&quot;:&quot;b&quot;, &quot;TagsScope.2.TagValue&quot;:&quot;b&quot;</c>, if this parameter is set to<c> AND</c>, it means that the rule only applies to resources bound with both tags <c>a:a</c> and <c>b:b</c>. If not specified, the default logic is <c>OR</c>.</para>
+        /// <para>It can also be used for the deprecated field <c>TagKeyScope</c> (not recommended), for example: When the parameter <c>TagKeyScope</c> has a value of <c>ECS</c>,<c>OSS</c>, if this parameter is set to <c>AND</c>, it means that the rule only applies to resources bound with both labels <c>ECS</c> and <c>OSS</c>.</para>
+        /// <para>Values:</para>
         /// <list type="bullet">
-        /// <item><description><para>AND</para>
+        /// <item><description><para>AND: And.</para>
         /// </description></item>
-        /// <item><description><para>OR</para>
+        /// <item><description><para>OR: Or.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -391,10 +371,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated. Use the <c>TagsScope</c> parameter instead.</para>
-        /// <para>The rule applies only to resources that have the specified tag keys. Separate multiple tag keys with commas (,).</para>
+        /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
+        /// <para>The tag key used to filter resources. The rule applies only to the resources with the specified tag key. Separate multiple parameter values with commas (,).</para>
         /// <remarks>
-        /// <para>This parameter applies only to rule templates. Set both <c>TagKeyScope</c> and <c>TagValueScope</c> together.</para>
+        /// <para> This parameter applies only to a managed rule. You must configure the <c>TagKeyScope</c> and <c>TagValueScope</c> parameters at the same time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -408,10 +388,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated. Use the <c>TagsScope</c> parameter instead.</para>
-        /// <para>The rule applies only to resources that have the specified tag values.</para>
+        /// <para>This parameter is deprecated. We recommend that you use the <c>TagsScope</c> parameter.</para>
+        /// <para>The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.</para>
         /// <remarks>
-        /// <para>This parameter applies only to rule templates. Set both <c>TagKeyScope</c> and <c>TagValueScope</c> together.</para>
+        /// <para> This parameter applies only to a managed rule. You must configure the <c>TagKeyScope</c> and <c>TagValueScope</c> parameters at the same time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -423,14 +403,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string TagValueScope { get; set; }
 
         /// <summary>
-        /// <para>The scope of tags to include.</para>
+        /// <para>The tag scope.</para>
         /// </summary>
         [NameInMap("TagsScope")]
         [Validation(Required=false)]
         public List<CreateAggregateConfigRuleShrinkRequestTagsScope> TagsScope { get; set; }
         public class CreateAggregateConfigRuleShrinkRequestTagsScope : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key-1</para>
@@ -440,7 +420,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value-1</para>

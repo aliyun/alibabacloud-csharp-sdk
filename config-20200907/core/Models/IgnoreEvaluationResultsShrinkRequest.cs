@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class IgnoreEvaluationResultsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The rule ID.</para>
-        /// <para>For more information about how to obtain the rule ID, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</para>
+        /// <para>The ID of the rule.</para>
+        /// <para>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ConfigRuleId { get; set; }
 
         /// <summary>
-        /// <para>The date on which the ignored evaluation results are automatically restored.</para>
+        /// <para>The date from which the system automatically re-evaluates the ignored incompliant resources.</para>
         /// <remarks>
-        /// <para>If this parameter is left empty, the ignored evaluation results are not automatically restored. You must manually restore them.</para>
+        /// <para> If you leave this parameter empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,17 +35,17 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string IgnoreDate { get; set; }
 
         /// <summary>
-        /// <para>The reason for ignoring the resources.</para>
+        /// <para>The reason why you want to ignore the resource.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无需检测。</para>
+        /// <para>Test ignore.</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]
         public string Reason { get; set; }
 
         /// <summary>
-        /// <para>The list of resources to be ignored.</para>
+        /// <para>The resources to be ignored.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Resources")]

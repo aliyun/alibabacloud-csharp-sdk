@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string CompliancePackId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6EC7AED1-172F-42AE-9C12-295BC2ADB751</para>

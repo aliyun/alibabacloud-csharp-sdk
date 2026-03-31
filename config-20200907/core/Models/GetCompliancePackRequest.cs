@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetCompliancePackRequest : TeaModel {
         /// <summary>
-        /// <para>The compliance package ID.</para>
-        /// <para>For more information about how to obtain the compliance package ID, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</para>
+        /// <para>The ID of the compliance package.</para>
+        /// <para>For more information about how to obtain the ID of a compliance package, see <a href="https://help.aliyun.com/document_detail/263332.html">ListCompliancePacks</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The tags of the resource. This parameter is deprecated and takes no effect if it is specified.</para>
-        /// <para>You can add up to 20 tags.</para>
+        /// <para>The tags of the resource.</para>
+        /// <para>You can add up to 20 tags to a resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<GetCompliancePackRequestTag> Tag { get; set; }
         public class GetCompliancePackRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource.</para>
-            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>You can specify up to 20 tag keys at a time.</para>
+            /// <para>The tag key.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify at most 20 tag keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key-1</para>
@@ -45,9 +45,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource.</para>
-            /// <para>The tag value can be an empty string or a string of up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
-            /// <para>Each tag key must have a corresponding tag value. You can specify up to 20 tag values at a time.</para>
+            /// <para>The tag value. The tag value can be up to 256 characters in length and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value-1</para>

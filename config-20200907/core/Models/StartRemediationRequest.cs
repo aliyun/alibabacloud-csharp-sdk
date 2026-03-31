@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class StartRemediationRequest : TeaModel {
         /// <summary>
         /// <para>The rule ID.</para>
-        /// <para>For information about how to obtain the rule ID, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</para>
+        /// <para>For more information about how to obtain the ID of a rule, see <a href="https://help.aliyun.com/document_detail/169607.html">ListConfigRules</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

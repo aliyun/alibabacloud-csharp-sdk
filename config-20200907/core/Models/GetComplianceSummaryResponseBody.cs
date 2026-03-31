@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetComplianceSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The compliance summary.</para>
+        /// <para>The summary of compliance statistics.</para>
         /// </summary>
         [NameInMap("ComplianceSummary")]
         [Validation(Required=false)]
         public GetComplianceSummaryResponseBodyComplianceSummary ComplianceSummary { get; set; }
         public class GetComplianceSummaryResponseBodyComplianceSummary : TeaModel {
             /// <summary>
-            /// <para>The compliance summary by rule.</para>
+            /// <para>The summary of compliance statistics from the rule dimension.</para>
             /// </summary>
             [NameInMap("ComplianceSummaryByConfigRule")]
             [Validation(Required=false)]
             public GetComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule ComplianceSummaryByConfigRule { get; set; }
             public class GetComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByConfigRule : TeaModel {
                 /// <summary>
-                /// <para>The timestamp when the compliance summary was generated. Unit: milliseconds.</para>
+                /// <para>The time when the compliance summary was generated. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1589853712165</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? ComplianceSummaryTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The number of compliant rules.</para>
+                /// <para>The number of rules evaluated as compliant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public int? CompliantCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of non-compliant rules.</para>
+                /// <para>The number of rules evaluated as non-compliant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11</para>
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The compliance summary by resource.</para>
+            /// <para>The summary of compliance statistics from the resource dimension.</para>
             /// </summary>
             [NameInMap("ComplianceSummaryByResource")]
             [Validation(Required=false)]
             public GetComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource ComplianceSummaryByResource { get; set; }
             public class GetComplianceSummaryResponseBodyComplianceSummaryComplianceSummaryByResource : TeaModel {
                 /// <summary>
-                /// <para>The timestamp when the compliance summary was generated. Unit: milliseconds.</para>
+                /// <para>The time when the compliance summary was generated. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1589853712165</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? ComplianceSummaryTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The number of compliant resources.</para>
+                /// <para>The number of resources evaluated as compliant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -92,47 +92,20 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 [Validation(Required=false)]
                 public int? CompliantCount { get; set; }
 
-                /// <summary>
-                /// <para>The number of non-compliant resources detected by high-risk rules.</para>
-                /// <remarks>
-                /// <para>Note: This value can be greater than the total number of resources in your account. Resources are counted based on each rule. For example, if a resource is evaluated as non-compliant by two rules, the value of this parameter increases by 2.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("HighRiskRuleNonCompliantResourceCount")]
                 [Validation(Required=false)]
                 public int? HighRiskRuleNonCompliantResourceCount { get; set; }
 
-                /// <summary>
-                /// <para>The number of non-compliant resources detected by low-risk rules.</para>
-                /// <remarks>
-                /// <para>Note: This value can be greater than the total number of resources in your account. Resources are counted based on each rule. For example, if a resource is evaluated as non-compliant by two low-risk rules, the value of this parameter increases by 2.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("LowRiskRuleNonCompliantResourceCount")]
                 [Validation(Required=false)]
                 public int? LowRiskRuleNonCompliantResourceCount { get; set; }
 
-                /// <summary>
-                /// <para>The number of non-compliant resources detected by medium-risk rules.</para>
-                /// <remarks>
-                /// <para>Note: This value can be greater than the total number of resources in your account. Resources are counted based on each rule. For example, if a resource is evaluated as non-compliant by two rules, the value of this parameter increases by 2.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>6</para>
-                /// </summary>
                 [NameInMap("MediumRiskRuleNonCompliantResourceCount")]
                 [Validation(Required=false)]
                 public int? MediumRiskRuleNonCompliantResourceCount { get; set; }
 
                 /// <summary>
-                /// <para>The number of non-compliant resources.</para>
+                /// <para>The number of resources evaluated as non-compliant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>

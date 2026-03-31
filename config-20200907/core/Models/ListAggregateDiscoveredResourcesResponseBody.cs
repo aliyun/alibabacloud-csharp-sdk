@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListAggregateDiscoveredResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of resources.</para>
+        /// <para>The information about the resources.</para>
         /// </summary>
         [NameInMap("DiscoveredResourceProfiles")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public List<ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList> DiscoveredResourceProfileList { get; set; }
             public class ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that owns the resource. We recommend that you use the ResourceOwnerId parameter.</para>
+                /// <para>The ID of the Alibaba Cloud account to which the resource belongs. We recommend that you use the ResourceOwnerId parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>161259599160****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? AccountId { get; set; }
 
                 /// <summary>
-                /// <para>The zone where the resource resides.</para>
+                /// <para>The ID of the zone in which the resource resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-huhehaote-a</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp when the resource was created. Unit: milliseconds.</para>
+                /// <para>The time when the resource was created. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1618675206000</para>
@@ -66,10 +66,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 /// <summary>
                 /// <para>The status of the resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>0: The resource is deleted.</para>
-                /// </description></item>
-                /// <item><description><para>1: The resource is in use.</para>
-                /// </description></item>
+                /// <item><description>0: The resource is deleted.</description></item>
+                /// <item><description>1: The resource is retained.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -100,7 +98,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that owns the resource.</para>
+                /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>161259599160****</para>
@@ -110,12 +108,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? ResourceOwnerId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the resource. The status of a resource is defined by the corresponding Alibaba Cloud service. This parameter can be empty. For example:</para>
+                /// <para>The status of the resource. The value of this parameter varies with the resource type and may be empty. Examples:</para>
                 /// <list type="bullet">
-                /// <item><description><para>If the resource type is ACS::ECS::Instance, the resource is stateful. The value of this parameter can be Running or Stopped.</para>
-                /// </description></item>
-                /// <item><description><para>If the resource type is ACS::OSS::Bucket, the resource is stateless. The value of this parameter is empty.</para>
-                /// </description></item>
+                /// <item><description>If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.</description></item>
+                /// <item><description>If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -136,7 +132,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The resource tags.</para>
+                /// <para>The tags of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;key1\&quot;:[\&quot;value2\&quot;]}</para>
@@ -146,7 +142,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string Tags { get; set; }
 
                 /// <summary>
-                /// <para>The timestamp of the last update to the resource. This is a timestamp in milliseconds.</para>
+                /// <para>The time when the resource was last updated. The value must be a timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1722441600000</para>
@@ -156,7 +152,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? UpdateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch to which the resource belongs. The format is vsw-t4n7pokxxxxxxxxxxxxxx. If the resource belongs to multiple vSwitches, the vSwitch IDs are separated by commas (,). An empty string is returned if the resource does not belong to a vSwitch.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -170,7 +165,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
-                /// <para>The resource build version.</para>
+                /// <para>The build version of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -180,7 +175,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? Version { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the VPC to which the resource belongs. The format is vpc-t4nhheyvay74fp7n0hxxx. An empty string is returned if the resource does not belong to a VPC.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -196,7 +190,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries returned per page.</para>
+            /// <para>The maximum number of entries returned on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -206,7 +200,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token used to start the next query.</para>
+            /// <para>The token that was used to initiate the next request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IWBjqMYSy0is7zSMGu16****</para>

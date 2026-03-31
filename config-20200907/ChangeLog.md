@@ -1,3 +1,6 @@
+2026-03-31 Version: 3.2.3
+- Generated csharp 2020-09-07 for Config.
+
 2026-02-26 Version: 3.2.2
 - Update API StartAggregateRemediation: add request parameters ResourceId.
 - Update API StartAggregateRemediation: add request parameters ResourceRegionId.

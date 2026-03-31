@@ -10,14 +10,19 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class CreateAggregatorRequest : TeaModel {
         /// <summary>
-        /// <para>The member accounts of the account group.</para>
+        /// <para>The information about the member accounts in the account group. Example:</para>
+        /// <pre><c>[{
+        ///     &quot;accountId&quot;: 171322098523****,
+        ///     &quot;accountType&quot;:&quot;ResourceDirectory&quot;,
+        ///                 &quot;accountName&quot;:&quot;Alice&quot;
+        /// }, {
+        ///     &quot;accountId&quot;: 100532098349****,
+        ///     &quot;accountType&quot;:&quot;ResourceDirectory&quot;,
+        ///                 &quot;accountName&quot;:&quot;Tom&quot;
+        /// }]
+        /// </c></pre>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description><para>If you set <c>AggregatorType</c> to \`RD, you can leave this parameter empty. This indicates that all members in the resource directory are added to the global account group.</para>
-        /// </description></item>
-        /// <item><description><para>If you set <c>AggregatorType</c> to <c>FOLDER</c>, you can leave this parameter empty. This indicates that all members in a specific folder in the resource directory are added to the folder account group.</para>
-        /// </description></item>
-        /// </list>
+        /// <para> If <c>AggregatorType</c> is set to <c>RD</c> or <c>FOLDER</c>, this parameter can be left empty, which indicates that all accounts in the resource directory are added to the global account group.</para>
         /// </remarks>
         /// 
         /// <b>if can be null:</b>
@@ -28,7 +33,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<CreateAggregatorRequestAggregatorAccounts> AggregatorAccounts { get; set; }
         public class CreateAggregatorRequestAggregatorAccounts : TeaModel {
             /// <summary>
-            /// <para>The member ID. For more information about how to obtain the member ID, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</para>
+            /// <para>The member account ID. For more information about how to obtain the ID of a member account, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>171322098523****</para>
@@ -38,7 +43,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// <para>The member name. For more information about how to obtain the member name, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</para>
+            /// <para>The name of the member account. For more information about how to obtain the name of a member account, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alice</para>
@@ -48,7 +53,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The affiliation of the member. Only <c>ResourceDirectory</c> is supported.</para>
+            /// <para>The type of the member account. Set this parameter to ResourceDirectory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ResourceDirectory</para>
@@ -64,7 +69,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example_Aggregator</para>
+        /// <para>Test_Group</para>
         /// </summary>
         [NameInMap("AggregatorName")]
         [Validation(Required=false)]
@@ -73,12 +78,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The type of the account group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>RD: global account group.</para>
-        /// </description></item>
-        /// <item><description><para>FOLDER: folder account group. You must also set the <c>FolderId</c> parameter. For more information about how to obtain a folder ID, see <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a>.</para>
-        /// </description></item>
-        /// <item><description><para>CUSTOM (default): custom account group. You must also set the <c>AccountId</c> and <c>AccountType</c> parameters for <c>AggregatorAccounts</c>.</para>
-        /// </description></item>
+        /// <item><description>RD: global account group.</description></item>
+        /// <item><description>FOLDER: account group of the folder.</description></item>
+        /// <item><description>CUSTOM (default): custom account group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +91,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorType { get; set; }
 
         /// <summary>
-        /// <para>A client token that is used to ensure the idempotence of the request. You must make sure that the token is unique for different requests. The <c>ClientToken</c> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <c>token</c> can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1594295238-f9361358-5843-4294-8d30-b5183fac****</para>
@@ -102,15 +104,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <para>The description of the account group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Example aggregator used to demonstrate how to create an aggregator.</para>
+        /// <para>Aggregator description.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the attached folder. You can specify multiple folder IDs. Separate the IDs with commas (,).</para>
-        /// <para>This parameter is required if you set <c>AggregatorType</c> to <c>FOLDER</c>.</para>
+        /// <para>The ID of the folder to which the account group is attached. You must specify this parameter if <c>AggregatorType</c> is set to <c>FOLDER</c>. Multiple resource folder IDs should be separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>fd-brHdgv****,fd-brHdgk****</para>
@@ -121,15 +122,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The tags of the resource.</para>
-        /// <para>You can attach a maximum of 20 tags.</para>
+        /// <para>You can add up to 20 tags to a resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateAggregatorRequestTag> Tag { get; set; }
         public class CreateAggregatorRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify a maximum of 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>A tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</para>
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys.</para>
+            /// <para>The tag key cannot be an empty string. The tag key must be 1 to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs</c>:. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key-1</para>
@@ -139,8 +140,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify a maximum of 20 tag values. The tag value can be an empty string.</para>
-            /// <para>A tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag values.</para>
+            /// <para>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each key-value must be unique. You can specify at most 20 tag values in each call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value-1</para>

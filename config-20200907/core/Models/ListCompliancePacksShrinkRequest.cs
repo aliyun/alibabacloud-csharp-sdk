@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class ListCompliancePacksShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The page number.</para>
-        /// <para>Minimum value: 1. Default value: 1.</para>
+        /// <para>Pages start from page 1. Default value: 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>Valid values: 1 to 100. Minimum value: 1. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -31,31 +31,15 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <para>The risk level of the compliance pack. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>1: high risk.</para>
-        /// </description></item>
-        /// <item><description><para>2: medium risk.</para>
-        /// </description></item>
-        /// <item><description><para>3: low risk.</para>
-        /// </description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>The status of the compliance pack. Valid values:</para>
+        /// <para>The status of the compliance package to be queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ACTIVE: The compliance pack is active.</para>
-        /// </description></item>
-        /// <item><description><para>CREATING: The compliance pack is being created.</para>
-        /// </description></item>
+        /// <item><description>ACTIVE: The compliance package is active.</description></item>
+        /// <item><description>CREATING: The compliance package is being created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +51,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
         /// <summary>
         /// <para>The tags of the resource.</para>
-        /// <para>You can attach up to 20 tags to a resource.</para>
+        /// <para>You can add up to 20 tags to a resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class StartRemediationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The operation was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The operation failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

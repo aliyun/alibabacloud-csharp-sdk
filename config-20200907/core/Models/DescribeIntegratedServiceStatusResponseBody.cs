@@ -10,11 +10,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DescribeIntegratedServiceStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The event type for cross-account integration. The supported event type is:</para>
-        /// <list type="bullet">
-        /// <item><description>NonCompliantNotification: non-compliance events.</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>NonCompliantNotification</para>
         /// </summary>
@@ -23,8 +18,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorDeliveryDataType { get; set; }
 
         /// <summary>
-        /// <para>The enabling status of the integrated service.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -33,8 +26,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>2E265A38-84D9-5083-A333-B33A2B46D139</para>
         /// </summary>

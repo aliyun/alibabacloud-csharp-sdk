@@ -20,14 +20,18 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The compliance timeline of the resource.</para>
+        /// <para>The information about the compliance timeline.</para>
         /// </summary>
         [NameInMap("ResourceComplianceTimeline")]
         [Validation(Required=false)]
         public GetAggregateResourceComplianceTimelineResponseBodyResourceComplianceTimeline ResourceComplianceTimeline { get; set; }
         public class GetAggregateResourceComplianceTimelineResponseBodyResourceComplianceTimeline : TeaModel {
             /// <summary>
-            /// <para>A list of compliance timeline entries.</para>
+            /// <para>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</para>
+            /// <list type="bullet">
+            /// <item><description>If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</description></item>
+            /// <item><description>If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.</description></item>
+            /// </list>
             /// </summary>
             [NameInMap("ComplianceList")]
             [Validation(Required=false)]
@@ -44,7 +48,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string AccountId { get; set; }
 
                 /// <summary>
-                /// <para>The zone where the resource resides.</para>
+                /// <para>The ID of the zone in which the resource resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-f</para>
@@ -64,27 +68,56 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? CaptureTime { get; set; }
 
                 /// <summary>
-                /// <para>A list of rules associated with the resource and their compliance details.</para>
+                /// <para>The information about the rules that evaluated the resource and the compliance evaluation result.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;Compliance\&quot;:{\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;count\&quot;:1},\&quot;ConfigRuleList\&quot;:[{\&quot;accountId\&quot;:100931896542****,\&quot;configRuleId\&quot;:\&quot;cr-9524626622af003d****\&quot;,\&quot;configRuleArn\&quot;:\&quot;acs:config::100931896542****:rule/cr-9524626622af003d****\&quot;,\&quot;configRuleName\&quot;:\&quot;OSS存储空间ACL禁止公共读写\&quot;,\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;riskLevel\&quot;:1,\&quot;annotation\&quot;:\&quot;\&quot;,\&quot;invokingEventMessageType\&quot;:\&quot;ScheduledNotification\&quot;}]}</para>
+                /// <para>{
+                ///     &quot;AccessControlList&quot;: {
+                ///         &quot;Grant&quot;: &quot;private&quot;
+                ///     },
+                ///     &quot;ServerSideEncryptionRule&quot;: {
+                ///         &quot;SSEAlgorithm&quot;: &quot;None&quot;
+                ///     },
+                ///     &quot;Comment&quot;: &quot;&quot;,
+                ///     &quot;Owner&quot;: {
+                ///         &quot;DisplayName&quot;: &quot;126672004088****&quot;,
+                ///         &quot;ID&quot;: &quot;126672004088****&quot;
+                ///     },
+                ///     &quot;ResourceGroupId&quot;: &quot;rg-acfmy4dfoau****&quot;,
+                ///     &quot;StorageClass&quot;: &quot;Standard&quot;,
+                ///     &quot;DataRedundancyType&quot;: &quot;LRS&quot;,
+                ///     &quot;AllowEmptyReferer&quot;: &quot;true&quot;,
+                ///     &quot;Name&quot;: &quot;test-private-oss****&quot;,
+                ///     &quot;BucketPolicy&quot;: {
+                ///         &quot;LogPrefix&quot;: &quot;&quot;,
+                ///         &quot;LogBucket&quot;: &quot;&quot;
+                ///     },
+                ///     &quot;ExtranetEndpoint&quot;: &quot;oss-cn-hangzhou.aliyuncs.com&quot;,
+                ///     &quot;IntranetEndpoint&quot;: &quot;oss-cn-hangzhou-internal.aliyuncs.com&quot;,
+                ///     &quot;Location&quot;: &quot;oss-cn-hangzhou&quot;
+                /// }</para>
                 /// </summary>
                 [NameInMap("Configuration")]
                 [Validation(Required=false)]
                 public string Configuration { get; set; }
 
                 /// <summary>
-                /// <para>The details of the resource change that triggered this evaluation.</para>
+                /// <para>The details of the resource change that triggered the compliance evaluation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;OSS存储空间ACL禁止公共读写\&quot;:[{\&quot;accountId\&quot;:100931896542****,\&quot;configRuleId\&quot;:\&quot;cr-965f626622af003d****\&quot;,\&quot;configRuleArn\&quot;:\&quot;acs:config::100931896542****:rule/cr-965f626622af003d****\&quot;,\&quot;configRuleName\&quot;:\&quot;OSS存储空间ACL禁止公共读写\&quot;,\&quot;complianceType\&quot;:\&quot;COMPLIANT\&quot;,\&quot;riskLevel\&quot;:1,\&quot;annotation\&quot;:\&quot;\&quot;,\&quot;invokingEventMessageType\&quot;:\&quot;ScheduledNotification\&quot;},{}]}</para>
+                /// <para>{
+                ///     &quot;ResourceGroupId&quot;: [
+                ///         &quot;rg-acfmy4dfoau****&quot;,
+                ///         &quot;rg-a3dmy4lksta****&quot;
+                ///     ]
+                /// }</para>
                 /// </summary>
                 [NameInMap("ConfigurationDiff")]
                 [Validation(Required=false)]
                 public string ConfigurationDiff { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region where the resource resides.</para>
+                /// <para>The ID of the region in which the resource resides.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -104,43 +137,41 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public long? ResourceCreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The resource ID.</para>
+                /// <para>The ID of the resource.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>new-bucket</para>
+                /// <para>test-private-oss****</para>
                 /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource name.</para>
+                /// <para>The name of the resource.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>new-bucket</para>
+                /// <para>test-private-oss****</para>
                 /// </summary>
                 [NameInMap("ResourceName")]
                 [Validation(Required=false)]
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// <para>The status of the resource. The status of a resource is defined by the corresponding Alibaba Cloud service. This parameter can be empty. For example:</para>
+                /// <para>The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:</para>
                 /// <list type="bullet">
-                /// <item><description><para>If the resource type is ACS::ECS::Instance, this parameter can be Running or Stopped because an ECS instance is stateful.</para>
-                /// </description></item>
-                /// <item><description><para>If the resource type is ACS::OSS::Bucket, this parameter is empty because an OSS bucket is stateless.</para>
-                /// </description></item>
+                /// <item><description>If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.</description></item>
+                /// <item><description>If the ResourceType parameter is set to ACS::OSS::Bucket, the resource is an OSS bucket that does not have a specific state. In this case, this parameter is left empty.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>null</para>
+                /// <para>Running</para>
                 /// </summary>
                 [NameInMap("ResourceStatus")]
                 [Validation(Required=false)]
                 public string ResourceStatus { get; set; }
 
                 /// <summary>
-                /// <para>The resource type.</para>
+                /// <para>The type of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACS::OSS::Bucket</para>
@@ -162,7 +193,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of entries returned per page.</para>
+            /// <para>The maximum number of entries returned for a single request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -172,7 +203,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The token used to query the next page.</para>
+            /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5OVS5J4I1/UKTkHV5oNs****</para>

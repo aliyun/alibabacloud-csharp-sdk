@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DescribeDiscoveredResourceBatchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6CE4ABA1-9A57-41A9-8EA9-E8B17D46****</para>
+        /// <para>6CE4ABA1-9A57-41A9-8EA9-E8B17D4671CD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

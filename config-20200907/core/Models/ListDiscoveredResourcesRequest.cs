@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListDiscoveredResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query resources, specified as a UNIX timestamp in milliseconds. Note:</para>
+        /// <para>The end time of the time range for querying resources. The value is a timestamp in the UTC format. When you specify this parameter, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description><para>The value cannot be earlier than StartUpdateTimestamp.</para>
-        /// </description></item>
-        /// <item><description><para>The time interval between StartUpdateTimestamp and EndUpdateTimestamp cannot exceed 30 days.</para>
-        /// </description></item>
-        /// <item><description><para>Specify both StartUpdateTimestamp and EndUpdateTimestamp, or leave both blank.</para>
-        /// </description></item>
+        /// <item><description>The value must be a timestamp in milliseconds.</description></item>
+        /// <item><description>The value cannot be less than the value of the StartUpdateTimestamp parameter. The interval between the value and the value of the StartUpdateTimestamp parameter must be less than or equal to 30 days.</description></item>
+        /// <item><description>The StartUpdateTimestamp and EndUpdateTimestamp parameters must be specified at the same time or left empty at the same time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +25,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public long? EndUpdateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The resource types to exclude. Separate multiple resource types with commas (,). This parameter takes precedence over the ResourceTypes parameter.</para>
+        /// <para>The types of resources that are excluded. Separate multiple values with commas (,). If this parameter conflicts with the ResourceTypes parameter, this parameter prevails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACS::ECS::Instance,ACS::ECS::NetworkInterface</para>
@@ -38,7 +35,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ExcludeResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page. Valid values: 1 to 100.</para>
+        /// <para>The maximum number of entries returned for a single request. Valid values: 1 to 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +49,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. If the response is truncated, use this token in a subsequent request to retrieve the next page of results.</para>
+        /// <para>The <c>token</c> that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IWBjqMYSy0is7zSMGu16****</para>
@@ -74,10 +71,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The status of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: The resource is deleted. If you delete a resource in the corresponding Alibaba Cloud service, Cloud Config displays the resource as <b>Deleted</b>.</para>
-        /// </description></item>
-        /// <item><description><para>1 (Default): The resource is active. If a resource is managed, Cloud Config displays the resource as <b>Active</b>.</para>
-        /// </description></item>
+        /// <item><description>0: The resource is deleted. If a resource is deleted from the desired cloud service, <b>Deleted</b> is displayed in the resource list in the Cloud Config console.</description></item>
+        /// <item><description>1 (default): The resource is retained. If a resource is managed as expected, <b>Active</b> is displayed in the resource list in the Cloud Config console.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,18 +92,12 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
-        /// <summary>
-        /// <para>The resource name.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>test-resource-name</para>
-        /// </summary>
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Separate multiple resource types with commas (,).</para>
+        /// <para>The type of the resource. Separate multiple resource types with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACS::ECS::NetworkInterface</para>
@@ -118,14 +107,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query resources, specified as a UNIX timestamp in milliseconds. Note:</para>
+        /// <para>The start time of the time range for querying resources. The value is a timestamp in the UTC format. When you specify this parameter, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description><para>The value cannot be later than EndUpdateTimestamp.</para>
-        /// </description></item>
-        /// <item><description><para>The time interval between StartUpdateTimestamp and EndUpdateTimestamp cannot exceed 30 days.</para>
-        /// </description></item>
-        /// <item><description><para>Specify both StartUpdateTimestamp and EndUpdateTimestamp, or leave both blank.</para>
-        /// </description></item>
+        /// <item><description>The value must be a timestamp in milliseconds.</description></item>
+        /// <item><description>The value cannot be greater than the value of the EndUpdateTimestamp parameter. The interval between the value and the value of the EndUpdateTimestamp parameter must be less than or equal to 30 days.</description></item>
+        /// <item><description>The StartUpdateTimestamp and EndUpdateTimestamp parameters must be specified at the same time or left blank at the same time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

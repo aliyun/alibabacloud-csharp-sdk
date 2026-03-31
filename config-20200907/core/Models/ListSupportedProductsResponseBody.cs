@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <para>The maximum number of entries to return for a single request. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D99AjqMNSy0ls7zBNCfcs****</para>
+        /// <para>D3AjqMNSy0ls7zBNCf3a****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>610B0276-ABEE-57DF-9C13-C2415FADA7D6</para>
+        /// <para>610B0276-ABEE-57DF-9C13-C2324FADA9D7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

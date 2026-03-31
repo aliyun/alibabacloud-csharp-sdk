@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class GetAggregateConfigRuleComplianceByPackResponseBody : TeaModel {
         /// <summary>
-        /// <para>The compliance results of the rules in the compliance pack.</para>
+        /// <para>The compliance evaluation results that are returned by rules in the compliance package.</para>
         /// </summary>
         [NameInMap("ConfigRuleComplianceResult")]
         [Validation(Required=false)]
         public GetAggregateConfigRuleComplianceByPackResponseBodyConfigRuleComplianceResult ConfigRuleComplianceResult { get; set; }
         public class GetAggregateConfigRuleComplianceByPackResponseBodyConfigRuleComplianceResult : TeaModel {
             /// <summary>
-            /// <para>The ID of the compliance pack.</para>
+            /// <para>The ID of the compliance package.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cp-541e626622af0087****</para>
@@ -26,34 +26,24 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             [Validation(Required=false)]
             public string CompliancePackId { get; set; }
 
-            /// <summary>
-            /// <para>The total number of rules for which all evaluation results are <b>Compliant</b>.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>0</para>
-            /// </summary>
             [NameInMap("CompliantCount")]
             [Validation(Required=false)]
             public int? CompliantCount { get; set; }
 
             /// <summary>
-            /// <para>A list of rule compliance results.</para>
+            /// <para>The information about rules in the compliance package.</para>
             /// </summary>
             [NameInMap("ConfigRuleCompliances")]
             [Validation(Required=false)]
             public List<GetAggregateConfigRuleComplianceByPackResponseBodyConfigRuleComplianceResultConfigRuleCompliances> ConfigRuleCompliances { get; set; }
             public class GetAggregateConfigRuleComplianceByPackResponseBodyConfigRuleComplianceResultConfigRuleCompliances : TeaModel {
                 /// <summary>
-                /// <para>The compliance result. Valid values:</para>
+                /// <para>The compliance evaluation result returned by the rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>COMPLIANT: The rule is compliant.</para>
-                /// </description></item>
-                /// <item><description><para>NON_COMPLIANT: The rule is non-compliant.</para>
-                /// </description></item>
-                /// <item><description><para>NOT_APPLICABLE: The rule is not applicable.</para>
-                /// </description></item>
-                /// <item><description><para>INSUFFICIENT_DATA: No data is available.</para>
-                /// </description></item>
+                /// <item><description>COMPLIANT: The relevant resources are evaluated as compliant.</description></item>
+                /// <item><description>NON_COMPLIANT: The relevant resources are evaluated as non-compliant.</description></item>
+                /// <item><description>NOT_APPLICABLE: The rule does not apply to your resources.</description></item>
+                /// <item><description>INSUFFICIENT_DATA: No resource data is available.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -64,7 +54,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ComplianceType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the rule in the compliance pack.</para>
+                /// <para>The ID of the rule.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cr-fdc8626622af00f9****</para>
@@ -74,10 +64,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the rule in the compliance pack.</para>
+                /// <para>The name of the rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The bandwidth of the Elastic IP instance meets the minimum requirements.</para>
+                /// <para>test-rule-name</para>
                 /// </summary>
                 [NameInMap("ConfigRuleName")]
                 [Validation(Required=false)]
@@ -85,51 +75,33 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 
             }
 
-            /// <summary>
-            /// <para>The total number of rules whose evaluation results include <b>Ignored</b>.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("IgnoredCount")]
             [Validation(Required=false)]
             public int? IgnoredCount { get; set; }
 
-            /// <summary>
-            /// <para>The total number of rules whose evaluation results include <b>Insufficient Data</b>.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("InsufficientDataCount")]
             [Validation(Required=false)]
             public int? InsufficientDataCount { get; set; }
 
             /// <summary>
-            /// <para>The number of non-compliant rules.</para>
+            /// <para>The number of rules against which specific resources are evaluated as non-compliant.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("NonCompliantCount")]
             [Validation(Required=false)]
             public int? NonCompliantCount { get; set; }
 
-            /// <summary>
-            /// <para>The total number of rules whose evaluation results include <b>Not Applicable</b>.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("NotApplicableCount")]
             [Validation(Required=false)]
             public int? NotApplicableCount { get; set; }
 
             /// <summary>
-            /// <para>The total number of rules.</para>
+            /// <para>The total number of rules in the compliance package.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("TotalCount")]
             [Validation(Required=false)]
@@ -138,7 +110,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C6B0C0A8-3245-48F1-AEAB-BC1A446E99D0</para>

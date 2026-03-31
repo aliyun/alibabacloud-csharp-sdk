@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class ListConfigDeliveryChannelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of delivery channels.</para>
+        /// <para>The information about the delivery channels.</para>
         /// </summary>
         [NameInMap("DeliveryChannels")]
         [Validation(Required=false)]
         public List<ListConfigDeliveryChannelsResponseBodyDeliveryChannels> DeliveryChannels { get; set; }
         public class ListConfigDeliveryChannelsResponseBodyDeliveryChannels : TeaModel {
             /// <summary>
-            /// <para>The ID of the current Alibaba Cloud account.</para>
+            /// <para>The ID of your Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120886317861****</para>
@@ -27,12 +27,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public long? AccountId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to receive compliance snapshots. Cloud Config delivers resource compliance and non-compliance information to SLS. Valid values:</para>
+            /// <para>Indicates whether the specified destination receives scheduled compliant snapshots. Cloud Config delivers scheduled compliant snapshots at <c>04:00Z</c> and <c>16:00Z</c> to  Log Service every day. The time is displayed in UTC. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Receive compliance snapshots.</para>
-            /// </description></item>
-            /// <item><description><para>false: Do not receive compliance snapshots.</para>
-            /// </description></item>
+            /// <item><description>true: The specified destination receives scheduled compliant snapshots.</description></item>
+            /// <item><description>false: The specified destination does not receive scheduled compliant snapshots.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,12 +41,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public bool? CompliantSnapshot { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to receive the resource configuration history. When a resource configuration changes, Cloud Config delivers the resource configuration history to OSS, SLS, or MNS. Valid values:</para>
+            /// <para>Indicates whether the specified destination receives resource change logs. If the value of this parameter is true, Cloud Config delivers the resource change logs to OSS, Log Service, or MNS when the configurations of the resources change. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Receive the resource configuration history.</para>
-            /// </description></item>
-            /// <item><description><para>false: Do not receive the resource configuration history.</para>
-            /// </description></item>
+            /// <item><description>true: The specified destination receives resource change logs.</description></item>
+            /// <item><description>false: The specified destination does not receive resource change logs.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,12 +55,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public bool? ConfigurationItemChangeNotification { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to receive scheduled resource snapshots. Cloud Config delivers scheduled resource snapshots to OSS or SLS at <c>04:00Z</c> and <c>16:00Z</c> (UTC) every day. Valid values:</para>
+            /// <para>Indicates whether the specified destination receives scheduled resource snapshots. Cloud Config delivers scheduled resource snapshots at <c>04:00Z</c> and <c>16:00Z</c> to OSS, MNS, or Log Service every day. The time is displayed in UTC. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Receive scheduled resource snapshots.</para>
-            /// </description></item>
-            /// <item><description><para>false: Do not receive scheduled resource snapshots.</para>
-            /// </description></item>
+            /// <item><description>true: The specified destination receives scheduled resource snapshots.</description></item>
+            /// <item><description>false: The specified destination does not receive scheduled resource snapshots.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +69,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public bool? ConfigurationSnapshot { get; set; }
 
             /// <summary>
-            /// <para>The ARN of the role that is assumed by the delivery channel.</para>
+            /// <para>The ARN of the role assumed by the delivery channel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::120886317861****:role/aliyunserviceroleforconfig</para>
@@ -85,26 +79,26 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string DeliveryChannelAssumeRoleArn { get; set; }
 
             /// <summary>
-            /// <para>The rule attached to the delivery channel. This parameter is supported for MNS channels and for snapshot delivery to SLS channels.</para>
+            /// <para>The rule that is attached to the delivery channel. This parameter is available when you deliver data of all types to MNS or deliver snapshots to Log Service.</para>
             /// <list type="bullet">
-            /// <item><description><para>To subscribe to MNS events, specify the minimum risk level and resource types:</para>
+            /// <item><description><para>If the value of the DeliveryChannelType parameter is MNS, take note of the following settings of the lowest risk level and resource types of the events to which you subscribed:</para>
             /// <list type="bullet">
-            /// <item><description><para>Minimum risk level of subscribed events: <c>{&quot;filterType&quot;:&quot;RuleRiskLevel&quot;,&quot;value&quot;:&quot;1&quot;,&quot;multiple&quot;:false}</c>.</para>
-            /// <para>\<c>value\\</c> specifies the risk level. Valid values: 1 (high risk), 2 (medium risk), and 3 (low risk).</para>
+            /// <item><description><para>The setting of the lowest risk level for the events to which you want to subscribe is in the following format: <c>{&quot;filterType&quot;:&quot;RuleRiskLevel&quot;,&quot;value&quot;:&quot;1&quot;,&quot;multiple&quot;:false}</c>.</para>
+            /// <para>The <c>value</c> field indicates the lowest risk level of the events to which you want to subscribe. Valid values: 1, 2, and 3. The value 1 indicates the high risk level, the value 2 indicates the medium risk level, and the value 3 indicates the low risk level.</para>
             /// </description></item>
-            /// <item><description><para>Resource types of subscribed events: <c>{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ACK::Cluster&quot;,&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;],&quot;multiple&quot;:true}</c>.</para>
-            /// <para>\<c>values\\</c> is a JSON array of the resource types.
-            /// Example:
-            /// <c>[{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;,&quot;ACS::CDN::Domain&quot;,&quot;ACS::CEN::CenBandwidthPackage&quot;,&quot;ACS::CEN::CenInstance&quot;,&quot;ACS::CEN::Flowlog&quot;,&quot;ACS::DdosCoo::Instance&quot;],&quot;multiple&quot;:true}]</c></para>
+            /// <item><description><para>The setting of the resource types of the events to which you want to subscribe is in the following format: <c>{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ACK::Cluster&quot;,&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;],&quot;multiple&quot;:true}</c>.</para>
+            /// <para>The <c>values</c> field indicates the resource types of the events to which you want to subscribe. The value of the field is a JSON array. Examples:</para>
             /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>To deliver snapshots to SLS, specify the resource types: <c>{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ACK::Cluster&quot;,&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;],&quot;multiple&quot;:true}</c>.</para>
-            /// <para>\<c>values\\</c> is a JSON array of the resource types.
-            /// Example:
-            /// <c>[{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;,&quot;ACS::CDN::Domain&quot;,&quot;ACS::CEN::CenBandwidthPackage&quot;,&quot;ACS::CEN::CenInstance&quot;,&quot;ACS::CEN::Flowlog&quot;,&quot;ACS::DdosCoo::Instance&quot;],&quot;multiple&quot;:true}]</c></para>
+            /// </list>
+            /// <para><c>[{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;,&quot;ACS::CDN::Domain&quot;,&quot;ACS::CEN::CenBandwidthPackage&quot;,&quot;ACS::CEN::CenInstance&quot;,&quot;ACS::CEN::Flowlog&quot;,&quot;ACS::DdosCoo::Instance&quot;],&quot;multiple&quot;:true}]</c></para>
+            /// <list type="bullet">
+            /// <item><description><para>If you set the DeliveryChannelType parameter to SLS, the setting of the resource types of the snapshots to which you want to deliver is in the following format: <c>{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ACK::Cluster&quot;,&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;],&quot;multiple&quot;:true}</c>.</para>
+            /// <para>The <c>values</c> field specifies the resource types of the snapshots to which you want to deliver. The value of the field is a JSON array. Examples:</para>
             /// </description></item>
             /// </list>
+            /// <para><c>[{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;,&quot;ACS::CDN::Domain&quot;,&quot;ACS::CEN::CenBandwidthPackage&quot;,&quot;ACS::CEN::CenInstance&quot;,&quot;ACS::CEN::Flowlog&quot;,&quot;ACS::DdosCoo::Instance&quot;],&quot;multiple&quot;:true}]</c></para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;filterType&quot;:&quot;ResourceType&quot;,&quot;values&quot;:[&quot;ACS::ActionTrail::Trail&quot;,&quot;ACS::CBWP::CommonBandwidthPackage&quot;,&quot;ACS::CDN::Domain&quot;,&quot;ACS::CEN::CenBandwidthPackage&quot;,&quot;ACS::CEN::CenInstance&quot;,&quot;ACS::CEN::Flowlog&quot;,&quot;ACS::DdosCoo::Instance&quot;],&quot;multiple&quot;:true}]</para>
@@ -136,12 +130,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// <para>The Alibaba Cloud Resource Name (ARN) of the delivery destination.</para>
             /// <list type="bullet">
-            /// <item><description><para>If \<c>DeliveryChannelType\\</c> is \<c>OSS\\</c>, this parameter is the ARN of an OSS bucket.</para>
-            /// </description></item>
-            /// <item><description><para>If \<c>DeliveryChannelType\\</c> is \<c>MNS\\</c>, this parameter is the ARN of an MNS topic.</para>
-            /// </description></item>
-            /// <item><description><para>If \<c>DeliveryChannelType\\</c> is \<c>SLS\\</c>, this parameter is the ARN of an SLS Logstore.</para>
-            /// </description></item>
+            /// <item><description>If the value of the DeliveryChannelType parameter is OSS, the value of this parameter is the ARN of the destination OSS bucket.</description></item>
+            /// <item><description>If the value of the DeliveryChannelType parameter is MNS, the value of this parameter is the ARN of the destination MNS topic.</description></item>
+            /// <item><description>If the value of the DeliveryChannelType parameter is SLS, the value of this parameter is the ARN of the destination Log Service Logstore.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -154,12 +145,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// <para>The type of the delivery channel. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>OSS: Object Storage Service (OSS).</para>
-            /// </description></item>
-            /// <item><description><para>MNS: Simple Message Queue (formerly MNS).</para>
-            /// </description></item>
-            /// <item><description><para>SLS: Simple Log Service (SLS).</para>
-            /// </description></item>
+            /// <item><description>OSS: Object Storage Service (OSS)</description></item>
+            /// <item><description>MNS: Message Service (MNS)</description></item>
+            /// <item><description>SLS: Log Service</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -170,8 +158,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string DeliveryChannelType { get; set; }
 
             /// <summary>
-            /// <para>The time when scheduled resource snapshots start to be delivered every day.</para>
-            /// <para>The format is <c>HH:mmZ</c> (UTC).</para>
+            /// <para>The time when Cloud Config delivers scheduled resources snapshots every day.</para>
+            /// <para>Format: <c>HH:mmZ</c>. This time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>09:10Z</para>
@@ -191,12 +179,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to receive resource non-compliance events. When a resource becomes non-compliant, Cloud Config delivers a resource non-compliance event to SLS or MNS. Valid values:</para>
+            /// <para>Indicates whether the specified destination receives resource non-compliance events. If the value of this parameter is true, Cloud Config delivers resource non-compliance events to Log Service or MNS when resources are evaluated as non-compliant. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Receive resource non-compliance events.</para>
-            /// </description></item>
-            /// <item><description><para>false: Do not receive resource non-compliance events.</para>
-            /// </description></item>
+            /// <item><description>true: The specified destination receives resource non-compliance events.</description></item>
+            /// <item><description>false: The specified destination does not receive resource non-compliance events.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -207,7 +193,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public bool? NonCompliantNotification { get; set; }
 
             /// <summary>
-            /// <para>The destination OSS bucket to which the data is transferred when the size of the data exceeds the limit of the delivery channel.</para>
+            /// <para>The ARN of the OSS bucket to which you want to transfer the delivery data when the size of the data exceeds the specified upper limit of the delivery channel.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:oss:cn-shanghai:100931896542****:new-bucket</para>
@@ -219,10 +205,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <summary>
             /// <para>The status of the delivery channel. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>0: The delivery channel is disabled.</para>
-            /// </description></item>
-            /// <item><description><para>1: The delivery channel is enabled.</para>
-            /// </description></item>
+            /// <item><description>0: The delivery channel is disabled.</description></item>
+            /// <item><description>1: The delivery channel is enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

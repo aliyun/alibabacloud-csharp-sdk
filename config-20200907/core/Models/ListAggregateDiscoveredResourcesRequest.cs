@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
     public class ListAggregateDiscoveredResourcesRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the account group.</para>
-        /// <para>For more information about how to obtain the ID of an account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
+        /// <para>For more information about how to obtain the ID of the account group, see <a href="https://help.aliyun.com/document_detail/255797.html">ListAggregators</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,14 +22,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string AggregatorId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. This is a standard UTC timestamp. The following limits apply:</para>
+        /// <para>The end time of the time range for querying resources. The value is a timestamp in the UTC format. When you specify this parameter, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description><para>The value must be a timestamp in milliseconds.</para>
-        /// </description></item>
-        /// <item><description><para>The value cannot be earlier than StartUpdateTimestamp. The interval between StartUpdateTimestamp and EndUpdateTimestamp cannot exceed 30 days.</para>
-        /// </description></item>
-        /// <item><description><para>You must specify both StartUpdateTimestamp and EndUpdateTimestamp, or leave both empty.</para>
-        /// </description></item>
+        /// <item><description>The value must be a timestamp in milliseconds.</description></item>
+        /// <item><description>The value cannot be less than the value of the StartUpdateTimestamp parameter. The interval between the value and the value of the StartUpdateTimestamp parameter must be less than or equal to 30 days.</description></item>
+        /// <item><description>The StartUpdateTimestamp and EndUpdateTimestamp parameters must be specified at the same time or left empty at the same time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +37,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public long? EndUpdateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The resource types to exclude. Separate multiple resource types with commas (,). This parameter has a higher priority than the ResourceTypes parameter.</para>
+        /// <para>The types of resources that are excluded. Separate multiple values with commas (,). If this parameter conflicts with the ResourceTypes parameter, this parameter prevails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACS::ECS::Instance,ACS::ECS::NetworkInterface</para>
@@ -61,7 +58,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>If the response is truncated, use the <c>NextToken</c> to retrieve the next page of results.</para>
+        /// <para>The <c>token</c> that you want to use to initiate the current request. If the response of the previous request is truncated, you can use this token to initiate another request and obtain the remaining entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IWBjqMYSy0is7zSMGu16****</para>
@@ -74,7 +71,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the resource resides. Separate multiple region IDs with commas (,).</para>
+        /// <para>The ID of the region in which the resource resides. Separate multiple region IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-huhehaote</para>
@@ -84,7 +81,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string Regions { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the resources to be queried belong. The account is a member of the account group.</para>
+        /// <para>The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100931896542****</para>
@@ -96,10 +93,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <summary>
         /// <para>The status of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: The resource is deleted. A resource is displayed as Deleted in Cloud Config after it is deleted from the source Alibaba Cloud service.</para>
-        /// </description></item>
-        /// <item><description><para>1 (Default): The resource is active. A resource is displayed as Active in Cloud Config if it is properly managed.</para>
-        /// </description></item>
+        /// <item><description>0: The resource is deleted. If a resource is deleted from the desired cloud service, <b>Deleted</b> is displayed in the resource list in the Cloud Config console.</description></item>
+        /// <item><description>1 (default): The resource is retained. If a resource is managed as expected, <b>Active</b> is displayed in the resource list in the Cloud Config console.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,12 +114,6 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         [Validation(Required=false)]
         public string ResourceId { get; set; }
 
-        /// <summary>
-        /// <para>The resource name.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>launch-advisor-20200330</para>
-        /// </summary>
         [NameInMap("ResourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
@@ -136,7 +125,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Separate multiple resource types with commas (,).</para>
+        /// <para>The type of the resource. Separate multiple resource types with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACS::ECS::NetworkInterface</para>
@@ -146,14 +135,11 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public string ResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. This is a standard UTC timestamp. The following limits apply:</para>
+        /// <para>The start time of the time range for querying resources. The value is a timestamp in the Coordinated Universal Time (UTC) format. When you specify this parameter, take note of the following limits:</para>
         /// <list type="bullet">
-        /// <item><description><para>The value must be a timestamp in milliseconds.</para>
-        /// </description></item>
-        /// <item><description><para>The value cannot be later than EndUpdateTimestamp. The interval between StartUpdateTimestamp and EndUpdateTimestamp cannot exceed 30 days.</para>
-        /// </description></item>
-        /// <item><description><para>You must specify both StartUpdateTimestamp and EndUpdateTimestamp, or leave both empty.</para>
-        /// </description></item>
+        /// <item><description>The value must be a timestamp in milliseconds.</description></item>
+        /// <item><description>The value cannot be greater than the value of the EndUpdateTimestamp parameter. The interval between the value and the value of the EndUpdateTimestamp parameter must be less than or equal to 30 days.</description></item>
+        /// <item><description>The StartUpdateTimestamp and EndUpdateTimestamp parameters must be specified at the same time or left empty at the same time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

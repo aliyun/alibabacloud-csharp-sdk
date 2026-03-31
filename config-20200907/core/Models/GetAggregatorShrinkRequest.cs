@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The tags of the resource. This parameter is deprecated and is not in use.</para>
-        /// <para>A maximum of 20 tags can be attached.</para>
+        /// <para>The tags of the resource.</para>
+        /// <para>You can add up to 20 tags to a resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

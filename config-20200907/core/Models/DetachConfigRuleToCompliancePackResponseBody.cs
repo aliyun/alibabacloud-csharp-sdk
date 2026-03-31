@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
 {
     public class DetachConfigRuleToCompliancePackResponseBody : TeaModel {
         /// <summary>
-        /// <para>The results of the operation to detach rules.</para>
+        /// <para>The results of the operations to remove one or more rules.</para>
         /// </summary>
         [NameInMap("OperateRuleResult")]
         [Validation(Required=false)]
         public DetachConfigRuleToCompliancePackResponseBodyOperateRuleResult OperateRuleResult { get; set; }
         public class DetachConfigRuleToCompliancePackResponseBodyOperateRuleResult : TeaModel {
             /// <summary>
-            /// <para>A list of the results of the operation to detach rules.</para>
+            /// <para>The result of the operation to remove the rule.</para>
             /// </summary>
             [NameInMap("OperateRuleItemList")]
             [Validation(Required=false)]
@@ -34,17 +34,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ConfigRuleId { get; set; }
 
                 /// <summary>
-                /// <para>The error code.</para>
+                /// <para>The error code returned.</para>
                 /// <list type="bullet">
-                /// <item><description>This parameter is empty if the operation is successful.</description></item>
-                /// </list>
-                /// <para>&lt;props=&quot;china&quot;&gt;</para>
-                /// <list type="bullet">
-                /// <item><description>An error code is returned if the operation fails. For more information about error codes, see the <a href="https://error-center.aliyun.com/status/product/Config">Error Center</a>.</description></item>
-                /// </list>
-                /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-                /// <list type="bullet">
-                /// <item><description>An error code is returned if the operation fails. For more information about error codes, see the <a href="https://error-center.alibabacloud.com/status/product/Config">Error Center</a>.</description></item>
+                /// <item><description>This parameter is empty if the rule is removed from the compliance package.</description></item>
+                /// <item><description>An error code is returned if the rule fails to be removed from the compliance package. For more information about error codes, see <a href="https://error-center.alibabacloud.com/status/product/Config">Error codes</a>.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -55,12 +48,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the operation was successful. Valid values:</para>
+                /// <para>Indicates whether the request was successful. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>true: The operation was successful.</para>
-                /// </description></item>
-                /// <item><description><para>false: The operation failed.</para>
-                /// </description></item>
+                /// <item><description>true: The request was successful.</description></item>
+                /// <item><description>false: The request failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -75,7 +66,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1AC7AED1-172F-42AE-9C12-295BC2ADB12A</para>

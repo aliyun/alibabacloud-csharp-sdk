@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<GetRemediationTemplateResponseBodyRemediationTemplates> RemediationTemplates { get; set; }
         public class GetRemediationTemplateResponseBodyRemediationTemplates : TeaModel {
             /// <summary>
-            /// <para>The identifier of the supported rule template.</para>
+            /// <para>The ID of the supported rule template.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string ManagedRuleIdentifier { get; set; }
 
             /// <summary>
-            /// <para>The type of the automatic remediation template. Valid value: OOS (Operation Orchestration).</para>
+            /// <para>The type of the automatic remediation template. The value is set to OOS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OOS</para>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string RemediationType { get; set; }
 
             /// <summary>
-            /// <para>The definition of the template parameters.</para>
+            /// <para>The parameters of the automatic remediation template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;Parameters\&quot;:{\&quot;regionId\&quot;:{\&quot;AllowValues\&quot;:\&quot;\&quot;,\&quot;AssociationProperty\&quot;:\&quot;RegionId\&quot;,\&quot;CreateDated\&quot;:\&quot;2025-08-04T09:54:57\&quot;,\&quot;Default\&quot;:\&quot;{regionId}\&quot;,\&quot;Description\&quot;:{\&quot;en\&quot;:\&quot;regionId\&quot;,\&quot;zh-cn\&quot;:\&quot;regionId\&quot;},\&quot;Id\&quot;:688,\&quot;MaxKeyLength\&quot;:\&quot;125\&quot;,\&quot;MaxValueLength\&quot;:\&quot;255\&quot;,\&quot;ModifiedDate\&quot;:\&quot;2025-08-04T09:54:57\&quot;,\&quot;Name\&quot;:\&quot;regionId\&quot;,\&quot;Optional\&quot;:1,\&quot;TemplateIdentifier\&quot;:\&quot;ACS-ALB-BulkyEnableDeletionProtection\&quot;,\&quot;Type\&quot;:\&quot;String\&quot;,\&quot;Version\&quot;:\&quot;LASTEST\&quot;},\&quot;loadBalancerIds\&quot;:{\&quot;AllowValues\&quot;:\&quot;\&quot;,\&quot;AssociationProperty\&quot;:\&quot;\&quot;,\&quot;CreateDated\&quot;:\&quot;2025-08-04T09:54:57\&quot;,\&quot;Default\&quot;:\&quot;[\\\&quot;{resourceId}\\\&quot;]\&quot;,\&quot;Description\&quot;:{\&quot;en\&quot;:\&quot;loadBalancerIds\&quot;,\&quot;zh-cn\&quot;:\&quot;loadBalancerIds\&quot;},\&quot;Id\&quot;:689,\&quot;MaxKeyLength\&quot;:\&quot;125\&quot;,\&quot;MaxValueLength\&quot;:\&quot;255\&quot;,\&quot;ModifiedDate\&quot;:\&quot;2025-08-04T09:54:57\&quot;,\&quot;Name\&quot;:\&quot;loadBalancerIds\&quot;,\&quot;Optional\&quot;:1,\&quot;TemplateIdentifier\&quot;:\&quot;ACS-ALB-BulkyEnableDeletionProtection\&quot;,\&quot;Type\&quot;:\&quot;ARRAY\&quot;,\&quot;Version\&quot;:\&quot;LASTEST\&quot;}}}</para>
+            /// <para>{\&quot;Parameters\&quot;:{\&quot;regionId\&quot;:{\&quot;AssociationProperty\&quot;:\&quot;RegionId\&quot;,\&quot;CreateDated\&quot;:\&quot;2023-09-08T16:36:15\&quot;,\&quot;Default\&quot;:\&quot;{regionId}\&quot;,\&quot;Description\&quot;:{\&quot;en\&quot;:\&quot;regionId\&quot;,\&quot;zh-cn\&quot;:\&quot;regionId\&quot;},\&quot;Id\&quot;:538,\&quot;MaxKeyLength\&quot;:\&quot;125\&quot;,\&quot;MaxValueLength\&quot;:\&quot;255\&quot;,\&quot;ModifiedDate\&quot;:\&quot;2023-09-08T16:36:15\&quot;,\&quot;Name\&quot;:\&quot;regionId\&quot;,\&quot;Optional\&quot;:1,\&quot;TemplateIdentifier\&quot;:\&quot;ACS-ALB-BulkyEnableDeletionProtection\&quot;,\&quot;Type\&quot;:\&quot;String\&quot;,\&quot;Version\&quot;:\&quot;LASTEST\&quot;},\&quot;loadBalancerIds\&quot;:{\&quot;CreateDated\&quot;:\&quot;2023-09-08T16:36:16\&quot;,\&quot;Default\&quot;:\&quot;[\\\&quot;{resourceId}\\\&quot;]\&quot;,\&quot;Description\&quot;:{\&quot;en\&quot;:\&quot;loadBalancerIds\&quot;,\&quot;zh-cn\&quot;:\&quot;loadBalancerIds\&quot;},\&quot;Id\&quot;:539,\&quot;MaxKeyLength\&quot;:\&quot;125\&quot;,\&quot;MaxValueLength\&quot;:\&quot;255\&quot;,\&quot;ModifiedDate\&quot;:\&quot;2023-09-08T16:36:16\&quot;,\&quot;Name\&quot;:\&quot;loadBalancerIds\&quot;,\&quot;Optional\&quot;:1,\&quot;TemplateIdentifier\&quot;:\&quot;ACS-ALB-BulkyEnableDeletionProtection\&quot;,\&quot;Type\&quot;:\&quot;ARRAY\&quot;,\&quot;Version\&quot;:\&quot;LASTEST\&quot;}}}</para>
             /// </summary>
             [NameInMap("TemplateDefinition")]
             [Validation(Required=false)]
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Call the EnableDeletionProtection interface to enable ALB instance deletion protection. Be aware of the risks and exercise caution.</para>
+            /// <para>调用接口EnableDeletionProtection，开启ALB实例删除保护，请您知晓风险谨慎操作。</para>
             /// </summary>
             [NameInMap("TemplateDescription")]
             [Validation(Required=false)]
             public string TemplateDescription { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the automatic remediation template.</para>
+            /// <para>The ID of the automatic remediation template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACS-ALB-BulkyEnableDeletionProtection</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             /// <para>The name of the automatic remediation template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Enable ALB instance deletion protection</para>
+            /// <para>开启ALB实例删除保护</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>E232FC35-BD40-51E3-B2EB-09416A23****</para>
+        /// <para>E232FC35-BD40-51E3-B2EB-09416A234939</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

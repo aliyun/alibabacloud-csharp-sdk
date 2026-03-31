@@ -23,8 +23,8 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The tags of the resource. This parameter is deprecated and is not in use.</para>
-        /// <para>A maximum of 20 tags can be attached.</para>
+        /// <para>The tags of the resource.</para>
+        /// <para>You can add up to 20 tags to a resource.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -32,8 +32,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
         public List<GetAggregatorRequestTag> Tag { get; set; }
         public class GetAggregatorRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource.</para>
-            /// <para>A maximum of 20 tag keys can be attached.</para>
+            /// <para>The tag key.</para>
+            /// <para>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>You can specify at most 20 tag keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key-1</para>
@@ -43,8 +44,9 @@ namespace AlibabaCloud.SDK.Config20200907.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource.</para>
-            /// <para>A maximum of 20 tag values can be attached.</para>
+            /// <para>The tag values.</para>
+            /// <para>The tag values can be an empty string or up to 128 characters in length. The tag values cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>Each key-value must be unique. You can specify at most 20 tag values in each call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value-1</para>
