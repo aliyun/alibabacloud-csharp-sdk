@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Integrates the dashboard of Prometheus Service.</para>
+        /// <para>Integrates the dashboard of Managed Service for Prometheus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Integrates the dashboard of Prometheus Service.</para>
+        /// <para>Integrates the dashboard of Managed Service for Prometheus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -359,7 +359,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Integrates the dashboard of Prometheus Service.</para>
+        /// <para>Integrates the dashboard of Managed Service for Prometheus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -383,7 +383,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Integrates the dashboard of Prometheus Service.</para>
+        /// <para>Integrates the dashboard of Managed Service for Prometheus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1239,7 +1239,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a recording rule of Managed Service for Prometheus.</para>
+        /// <para>Creates or updates a recording rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1295,7 +1295,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a recording rule of Managed Service for Prometheus.</para>
+        /// <para>Creates or updates a recording rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1351,7 +1351,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a recording rule of Managed Service for Prometheus.</para>
+        /// <para>Creates or updates a recording rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1375,7 +1375,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or updates a recording rule of Managed Service for Prometheus.</para>
+        /// <para>Creates or updates a recording rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2107,7 +2107,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Blocks alert notifications in a time period.</para>
+        /// <para>Blocks alert notifications. After an alert is blocked, no more notifications are sent within the specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2161,7 +2161,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Blocks alert notifications in a time period.</para>
+        /// <para>Blocks alert notifications. After an alert is blocked, no more notifications are sent within the specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2215,7 +2215,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Blocks alert notifications in a time period.</para>
+        /// <para>Blocks alert notifications. After an alert is blocked, no more notifications are sent within the specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2233,7 +2233,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Blocks alert notifications in a time period.</para>
+        /// <para>Blocks alert notifications. After an alert is blocked, no more notifications are sent within the specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5531,7 +5531,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an EventBridge integration.</para>
+        /// <para>Creates or modifies an EventBridge integration that is used to push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5605,7 +5605,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an EventBridge integration.</para>
+        /// <para>Creates or modifies an EventBridge integration that is used to push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5679,7 +5679,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an EventBridge integration.</para>
+        /// <para>Creates or modifies an EventBridge integration that is used to push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5697,7 +5697,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates or modifies an EventBridge integration.</para>
+        /// <para>Creates or modifies an EventBridge integration that is used to push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9375,7 +9375,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a Prometheus instance for Alibaba Cloud services.</para>
+        /// <para>Uninstalls a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9427,7 +9427,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a Prometheus instance for Alibaba Cloud services.</para>
+        /// <para>Uninstalls a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9479,7 +9479,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a Prometheus instance for Alibaba Cloud services.</para>
+        /// <para>Uninstalls a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9503,7 +9503,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a Prometheus instance for Alibaba Cloud services.</para>
+        /// <para>Uninstalls a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10587,7 +10587,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an EventBridge integration.</para>
+        /// <para>Deletes an EventBridge integration that is used to push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10629,7 +10629,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an EventBridge integration.</para>
+        /// <para>Deletes an EventBridge integration that is used to push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10671,7 +10671,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an EventBridge integration.</para>
+        /// <para>Deletes an EventBridge integration that is used to push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10689,7 +10689,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an EventBridge integration.</para>
+        /// <para>Deletes an EventBridge integration that is used to push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11155,7 +11155,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes collection rules from an integration.</para>
+        /// <para>Deletes the collection rules for a Container Service for Kubernetes (ACK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11211,7 +11211,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes collection rules from an integration.</para>
+        /// <para>Deletes the collection rules for a Container Service for Kubernetes (ACK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11267,7 +11267,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes collection rules from an integration.</para>
+        /// <para>Deletes the collection rules for a Container Service for Kubernetes (ACK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11291,7 +11291,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes collection rules from an integration.</para>
+        /// <para>Deletes the collection rules for a Container Service for Kubernetes (ACK) cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12751,7 +12751,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the silence policy.</para>
+        /// <para>Deletes a silence policy based on its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12793,7 +12793,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the silence policy.</para>
+        /// <para>Deletes a silence policy based on its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12835,7 +12835,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the silence policy.</para>
+        /// <para>Deletes a silence policy based on its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12853,7 +12853,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the silence policy.</para>
+        /// <para>Deletes a silence policy based on its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15151,7 +15151,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instant messaging (IM) chatbots.</para>
+        /// <para>Queries a list of IM chatbots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15205,7 +15205,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instant messaging (IM) chatbots.</para>
+        /// <para>Queries a list of IM chatbots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15259,7 +15259,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instant messaging (IM) chatbots.</para>
+        /// <para>Queries a list of IM chatbots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15277,7 +15277,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries instant messaging (IM) chatbots.</para>
+        /// <para>Queries a list of IM chatbots.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25315,7 +25315,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境addon列表</para>
+        /// <para>Queries the information about the add-ons that are installed in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25361,7 +25361,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境addon列表</para>
+        /// <para>Queries the information about the add-ons that are installed in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25407,7 +25407,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境addon列表</para>
+        /// <para>Queries the information about the add-ons that are installed in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25425,7 +25425,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>环境addon列表</para>
+        /// <para>Queries the information about the add-ons that are installed in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26467,7 +26467,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an EventBridge integration.</para>
+        /// <para>Queries EventBridge integrations that are used to push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26505,7 +26505,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an EventBridge integration.</para>
+        /// <para>Queries EventBridge integrations that are used to push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26543,7 +26543,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an EventBridge integration.</para>
+        /// <para>Queries EventBridge integrations that are used to push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26561,7 +26561,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries an EventBridge integration.</para>
+        /// <para>Queries EventBridge integrations that are used to push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32703,7 +32703,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application monitoring tasks by page.</para>
+        /// <para>Queries Application Monitoring tasks by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32765,7 +32765,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application monitoring tasks by page.</para>
+        /// <para>Queries Application Monitoring tasks by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32827,7 +32827,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application monitoring tasks by page.</para>
+        /// <para>Queries Application Monitoring tasks by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32845,7 +32845,7 @@ namespace AlibabaCloud.SDK.ARMS20190808
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries application monitoring tasks by page.</para>
+        /// <para>Queries Application Monitoring tasks by page.</para>
         /// </summary>
         /// 
         /// <param name="request">

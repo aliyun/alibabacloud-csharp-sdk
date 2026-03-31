@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
         [Validation(Required=false)]
         public ListAddonReleasesResponseBodyData Data { get; set; }
         public class ListAddonReleasesResponseBodyData : TeaModel {
+            [NameInMap("ContainsV2Addon")]
+            [Validation(Required=false)]
+            public bool? ContainsV2Addon { get; set; }
+
             /// <summary>
             /// <para>The queried add-ons.</para>
             /// </summary>

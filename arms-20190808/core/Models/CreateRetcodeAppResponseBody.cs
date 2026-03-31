@@ -86,9 +86,6 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
-            /// <summary>
-            /// <para>The tags of the task.</para>
-            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public CreateRetcodeAppResponseBodyRetcodeAppDataBeanTags Tags { get; set; }
@@ -97,22 +94,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
                 [Validation(Required=false)]
                 public List<CreateRetcodeAppResponseBodyRetcodeAppDataBeanTagsTags> Tags { get; set; }
                 public class CreateRetcodeAppResponseBodyRetcodeAppDataBeanTagsTags : TeaModel {
-                    /// <summary>
-                    /// <para>The tag key.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>TestKey</para>
-                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
-                    /// <summary>
-                    /// <para>The tag value.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>TestValue</para>
-                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
