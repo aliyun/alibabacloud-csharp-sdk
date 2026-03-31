@@ -196,6 +196,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             {
                 query["PolicyType"] = request.PolicyType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -245,6 +249,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
             {
                 query["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -328,6 +336,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             {
                 query["PolicyType"] = request.PolicyType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
             {
                 query["RoleName"] = request.RoleName;
@@ -377,6 +389,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
             {
                 query["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
             {
@@ -464,6 +480,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             {
                 query["PolicyType"] = request.PolicyType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
             {
                 query["UserName"] = request.UserName;
@@ -513,6 +533,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
             {
                 query["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
             {
@@ -2929,8 +2953,14 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Resource Access Management (RAM) role.</para>
+        /// <para>Deletes a regular Resource Access Management (RAM) role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a regular RAM role, call the <a href="https://help.aliyun.com/document_detail/2337680.html">DetachPolicyFromRole</a> operation to remove all policies from the RAM role.
+        /// The DeleteRole operation cannot be used to delete service-linked roles and reserved roles for cloud services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRoleRequest
@@ -2971,8 +3001,14 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Resource Access Management (RAM) role.</para>
+        /// <para>Deletes a regular Resource Access Management (RAM) role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a regular RAM role, call the <a href="https://help.aliyun.com/document_detail/2337680.html">DetachPolicyFromRole</a> operation to remove all policies from the RAM role.
+        /// The DeleteRole operation cannot be used to delete service-linked roles and reserved roles for cloud services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRoleRequest
@@ -3013,8 +3049,14 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Resource Access Management (RAM) role.</para>
+        /// <para>Deletes a regular Resource Access Management (RAM) role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a regular RAM role, call the <a href="https://help.aliyun.com/document_detail/2337680.html">DetachPolicyFromRole</a> operation to remove all policies from the RAM role.
+        /// The DeleteRole operation cannot be used to delete service-linked roles and reserved roles for cloud services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRoleRequest
@@ -3031,8 +3073,14 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Resource Access Management (RAM) role.</para>
+        /// <para>Deletes a regular Resource Access Management (RAM) role.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you delete a regular RAM role, call the <a href="https://help.aliyun.com/document_detail/2337680.html">DetachPolicyFromRole</a> operation to remove all policies from the RAM role.
+        /// The DeleteRole operation cannot be used to delete service-linked roles and reserved roles for cloud services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteRoleRequest
@@ -3338,6 +3386,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             {
                 query["PolicyType"] = request.PolicyType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3387,6 +3439,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
             {
                 query["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3470,6 +3526,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             {
                 query["PolicyType"] = request.PolicyType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
             {
                 query["RoleName"] = request.RoleName;
@@ -3519,6 +3579,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
             {
                 query["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleName))
             {
@@ -3606,6 +3670,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             {
                 query["PolicyType"] = request.PolicyType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
             {
                 query["UserName"] = request.UserName;
@@ -3655,6 +3723,10 @@ namespace AlibabaCloud.SDK.Ram20150501
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyType))
             {
                 query["PolicyType"] = request.PolicyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
             {
@@ -6331,7 +6403,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to resources.</para>
+        /// <para>Queries the tags that are added to cloud resources which are Resource Access Management (RAM) roles and policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6399,7 +6471,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to resources.</para>
+        /// <para>Queries the tags that are added to cloud resources which are Resource Access Management (RAM) roles and policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6467,7 +6539,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to resources.</para>
+        /// <para>Queries the tags that are added to cloud resources which are Resource Access Management (RAM) roles and policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6485,7 +6557,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags that are added to resources.</para>
+        /// <para>Queries the tags that are added to cloud resources which are Resource Access Management (RAM) roles and policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7589,7 +7661,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resources.</para>
+        /// <para>Adds tags to cloud resources which are Resource Access Management (RAM) roles and policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7649,7 +7721,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resources.</para>
+        /// <para>Adds tags to cloud resources which are Resource Access Management (RAM) roles and policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7709,7 +7781,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resources.</para>
+        /// <para>Adds tags to cloud resources which are Resource Access Management (RAM) roles and policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7727,7 +7799,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds tags to resources.</para>
+        /// <para>Adds tags to cloud resources which are Resource Access Management (RAM) roles and policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7865,7 +7937,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources.</para>
+        /// <para>Removes tags from cloud resources that are Resource Access Management (RAM) roles and policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7929,7 +8001,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources.</para>
+        /// <para>Removes tags from cloud resources that are Resource Access Management (RAM) roles and policies.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7993,7 +8065,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources.</para>
+        /// <para>Removes tags from cloud resources that are Resource Access Management (RAM) roles and policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8011,7 +8083,7 @@ namespace AlibabaCloud.SDK.Ram20150501
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from resources.</para>
+        /// <para>Removes tags from cloud resources that are Resource Access Management (RAM) roles and policies.</para>
         /// </summary>
         /// 
         /// <param name="request">

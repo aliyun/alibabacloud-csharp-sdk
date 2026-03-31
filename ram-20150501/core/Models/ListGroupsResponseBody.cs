@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListGroupsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about the RAM user groups.</para>
-        /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public ListGroupsResponseBodyGroups Groups { get; set; }
@@ -20,52 +17,22 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListGroupsResponseBodyGroupsGroup> Group { get; set; }
             public class ListGroupsResponseBodyGroupsGroup : TeaModel {
-                /// <summary>
-                /// <para>The description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Dev-Team</para>
-                /// </summary>
                 [NameInMap("Comments")]
                 [Validation(Required=false)]
                 public string Comments { get; set; }
 
-                /// <summary>
-                /// <para>The creation time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-01-23T12:33:18Z</para>
-                /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
                 public string CreateDate { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the RAM user group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>g-FpMEHiMysofp****</para>
-                /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the RAM user group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Dev-Team</para>
-                /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
-                /// <summary>
-                /// <para>The update time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-01-23T12:33:18Z</para>
-                /// </summary>
                 [NameInMap("UpdateDate")]
                 [Validation(Required=false)]
                 public string UpdateDate { get; set; }

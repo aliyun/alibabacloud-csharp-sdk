@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to the resources.</para>
+        /// <para>The tags that are added to the cloud resources.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -48,6 +48,11 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
             /// <summary>
             /// <para>The resource type.</para>
+            /// <para>Enumerated values:</para>
+            /// <list type="bullet">
+            /// <item><description>role: RAM roles.</description></item>
+            /// <item><description>policy: policies.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>role</para>

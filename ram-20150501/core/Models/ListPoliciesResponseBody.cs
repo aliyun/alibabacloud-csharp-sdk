@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [Validation(Required=false)]
         public string Marker { get; set; }
 
-        /// <summary>
-        /// <para>The information about the policies.</para>
-        /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
         public ListPoliciesResponseBodyPolicies Policies { get; set; }
@@ -40,69 +37,30 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListPoliciesResponseBodyPoliciesPolicy> Policy { get; set; }
             public class ListPoliciesResponseBodyPoliciesPolicy : TeaModel {
-                /// <summary>
-                /// <para>The number of references to the policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("AttachmentCount")]
                 [Validation(Required=false)]
                 public int? AttachmentCount { get; set; }
 
-                /// <summary>
-                /// <para>The time when the policy was created.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-01-23T12:33:18Z</para>
-                /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
                 public string CreateDate { get; set; }
 
-                /// <summary>
-                /// <para>The default version of the policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>v1</para>
-                /// </summary>
                 [NameInMap("DefaultVersion")]
                 [Validation(Required=false)]
                 public string DefaultVersion { get; set; }
 
-                /// <summary>
-                /// <para>The description of the policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>OSS administrator</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The name of the policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>OSS-Administrator</para>
-                /// </summary>
                 [NameInMap("PolicyName")]
                 [Validation(Required=false)]
                 public string PolicyName { get; set; }
 
-                /// <summary>
-                /// <para>The type of the policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>System</para>
-                /// </summary>
                 [NameInMap("PolicyType")]
                 [Validation(Required=false)]
                 public string PolicyType { get; set; }
 
-                /// <summary>
-                /// <para>The tags.</para>
-                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public ListPoliciesResponseBodyPoliciesPolicyTags Tags { get; set; }
@@ -111,22 +69,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                     [Validation(Required=false)]
                     public List<ListPoliciesResponseBodyPoliciesPolicyTagsTag> Tag { get; set; }
                     public class ListPoliciesResponseBodyPoliciesPolicyTagsTag : TeaModel {
-                        /// <summary>
-                        /// <para>The key of the tag.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>owner</para>
-                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
-                        /// <summary>
-                        /// <para>The value of the tag.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>alice</para>
-                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }
@@ -135,12 +81,6 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
                 }
 
-                /// <summary>
-                /// <para>The time when the policy was modified.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-01-23T12:33:18Z</para>
-                /// </summary>
                 [NameInMap("UpdateDate")]
                 [Validation(Required=false)]
                 public string UpdateDate { get; set; }

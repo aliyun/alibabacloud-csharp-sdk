@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The RAM users.</para>
-        /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public ListUsersResponseBodyUsers Users { get; set; }
@@ -50,88 +47,34 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListUsersResponseBodyUsersUser> User { get; set; }
             public class ListUsersResponseBodyUsersUser : TeaModel {
-                /// <summary>
-                /// <para>The description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Cloud computing engineer</para>
-                /// </summary>
                 [NameInMap("Comments")]
                 [Validation(Required=false)]
                 public string Comments { get; set; }
 
-                /// <summary>
-                /// <para>The time when the RAM user was created. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-01-23T12:33:18Z</para>
-                /// </summary>
                 [NameInMap("CreateDate")]
                 [Validation(Required=false)]
                 public string CreateDate { get; set; }
 
-                /// <summary>
-                /// <para>The display name of the RAM user.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Zhangq****</para>
-                /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
-                /// <summary>
-                /// <para>The email address of the RAM user.</para>
-                /// <remarks>
-                /// <para>This parameter is unavailable.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>zhangq****@example.com</para>
-                /// </summary>
                 [NameInMap("Email")]
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
-                /// <summary>
-                /// <para>The mobile phone number of the RAM user.</para>
-                /// <remarks>
-                /// <para>This parameter is unavailable.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>86-1860000****</para>
-                /// </summary>
                 [NameInMap("MobilePhone")]
                 [Validation(Required=false)]
                 public string MobilePhone { get; set; }
 
-                /// <summary>
-                /// <para>The point in time when the information about the RAM user was last modified. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-01-23T12:33:18Z</para>
-                /// </summary>
                 [NameInMap("UpdateDate")]
                 [Validation(Required=false)]
                 public string UpdateDate { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the RAM user.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>122748924538****</para>
-                /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
 
-                /// <summary>
-                /// <para>The logon name of the RAM user.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>zhangq****</para>
-                /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
                 public string UserName { get; set; }

@@ -35,8 +35,8 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         /// <para>The resource type.</para>
         /// <para>Enumerated values:</para>
         /// <list type="bullet">
-        /// <item><description>role</description></item>
-        /// <item><description>policy</description></item>
+        /// <item><description>role: RAM roles.</description></item>
+        /// <item><description>policy: policies.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

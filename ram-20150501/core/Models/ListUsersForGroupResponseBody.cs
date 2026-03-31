@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The information about the RAM users.</para>
-        /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public ListUsersForGroupResponseBodyUsers Users { get; set; }
@@ -50,32 +47,14 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListUsersForGroupResponseBodyUsersUser> User { get; set; }
             public class ListUsersForGroupResponseBodyUsersUser : TeaModel {
-                /// <summary>
-                /// <para>The display name of the RAM user.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Alice</para>
-                /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
-                /// <summary>
-                /// <para>The time when the RAM user joined the RAM user group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-01-23T12:33:18Z</para>
-                /// </summary>
                 [NameInMap("JoinDate")]
                 [Validation(Required=false)]
                 public string JoinDate { get; set; }
 
-                /// <summary>
-                /// <para>The name of the RAM user.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>zhangqiang</para>
-                /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
                 public string UserName { get; set; }
