@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
+        [NameInMap("RamRoleName")]
+        [Validation(Required=false)]
+        public string RamRoleName { get; set; }
+
         /// <summary>
         /// <para>User-defined script</para>
         /// 

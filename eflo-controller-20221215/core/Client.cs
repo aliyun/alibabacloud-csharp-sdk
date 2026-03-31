@@ -8462,6 +8462,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             {
                 body["NodeGroupId"] = request.NodeGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
+            {
+                body["RamRoleName"] = request.RamRoleName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
                 body["UserData"] = request.UserData;
@@ -8527,6 +8531,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeGroupId))
             {
                 body["NodeGroupId"] = request.NodeGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRoleName))
+            {
+                body["RamRoleName"] = request.RamRoleName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {

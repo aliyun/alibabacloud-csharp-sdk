@@ -734,6 +734,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             }
 
+            [NameInMap("RamRoleName")]
+            [Validation(Required=false)]
+            public string RamRoleName { get; set; }
+
             /// <summary>
             /// <para>System disk information</para>
             /// </summary>
