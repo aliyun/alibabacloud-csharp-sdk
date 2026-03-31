@@ -14,8 +14,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public ListMmsPartitionsRequestSorter Sorter { get; set; }
         public class ListMmsPartitionsRequestSorter : TeaModel {
             /// <summary>
-            /// <para>Sorts by lastDdlTime.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>desc</para>
             /// </summary>
@@ -24,8 +22,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string LastDdlTime { get; set; }
 
             /// <summary>
-            /// <para>Sorts by number of rows.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>desc</para>
             /// </summary>
@@ -34,8 +30,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string NumRows { get; set; }
 
             /// <summary>
-            /// <para>Sorts by data size.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>asc</para>
             /// </summary>
@@ -46,8 +40,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The database ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -56,8 +48,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? DbId { get; set; }
 
         /// <summary>
-        /// <para>The database name.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>d1</para>
         /// </summary>
@@ -66,8 +56,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string DbName { get; set; }
 
         /// <summary>
-        /// <para>The maximum lastDdlTime value.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>2024-12-17 19:44:42</para>
         /// </summary>
@@ -76,8 +64,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string LastDdlTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The minimum lastDdlTime value.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>2024-12-17 15:44:42</para>
         /// </summary>
@@ -86,8 +72,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string LastDdlTimeStart { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -96,8 +80,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return per page.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -105,16 +87,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <para>The migration status.</para>
-        /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]
         public List<string> Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the table that contains the partition.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>20323</para>
         /// </summary>
@@ -123,8 +100,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? TableId { get; set; }
 
         /// <summary>
-        /// <para>The table name.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>t1</para>
         /// </summary>
@@ -133,8 +108,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string TableName { get; set; }
 
         /// <summary>
-        /// <para>Filters partitions whose metadata has been updated.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -143,8 +116,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public bool? Updated { get; set; }
 
         /// <summary>
-        /// <para>The partition value.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>p1=1/p2=abc</para>
         /// </summary>

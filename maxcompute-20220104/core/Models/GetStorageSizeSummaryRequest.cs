@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetStorageSizeSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>The date of statistics. The value is at the day level. The format is YYYYMMdd.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>20241205</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Date { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>cn-chengdu</para>
         /// </summary>
@@ -30,8 +26,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>483212237127906</para>
         /// </summary>

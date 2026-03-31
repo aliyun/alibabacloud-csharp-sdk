@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public List<UpdateTunnelQuotaTimerRequestBody> Body { get; set; }
         public class UpdateTunnelQuotaTimerRequestBody : TeaModel {
             /// <summary>
-            /// <para>The start time of the time-based configuration.</para>
+            /// <para>The start time of the time-specific configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string BeginTime { get; set; }
 
             /// <summary>
-            /// <para>The end time of the time-based configuration.</para>
+            /// <para>The end time of the time-specific configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08:00</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The parameters of the time-based configuration.</para>
+            /// <para>The parameters for the time-specific configuration.</para>
             /// </summary>
             [NameInMap("tunnelQuotaParameter")]
             [Validation(Required=false)]
             public UpdateTunnelQuotaTimerRequestBodyTunnelQuotaParameter TunnelQuotaParameter { get; set; }
             public class UpdateTunnelQuotaTimerRequestBodyTunnelQuotaParameter : TeaModel {
                 /// <summary>
-                /// <para>The number of elastic reserved concurrent slots.</para>
+                /// <para>The number of elastically reserved slots.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? ElasticReservedSlotNum { get; set; }
 
                 /// <summary>
-                /// <para>The number of reserved concurrent slots.</para>
+                /// <para>The number of reserved slots.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -67,12 +67,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
         }
 
-        /// <summary>
-        /// <para>The time zone.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Asia/Shanghai</para>
-        /// </summary>
         [NameInMap("timezone")]
         [Validation(Required=false)]
         public string Timezone { get; set; }

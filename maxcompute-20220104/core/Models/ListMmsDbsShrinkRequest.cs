@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListMmsDbsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Data source name</para>
-        /// 
         /// <b>Example:</b>
         /// <para>demo</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -30,8 +26,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Number of records per page</para>
-        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -39,16 +33,11 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <para>Sorting conditions</para>
-        /// </summary>
         [NameInMap("sorter")]
         [Validation(Required=false)]
         public string SorterShrink { get; set; }
 
         /// <summary>
-        /// <para>Data source status</para>
-        /// 
         /// <b>Example:</b>
         /// <para>STARTED</para>
         /// </summary>

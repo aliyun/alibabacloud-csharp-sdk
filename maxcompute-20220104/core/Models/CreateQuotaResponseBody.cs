@@ -9,16 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class CreateQuotaResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Response parameters.</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateQuotaResponseBodyData Data { get; set; }
         public class CreateQuotaResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Quota alias.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>os_PayAsYouGoQuota_p</para>
             /// </summary>
@@ -29,8 +24,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>0bc520ad17171208978521777d742c</para>
         /// </summary>

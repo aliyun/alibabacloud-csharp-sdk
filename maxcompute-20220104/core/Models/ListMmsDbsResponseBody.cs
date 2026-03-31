@@ -9,23 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListMmsDbsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Returned data.</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListMmsDbsResponseBodyData Data { get; set; }
         public class ListMmsDbsResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>Database list</para>
-            /// </summary>
             [NameInMap("objectList")]
             [Validation(Required=false)]
             public List<ListMmsDbsResponseBodyDataObjectList> ObjectList { get; set; }
             public class ListMmsDbsResponseBodyDataObjectList : TeaModel {
                 /// <summary>
-                /// <para>Time created in MMS</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>2024-12-17 15:44:42</para>
                 /// </summary>
@@ -34,8 +26,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>Whether deleted</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -44,8 +34,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public bool? Deleted { get; set; }
 
                 /// <summary>
-                /// <para>Database description</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>for mms test</para>
                 /// </summary>
@@ -54,8 +42,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The MaxCompute schema corresponding to the source database. If the target MaxCompute project does not have a schema layer enabled, this value is null. By default, it is consistent with the source database name.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>default</para>
                 /// </summary>
@@ -64,8 +50,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string DstName { get; set; }
 
                 /// <summary>
-                /// <para>Target MaxCompute project name</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>mms_test</para>
                 /// </summary>
@@ -74,8 +58,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string DstProjectName { get; set; }
 
                 /// <summary>
-                /// <para>Other information stored in JSON format</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
                 /// </summary>
@@ -84,8 +66,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Extra { get; set; }
 
                 /// <summary>
-                /// <para>Database ID</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>1530</para>
                 /// </summary>
@@ -104,8 +84,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string LastDdlTime { get; set; }
 
                 /// <summary>
-                /// <para>Database storage location</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>hdfs://master-1-1.c-6fc187819ed6bae0.cn-shanghai.emr.aliyuncs.com:9000/user/hive/warehouse</para>
                 /// </summary>
@@ -114,8 +92,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// <para>Database name</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>mms_test</para>
                 /// </summary>
@@ -124,8 +100,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Number of database data rows</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>23232</para>
                 /// </summary>
@@ -134,18 +108,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? NumRows { get; set; }
 
                 /// <summary>
-                /// <para>Database owner</para>
-                /// 
                 /// <b>Example:</b>
-                /// <para>System user</para>
+                /// <para><a href="mailto:xxx@yy.com">xxx@yy.com</a></para>
                 /// </summary>
                 [NameInMap("owner")]
                 [Validation(Required=false)]
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>Number of partitions</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
                 /// </summary>
@@ -154,8 +124,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? Partitions { get; set; }
 
                 /// <summary>
-                /// <para>Partitions being migrated</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>400</para>
                 /// </summary>
@@ -164,8 +132,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? PartitionsDoing { get; set; }
 
                 /// <summary>
-                /// <para>Partitions migrated</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
                 /// </summary>
@@ -174,8 +140,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? PartitionsDone { get; set; }
 
                 /// <summary>
-                /// <para>Failed partitions</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
                 /// </summary>
@@ -184,8 +148,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? PartitionsFailed { get; set; }
 
                 /// <summary>
-                /// <para>Database data size in bytes</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>2342342</para>
                 /// </summary>
@@ -194,8 +156,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? Size { get; set; }
 
                 /// <summary>
-                /// <para>Data source ID.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>2000015</para>
                 /// </summary>
@@ -204,8 +164,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? SourceId { get; set; }
 
                 /// <summary>
-                /// <para>Data source name</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>demo</para>
                 /// </summary>
@@ -214,8 +172,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string SourceName { get; set; }
 
                 /// <summary>
-                /// <para>Migration status: INIT, DOING, FAILED, DONE, PART_DONE</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>DOING</para>
                 /// </summary>
@@ -224,8 +180,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>Number of tables</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -234,8 +188,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? Tables { get; set; }
 
                 /// <summary>
-                /// <para>Tables being migrated</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
                 /// </summary>
@@ -244,8 +196,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? TablesDoing { get; set; }
 
                 /// <summary>
-                /// <para>Tables migrated</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
                 /// </summary>
@@ -254,8 +204,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? TablesDone { get; set; }
 
                 /// <summary>
-                /// <para>Failed tables</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
                 /// </summary>
@@ -264,8 +212,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? TablesFailed { get; set; }
 
                 /// <summary>
-                /// <para>Partially migrated tables</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
                 /// </summary>
@@ -274,8 +220,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public int? TablesPartDone { get; set; }
 
                 /// <summary>
-                /// <para>Latest data update time</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>2024-12-17 15:44:42</para>
                 /// </summary>
@@ -284,8 +228,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string UpdateTime { get; set; }
 
                 /// <summary>
-                /// <para>Whether data is updated</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -296,8 +238,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>Page number</para>
-            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -306,8 +246,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>Page size</para>
-            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -316,8 +254,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total number of records.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>13</para>
             /// </summary>
@@ -328,8 +264,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>CF3F9978-260F-5204-94BE-30A4E6B54443</para>
         /// </summary>

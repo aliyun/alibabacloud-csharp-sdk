@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class UpdateUsersToRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The data returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

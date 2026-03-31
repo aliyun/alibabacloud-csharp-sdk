@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class CreateMmsFetchMetadataJobRequest : TeaModel {
         /// <summary>
-        /// <para>Updates metadata for the specified source database, schema, or dataset.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -19,9 +17,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public string DbName { get; set; }
 
-        /// <summary>
-        /// <para>Updates metadata for the specified source tables.</para>
-        /// </summary>
         [NameInMap("tableNames")]
         [Validation(Required=false)]
         public List<string> TableNames { get; set; }

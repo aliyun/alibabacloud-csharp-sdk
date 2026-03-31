@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class ListQuotasResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token for the next page of results. This operation supports only consecutive paging. If the returned value is not empty, more data is available. To get the next page, use the returned value in your next request.</para>
+        /// <para>A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2w6Olxc+cMPjUtUMo/CvPe4IK7f7kIQFrIZjyc</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListQuotasResponseBodyData Data { get; set; }
         public class ListQuotasResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The token for the next page of results. If this parameter has a value, more results are available. To get the next page, include this value in the \<c>NextToken\\</c> parameter of the next request.</para>
+            /// <para>A pagination token. Only continuous page turning is supported. If NextToken is not empty, the next page exists. The value of NextToken can be used in the next request to retrieve a new page of results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;abcde&quot;</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The results are returned in alphabetical order, starting from the entry after the marker.</para>
+            /// <para>Indicates the marker after which the returned list begins.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public List<ListQuotasResponseBodyDataQuotaInfoListTags> Tags { get; set; }
                 public class ListQuotasResponseBodyDataQuotaInfoListTags : TeaModel {
                     /// <summary>
-                    /// <para>The tag key.</para>
+                    /// <para>The key of the tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Department</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string TagKey { get; set; }
 
                     /// <summary>
-                    /// <para>The tag value.</para>
+                    /// <para>The value of the tag.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>a12351qHDP6YEQMt</para>
@@ -93,19 +93,17 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The billing information.</para>
+                /// <para>The information of the order.</para>
                 /// </summary>
                 [NameInMap("billingPolicy")]
                 [Validation(Required=false)]
                 public ListQuotasResponseBodyDataQuotaInfoListBillingPolicy BillingPolicy { get; set; }
                 public class ListQuotasResponseBodyDataQuotaInfoListBillingPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The billing method.</para>
+                    /// <para>The billing method of the quota. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>subscription: The subscription billing method.</para>
-                    /// </description></item>
-                    /// <item><description><para>payasyougo: The pay-as-you-go billing method.</para>
-                    /// </description></item>
+                    /// <item><description>subscription: a subscription quota.</description></item>
+                    /// <item><description>payasyougo: a pay-as-you-go quota.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -126,7 +124,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string OdpsSpecCode { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the order.</para>
+                    /// <para>The order ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>45245678</para>
@@ -138,7 +136,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the cluster.</para>
+                /// <para>The cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AT-120N</para>
@@ -148,7 +146,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Cluster { get; set; }
 
                 /// <summary>
-                /// <para>The time when the quota was created.</para>
+                /// <para>The time when the resource was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-09-06T02:14:44Z</para>
@@ -158,7 +156,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the account that created the quota. This ID is an Alibaba Cloud account UID.</para>
+                /// <para>The ID of the Alibaba Cloud account that is used to create the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>672863518</para>
@@ -168,7 +166,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string CreatorId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the quota.</para>
+                /// <para>The quota ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -198,7 +196,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string NickName { get; set; }
 
                 /// <summary>
-                /// <para>The quota description.</para>
+                /// <para>The description of the quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;minCU&quot;:10,	
@@ -222,7 +220,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string ParentId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
@@ -232,21 +230,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The sales tag of the quota. This tag is the same as the billing identifier and is used for cost allocation.</para>
+                /// <para>The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.</para>
                 /// </summary>
                 [NameInMap("saleTag")]
                 [Validation(Required=false)]
                 public ListQuotasResponseBodyDataQuotaInfoListSaleTag SaleTag { get; set; }
                 public class ListQuotasResponseBodyDataQuotaInfoListSaleTag : TeaModel {
                     /// <summary>
-                    /// <para>The IDs of the resources. This ID is also used in the billing system. You can use this ID to associate the costs of a quota with a tag.</para>
+                    /// <para>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</para>
                     /// </summary>
                     [NameInMap("resourceIds")]
                     [Validation(Required=false)]
                     public List<string> ResourceIds { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the resource. Valid values: quota and project.</para>
+                    /// <para>The type of the object. Valid values: quota and project.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>&quot;quota&quot;</para>
@@ -258,14 +256,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The time-based scheduling information.</para>
+                /// <para>The information of the scheduling plan.</para>
                 /// </summary>
                 [NameInMap("scheduleInfo")]
                 [Validation(Required=false)]
                 public ListQuotasResponseBodyDataQuotaInfoListScheduleInfo ScheduleInfo { get; set; }
                 public class ListQuotasResponseBodyDataQuotaInfoListScheduleInfo : TeaModel {
                     /// <summary>
-                    /// <para>The quota plan that is currently in effect.</para>
+                    /// <para>The quota plan that takes effect based on the scheduling plan.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>planA</para>
@@ -275,7 +273,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string CurrPlan { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the current plan took effect.</para>
+                    /// <para>The time when the current quota plan is scheduled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0800</para>
@@ -285,7 +283,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string CurrTime { get; set; }
 
                     /// <summary>
-                    /// <para>The next quota plan that is scheduled to take effect.</para>
+                    /// <para>The next quota plan that will take effect based on the scheduling plan.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>planB</para>
@@ -295,7 +293,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string NextPlan { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the next plan is scheduled to take effect.</para>
+                    /// <para>The time when the next quota plan is scheduled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1700</para>
@@ -305,7 +303,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string NextTime { get; set; }
 
                     /// <summary>
-                    /// <para>The quota plan that takes effect immediately. This parameter is returned only when a user triggers an immediate plan that is different from the current plan.</para>
+                    /// <para>The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>planC</para>
@@ -315,7 +313,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string OncePlan { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the immediate plan was triggered.</para>
+                    /// <para>The time when the quota plan immediately takes effect.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1500</para>
@@ -335,7 +333,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string OperatorName { get; set; }
 
                     /// <summary>
-                    /// <para>The time zone.</para>
+                    /// <para>The time zone of the project.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>UTC+8</para>
@@ -347,7 +345,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The status of the quota.</para>
+                /// <para>The status of the endpoint group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ON</para>
@@ -357,26 +355,24 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The information about the sub-quotas.</para>
+                /// <para>The information of the level-2 quota.</para>
                 /// </summary>
                 [NameInMap("subQuotaInfoList")]
                 [Validation(Required=false)]
                 public List<ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoList> SubQuotaInfoList { get; set; }
                 public class ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoList : TeaModel {
                     /// <summary>
-                    /// <para>The billing information.</para>
+                    /// <para>The information of the order.</para>
                     /// </summary>
                     [NameInMap("billingPolicy")]
                     [Validation(Required=false)]
                     public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListBillingPolicy BillingPolicy { get; set; }
                     public class ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListBillingPolicy : TeaModel {
                         /// <summary>
-                        /// <para>The billing method.</para>
+                        /// <para>The billing method of the quota. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para>subscription: The subscription billing method.</para>
-                        /// </description></item>
-                        /// <item><description><para>payasyougo: The pay-as-you-go billing method.</para>
-                        /// </description></item>
+                        /// <item><description>subscription: a subscription quota.</description></item>
+                        /// <item><description>payasyougo: a pay-as-you-go quota.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -397,7 +393,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public string OdpsSpecCode { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the order.</para>
+                        /// <para>The order ID.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>45245678</para>
@@ -409,7 +405,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     }
 
                     /// <summary>
-                    /// <para>The ID of the cluster.</para>
+                    /// <para>The cluster ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AT-120N</para>
@@ -429,7 +425,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public long? CreateTime { get; set; }
 
                     /// <summary>
-                    /// <para>The creator of the resource. This is the UID of an Alibaba Cloud account.</para>
+                    /// <para>The ID of the Alibaba Cloud account that is used to create the resource.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>672863518</para>
@@ -439,7 +435,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string CreatorId { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the sub-quota.</para>
+                    /// <para>The ID of the level-2 quota.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1000048</para>
@@ -449,7 +445,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Id { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the sub-quota.</para>
+                    /// <para>The name of the level-2 quota.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>subquotaA</para>
@@ -459,7 +455,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>The alias of the sub-quota.</para>
+                    /// <para>The nickname of the level-2 quota.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>subquotaA</para>
@@ -490,42 +486,20 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         [Validation(Required=false)]
                         public long? AutoScaleCPULimit { get; set; }
 
-                        /// <summary>
-                        /// <para>The value of elastically reserved CUs.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>50</para>
-                        /// </summary>
                         [NameInMap("elasticReservedCU")]
                         [Validation(Required=false)]
                         public long? ElasticReservedCU { get; set; }
 
-                        /// <summary>
-                        /// <para>Specifies whether to enable priority-based scheduling.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>true</para>
-                        /// </summary>
                         [NameInMap("enablePriority")]
                         [Validation(Required=false)]
                         public bool? EnablePriority { get; set; }
 
-                        /// <summary>
-                        /// <para>Specifies whether the resource is exclusive.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>true</para>
-                        /// </summary>
                         [NameInMap("forceReservedMin")]
                         [Validation(Required=false)]
                         public bool? ForceReservedMin { get; set; }
 
                         /// <summary>
-                        /// <para>The upper limit of reserved CUs.</para>
                         /// <para>This parameter is required.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>50</para>
                         /// </summary>
                         [NameInMap("maxCU")]
                         [Validation(Required=false)]
@@ -536,11 +510,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public long? MaxGu { get; set; }
 
                         /// <summary>
-                        /// <para>The minimum number of guaranteed reserved CUs.</para>
                         /// <para>This parameter is required.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>50</para>
                         /// </summary>
                         [NameInMap("minCU")]
                         [Validation(Required=false)]
@@ -550,22 +520,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         [Validation(Required=false)]
                         public long? MinGu { get; set; }
 
-                        /// <summary>
-                        /// <para>The scheduling policy.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>Fifo/Fair</para>
-                        /// </summary>
                         [NameInMap("schedulerType")]
                         [Validation(Required=false)]
                         public string SchedulerType { get; set; }
 
-                        /// <summary>
-                        /// <para>The upper limit of CUs for a single job.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>10</para>
-                        /// </summary>
                         [NameInMap("singleJobCULimit")]
                         [Validation(Required=false)]
                         public long? SingleJobCULimit { get; set; }
@@ -587,7 +545,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string ParentId { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the region.</para>
+                    /// <para>The region ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-beijing</para>
@@ -597,21 +555,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// <para>The identifier of the MaxCompute quota object. This identifier is the same as the one in the Alibaba Cloud bill and is used in tagging scenarios.</para>
+                    /// <para>The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.</para>
                     /// </summary>
                     [NameInMap("saleTag")]
                     [Validation(Required=false)]
                     public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListSaleTag SaleTag { get; set; }
                     public class ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListSaleTag : TeaModel {
                         /// <summary>
-                        /// <para>The identifier of the MaxCompute quota object. This identifier also exists in the Alibaba Cloud sales subsystem. It associates the costs of the quota object with a tag.</para>
+                        /// <para>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</para>
                         /// </summary>
                         [NameInMap("resourceIds")]
                         [Validation(Required=false)]
                         public List<string> ResourceIds { get; set; }
 
                         /// <summary>
-                        /// <para>The type of the object. Only \<c>quota\\</c> and \<c>project\\</c> are supported.</para>
+                        /// <para>The type of the object. Valid values: quota and project.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>&quot;quota&quot;</para>
@@ -623,14 +581,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     }
 
                     /// <summary>
-                    /// <para>The time-based scheduling information.</para>
+                    /// <para>The information of the scheduling plan.</para>
                     /// </summary>
                     [NameInMap("scheduleInfo")]
                     [Validation(Required=false)]
                     public ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListScheduleInfo ScheduleInfo { get; set; }
                     public class ListQuotasResponseBodyDataQuotaInfoListSubQuotaInfoListScheduleInfo : TeaModel {
                         /// <summary>
-                        /// <para>The quota plan that is currently in effect.</para>
+                        /// <para>The quota plan that takes effect based on the scheduling plan.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>planA</para>
@@ -640,7 +598,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public string CurrPlan { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the current plan took effect.</para>
+                        /// <para>The time when the current quota plan is scheduled.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0800</para>
@@ -650,7 +608,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public string CurrTime { get; set; }
 
                         /// <summary>
-                        /// <para>The next quota plan that is scheduled to take effect.</para>
+                        /// <para>The next quota plan that will take effect based on the scheduling plan.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>planB</para>
@@ -660,7 +618,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public string NextPlan { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the next plan is scheduled to take effect.</para>
+                        /// <para>The time when the next quota plan is scheduled.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1700</para>
@@ -670,7 +628,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public string NextTime { get; set; }
 
                         /// <summary>
-                        /// <para>The quota plan that takes effect immediately. This parameter is returned only if a user triggers an immediate plan that is different from <c>currPlan</c>.</para>
+                        /// <para>The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>planC</para>
@@ -680,7 +638,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public string OncePlan { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the immediate-effect plan was triggered.</para>
+                        /// <para>The time when the quota plan immediately takes effect.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1500</para>
@@ -700,7 +658,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                         public string OperatorName { get; set; }
 
                         /// <summary>
-                        /// <para>The time zone.</para>
+                        /// <para>The time zone of the project.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>UTC+8</para>
@@ -712,7 +670,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     }
 
                     /// <summary>
-                    /// <para>The status of the quota.</para>
+                    /// <para>The status of the endpoint group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ON</para>
@@ -722,7 +680,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>The resource tag of the quota.</para>
+                    /// <para>The tag of the resource for the quota.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>abc</para>
@@ -732,7 +690,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Tag { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the tenant.</para>
+                    /// <para>The tenant ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>280747109771520</para>
@@ -742,7 +700,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string TenantId { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the control cluster.</para>
+                    /// <para>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>FUXI_ONLINE</para>
@@ -752,7 +710,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The version number.</para>
+                    /// <para>The version of the algorithm image.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -764,7 +722,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The tag of the quota.</para>
+                /// <para>The tag of the resource for the quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
@@ -774,7 +732,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the tenant.</para>
+                /// <para>The tenant ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>280747109771520</para>
@@ -784,7 +742,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string TenantId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the control cluster.</para>
+                /// <para>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FUXI_ONLINE</para>
@@ -808,7 +766,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The token that specifies the position from which to start returning results. The results are sorted in alphabetical order.</para>
+        /// <para>Indicates the marker after which the returned list begins.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cHlvZHBzX3VkZl8xMDExNV8xNDU3NDI4NDkzKg==</para>
@@ -818,7 +776,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned on each page.</para>
+        /// <para>The maximum number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -864,19 +822,17 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The billing information.</para>
+            /// <para>The information of the order.</para>
             /// </summary>
             [NameInMap("billingPolicy")]
             [Validation(Required=false)]
             public ListQuotasResponseBodyQuotaInfoListBillingPolicy BillingPolicy { get; set; }
             public class ListQuotasResponseBodyQuotaInfoListBillingPolicy : TeaModel {
                 /// <summary>
-                /// <para>The billing method.</para>
+                /// <para>The billing method of the quota. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>subscription: The subscription billing method.</para>
-                /// </description></item>
-                /// <item><description><para>payasyougo: The pay-as-you-go billing method.</para>
-                /// </description></item>
+                /// <item><description>subscription: a subscription quota.</description></item>
+                /// <item><description>payasyougo: a pay-as-you-go quota.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -897,7 +853,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string OdpsSpecCode { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the order.</para>
+                /// <para>The order ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>45245678</para>
@@ -909,7 +865,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The ID of the cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AT-120N</para>
@@ -919,7 +875,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Cluster { get; set; }
 
             /// <summary>
-            /// <para>The time when the quota was created.</para>
+            /// <para>The time when the resource was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-06T02:14:44Z</para>
@@ -929,7 +885,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the account that created the quota. This ID is an Alibaba Cloud account UID.</para>
+            /// <para>The ID of the Alibaba Cloud account that is used to create the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>672863518</para>
@@ -939,7 +895,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string CreatorId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the quota.</para>
+            /// <para>The quota ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -969,7 +925,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string NickName { get; set; }
 
             /// <summary>
-            /// <para>The parameters of the quota.</para>
+            /// <para>The description of the quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;minCU&quot;:10,	
@@ -993,7 +949,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string ParentId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -1003,21 +959,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The sales tag of the quota. This tag is the same as the billing identifier and is used for cost allocation.</para>
+            /// <para>The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.</para>
             /// </summary>
             [NameInMap("saleTag")]
             [Validation(Required=false)]
             public ListQuotasResponseBodyQuotaInfoListSaleTag SaleTag { get; set; }
             public class ListQuotasResponseBodyQuotaInfoListSaleTag : TeaModel {
                 /// <summary>
-                /// <para>The IDs of the resources. This ID is also used in the billing system. You can use this ID to associate the costs of a quota with a tag.</para>
+                /// <para>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</para>
                 /// </summary>
                 [NameInMap("resourceIds")]
                 [Validation(Required=false)]
                 public List<string> ResourceIds { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource. Valid values: quota and project.</para>
+                /// <para>The type of the object. Valid values: quota and project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>&quot;project&quot;</para>
@@ -1029,14 +985,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The time-based scheduling information.</para>
+            /// <para>The information of the scheduling plan.</para>
             /// </summary>
             [NameInMap("scheduleInfo")]
             [Validation(Required=false)]
             public ListQuotasResponseBodyQuotaInfoListScheduleInfo ScheduleInfo { get; set; }
             public class ListQuotasResponseBodyQuotaInfoListScheduleInfo : TeaModel {
                 /// <summary>
-                /// <para>The quota plan that is currently in effect.</para>
+                /// <para>The quota plan that takes effect based on the scheduling plan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>planA</para>
@@ -1046,7 +1002,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string CurrPlan { get; set; }
 
                 /// <summary>
-                /// <para>The time when the current plan took effect.</para>
+                /// <para>The time when the current quota plan is scheduled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0800</para>
@@ -1056,7 +1012,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string CurrTime { get; set; }
 
                 /// <summary>
-                /// <para>The next quota plan that is scheduled to take effect.</para>
+                /// <para>The next quota plan that will take effect based on the scheduling plan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>planB</para>
@@ -1066,7 +1022,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string NextPlan { get; set; }
 
                 /// <summary>
-                /// <para>The time when the next plan is scheduled to take effect.</para>
+                /// <para>The time when the next quota plan is scheduled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1700</para>
@@ -1076,7 +1032,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string NextTime { get; set; }
 
                 /// <summary>
-                /// <para>The quota plan that takes effect immediately. This parameter is returned only when a user triggers an immediate plan that is different from the current plan.</para>
+                /// <para>The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>planC</para>
@@ -1086,7 +1042,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string OncePlan { get; set; }
 
                 /// <summary>
-                /// <para>The time when the immediate plan was triggered.</para>
+                /// <para>The time when the quota plan immediately takes effect.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1500</para>
@@ -1106,7 +1062,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string OperatorName { get; set; }
 
                 /// <summary>
-                /// <para>The time zone.</para>
+                /// <para>The time zone of the project.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UTC+8</para>
@@ -1118,7 +1074,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The status of the quota.</para>
+            /// <para>The status of the endpoint group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -1128,26 +1084,24 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The information about the sub-quotas.</para>
+            /// <para>The information of the level-2 quota.</para>
             /// </summary>
             [NameInMap("subQuotaInfoList")]
             [Validation(Required=false)]
             public List<ListQuotasResponseBodyQuotaInfoListSubQuotaInfoList> SubQuotaInfoList { get; set; }
             public class ListQuotasResponseBodyQuotaInfoListSubQuotaInfoList : TeaModel {
                 /// <summary>
-                /// <para>The billing information.</para>
+                /// <para>The information of the order.</para>
                 /// </summary>
                 [NameInMap("billingPolicy")]
                 [Validation(Required=false)]
                 public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListBillingPolicy BillingPolicy { get; set; }
                 public class ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListBillingPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The billing method.</para>
+                    /// <para>The billing method of the quota. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para>subscription: The subscription billing method.</para>
-                    /// </description></item>
-                    /// <item><description><para>payasyougo: The pay-as-you-go billing method.</para>
-                    /// </description></item>
+                    /// <item><description>subscription: a subscription quota.</description></item>
+                    /// <item><description>payasyougo: a pay-as-you-go quota.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -1168,7 +1122,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string OdpsSpecCode { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the order.</para>
+                    /// <para>The order ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>45245678</para>
@@ -1180,7 +1134,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the cluster.</para>
+                /// <para>The cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AT-120N</para>
@@ -1190,7 +1144,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Cluster { get; set; }
 
                 /// <summary>
-                /// <para>The time when the quota was created.</para>
+                /// <para>The time when the resource was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-09-06T02:14:44Z</para>
@@ -1200,7 +1154,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the account that created the quota. This ID is an Alibaba Cloud account UID.</para>
+                /// <para>The ID of the Alibaba Cloud account that is used to create the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>672863518</para>
@@ -1210,7 +1164,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string CreatorId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the sub-quota.</para>
+                /// <para>The ID of the level-2 quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000048</para>
@@ -1220,7 +1174,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the sub-quota.</para>
+                /// <para>The name of the level-2 quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>subquotaA</para>
@@ -1230,7 +1184,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The alias of the sub-quota.</para>
+                /// <para>The alias of the level-2 quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>subquotaA</para>
@@ -1240,7 +1194,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string NickName { get; set; }
 
                 /// <summary>
-                /// <para>The quota description.</para>
+                /// <para>The description of the quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;minCU&quot;:10,	
@@ -1261,42 +1215,20 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     [Validation(Required=false)]
                     public long? AutoScaleCPULimit { get; set; }
 
-                    /// <summary>
-                    /// <para>The elastically reserved CUs.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>50</para>
-                    /// </summary>
                     [NameInMap("elasticReservedCU")]
                     [Validation(Required=false)]
                     public long? ElasticReservedCU { get; set; }
 
-                    /// <summary>
-                    /// <para>Indicates whether to enable priority-based scheduling.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>true</para>
-                    /// </summary>
                     [NameInMap("enablePriority")]
                     [Validation(Required=false)]
                     public bool? EnablePriority { get; set; }
 
-                    /// <summary>
-                    /// <para>Indicates whether the resource is exclusive.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>true</para>
-                    /// </summary>
                     [NameInMap("forceReservedMin")]
                     [Validation(Required=false)]
                     public bool? ForceReservedMin { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum reserved computing units (CUs).</para>
                     /// <para>This parameter is required.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>50</para>
                     /// </summary>
                     [NameInMap("maxCU")]
                     [Validation(Required=false)]
@@ -1307,11 +1239,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public long? MaxGu { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum reserved CUs.</para>
                     /// <para>This parameter is required.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>50</para>
                     /// </summary>
                     [NameInMap("minCU")]
                     [Validation(Required=false)]
@@ -1321,22 +1249,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     [Validation(Required=false)]
                     public long? MinGu { get; set; }
 
-                    /// <summary>
-                    /// <para>The scheduling policy.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Fifo/Fair</para>
-                    /// </summary>
                     [NameInMap("schedulerType")]
                     [Validation(Required=false)]
                     public string SchedulerType { get; set; }
 
-                    /// <summary>
-                    /// <para>The maximum CUs for a single job.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>10</para>
-                    /// </summary>
                     [NameInMap("singleJobCULimit")]
                     [Validation(Required=false)]
                     public long? SingleJobCULimit { get; set; }
@@ -1358,7 +1274,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string ParentId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
@@ -1368,21 +1284,21 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The sales tag of the quota. This tag is the same as the billing identifier and is used for cost allocation.</para>
+                /// <para>The identifier of an object in a MaxCompute quota. This identifier is the same as the identifier in the sales bill of Alibaba Cloud. This parameter is used for tags.</para>
                 /// </summary>
                 [NameInMap("saleTag")]
                 [Validation(Required=false)]
                 public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListSaleTag SaleTag { get; set; }
                 public class ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListSaleTag : TeaModel {
                     /// <summary>
-                    /// <para>The IDs of the resources. This ID is also used in the billing system. You can use this ID to associate the costs of a quota with a tag.</para>
+                    /// <para>The identifier of an object in a MaxCompute quota. This identifier exists in the sales bill of Alibaba Cloud. You can use this identifier to associate the cost of a quota object with a tag.</para>
                     /// </summary>
                     [NameInMap("resourceIds")]
                     [Validation(Required=false)]
                     public List<string> ResourceIds { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the resource. Valid values: quota and project.</para>
+                    /// <para>The type of the object. Valid values: quota and project.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>&quot;quota&quot;</para>
@@ -1394,14 +1310,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The time-based scheduling information.</para>
+                /// <para>The information of the scheduling plan.</para>
                 /// </summary>
                 [NameInMap("scheduleInfo")]
                 [Validation(Required=false)]
                 public ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListScheduleInfo ScheduleInfo { get; set; }
                 public class ListQuotasResponseBodyQuotaInfoListSubQuotaInfoListScheduleInfo : TeaModel {
                     /// <summary>
-                    /// <para>The quota plan that is currently in effect.</para>
+                    /// <para>The quota plan that takes effect based on the scheduling plan.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>planA</para>
@@ -1411,7 +1327,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string CurrPlan { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the current plan took effect.</para>
+                    /// <para>The time when the current quota plan is scheduled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0800</para>
@@ -1421,7 +1337,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string CurrTime { get; set; }
 
                     /// <summary>
-                    /// <para>The next quota plan that is scheduled to take effect.</para>
+                    /// <para>The next quota plan that will take effect based on the scheduling plan.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>planB</para>
@@ -1431,7 +1347,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string NextPlan { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the next plan is scheduled to take effect.</para>
+                    /// <para>The time when the next quota plan is scheduled.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1700</para>
@@ -1441,7 +1357,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string NextTime { get; set; }
 
                     /// <summary>
-                    /// <para>The quota plan that takes effect immediately. This parameter is returned only when a user triggers an immediate plan that is different from the current plan.</para>
+                    /// <para>The quota plan that immediately takes effect. If the quota plan that immediately takes effect is different from the current quota plan, this parameter is not empty.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>planC</para>
@@ -1451,7 +1367,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string OncePlan { get; set; }
 
                     /// <summary>
-                    /// <para>The time when the immediate plan was triggered.</para>
+                    /// <para>The time when the quota plan immediately takes effect.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1500</para>
@@ -1471,7 +1387,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                     public string OperatorName { get; set; }
 
                     /// <summary>
-                    /// <para>The time zone.</para>
+                    /// <para>The time zone of the project.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>UTC+8</para>
@@ -1483,7 +1399,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 }
 
                 /// <summary>
-                /// <para>The status of the quota.</para>
+                /// <para>The status of the endpoint group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ON</para>
@@ -1493,7 +1409,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The tag of the quota.</para>
+                /// <para>The tag of the resource for the quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
@@ -1503,7 +1419,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string Tag { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the tenant.</para>
+                /// <para>The tenant ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>280747109771520</para>
@@ -1513,7 +1429,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
                 public string TenantId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the control cluster.</para>
+                /// <para>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FUXI_ONLINE</para>
@@ -1535,7 +1451,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             }
 
             /// <summary>
-            /// <para>The tag of the quota.</para>
+            /// <para>The tag of the resource for the quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -1545,7 +1461,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>The ID of the tenant.</para>
+            /// <para>The tenant ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>280747109771520</para>
@@ -1555,7 +1471,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string TenantId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the control cluster.</para>
+            /// <para>The type of the resource system. This parameter corresponds to the resourceSystemType parameter of the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FUXI_ONLINE</para>
@@ -1565,7 +1481,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The version number.</para>
+            /// <para>The version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

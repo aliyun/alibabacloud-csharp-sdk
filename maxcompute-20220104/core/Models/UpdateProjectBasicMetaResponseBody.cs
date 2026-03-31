@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class UpdateProjectBasicMetaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the request.</para>
+        /// <para>The data returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -42,16 +42,9 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>1xx: Informational response - The request has been received and is being processed.</para>
-        /// </description></item>
-        /// <item><description><para>2xx: Success - The request was successfully received, understood, and accepted.</para>
-        /// </description></item>
-        /// <item><description><para>3xx: Redirection - The request was redirected. Further action is needed to complete the request.</para>
-        /// </description></item>
-        /// <item><description><para>4xx: Client error - The request contains incorrect request parameters or syntax, or cannot be fulfilled.</para>
-        /// </description></item>
-        /// <item><description><para>5xx: Server error - The server failed to fulfill the request for other reasons.</para>
-        /// </description></item>
+        /// <item><description>1xx: informational response. The request is received and is being processed.</description></item>
+        /// <item><description>2xx: success. The request is successfully received, understood, and accepted by the server.</description></item>
+        /// <item><description>3xx: redirection. The request is redirected, and further actions are required to complete the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

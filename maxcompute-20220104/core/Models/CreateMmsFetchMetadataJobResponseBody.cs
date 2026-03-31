@@ -9,16 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class CreateMmsFetchMetadataJobResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The returned result.</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateMmsFetchMetadataJobResponseBodyData Data { get; set; }
         public class CreateMmsFetchMetadataJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the asynchronous task that syncs metadata.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>1000002</para>
             /// </summary>
@@ -29,8 +24,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>CC4D05E8-0613-5A8E-9339-A0EBD097A69E</para>
         /// </summary>

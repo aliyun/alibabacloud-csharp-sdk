@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetProjectRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to include additional information, such as securityProperties and superAdmins.</para>
+        /// <para>Specifies whether to use additional information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,8 +20,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public bool? Verbose { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include additional information, such as productType.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -30,8 +28,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public bool? WithQuotaProductType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include additional information, such as properties.storageTierInfo.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

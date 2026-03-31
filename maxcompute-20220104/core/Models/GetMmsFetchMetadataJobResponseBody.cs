@@ -9,16 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetMmsFetchMetadataJobResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The returned data.</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetMmsFetchMetadataJobResponseBodyData Data { get; set; }
         public class GetMmsFetchMetadataJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when metadata synchronization ended.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>2024-12-16 19:10:07</para>
             /// </summary>
@@ -27,8 +22,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The error message.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>unexpected exception</para>
             /// </summary>
@@ -37,8 +30,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>The ID of the asynchronous task.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>1000002</para>
             /// </summary>
@@ -47,8 +38,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The progress of metadata synchronization. Valid values: 1 to 10000.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>5000</para>
             /// </summary>
@@ -57,8 +46,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public float? Progress { get; set; }
 
             /// <summary>
-            /// <para>The result of metadata synchronization.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>{&quot;databases&quot;:5,&quot;tables&quot;:75,&quot;partitions&quot;:215}</para>
             /// </summary>
@@ -67,8 +54,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The data source ID.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>2000015</para>
             /// </summary>
@@ -77,8 +62,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? SourceId { get; set; }
 
             /// <summary>
-            /// <para>The time when metadata synchronization started.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>2024-12-16 19:09:37</para>
             /// </summary>
@@ -87,8 +70,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the asynchronous task for metadata synchronization.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>SCAN_DOING</para>
             /// </summary>
@@ -99,8 +80,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>5CA6292A-E301-5CD8-B4E2-AF060F99147B</para>
         /// </summary>

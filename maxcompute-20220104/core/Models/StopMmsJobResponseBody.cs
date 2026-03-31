@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class StopMmsJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data migration ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>88</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         public long? Data { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>8023D058-62B7-5C49-8EB6-AD9BA7942BC5</para>
         /// </summary>

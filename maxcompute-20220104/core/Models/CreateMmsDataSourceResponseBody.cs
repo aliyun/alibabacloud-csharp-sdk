@@ -9,16 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class CreateMmsDataSourceResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The returned results.</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateMmsDataSourceResponseBodyData Data { get; set; }
         public class CreateMmsDataSourceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the data source.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>18</para>
             /// </summary>
@@ -29,8 +24,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>B42CA730-8187-50F1-9FE0-6733297036DB</para>
         /// </summary>

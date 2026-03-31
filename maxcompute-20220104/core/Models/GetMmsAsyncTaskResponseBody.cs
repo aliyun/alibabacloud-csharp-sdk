@@ -9,16 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
     public class GetMmsAsyncTaskResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The asynchronous task object.</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetMmsAsyncTaskResponseBodyData Data { get; set; }
         public class GetMmsAsyncTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>2024-12-17 15:44:00</para>
             /// </summary>
@@ -27,8 +22,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the task stopped running.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>2024-12-17 17:44:17</para>
             /// </summary>
@@ -37,8 +30,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The error message.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -47,8 +38,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>The asynchronous task ID.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>2523</para>
             /// </summary>
@@ -57,8 +46,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the object associated with the asynchronous task.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>232</para>
             /// </summary>
@@ -67,8 +54,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? ObjectId { get; set; }
 
             /// <summary>
-            /// <para>The progress of the task.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -77,8 +62,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public int? Progress { get; set; }
 
             /// <summary>
-            /// <para>The result of the task.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -87,8 +70,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the task is running.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -97,8 +78,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public bool? Running { get; set; }
 
             /// <summary>
-            /// <para>The data source ID.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>2000017</para>
             /// </summary>
@@ -107,8 +86,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public long? SourceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the task started to run.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>2024-12-17 15:44:17</para>
             /// </summary>
@@ -117,8 +94,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the asynchronous task.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>DONE</para>
             /// </summary>
@@ -127,8 +102,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the asynchronous task.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>TASK_CREATE</para>
             /// </summary>
@@ -139,8 +112,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>688003E1-D1B4-5468-957E-2FFB3AC8D79B</para>
         /// </summary>
