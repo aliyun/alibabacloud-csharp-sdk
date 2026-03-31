@@ -127,6 +127,64 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                 [Validation(Required=false)]
                 public Dictionary<string, object> OriginAlgoResult { get; set; }
 
+                [NameInMap("Result")]
+                [Validation(Required=false)]
+                public List<VoiceModerationResultResponseBodyDataSliceDetailsResult> Result { get; set; }
+                public class VoiceModerationResultResponseBodyDataSliceDetailsResult : TeaModel {
+                    [NameInMap("Confidence")]
+                    [Validation(Required=false)]
+                    public float? Confidence { get; set; }
+
+                    [NameInMap("CustomizedHit")]
+                    [Validation(Required=false)]
+                    public List<VoiceModerationResultResponseBodyDataSliceDetailsResultCustomizedHit> CustomizedHit { get; set; }
+                    public class VoiceModerationResultResponseBodyDataSliceDetailsResultCustomizedHit : TeaModel {
+                        [NameInMap("KeyWords")]
+                        [Validation(Required=false)]
+                        public string KeyWords { get; set; }
+
+                        [NameInMap("LibName")]
+                        [Validation(Required=false)]
+                        public string LibName { get; set; }
+
+                    }
+
+                    [NameInMap("Description")]
+                    [Validation(Required=false)]
+                    public string Description { get; set; }
+
+                    [NameInMap("Label")]
+                    [Validation(Required=false)]
+                    public string Label { get; set; }
+
+                    [NameInMap("RiskLevel")]
+                    [Validation(Required=false)]
+                    public string RiskLevel { get; set; }
+
+                    [NameInMap("RiskPositions")]
+                    [Validation(Required=false)]
+                    public List<VoiceModerationResultResponseBodyDataSliceDetailsResultRiskPositions> RiskPositions { get; set; }
+                    public class VoiceModerationResultResponseBodyDataSliceDetailsResultRiskPositions : TeaModel {
+                        [NameInMap("EndPos")]
+                        [Validation(Required=false)]
+                        public int? EndPos { get; set; }
+
+                        [NameInMap("RiskWord")]
+                        [Validation(Required=false)]
+                        public string RiskWord { get; set; }
+
+                        [NameInMap("StartPos")]
+                        [Validation(Required=false)]
+                        public int? StartPos { get; set; }
+
+                    }
+
+                    [NameInMap("RiskWords")]
+                    [Validation(Required=false)]
+                    public string RiskWords { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>Risk Level.</para>
                 /// 
