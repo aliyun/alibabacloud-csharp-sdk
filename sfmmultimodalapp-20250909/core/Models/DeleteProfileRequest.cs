@@ -20,8 +20,6 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>5A7C969B-5101-112B-8202-DFAEEA4BFBED</para>
         /// </summary>

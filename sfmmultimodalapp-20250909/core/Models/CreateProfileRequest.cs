@@ -66,8 +66,6 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>6e18191727f747ec9de06a2</para>
         /// </summary>

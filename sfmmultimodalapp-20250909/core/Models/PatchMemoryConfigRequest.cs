@@ -56,8 +56,6 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
         public int? TopK { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>110b6d4359977d1</para>
         /// </summary>
