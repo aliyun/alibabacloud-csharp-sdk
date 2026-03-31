@@ -22,7 +22,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// <para>应用的表示名称</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ram Account SSO</para>
@@ -30,6 +29,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
+
+        [NameInMap("ApplicationOwner")]
+        [Validation(Required=false)]
+        public UpdateApplicationInfoRequestApplicationOwner ApplicationOwner { get; set; }
+        public class UpdateApplicationInfoRequestApplicationOwner : TeaModel {
+            [NameInMap("GroupIds")]
+            [Validation(Required=false)]
+            public List<string> GroupIds { get; set; }
+
+            [NameInMap("UserIds")]
+            [Validation(Required=false)]
+            public List<string> UserIds { get; set; }
+
+        }
 
         [NameInMap("ApplicationVisibility")]
         [Validation(Required=false)]
@@ -42,6 +55,24 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("CustomFields")]
+        [Validation(Required=false)]
+        public List<UpdateApplicationInfoRequestCustomFields> CustomFields { get; set; }
+        public class UpdateApplicationInfoRequestCustomFields : TeaModel {
+            [NameInMap("FieldName")]
+            [Validation(Required=false)]
+            public string FieldName { get; set; }
+
+            [NameInMap("FieldValue")]
+            [Validation(Required=false)]
+            public string FieldValue { get; set; }
+
+            [NameInMap("Operation")]
+            [Validation(Required=false)]
+            public string Operation { get; set; }
+
+        }
 
         /// <summary>
         /// <para>IDaaS EIAM的实例id</para>

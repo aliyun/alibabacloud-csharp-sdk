@@ -62,6 +62,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string ApplicationName { get; set; }
 
+            [NameInMap("ApplicationOwner")]
+            [Validation(Required=false)]
+            public GetApplicationResponseBodyApplicationApplicationOwner ApplicationOwner { get; set; }
+            public class GetApplicationResponseBodyApplicationApplicationOwner : TeaModel {
+                [NameInMap("GroupIds")]
+                [Validation(Required=false)]
+                public List<string> GroupIds { get; set; }
+
+                [NameInMap("UserIds")]
+                [Validation(Required=false)]
+                public List<string> UserIds { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The origin of the application. Valid values:</para>
             /// <list type="bullet">
@@ -126,6 +140,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
+
+            [NameInMap("CustomFields")]
+            [Validation(Required=false)]
+            public List<GetApplicationResponseBodyApplicationCustomFields> CustomFields { get; set; }
+            public class GetApplicationResponseBodyApplicationCustomFields : TeaModel {
+                [NameInMap("FieldName")]
+                [Validation(Required=false)]
+                public string FieldName { get; set; }
+
+                [NameInMap("FieldValue")]
+                [Validation(Required=false)]
+                public string FieldValue { get; set; }
+
+            }
 
             [NameInMap("CustomSubjectStatus")]
             [Validation(Required=false)]

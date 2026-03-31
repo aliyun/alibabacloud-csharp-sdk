@@ -59,6 +59,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string AuthorizationType { get; set; }
 
+        [NameInMap("CustomFields")]
+        [Validation(Required=false)]
+        public List<ListApplicationsRequestCustomFields> CustomFields { get; set; }
+        public class ListApplicationsRequestCustomFields : TeaModel {
+            [NameInMap("FieldName")]
+            [Validation(Required=false)]
+            public string FieldName { get; set; }
+
+            [NameInMap("FieldValue")]
+            [Validation(Required=false)]
+            public string FieldValue { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>

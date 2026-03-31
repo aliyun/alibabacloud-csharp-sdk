@@ -28,6 +28,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
+        [NameInMap("ApplicationOwner")]
+        [Validation(Required=false)]
+        public CreateApplicationRequestApplicationOwner ApplicationOwner { get; set; }
+        public class CreateApplicationRequestApplicationOwner : TeaModel {
+            [NameInMap("GroupIds")]
+            [Validation(Required=false)]
+            public List<string> GroupIds { get; set; }
+
+            [NameInMap("UserIds")]
+            [Validation(Required=false)]
+            public List<string> UserIds { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The type of the application source. Valid values:</para>
         /// <list type="bullet">
@@ -52,6 +66,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [NameInMap("ApplicationTemplateId")]
         [Validation(Required=false)]
         public string ApplicationTemplateId { get; set; }
+
+        [NameInMap("CustomFields")]
+        [Validation(Required=false)]
+        public List<CreateApplicationRequestCustomFields> CustomFields { get; set; }
+        public class CreateApplicationRequestCustomFields : TeaModel {
+            [NameInMap("FieldName")]
+            [Validation(Required=false)]
+            public string FieldName { get; set; }
+
+            [NameInMap("FieldValue")]
+            [Validation(Required=false)]
+            public string FieldValue { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The description of the application.</para>

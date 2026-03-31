@@ -2825,6 +2825,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ApplicationName"] = request.ApplicationName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationOwner))
+            {
+                query["ApplicationOwner"] = request.ApplicationOwner;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationSourceType))
             {
                 query["ApplicationSourceType"] = request.ApplicationSourceType;
@@ -2832,6 +2836,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationTemplateId))
             {
                 query["ApplicationTemplateId"] = request.ApplicationTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFields))
+            {
+                query["CustomFields"] = request.CustomFields;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -2900,6 +2908,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ApplicationName"] = request.ApplicationName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationOwner))
+            {
+                query["ApplicationOwner"] = request.ApplicationOwner;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationSourceType))
             {
                 query["ApplicationSourceType"] = request.ApplicationSourceType;
@@ -2907,6 +2919,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationTemplateId))
             {
                 query["ApplicationTemplateId"] = request.ApplicationTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFields))
+            {
+                query["CustomFields"] = request.CustomFields;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -27328,6 +27344,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["AuthorizationType"] = request.AuthorizationType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFields))
+            {
+                query["CustomFields"] = request.CustomFields;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -27413,6 +27433,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationType))
             {
                 query["AuthorizationType"] = request.AuthorizationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFields))
+            {
+                query["CustomFields"] = request.CustomFields;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -43038,6 +43062,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ApplicationName"] = request.ApplicationName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationOwner))
+            {
+                query["ApplicationOwner"] = request.ApplicationOwner;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationVisibility))
             {
                 query["ApplicationVisibility"] = request.ApplicationVisibility;
@@ -43045,6 +43073,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFields))
+            {
+                query["CustomFields"] = request.CustomFields;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -43100,6 +43132,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["ApplicationName"] = request.ApplicationName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationOwner))
+            {
+                query["ApplicationOwner"] = request.ApplicationOwner;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationVisibility))
             {
                 query["ApplicationVisibility"] = request.ApplicationVisibility;
@@ -43107,6 +43143,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomFields))
+            {
+                query["CustomFields"] = request.CustomFields;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
