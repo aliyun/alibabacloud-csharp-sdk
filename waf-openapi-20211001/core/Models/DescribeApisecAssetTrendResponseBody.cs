@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecAssetTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API asset trend data.</para>
+        /// <para>The data returned.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeApisecAssetTrendResponseBodyData> Data { get; set; }
         public class DescribeApisecAssetTrendResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of active APIs.</para>
+            /// <para>The number of active assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AssetActive { get; set; }
 
             /// <summary>
-            /// <para>The total number of API assets.</para>
+            /// <para>The total number of assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AssetCount { get; set; }
 
             /// <summary>
-            /// <para>The number of inactive APIs.</para>
+            /// <para>The number of deactivated assets.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AssetOffline { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the data point. This value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time for statistics. Specify a UNIX timestamp in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683600042</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-6B19****5EB0</para>

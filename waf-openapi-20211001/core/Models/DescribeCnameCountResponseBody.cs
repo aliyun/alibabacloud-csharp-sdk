@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeCnameCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of CNAME records that are added.</para>
+        /// <para>The information about the number of domain names that are added to WAF in CNAME record mode and hybrid cloud reverse proxy mode.</para>
         /// </summary>
         [NameInMap("CnameCount")]
         [Validation(Required=false)]
         public DescribeCnameCountResponseBodyCnameCount CnameCount { get; set; }
         public class DescribeCnameCountResponseBodyCnameCount : TeaModel {
             /// <summary>
-            /// <para>The number of domain names that are added in CNAME mode.</para>
+            /// <para>The number of domain names that are added to WAF in CNAME record mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Cname { get; set; }
 
             /// <summary>
-            /// <para>The number of domain names that are added in hybrid cloud mode.</para>
+            /// <para>The number of domain names that are added to WAF in hybrid cloud reverse proxy mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? HybridCloudCname { get; set; }
 
             /// <summary>
-            /// <para>The total number of domain names.</para>
+            /// <para>The total number of domain names that are added to WAF in CNAME record mode and hybrid cloud reverse proxy mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the instance ID.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,12 +24,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,11 +38,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the protected object or protected object group, or the ID of the protected asset to query.</para>
+        /// <para>The name of the protected object or protected object group that you want to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mitsuichemicals.cn-waf</para>
+        /// <para>xxxxxhemicals.cn-waf</para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
@@ -61,14 +59,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of protected resource. Valid values:</para>
+        /// <para>The type of the protected resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>single</b> (default): A protected object.</para>
-        /// </description></item>
-        /// <item><description><para><b>group</b>: A protected object group.</para>
-        /// </description></item>
-        /// <item><description><para><b>asset</b>: A protected asset.</para>
-        /// </description></item>
+        /// <item><description><b>single</b>: protected object. This is the default value.</description></item>
+        /// <item><description><b>group</b>: protected object group.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the protection rule.</para>
+        /// <para>The name of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demoRuleName</para>
@@ -99,12 +93,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The type of protection rule. Valid values:</para>
+        /// <para>The type of the protection rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>defense</b> (default): A protection rule.</para>
-        /// </description></item>
-        /// <item><description><para><b>whitelist</b>: A whitelist rule.</para>
-        /// </description></item>
+        /// <item><description><b>defense</b>: defense rule. This is the default value.</description></item>
+        /// <item><description><b>whitelist</b>: whitelist rule.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -115,7 +107,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RuleType { get; set; }
 
         /// <summary>
-        /// <para>The name of the protection template to query.</para>
+        /// <para>The name of the protection rule template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test221</para>

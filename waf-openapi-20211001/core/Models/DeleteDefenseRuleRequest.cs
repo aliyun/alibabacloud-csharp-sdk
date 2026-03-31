@@ -9,28 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DeleteDefenseRuleRequest : TeaModel {
-        /// <summary>
-        /// <para>The type of the protection rule. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>template</b> (default): a protection rule template.</para>
-        /// </description></item>
-        /// <item><description><para><b>resource</b>: a rule for a protected object.</para>
-        /// </description></item>
-        /// <item><description><para><b>global</b>: a global rule.</para>
-        /// </description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>template</para>
-        /// </summary>
         [NameInMap("DefenseType")]
         [Validation(Required=false)]
         public string DefenseType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of your WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,12 +28,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,15 +41,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// <para>The protected object of the rule that you want to delete.</para>
-        /// <remarks>
-        /// <para>This parameter is required only when you set <b>DefenseType</b> to <b>resource</b>.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rencs***-waf</para>
-        /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public string Resource { get; set; }
@@ -81,7 +56,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the protection rules that you want to delete. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the protection rules that you want to delete. Separate the IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,10 +67,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RuleIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection rule template that you want to delete.</para>
-        /// <remarks>
-        /// <para>This parameter is required only when you set <b>DefenseType</b> to <b>template</b>.</para>
-        /// </remarks>
+        /// <para>The ID of the protection rule template to which the protection rule that you want to delete belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2221</para>

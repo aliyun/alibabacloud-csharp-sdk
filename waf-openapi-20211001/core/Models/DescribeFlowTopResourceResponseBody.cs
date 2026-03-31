@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The top 10 protected objects that received the most requests.</para>
+        /// <para>The array of the top 10 protected objects that receive requests.</para>
         /// </summary>
         [NameInMap("RuleHitsTopResource")]
         [Validation(Required=false)]
         public List<DescribeFlowTopResourceResponseBodyRuleHitsTopResource> RuleHitsTopResource { get; set; }
         public class DescribeFlowTopResourceResponseBodyRuleHitsTopResource : TeaModel {
             /// <summary>
-            /// <para>The total number of requests for the protected object during the specified time period.</para>
+            /// <para>The total number of requests received by the protected object in a specified time range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>181174784</para>

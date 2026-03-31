@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribePauseProtectionStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether WAF protection is paused for the instance. Valid values:</para>
+        /// <para>Indicates whether WAF protection is paused.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b> (default): Protection is not paused.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Protection is paused.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: indicates that WAF protection is not paused. This is the default value.</description></item>
+        /// <item><description><b>1</b>: indicates that WAF protection is paused.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

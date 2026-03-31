@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of attack trends.</para>
+        /// <para>The trends of attacks.</para>
         /// </summary>
         [NameInMap("Trend")]
         [Validation(Required=false)]
         public List<DescribeUserEventTrendResponseBodyTrend> Trend { get; set; }
         public class DescribeUserEventTrendResponseBodyTrend : TeaModel {
             /// <summary>
-            /// <para>The number of important events.</para>
+            /// <para>The number of high-risk events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -59,7 +59,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The time of the statistics. This is a UNIX timestamp in UTC. Unit: seconds.</para>
+            /// <para>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <remarks>
+            /// <para>Notice: The parameter has been deprecated, it is recommended to use the Timestamp parameter.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>1723435200</para>
@@ -70,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? TimeStamp { get; set; }
 
             /// <summary>
-            /// <para>The time of the statistics. This is a UNIX timestamp in UTC. Unit: seconds.</para>
+            /// <para>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1723435200</para>

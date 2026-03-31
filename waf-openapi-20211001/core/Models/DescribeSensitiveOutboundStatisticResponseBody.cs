@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveOutboundStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of statistics on outbound transfers of personal information.</para>
+        /// <para>The data types of personal information involved in cross-border data transfer.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeSensitiveOutboundStatisticResponseBodyData> Data { get; set; }
         public class DescribeSensitiveOutboundStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The assessment result. Valid values:</para>
+            /// <para>The evaluation result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>report</b>: a data outbound transfer threat exists.</para>
-            /// </description></item>
-            /// <item><description><para><b>none</b>: no data outbound transfer threat exists.</para>
-            /// </description></item>
+            /// <item><description><b>report</b>: Risks exist in cross-border data transfer.</description></item>
+            /// <item><description><b>none</b>: No risks exist in cross-border data transfer.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +31,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DetectionResult { get; set; }
 
             /// <summary>
-            /// <para>The total number of personal information data entries detected.</para>
+            /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>546</para>
@@ -43,7 +41,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? InfoCount { get; set; }
 
             /// <summary>
-            /// <para>The number of outbound transfer data entries for the sensitive data type.</para>
+            /// <para>The number of data entries that are transferred across borders.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -53,9 +51,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? OutboundCount { get; set; }
 
             /// <summary>
-            /// <para>The code that represents the type of sensitive data.</para>
+            /// <para>The type of the sensitive data.</para>
             /// <remarks>
-            /// <para>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported sensitive data types.</para>
+            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of sensitive data.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -68,12 +66,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The sensitivity level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>high</b>: high.</para>
-            /// </description></item>
-            /// <item><description><para><b>medium</b>: medium.</para>
-            /// </description></item>
-            /// <item><description><para><b>low</b>: low.</para>
-            /// </description></item>
+            /// <item><description><b>high</b></description></item>
+            /// <item><description><b>medium</b></description></item>
+            /// <item><description><b>low</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,12 +79,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string SensitiveLevel { get; set; }
 
             /// <summary>
-            /// <para>The type of information. Valid values:</para>
+            /// <para>The type of the information. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>info</b>: all personal information.</para>
-            /// </description></item>
-            /// <item><description><para><b>sensitive</b>: only sensitive personal information.</para>
-            /// </description></item>
+            /// <item><description><b>info</b>: full personal information</description></item>
+            /// <item><description><b>sensitive</b>: sensitive personal information</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,7 +95,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2EFCFE18-78F8-5079-B312-07***48B</para>
@@ -112,7 +105,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned for outbound transfer statistics.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

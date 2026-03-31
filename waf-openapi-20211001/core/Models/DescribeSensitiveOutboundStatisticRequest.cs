@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para>This parameter is available only for hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query information about hybrid cloud clusters.</para>
+        /// <para>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,12 +23,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The assessment result. Valid values:</para>
+        /// <para>The evaluation result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>report</b>: a data outbound transfer threat exists.</para>
-        /// </description></item>
-        /// <item><description><para><b>none</b>: no data outbound transfer threat exists.</para>
-        /// </description></item>
+        /// <item><description><b>report</b>: Risks exist in cross-border data transfer.</description></item>
+        /// <item><description><b>none</b>: No risks exist in cross-border data transfer.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,9 +37,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DetectionResult { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp that is in UTC. Unit: seconds.</para>
+        /// <para>The end of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
         /// <remarks>
-        /// <para>The compliance assessment feature supports querying data from the last month, the last 3 months, the last 6 months, the last 12 months, and from January 1 of the previous year to the present. Make sure that the time range is valid.</para>
+        /// <para> You can query only data of the previous month, previous 3 months, previous 6 months, previous 12 months, and data generated since January 1 of last year for compliance check. You must specify a valid time range.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,9 +50,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,12 +64,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The field to use for sorting. Valid values:</para>
+        /// <para>The name of the sorting field. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>total_count</b>: sorts by the total number of personal information data entries. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>outbound_count</b>: sorts by the total number of outbound transfer data entries.</para>
-        /// </description></item>
+        /// <item><description><b>total_count</b> (default): total number of data entries</description></item>
+        /// <item><description><b>outbound_count</b>: total number of data entries that are transferred across borders</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,12 +78,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string OrderKey { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. Valid values:</para>
+        /// <para>The sorting method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>desc</b>: descending order. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>asc</b>: ascending order.</para>
-        /// </description></item>
+        /// <item><description><b>desc</b> (default): in descending order</description></item>
+        /// <item><description><b>asc</b>: in ascending order</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +92,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string OrderWay { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -108,7 +102,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -118,12 +112,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -144,9 +136,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of sensitive data. Separate multiple types with commas (,).</para>
+        /// <para>The type of the sensitive data. Separate multiple types with commas (,).</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to obtain the supported sensitive data types. This parameter supports only built-in sensitive data types.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of sensitive data. Only built-in types of sensitive data are supported for this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -159,12 +151,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The sensitivity level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>high</b>: high.</para>
-        /// </description></item>
-        /// <item><description><para><b>medium</b>: medium.</para>
-        /// </description></item>
-        /// <item><description><para><b>low</b>: low.</para>
-        /// </description></item>
+        /// <item><description><b>high</b></description></item>
+        /// <item><description><b>medium</b></description></item>
+        /// <item><description><b>low</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -175,12 +164,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string SensitiveLevel { get; set; }
 
         /// <summary>
-        /// <para>The type of information to query. Valid values:</para>
+        /// <para>The type of the information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>info</b>: all personal information. This is the default value.</para>
-        /// </description></item>
-        /// <item><description><para><b>sensitive</b>: only sensitive personal information.</para>
-        /// </description></item>
+        /// <item><description><b>info</b> (default): full personal information</description></item>
+        /// <item><description><b>sensitive</b>: sensitive personal information</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -191,9 +178,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string SensitiveType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. This value is a UNIX timestamp that is in UTC. Unit: seconds.</para>
+        /// <para>The beginning of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
         /// <remarks>
-        /// <para>The compliance assessment feature supports querying data from the last month, the last 3 months, the last 6 months, the last 12 months, and from January 1 of the previous year to the present. Make sure that the time range is valid.</para>
+        /// <para> You can query only data of the previous month, previous 3 months, previous 6 months, previous 12 months, and data generated since January 1 of last year for compliance check. You must specify a valid time range.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

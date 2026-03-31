@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecProtectionResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of protected objects.</para>
+        /// <para>The protected objects.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeApisecProtectionResourcesResponseBodyData> Data { get; set; }
         public class DescribeApisecProtectionResourcesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the API security feature is enabled for the protected object. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>0</b>: disabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: enabled.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The switch of the API security module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -33,13 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? ApisecStatus { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the compliance check feature is enabled. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>0</b>: disabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: enabled.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The switch of the compliance check feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -49,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? ReportStatus { get; set; }
 
             /// <summary>
-            /// <para>The name of the protected object.</para>
+            /// <para>The protected object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cwaf-***-waf</para>
@@ -59,13 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the source tracing feature is enabled. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>0</b>: disabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: enabled.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The switch of the tracing and auditing feature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

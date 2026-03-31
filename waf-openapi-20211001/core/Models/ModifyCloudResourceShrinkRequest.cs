@@ -9,15 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyCloudResourceShrinkRequest : TeaModel {
-        /// <summary>
-        /// <para>The ID of the cloud resource that is added to WAF.</para>
-        /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> to add a cloud resource. The resource ID is included in the response.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>lb-***-80-clb7</para>
-        /// </summary>
         [NameInMap("CloudResourceId")]
         [Validation(Required=false)]
         public string CloudResourceId { get; set; }
@@ -25,7 +16,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,7 +28,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The listener configuration.</para>
+        /// <para>The listener configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Listen")]
@@ -45,19 +36,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ListenShrink { get; set; }
 
         /// <summary>
-        /// <para>The forwarding configuration.</para>
+        /// <para>The forwarding configurations.</para>
         /// </summary>
         [NameInMap("Redirect")]
         [Validation(Required=false)]
         public string RedirectShrink { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +58,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

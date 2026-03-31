@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of statistics.</para>
+        /// <para>The statistics.</para>
         /// </summary>
         [NameInMap("Requests")]
         [Validation(Required=false)]
         public List<DescribeUserApiRequestResponseBodyRequests> Requests { get; set; }
         public class DescribeUserApiRequestResponseBodyRequests : TeaModel {
             /// <summary>
-            /// <para>The number of statistics.</para>
+            /// <para>The number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>76</para>
@@ -37,16 +37,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The statistics information. This includes:</para>
+            /// <para>The type of the statistics. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>client_list</b>: the client tool.</para>
-            /// </description></item>
-            /// <item><description><para><b>ip</b>: the IP address information.</para>
-            /// </description></item>
-            /// <item><description><para><b>region_id</b>: the region.</para>
-            /// </description></item>
-            /// <item><description><para><b>country_id</b>: the country.</para>
-            /// </description></item>
+            /// <item><description><b>client_list</b>: client</description></item>
+            /// <item><description><b>ip</b>: IP address</description></item>
+            /// <item><description><b>region_id</b> region</description></item>
+            /// <item><description><b>country_id</b>: country</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

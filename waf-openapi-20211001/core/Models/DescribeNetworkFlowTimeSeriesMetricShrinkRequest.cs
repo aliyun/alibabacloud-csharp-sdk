@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeNetworkFlowTimeSeriesMetricShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The filter conditions for the query. Multiple filter conditions are combined with a logical AND.</para>
+        /// <para>Specifies filtering conditions. Multiple filter parameters use AND logic.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Filter")]
@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string FilterShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The Web Application Firewall (WAF) instance ID.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to retrieve the WAF instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -32,16 +32,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the type of data to return. Different values for Metric correspond to different data. This API operation supports the following values:</para>
+        /// <para>Specifies the data type to be returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>qps: The number of requests that WAF processes per second. A queries per second (QPS) value is calculated every 10 seconds. The peak QPS value within the specified time granularity is returned.</para>
-        /// </description></item>
-        /// <item><description><para>total_requests: The total number of requests processed by WAF.</para>
-        /// </description></item>
-        /// <item><description><para>top5_status: The top five response status codes that WAF returns to the client, and the corresponding time series statistics.</para>
-        /// </description></item>
-        /// <item><description><para>top 5_upstream_status: The top five response status codes that the origin server returns to the client, and the corresponding time series statistics.</para>
-        /// </description></item>
+        /// <item><description>qps: Returns the queries per second (QPS) processed by WAF. This value is calculated using a peak detection method: QPS is measured every 10 seconds, and the highest value within the specified time range is returned.</description></item>
+        /// <item><description>total_requests: Returns the total number of requests processed by WAF.</description></item>
+        /// <item><description>top5_status: Returns the top 5 HTTP status codes returned by the WAF to clients, along with their corresponding time series statistics.</description></item>
+        /// <item><description>top 5_upstream_status: Returns the top 5 HTTP status codes returned by the origin server to clients, along with their corresponding time series data.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,23 +49,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Metric { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region ID of WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: The Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>ap-southeast-1</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

@@ -22,9 +22,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
-        /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</para>
-        /// </remarks>
+        /// <para>**</para>
+        /// <para>**You can call the **DescribeInstanceInfo<a href="https://help.aliyun.com/document_detail/140857.html"> operation to obtain the ID of the WAF instance.</a></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,12 +34,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region ID of the WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,12 +58,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the manual bypass. Valid values:</para>
+        /// <para>The status of manual bypass. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>on</b>: The manual bypass is enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>off</b> (default): The manual bypass is disabled.</para>
-        /// </description></item>
+        /// <item><description><b>on</b>: enabled.</description></item>
+        /// <item><description><b>off</b>: disabled. This is the default value.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

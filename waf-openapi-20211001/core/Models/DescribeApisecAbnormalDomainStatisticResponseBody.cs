@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecAbnormalDomainStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistics of domain names with API security risks.</para>
+        /// <para>The response parameters.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeApisecAbnormalDomainStatisticResponseBodyData> Data { get; set; }
         public class DescribeApisecAbnormalDomainStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total number of APIs that are associated with the domain name.</para>
+            /// <para>The number of APIs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? ApiCount { get; set; }
 
             /// <summary>
-            /// <para>The domain name that is protected by WAF.</para>
+            /// <para>The domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ba.aliyun.com</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The number of high-severity threats.</para>
+            /// <para>The number of high-level risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? High { get; set; }
 
             /// <summary>
-            /// <para>The number of low-severity threats.</para>
+            /// <para>The number of low-level risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Low { get; set; }
 
             /// <summary>
-            /// <para>The number of medium-severity threats.</para>
+            /// <para>The number of medium-level risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66A98669-CC6E-4F3E-80A6-3014***B11AE</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of domain names that have API security risks.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

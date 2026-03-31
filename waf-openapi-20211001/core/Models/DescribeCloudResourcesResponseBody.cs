@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeCloudResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of cloud services.</para>
+        /// <para>The cloud service resources that are added to WAF.</para>
         /// </summary>
         [NameInMap("CloudResources")]
         [Validation(Required=false)]
         public List<DescribeCloudResourcesResponseBodyCloudResources> CloudResources { get; set; }
         public class DescribeCloudResourcesResponseBodyCloudResources : TeaModel {
             /// <summary>
-            /// <para>The number of HTTP ports that are added to WAF.</para>
+            /// <para>The number of the HTTP ports that are added to WAF.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for ECS and CLB instances.</para>
+            /// <para> This parameter is returned only if the cloud service is ECS or CLB.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? HttpPortCount { get; set; }
 
             /// <summary>
-            /// <para>The number of HTTPS ports that are added to WAF.</para>
+            /// <para>The number of the HTTPS ports that are added to WAF.</para>
             /// <remarks>
-            /// <para>This parameter is returned only for ECS and CLB instances.</para>
+            /// <para> This parameter is returned only if the cloud service is ECS or CLB.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? HttpsPortCount { get; set; }
 
             /// <summary>
-            /// <para>The UID of the account to which the resource belongs.</para>
+            /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11769793******</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string OwnerUserId { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the resource. This parameter is returned for FC or SAE instances.</para>
+            /// <para>The domain name. This parameter has a value only if the value of ResourceProduct is fc or sae.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-resource-domain</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceDomain { get; set; }
 
             /// <summary>
-            /// <para>The name of the function. This parameter is returned for FC instances.</para>
+            /// <para>The function name. This parameter has a value only if the value of ResourceProduct is fc.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-resource-function</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The ID of the resource instance.</para>
+            /// <para>The ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alb-ffff****</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The name of the instance.</para>
+            /// <para>The name of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-resource-name</para>
@@ -131,22 +131,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The cloud service to which the resource belongs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>alb</b>: ALB</para>
-            /// </description></item>
-            /// <item><description><para><b>mse</b>: MSE</para>
-            /// </description></item>
-            /// <item><description><para><b>fc</b>: FC</para>
-            /// </description></item>
-            /// <item><description><para><b>sae</b>: SAE</para>
-            /// </description></item>
-            /// <item><description><para><b>ecs</b>: ECS</para>
-            /// </description></item>
-            /// <item><description><para><b>clb4</b>: CLB that uses TCP</para>
-            /// </description></item>
-            /// <item><description><para><b>clb7</b>: CLB that uses HTTP or HTTPS</para>
-            /// </description></item>
-            /// <item><description><para><b>nlb</b>: NLB</para>
-            /// </description></item>
+            /// <item><description><b>alb</b>: ALB.</description></item>
+            /// <item><description><b>mse</b>: MSE.</description></item>
+            /// <item><description><b>fc</b>: Function Compute.</description></item>
+            /// <item><description><b>sae</b>: SAE.</description></item>
+            /// <item><description><b>ecs</b>: ECS.</description></item>
+            /// <item><description><b>clb4</b>: Layer 4 CLB.</description></item>
+            /// <item><description><b>clb7</b>: Layer 7 CLB.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,7 +148,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceProduct { get; set; }
 
             /// <summary>
-            /// <para>The region where the resource resides.</para>
+            /// <para>The region ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -167,7 +158,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceRegionId { get; set; }
 
             /// <summary>
-            /// <para>The name of the route. This parameter is returned for MSE instances.</para>
+            /// <para>The route name. This parameter has a value only if the value of ResourceProduct is mse.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-route-name</para>
@@ -177,7 +168,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ResourceRouteName { get; set; }
 
             /// <summary>
-            /// <para>The name of the service. This parameter is returned for FC instances.</para>
+            /// <para>The service name. This parameter has a value only if the value of ResourceProduct is fc.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-resource-service</para>
@@ -199,7 +190,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of cloud services found.</para>
+        /// <para>The total number of cloud service resources returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>121</para>

@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class InitializeWafOperationRoleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>4EC9EA6C-F80A-5D25-A8F7-***</para>
         /// </summary>

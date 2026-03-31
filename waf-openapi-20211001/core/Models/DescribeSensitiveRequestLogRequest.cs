@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveRequestLogRequest : TeaModel {
         /// <summary>
-        /// <para>The account that initiated the request.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>admin</para>
         /// </summary>
@@ -20,7 +18,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Account { get; set; }
 
         /// <summary>
-        /// <para>The API path.</para>
+        /// <para>The API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/api/users/login</para>
@@ -30,7 +28,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ApiFormat { get; set; }
 
         /// <summary>
-        /// <para>The client IP address.</para>
+        /// <para>The IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>103.118.55.**</para>
@@ -42,7 +40,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para>This parameter is available only for hybrid cloud scenarios. You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query information about hybrid cloud clusters.</para>
+        /// <para>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1726057800</para>
@@ -65,7 +63,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -107,12 +105,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region ID of the WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,7 +119,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -133,9 +129,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of sensitive data.</para>
+        /// <para>The type of the sensitive data.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported sensitive data types.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of sensitive data.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -146,7 +142,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string SensitiveCode { get; set; }
 
         /// <summary>
-        /// <para>The sensitive data in the response.</para>
+        /// <para>The response sensitive data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -156,7 +152,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string SensitiveData { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The beginning of the time range to query. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1723392000</para>

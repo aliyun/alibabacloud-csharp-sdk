@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveRequestsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of sensitive data tracing results.</para>
+        /// <para>The tracing results of the data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeSensitiveRequestsResponseBodyData> Data { get; set; }
         public class DescribeSensitiveRequestsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of threats in the last 30 days.</para>
+            /// <para>The number of risks in the previous 30 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23</para>
@@ -59,10 +59,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The evaluation result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>leak</b>: A data leak risk is detected.</para>
-            /// </description></item>
-            /// <item><description><para><b>none</b>: No data leak risk is detected.</para>
-            /// </description></item>
+            /// <item><description><b>leak</b>: Data leaks may occur.</description></item>
+            /// <item><description><b>none</b>: No data leak can occur.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,7 +71,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string DetectionResult { get; set; }
 
             /// <summary>
-            /// <para>The number of events in the last 30 days.</para>
+            /// <para>The number of events in the previous 30 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>679</para>
@@ -83,14 +81,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? EventCount { get; set; }
 
             /// <summary>
-            /// <para>A list of statistics about sensitive data.</para>
+            /// <para>The statistics of the sensitive data.</para>
             /// </summary>
             [NameInMap("InfoCount")]
             [Validation(Required=false)]
             public List<DescribeSensitiveRequestsResponseBodyDataInfoCount> InfoCount { get; set; }
             public class DescribeSensitiveRequestsResponseBodyDataInfoCount : TeaModel {
                 /// <summary>
-                /// <para>The type of sensitive data.</para>
+                /// <para>The type of the sensitive data.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1001</para>
@@ -112,7 +110,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The domain name to which the API belongs.</para>
+            /// <para>The domain name of the API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a.****.com</para>
@@ -122,7 +120,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string MatchedHost { get; set; }
 
             /// <summary>
-            /// <para>A list of sensitive data.</para>
+            /// <para>The sensitive data.</para>
             /// </summary>
             [NameInMap("SensitiveList")]
             [Validation(Required=false)]

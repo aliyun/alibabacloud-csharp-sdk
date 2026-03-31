@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyUserLogFieldConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>E2D63742-9BAA-*****</para>
         /// </summary>

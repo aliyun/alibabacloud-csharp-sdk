@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateDomainShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The access type of the WAF instance. Valid values:</para>
+        /// <para>The mode in which you want to add the domain name to WAF. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>share</b> (default): onboarding by using a CNAME record.</para>
-        /// </description></item>
-        /// <item><description><para><b>hybrid_cloud_cname</b>: onboarding by using a hybrid cloud CNAME record.</para>
-        /// </description></item>
+        /// <item><description><b>share:</b> adds the domain name to WAF in CNAME record mode. This is the default value.</description></item>
+        /// <item><description><b>hybrid_cloud_cname:</b> adds the domain name to WAF in hybrid cloud reverse proxy mode.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AccessType { get; set; }
 
         /// <summary>
-        /// <para>The domain name that you want to add.</para>
+        /// <para>The domain name that you want to add to WAF.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,9 +35,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -51,7 +49,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The listening configurations.</para>
+        /// <para>The listener configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Listen")]
@@ -69,10 +67,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: The Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: Outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: the Chinese mainland</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -84,7 +80,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -101,7 +97,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<CreateDomainShrinkRequestTag> Tag { get; set; }
         public class CreateDomainShrinkRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tagkey1</para>
@@ -111,7 +107,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue1</para>

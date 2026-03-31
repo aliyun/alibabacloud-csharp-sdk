@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the destination resource group.</para>
+        /// <para>The ID of the new resource group. You can view the available resource groups in the Resource Management console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the WAF instance. Valid values:</para>
+        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protected object.</para>
+        /// <para>The ID of the protected object that you want to manage.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +46,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the WAF instance belongs.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to <b>defenseresource</b>.</para>
+        /// <para>The resource type. Set the value to defenseresource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

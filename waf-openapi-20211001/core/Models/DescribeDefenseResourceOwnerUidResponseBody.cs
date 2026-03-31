@@ -9,16 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseResourceOwnerUidResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The owner account information of the protected objects.</para>
-        /// </summary>
         [NameInMap("OwnerInfos")]
         [Validation(Required=false)]
         public List<DescribeDefenseResourceOwnerUidResponseBodyOwnerInfos> OwnerInfos { get; set; }
         public class DescribeDefenseResourceOwnerUidResponseBodyOwnerInfos : TeaModel {
             /// <summary>
-            /// <para>The owner account ID of the protected object.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>125************21</para>
             /// </summary>
@@ -27,8 +22,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string OwnerUserId { get; set; }
 
             /// <summary>
-            /// <para>The name of the protected object.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>a.com-waf</para>
             /// </summary>
@@ -39,8 +32,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>7326952B-B83B-5B7C-84FA-77F3E17310A2</para>
         /// </summary>

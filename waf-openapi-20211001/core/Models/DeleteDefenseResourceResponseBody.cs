@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DeleteDefenseResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>745F051D-95FD-57EC-9DC1-79BB4883C6A4</para>
         /// </summary>

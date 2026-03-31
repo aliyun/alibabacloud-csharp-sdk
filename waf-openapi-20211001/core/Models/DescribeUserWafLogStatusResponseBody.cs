@@ -10,47 +10,29 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeUserWafLogStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the region where logs are stored. Valid values:</para>
+        /// <para>The ID of the region where WAF logs are stored. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: indicates China East 1 (Hangzhou).</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-beijing</b>: indicates China North 2 (Beijing).</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-hongkong</b>: indicates China (Hong Kong).</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: indicates Singapore.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-3</b>: indicates Malaysia (Kuala Lumpur).</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-5</b>: indicates Indonesia (Jakarta).</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-6</b>: indicates Philippines (Manila).</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-7</b>: indicates Thailand (Bangkok).</para>
-        /// </description></item>
-        /// <item><description><para><b>me-east-1</b>: indicates UAE (Dubai).</para>
-        /// </description></item>
-        /// <item><description><para><b>eu-central-1</b>: indicates Germany (Frankfurt).</para>
-        /// </description></item>
-        /// <item><description><para><b>us-east-1</b>: indicates US (Virginia).</para>
-        /// </description></item>
-        /// <item><description><para><b>us-west-1</b>: indicates US (Silicon Valley).</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-northeast-1</b>: indicates Japan (Tokyo).</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-northeast-2</b>: indicates South Korea (Seoul).</para>
-        /// </description></item>
-        /// <item><description><para><b>eu-west-1</b>: indicates UK (London).</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-hangzhou-finance</b>: indicates China East 1 Hangzhou Finance Cloud.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-shanghai-finance-1</b>: indicates China East 2 Shanghai Finance Cloud.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-shenzhen-finance</b>: indicates China South 1 Shenzhen Finance Cloud.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: China (Hangzhou).</description></item>
+        /// <item><description><b>cn-beijing</b>: China (Beijing).</description></item>
+        /// <item><description><b>cn-hongkong</b>: China (Hong Kong).</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Singapore.</description></item>
+        /// <item><description><b>ap-southeast-3</b>: Malaysia (Kuala Lumpur).</description></item>
+        /// <item><description><b>ap-southeast-5</b>: Indonesia (Jakarta).</description></item>
+        /// <item><description><b>ap-southeast-6</b>: Philippines (Manila).</description></item>
+        /// <item><description><b>ap-southeast-7</b>: Thailand (Bangkok).</description></item>
+        /// <item><description><b>me-east-1</b>: UAE (Dubai).</description></item>
+        /// <item><description><b>eu-central-1</b>: Germany (Frankfurt).</description></item>
+        /// <item><description><b>us-east-1</b>: US (Virginia).</description></item>
+        /// <item><description><b>us-west-1</b>: US (Silicon Valley).</description></item>
+        /// <item><description><b>ap-northeast-1</b>: Japan (Tokyo).</description></item>
+        /// <item><description><b>ap-northeast-2</b>: South Korea (Seoul).</description></item>
+        /// <item><description><b>eu-west-1</b>: UK (London).</description></item>
+        /// <item><description><b>cn-hangzhou-finance</b>: China East 1 Finance.</description></item>
+        /// <item><description><b>cn-shanghai-finance-1</b>: China East 2 Finance.</description></item>
+        /// <item><description><b>cn-shenzhen-finance</b>: China South 1 Finance.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>The Finance Cloud regions are available only to Finance Cloud users, and Finance Cloud users can obtain only these regions.</para>
+        /// <para> The China East 1 Finance, China East 2 Finance, and China South 1 Finance regions are available only for Alibaba Finance Cloud users. Alibaba Finance Cloud users are also limited to storing logs within these specific regions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,16 +45,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The status of WAF logs.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>initializing</b>: The logs are being initialized.</para>
-        /// </description></item>
-        /// <item><description><para><b>initialize_failed</b>: The initialization failed.</para>
-        /// </description></item>
-        /// <item><description><para><b>normal</b>: The logs are running properly.</para>
-        /// </description></item>
-        /// <item><description><para><b>releasing</b>: The logs are being released.</para>
-        /// </description></item>
-        /// <item><description><para><b>release_failed</b>: The release failed.</para>
-        /// </description></item>
+        /// <item><description><b>initializing</b></description></item>
+        /// <item><description><b>initialize_failed</b></description></item>
+        /// <item><description><b>normal</b></description></item>
+        /// <item><description><b>releasing</b></description></item>
+        /// <item><description><b>release_failed</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,10 +60,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string LogStatus { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D7861F61-5B61-46CE-A47C-6B19160D5EB0</para>
+        /// <para>D7861F61-5B61-46CE-A47C-6B19160D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApiExportsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of API security export tasks.</para>
+        /// <para>The returned data export tasks.</para>
         /// </summary>
         [NameInMap("ApiExports")]
         [Validation(Required=false)]
         public List<DescribeApiExportsResponseBodyApiExports> ApiExports { get; set; }
         public class DescribeApiExportsResponseBodyApiExports : TeaModel {
             /// <summary>
-            /// <para>The time when the export task was created. This is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the data export task was created. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1725604852</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the exported file.</para>
+            /// <para>The name of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>file_16109541456445334c0f01d9a7444e0e908***.csv</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string FileUrl { get; set; }
 
             /// <summary>
-            /// <para>The format of the exported file, such as CSV.</para>
+            /// <para>The format of the exported file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CSV</para>
@@ -57,13 +57,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Format { get; set; }
 
             /// <summary>
-            /// <para>The status of the export task. Valid values:</para>
+            /// <para>The status of the data export task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>expired</b>: The file has expired.</para>
+            /// <item><description><para><b>expired</b>: The file is expired.</para>
             /// </description></item>
-            /// <item><description><para><b>exporting</b>: The file is being exported.</para>
+            /// <item><description><para><b>exporting</b>: Data is being exported.</para>
             /// </description></item>
-            /// <item><description><para><b>completed</b>: The export is successful.</para>
+            /// <item><description><para><b>completed</b>: Data is exported.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -75,13 +75,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The type of the export task. Valid values:</para>
+            /// <para>The type of the data export task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>apisec_api</b>: API asset task.</para>
+            /// <item><description><para><b>apisec_api</b>: API tasks</para>
             /// </description></item>
-            /// <item><description><para><b>apisec_abnormal</b>: API threat task.</para>
+            /// <item><description><para><b>apisec_abnormal</b>: API risk tasks</para>
             /// </description></item>
-            /// <item><description><para><b>apisec_event</b>: API security event task.</para>
+            /// <item><description><para><b>apisec_event</b>: API security event tasks</para>
             /// </description></item>
             /// </list>
             /// 
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D9532525-E885-54E7-A178-D5554D563AFB</para>
@@ -105,7 +105,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of export tasks.</para>
+        /// <para>The status of the data export task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>expired</b>: The file is expired.</description></item>
+        /// <item><description><b>exporting</b>: Data is being exported.</description></item>
+        /// <item><description><b>completed</b>: Data is exported.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

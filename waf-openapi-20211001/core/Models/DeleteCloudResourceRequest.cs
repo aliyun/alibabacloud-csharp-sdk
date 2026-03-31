@@ -9,15 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DeleteCloudResourceRequest : TeaModel {
-        /// <summary>
-        /// <para>The ID of the protected resource. WAF automatically generates this ID when you add the cloud service to WAF.</para>
-        /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> to add a resource and then view the resource ID in the response.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>lb-****py9kcm2n6nuesiu2a-80-clb4</para>
-        /// </summary>
         [NameInMap("CloudResourceId")]
         [Validation(Required=false)]
         public string CloudResourceId { get; set; }
@@ -25,7 +16,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to view the ID of your WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +30,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The port of the cloud service that is added to WAF.</para>
+        /// <para>The port of the resource that is added to WAF.</para>
         /// 
         /// <b>Example:</b>
         /// <para>443</para>
@@ -50,12 +41,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +58,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ID of the cloud service instance.</para>
+        /// <para>The ID of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-bp1*****jqnnqk5uj2p</para>
@@ -92,16 +81,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The type of the cloud service. Valid values:</para>
+        /// <para>The cloud service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>clb4</b>: Layer 4 CLB.</para>
-        /// </description></item>
-        /// <item><description><para><b>clb7</b>: Layer 7 CLB.</para>
-        /// </description></item>
-        /// <item><description><para><b>ecs</b>: ECS.</para>
-        /// </description></item>
-        /// <item><description><para><b>nlb</b>: Network Load Balancer (NLB).</para>
-        /// </description></item>
+        /// <item><description><b>clb4</b>: Layer 4 CLB.</description></item>
+        /// <item><description><b>clb7</b>: Layer 7 CLB.</description></item>
+        /// <item><description><b>ecs</b>: ECS.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

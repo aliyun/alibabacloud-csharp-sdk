@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para>This parameter is used only in hybrid cloud scenarios. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to obtain information about hybrid cloud clusters.</para>
+        /// <para>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to view the ID of the current WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string MatchedHost { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return for a paged query. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paged query. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -67,12 +67,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,12 +93,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The detection type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>api</b>: the list of domain names for API assets.</para>
-        /// </description></item>
-        /// <item><description><para><b>abnormal</b>: the list of domain names that have threats.</para>
-        /// </description></item>
-        /// <item><description><para><b>event</b>: the list of domain names that have management events.</para>
-        /// </description></item>
+        /// <item><description><b>api</b>: API-related domain names</description></item>
+        /// <item><description><b>abnormal</b>: risk-related domain names</description></item>
+        /// <item><description><b>event</b>: security event-related domain names</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

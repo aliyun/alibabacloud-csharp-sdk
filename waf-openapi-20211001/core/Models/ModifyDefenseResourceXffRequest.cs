@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The status of the tracking cookie.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: Disabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>1 (default)</b>: Enabled.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: disabled</description></item>
+        /// <item><description><b>1</b>: enabled. This is the default value.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,10 +26,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The status of the secure attribute of the tracking cookie.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0 (default)</b>: Disabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Enabled.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: disabled. This is the default value.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,10 +40,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The status of the secure attribute of the slider CAPTCHA cookie.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0 (default)</b>: Disabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Enabled.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: disabled. This is the default value.</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,7 +54,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The custom header fields.</para>
         /// <remarks>
-        /// <para>The first IP address in the specified header field is used as the client source IP address to prevent X-Forwarded-For (XFF) spoofing. If multiple headers are specified, they are tried in sequence to obtain the source IP address. If the first header does not contain an IP address, the system tries the second header, and so on. If no IP address is found in any of the specified headers, the system uses the first IP address in the X-Forwarded-For header.</para>
+        /// <para> The first IP address in the specified custom header field is used as the originating IP address of the client to prevent X-Forwarded-For forgery. If you specify multiple header fields, WAF reads the values of the header fields in sequence until the originating IP address is obtained. If the originating IP address cannot be obtained, the first IP address in the X-Forwarded-For header is used as the originating IP address of the client.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("CustomHeaders")]
@@ -68,26 +62,24 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<string> CustomHeaders { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>waf_v2_public_cn-wwo****ek07</para>
+        /// <para>waf_v2_public_cn-wwo3c****07</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: The Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: Outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,7 +94,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>alb-4pxu81fgagx3h6y****-alb</para>
+        /// <para>alb-4pxu81fgagx3****mz-alb</para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
@@ -112,14 +104,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfm2ki****miwq</para>
+        /// <para>rg-acfm2kie2****wq</para>
         /// </summary>
         [NameInMap("ResourceManagerResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The response header parameters.</para>
+        /// <para>The response header.</para>
         /// </summary>
         [NameInMap("ResponseHeaders")]
         [Validation(Required=false)]
@@ -150,10 +142,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>Specifies whether a Layer 7 proxy is deployed in front of WAF. Layer 7 proxies include Anti-DDoS Proxy and Alibaba Cloud CDN. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0 (default)</b>: No.</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Yes.</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: No Layer 7 proxies are deployed. This is the default value.</description></item>
+        /// <item><description><b>1</b>: A Layer 7 proxy is deployed.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

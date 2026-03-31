@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecSuggestionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of protection suggestions for the API asset.</para>
+        /// <para>The protection suggestions.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeApisecSuggestionsResponseBodyData> Data { get; set; }
         public class DescribeApisecSuggestionsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The request path of the API.</para>
+            /// <para>The API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/apisec/v1/saveinfo</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiFormat { get; set; }
 
             /// <summary>
-            /// <para>The domain name or IP address associated with the API.</para>
+            /// <para>The domain name or IP address of the API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a.aliyun.com</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string MatchedHost { get; set; }
 
             /// <summary>
-            /// <para>The ID of the protection suggestion.</para>
+            /// <para>The rule ID of the protection suggestion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15060a1f8fed40130b7c4a7bf8d8733b</para>
@@ -47,24 +47,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string SuggestId { get; set; }
 
             /// <summary>
-            /// <para>The protection suggestion rule, in JSON format. The JSON string contains the following parameters:</para>
+            /// <para>The rule content of the protection suggestion. The value is a string that consists of multiple parameters in the JSON format. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>event_tags</b>: the event type.</para>
-            /// </description></item>
-            /// <item><description><para><b>black_iplist</b>: the IP address blacklist.</para>
-            /// </description></item>
-            /// <item><description><para><b>ip_baseline</b>: the IP address list.</para>
-            /// </description></item>
-            /// <item><description><para><b>freq_baseline</b>: the frequency limit information.</para>
-            /// </description></item>
-            /// <item><description><para><b>client_id_baseline</b>: the client information.</para>
-            /// </description></item>
-            /// <item><description><para><b>country_baseline</b>: the country information.</para>
-            /// </description></item>
-            /// <item><description><para><b>province_baseline</b>: the region information.</para>
-            /// </description></item>
-            /// <item><description><para><b>sensitive_type</b>: the sensitive information type.</para>
-            /// </description></item>
+            /// <item><description><b>event_tags</b>: event type</description></item>
+            /// <item><description><b>black_iplist</b>: IP address blacklist</description></item>
+            /// <item><description><b>ip_baseline</b>: IP address</description></item>
+            /// <item><description><b>freq_baseline</b>: throttling frequency</description></item>
+            /// <item><description><b>client_id_baseline</b>: client information</description></item>
+            /// <item><description><b>country_baseline</b>: country information</description></item>
+            /// <item><description><b>province_baseline</b>: province information</description></item>
+            /// <item><description><b>sensitive_type</b>: sensitive information</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,24 +70,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string SuggestRule { get; set; }
 
             /// <summary>
-            /// <para>The type of the protection suggestion. Valid values:</para>
+            /// <para>The rule type of the protection suggestion. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>BotRule</b>: a bot rule.</para>
-            /// </description></item>
-            /// <item><description><para><b>BlackIPRule</b>: an IP address blacklist rule.</para>
-            /// </description></item>
-            /// <item><description><para><b>WhiteIPRule</b>: an IP address whitelist rule.</para>
-            /// </description></item>
-            /// <item><description><para><b>RateLimitRule</b>: a rate limiting rule.</para>
-            /// </description></item>
-            /// <item><description><para><b>ClientRule</b>: a client rule.</para>
-            /// </description></item>
-            /// <item><description><para><b>GeoRule</b>: a region rule.</para>
-            /// </description></item>
-            /// <item><description><para><b>SensitiveRule</b>: a sensitive information rule.</para>
-            /// </description></item>
-            /// <item><description><para><b>UnauthRule</b>: an authentication rule.</para>
-            /// </description></item>
+            /// <item><description><b>BotRule</b>: bot management rules</description></item>
+            /// <item><description><b>BlackIPRule</b>: IP address blacklist rules</description></item>
+            /// <item><description><b>WhiteIPRule</b>: IP address whitelist rules</description></item>
+            /// <item><description><b>RateLimitRule</b>: throttling rules</description></item>
+            /// <item><description><b>ClientRule</b>: client rules</description></item>
+            /// <item><description><b>GeoRule</b>: region-related rules</description></item>
+            /// <item><description><b>SensitiveRule</b>: sensitive information rules</description></item>
+            /// <item><description><b>UnauthRule</b>: authentication rules</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecUserOperationsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Hybrid Cloud WAF cluster.</para>
+        /// <para>The ID of the hybrid cloud cluster.</para>
         /// <remarks>
-        /// <para>This parameter is required only when WAF is deployed in hybrid cloud mode. Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the IDs of Hybrid Cloud WAF clusters.</para>
+        /// <para>For hybrid cloud scenarios only, you can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation to query the hybrid cloud clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the threat detection or security event for which you want to query operation records.</para>
+        /// <para>The object ID of the operation record.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,12 +48,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ObjectId { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance resides. Valid values:</para>
+        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +62,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group to which the WAF instance belongs.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2ax2y5****pi</para>
@@ -76,10 +74,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The type of the operation record. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>abnormal</b>: threat detection.</para>
-        /// </description></item>
-        /// <item><description><para><b>event</b>: security event.</para>
-        /// </description></item>
+        /// <item><description><b>abnormal</b>: risk detection</description></item>
+        /// <item><description><b>event</b>: security event</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

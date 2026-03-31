@@ -13,21 +13,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D827FCFE-90A7-4330-9326-******4C7726</para>
+        /// <para>D827FCFE-90A7-4330-9326-D33C8B4C7726</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of detailed attack logs.</para>
+        /// <para>The attack logs returned.</para>
         /// </summary>
         [NameInMap("SecurityEventLogs")]
         [Validation(Required=false)]
         public List<object> SecurityEventLogs { get; set; }
 
         /// <summary>
-        /// <para>The total number of attack logs found.</para>
+        /// <para>The total number of logs returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -37,21 +37,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? SecurityEventLogsTotalCount { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the returned data.</para>
+        /// <para>The metadata of the time series data returned.</para>
         /// </summary>
         [NameInMap("SecurityEventMetaData")]
         [Validation(Required=false)]
         public DescribeSecurityEventLogsResponseBodySecurityEventMetaData SecurityEventMetaData { get; set; }
         public class DescribeSecurityEventLogsResponseBodySecurityEventMetaData : TeaModel {
             /// <summary>
-            /// <para>The time range used for the query.</para>
+            /// <para>The time range that is used for the query.</para>
             /// </summary>
             [NameInMap("DateRange")]
             [Validation(Required=false)]
             public DescribeSecurityEventLogsResponseBodySecurityEventMetaDataDateRange DateRange { get; set; }
             public class DescribeSecurityEventLogsResponseBodySecurityEventMetaDataDateRange : TeaModel {
                 /// <summary>
-                /// <para>The end of the time range used for the query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the \<c>EndDate\\</c> request parameter.</para>
+                /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the value of EndDate in the request parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888600</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The start of the time range used for the query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the \<c>StartDate\\</c> request parameter.</para>
+                /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. This value is the same as the value of StartDate in the request parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888000</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The unit of the returned statistical data.</para>
+            /// <para>The unit of the statistics returned. The value is fixed as requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>requests</para>

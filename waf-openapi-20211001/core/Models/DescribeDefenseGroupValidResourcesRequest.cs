@@ -10,11 +10,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseGroupValidResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the defense group to query.</para>
-        /// <remarks>
-        /// <para>Leave this parameter empty to query for protected objects that can be associated with a new defense group.</para>
-        /// </remarks>
-        /// 
         /// <b>Example:</b>
         /// <para>group221</para>
         /// </summary>
@@ -23,10 +18,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
-        /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,8 +28,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -47,8 +36,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>20</b>.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -57,14 +44,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -73,8 +52,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the protected object that you want to use as a filter for the query results.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>example.aliyun-waf</para>
         /// </summary>
@@ -83,8 +60,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Resource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>rg-aek2lrm****6pnq</para>
         /// </summary>

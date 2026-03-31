@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSecurityEventTimeSeriesMetricShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The filter conditions for the query. Multiple filter conditions have a logical AND relationship.</para>
+        /// <para>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Filter")]
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -32,16 +32,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the content of the returned data. Different metrics correspond to different data content. This operation supports the following metrics:</para>
+        /// <para>The metric whose time series data you want to return. The following metrics are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>mitigated_requests: Returns the time series statistics of blocked requests.</para>
-        /// </description></item>
-        /// <item><description><para>monitored_requests: Returns the time series statistics of requests that hit only observation-type rules.</para>
-        /// </description></item>
-        /// <item><description><para>mitigated_requests_group_by_defense_scene: Returns data grouped by module. It records a time series graph of the hit count for each module. A single request may hit multiple modules. Therefore, the hit count returned by this metric may not be consistent with the number of requests.</para>
-        /// </description></item>
-        /// <item><description><para>mitigated_requests_group_by_block_defense_scene: Returns data grouped by module. It records a time series graph of the number of blocked requests for each module. A single request is blocked by only one module. Therefore, the count returned by this metric is consistent with the number of requests.</para>
-        /// </description></item>
+        /// <item><description>mitigated_requests: The system returns the time series data of requests that are blocked.</description></item>
+        /// <item><description>monitored_requests: The system returns the time series data of requests that match Monitor protection rules.</description></item>
+        /// <item><description>mitigated_requests_group_by_defense_scene: The system returns the number of requests that match each protection module. The returned results are grouped by protection module and can be used to generate time series charts. A request can match multiple protection modules. Therefore, the total number of matched requests is inconsistent with the total number of requests.</description></item>
+        /// <item><description>mitigated_requests_group_by_block_defense_scene: The system returns the number of requests that are blocked by each protection module. The returned results are grouped by protection module and can be used to generate time series charts. A request can be blocked by only one protection module. Therefore, the total number of blocked requests is consistent with the total number of requests.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,16 +49,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Metric { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region ID of the WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: The Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>ap-southeast-1</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

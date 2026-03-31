@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDomainUsedPortsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-<em>-A47C-</em></para>
         /// </summary>
@@ -19,9 +17,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The used ports.</para>
-        /// </summary>
         [NameInMap("UsedPorts")]
         [Validation(Required=false)]
         public List<int?> UsedPorts { get; set; }

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to view the ID of the current WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,12 +24,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region to which the WAF instance belongs. Valid values:</para>
+        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: indicates the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: indicates regions outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +38,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzpks****kdjq</para>
@@ -50,30 +48,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The cloud product to which the resource belongs. By default, instances of ALB, MSE, FC, and SAE products are returned. Valid values:</para>
+        /// <para>The cloud service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>alb</b>: indicates the ALB product.</para>
-        /// </description></item>
-        /// <item><description><para><b>mse</b>: indicates the MSE product.</para>
-        /// </description></item>
-        /// <item><description><para><b>fc</b>: indicates the FC product.</para>
-        /// </description></item>
-        /// <item><description><para><b>sae</b>: indicates the SAE product.</para>
-        /// </description></item>
-        /// <item><description><para><b>ecs</b>: indicates the ECS product.</para>
-        /// </description></item>
-        /// <item><description><para><b>clb4</b>: indicates the CLB(TCP) product.</para>
-        /// </description></item>
-        /// <item><description><para><b>clb7</b>: indicates the CLB(HTTP/HTTPS) product.</para>
-        /// </description></item>
-        /// <item><description><para><b>apig</b>: indicates the APIG product.</para>
-        /// </description></item>
-        /// <item><description><para><b>nlb</b>: indicates the NLB product.</para>
-        /// </description></item>
+        /// <item><description><b>clb4</b>: Layer 4 CLB.</description></item>
+        /// <item><description><b>clb7</b>: Layer 7 CLB.</description></item>
+        /// <item><description><b>ecs</b>: ECS.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>Each product supports different regions. When the product filter field has a value, you need to refer to the regions supported by the product. Otherwise, the filtering may fail.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>clb7</para>

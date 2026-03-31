@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class VerifyDomainOwnerRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name whose ownership you want to verify.</para>
+        /// <para>The domain name of which you want to verify the ownership.</para>
+        /// <para>You can specify this parameter to check whether a domain name is added to WAF. Fuzzy match is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the WAF instance ID.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,12 +36,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The protocol type used for file verification. This parameter is required only when you set VerifyType to fileCheck. Valid values:</para>
+        /// <para>The protocol type that is used for file verification. Specify this parameter when you set VerifyType to fileCheck. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>HTTP</b>: the HTTP protocol.</para>
-        /// </description></item>
-        /// <item><description><para><b>HTTPS</b>: the HTTPS protocol.</para>
-        /// </description></item>
+        /// <item><description><b>HTTP</b></description></item>
+        /// <item><description><b>HTTPS</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,10 +52,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The verification method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>dnsCheck</b>: DNS verification.</para>
-        /// </description></item>
-        /// <item><description><para><b>fileCheck</b>: File verification.</para>
-        /// </description></item>
+        /// <item><description><b>dnsCheck</b>: DNS verification</description></item>
+        /// <item><description><b>fileCheck</b>: file verification</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

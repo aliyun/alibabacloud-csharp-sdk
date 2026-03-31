@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more IP addresses or CIDR blocks to an address book in a Web Application Firewall (WAF) instance. Address books can be referenced in protection rules for centralized IP address management.</para>
+        /// <para>地址簿添加地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more IP addresses or CIDR blocks to an address book in a Web Application Firewall (WAF) instance. Address books can be referenced in protection rules for centralized IP address management.</para>
+        /// <para>地址簿添加地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more IP addresses or CIDR blocks to an address book in a Web Application Firewall (WAF) instance. Address books can be referenced in protection rules for centralized IP address management.</para>
+        /// <para>地址簿添加地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more IP addresses or CIDR blocks to an address book in a Web Application Firewall (WAF) instance. Address books can be referenced in protection rules for centralized IP address management.</para>
+        /// <para>地址簿添加地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears all addresses from a Web Application Firewall (WAF) address book.</para>
+        /// <para>地址簿清空所有地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -412,7 +412,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears all addresses from a Web Application Firewall (WAF) address book.</para>
+        /// <para>地址簿清空所有地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -462,7 +462,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears all addresses from a Web Application Firewall (WAF) address book.</para>
+        /// <para>地址簿清空所有地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -480,7 +480,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears all addresses from a Web Application Firewall (WAF) address book.</para>
+        /// <para>地址簿清空所有地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -498,7 +498,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the IP blacklist for a critical event protection rule.</para>
+        /// <para>Clears an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -556,7 +556,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the IP blacklist for a critical event protection rule.</para>
+        /// <para>Clears an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -614,7 +614,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the IP blacklist for a critical event protection rule.</para>
+        /// <para>Clears an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -632,7 +632,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Clears the IP blacklist for a critical event protection rule.</para>
+        /// <para>Clears an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -650,7 +650,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a protection template.</para>
+        /// <para>Creates a new protection template from the copy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -704,7 +704,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a protection template.</para>
+        /// <para>Creates a new protection template from the copy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -758,7 +758,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a protection template.</para>
+        /// <para>Creates a new protection template from the copy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -776,7 +776,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Copies a protection template.</para>
+        /// <para>Creates a new protection template from the copy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -794,7 +794,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task to export API security data.</para>
+        /// <para>Creates a data export task in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -864,7 +864,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task to export API security data.</para>
+        /// <para>Creates a data export task in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -934,7 +934,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task to export API security data.</para>
+        /// <para>Creates a data export task in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -952,7 +952,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task to export API security data.</para>
+        /// <para>Creates a data export task in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1130,7 +1130,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Integrates cloud products with Web Application Firewall (WAF). Currently, only Elastic Compute Service (ECS) and Classic Load Balancer (CLB) are supported.</para>
+        /// <para>Adds a service to Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1206,7 +1206,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Integrates cloud products with Web Application Firewall (WAF). Currently, only Elastic Compute Service (ECS) and Classic Load Balancer (CLB) are supported.</para>
+        /// <para>Adds a service to Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1282,7 +1282,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Integrates cloud products with Web Application Firewall (WAF). Currently, only Elastic Compute Service (ECS) and Classic Load Balancer (CLB) are supported.</para>
+        /// <para>Adds a service to Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1300,7 +1300,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Integrates cloud products with Web Application Firewall (WAF). Currently, only Elastic Compute Service (ECS) and Classic Load Balancer (CLB) are supported.</para>
+        /// <para>Adds a service to Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1318,7 +1318,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an extension certificate for cloud native mode.</para>
+        /// <para>添加云产品接入的扩展证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1376,7 +1376,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an extension certificate for cloud native mode.</para>
+        /// <para>添加云产品接入的扩展证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1434,7 +1434,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an extension certificate for cloud native mode.</para>
+        /// <para>添加云产品接入的扩展证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1452,7 +1452,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an extension certificate for cloud native mode.</para>
+        /// <para>添加云产品接入的扩展证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1470,7 +1470,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a protected object.</para>
+        /// <para>创建防护对象</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1570,7 +1570,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a protected object.</para>
+        /// <para>创建防护对象</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1670,7 +1670,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a protected object.</para>
+        /// <para>创建防护对象</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1688,7 +1688,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a protected object.</para>
+        /// <para>创建防护对象</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2046,7 +2046,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a protection template in Web Application Firewall (WAF).</para>
+        /// <para>Creates a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2132,7 +2132,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a protection template in Web Application Firewall (WAF).</para>
+        /// <para>Creates a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2218,7 +2218,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a protection template in Web Application Firewall (WAF).</para>
+        /// <para>Creates a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2236,7 +2236,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a protection template in Web Application Firewall (WAF).</para>
+        /// <para>Creates a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2254,7 +2254,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name to a Web Application Firewall (WAF) instance for protection.</para>
+        /// <para>Adds a domain name to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2334,7 +2334,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name to a Web Application Firewall (WAF) instance for protection.</para>
+        /// <para>Adds a domain name to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2414,7 +2414,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name to a Web Application Firewall (WAF) instance for protection.</para>
+        /// <para>Adds a domain name to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2432,7 +2432,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name to a Web Application Firewall (WAF) instance for protection.</para>
+        /// <para>Adds a domain name to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2450,7 +2450,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Creates a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2552,7 +2552,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Creates a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2654,7 +2654,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Creates a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2672,7 +2672,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Creates a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2690,7 +2690,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Hybrid Cloud Web Application Firewall (WAF) cluster rule.</para>
+        /// <para>新增集群规则信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2756,7 +2756,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Hybrid Cloud Web Application Firewall (WAF) cluster rule.</para>
+        /// <para>新增集群规则信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2822,7 +2822,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Hybrid Cloud Web Application Firewall (WAF) cluster rule.</para>
+        /// <para>新增集群规则信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2840,7 +2840,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Hybrid Cloud Web Application Firewall (WAF) cluster rule.</para>
+        /// <para>新增集群规则信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2858,7 +2858,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node group in a Hybrid Cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Creates a node group for a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2936,7 +2936,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node group in a Hybrid Cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Creates a node group for a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3014,7 +3014,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node group in a Hybrid Cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Creates a node group for a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3032,7 +3032,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node group in a Hybrid Cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Creates a node group for a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3050,7 +3050,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a log delivery configuration for a Web Application Firewall (WAF) instance in a hybrid cloud.</para>
+        /// <para>Creates a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3112,7 +3112,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a log delivery configuration for a Web Application Firewall (WAF) instance in a hybrid cloud.</para>
+        /// <para>Creates a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3174,7 +3174,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a log delivery configuration for a Web Application Firewall (WAF) instance in a hybrid cloud.</para>
+        /// <para>Creates a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3192,7 +3192,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a log delivery configuration for a Web Application Firewall (WAF) instance in a hybrid cloud.</para>
+        /// <para>Creates a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3210,7 +3210,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP address blacklist for critical event protection.</para>
+        /// <para>Creates an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3285,7 +3285,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP address blacklist for critical event protection.</para>
+        /// <para>Creates an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3360,7 +3360,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP address blacklist for critical event protection.</para>
+        /// <para>Creates an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3383,7 +3383,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an IP address blacklist for critical event protection.</para>
+        /// <para>Creates an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3406,7 +3406,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds member accounts to use the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Adds members to use the multi-account management feature of Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3464,7 +3464,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds member accounts to use the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Adds members to use the multi-account management feature of Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3522,7 +3522,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds member accounts to use the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Adds members to use the multi-account management feature of Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3540,7 +3540,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds member accounts to use the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Adds members to use the multi-account management feature of Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3558,7 +3558,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a trial for a proof of concept (POC) feature.</para>
+        /// <para>开启防护功能POC</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3612,7 +3612,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a trial for a proof of concept (POC) feature.</para>
+        /// <para>开启防护功能POC</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3666,7 +3666,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a trial for a proof of concept (POC) feature.</para>
+        /// <para>开启防护功能POC</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3684,7 +3684,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a trial for a proof of concept (POC) feature.</para>
+        /// <para>开启防护功能POC</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3830,7 +3830,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an SM certificate for CNAME record access to Web Application Firewall (WAF).</para>
+        /// <para>Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3900,7 +3900,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an SM certificate for CNAME record access to Web Application Firewall (WAF).</para>
+        /// <para>Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3970,7 +3970,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an SM certificate for CNAME record access to Web Application Firewall (WAF).</para>
+        /// <para>Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3988,7 +3988,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an SM certificate for CNAME record access to Web Application Firewall (WAF).</para>
+        /// <para>Uploads a ShangMi (SM) certificate for a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4006,7 +4006,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes addresses from an address book.</para>
+        /// <para>地址簿添加地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4060,7 +4060,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes addresses from an address book.</para>
+        /// <para>地址簿添加地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4114,7 +4114,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes addresses from an address book.</para>
+        /// <para>地址簿添加地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4132,7 +4132,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes addresses from an address book.</para>
+        /// <para>地址簿添加地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4150,7 +4150,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes API security risks in a batch.</para>
+        /// <para>Deletes multiple risks detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4208,7 +4208,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes API security risks in a batch.</para>
+        /// <para>Deletes multiple risks detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4266,7 +4266,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes API security risks in a batch.</para>
+        /// <para>Deletes multiple risks detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4284,7 +4284,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes API security risks in a batch.</para>
+        /// <para>Deletes multiple risks detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4302,7 +4302,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes API security events in batches.</para>
+        /// <para>Deletes multiple security events detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4364,7 +4364,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes API security events in batches.</para>
+        /// <para>Deletes multiple security events detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4426,7 +4426,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes API security events in batches.</para>
+        /// <para>Deletes multiple security events detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4444,7 +4444,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes API security events in batches.</para>
+        /// <para>Deletes multiple security events detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4462,7 +4462,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a cloud service from Web Application Firewall (WAF). This operation currently supports only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Removes a service from Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4528,7 +4528,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a cloud service from Web Application Firewall (WAF). This operation currently supports only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Removes a service from Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4594,7 +4594,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a cloud service from Web Application Firewall (WAF). This operation currently supports only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Removes a service from Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4612,7 +4612,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a cloud service from Web Application Firewall (WAF). This operation currently supports only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Removes a service from Web Application Firewall (WAF). This operation is supported for only the Elastic Compute Service (ECS) and Classic Load Balancer (CLB) services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4630,7 +4630,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an extension certificate for cloud native mode.</para>
+        /// <para>删除云产品接入的扩展证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4688,7 +4688,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an extension certificate for cloud native mode.</para>
+        /// <para>删除云产品接入的扩展证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4746,7 +4746,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an extension certificate for cloud native mode.</para>
+        /// <para>删除云产品接入的扩展证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4764,7 +4764,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an extension certificate for cloud native mode.</para>
+        /// <para>删除云产品接入的扩展证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4782,7 +4782,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a protected object.</para>
+        /// <para>删除单个防护对象</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4836,7 +4836,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a protected object.</para>
+        /// <para>删除单个防护对象</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4890,7 +4890,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a protected object.</para>
+        /// <para>删除单个防护对象</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4908,7 +4908,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a protected object.</para>
+        /// <para>删除单个防护对象</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5070,7 +5070,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified protection rules.</para>
+        /// <para>Deletes a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5136,7 +5136,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified protection rules.</para>
+        /// <para>Deletes a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5202,7 +5202,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified protection rules.</para>
+        /// <para>Deletes a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5220,7 +5220,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the specified protection rules.</para>
+        /// <para>Deletes a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5238,7 +5238,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unblocks an IP address that is blocked by the scan protection module.</para>
+        /// <para>更新防护规则封禁Ip</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5296,7 +5296,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unblocks an IP address that is blocked by the scan protection module.</para>
+        /// <para>更新防护规则封禁Ip</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5354,7 +5354,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unblocks an IP address that is blocked by the scan protection module.</para>
+        /// <para>更新防护规则封禁Ip</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5372,7 +5372,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unblocks an IP address that is blocked by the scan protection module.</para>
+        /// <para>更新防护规则封禁Ip</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5534,7 +5534,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a domain name that has been added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// <para>Deletes a domain name that is added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5592,7 +5592,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a domain name that has been added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// <para>Deletes a domain name that is added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5650,7 +5650,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a domain name that has been added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// <para>Deletes a domain name that is added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5668,7 +5668,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a domain name that has been added to Web Application Firewall (WAF) in CNAME record mode.</para>
+        /// <para>Deletes a domain name that is added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5686,7 +5686,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a hybrid cloud cluster rule from a Web Application Firewall (WAF) instance.</para>
+        /// <para>删除集群规则信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5740,7 +5740,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a hybrid cloud cluster rule from a Web Application Firewall (WAF) instance.</para>
+        /// <para>删除集群规则信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5794,7 +5794,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a hybrid cloud cluster rule from a Web Application Firewall (WAF) instance.</para>
+        /// <para>删除集群规则信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5812,7 +5812,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a hybrid cloud cluster rule from a Web Application Firewall (WAF) instance.</para>
+        /// <para>删除集群规则信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5830,7 +5830,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group.</para>
+        /// <para>删除组信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5888,7 +5888,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group.</para>
+        /// <para>删除组信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5946,7 +5946,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group.</para>
+        /// <para>删除组信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5964,7 +5964,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a group.</para>
+        /// <para>删除组信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5982,7 +5982,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a log delivery configuration.</para>
+        /// <para>Delets a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6036,7 +6036,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a log delivery configuration.</para>
+        /// <para>Delets a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6090,7 +6090,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a log delivery configuration.</para>
+        /// <para>Delets a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6108,7 +6108,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a log delivery configuration.</para>
+        /// <para>Delets a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6126,7 +6126,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IP address from the blacklist for critical event protection.</para>
+        /// <para>Deletes an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6188,7 +6188,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IP address from the blacklist for critical event protection.</para>
+        /// <para>Deletes an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6250,7 +6250,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IP address from the blacklist for critical event protection.</para>
+        /// <para>Deletes an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6268,7 +6268,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an IP address from the blacklist for critical event protection.</para>
+        /// <para>Deletes an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6286,7 +6286,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Web Application Firewall (WAF) member account.</para>
+        /// <para>Removes the members that are added for multi-account management in Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6344,7 +6344,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Web Application Firewall (WAF) member account.</para>
+        /// <para>Removes the members that are added for multi-account management in Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6402,7 +6402,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Web Application Firewall (WAF) member account.</para>
+        /// <para>Removes the members that are added for multi-account management in Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6420,7 +6420,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Web Application Firewall (WAF) member account.</para>
+        /// <para>Removes the members that are added for multi-account management in Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6438,7 +6438,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries abnormal cloud resources added in cloud native mode.</para>
+        /// <para>查询异常的云产品接入资源</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6488,7 +6488,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries abnormal cloud resources added in cloud native mode.</para>
+        /// <para>查询异常的云产品接入资源</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6538,7 +6538,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries abnormal cloud resources added in cloud native mode.</para>
+        /// <para>查询异常的云产品接入资源</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6556,7 +6556,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries abnormal cloud resources added in cloud native mode.</para>
+        /// <para>查询异常的云产品接入资源</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6574,7 +6574,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether an account is a delegated administrator for Web Application Firewall (WAF) using the multi-account management feature.</para>
+        /// <para>Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6624,7 +6624,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether an account is a delegated administrator for Web Application Firewall (WAF) using the multi-account management feature.</para>
+        /// <para>Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6674,7 +6674,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether an account is a delegated administrator for Web Application Firewall (WAF) using the multi-account management feature.</para>
+        /// <para>Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6692,7 +6692,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether an account is a delegated administrator for Web Application Firewall (WAF) using the multi-account management feature.</para>
+        /// <para>Queries whether an Alibaba Cloud account is the delegated administrator account of a Web Application Firewall (WAF) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6710,7 +6710,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of addresses in an address book.</para>
+        /// <para>分页查询地址簿IP</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6776,7 +6776,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of addresses in an address book.</para>
+        /// <para>分页查询地址簿IP</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6842,7 +6842,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of addresses in an address book.</para>
+        /// <para>分页查询地址簿IP</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6860,7 +6860,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of addresses in an address book.</para>
+        /// <para>分页查询地址簿IP</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6878,7 +6878,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert banner information of a Web Application Firewall (WAF) instance.</para>
+        /// <para>查询实例信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6928,7 +6928,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert banner information of a Web Application Firewall (WAF) instance.</para>
+        /// <para>查询实例信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6978,7 +6978,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert banner information of a Web Application Firewall (WAF) instance.</para>
+        /// <para>查询实例信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6996,7 +6996,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the alert banner information of a Web Application Firewall (WAF) instance.</para>
+        /// <para>查询实例信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7014,7 +7014,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alerts.</para>
+        /// <para>查询实例信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7064,7 +7064,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alerts.</para>
+        /// <para>查询实例信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7114,7 +7114,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alerts.</para>
+        /// <para>查询实例信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7132,7 +7132,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alerts.</para>
+        /// <para>查询实例信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7150,7 +7150,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API security export tasks.</para>
+        /// <para>Queries the list of data export tasks in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7212,7 +7212,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API security export tasks.</para>
+        /// <para>Queries the list of data export tasks in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7274,7 +7274,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API security export tasks.</para>
+        /// <para>Queries the list of data export tasks in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7292,7 +7292,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API security export tasks.</para>
+        /// <para>Queries the list of data export tasks in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7310,7 +7310,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API security risk statistics for domain names that are protected by Web Application Firewall (WAF).</para>
+        /// <para>Queries the statistics on domain names on which risks are detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7384,7 +7384,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API security risk statistics for domain names that are protected by Web Application Firewall (WAF).</para>
+        /// <para>Queries the statistics on domain names on which risks are detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7458,7 +7458,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API security risk statistics for domain names that are protected by Web Application Firewall (WAF).</para>
+        /// <para>Queries the statistics on domain names on which risks are detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7476,7 +7476,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API security risk statistics for domain names that are protected by Web Application Firewall (WAF).</para>
+        /// <para>Queries the statistics on domain names on which risks are detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7494,7 +7494,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API security risks that are detected by Web Application Firewall (WAF).</para>
+        /// <para>Queries the list of API security risks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7608,7 +7608,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API security risks that are detected by Web Application Firewall (WAF).</para>
+        /// <para>Queries the list of API security risks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7722,7 +7722,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API security risks that are detected by Web Application Firewall (WAF).</para>
+        /// <para>Queries the list of API security risks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7740,7 +7740,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API security risks that are detected by Web Application Firewall (WAF).</para>
+        /// <para>Queries the list of API security risks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7758,7 +7758,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API security assets that are protected by Web Application Firewall (WAF).</para>
+        /// <para>Queries API assets in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7888,7 +7888,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API security assets that are protected by Web Application Firewall (WAF).</para>
+        /// <para>Queries API assets in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8018,7 +8018,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API security assets that are protected by Web Application Firewall (WAF).</para>
+        /// <para>Queries API assets in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8036,7 +8036,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API security assets that are protected by Web Application Firewall (WAF).</para>
+        /// <para>Queries API assets in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8054,7 +8054,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of API assets detected by the API security module of Web Application Firewall (WAF).</para>
+        /// <para>Queries the asset trends in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8116,7 +8116,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of API assets detected by the API security module of Web Application Firewall (WAF).</para>
+        /// <para>Queries the asset trends in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8178,7 +8178,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of API assets detected by the API security module of Web Application Firewall (WAF).</para>
+        /// <para>Queries the asset trends in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8196,7 +8196,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of API assets detected by the API security module of Web Application Firewall (WAF).</para>
+        /// <para>Queries the asset trends in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8214,7 +8214,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an API security event.</para>
+        /// <para>查询安全事件详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8280,7 +8280,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an API security event.</para>
+        /// <para>查询安全事件详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8346,7 +8346,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an API security event.</para>
+        /// <para>查询安全事件详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8364,7 +8364,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of an API security event.</para>
+        /// <para>查询安全事件详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8382,7 +8382,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries API security event statistics grouped by domain name for a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the statistics on domain names on which security events are detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8456,7 +8456,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries API security event statistics grouped by domain name for a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the statistics on domain names on which security events are detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8530,7 +8530,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries API security event statistics grouped by domain name for a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the statistics on domain names on which security events are detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8548,7 +8548,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries API security event statistics grouped by domain name for a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the statistics on domain names on which security events are detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8566,7 +8566,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API security events.</para>
+        /// <para>Queries API security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8692,7 +8692,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API security events.</para>
+        /// <para>Queries API security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8818,7 +8818,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API security events.</para>
+        /// <para>Queries API security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8836,7 +8836,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API security events.</para>
+        /// <para>Queries API security events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8854,7 +8854,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API security examples that are detected by Web Application Firewall (WAF).</para>
+        /// <para>查询API安全样例信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8936,7 +8936,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API security examples that are detected by Web Application Firewall (WAF).</para>
+        /// <para>查询API安全样例信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9018,7 +9018,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API security examples that are detected by Web Application Firewall (WAF).</para>
+        /// <para>查询API安全样例信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9036,7 +9036,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API security examples that are detected by Web Application Firewall (WAF).</para>
+        /// <para>查询API安全样例信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9190,7 +9190,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of domain names that are protected by API security.</para>
+        /// <para>Queries the list of domain names detected in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9260,7 +9260,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of domain names that are protected by API security.</para>
+        /// <para>Queries the list of domain names detected in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9330,7 +9330,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of domain names that are protected by API security.</para>
+        /// <para>Queries the list of domain names detected in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9348,7 +9348,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of domain names that are protected by API security.</para>
+        /// <para>Queries the list of domain names detected in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9366,7 +9366,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of active API security protection object groups.</para>
+        /// <para>Queries the list of protected object groups to which API security policies are applied.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9432,7 +9432,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of active API security protection object groups.</para>
+        /// <para>Queries the list of protected object groups to which API security policies are applied.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9498,7 +9498,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of active API security protection object groups.</para>
+        /// <para>Queries the list of protected object groups to which API security policies are applied.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9516,7 +9516,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of active API security protection object groups.</para>
+        /// <para>Queries the list of protected object groups to which API security policies are applied.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9534,7 +9534,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protected objects of a Web Application Firewall (WAF) instance for which API security is enabled.</para>
+        /// <para>Queries the list of protected objects to which API security policies are applied.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9600,7 +9600,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protected objects of a Web Application Firewall (WAF) instance for which API security is enabled.</para>
+        /// <para>Queries the list of protected objects to which API security policies are applied.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9666,7 +9666,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protected objects of a Web Application Firewall (WAF) instance for which API security is enabled.</para>
+        /// <para>Queries the list of protected objects to which API security policies are applied.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9684,7 +9684,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protected objects of a Web Application Firewall (WAF) instance for which API security is enabled.</para>
+        /// <para>Queries the list of protected objects to which API security policies are applied.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9702,7 +9702,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules of an API security policy.</para>
+        /// <para>Queries the policies configured in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9784,7 +9784,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules of an API security policy.</para>
+        /// <para>Queries the policies configured in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9866,7 +9866,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules of an API security policy.</para>
+        /// <para>Queries the policies configured in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9884,7 +9884,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the rules of an API security policy.</para>
+        /// <para>Queries the policies configured in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9902,7 +9902,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on domain names where sensitive data is detected by the API security module.</para>
+        /// <para>Queries the statistics on domain names on which sensitive data is detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9980,7 +9980,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on domain names where sensitive data is detected by the API security module.</para>
+        /// <para>Queries the statistics on domain names on which sensitive data is detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10058,7 +10058,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on domain names where sensitive data is detected by the API security module.</para>
+        /// <para>Queries the statistics on domain names on which sensitive data is detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10076,7 +10076,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on domain names where sensitive data is detected by the API security module.</para>
+        /// <para>Queries the statistics on domain names on which sensitive data is detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10390,7 +10390,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics for API security risks or security events.</para>
+        /// <para>Queries the statistics of API security-related risks and events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10460,7 +10460,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics for API security risks or security events.</para>
+        /// <para>Queries the statistics of API security-related risks and events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10530,7 +10530,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics for API security risks or security events.</para>
+        /// <para>Queries the statistics of API security-related risks and events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10548,7 +10548,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics for API security risks or security events.</para>
+        /// <para>Queries the statistics of API security-related risks and events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10566,7 +10566,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries security suggestions for API assets.</para>
+        /// <para>Queries the protection suggestions for APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10624,7 +10624,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries security suggestions for API assets.</para>
+        /// <para>Queries the protection suggestions for APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10682,7 +10682,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries security suggestions for API assets.</para>
+        /// <para>Queries the protection suggestions for APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10700,7 +10700,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries security suggestions for API assets.</para>
+        /// <para>Queries the protection suggestions for APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10718,7 +10718,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user operation records for API security of Web Application Firewall (WAF).</para>
+        /// <para>Queries user operation records in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10780,7 +10780,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user operation records for API security of Web Application Firewall (WAF).</para>
+        /// <para>Queries user operation records in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10842,7 +10842,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user operation records for API security of Web Application Firewall (WAF).</para>
+        /// <para>Queries user operation records in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10860,7 +10860,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user operation records for API security of Web Application Firewall (WAF).</para>
+        /// <para>Queries user operation records in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10878,7 +10878,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries paged records of ruleset changes.</para>
+        /// <para>分页查询基础防护规则集变化记录</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10940,7 +10940,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries paged records of ruleset changes.</para>
+        /// <para>分页查询基础防护规则集变化记录</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11002,7 +11002,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries paged records of ruleset changes.</para>
+        /// <para>分页查询基础防护规则集变化记录</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11020,7 +11020,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries paged records of ruleset changes.</para>
+        /// <para>分页查询基础防护规则集变化记录</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11038,7 +11038,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the system rules for Web Application Firewall (WAF) protection.</para>
+        /// <para>查询基础防护系统规则集</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11128,7 +11128,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the system rules for Web Application Firewall (WAF) protection.</para>
+        /// <para>查询基础防护系统规则集</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11218,7 +11218,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the system rules for Web Application Firewall (WAF) protection.</para>
+        /// <para>查询基础防护系统规则集</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11236,7 +11236,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the system rules for Web Application Firewall (WAF) protection.</para>
+        /// <para>查询基础防护系统规则集</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11254,7 +11254,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the AppKey for bot management.</para>
+        /// <para>分页查询防护模板</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11308,7 +11308,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the AppKey for bot management.</para>
+        /// <para>分页查询防护模板</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11362,7 +11362,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the AppKey for bot management.</para>
+        /// <para>分页查询防护模板</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11380,7 +11380,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the AppKey for bot management.</para>
+        /// <para>分页查询防护模板</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11398,7 +11398,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the labels of bot management rules.</para>
+        /// <para>分页获取Bot管理规则标签信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11464,7 +11464,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the labels of bot management rules.</para>
+        /// <para>分页获取Bot管理规则标签信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11530,7 +11530,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the labels of bot management rules.</para>
+        /// <para>分页获取Bot管理规则标签信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11548,7 +11548,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the labels of bot management rules.</para>
+        /// <para>分页获取Bot管理规则标签信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11566,7 +11566,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves certificate details, including the certificate name, expiration time, issuance time, and associated domain name.</para>
+        /// <para>Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11620,7 +11620,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves certificate details, including the certificate name, expiration time, issuance time, and associated domain name.</para>
+        /// <para>Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11674,7 +11674,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves certificate details, including the certificate name, expiration time, issuance time, and associated domain name.</para>
+        /// <para>Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11692,7 +11692,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves certificate details, including the certificate name, expiration time, issuance time, and associated domain name.</para>
+        /// <para>Queries the details of a certificate, such as the certificate name, expiration time, issuance time, and associated domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11710,7 +11710,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of certificates for a user.</para>
+        /// <para>Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11776,7 +11776,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of certificates for a user.</para>
+        /// <para>Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11842,7 +11842,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of certificates for a user.</para>
+        /// <para>Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11860,7 +11860,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of certificates for a user.</para>
+        /// <para>Queries the certificates issued for your domain names that are added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11878,7 +11878,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the billing module information of Web Application Firewall (WAF).</para>
+        /// <para>查询WAF计价模块信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11928,7 +11928,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the billing module information of Web Application Firewall (WAF).</para>
+        /// <para>查询WAF计价模块信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11978,7 +11978,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the billing module information of Web Application Firewall (WAF).</para>
+        /// <para>查询WAF计价模块信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11996,7 +11996,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the billing module information of Web Application Firewall (WAF).</para>
+        /// <para>查询WAF计价模块信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12014,7 +12014,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing results for Web Application Firewall (WAF).</para>
+        /// <para>查询WAF计价模块的计价结果</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12072,7 +12072,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing results for Web Application Firewall (WAF).</para>
+        /// <para>查询WAF计价模块的计价结果</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12130,7 +12130,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing results for Web Application Firewall (WAF).</para>
+        /// <para>查询WAF计价模块的计价结果</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12148,7 +12148,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the billing results for Web Application Firewall (WAF).</para>
+        /// <para>查询WAF计价模块的计价结果</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12166,7 +12166,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves port details of cloud service instances onboarded to Web Application Firewall (WAF).</para>
+        /// <para>Queries the port details of a cloud service instance that is added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS), Classic Load Balancer (CLB), and Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12240,7 +12240,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves port details of cloud service instances onboarded to Web Application Firewall (WAF).</para>
+        /// <para>Queries the port details of a cloud service instance that is added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS), Classic Load Balancer (CLB), and Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12314,7 +12314,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves port details of cloud service instances onboarded to Web Application Firewall (WAF).</para>
+        /// <para>Queries the port details of a cloud service instance that is added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS), Classic Load Balancer (CLB), and Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12332,7 +12332,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves port details of cloud service instances onboarded to Web Application Firewall (WAF).</para>
+        /// <para>Queries the port details of a cloud service instance that is added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS), Classic Load Balancer (CLB), and Network Load Balancer (NLB) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12350,7 +12350,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports of cloud services added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Queries the ports of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12404,7 +12404,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports of cloud services added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Queries the ports of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12458,7 +12458,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports of cloud services added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Queries the ports of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12476,7 +12476,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports of cloud services added to Web Application Firewall (WAF). This operation is supported only for Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
+        /// <para>Queries the ports of the cloud service that is added to Web Application Firewall (WAF). This operation is supported for only Elastic Compute Service (ECS) and Classic Load Balancer (CLB).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12494,7 +12494,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resources added to Web Application Firewall (WAF) in cloud native mode.</para>
+        /// <para>查询云产品接入资源列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12572,7 +12572,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resources added to Web Application Firewall (WAF) in cloud native mode.</para>
+        /// <para>查询云产品接入资源列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12650,7 +12650,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resources added to Web Application Firewall (WAF) in cloud native mode.</para>
+        /// <para>查询云产品接入资源列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12668,7 +12668,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of resources added to Web Application Firewall (WAF) in cloud native mode.</para>
+        /// <para>查询云产品接入资源列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12686,7 +12686,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of cloud services added to Web Application Firewall (WAF).</para>
+        /// <para>Queries cloud service resources that are added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12780,7 +12780,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of cloud services added to Web Application Firewall (WAF).</para>
+        /// <para>Queries cloud service resources that are added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12874,7 +12874,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of cloud services added to Web Application Firewall (WAF).</para>
+        /// <para>Queries cloud service resources that are added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12892,7 +12892,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of cloud services added to Web Application Firewall (WAF).</para>
+        /// <para>Queries cloud service resources that are added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12910,7 +12910,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total number of domain names added to WAF, including those in canonical name (CNAME) mode and hybrid cloud mode.</para>
+        /// <para>Queries the total number of domain names that are added to Web Application Firewall (WAF) in CNAME record mode and hybrid cloud reverse proxy mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12960,7 +12960,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total number of domain names added to WAF, including those in canonical name (CNAME) mode and hybrid cloud mode.</para>
+        /// <para>Queries the total number of domain names that are added to Web Application Firewall (WAF) in CNAME record mode and hybrid cloud reverse proxy mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13010,7 +13010,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total number of domain names added to WAF, including those in canonical name (CNAME) mode and hybrid cloud mode.</para>
+        /// <para>Queries the total number of domain names that are added to Web Application Firewall (WAF) in CNAME record mode and hybrid cloud reverse proxy mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13028,7 +13028,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the total number of domain names added to WAF, including those in canonical name (CNAME) mode and hybrid cloud mode.</para>
+        /// <para>Queries the total number of domain names that are added to Web Application Firewall (WAF) in CNAME record mode and hybrid cloud reverse proxy mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13046,7 +13046,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all log fields supported by Simple Log Service for Web Application Firewall (WAF).</para>
+        /// <para>查询日志服务支持的所有字段</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13114,7 +13114,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all log fields supported by Simple Log Service for Web Application Firewall (WAF).</para>
+        /// <para>查询日志服务支持的所有字段</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13182,7 +13182,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all log fields supported by Simple Log Service for Web Application Firewall (WAF).</para>
+        /// <para>查询日志服务支持的所有字段</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13200,7 +13200,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all log fields supported by Simple Log Service for Web Application Firewall (WAF).</para>
+        /// <para>查询日志服务支持的所有字段</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13218,7 +13218,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the compilation result of a custom regular expression rule.</para>
+        /// <para>查询自定义正则规则编译结果</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13268,7 +13268,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the compilation result of a custom regular expression rule.</para>
+        /// <para>查询自定义正则规则编译结果</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13318,7 +13318,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the compilation result of a custom regular expression rule.</para>
+        /// <para>查询自定义正则规则编译结果</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13336,7 +13336,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the compilation result of a custom regular expression rule.</para>
+        /// <para>查询自定义正则规则编译结果</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13354,7 +13354,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the current WAF instance is under a Distributed Denial of Service (DDoS) attack.</para>
+        /// <para>Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13404,7 +13404,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the current WAF instance is under a Distributed Denial of Service (DDoS) attack.</para>
+        /// <para>Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13454,7 +13454,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the current WAF instance is under a Distributed Denial of Service (DDoS) attack.</para>
+        /// <para>Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13472,7 +13472,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the current WAF instance is under a Distributed Denial of Service (DDoS) attack.</para>
+        /// <para>Checks whether DDoS attacks occur on specific domain names protected by a Web Application Firewall (WAF) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13490,7 +13490,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default SSL/TLS settings of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the default SSL and Transport Layer Security (TLS) settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13540,7 +13540,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default SSL/TLS settings of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the default SSL and Transport Layer Security (TLS) settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13590,7 +13590,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default SSL/TLS settings of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the default SSL and Transport Layer Security (TLS) settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13608,7 +13608,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the default SSL/TLS settings of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the default SSL and Transport Layer Security (TLS) settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13626,7 +13626,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that can be associated with a defense group.</para>
+        /// <para>分页查询可以被防护组绑定的防护对象列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13692,7 +13692,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that can be associated with a defense group.</para>
+        /// <para>分页查询可以被防护组绑定的防护对象列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13758,7 +13758,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that can be associated with a defense group.</para>
+        /// <para>分页查询可以被防护组绑定的防护对象列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13776,7 +13776,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that can be associated with a defense group.</para>
+        /// <para>分页查询可以被防护组绑定的防护对象列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13794,7 +13794,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a protected object.</para>
+        /// <para>Queries the information about a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13848,7 +13848,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a protected object.</para>
+        /// <para>Queries the information about a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13902,7 +13902,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a protected object.</para>
+        /// <para>Queries the information about a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13920,7 +13920,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a protected object.</para>
+        /// <para>Queries the information about a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13938,7 +13938,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a protected object group.</para>
+        /// <para>Queries the information about a protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13992,7 +13992,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a protected object group.</para>
+        /// <para>Queries the information about a protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14046,7 +14046,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a protected object group.</para>
+        /// <para>Queries the information about a protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14064,7 +14064,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a protected object group.</para>
+        /// <para>Queries the information about a protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14242,7 +14242,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about protected object groups using pagination.</para>
+        /// <para>Performs a pagination query to retrieve the information about protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14308,7 +14308,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about protected object groups using pagination.</para>
+        /// <para>Performs a pagination query to retrieve the information about protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14374,7 +14374,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about protected object groups using pagination.</para>
+        /// <para>Performs a pagination query to retrieve the information about protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14392,7 +14392,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about protected object groups using pagination.</para>
+        /// <para>Performs a pagination query to retrieve the information about protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14570,7 +14570,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the asset owner account of protected objects in multi-account management scenarios.</para>
+        /// <para>查询防护对象和所属资源的关系</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14624,7 +14624,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the asset owner account of protected objects in multi-account management scenarios.</para>
+        /// <para>查询防护对象和所属资源的关系</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14678,7 +14678,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the asset owner account of protected objects in multi-account management scenarios.</para>
+        /// <para>查询防护对象和所属资源的关系</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14696,7 +14696,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the asset owner account of protected objects in multi-account management scenarios.</para>
+        /// <para>查询防护对象和所属资源的关系</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14714,7 +14714,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection templates associated with a protected object or protected object group.</para>
+        /// <para>Queries the protection templates that are associated with a protected object or protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14788,7 +14788,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection templates associated with a protected object or protected object group.</para>
+        /// <para>Queries the protection templates that are associated with a protected object or protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14862,7 +14862,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection templates associated with a protected object or protected object group.</para>
+        /// <para>Queries the protection templates that are associated with a protected object or protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14880,7 +14880,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection templates associated with a protected object or protected object group.</para>
+        /// <para>Queries the protection templates that are associated with a protected object or protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14898,7 +14898,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of protected objects.</para>
+        /// <para>Queries protected objects by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14964,7 +14964,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of protected objects.</para>
+        /// <para>Queries protected objects by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15030,7 +15030,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of protected objects.</para>
+        /// <para>Queries protected objects by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15048,7 +15048,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of protected objects.</para>
+        /// <para>Queries protected objects by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15066,7 +15066,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified protection rule.</para>
+        /// <para>Queries a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15132,7 +15132,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified protection rule.</para>
+        /// <para>Queries a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15198,7 +15198,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified protection rule.</para>
+        /// <para>Queries a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15216,7 +15216,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified protection rule.</para>
+        /// <para>Queries a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15234,7 +15234,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of rules in a specified Web Application Firewall (WAF) protection module.</para>
+        /// <para>查询防护规则的统计信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15304,7 +15304,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of rules in a specified Web Application Firewall (WAF) protection module.</para>
+        /// <para>查询防护规则的统计信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15374,7 +15374,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of rules in a specified Web Application Firewall (WAF) protection module.</para>
+        /// <para>查询防护规则的统计信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15392,7 +15392,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of rules in a specified Web Application Firewall (WAF) protection module.</para>
+        /// <para>查询防护规则的统计信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15410,7 +15410,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protection rules.</para>
+        /// <para>Queries protection rules by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15480,7 +15480,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protection rules.</para>
+        /// <para>Queries protection rules by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15550,7 +15550,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protection rules.</para>
+        /// <para>Queries protection rules by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15568,7 +15568,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protection rules.</para>
+        /// <para>Queries protection rules by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15586,7 +15586,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection configurations for a specific defense scenario.</para>
+        /// <para>查询用户防护场景的配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15644,7 +15644,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection configurations for a specific defense scenario.</para>
+        /// <para>查询用户防护场景的配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15702,7 +15702,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection configurations for a specific defense scenario.</para>
+        /// <para>查询用户防护场景的配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15720,7 +15720,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection configurations for a specific defense scenario.</para>
+        /// <para>查询用户防护场景的配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15738,7 +15738,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific protection template.</para>
+        /// <para>Queries a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15792,7 +15792,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific protection template.</para>
+        /// <para>Queries a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15846,7 +15846,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific protection template.</para>
+        /// <para>Queries a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15864,7 +15864,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific protection template.</para>
+        /// <para>Queries a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15882,7 +15882,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of protected object groups that can be associated with a specific protection template.</para>
+        /// <para>Queries the names of protected object groups for which a protection template can take effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15952,7 +15952,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of protected object groups that can be associated with a specific protection template.</para>
+        /// <para>Queries the names of protected object groups for which a protection template can take effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16022,7 +16022,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of protected object groups that can be associated with a specific protection template.</para>
+        /// <para>Queries the names of protected object groups for which a protection template can take effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16040,7 +16040,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of protected object groups that can be associated with a specific protection template.</para>
+        /// <para>Queries the names of protected object groups for which a protection template can take effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16058,7 +16058,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that are valid for a specified protection template.</para>
+        /// <para>分页查询可以被自定义模板绑定的防护对象列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16128,7 +16128,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that are valid for a specified protection template.</para>
+        /// <para>分页查询可以被自定义模板绑定的防护对象列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16198,7 +16198,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that are valid for a specified protection template.</para>
+        /// <para>分页查询可以被自定义模板绑定的防护对象列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16216,7 +16216,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of protected objects that are valid for a specified protection template.</para>
+        /// <para>分页查询可以被自定义模板绑定的防护对象列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16234,7 +16234,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of protection templates.</para>
+        /// <para>Performs a paging query to retrieve protection templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16324,7 +16324,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of protection templates.</para>
+        /// <para>Performs a paging query to retrieve protection templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16414,7 +16414,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of protection templates.</para>
+        /// <para>Performs a paging query to retrieve protection templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16432,7 +16432,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of protection templates.</para>
+        /// <para>Performs a paging query to retrieve protection templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16450,7 +16450,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies that the DNS record of a domain name is correct.</para>
+        /// <para>Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16504,7 +16504,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies that the DNS record of a domain name is correct.</para>
+        /// <para>Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16558,7 +16558,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies that the DNS record of a domain name is correct.</para>
+        /// <para>Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16576,7 +16576,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies that the DNS record of a domain name is correct.</para>
+        /// <para>Checks whether the Domain Name System (DNS) settings of a domain name are properly configured.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16594,7 +16594,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the access configuration details of a domain name onboarded to Web Application Firewall (WAF).</para>
+        /// <para>Queries the details of a domain name that is added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16648,7 +16648,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the access configuration details of a domain name onboarded to Web Application Firewall (WAF).</para>
+        /// <para>Queries the details of a domain name that is added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16702,7 +16702,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the access configuration details of a domain name onboarded to Web Application Firewall (WAF).</para>
+        /// <para>Queries the details of a domain name that is added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16720,7 +16720,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the access configuration details of a domain name onboarded to Web Application Firewall (WAF).</para>
+        /// <para>Queries the details of a domain name that is added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16738,7 +16738,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports used by all domain names that are added in CNAME record mode and hybrid cloud mode with public network disaster recovery enabled.</para>
+        /// <para>查询域名已使用的端口</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16784,7 +16784,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports used by all domain names that are added in CNAME record mode and hybrid cloud mode with public network disaster recovery enabled.</para>
+        /// <para>查询域名已使用的端口</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16830,7 +16830,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports used by all domain names that are added in CNAME record mode and hybrid cloud mode with public network disaster recovery enabled.</para>
+        /// <para>查询域名已使用的端口</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16848,7 +16848,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the ports used by all domain names that are added in CNAME record mode and hybrid cloud mode with public network disaster recovery enabled.</para>
+        /// <para>查询域名已使用的端口</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17050,7 +17050,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the daily bills for WAF on-demand instances for the last 7 days.</para>
+        /// <para>Queries the daily billing information of a pay-as-you-go Web Application Firewall (WAF) instance. This allows you to check the daily security capacity unit (SeCU) usage. You can query only data in the previous seven days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17108,7 +17108,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the daily bills for WAF on-demand instances for the last 7 days.</para>
+        /// <para>Queries the daily billing information of a pay-as-you-go Web Application Firewall (WAF) instance. This allows you to check the daily security capacity unit (SeCU) usage. You can query only data in the previous seven days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17166,7 +17166,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the daily bills for WAF on-demand instances for the last 7 days.</para>
+        /// <para>Queries the daily billing information of a pay-as-you-go Web Application Firewall (WAF) instance. This allows you to check the daily security capacity unit (SeCU) usage. You can query only data in the previous seven days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17184,7 +17184,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the daily bills for WAF on-demand instances for the last 7 days.</para>
+        /// <para>Queries the daily billing information of a pay-as-you-go Web Application Firewall (WAF) instance. This allows you to check the daily security capacity unit (SeCU) usage. You can query only data in the previous seven days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17202,7 +17202,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic statistics.</para>
+        /// <para>Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17268,7 +17268,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic statistics.</para>
+        /// <para>Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17334,7 +17334,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic statistics.</para>
+        /// <para>Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17352,7 +17352,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the traffic statistics.</para>
+        /// <para>Queries the traffic statistics of requests that are forwarded to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17370,7 +17370,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 protected objects by request count.</para>
+        /// <para>Queries the top 10 protected objects that receive requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17428,7 +17428,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 protected objects by request count.</para>
+        /// <para>Queries the top 10 protected objects that receive requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17486,7 +17486,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 protected objects by request count.</para>
+        /// <para>Queries the top 10 protected objects that receive requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17504,7 +17504,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 protected objects by request count.</para>
+        /// <para>Queries the top 10 protected objects that receive requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17522,7 +17522,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 most requested URLs.</para>
+        /// <para>Queries the top 10 URLs that are used to initiate requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17584,7 +17584,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 most requested URLs.</para>
+        /// <para>Queries the top 10 URLs that are used to initiate requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17646,7 +17646,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 most requested URLs.</para>
+        /// <para>Queries the top 10 URLs that are used to initiate requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17664,7 +17664,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 most requested URLs.</para>
+        /// <para>Queries the top 10 URLs that are used to initiate requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17682,7 +17682,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics information about assets detected by the basic API security feature.</para>
+        /// <para>Queries the asset statistics provided by basic detection in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17732,7 +17732,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics information about assets detected by the basic API security feature.</para>
+        /// <para>Queries the asset statistics provided by basic detection in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17782,7 +17782,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics information about assets detected by the basic API security feature.</para>
+        /// <para>Queries the asset statistics provided by basic detection in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17800,7 +17800,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics information about assets detected by the basic API security feature.</para>
+        /// <para>Queries the asset statistics provided by basic detection in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17818,7 +17818,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about security events detected by basic API security checks.</para>
+        /// <para>Queries the statistics of security events that are detected by using the basic detection feature of the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17868,7 +17868,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about security events detected by basic API security checks.</para>
+        /// <para>Queries the statistics of security events that are detected by using the basic detection feature of the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17918,7 +17918,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about security events detected by basic API security checks.</para>
+        /// <para>Queries the statistics of security events that are detected by using the basic detection feature of the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17936,7 +17936,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about security events detected by basic API security checks.</para>
+        /// <para>Queries the statistics of security events that are detected by using the basic detection feature of the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17954,7 +17954,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of security events for basic API security detection.</para>
+        /// <para>Queries the types of security events on which basic detection is performed in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18004,7 +18004,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of security events for basic API security detection.</para>
+        /// <para>Queries the types of security events on which basic detection is performed in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18054,7 +18054,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of security events for basic API security detection.</para>
+        /// <para>Queries the types of security events on which basic detection is performed in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18072,7 +18072,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types of security events for basic API security detection.</para>
+        /// <para>Queries the types of security events on which basic detection is performed in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18090,7 +18090,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries security events detected by the basic API security scan.</para>
+        /// <para>Queries the list of security events on which basic detection is performed in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18140,7 +18140,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries security events detected by the basic API security scan.</para>
+        /// <para>Queries the list of security events on which basic detection is performed in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18190,7 +18190,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries security events detected by the basic API security scan.</para>
+        /// <para>Queries the list of security events on which basic detection is performed in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18208,7 +18208,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries security events detected by the basic API security scan.</para>
+        /// <para>Queries the list of security events on which basic detection is performed in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18370,7 +18370,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a hybrid cloud cluster rule.</para>
+        /// <para>Obtains the rule information about a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18408,7 +18408,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a hybrid cloud cluster rule.</para>
+        /// <para>Obtains the rule information about a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18446,7 +18446,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a hybrid cloud cluster rule.</para>
+        /// <para>Obtains the rule information about a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18464,7 +18464,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a hybrid cloud cluster rule.</para>
+        /// <para>Obtains the rule information about a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18482,7 +18482,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cluster rules</para>
+        /// <para>集群规则列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18556,7 +18556,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cluster rules</para>
+        /// <para>集群规则列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18630,7 +18630,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cluster rules</para>
+        /// <para>集群规则列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18648,7 +18648,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cluster rules</para>
+        /// <para>集群规则列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18666,7 +18666,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the servers in a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>集群机器列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18744,7 +18744,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the servers in a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>集群机器列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18822,7 +18822,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the servers in a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>集群机器列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18840,7 +18840,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the servers in a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>集群机器列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18994,7 +18994,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Hybrid Cloud WAF node groups that are added to Web Application Firewall (WAF).</para>
+        /// <para>Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19068,7 +19068,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Hybrid Cloud WAF node groups that are added to Web Application Firewall (WAF).</para>
+        /// <para>Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19142,7 +19142,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Hybrid Cloud WAF node groups that are added to Web Application Firewall (WAF).</para>
+        /// <para>Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19160,7 +19160,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Hybrid Cloud WAF node groups that are added to Web Application Firewall (WAF).</para>
+        /// <para>Queries the hybrid cloud node groups that are added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19178,7 +19178,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of applications on nodes in a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Queries the status of applications running on a hybrid cloud cluster node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19232,7 +19232,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of applications on nodes in a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Queries the status of applications running on a hybrid cloud cluster node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19286,7 +19286,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of applications on nodes in a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Queries the status of applications running on a hybrid cloud cluster node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19304,7 +19304,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the status of applications on nodes in a hybrid cloud Web Application Firewall (WAF) cluster.</para>
+        /// <para>Queries the status of applications running on a hybrid cloud cluster node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19322,7 +19322,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the count of protectable nodes that can be added to a hybrid cloud cluster.</para>
+        /// <para>Queries the number of protection nodes that can be added to a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19372,7 +19372,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the count of protectable nodes that can be added to a hybrid cloud cluster.</para>
+        /// <para>Queries the number of protection nodes that can be added to a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19422,7 +19422,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the count of protectable nodes that can be added to a hybrid cloud cluster.</para>
+        /// <para>Queries the number of protection nodes that can be added to a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19440,7 +19440,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the count of protectable nodes that can be added to a hybrid cloud cluster.</para>
+        /// <para>Queries the number of protection nodes that can be added to a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19458,7 +19458,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a hybrid cloud domain name.</para>
+        /// <para>查询混合云域名详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19528,7 +19528,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a hybrid cloud domain name.</para>
+        /// <para>查询混合云域名详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19598,7 +19598,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a hybrid cloud domain name.</para>
+        /// <para>查询混合云域名详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19616,7 +19616,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a hybrid cloud domain name.</para>
+        /// <para>查询混合云域名详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19634,7 +19634,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain names that are added to Web Application Firewall (WAF) in hybrid cloud mode.</para>
+        /// <para>Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19704,7 +19704,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain names that are added to Web Application Firewall (WAF) in hybrid cloud mode.</para>
+        /// <para>Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19774,7 +19774,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain names that are added to Web Application Firewall (WAF) in hybrid cloud mode.</para>
+        /// <para>Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19792,7 +19792,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain names that are added to Web Application Firewall (WAF) in hybrid cloud mode.</para>
+        /// <para>Queries the domain names that are added to a Web Application Firewall (WAF) instance in hybrid cloud mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19810,7 +19810,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hybrid cloud SDK servers that are managed by a Web Application Firewall (WAF) instance.</para>
+        /// <para>获取SDK信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19880,7 +19880,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hybrid cloud SDK servers that are managed by a Web Application Firewall (WAF) instance.</para>
+        /// <para>获取SDK信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19950,7 +19950,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hybrid cloud SDK servers that are managed by a Web Application Firewall (WAF) instance.</para>
+        /// <para>获取SDK信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19968,7 +19968,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the hybrid cloud SDK servers that are managed by a Web Application Firewall (WAF) instance.</para>
+        /// <para>获取SDK信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19986,7 +19986,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries hybrid cloud server regions, including carriers, continents, and cities.</para>
+        /// <para>Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20044,7 +20044,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries hybrid cloud server regions, including carriers, continents, and cities.</para>
+        /// <para>Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20102,7 +20102,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries hybrid cloud server regions, including carriers, continents, and cities.</para>
+        /// <para>Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20120,7 +20120,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries hybrid cloud server regions, including carriers, continents, and cities.</para>
+        /// <para>Queries information about the regions that the hybrid cloud mode supports, such as the Internet service providers (ISPs), continents, and cities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20138,7 +20138,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that are supported for hybrid cloud access in Web Application Firewall (WAF).</para>
+        /// <para>查询接入区域</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20188,7 +20188,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that are supported for hybrid cloud access in Web Application Firewall (WAF).</para>
+        /// <para>查询接入区域</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20238,7 +20238,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that are supported for hybrid cloud access in Web Application Firewall (WAF).</para>
+        /// <para>查询接入区域</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20256,7 +20256,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the regions that are supported for hybrid cloud access in Web Application Firewall (WAF).</para>
+        /// <para>查询接入区域</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20274,7 +20274,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unassigned servers in a hybrid cloud cluster.</para>
+        /// <para>Queries servers that are not assigned to a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20344,7 +20344,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unassigned servers in a hybrid cloud cluster.</para>
+        /// <para>Queries servers that are not assigned to a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20414,7 +20414,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unassigned servers in a hybrid cloud cluster.</para>
+        /// <para>Queries servers that are not assigned to a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20432,7 +20432,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unassigned servers in a hybrid cloud cluster.</para>
+        /// <para>Queries servers that are not assigned to a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20450,7 +20450,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unsupported ports for a hybrid cloud.</para>
+        /// <para>Queries the ports that are not supported by the hybrid cloud mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20500,7 +20500,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unsupported ports for a hybrid cloud.</para>
+        /// <para>Queries the ports that are not supported by the hybrid cloud mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20550,7 +20550,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unsupported ports for a hybrid cloud.</para>
+        /// <para>Queries the ports that are not supported by the hybrid cloud mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20568,7 +20568,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of unsupported ports for a hybrid cloud.</para>
+        /// <para>Queries the ports that are not supported by the hybrid cloud mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20586,7 +20586,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available HTTP and HTTPS port ranges for hybrid cloud access.</para>
+        /// <para>Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20636,7 +20636,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available HTTP and HTTPS port ranges for hybrid cloud access.</para>
+        /// <para>Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20686,7 +20686,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available HTTP and HTTPS port ranges for hybrid cloud access.</para>
+        /// <para>Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20704,7 +20704,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available HTTP and HTTPS port ranges for hybrid cloud access.</para>
+        /// <para>Queries the HTTP and HTTPS ports that you can use when you add a domain name to Web Application Firewall (WAF) in hybrid cloud mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20722,7 +20722,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the Web Application Firewall (WAF) instance in your Alibaba Cloud account.</para>
+        /// <para>Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20768,7 +20768,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the Web Application Firewall (WAF) instance in your Alibaba Cloud account.</para>
+        /// <para>Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20814,7 +20814,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the Web Application Firewall (WAF) instance in your Alibaba Cloud account.</para>
+        /// <para>Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20832,7 +20832,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of the Web Application Firewall (WAF) instance in your Alibaba Cloud account.</para>
+        /// <para>Queries the details of a Web Application Firewall (WAF) instance within the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20850,7 +20850,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves supported countries and regions outside China for IP-based region blacklist.</para>
+        /// <para>获取支持的海外IP区域封禁支持的国际及地域。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20920,7 +20920,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves supported countries and regions outside China for IP-based region blacklist.</para>
+        /// <para>获取支持的海外IP区域封禁支持的国际及地域。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20990,7 +20990,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves supported countries and regions outside China for IP-based region blacklist.</para>
+        /// <para>获取支持的海外IP区域封禁支持的国际及地域。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21008,7 +21008,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves supported countries and regions outside China for IP-based region blacklist.</para>
+        /// <para>获取支持的海外IP区域封禁支持的国际及地域。</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21026,7 +21026,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single log delivery configuration for a hybrid cloud.</para>
+        /// <para>Queries a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21080,7 +21080,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single log delivery configuration for a hybrid cloud.</para>
+        /// <para>Queries a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21134,7 +21134,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single log delivery configuration for a hybrid cloud.</para>
+        /// <para>Queries a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21152,7 +21152,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single log delivery configuration for a hybrid cloud.</para>
+        /// <para>Queries a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21170,7 +21170,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all log delivery configurations of a Web Application Firewall (WAF) instance for hybrid cloud.</para>
+        /// <para>Queries all hybrid cloud log delivery configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21236,7 +21236,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all log delivery configurations of a Web Application Firewall (WAF) instance for hybrid cloud.</para>
+        /// <para>Queries all hybrid cloud log delivery configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21302,7 +21302,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all log delivery configurations of a Web Application Firewall (WAF) instance for hybrid cloud.</para>
+        /// <para>Queries all hybrid cloud log delivery configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21320,7 +21320,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all log delivery configurations of a Web Application Firewall (WAF) instance for hybrid cloud.</para>
+        /// <para>Queries all hybrid cloud log delivery configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21338,7 +21338,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP address blacklist for critical event protection in a paginated format.</para>
+        /// <para>Queries IP addresses in an IP address blacklist for major event protection by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21412,7 +21412,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP address blacklist for critical event protection in a paginated format.</para>
+        /// <para>Queries IP addresses in an IP address blacklist for major event protection by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21486,7 +21486,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP address blacklist for critical event protection in a paginated format.</para>
+        /// <para>Queries IP addresses in an IP address blacklist for major event protection by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21504,7 +21504,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP address blacklist for critical event protection in a paginated format.</para>
+        /// <para>Queries IP addresses in an IP address blacklist for major event protection by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21522,7 +21522,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all member accounts managed by the WAF multi-account management feature.</para>
+        /// <para>Queries information about members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21580,7 +21580,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all member accounts managed by the WAF multi-account management feature.</para>
+        /// <para>Queries information about members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21638,7 +21638,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all member accounts managed by the WAF multi-account management feature.</para>
+        /// <para>Queries information about members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21656,7 +21656,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all member accounts managed by the WAF multi-account management feature.</para>
+        /// <para>Queries information about members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21674,7 +21674,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series statistics for all traffic. This includes malicious and normal business requests.</para>
+        /// <para>Retrieves time-series data for all network traffic, including both malicious and legitimate requests.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21738,7 +21738,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series statistics for all traffic. This includes malicious and normal business requests.</para>
+        /// <para>Retrieves time-series data for all network traffic, including both malicious and legitimate requests.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21802,7 +21802,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series statistics for all traffic. This includes malicious and normal business requests.</para>
+        /// <para>Retrieves time-series data for all network traffic, including both malicious and legitimate requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21820,7 +21820,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series statistics for all traffic. This includes malicious and normal business requests.</para>
+        /// <para>Retrieves time-series data for all network traffic, including both malicious and legitimate requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21838,7 +21838,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top N statistics for all traffic that passes through Web Application Firewall (WAF), including malicious and normal service requests. The results are aggregated by different dimensions and sorted in descending order.</para>
+        /// <para>Retrieves top aggregated traffic statistics, sorted by various dimensions, including malicious and legitimate requests.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21906,7 +21906,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top N statistics for all traffic that passes through Web Application Firewall (WAF), including malicious and normal service requests. The results are aggregated by different dimensions and sorted in descending order.</para>
+        /// <para>Retrieves top aggregated traffic statistics, sorted by various dimensions, including malicious and legitimate requests.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21974,7 +21974,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top N statistics for all traffic that passes through Web Application Firewall (WAF), including malicious and normal service requests. The results are aggregated by different dimensions and sorted in descending order.</para>
+        /// <para>Retrieves top aggregated traffic statistics, sorted by various dimensions, including malicious and legitimate requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21992,7 +21992,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top N statistics for all traffic that passes through Web Application Firewall (WAF), including malicious and normal service requests. The results are aggregated by different dimensions and sorted in descending order.</para>
+        /// <para>Retrieves top aggregated traffic statistics, sorted by various dimensions, including malicious and legitimate requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22010,7 +22010,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection pause status of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the protection status of Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22060,7 +22060,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection pause status of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the protection status of Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22110,7 +22110,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection pause status of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the protection status of Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22128,7 +22128,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the protection pause status of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the protection status of Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22146,7 +22146,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of queries per second (QPS).</para>
+        /// <para>Queries the queries per second (QPS) statistics of a WAF instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22212,7 +22212,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of queries per second (QPS).</para>
+        /// <para>Queries the queries per second (QPS) statistics of a WAF instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22278,7 +22278,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of queries per second (QPS).</para>
+        /// <para>Queries the queries per second (QPS) statistics of a WAF instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22296,7 +22296,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of queries per second (QPS).</para>
+        /// <para>Queries the queries per second (QPS) statistics of a WAF instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22314,7 +22314,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the enabled proof of concept (POC) feature trials.</para>
+        /// <para>查询开启POC的功能信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22364,7 +22364,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the enabled proof of concept (POC) feature trials.</para>
+        /// <para>查询开启POC的功能信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22414,7 +22414,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the enabled proof of concept (POC) feature trials.</para>
+        /// <para>查询开启POC的功能信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22432,7 +22432,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the enabled proof of concept (POC) feature trials.</para>
+        /// <para>查询开启POC的功能信息</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22450,7 +22450,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries burstable pay-as-you-go charges for a WAF subscription instance, such as burstable QPS.</para>
+        /// <para>Queries the bills of the burstable QPS (pay-as-you-go) feature. The feature is supported only by subscription Web Application Firewall (WAF) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22508,7 +22508,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries burstable pay-as-you-go charges for a WAF subscription instance, such as burstable QPS.</para>
+        /// <para>Queries the bills of the burstable QPS (pay-as-you-go) feature. The feature is supported only by subscription Web Application Firewall (WAF) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22566,7 +22566,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries burstable pay-as-you-go charges for a WAF subscription instance, such as burstable QPS.</para>
+        /// <para>Queries the bills of the burstable QPS (pay-as-you-go) feature. The feature is supported only by subscription Web Application Firewall (WAF) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22584,7 +22584,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries burstable pay-as-you-go charges for a WAF subscription instance, such as burstable QPS.</para>
+        /// <para>Queries the bills of the burstable QPS (pay-as-you-go) feature. The feature is supported only by subscription Web Application Firewall (WAF) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22602,7 +22602,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries synchronized cloud service instances.</para>
+        /// <para>Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22696,7 +22696,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries synchronized cloud service instances.</para>
+        /// <para>Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22790,7 +22790,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries synchronized cloud service instances.</para>
+        /// <para>Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22808,7 +22808,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries synchronized cloud service instances.</para>
+        /// <para>Queries the cloud service instances to be added to Web Application Firewall (WAF) in transparent proxy mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22826,7 +22826,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries penalties for domain names added to Web Application Firewall (WAF) without an Internet Content Provider (ICP) filing.</para>
+        /// <para>Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22884,7 +22884,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries penalties for domain names added to Web Application Firewall (WAF) without an Internet Content Provider (ICP) filing.</para>
+        /// <para>Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22942,7 +22942,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries penalties for domain names added to Web Application Firewall (WAF) without an Internet Content Provider (ICP) filing.</para>
+        /// <para>Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22960,7 +22960,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries penalties for domain names added to Web Application Firewall (WAF) without an Internet Content Provider (ICP) filing.</para>
+        /// <para>Queries a list of domain names that are added to Web Application Firewall (WAF) and penalized for failing to obtain an Internet Content Provider (ICP) filing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22978,7 +22978,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of associated protection rules.</para>
+        /// <para>分页查询关联规则</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23048,7 +23048,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of associated protection rules.</para>
+        /// <para>分页查询关联规则</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23118,7 +23118,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of associated protection rules.</para>
+        /// <para>分页查询关联规则</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23136,7 +23136,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of associated protection rules.</para>
+        /// <para>分页查询关联规则</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23154,7 +23154,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificates of a cloud product instance. This operation is available only in multi-account scenarios and returns the certificates of both the delegated administrator and the member that owns the instance. For example, if user A is a delegated administrator with cert1 and the instance lb-xx-1 belongs to member B who has cert2, a query for the instance lb-xx-1 returns both cert1 and cert2.</para>
+        /// <para>Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23216,7 +23216,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificates of a cloud product instance. This operation is available only in multi-account scenarios and returns the certificates of both the delegated administrator and the member that owns the instance. For example, if user A is a delegated administrator with cert1 and the instance lb-xx-1 belongs to member B who has cert2, a query for the instance lb-xx-1 returns both cert1 and cert2.</para>
+        /// <para>Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23278,7 +23278,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificates of a cloud product instance. This operation is available only in multi-account scenarios and returns the certificates of both the delegated administrator and the member that owns the instance. For example, if user A is a delegated administrator with cert1 and the instance lb-xx-1 belongs to member B who has cert2, a query for the instance lb-xx-1 returns both cert1 and cert2.</para>
+        /// <para>Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23296,7 +23296,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the certificates of a cloud product instance. This operation is available only in multi-account scenarios and returns the certificates of both the delegated administrator and the member that owns the instance. For example, if user A is a delegated administrator with cert1 and the instance lb-xx-1 belongs to member B who has cert2, a query for the instance lb-xx-1 returns both cert1 and cert2.</para>
+        /// <para>Queries the certificates that are used in cloud service instances. The certificates returned include the certificates within the delegated administrator account and the certificates within members to which specific instances belong. For example, the delegated administrator account has certificate 1, instance lb-xx-1 belongs to member B, and member B has certificate 2. If you specify instance lb-xx-1 in the request, certificate 1 and certificate 2 are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23314,7 +23314,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log delivery status for protected objects.</para>
+        /// <para>查询防护对象日志外发状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23368,7 +23368,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log delivery status for protected objects.</para>
+        /// <para>查询防护对象日志外发状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23422,7 +23422,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log delivery status for protected objects.</para>
+        /// <para>查询防护对象日志外发状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23440,7 +23440,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log delivery status for protected objects.</para>
+        /// <para>查询防护对象日志外发状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23458,7 +23458,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log field configuration for a protected object.</para>
+        /// <para>查询防护对象日志字段配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23516,7 +23516,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log field configuration for a protected object.</para>
+        /// <para>查询防护对象日志字段配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23574,7 +23574,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log field configuration for a protected object.</para>
+        /// <para>查询防护对象日志字段配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23592,7 +23592,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log field configuration for a protected object.</para>
+        /// <para>查询防护对象日志字段配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23610,7 +23610,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log collection status of protected objects in a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries whether the log collection feature is enabled for a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23664,7 +23664,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log collection status of protected objects in a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries whether the log collection feature is enabled for a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23718,7 +23718,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log collection status of protected objects in a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries whether the log collection feature is enabled for a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23736,7 +23736,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log collection status of protected objects in a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries whether the log collection feature is enabled for a protected object.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23898,7 +23898,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the region IDs of cloud service resources that can be added to Web Application Firewall (WAF) by using the SDK.</para>
+        /// <para>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) by using the SDK integration mode. The resources refer to Application Load Balancer (ALB) and Microservices Engine (MSE) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23948,7 +23948,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the region IDs of cloud service resources that can be added to Web Application Firewall (WAF) by using the SDK.</para>
+        /// <para>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) by using the SDK integration mode. The resources refer to Application Load Balancer (ALB) and Microservices Engine (MSE) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23998,7 +23998,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the region IDs of cloud service resources that can be added to Web Application Firewall (WAF) by using the SDK.</para>
+        /// <para>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) by using the SDK integration mode. The resources refer to Application Load Balancer (ALB) and Microservices Engine (MSE) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24016,7 +24016,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the region IDs of cloud service resources that can be added to Web Application Firewall (WAF) by using the SDK.</para>
+        /// <para>Queries the region IDs of the resources that are added to Web Application Firewall (WAF) by using the SDK integration mode. The resources refer to Application Load Balancer (ALB) and Microservices Engine (MSE) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24034,7 +24034,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of regions supported by cloud native mode, primarily for CLB and ECS products.</para>
+        /// <para>Queries the region IDs of the Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that are added to Web Application Firewall (WAF) in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24088,7 +24088,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of regions supported by cloud native mode, primarily for CLB and ECS products.</para>
+        /// <para>Queries the region IDs of the Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that are added to Web Application Firewall (WAF) in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24142,7 +24142,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of regions supported by cloud native mode, primarily for CLB and ECS products.</para>
+        /// <para>Queries the region IDs of the Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that are added to Web Application Firewall (WAF) in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24160,7 +24160,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of regions supported by cloud native mode, primarily for CLB and ECS products.</para>
+        /// <para>Queries the region IDs of the Classic Load Balancer (CLB) and Elastic Compute Service (ECS) instances that are added to Web Application Firewall (WAF) in cloud native mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24178,7 +24178,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of abnormal response codes, such as 5xx, 405, 499, 302, and 444, that are returned by Web Application Firewall (WAF) to clients or by origin servers to WAF.</para>
+        /// <para>Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24248,7 +24248,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of abnormal response codes, such as 5xx, 405, 499, 302, and 444, that are returned by Web Application Firewall (WAF) to clients or by origin servers to WAF.</para>
+        /// <para>Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24318,7 +24318,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of abnormal response codes, such as 5xx, 405, 499, 302, and 444, that are returned by Web Application Firewall (WAF) to clients or by origin servers to WAF.</para>
+        /// <para>Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24336,7 +24336,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of abnormal response codes, such as 5xx, 405, 499, 302, and 444, that are returned by Web Application Firewall (WAF) to clients or by origin servers to WAF.</para>
+        /// <para>Queries the trend of the number of error codes that are returned to clients or Web Application Firewall (WAF). The error codes include 302, 405, 444, 499, and 5XX.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24354,7 +24354,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorization status of the service-linked role for Web Application Firewall (WAF).</para>
+        /// <para>查询授权状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24400,7 +24400,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorization status of the service-linked role for Web Application Firewall (WAF).</para>
+        /// <para>查询授权状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24446,7 +24446,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorization status of the service-linked role for Web Application Firewall (WAF).</para>
+        /// <para>查询授权状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24464,7 +24464,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the authorization status of the service-linked role for Web Application Firewall (WAF).</para>
+        /// <para>查询授权状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24482,7 +24482,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of regular expression rule groups.</para>
+        /// <para>Queries regular expression rule groups by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24548,7 +24548,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of regular expression rule groups.</para>
+        /// <para>Queries regular expression rule groups by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24614,7 +24614,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of regular expression rule groups.</para>
+        /// <para>Queries regular expression rule groups by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24632,7 +24632,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of regular expression rule groups.</para>
+        /// <para>Queries regular expression rule groups by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24650,7 +24650,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 source IP addresses from which the most attacks originated.</para>
+        /// <para>Queries the top 10 IP addresses from which attacks are initiated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24716,7 +24716,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 source IP addresses from which the most attacks originated.</para>
+        /// <para>Queries the top 10 IP addresses from which attacks are initiated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24782,7 +24782,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 source IP addresses from which the most attacks originated.</para>
+        /// <para>Queries the top 10 IP addresses from which attacks are initiated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24800,7 +24800,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 source IP addresses from which the most attacks originated.</para>
+        /// <para>Queries the top 10 IP addresses from which attacks are initiated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24818,7 +24818,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 protected objects that triggered protection rules most frequently.</para>
+        /// <para>Queries the top 10 protected objects that trigger protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24880,7 +24880,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 protected objects that triggered protection rules most frequently.</para>
+        /// <para>Queries the top 10 protected objects that trigger protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24942,7 +24942,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 protected objects that triggered protection rules most frequently.</para>
+        /// <para>Queries the top 10 protected objects that trigger protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24960,7 +24960,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 protected objects that triggered protection rules most frequently.</para>
+        /// <para>Queries the top 10 protected objects that trigger protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24978,7 +24978,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 rule IDs that are triggered most frequently.</para>
+        /// <para>Queries the IDs of the top 10 protection rules that are matched by requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25048,7 +25048,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 rule IDs that are triggered most frequently.</para>
+        /// <para>Queries the IDs of the top 10 protection rules that are matched by requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25118,7 +25118,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 rule IDs that are triggered most frequently.</para>
+        /// <para>Queries the IDs of the top 10 protection rules that are matched by requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25136,7 +25136,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 rule IDs that are triggered most frequently.</para>
+        /// <para>Queries the IDs of the top 10 protection rules that are matched by requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25154,7 +25154,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 most frequently triggered protection rule types.</para>
+        /// <para>Queries the top 10 protection modules that are matched.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25216,7 +25216,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 most frequently triggered protection rule types.</para>
+        /// <para>Queries the top 10 protection modules that are matched.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25278,7 +25278,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 most frequently triggered protection rule types.</para>
+        /// <para>Queries the top 10 protection modules that are matched.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25296,7 +25296,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 most frequently triggered protection rule types.</para>
+        /// <para>Queries the top 10 protection modules that are matched.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25314,7 +25314,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Displays the top 10 User-Agents by number of attacks.</para>
+        /// <para>Queries the top 10 user agents that are used to initiate attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25376,7 +25376,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Displays the top 10 User-Agents by number of attacks.</para>
+        /// <para>Queries the top 10 user agents that are used to initiate attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25438,7 +25438,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Displays the top 10 User-Agents by number of attacks.</para>
+        /// <para>Queries the top 10 user agents that are used to initiate attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25456,7 +25456,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Displays the top 10 User-Agents by number of attacks.</para>
+        /// <para>Queries the top 10 user agents that are used to initiate attacks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25474,7 +25474,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 URLs that trigger protection rules most frequently.</para>
+        /// <para>Queries the top 10 URLs that trigger protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25540,7 +25540,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 URLs that trigger protection rules most frequently.</para>
+        /// <para>Queries the top 10 URLs that trigger protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25606,7 +25606,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 URLs that trigger protection rules most frequently.</para>
+        /// <para>Queries the top 10 URLs that trigger protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25624,7 +25624,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 URLs that trigger protection rules most frequently.</para>
+        /// <para>Queries the top 10 URLs that trigger protection rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25642,16 +25642,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed logs of attack traffic. Each log entry contains the details of a request that matched a protection rule.</para>
+        /// <para>Queries the logs of attack traffic. Each log records the details of a request that matches protection rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as threats. The following three types of requests are not included:</para>
+        /// <para>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule whose action is set to Mark for Origin Fetch.</description></item>
-        /// <item><description>Requests that hit a rule whose action is set to Dynamic Token, Slider, Strict Slider, or JS Challenge, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests that match the protection rules of the whitelist module.</description></item>
+        /// <item><description>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</description></item>
+        /// <item><description>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25720,16 +25720,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed logs of attack traffic. Each log entry contains the details of a request that matched a protection rule.</para>
+        /// <para>Queries the logs of attack traffic. Each log records the details of a request that matches protection rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as threats. The following three types of requests are not included:</para>
+        /// <para>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule whose action is set to Mark for Origin Fetch.</description></item>
-        /// <item><description>Requests that hit a rule whose action is set to Dynamic Token, Slider, Strict Slider, or JS Challenge, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests that match the protection rules of the whitelist module.</description></item>
+        /// <item><description>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</description></item>
+        /// <item><description>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25798,16 +25798,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed logs of attack traffic. Each log entry contains the details of a request that matched a protection rule.</para>
+        /// <para>Queries the logs of attack traffic. Each log records the details of a request that matches protection rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as threats. The following three types of requests are not included:</para>
+        /// <para>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule whose action is set to Mark for Origin Fetch.</description></item>
-        /// <item><description>Requests that hit a rule whose action is set to Dynamic Token, Slider, Strict Slider, or JS Challenge, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests that match the protection rules of the whitelist module.</description></item>
+        /// <item><description>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</description></item>
+        /// <item><description>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25826,16 +25826,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed logs of attack traffic. Each log entry contains the details of a request that matched a protection rule.</para>
+        /// <para>Queries the logs of attack traffic. Each log records the details of a request that matches protection rules.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as threats. The following three types of requests are not included:</para>
+        /// <para>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule whose action is set to Mark for Origin Fetch.</description></item>
-        /// <item><description>Requests that hit a rule whose action is set to Dynamic Token, Slider, Strict Slider, or JS Challenge, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests that match the protection rules of the whitelist module.</description></item>
+        /// <item><description>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</description></item>
+        /// <item><description>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25854,16 +25854,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series data of attack traffic. Attack requests are requests that hit a rule and are identified as a threat.</para>
+        /// <para>Queries the time series data of attack traffic. Attack requests refer to requests that match protection rules and are identified as risky.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as a threat. The following data is excluded:</para>
+        /// <para>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule where the rule action is &quot;Mark for origin fetch&quot;.</description></item>
-        /// <item><description>Requests that hit a rule with the action &quot;Dynamic Token&quot;, &quot;Slider&quot;, &quot;Strict Slider&quot;, or &quot;JS Challenge&quot;, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests that match the protection rules of the whitelist module.</description></item>
+        /// <item><description>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</description></item>
+        /// <item><description>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25928,16 +25928,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series data of attack traffic. Attack requests are requests that hit a rule and are identified as a threat.</para>
+        /// <para>Queries the time series data of attack traffic. Attack requests refer to requests that match protection rules and are identified as risky.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as a threat. The following data is excluded:</para>
+        /// <para>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule where the rule action is &quot;Mark for origin fetch&quot;.</description></item>
-        /// <item><description>Requests that hit a rule with the action &quot;Dynamic Token&quot;, &quot;Slider&quot;, &quot;Strict Slider&quot;, or &quot;JS Challenge&quot;, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests that match the protection rules of the whitelist module.</description></item>
+        /// <item><description>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</description></item>
+        /// <item><description>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26002,16 +26002,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series data of attack traffic. Attack requests are requests that hit a rule and are identified as a threat.</para>
+        /// <para>Queries the time series data of attack traffic. Attack requests refer to requests that match protection rules and are identified as risky.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as a threat. The following data is excluded:</para>
+        /// <para>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule where the rule action is &quot;Mark for origin fetch&quot;.</description></item>
-        /// <item><description>Requests that hit a rule with the action &quot;Dynamic Token&quot;, &quot;Slider&quot;, &quot;Strict Slider&quot;, or &quot;JS Challenge&quot;, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests that match the protection rules of the whitelist module.</description></item>
+        /// <item><description>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</description></item>
+        /// <item><description>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26030,16 +26030,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the time series data of attack traffic. Attack requests are requests that hit a rule and are identified as a threat.</para>
+        /// <para>Queries the time series data of attack traffic. Attack requests refer to requests that match protection rules and are identified as risky.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as a threat. The following data is excluded:</para>
+        /// <para>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule where the rule action is &quot;Mark for origin fetch&quot;.</description></item>
-        /// <item><description>Requests that hit a rule with the action &quot;Dynamic Token&quot;, &quot;Slider&quot;, &quot;Strict Slider&quot;, or &quot;JS Challenge&quot;, but are allowed because the user passed the verification.</description></item>
+        /// <item><description>Requests that match the protection rules of the whitelist module.</description></item>
+        /// <item><description>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</description></item>
+        /// <item><description>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26058,16 +26058,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top N statistics for attack traffic. Attack traffic is aggregated by a specified dimension, sorted, and the top N results are returned.</para>
+        /// <para>Queries top N data entries of attack traffic. The system performs statistical aggregation on attack traffic from specific dimensions and returns top N data entries.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as a threat. The following types of requests are not included in the statistics:</para>
+        /// <para>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule with the action set to Tag.</description></item>
-        /// <item><description>Requests that hit a rule with the action set to Dynamic Token, Slider, Strict Slider, or JS Challenge, and are allowed after the user passes verification.</description></item>
+        /// <item><description>Requests that match the protection rules of the whitelist module.</description></item>
+        /// <item><description>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</description></item>
+        /// <item><description>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26136,16 +26136,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top N statistics for attack traffic. Attack traffic is aggregated by a specified dimension, sorted, and the top N results are returned.</para>
+        /// <para>Queries top N data entries of attack traffic. The system performs statistical aggregation on attack traffic from specific dimensions and returns top N data entries.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as a threat. The following types of requests are not included in the statistics:</para>
+        /// <para>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule with the action set to Tag.</description></item>
-        /// <item><description>Requests that hit a rule with the action set to Dynamic Token, Slider, Strict Slider, or JS Challenge, and are allowed after the user passes verification.</description></item>
+        /// <item><description>Requests that match the protection rules of the whitelist module.</description></item>
+        /// <item><description>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</description></item>
+        /// <item><description>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26214,16 +26214,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top N statistics for attack traffic. Attack traffic is aggregated by a specified dimension, sorted, and the top N results are returned.</para>
+        /// <para>Queries top N data entries of attack traffic. The system performs statistical aggregation on attack traffic from specific dimensions and returns top N data entries.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as a threat. The following types of requests are not included in the statistics:</para>
+        /// <para>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule with the action set to Tag.</description></item>
-        /// <item><description>Requests that hit a rule with the action set to Dynamic Token, Slider, Strict Slider, or JS Challenge, and are allowed after the user passes verification.</description></item>
+        /// <item><description>Requests that match the protection rules of the whitelist module.</description></item>
+        /// <item><description>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</description></item>
+        /// <item><description>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26242,16 +26242,16 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top N statistics for attack traffic. Attack traffic is aggregated by a specified dimension, sorted, and the top N results are returned.</para>
+        /// <para>Queries top N data entries of attack traffic. The system performs statistical aggregation on attack traffic from specific dimensions and returns top N data entries.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Attack traffic refers to requests that hit a rule and are identified as a threat. The following types of requests are not included in the statistics:</para>
+        /// <para>Attack traffic refers to the traffic of requests that match protection rules and are identified as risky. The following types of requests are excluded:</para>
         /// <list type="bullet">
-        /// <item><description>Requests that hit a whitelist rule.</description></item>
-        /// <item><description>Requests that hit a bot rule with the action set to Tag.</description></item>
-        /// <item><description>Requests that hit a rule with the action set to Dynamic Token, Slider, Strict Slider, or JS Challenge, and are allowed after the user passes verification.</description></item>
+        /// <item><description>Requests that match the protection rules of the whitelist module.</description></item>
+        /// <item><description>Requests that match the protection rules of the bot management module. The actions of the protection rules are set to Add Tag.</description></item>
+        /// <item><description>Requests that match protection rules with actions set to Dynamic Token-based Authentication, Slider CAPTCHA, Strict Slider CAPTCHA Verification, and JavaScript Validation, pass the verifications specified by the actions, and are allowed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -26270,7 +26270,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics for domain names and APIs that handle personal information.</para>
+        /// <para>Queries the personal information-related APIs and domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26348,7 +26348,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics for domain names and APIs that handle personal information.</para>
+        /// <para>Queries the personal information-related APIs and domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26426,7 +26426,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics for domain names and APIs that handle personal information.</para>
+        /// <para>Queries the personal information-related APIs and domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26444,7 +26444,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics for domain names and APIs that handle personal information.</para>
+        /// <para>Queries the personal information-related APIs and domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26462,7 +26462,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance detection results for API security.</para>
+        /// <para>Queries the compliance check results of API security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26524,7 +26524,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance detection results for API security.</para>
+        /// <para>Queries the compliance check results of API security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26586,7 +26586,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance detection results for API security.</para>
+        /// <para>Queries the compliance check results of API security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26604,7 +26604,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the compliance detection results for API security.</para>
+        /// <para>Queries the compliance check results of API security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26622,7 +26622,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the distribution of outbound traffic that contains personal information.</para>
+        /// <para>Queries the traffic distribution of personal information records involved in cross-border data transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26684,7 +26684,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the distribution of outbound traffic that contains personal information.</para>
+        /// <para>Queries the traffic distribution of personal information records involved in cross-border data transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26746,7 +26746,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the distribution of outbound traffic that contains personal information.</para>
+        /// <para>Queries the traffic distribution of personal information records involved in cross-border data transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26764,7 +26764,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the distribution of outbound traffic that contains personal information.</para>
+        /// <para>Queries the traffic distribution of personal information records involved in cross-border data transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26782,7 +26782,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about outbound transfers of personal information.</para>
+        /// <para>Queries the data types of personal information involved in cross-border data transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26876,7 +26876,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about outbound transfers of personal information.</para>
+        /// <para>Queries the data types of personal information involved in cross-border data transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26970,7 +26970,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about outbound transfers of personal information.</para>
+        /// <para>Queries the data types of personal information involved in cross-border data transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26988,7 +26988,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics about outbound transfers of personal information.</para>
+        /// <para>Queries the data types of personal information involved in cross-border data transfer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27006,7 +27006,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of sensitive outbound data detected by Web Application Firewall (WAF).</para>
+        /// <para>Queries the trends of cross-border data transfer of personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27068,7 +27068,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of sensitive outbound data detected by Web Application Firewall (WAF).</para>
+        /// <para>Queries the trends of cross-border data transfer of personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27130,7 +27130,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of sensitive outbound data detected by Web Application Firewall (WAF).</para>
+        /// <para>Queries the trends of cross-border data transfer of personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27148,7 +27148,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of sensitive outbound data detected by Web Application Firewall (WAF).</para>
+        /// <para>Queries the trends of cross-border data transfer of personal information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27166,7 +27166,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access logs for sensitive data.</para>
+        /// <para>Queries the access logs of sensitive data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27260,7 +27260,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access logs for sensitive data.</para>
+        /// <para>Queries the access logs of sensitive data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27354,7 +27354,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access logs for sensitive data.</para>
+        /// <para>Queries the access logs of sensitive data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27372,7 +27372,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries access logs for sensitive data.</para>
+        /// <para>Queries the access logs of sensitive data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27390,7 +27390,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of sensitive data tracing.</para>
+        /// <para>Queries the tracing results of sensitive data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27468,7 +27468,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of sensitive data tracing.</para>
+        /// <para>Queries the tracing results of sensitive data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27546,7 +27546,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of sensitive data tracing.</para>
+        /// <para>Queries the tracing results of sensitive data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27564,7 +27564,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the results of sensitive data tracing.</para>
+        /// <para>Queries the tracing results of sensitive data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27582,7 +27582,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on sensitive data for data leakage prevention.</para>
+        /// <para>Queries the sensitive data statistics of the tracing and auditing feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27656,7 +27656,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on sensitive data for data leakage prevention.</para>
+        /// <para>Queries the sensitive data statistics of the tracing and auditing feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27730,7 +27730,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on sensitive data for data leakage prevention.</para>
+        /// <para>Queries the sensitive data statistics of the tracing and auditing feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27748,7 +27748,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics on sensitive data for data leakage prevention.</para>
+        /// <para>Queries the sensitive data statistics of the tracing and auditing feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27766,7 +27766,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Logstore authorization status.</para>
+        /// <para>Queries whether Web Application Firewall (WAF) is authorized to access Logstores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27816,7 +27816,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Logstore authorization status.</para>
+        /// <para>Queries whether Web Application Firewall (WAF) is authorized to access Logstores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27866,7 +27866,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Logstore authorization status.</para>
+        /// <para>Queries whether Web Application Firewall (WAF) is authorized to access Logstores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27884,7 +27884,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Logstore authorization status.</para>
+        /// <para>Queries whether Web Application Firewall (WAF) is authorized to access Logstores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27902,7 +27902,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves Logstore information, including total capacity, storage duration, and used capacity.</para>
+        /// <para>Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27952,7 +27952,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves Logstore information, including total capacity, storage duration, and used capacity.</para>
+        /// <para>Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28002,7 +28002,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves Logstore information, including total capacity, storage duration, and used capacity.</para>
+        /// <para>Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28020,7 +28020,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves Logstore information, including total capacity, storage duration, and used capacity.</para>
+        /// <para>Queries information about a Logstore, such as the total capacity, storage duration, and used capacity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28174,7 +28174,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of protected resources that are associated with one or more protection templates.</para>
+        /// <para>Queries the number of protected resources for which a protection template takes effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28228,7 +28228,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of protected resources that are associated with one or more protection templates.</para>
+        /// <para>Queries the number of protected resources for which a protection template takes effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28282,7 +28282,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of protected resources that are associated with one or more protection templates.</para>
+        /// <para>Queries the number of protected resources for which a protection template takes effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28300,7 +28300,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of protected resources that are associated with one or more protection templates.</para>
+        /// <para>Queries the number of protected resources for which a protection template takes effect.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28318,7 +28318,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources attached to a protection template.</para>
+        /// <para>Queries the resources that are associated to a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28392,7 +28392,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources attached to a protection template.</para>
+        /// <para>Queries the resources that are associated to a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28466,7 +28466,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources attached to a protection template.</para>
+        /// <para>Queries the resources that are associated to a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28484,7 +28484,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the resources attached to a protection template.</para>
+        /// <para>Queries the resources that are associated to a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28502,7 +28502,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of notable security events.</para>
+        /// <para>查看攻击事件列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28572,7 +28572,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of notable security events.</para>
+        /// <para>查看攻击事件列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28642,7 +28642,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of notable security events.</para>
+        /// <para>查看攻击事件列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28660,7 +28660,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a paginated list of notable security events.</para>
+        /// <para>查看攻击事件列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28678,7 +28678,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a security event that requires attention.</para>
+        /// <para>查看威胁事件详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28732,7 +28732,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a security event that requires attention.</para>
+        /// <para>查看威胁事件详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28786,7 +28786,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a security event that requires attention.</para>
+        /// <para>查看威胁事件详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28804,7 +28804,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a security event that requires attention.</para>
+        /// <para>查看威胁事件详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28822,7 +28822,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top five security event metrics, which are aggregated by different objects and sorted in descending order.</para>
+        /// <para>查询安全事件Top攻击统计数据</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28880,7 +28880,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top five security event metrics, which are aggregated by different objects and sorted in descending order.</para>
+        /// <para>查询安全事件Top攻击统计数据</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28938,7 +28938,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top five security event metrics, which are aggregated by different objects and sorted in descending order.</para>
+        /// <para>查询安全事件Top攻击统计数据</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28956,7 +28956,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top five security event metrics, which are aggregated by different objects and sorted in descending order.</para>
+        /// <para>查询安全事件Top攻击统计数据</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28974,7 +28974,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of API security risks for a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the trends of API security risks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29028,7 +29028,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of API security risks for a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the trends of API security risks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29082,7 +29082,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of API security risks for a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the trends of API security risks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29100,7 +29100,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the trend of API security risks for a Web Application Firewall (WAF) instance.</para>
+        /// <para>Queries the trends of API security risks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29118,7 +29118,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user risk types and statistics related to API security in Web Application Firewall (WAF).</para>
+        /// <para>Queries the types and statistics of risks in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29184,7 +29184,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user risk types and statistics related to API security in Web Application Firewall (WAF).</para>
+        /// <para>Queries the types and statistics of risks in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29250,7 +29250,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user risk types and statistics related to API security in Web Application Firewall (WAF).</para>
+        /// <para>Queries the types and statistics of risks in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29268,7 +29268,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user risk types and statistics related to API security in Web Application Firewall (WAF).</para>
+        /// <para>Queries the types and statistics of risks in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29286,7 +29286,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries traffic statistics for an API operation.</para>
+        /// <para>Queries the traffic statistics of an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29356,7 +29356,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries traffic statistics for an API operation.</para>
+        /// <para>Queries the traffic statistics of an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29426,7 +29426,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries traffic statistics for an API operation.</para>
+        /// <para>Queries the traffic statistics of an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29444,7 +29444,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries traffic statistics for an API operation.</para>
+        /// <para>Queries the traffic statistics of an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29462,7 +29462,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user asset statistics for API Security.</para>
+        /// <para>Queries the user asset statistics in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29524,7 +29524,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user asset statistics for API Security.</para>
+        /// <para>Queries the user asset statistics in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29586,7 +29586,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user asset statistics for API Security.</para>
+        /// <para>Queries the user asset statistics in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29604,7 +29604,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user asset statistics for API Security.</para>
+        /// <para>Queries the user asset statistics in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29622,7 +29622,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the trend of API security attacks.</para>
+        /// <para>Queries the trends of attacks detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29680,7 +29680,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the trend of API security attacks.</para>
+        /// <para>Queries the trends of attacks detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29738,7 +29738,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the trend of API security attacks.</para>
+        /// <para>Queries the trends of attacks detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29756,7 +29756,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the trend of API security attacks.</para>
+        /// <para>Queries the trends of attacks detected by the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29774,7 +29774,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types and statistics of user security events.</para>
+        /// <para>Queries the types and statistics of security events in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29844,7 +29844,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types and statistics of user security events.</para>
+        /// <para>Queries the types and statistics of security events in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29914,7 +29914,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types and statistics of user security events.</para>
+        /// <para>Queries the types and statistics of security events in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29932,7 +29932,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the types and statistics of user security events.</para>
+        /// <para>Queries the types and statistics of security events in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29950,7 +29950,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log field configuration of a Web Application Firewall (WAF) instance, including additional fields, removed fields, delivery strategies, and extended settings.</para>
+        /// <para>查询用户日志配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30004,7 +30004,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log field configuration of a Web Application Firewall (WAF) instance, including additional fields, removed fields, delivery strategies, and extended settings.</para>
+        /// <para>查询用户日志配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30058,7 +30058,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log field configuration of a Web Application Firewall (WAF) instance, including additional fields, removed fields, delivery strategies, and extended settings.</para>
+        /// <para>查询用户日志配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30076,7 +30076,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log field configuration of a Web Application Firewall (WAF) instance, including additional fields, removed fields, delivery strategies, and extended settings.</para>
+        /// <para>查询用户日志配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30094,7 +30094,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available log storage regions.</para>
+        /// <para>Queries available regions for log storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30144,7 +30144,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available log storage regions.</para>
+        /// <para>Queries available regions for log storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30194,7 +30194,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available log storage regions.</para>
+        /// <para>Queries available regions for log storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30212,7 +30212,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the available log storage regions.</para>
+        /// <para>Queries available regions for log storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30226,6 +30226,174 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserSlsLogRegionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看用户分类实时流量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserTrafficRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserTrafficResponse
+        /// </returns>
+        public DescribeUserTrafficResponse DescribeUserTrafficWithOptions(DescribeUserTrafficRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserTraffic",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserTrafficResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看用户分类实时流量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserTrafficRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserTrafficResponse
+        /// </returns>
+        public async Task<DescribeUserTrafficResponse> DescribeUserTrafficWithOptionsAsync(DescribeUserTrafficRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceManagerResourceGroupId))
+            {
+                query["ResourceManagerResourceGroupId"] = request.ResourceManagerResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserTraffic",
+                Version = "2021-10-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserTrafficResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看用户分类实时流量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserTrafficRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserTrafficResponse
+        /// </returns>
+        public DescribeUserTrafficResponse DescribeUserTraffic(DescribeUserTrafficRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserTrafficWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看用户分类实时流量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserTrafficRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserTrafficResponse
+        /// </returns>
+        public async Task<DescribeUserTrafficResponse> DescribeUserTrafficAsync(DescribeUserTrafficRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserTrafficWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -30366,7 +30534,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain ownership verification content of a Web Application Firewall (WAF) instance.</para>
+        /// <para>查询归属校验内容</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30416,7 +30584,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain ownership verification content of a Web Application Firewall (WAF) instance.</para>
+        /// <para>查询归属校验内容</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30466,7 +30634,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain ownership verification content of a Web Application Firewall (WAF) instance.</para>
+        /// <para>查询归属校验内容</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30484,7 +30652,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the domain ownership verification content of a Web Application Firewall (WAF) instance.</para>
+        /// <para>查询归属校验内容</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30502,7 +30670,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 IP addresses that have the highest number of requests.</para>
+        /// <para>Queries the top 10 IP addresses from which requests are sent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30564,7 +30732,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 IP addresses that have the highest number of requests.</para>
+        /// <para>Queries the top 10 IP addresses from which requests are sent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30626,7 +30794,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 IP addresses that have the highest number of requests.</para>
+        /// <para>Queries the top 10 IP addresses from which requests are sent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30644,7 +30812,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 IP addresses that have the highest number of requests.</para>
+        /// <para>Queries the top 10 IP addresses from which requests are sent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30662,7 +30830,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 User-Agents that sent the most requests.</para>
+        /// <para>Queries the top 10 user agents that are used to initiate requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30724,7 +30892,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 User-Agents that sent the most requests.</para>
+        /// <para>Queries the top 10 user agents that are used to initiate requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30786,7 +30954,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 User-Agents that sent the most requests.</para>
+        /// <para>Queries the top 10 user agents that are used to initiate requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30804,7 +30972,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the top 10 User-Agents that sent the most requests.</para>
+        /// <para>Queries the top 10 user agents that are used to initiate requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30958,7 +31126,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes a service-linked role for WAF.</para>
+        /// <para>创建WAF服务关联角色</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31008,7 +31176,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes a service-linked role for WAF.</para>
+        /// <para>创建WAF服务关联角色</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31058,7 +31226,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes a service-linked role for WAF.</para>
+        /// <para>创建WAF服务关联角色</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31076,7 +31244,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes a service-linked role for WAF.</para>
+        /// <para>创建WAF服务关联角色</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31390,7 +31558,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tag values of a specified tag key.</para>
+        /// <para>Queries the tag values of a tag key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31452,7 +31620,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tag values of a specified tag key.</para>
+        /// <para>Queries the tag values of a tag key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31514,7 +31682,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tag values of a specified tag key.</para>
+        /// <para>Queries the tag values of a tag key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31532,7 +31700,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the tag values of a specified tag key.</para>
+        /// <para>Queries the tag values of a tag key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31550,7 +31718,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of API security risks in batches.</para>
+        /// <para>Modifies the status of multiple risks detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31616,7 +31784,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of API security risks in batches.</para>
+        /// <para>Modifies the status of multiple risks detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31682,7 +31850,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of API security risks in batches.</para>
+        /// <para>Modifies the status of multiple risks detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31700,7 +31868,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of API security risks in batches.</para>
+        /// <para>Modifies the status of multiple risks detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31718,7 +31886,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the annotation of an API asset in the API security module of Web Application Firewall (WAF).</para>
+        /// <para>Modifies the annotations of APIs in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31784,7 +31952,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the annotation of an API asset in the API security module of Web Application Firewall (WAF).</para>
+        /// <para>Modifies the annotations of APIs in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31850,7 +32018,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the annotation of an API asset in the API security module of Web Application Firewall (WAF).</para>
+        /// <para>Modifies the annotations of APIs in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31868,7 +32036,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the annotation of an API asset in the API security module of Web Application Firewall (WAF).</para>
+        /// <para>Modifies the annotations of APIs in the API security module.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31886,7 +32054,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of a batch of API security events.</para>
+        /// <para>Modifies the status of multiple security events detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31956,7 +32124,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of a batch of API security events.</para>
+        /// <para>Modifies the status of multiple security events detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32026,7 +32194,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of a batch of API security events.</para>
+        /// <para>Modifies the status of multiple security events detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32044,7 +32212,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the status of a batch of API security events.</para>
+        /// <para>Modifies the status of multiple security events detected by the API security module at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32062,7 +32230,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the API security log subscription settings.</para>
+        /// <para>Modifies the configurations of API security log subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32128,7 +32296,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the API security log subscription settings.</para>
+        /// <para>Modifies the configurations of API security log subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32194,7 +32362,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the API security log subscription settings.</para>
+        /// <para>Modifies the configurations of API security log subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32212,7 +32380,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the API security log subscription settings.</para>
+        /// <para>Modifies the configurations of API security log subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32230,7 +32398,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log delivery status of an API security module in a Web Application Firewall (WAF) instance.</para>
+        /// <para>Modifies the status of API security log subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32288,7 +32456,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log delivery status of an API security module in a Web Application Firewall (WAF) instance.</para>
+        /// <para>Modifies the status of API security log subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32346,7 +32514,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log delivery status of an API security module in a Web Application Firewall (WAF) instance.</para>
+        /// <para>Modifies the status of API security log subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32364,7 +32532,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log delivery status of an API security module in a Web Application Firewall (WAF) instance.</para>
+        /// <para>Modifies the status of API security log subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32382,7 +32550,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables API security features for a protected object or protected object group in the Web Application Firewall (WAF) API security module.</para>
+        /// <para>Changes the status of features in the API security module for protected objects or protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32448,7 +32616,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables API security features for a protected object or protected object group in the Web Application Firewall (WAF) API security module.</para>
+        /// <para>Changes the status of features in the API security module for protected objects or protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32514,7 +32682,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables API security features for a protected object or protected object group in the Web Application Firewall (WAF) API security module.</para>
+        /// <para>Changes the status of features in the API security module for protected objects or protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32532,7 +32700,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables API security features for a protected object or protected object group in the Web Application Firewall (WAF) API security module.</para>
+        /// <para>Changes the status of features in the API security module for protected objects or protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32550,7 +32718,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the API security status for a protected object or a protected object group.</para>
+        /// <para>Changes the status of the API security module for protected objects or protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32612,7 +32780,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the API security status for a protected object or a protected object group.</para>
+        /// <para>Changes the status of the API security module for protected objects or protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32674,7 +32842,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the API security status for a protected object or a protected object group.</para>
+        /// <para>Changes the status of the API security module for protected objects or protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32692,7 +32860,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the API security status for a protected object or a protected object group.</para>
+        /// <para>Changes the status of the API security module for protected objects or protected object groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32710,7 +32878,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a cloud resource connected to WAF.</para>
+        /// <para>Modifies the configurations of a service that is added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32782,7 +32950,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a cloud resource connected to WAF.</para>
+        /// <para>Modifies the configurations of a service that is added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32854,7 +33022,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a cloud resource connected to WAF.</para>
+        /// <para>Modifies the configurations of a service that is added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32872,7 +33040,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a cloud resource connected to WAF.</para>
+        /// <para>Modifies the configurations of a service that is added to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32890,7 +33058,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the certificate for a resource managed by WAF in cloud native mode.</para>
+        /// <para>修改云产品接入的证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32956,7 +33124,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the certificate for a resource managed by WAF in cloud native mode.</para>
+        /// <para>修改云产品接入的证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33022,7 +33190,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the certificate for a resource managed by WAF in cloud native mode.</para>
+        /// <para>修改云产品接入的证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33040,7 +33208,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the certificate for a resource managed by WAF in cloud native mode.</para>
+        /// <para>修改云产品接入的证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33058,7 +33226,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default certificate for cloud native mode.</para>
+        /// <para>修改云产品接入的默认证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33116,7 +33284,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default certificate for cloud native mode.</para>
+        /// <para>修改云产品接入的默认证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33174,7 +33342,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default certificate for cloud native mode.</para>
+        /// <para>修改云产品接入的默认证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33192,7 +33360,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default certificate for cloud native mode.</para>
+        /// <para>修改云产品接入的默认证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33210,7 +33378,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default SSL/TLS settings.</para>
+        /// <para>Modifies the default Secure Sockets Layer (SSL) and Transport Layer Security (TLS) settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33280,7 +33448,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default SSL/TLS settings.</para>
+        /// <para>Modifies the default Secure Sockets Layer (SSL) and Transport Layer Security (TLS) settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33350,7 +33518,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default SSL/TLS settings.</para>
+        /// <para>Modifies the default Secure Sockets Layer (SSL) and Transport Layer Security (TLS) settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33368,7 +33536,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default SSL/TLS settings.</para>
+        /// <para>Modifies the default Secure Sockets Layer (SSL) and Transport Layer Security (TLS) settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33386,7 +33554,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a protected object group.</para>
+        /// <para>Modifies the configurations of a protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33452,7 +33620,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a protected object group.</para>
+        /// <para>Modifies the configurations of a protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33518,7 +33686,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a protected object group.</para>
+        /// <para>Modifies the configurations of a protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33536,7 +33704,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a protected object group.</para>
+        /// <para>Modifies the configurations of a protected object group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33746,7 +33914,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a protection rule.</para>
+        /// <para>Modifies the configurations of a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33818,7 +33986,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a protection rule.</para>
+        /// <para>Modifies the configurations of a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33890,7 +34058,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a protection rule.</para>
+        /// <para>Modifies the configurations of a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33908,7 +34076,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a protection rule.</para>
+        /// <para>Modifies the configurations of a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33926,7 +34094,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the cache for a web tamper-proofing rule.</para>
+        /// <para>Updates the cached page of a website that is protected based on a website tamper-proofing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33984,7 +34152,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the cache for a web tamper-proofing rule.</para>
+        /// <para>Updates the cached page of a website that is protected based on a website tamper-proofing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34042,7 +34210,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the cache for a web tamper-proofing rule.</para>
+        /// <para>Updates the cached page of a website that is protected based on a website tamper-proofing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34060,7 +34228,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the cache for a web tamper-proofing rule.</para>
+        /// <para>Updates the cached page of a website that is protected based on a website tamper-proofing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34078,7 +34246,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a protection rule.</para>
+        /// <para>Changes the status of a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34144,7 +34312,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a protection rule.</para>
+        /// <para>Changes the status of a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34210,7 +34378,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a protection rule.</para>
+        /// <para>Changes the status of a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34228,7 +34396,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a protection rule.</para>
+        /// <para>Changes the status of a protection rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34246,7 +34414,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the mitigation settings for a protection scenario.</para>
+        /// <para>修改用户防护场景的配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34308,7 +34476,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the mitigation settings for a protection scenario.</para>
+        /// <para>修改用户防护场景的配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34370,7 +34538,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the mitigation settings for a protection scenario.</para>
+        /// <para>修改用户防护场景的配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34388,7 +34556,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the mitigation settings for a protection scenario.</para>
+        /// <para>修改用户防护场景的配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34406,7 +34574,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a defense template.</para>
+        /// <para>Modifies the configurations of a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34468,7 +34636,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a defense template.</para>
+        /// <para>Modifies the configurations of a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34530,7 +34698,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a defense template.</para>
+        /// <para>Modifies the configurations of a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34548,7 +34716,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a defense template.</para>
+        /// <para>Modifies the configurations of a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34718,7 +34886,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a CNAME-based domain name onboarded to Web Application Firewall (WAF).</para>
+        /// <para>Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34794,7 +34962,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a CNAME-based domain name onboarded to Web Application Firewall (WAF).</para>
+        /// <para>Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -34870,7 +35038,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a CNAME-based domain name onboarded to Web Application Firewall (WAF).</para>
+        /// <para>Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34888,7 +35056,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a CNAME-based domain name onboarded to Web Application Firewall (WAF).</para>
+        /// <para>Modifies the configurations of a domain name that is added to Web Application Firewall (WAF) in CNAME record mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34906,7 +35074,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the certificate that is associated with a domain name added to a Web Application Firewall (WAF) instance in CNAME record mode.</para>
+        /// <para>修改域名的证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34976,7 +35144,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the certificate that is associated with a domain name added to a Web Application Firewall (WAF) instance in CNAME record mode.</para>
+        /// <para>修改域名的证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35046,7 +35214,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the certificate that is associated with a domain name added to a Web Application Firewall (WAF) instance in CNAME record mode.</para>
+        /// <para>修改域名的证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35064,7 +35232,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the certificate that is associated with a domain name added to a Web Application Firewall (WAF) instance in CNAME record mode.</para>
+        /// <para>修改域名的证书</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35082,7 +35250,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-add a domain name that was penalized for not having an ICP filing to Web Application Firewall (WAF).</para>
+        /// <para>Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35136,7 +35304,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-add a domain name that was penalized for not having an ICP filing to Web Application Firewall (WAF).</para>
+        /// <para>Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35190,7 +35358,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-add a domain name that was penalized for not having an ICP filing to Web Application Firewall (WAF).</para>
+        /// <para>Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35208,7 +35376,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-add a domain name that was penalized for not having an ICP filing to Web Application Firewall (WAF).</para>
+        /// <para>Re-adds a domain name that is penalized for failing to obtain an Internet Content Provider (ICP) filing to Web Application Firewall (WAF).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35226,7 +35394,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates hybrid cloud cluster settings, such as the cluster name, ports, and access mode.</para>
+        /// <para>Modifies information about a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35332,7 +35500,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates hybrid cloud cluster settings, such as the cluster name, ports, and access mode.</para>
+        /// <para>Modifies information about a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35438,7 +35606,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates hybrid cloud cluster settings, such as the cluster name, ports, and access mode.</para>
+        /// <para>Modifies information about a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35456,7 +35624,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates hybrid cloud cluster settings, such as the cluster name, ports, and access mode.</para>
+        /// <para>Modifies information about a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35474,7 +35642,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the manual bypass status for a hybrid cloud cluster that is integrated with an SDK.</para>
+        /// <para>Enables or disables manual bypass for a hybrid cloud cluster whose type is set to SDK Integration Mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35532,7 +35700,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the manual bypass status for a hybrid cloud cluster that is integrated with an SDK.</para>
+        /// <para>Enables or disables manual bypass for a hybrid cloud cluster whose type is set to SDK Integration Mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35590,7 +35758,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the manual bypass status for a hybrid cloud cluster that is integrated with an SDK.</para>
+        /// <para>Enables or disables manual bypass for a hybrid cloud cluster whose type is set to SDK Integration Mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35608,7 +35776,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the manual bypass status for a hybrid cloud cluster that is integrated with an SDK.</para>
+        /// <para>Enables or disables manual bypass for a hybrid cloud cluster whose type is set to SDK Integration Mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35802,7 +35970,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a cluster group.</para>
+        /// <para>Modifies a node group in a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35868,7 +36036,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a cluster group.</para>
+        /// <para>Modifies a node group in a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35934,7 +36102,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a cluster group.</para>
+        /// <para>Modifies a node group in a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35952,7 +36120,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a cluster group.</para>
+        /// <para>Modifies a node group in a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35970,7 +36138,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a node to a node group in a hybrid cloud cluster of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Adds a node to a node group of a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36032,7 +36200,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a node to a node group in a hybrid cloud cluster of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Adds a node to a node group of a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36094,7 +36262,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a node to a node group in a hybrid cloud cluster of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Adds a node to a node group of a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36112,7 +36280,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a node to a node group in a hybrid cloud cluster of a Web Application Firewall (WAF) instance.</para>
+        /// <para>Adds a node to a node group of a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36130,7 +36298,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a node from a group in a hybrid cloud cluster.</para>
+        /// <para>Deletes a node from a node group of a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36192,7 +36360,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a node from a group in a hybrid cloud cluster.</para>
+        /// <para>Deletes a node from a node group of a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36254,7 +36422,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a node from a group in a hybrid cloud cluster.</para>
+        /// <para>Deletes a node from a node group of a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36272,7 +36440,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes a node from a group in a hybrid cloud cluster.</para>
+        /// <para>Deletes a node from a node group of a hybrid cloud cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36290,7 +36458,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the traffic redirection status of a hybrid cloud SDK.</para>
+        /// <para>Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36340,7 +36508,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the traffic redirection status of a hybrid cloud SDK.</para>
+        /// <para>Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36390,7 +36558,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the traffic redirection status of a hybrid cloud SDK.</para>
+        /// <para>Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36408,7 +36576,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the traffic redirection status of a hybrid cloud SDK.</para>
+        /// <para>Modifies the traffic redirection status of a hybrid cloud cluster by using an SDK.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36426,7 +36594,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a hybrid cloud node in a Web Application Firewall (WAF) instance.</para>
+        /// <para>Modifies the information about a hybrid cloud node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36496,7 +36664,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a hybrid cloud node in a Web Application Firewall (WAF) instance.</para>
+        /// <para>Modifies the information about a hybrid cloud node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36566,7 +36734,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a hybrid cloud node in a Web Application Firewall (WAF) instance.</para>
+        /// <para>Modifies the information about a hybrid cloud node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36584,7 +36752,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a hybrid cloud node in a Web Application Firewall (WAF) instance.</para>
+        /// <para>Modifies the information about a hybrid cloud node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36602,7 +36770,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a log delivery configuration for a hybrid cloud cluster.</para>
+        /// <para>Modifies a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36664,7 +36832,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a log delivery configuration for a hybrid cloud cluster.</para>
+        /// <para>Modifies a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36726,7 +36894,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a log delivery configuration for a hybrid cloud cluster.</para>
+        /// <para>Modifies a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36744,7 +36912,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a log delivery configuration for a hybrid cloud cluster.</para>
+        /// <para>Modifies a hybrid cloud log delivery configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36762,7 +36930,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an IP address blacklist for critical event protection.</para>
+        /// <para>Modifies an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36832,7 +37000,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an IP address blacklist for critical event protection.</para>
+        /// <para>Modifies an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36902,7 +37070,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an IP address blacklist for critical event protection.</para>
+        /// <para>Modifies an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36920,7 +37088,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an IP address blacklist for critical event protection.</para>
+        /// <para>Modifies an IP address blacklist for major event protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36938,7 +37106,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a member account that is managed by the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Modifies the information about members that are added for multi-account management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37000,7 +37168,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a member account that is managed by the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Modifies the information about members that are added for multi-account management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37062,7 +37230,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a member account that is managed by the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Modifies the information about members that are added for multi-account management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37080,7 +37248,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a member account that is managed by the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Modifies the information about members that are added for multi-account management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37242,7 +37410,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log delivery status of a protected object in Web Application Firewall (WAF).</para>
+        /// <para>修改防护对象日志外发状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37304,7 +37472,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log delivery status of a protected object in Web Application Firewall (WAF).</para>
+        /// <para>修改防护对象日志外发状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37366,7 +37534,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log delivery status of a protected object in Web Application Firewall (WAF).</para>
+        /// <para>修改防护对象日志外发状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37384,7 +37552,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log delivery status of a protected object in Web Application Firewall (WAF).</para>
+        /// <para>修改防护对象日志外发状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37402,7 +37570,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log field configuration of a protected object.</para>
+        /// <para>修改防护对象的日志字段配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37472,7 +37640,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log field configuration of a protected object.</para>
+        /// <para>修改防护对象的日志字段配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37542,7 +37710,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log field configuration of a protected object.</para>
+        /// <para>修改防护对象的日志字段配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37560,7 +37728,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the log field configuration of a protected object.</para>
+        /// <para>修改防护对象的日志字段配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37730,7 +37898,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches protected objects to or detaches protected objects from a protection template.</para>
+        /// <para>Associates or disassociates a protected object or protected object group with or from a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37808,7 +37976,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches protected objects to or detaches protected objects from a protection template.</para>
+        /// <para>Associates or disassociates a protected object or protected object group with or from a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37886,7 +38054,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches protected objects to or detaches protected objects from a protection template.</para>
+        /// <para>Associates or disassociates a protected object or protected object group with or from a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37904,7 +38072,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Attaches protected objects to or detaches protected objects from a protection template.</para>
+        /// <para>Associates or disassociates a protected object or protected object group with or from a protection rule template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37922,7 +38090,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default log field configuration of a Web Application Firewall (WAF) instance for log delivery to Simple Log Service.</para>
+        /// <para>修改用户日志服务的默认字段配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37988,7 +38156,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default log field configuration of a Web Application Firewall (WAF) instance for log delivery to Simple Log Service.</para>
+        /// <para>修改用户日志服务的默认字段配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38054,7 +38222,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default log field configuration of a Web Application Firewall (WAF) instance for log delivery to Simple Log Service.</para>
+        /// <para>修改用户日志服务的默认字段配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38072,7 +38240,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the default log field configuration of a Web Application Firewall (WAF) instance for log delivery to Simple Log Service.</para>
+        /// <para>修改用户日志服务的默认字段配置</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38090,7 +38258,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables Simple Log Service for Web Application Firewall (WAF).</para>
+        /// <para>开通或关闭WAF日志服务</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38148,7 +38316,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables Simple Log Service for Web Application Firewall (WAF).</para>
+        /// <para>开通或关闭WAF日志服务</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38206,7 +38374,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables Simple Log Service for Web Application Firewall (WAF).</para>
+        /// <para>开通或关闭WAF日志服务</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38224,7 +38392,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables Simple Log Service for Web Application Firewall (WAF).</para>
+        /// <para>开通或关闭WAF日志服务</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38242,7 +38410,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-adds a cloud product to Web Application Firewall (WAF) to restore protection after a cloud product access failure.</para>
+        /// <para>重新接入云产品</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38308,7 +38476,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-adds a cloud product to Web Application Firewall (WAF) to restore protection after a cloud product access failure.</para>
+        /// <para>重新接入云产品</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38374,7 +38542,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-adds a cloud product to Web Application Firewall (WAF) to restore protection after a cloud product access failure.</para>
+        /// <para>重新接入云产品</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38392,7 +38560,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Re-adds a cloud product to Web Application Firewall (WAF) to restore protection after a cloud product access failure.</para>
+        /// <para>重新接入云产品</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38551,7 +38719,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the system performs the synchronization asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the synchronization result.</para>
+        /// <para>SyncProductInstance is an asynchronous operation. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38606,7 +38774,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the system performs the synchronization asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the synchronization result.</para>
+        /// <para>SyncProductInstance is an asynchronous operation. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38661,7 +38829,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the system performs the synchronization asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the synchronization result.</para>
+        /// <para>SyncProductInstance is an asynchronous operation. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38684,7 +38852,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the system performs the synchronization asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the synchronization result.</para>
+        /// <para>SyncProductInstance is an asynchronous operation. You can call the <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> operation to query the status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38998,7 +39166,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies that you own the specified domain name. Domain ownership must be verified before you can add a domain name to Web Application Firewall (WAF) by using CNAME access.</para>
+        /// <para>Verifies the ownership of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39052,7 +39220,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies that you own the specified domain name. Domain ownership must be verified before you can add a domain name to Web Application Firewall (WAF) by using CNAME access.</para>
+        /// <para>Verifies the ownership of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39106,7 +39274,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies that you own the specified domain name. Domain ownership must be verified before you can add a domain name to Web Application Firewall (WAF) by using CNAME access.</para>
+        /// <para>Verifies the ownership of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39124,7 +39292,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies that you own the specified domain name. Domain ownership must be verified before you can add a domain name to Web Application Firewall (WAF) by using CNAME access.</para>
+        /// <para>Verifies the ownership of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">

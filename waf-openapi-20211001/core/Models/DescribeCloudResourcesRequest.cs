@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The UID of the account to which the resource belongs.</para>
+        /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11769793******</para>
@@ -54,12 +54,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +68,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the resource. This parameter is available when you query FC or SAE resources.</para>
+        /// <para>The domain name. You can use this parameter if you set ResourceProduct to fc or sae.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fc-domain-test</para>
@@ -80,7 +78,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceDomain { get; set; }
 
         /// <summary>
-        /// <para>The name of the function. This parameter is available when you query FC resources.</para>
+        /// <para>The function name. You can use this parameter if you set ResourceProduct to fc.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fc-test</para>
@@ -90,7 +88,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceFunction { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource instance.</para>
+        /// <para>The ID of the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alb-43glijk0fr****gths</para>
@@ -110,7 +108,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceInstanceName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm4gh****wela</para>
@@ -122,7 +120,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The name of the resource instance.</para>
+        /// <para>The name of the resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alb-name</para>
@@ -133,27 +131,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// <para>The cloud service to which the resource belongs. By default, instances of Application Load Balancer (ALB), Microservices Engine (MSE), Function Compute (FC), and Serverless App Engine (SAE) are returned. Valid values:</para>
+        /// <para>The cloud service to which the resource belongs. If you do not specify this parameter, the system automatically returns the Application Load Balancer (ALB), Microservices Engine (MSE), Function Compute, and Serverless App Engine (SAE) resources that are added to WAF. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>alb</b>: ALB</para>
-        /// </description></item>
-        /// <item><description><para><b>mse</b>: MSE</para>
-        /// </description></item>
-        /// <item><description><para><b>fc</b>: FC</para>
-        /// </description></item>
-        /// <item><description><para><b>sae</b>: SAE</para>
-        /// </description></item>
-        /// <item><description><para><b>ecs</b>: Elastic Compute Service (ECS)</para>
-        /// </description></item>
-        /// <item><description><para><b>clb4</b>: Classic Load Balancer (CLB) that uses TCP</para>
-        /// </description></item>
-        /// <item><description><para><b>clb7</b>: CLB that uses HTTP or HTTPS</para>
-        /// </description></item>
-        /// <item><description><para><b>nlb</b>: Network Load Balancer (NLB)</para>
-        /// </description></item>
+        /// <item><description><b>alb</b>: ALB.</description></item>
+        /// <item><description><b>mse</b>: MSE.</description></item>
+        /// <item><description><b>fc</b>: Function Compute.</description></item>
+        /// <item><description><b>sae</b>: SAE.</description></item>
+        /// <item><description><b>ecs</b>: Elastic Compute Service (ECS).</description></item>
+        /// <item><description><b>clb4</b>: Layer 4 Classic Load Balancer (CLB).</description></item>
+        /// <item><description><b>clb7</b>: Layer 7 CLB.</description></item>
+        /// <item><description><b>nlb</b>: Network Load Balancer (NLB).</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Each cloud service supports different regions. If you specify this parameter, make sure the region you specify for the ResourceRegionId parameter supports this service. Otherwise, the query may fail.</para>
+        /// <para> Different cloud services are available in different regions. The specified cloud service must be available in the specified region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -164,9 +154,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceProduct { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the resource resides. For more information, see the &quot;Regions and supported products&quot; section in this topic.</para>
+        /// <para>The region ID of the resource. For information about region IDs, see the following table.</para>
         /// <remarks>
-        /// <para>Each cloud service supports different regions. If you specify the ResourceProduct parameter, make sure the region you specify for this parameter supports that service. Otherwise, the query may fail.</para>
+        /// <para> Different cloud services are available in different regions. The specified cloud service must be available in the specified region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -177,7 +167,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the route. This parameter is available when you query MSE resources.</para>
+        /// <para>The route name. You can use this parameter if you set ResourceProduct to mse.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mse-default-traffic</para>

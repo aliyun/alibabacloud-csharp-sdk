@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the protected object group was created.</para>
+            /// <para>The time when the protected object group was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23242312312</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the protected object group was modified.</para>
+            /// <para>The most recent time when the protected object group was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23242312312</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The name of the protected object group that you want to query.</para>
+            /// <para>The name of the protected object group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>group1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>All the protected objects that are added to the protected object group. Separate the protected objects with commas (,).</para>
+            /// <para>The protected objects in the protected object group. The protected objects are separated with commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>test1.aliyundoc.com,test2.aliyundoc.com</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E67D21C6-5376-5F94-B745-70E08D03E3CB</para>

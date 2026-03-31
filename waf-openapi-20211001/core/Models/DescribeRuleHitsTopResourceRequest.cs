@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeRuleHitsTopResourceRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the current time is used as the end time.</para>
+        /// <para>The end of the time range to query. Unit: seconds. If you do not specify this parameter, the current time is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1665386340</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,10 +36,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +48,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
@@ -60,18 +58,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The type of rule that was triggered. If you do not specify this parameter, data for all rule types is returned.</para>
+        /// <para>The type of rules that are triggered by the protected object. By default, this parameter is not specified and all types of rules are queried.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>blacklist</b>: The IP address blacklist.</para>
-        /// </description></item>
-        /// <item><description><para><b>custom</b>: A custom rule.</para>
-        /// </description></item>
-        /// <item><description><para><b>antiscan</b>: A scan protection rule.</para>
-        /// </description></item>
-        /// <item><description><para><b>cc_system</b>: An HTTP flood protection rule.</para>
-        /// </description></item>
-        /// <item><description><para><b>region_block</b>: The Location Blacklist feature.</para>
-        /// </description></item>
+        /// <item><description><b>blacklist:</b> IP address blacklist rules.</description></item>
+        /// <item><description><b>custom:</b> custom rules.</description></item>
+        /// <item><description><b>antiscan:</b> scan protection rules.</description></item>
+        /// <item><description><b>cc_system:</b> HTTP flood protection rules.</description></item>
+        /// <item><description><b>region_block:</b> region blacklist rules.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,7 +75,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RuleType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The beginning of the time range to query. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

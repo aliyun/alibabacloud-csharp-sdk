@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class AddAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The addresses to add to the address book.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AddressList")]
@@ -18,10 +17,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<string> AddressList { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
-        /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the WAF instance ID.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,8 +27,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
         /// </summary>
@@ -42,7 +35,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the address book.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

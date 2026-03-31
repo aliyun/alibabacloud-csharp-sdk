@@ -10,23 +10,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyLogDeliveryConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The details of the log delivery configuration, in JSON format.</para>
+        /// <para>The content of the log delivery configuration. Set the value to a JSON string that contains multiple parameters.</para>
         /// <remarks>
-        /// <para>The value of this parameter is the same as the <b>DeliveryDetail</b> parameter of the <b>CreateLogDeliveryConfig</b> operation. For more information, see <a href="">CreateLogDeliveryConfig</a>.</para>
+        /// <para> This parameter is the same as the <b>DeliveryDetail</b> parameter of the <b>CreateLogDeliveryConfig</b> operation. For more information, see <b>Parameter description for log delivery configuration</b> of the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{
-        ///   &quot;rfcVersion&quot;: &quot;rfc3164&quot;,
-        ///   &quot;protocol&quot;: &quot;tcp&quot;,
-        ///   &quot;servers&quot;: [
-        ///     {
-        ///       &quot;address&quot;: &quot;1.1.1.1&quot;,
-        ///       &quot;port&quot;: 20
-        ///     }
-        ///   ]
-        /// }</para>
         /// </summary>
         [NameInMap("DeliveryDetail")]
         [Validation(Required=false)]
@@ -44,17 +32,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DeliveryName { get; set; }
 
         /// <summary>
-        /// <para>The type of the log delivery destination. Valid values:</para>
+        /// <para>The type of the log delivery configuration that you want to modify. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>syslog</b>: delivers logs to a syslog server.</para>
-        /// </description></item>
-        /// <item><description><para><b>kafka</b>: delivers logs to a Kafka cluster.</para>
-        /// </description></item>
+        /// <item><description><b>syslog</b>: Logs are delivered to a syslog service.</description></item>
+        /// <item><description><b>kafka</b>: Logs are delivered to a Kafka service.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>syslog</para>
+        /// <para>kafka</para>
         /// </summary>
         [NameInMap("DeliveryType")]
         [Validation(Required=false)]
@@ -63,7 +49,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -75,12 +61,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance resides. Valid values:</para>
+        /// <para>The region ID of the WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +75,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

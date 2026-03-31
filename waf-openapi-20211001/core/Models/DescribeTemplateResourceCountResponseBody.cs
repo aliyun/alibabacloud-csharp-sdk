@@ -20,15 +20,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array of resource count objects. Each object contains the number of protected objects, protected object groups, and protected assets that are associated with a protection template.</para>
+        /// <para>The number of protected objects or protected object groups for which the protection template takes effect.</para>
         /// </summary>
         [NameInMap("ResourceCount")]
         [Validation(Required=false)]
         public List<DescribeTemplateResourceCountResponseBodyResourceCount> ResourceCount { get; set; }
         public class DescribeTemplateResourceCountResponseBodyResourceCount : TeaModel {
             /// <summary>
-            /// <para>The number of protected assets that are associated with the protection template.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? AssetCount { get; set; }
 
             /// <summary>
-            /// <para>The number of protected object groups that are associated with the protection template.</para>
+            /// <para>The number of protected object groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? GroupCount { get; set; }
 
             /// <summary>
-            /// <para>The number of protected objects that are associated with the protection template.</para>
+            /// <para>The number of protected objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>

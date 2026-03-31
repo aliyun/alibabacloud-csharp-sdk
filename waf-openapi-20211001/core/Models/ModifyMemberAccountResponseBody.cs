@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D7861F61-5B61-46CE-A47C-6B19160D5EB0</para>
+        /// <para>D7861F61-5B61-46CE-A47C-6B19****5EB0</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

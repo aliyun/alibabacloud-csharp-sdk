@@ -10,29 +10,23 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyHybridCloudClusterRuleRequest : TeaModel {
         /// <summary>
-        /// <para>[Deprecated] The hybrid cloud cluster ID.</para>
+        /// <para>The ID of the hybrid cloud cluster.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10*</para>
+        /// <para>1018</para>
         /// </summary>
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public long? ClusterId { get; set; }
 
-        /// <summary>
-        /// <para>The cluster rule resource ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>hdbc-clusterrule-*******ym0w</para>
-        /// </summary>
         [NameInMap("ClusterRuleResourceId")]
         [Validation(Required=false)]
         public string ClusterRuleResourceId { get; set; }
 
         /// <summary>
-        /// <para>The Web Application Firewall (WAF) instance ID.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> to query the current WAF instance ID.</para>
+        /// <para> You can call the DescribeInstanceInfo operation to query the ID of the WAF instance.<a href="~~140857~~"></a></para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,12 +38,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region of the WAF instance. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: The Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: Outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,34 +62,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The traffic routing rule configuration:</para>
-        /// <remarks>
-        /// <para>Notice: </para>
-        /// </remarks>
-        /// <para>The mode cannot be changed after it is selected.</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>check_mode</b> Defines the traffic scope for the routing rule. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>all</b>: Routes all traffic.</para>
-        /// </description></item>
-        /// <item><description><para><b>part</b>: Routes a specified portion of traffic.</para>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para><b>type</b>: The rule\&quot;s match type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>exact</b>: Exact match</para>
-        /// </description></item>
-        /// <item><description><para><b>regex</b>: Regular expression match.</para>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para><b>substance</b>: The value of the rule.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The configuration of the rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;check_mode\&quot;: \&quot;all\&quot;, \&quot;type\&quot;: \&quot;exact\&quot;, \&quot;substance\&quot;: \&quot;122\&quot;}</para>
+        /// <para>{\&quot;check_mode\&quot;:\&quot;part\&quot;,\&quot;include\&quot;:{\&quot;exact\&quot;:[],\&quot;regex\&quot;:[]}}</para>
         /// </summary>
         [NameInMap("RuleConfig")]
         [Validation(Required=false)]
@@ -106,10 +74,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The status of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>on</b>: Enabled</para>
-        /// </description></item>
-        /// <item><description><para><b>off</b>: Disabled.</para>
-        /// </description></item>
+        /// <item><description><b>on</b>: enables the rule.</description></item>
+        /// <item><description><b>off</b>: disables the rule.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -120,9 +86,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RuleStatus { get; set; }
 
         /// <summary>
-        /// <para>[Deprecated] The rule type. Valid values:</para>
+        /// <para>The type of the rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pullin</b>: Traffic routing configuration.</description></item>
+        /// <item><description><b>pullin</b>: The traffic redirection rule.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

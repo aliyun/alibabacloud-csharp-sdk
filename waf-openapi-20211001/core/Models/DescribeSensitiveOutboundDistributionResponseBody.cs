@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSensitiveOutboundDistributionResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of outbound traffic distributions that contain personal information.</para>
+        /// <para>The traffic distribution of personal information records involved in cross-border data transfer.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeSensitiveOutboundDistributionResponseBodyData> Data { get; set; }
         public class DescribeSensitiveOutboundDistributionResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The destination country.</para>
+            /// <para>The country to which the data is transferred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>US</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Country { get; set; }
 
             /// <summary>
-            /// <para>The number of outbound personal information entries.</para>
+            /// <para>The number of personal information records involved in cross-border data transfer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>213</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? InfoOutboundCount { get; set; }
 
             /// <summary>
-            /// <para>The number of outbound sensitive information entries.</para>
+            /// <para>The number of sensitive information records involved in cross-border data transfer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>144</para>

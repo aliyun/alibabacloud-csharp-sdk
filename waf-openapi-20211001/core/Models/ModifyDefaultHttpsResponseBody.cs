@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyDefaultHttpsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>276D7566-31C9-4192-9DD1-***</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeCertDetailResponseBodyCertDetail CertDetail { get; set; }
         public class DescribeCertDetailResponseBodyCertDetail : TeaModel {
             /// <summary>
-            /// <para>The time when the certificate expires. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The time when the certificate expires. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1976256736582</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AfterDate { get; set; }
 
             /// <summary>
-            /// <para>The time when the certificate was issued. Unit: milliseconds.</para>
+            /// <para>The time when the certificate was issued. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1976256736582</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? BeforeDate { get; set; }
 
             /// <summary>
-            /// <para>The certificate ID.</para>
+            /// <para>The ID of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123-cn-hangzhou</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string CertIdentifier { get; set; }
 
             /// <summary>
-            /// <para>The certificate name.</para>
+            /// <para>The name of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testCertName</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3C115DBE-8E53-5A12-9CAF-FD3F****CDF6</para>

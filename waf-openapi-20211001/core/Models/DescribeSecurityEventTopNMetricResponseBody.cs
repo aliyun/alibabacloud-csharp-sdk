@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array of the top N statistics.</para>
+        /// <para>The top N data entries returned.</para>
         /// </summary>
         [NameInMap("SecurityEventTopNValues")]
         [Validation(Required=false)]
         public List<DescribeSecurityEventTopNMetricResponseBodySecurityEventTopNValues> SecurityEventTopNValues { get; set; }
         public class DescribeSecurityEventTopNMetricResponseBodySecurityEventTopNValues : TeaModel {
             /// <summary>
-            /// <para>Additional information, such as the protection module to which a rule ID belongs.</para>
+            /// <para>The additional information, such as the protection module for a protection rule whose ID is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>waf_base</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Attribute { get; set; }
 
             /// <summary>
-            /// <para>The value of a field. The meaning of this parameter varies based on the specified \<c>Metric\\</c>.</para>
+            /// <para>The field value, which varies based on the metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The statistical count used for top N sorting.</para>
+            /// <para>The count for the data entry.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1111</para>
@@ -59,21 +59,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The metadata of the returned data.</para>
+        /// <para>The metadata of the data entries returned.</para>
         /// </summary>
         [NameInMap("TopNMetaData")]
         [Validation(Required=false)]
         public DescribeSecurityEventTopNMetricResponseBodyTopNMetaData TopNMetaData { get; set; }
         public class DescribeSecurityEventTopNMetricResponseBodyTopNMetaData : TeaModel {
             /// <summary>
-            /// <para>The time range used for the query.</para>
+            /// <para>The time range that is used for the query.</para>
             /// </summary>
             [NameInMap("DateRange")]
             [Validation(Required=false)]
             public DescribeSecurityEventTopNMetricResponseBodyTopNMetaDataDateRange DateRange { get; set; }
             public class DescribeSecurityEventTopNMetricResponseBodyTopNMetaDataDateRange : TeaModel {
                 /// <summary>
-                /// <para>The end of the time range that was queried. The value is a UNIX timestamp. Unit: seconds. This value is the same as the \<c>EndDate\\</c> request parameter.</para>
+                /// <para>The end of the time range to query. The value is a Unix timestamp. Unit: seconds. This value is the same as the value of EndDate in the request parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888600</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The start of the time range that was queried. The value is a UNIX timestamp. Unit: seconds. This value is the same as the \<c>StartDate\\</c> request parameter.</para>
+                /// <para>The beginning of the time range to query. The value is a Unix timestamp. Unit: seconds. This value is the same as the value of StartDate in the request parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1713888000</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The unit of the returned statistics.</para>
+            /// <para>The unit of the statistics returned. It is fixed as requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>requests</para>

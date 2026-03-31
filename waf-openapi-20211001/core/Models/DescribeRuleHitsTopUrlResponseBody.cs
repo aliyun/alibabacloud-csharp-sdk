@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The top 10 URLs that trigger protection rules.</para>
+        /// <para>The top 10 URLs that match protection rules.</para>
         /// </summary>
         [NameInMap("RuleHitsTopUrl")]
         [Validation(Required=false)]
         public List<DescribeRuleHitsTopUrlResponseBodyRuleHitsTopUrl> RuleHitsTopUrl { get; set; }
         public class DescribeRuleHitsTopUrlResponseBodyRuleHitsTopUrl : TeaModel {
             /// <summary>
-            /// <para>The number of requests that triggered the rule.</para>
+            /// <para>The number of requests that match protection rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21862</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The request URL.</para>
             /// <remarks>
-            /// <para>The value of this parameter is Base64-encoded.</para>
+            /// <para> The value is Base64-encoded.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

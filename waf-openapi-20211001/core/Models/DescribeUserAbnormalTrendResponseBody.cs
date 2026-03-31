@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeUserAbnormalTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D7861F61-5B61-46CE-A47C-6B19160D5EB0</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of API security risk trend data points.</para>
+        /// <para>The trends of risks.</para>
         /// </summary>
         [NameInMap("Trend")]
         [Validation(Required=false)]
         public List<DescribeUserAbnormalTrendResponseBodyTrend> Trend { get; set; }
         public class DescribeUserAbnormalTrendResponseBodyTrend : TeaModel {
             /// <summary>
-            /// <para>The number of high-severity security risks.</para>
+            /// <para>The number of high risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AbnormalHigh { get; set; }
 
             /// <summary>
-            /// <para>The number of low-severity security risks.</para>
+            /// <para>The number of low risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AbnormalLow { get; set; }
 
             /// <summary>
-            /// <para>The number of medium-severity security risks.</para>
+            /// <para>The number of medium risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>14</para>
@@ -59,7 +59,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The point in time when the statistics were collected. This value is a UNIX timestamp in UTC. Unit: seconds.</para>
+            /// <para>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
+            /// <remarks>
+            /// <para>Notice: The parameter has been deprecated, it is recommended to use the Timestamp parameter.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>1722268800</para>
@@ -70,7 +73,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? TimeStamp { get; set; }
 
             /// <summary>
-            /// <para>The point in time when the statistics were collected. This value is a UNIX timestamp in UTC. Unit: seconds.</para>
+            /// <para>The time at which the API was called. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1722268800</para>

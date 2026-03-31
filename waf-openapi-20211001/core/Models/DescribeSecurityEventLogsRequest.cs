@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeSecurityEventLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The filter conditions. A logical AND relationship exists between multiple filter conditions.</para>
+        /// <para>The filter conditions for the query. Multiple conditions are evaluated by using a logical AND.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Filter")]
@@ -18,14 +18,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeSecurityEventLogsRequestFilter Filter { get; set; }
         public class DescribeSecurityEventLogsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>A list of filter conditions. Each node describes a filter condition.</para>
+            /// <para>The filter conditions. Each object describes a filter condition.</para>
             /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
             public List<DescribeSecurityEventLogsRequestFilterConditions> Conditions { get; set; }
             public class DescribeSecurityEventLogsRequestFilterConditions : TeaModel {
                 /// <summary>
-                /// <para>The name of the field to filter. This operation supports all fields.</para>
+                /// <para>The field name. This operation supports all fields. For more information, see the <b>Supported field names</b> section below.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>matched_host</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The operator.</para>
+                /// <para>The operator. For more information, see the <b>Supported operators</b> section below.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eq</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string OpValue { get; set; }
 
                 /// <summary>
-                /// <para>The filter value.</para>
+                /// <para>The field content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test.waf-top</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The time range to query.</para>
+            /// <para>The time range for the query.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("DateRange")]
@@ -76,10 +76,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The start of the time range to query. The time range cannot exceed the last 30 days. The value is a UNIX timestamp. Unit: seconds.</para>
-                /// <remarks>
-                /// <para>The start time must be within the last 30 days from the current time.</para>
-                /// </remarks>
+                /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -96,7 +93,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -108,7 +105,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number to return for a paged query. The default value is <b>1</b>, which indicates the first page.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -119,7 +116,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page for a paged query. The maximum value is <b>100</b>.</para>
+        /// <para>The number of entries per page. Maximum value: <b>100</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -130,16 +127,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region ID of the WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: The Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>ap-southeast-1</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseTemplateValidGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of protected object group names.</para>
+        /// <para>The names of the protected object groups.</para>
         /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public List<string> Groups { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6EA4B39A-9C0C-5E57-993E-30B6****3AD0</para>

@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeThreatEventRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name that is protected by WAF. If you do not specify this parameter, security events for all domain names are queried.</para>
-        /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.abc.com">www.abc.com</a></para>
         /// </summary>
@@ -20,7 +18,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +28,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
-        /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,8 +38,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: 1.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -55,8 +46,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>5</b>. Valid values: 1 to 200.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -65,14 +54,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: a region outside the Chinese mainland.</para>
-        /// </description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -81,8 +62,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>rg-aeky65ka*****</para>
         /// </summary>
@@ -91,7 +70,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. This value is a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

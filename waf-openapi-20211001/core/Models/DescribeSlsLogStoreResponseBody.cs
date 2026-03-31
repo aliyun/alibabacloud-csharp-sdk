@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? Quota { get; set; }
 
         /// <summary>
-        /// <para>The request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CAC0A24B-486A-5E12-9894-BE860E5F41CC</para>
+        /// <para>CAC0A24B-486A-5E12-9894-BE860E5F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The log retention period. Unit: days.</para>
+        /// <para>The storage duration of the Logstore. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>180</para>

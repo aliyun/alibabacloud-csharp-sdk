@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDDoSStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The current DDoS status.</para>
+        /// <para>Indicates whether DDoS attacks occur on specific domain names.</para>
         /// </summary>
         [NameInMap("DDoSStatus")]
         [Validation(Required=false)]
         public List<DescribeDDoSStatusResponseBodyDDoSStatus> DDoSStatus { get; set; }
         public class DescribeDDoSStatusResponseBodyDDoSStatus : TeaModel {
             /// <summary>
-            /// <para>The name of the event type. Valid values:</para>
+            /// <para>The type of events that are triggered by DDoS attacks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>defense: DDoS traffic scrubbing event.</para>
-            /// </description></item>
-            /// <item><description><para>blackhole: DDoS blackhole filtering event.</para>
-            /// </description></item>
+            /// <item><description>defense: traffic scrubbing events.</description></item>
+            /// <item><description>blackhole: blackhole filtering events.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,8 +31,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string EventType { get; set; }
 
             /// <summary>
-            /// <para>The DDoS status:</para>
-            /// <para><b>doing</b>: Under DDoS attack.</para>
+            /// <para>Indicates whether DDoS attacks occur on specific domain names. Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description><b>doing</b>: DDoS attacks occur on specific domain names.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>doing</para>

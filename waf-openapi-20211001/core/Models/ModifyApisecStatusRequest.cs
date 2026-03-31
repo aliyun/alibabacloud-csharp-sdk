@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyApisecStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The API security status. Valid values:</para>
+        /// <para>The status of the API security module. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>1</b>: enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>0</b>: disabled.</para>
-        /// </description></item>
+        /// <item><description><b>1</b>: enabled</description></item>
+        /// <item><description><b>0</b>: disabled</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,12 +39,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,7 +53,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the protected object group to which the protected object is added.</para>
+        /// <para>The name of the protected object group to which the protected object belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeNetworkFlowTimeSeriesMetricRequest : TeaModel {
         /// <summary>
-        /// <para>The filter conditions for the query. Multiple filter conditions are combined with a logical AND.</para>
+        /// <para>Specifies filtering conditions. Multiple filter parameters use AND logic.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Filter")]
@@ -18,20 +18,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public DescribeNetworkFlowTimeSeriesMetricRequestFilter Filter { get; set; }
         public class DescribeNetworkFlowTimeSeriesMetricRequestFilter : TeaModel {
             /// <summary>
-            /// <para>A list of filter conditions. Each item in the list describes a filter condition.</para>
+            /// <para>The list of filter conditions. Each node describes a filter condition.</para>
             /// </summary>
             [NameInMap("Conditions")]
             [Validation(Required=false)]
             public List<DescribeNetworkFlowTimeSeriesMetricRequestFilterConditions> Conditions { get; set; }
             public class DescribeNetworkFlowTimeSeriesMetricRequestFilterConditions : TeaModel {
                 /// <summary>
-                /// <para>The field to use for the filter operation. This API operation supports the following values for Key:</para>
+                /// <para>The filter fields. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>matched_host</para>
-                /// </description></item>
-                /// <item><description><para>cluster</para>
-                /// </description></item>
+                /// <item><description>matched_host</description></item>
+                /// <item><description>cluster</description></item>
                 /// </list>
+                /// <para>For details, see the <b>Filter fields (Key)</b> section below.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>matched_host</para>
@@ -41,7 +40,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The operator.</para>
+                /// <para>The filter operator. For details, see the <b>Filter operators (OpValue)</b> section below.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eq</para>
@@ -51,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string OpValue { get; set; }
 
                 /// <summary>
-                /// <para>The filter value.</para>
+                /// <para>The filter content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test.waf-top</para>
@@ -63,7 +62,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             }
 
             /// <summary>
-            /// <para>The time range to query.</para>
+            /// <para>Specifies the date range for the query.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("DateRange")]
@@ -71,7 +70,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public DescribeNetworkFlowTimeSeriesMetricRequestFilterDateRange DateRange { get; set; }
             public class DescribeNetworkFlowTimeSeriesMetricRequestFilterDateRange : TeaModel {
                 /// <summary>
-                /// <para>The end of the time range to query. This value is a UNIX timestamp. Unit: seconds.</para>
+                /// <para>End time of the query range (Unix timestamp, seconds).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -82,10 +81,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public long? EndDate { get; set; }
 
                 /// <summary>
-                /// <para>The query period cannot exceed the last 30 days. The start of the time range to query. This value is a UNIX timestamp. Unit: seconds.</para>
-                /// <remarks>
-                /// <h2>The start time must be within the last 30 days.</h2>
-                /// </remarks>
+                /// <para>Start time of the query range (Unix timestamp, seconds).</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -100,9 +96,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The Web Application Firewall (WAF) instance ID.</para>
         /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to retrieve the WAF instance ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -114,16 +110,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the type of data to return. Different values for Metric correspond to different data. This API operation supports the following values:</para>
+        /// <para>Specifies the data type to be returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>qps: The number of requests that WAF processes per second. A queries per second (QPS) value is calculated every 10 seconds. The peak QPS value within the specified time granularity is returned.</para>
-        /// </description></item>
-        /// <item><description><para>total_requests: The total number of requests processed by WAF.</para>
-        /// </description></item>
-        /// <item><description><para>top5_status: The top five response status codes that WAF returns to the client, and the corresponding time series statistics.</para>
-        /// </description></item>
-        /// <item><description><para>top 5_upstream_status: The top five response status codes that the origin server returns to the client, and the corresponding time series statistics.</para>
-        /// </description></item>
+        /// <item><description>qps: Returns the queries per second (QPS) processed by WAF. This value is calculated using a peak detection method: QPS is measured every 10 seconds, and the highest value within the specified time range is returned.</description></item>
+        /// <item><description>total_requests: Returns the total number of requests processed by WAF.</description></item>
+        /// <item><description>top5_status: Returns the top 5 HTTP status codes returned by the WAF to clients, along with their corresponding time series statistics.</description></item>
+        /// <item><description>top 5_upstream_status: Returns the top 5 HTTP status codes returned by the origin server to clients, along with their corresponding time series data.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -135,23 +127,21 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Metric { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region ID of WAF instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: The Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>ap-southeast-1</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

@@ -10,7 +10,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeDefenseTemplateValidGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The protection scenario. For more information, see the valid values for the <b>DefenseScene</b> parameter in <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> when <b>DefenseType</b> is set to <b>template</b>.</para>
+        /// <para>The scenario in which the protection template is used.</para>
+        /// <list type="bullet">
+        /// <item><description><b>waf_group</b>: basic protection.</description></item>
+        /// <item><description><b>antiscan</b>: scan protection.</description></item>
+        /// <item><description><b>ip_blacklist</b>: IP address blacklist.</description></item>
+        /// <item><description><b>custom_acl</b>: custom rule.</description></item>
+        /// <item><description><b>whitelist</b>: whitelist.</description></item>
+        /// <item><description><b>region_block</b>: region blacklist.</description></item>
+        /// <item><description><b>custom_response</b>: custom response.</description></item>
+        /// <item><description><b>cc</b>: HTTP flood protection.</description></item>
+        /// <item><description><b>tamperproof</b>: website tamper-proofing.</description></item>
+        /// <item><description><b>dlp</b>: data leakage prevention.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +33,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DefenseScene { get; set; }
 
         /// <summary>
-        /// <para>The name of the protected object group. Use this parameter to filter results by group name.</para>
+        /// <para>The name of the protected object group that you want to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group221</para>
@@ -33,7 +45,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -65,12 +77,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region in which the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

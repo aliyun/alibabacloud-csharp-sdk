@@ -10,10 +10,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeChargeModuleRequest : TeaModel {
         /// <summary>
-        /// <para>The billing method of the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>POSTPAY</b>: a pay-as-you-go WAF instance.</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,14 +20,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -40,8 +28,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
         /// </summary>

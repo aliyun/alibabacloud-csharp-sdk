@@ -10,10 +10,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeBaseRuleChangeLogRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
-        /// <remarks>
-        /// <para>Call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of the current WAF instance.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,14 +20,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Set the language property for rule names. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>zh</b>: Chinese rule names.</para>
-        /// </description></item>
-        /// <item><description><para><b>en</b>: English rule names.</para>
-        /// </description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -40,8 +28,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>When performing a paged query, specify the page number to return. The default value is <b>1</b>, which means the first page of data is returned.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,8 +36,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>When performing a paged query, specify the number of results per page.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -60,14 +44,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region to which the WAF instance belongs. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: The Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: Outside the Chinese mainland.</para>
-        /// </description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -76,8 +52,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud resource group ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
         /// </summary>

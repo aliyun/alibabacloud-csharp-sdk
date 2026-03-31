@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeMajorProtectionBlackIpsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of IP addresses in the blacklist.</para>
+        /// <para>An array of IP addresses in the IP address blacklist.</para>
         /// </summary>
         [NameInMap("IpList")]
         [Validation(Required=false)]
         public List<DescribeMajorProtectionBlackIpsResponseBodyIpList> IpList { get; set; }
         public class DescribeMajorProtectionBlackIpsResponseBodyIpList : TeaModel {
             /// <summary>
-            /// <para>The description of the template.</para>
+            /// <para>The description of the IP address in the blacklist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test0003asdffas</para>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The timestamp after which the IP address blacklist becomes invalid. Unit: seconds.</para>
+            /// <para>The time after which the IP address blacklist becomes invalid. Unit: seconds.</para>
             /// <remarks>
-            /// <para>If the value is <b>0</b>, the IP address blacklist is permanently valid.</para>
+            /// <para> If the value of this parameter is <b>0</b>, the blacklist is permanently valid.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the IP address in the blacklist was modified.</para>
+            /// <para>The most recent time when the IP address blacklist was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665456202000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The IP address.</para>
+            /// <para>The IP address in the IP address blacklist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.0.XX.XX</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IP address blacklist rule for critical event protection.</para>
+            /// <para>The ID of the IP address blacklist rule for major event protection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8508970</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the critical event protection template.</para>
+            /// <para>The ID of the rule template for major event protection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9684</para>

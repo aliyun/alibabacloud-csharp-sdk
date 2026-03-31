@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeTemplateResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The API of the protected asset for the fuzzy query.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>abc.com</para>
         /// </summary>
@@ -20,9 +18,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AssetApi { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to obtain the ID of the WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -33,22 +31,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        /// <summary>
-        /// <para>The number of entries to return on each page for a paged query. Valid values: 1 to 500. Default value: 500.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>20</para>
-        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
-        /// <summary>
-        /// <para>The token that is used to retrieve the next page of results. This is the value of the <b>NextToken</b> parameter returned from the last API call. You do not need to specify this parameter for the first query.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>AAAAAJ7ob7*******MhJJ1ELRE=</para>
-        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -56,10 +42,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,12 +53,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// <para>The name of the protected object or protected object group for the fuzzy query.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>abc.test.com-waf</para>
-        /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public string Resource { get; set; }
@@ -92,12 +70,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The type of the protected resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>single</b>: a protected object.</para>
-        /// </description></item>
-        /// <item><description><para><b>group</b>: a protected object group.</para>
-        /// </description></item>
-        /// <item><description><para><b>asset</b>: a protected asset.</para>
-        /// </description></item>
+        /// <item><description><b>single:</b> protected object.</description></item>
+        /// <item><description><b>group:</b> protected object group.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -109,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection template.</para>
+        /// <para>The ID of the protection rule template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

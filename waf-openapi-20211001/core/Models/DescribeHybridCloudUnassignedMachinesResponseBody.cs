@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeHybridCloudUnassignedMachinesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3EBCFCE9-4A3C-5E01-915D-691B****510A</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of unassigned servers returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The unassigned servers in the hybrid cloud cluster.</para>
+        /// <para>The servers that are not assigned to the hybrid cloud cluster.</para>
         /// </summary>
         [NameInMap("UnassignedMachines")]
         [Validation(Required=false)]
         public List<DescribeHybridCloudUnassignedMachinesResponseBodyUnassignedMachines> UnassignedMachines { get; set; }
         public class DescribeHybridCloudUnassignedMachinesResponseBodyUnassignedMachines : TeaModel {
             /// <summary>
-            /// <para>The number of CPU cores of the server.</para>
+            /// <para>The number of CPU cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The custom name of the server.</para>
+            /// <para>The name of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleName</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string CustomName { get; set; }
 
             /// <summary>
-            /// <para>The hostname of the server.</para>
+            /// <para>The host name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>online-xagent1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The MAC address of the server.</para>
+            /// <para>The media access control (MAC) address of the device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00163e2686ac</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Mac { get; set; }
 
             /// <summary>
-            /// <para>The memory size of the server. Unit: KB.</para>
+            /// <para>The memory size. Unit: KB. A conversion factor of 1,000 is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>31580872</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>The ID of the server.</para>
+            /// <para>The ID of the node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>78db009ab6cf055a9085f9f4****ae3a</para>

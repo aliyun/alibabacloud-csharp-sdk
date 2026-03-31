@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DeleteDefenseRuleBlockIpResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>9D11AC3A-A10C-56E7-A342-E87EC892BAE2</para>
         /// </summary>

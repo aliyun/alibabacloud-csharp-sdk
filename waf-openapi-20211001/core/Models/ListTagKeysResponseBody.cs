@@ -19,10 +19,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The type of the tag. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>custom: The custom tag.</para>
-            /// </description></item>
-            /// <item><description><para>system: The system tag.</para>
-            /// </description></item>
+            /// <item><description>custom</description></item>
+            /// <item><description>system</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +31,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demoTagKey</para>
@@ -45,7 +43,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The pagination token. If NextToken is empty, there are no more results to return.</para>
+        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0*****</para>
@@ -55,7 +53,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8CB8BB88-24C7-5608-BF5E-4DCA****CF1C</para>

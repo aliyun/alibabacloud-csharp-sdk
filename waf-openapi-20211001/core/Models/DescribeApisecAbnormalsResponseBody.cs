@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeApisecAbnormalsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of security risks.</para>
+        /// <para>The risks.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeApisecAbnormalsResponseBodyData> Data { get; set; }
         public class DescribeApisecAbnormalsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The number of risk events that are associated with the security risk.</para>
+            /// <para>The number of risk-related security events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? AbnormalEventNumber { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security risk.</para>
+            /// <para>The ID of the risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7c1431f27ae7e9c8cc64095***68e</para>
@@ -37,43 +37,27 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string AbnormalId { get; set; }
 
             /// <summary>
-            /// <para>The details of the security risk in JSON format. The JSON object contains the following fields:</para>
+            /// <para>The details of the risk. The value is a string that consists of multiple parameters in the JSON format. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>rule</b>: The detection rule that triggered the security risk.</para>
-            /// </description></item>
-            /// <item><description><para><b>data_type</b>: The type of sensitive data.</para>
-            /// </description></item>
-            /// <item><description><para><b>custom_rule_name</b>: The name of the custom rule.</para>
-            /// </description></item>
-            /// <item><description><para><b>rule_name</b>: The name of the built-in rule.</para>
-            /// </description></item>
+            /// <item><description><b>rule</b>: risk-related rule</description></item>
+            /// <item><description><b>data_type</b>: sensitive data type</description></item>
+            /// <item><description><b>custom_rule_name</b>: custom rule name</description></item>
+            /// <item><description><b>rule_name</b>: built-in rule name</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>{
-            ///     &quot;data_type&quot;: [&quot;1005&quot;,&quot;1004&quot;],
-            ///     &quot;rule&quot;: {
-            ///         &quot;parent&quot;: &quot;RiskType_Permission&quot;,
-            ///         &quot;code&quot;: &quot;Risk_UnauthSensitive&quot;,
-            ///         &quot;level&quot;: &quot;high&quot;,
-            ///         &quot;origin&quot;: &quot;default&quot;,
-            ///         &quot;name&quot;: &quot;Risk_UnauthSensitive&quot;
-            ///     }
-            /// }</para>
+            /// <para>{ &quot;data_type&quot;: [&quot;1005&quot;,&quot;1004&quot;], &quot;rule&quot;: { &quot;parent&quot;: &quot;RiskType_Permission&quot;, &quot;code&quot;: &quot;Risk_UnauthSensitive&quot;, &quot;level&quot;: &quot;high&quot;, &quot;origin&quot;: &quot;default&quot;, &quot;name&quot;: &quot;Risk_UnauthSensitive&quot; } }</para>
             /// </summary>
             [NameInMap("AbnormalInfo")]
             [Validation(Required=false)]
             public string AbnormalInfo { get; set; }
 
             /// <summary>
-            /// <para>The severity level of the security risk. Valid values:</para>
+            /// <para>The level of the risk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>high</b>: High.</para>
-            /// </description></item>
-            /// <item><description><para><b>medium</b>: Medium.</para>
-            /// </description></item>
-            /// <item><description><para><b>low</b>: Low.</para>
-            /// </description></item>
+            /// <item><description><b>high</b></description></item>
+            /// <item><description><b>medium</b></description></item>
+            /// <item><description><b>low</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,9 +68,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string AbnormalLevel { get; set; }
 
             /// <summary>
-            /// <para>The type of the security risk.</para>
+            /// <para>The type of the risk.</para>
             /// <remarks>
-            /// <para>Call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to query the supported risk types.</para>
+            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the supported types of risks.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -97,7 +81,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string AbnormalTag { get; set; }
 
             /// <summary>
-            /// <para>The processing status of the security risk.</para>
+            /// <para>The status of the risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>unresolved</para>
@@ -107,7 +91,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string AbnromalStatus { get; set; }
 
             /// <summary>
-            /// <para>The path of the API that is associated with the security risk.</para>
+            /// <para>The risk-related API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/api/login</para>
@@ -117,7 +101,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiFormat { get; set; }
 
             /// <summary>
-            /// <para>The ID of the API that is associated with the security risk.</para>
+            /// <para>The ID of the risk-related API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>09559c0d71ca2ffc996b81***836d8</para>
@@ -129,7 +113,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The business purpose of the API.</para>
             /// <remarks>
-            /// <para>Call <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> to query the supported business purposes.</para>
+            /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2859155.html">DescribeApisecRules</a> operation to query the business purposes of APIs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -140,7 +124,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ApiTag { get; set; }
 
             /// <summary>
-            /// <para>The time when the security risk was first detected. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time at which the risk was first detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684252800</para>
@@ -152,7 +136,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The list of security risk samples.</para>
+            /// <para>The risk-related samples.</para>
             /// </summary>
             [NameInMap("Examples")]
             [Validation(Required=false)]
@@ -160,7 +144,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public List<string> Examples { get; set; }
 
             /// <summary>
-            /// <para>The time when the API was first discovered. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time at which the API was first detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1701138088</para>
@@ -170,12 +154,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? FirstTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the security risk is being followed. Valid values:</para>
+            /// <para>Indicates whether the API is followed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: The security risk is being followed.</para>
-            /// </description></item>
-            /// <item><description><para><b>0</b> (default): The security risk is not being followed.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: yes</description></item>
+            /// <item><description><b>0</b>(default): no</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -186,7 +168,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Follow { get; set; }
 
             /// <summary>
-            /// <para>The time when the security risk was marked as ignored. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time at which the risk was marked as ignored. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684252800</para>
@@ -196,7 +178,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? IgnoreTime { get; set; }
 
             /// <summary>
-            /// <para>The most recent time when the API was accessed. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time at which the API was last accessed. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684252800</para>
@@ -206,7 +188,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? LastestTime { get; set; }
 
             /// <summary>
-            /// <para>The most recent time when the security risk was detected. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time at which the risk was last detected. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684252800</para>
@@ -216,7 +198,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? LatestDiscoverTime { get; set; }
 
             /// <summary>
-            /// <para>The domain name or IP address that the API resides on.</para>
+            /// <para>The domain name or IP address of the API.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a.aliyun.com</para>
@@ -226,22 +208,20 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string MatchedHost { get; set; }
 
             /// <summary>
-            /// <para>The remarks for the security risk.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Strict</para>
+            /// <para>Business side notified</para>
             /// </summary>
             [NameInMap("Note")]
             [Validation(Required=false)]
             public string Note { get; set; }
 
             /// <summary>
-            /// <para>The source of the risk detection rule. Valid values:</para>
+            /// <para>The source of the risk type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>custom</b>: Custom rule.</para>
-            /// </description></item>
-            /// <item><description><para><b>default</b>: Built-in rule.</para>
-            /// </description></item>
+            /// <item><description><b>custom</b></description></item>
+            /// <item><description><b>default</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -252,24 +232,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Origin { get; set; }
 
             /// <summary>
-            /// <para>The handling status of the security risk. Valid values:</para>
+            /// <para>The status of the risk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>toBeConfirmed</b>: To be confirmed.</para>
-            /// </description></item>
-            /// <item><description><para><b>confirmed</b>: Confirmed.</para>
-            /// </description></item>
-            /// <item><description><para><b>toBeFixed</b>: To be fixed.</para>
-            /// </description></item>
-            /// <item><description><para><b>fixed</b>: Fixed (manually verified).</para>
-            /// </description></item>
-            /// <item><description><para><b>ignored</b>: Ignored.</para>
-            /// </description></item>
-            /// <item><description><para><b>toBeVerified</b>: To be verified by the system.</para>
-            /// </description></item>
-            /// <item><description><para><b>notFixed</b>: Verification failed.</para>
-            /// </description></item>
-            /// <item><description><para><b>systemFixed</b>: Fixed (verified by the system).</para>
-            /// </description></item>
+            /// <item><description><b>toBeConfirmed</b></description></item>
+            /// <item><description><b>confirmed</b></description></item>
+            /// <item><description><b>toBeFixed</b></description></item>
+            /// <item><description><b>fixed</b></description></item>
+            /// <item><description><b>ignored</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -292,10 +261,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of security risks returned.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5</para>
+        /// <para>35</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

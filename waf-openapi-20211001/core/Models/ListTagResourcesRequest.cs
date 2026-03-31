@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>A pagination token for the next query</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0*****</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: indicates the Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: indicates regions outside the Chinese mainland.</para>
-        /// </description></item>
+        /// <item><description><b>cn-hangzhou</b>: Chinese mainland.</description></item>
+        /// <item><description><b>ap-southeast-1</b>: outside the Chinese mainland.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,7 +42,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</para>
+        /// <para>The type of the resource. Set the value to ALIYUN::WAF::DEFENSERESOURCE.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +60,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of tag N that is added to the resource. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tagkey1</para>
@@ -72,7 +70,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of tag N that is added to the resource. Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TagValue1</para>

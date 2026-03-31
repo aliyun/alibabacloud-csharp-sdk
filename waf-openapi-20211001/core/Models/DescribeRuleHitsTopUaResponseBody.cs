@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The top 10 User-Agents that initiated attacks.</para>
+        /// <para>The array of the top 10 user agents that are used to initiate attacks.</para>
         /// </summary>
         [NameInMap("RuleHitsTopUa")]
         [Validation(Required=false)]
         public List<DescribeRuleHitsTopUaResponseBodyRuleHitsTopUa> RuleHitsTopUa { get; set; }
         public class DescribeRuleHitsTopUaResponseBodyRuleHitsTopUa : TeaModel {
             /// <summary>
-            /// <para>The number of attack requests.</para>
+            /// <para>The number of attacks that are initiated from the IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>531</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The User-Agent string.</para>
+            /// <para>The user agent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>android</para>
