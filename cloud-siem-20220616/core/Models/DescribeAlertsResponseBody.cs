@@ -398,6 +398,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                 [Validation(Required=false)]
                 public string IncidentUuid { get; set; }
 
+                [NameInMap("InvestigationReport")]
+                [Validation(Required=false)]
+                public string InvestigationReport { get; set; }
+
                 /// <summary>
                 /// <para>Indicates whether an attack is defended. Valid values:</para>
                 /// <list type="bullet">

@@ -225,6 +225,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
                     [Validation(Required=false)]
                     public string TaskConfig { get; set; }
 
+                    [NameInMap("UnAvailableCode")]
+                    [Validation(Required=false)]
+                    public string UnAvailableCode { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>kill_process_isolate_file</para>
