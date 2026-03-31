@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListExecutionsRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>123456789</para>
+        /// </summary>
+        [NameInMap("AccountId")]
+        [Validation(Required=false)]
+        public string AccountId { get; set; }
+
+        /// <summary>
         /// <para>The types of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger. You can specify only one of the Categories and Category parameters. We recommend that you specify Categories.</para>
         /// 
         /// <b>Example:</b>
@@ -152,6 +160,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [NameInMap("RamRole")]
         [Validation(Required=false)]
         public string RamRole { get; set; }
+
+        [NameInMap("RdFolderIds")]
+        [Validation(Required=false)]
+        public List<string> RdFolderIds { get; set; }
 
         /// <summary>
         /// <para>The ID of the region.</para>

@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 {
     public class ListExecutionLogsRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>123456789</para>
+        /// </summary>
+        [NameInMap("AccountId")]
+        [Validation(Required=false)]
+        public string AccountId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the execution.</para>
         /// <para>This parameter is required.</para>
         /// 

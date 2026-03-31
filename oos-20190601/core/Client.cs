@@ -1371,6 +1371,354 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateChatConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatConfigurationResponse
+        /// </returns>
+        public CreateChatConfigurationResponse CreateChatConfigurationWithOptions(CreateChatConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configuration))
+            {
+                query["Configuration"] = request.Configuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRole))
+            {
+                query["RamRole"] = request.RamRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateChatConfiguration",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateChatConfigurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateChatConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatConfigurationResponse
+        /// </returns>
+        public async Task<CreateChatConfigurationResponse> CreateChatConfigurationWithOptionsAsync(CreateChatConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configuration))
+            {
+                query["Configuration"] = request.Configuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRole))
+            {
+                query["RamRole"] = request.RamRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateChatConfiguration",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateChatConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateChatConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatConfigurationResponse
+        /// </returns>
+        public CreateChatConfigurationResponse CreateChatConfiguration(CreateChatConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateChatConfigurationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateChatConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateChatConfigurationResponse
+        /// </returns>
+        public async Task<CreateChatConfigurationResponse> CreateChatConfigurationAsync(CreateChatConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateChatConfigurationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建部署制品</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeployRevisionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeployRevisionResponse
+        /// </returns>
+        public CreateDeployRevisionResponse CreateDeployRevisionWithOptions(CreateDeployRevisionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationName))
+            {
+                query["ApplicationName"] = request.ApplicationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployResourceType))
+            {
+                query["DeployResourceType"] = request.DeployResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hooks))
+            {
+                query["Hooks"] = request.Hooks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Location))
+            {
+                query["Location"] = request.Location;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevisionType))
+            {
+                query["RevisionType"] = request.RevisionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDeployRevision",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeployRevisionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建部署制品</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeployRevisionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeployRevisionResponse
+        /// </returns>
+        public async Task<CreateDeployRevisionResponse> CreateDeployRevisionWithOptionsAsync(CreateDeployRevisionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationName))
+            {
+                query["ApplicationName"] = request.ApplicationName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployResourceType))
+            {
+                query["DeployResourceType"] = request.DeployResourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Hooks))
+            {
+                query["Hooks"] = request.Hooks;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Location))
+            {
+                query["Location"] = request.Location;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevisionType))
+            {
+                query["RevisionType"] = request.RevisionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDeployRevision",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDeployRevisionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建部署制品</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeployRevisionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeployRevisionResponse
+        /// </returns>
+        public CreateDeployRevisionResponse CreateDeployRevision(CreateDeployRevisionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDeployRevisionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建部署制品</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDeployRevisionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDeployRevisionResponse
+        /// </returns>
+        public async Task<CreateDeployRevisionResponse> CreateDeployRevisionAsync(CreateDeployRevisionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDeployRevisionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建仓库</para>
         /// </summary>
         /// 
@@ -1571,7 +1919,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an O\\\\\\&amp;M Item.</para>
+        /// <para>Creates an O\\\\\\\\\\&amp;M Item.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1667,7 +2015,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an O\\\\\\&amp;M Item.</para>
+        /// <para>Creates an O\\\\\\\\\\&amp;M Item.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1763,7 +2111,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an O\\\\\\&amp;M Item.</para>
+        /// <para>Creates an O\\\\\\\\\\&amp;M Item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1781,7 +2129,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an O\\\\\\&amp;M Item.</para>
+        /// <para>Creates an O\\\\\\\\\\&amp;M Item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2247,7 +2595,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an encryption parameter. Make sure that you have the permissions to call this operation.</para>
+        /// <para>Creates an encryption parameter. Make sure that you have the permissions to call the CreateSecret operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2335,7 +2683,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an encryption parameter. Make sure that you have the permissions to call this operation.</para>
+        /// <para>Creates an encryption parameter. Make sure that you have the permissions to call the CreateSecret operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2423,7 +2771,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an encryption parameter. Make sure that you have the permissions to call this operation.</para>
+        /// <para>Creates an encryption parameter. Make sure that you have the permissions to call the CreateSecret operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2441,7 +2789,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an encryption parameter. Make sure that you have the permissions to call this operation.</para>
+        /// <para>Creates an encryption parameter. Make sure that you have the permissions to call the CreateSecret operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3139,7 +3487,163 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple executions.</para>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteChatConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteChatConfigurationResponse
+        /// </returns>
+        public DeleteChatConfigurationResponse DeleteChatConfigurationWithOptions(DeleteChatConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteChatConfiguration",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteChatConfigurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteChatConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteChatConfigurationResponse
+        /// </returns>
+        public async Task<DeleteChatConfigurationResponse> DeleteChatConfigurationWithOptionsAsync(DeleteChatConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteChatConfiguration",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteChatConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteChatConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteChatConfigurationResponse
+        /// </returns>
+        public DeleteChatConfigurationResponse DeleteChatConfiguration(DeleteChatConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteChatConfigurationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteChatConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteChatConfigurationResponse
+        /// </returns>
+        public async Task<DeleteChatConfigurationResponse> DeleteChatConfigurationAsync(DeleteChatConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteChatConfigurationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes executions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3189,7 +3693,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple executions.</para>
+        /// <para>Deletes executions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3239,7 +3743,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple executions.</para>
+        /// <para>Deletes executions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3257,7 +3761,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes multiple executions.</para>
+        /// <para>Deletes executions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3659,7 +4163,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an encryption parameter. Make sure that you have the permissions to call the DeleteSecret operation before you call this operation.</para>
+        /// <para>Deletes an encryption parameter. Make sure that you have the permissions to call the DeleteSecret operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3705,7 +4209,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an encryption parameter. Make sure that you have the permissions to call the DeleteSecret operation before you call this operation.</para>
+        /// <para>Deletes an encryption parameter. Make sure that you have the permissions to call the DeleteSecret operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3751,7 +4255,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an encryption parameter. Make sure that you have the permissions to call the DeleteSecret operation before you call this operation.</para>
+        /// <para>Deletes an encryption parameter. Make sure that you have the permissions to call the DeleteSecret operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3769,7 +4273,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an encryption parameter. Make sure that you have the permissions to call the DeleteSecret operation before you call this operation.</para>
+        /// <para>Deletes an encryption parameter. Make sure that you have the permissions to call the DeleteSecret operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4347,7 +4851,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用分组资源成本</para>
+        /// <para>Queries the resource costs of an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4413,7 +4917,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用分组资源成本</para>
+        /// <para>Queries the resource costs of an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4479,7 +4983,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用分组资源成本</para>
+        /// <para>Queries the resource costs of an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4497,7 +5001,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询应用分组资源成本</para>
+        /// <para>Queries the resource costs of an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5211,6 +5715,162 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetChatConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatConfigurationResponse
+        /// </returns>
+        public GetChatConfigurationResponse GetChatConfigurationWithOptions(GetChatConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatConfiguration",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatConfigurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetChatConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatConfigurationResponse
+        /// </returns>
+        public async Task<GetChatConfigurationResponse> GetChatConfigurationWithOptionsAsync(GetChatConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatConfiguration",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetChatConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatConfigurationResponse
+        /// </returns>
+        public GetChatConfigurationResponse GetChatConfiguration(GetChatConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetChatConfigurationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetChatConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatConfigurationResponse
+        /// </returns>
+        public async Task<GetChatConfigurationResponse> GetChatConfigurationAsync(GetChatConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetChatConfigurationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the information about the template of an execution, including the content of the template.</para>
         /// </summary>
         /// 
@@ -5819,7 +6479,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an O\\\\\\&amp;M item.</para>
+        /// <para>Queries the details of an O\\\\\\\\\\&amp;M item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5865,7 +6525,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an O\\\\\\&amp;M item.</para>
+        /// <para>Queries the details of an O\\\\\\\\\\&amp;M item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5911,7 +6571,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an O\\\\\\&amp;M item.</para>
+        /// <para>Queries the details of an O\\\\\\\\\\&amp;M item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5929,7 +6589,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an O\\\\\\&amp;M item.</para>
+        /// <para>Queries the details of an O\\\\\\\\\\&amp;M item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6499,7 +7159,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an encryption parameter, including the parameter value. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</para>
+        /// <para>Queries the information about an encryption parameter, including the parameter value. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6553,7 +7213,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an encryption parameter, including the parameter value. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</para>
+        /// <para>Queries the information about an encryption parameter, including the parameter value. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6607,7 +7267,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an encryption parameter, including the parameter value. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</para>
+        /// <para>Queries the information about an encryption parameter, including the parameter value. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6625,7 +7285,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an encryption parameter, including the parameter value. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</para>
+        /// <para>Queries the information about an encryption parameter, including the parameter value. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6643,7 +7303,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more encryption parameters. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</para>
+        /// <para>Queries the information about one or more encryption parameters. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6693,7 +7353,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more encryption parameters. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</para>
+        /// <para>Queries the information about one or more encryption parameters. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6743,7 +7403,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more encryption parameters. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</para>
+        /// <para>Queries the information about one or more encryption parameters. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6761,7 +7421,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about one or more encryption parameters. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</para>
+        /// <para>Queries the information about one or more encryption parameters. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6779,7 +7439,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries encryption parameters by path. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</para>
+        /// <para>Queries encryption parameters by path. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6841,7 +7501,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries encryption parameters by path. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</para>
+        /// <para>Queries encryption parameters by path. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6903,7 +7563,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries encryption parameters by path. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</para>
+        /// <para>Queries encryption parameters by path. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6921,7 +7581,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries encryption parameters by path. Make sure that you have the permissions to call the GetSecretValue operation before you call this operation.</para>
+        /// <para>Queries encryption parameters by path. Make sure that you have the permissions to call the GetSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6939,7 +7599,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the settings of the delivery feature.</para>
+        /// <para>Queries the service settings, including the configuration of delivering template execution records and the associated organization ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6977,7 +7637,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the settings of the delivery feature.</para>
+        /// <para>Queries the service settings, including the configuration of delivering template execution records and the associated organization ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7015,7 +7675,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the settings of the delivery feature.</para>
+        /// <para>Queries the service settings, including the configuration of delivering template execution records and the associated organization ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7033,7 +7693,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the settings of the delivery feature.</para>
+        /// <para>Queries the service settings, including the configuration of delivering template execution records and the associated organization ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7187,7 +7847,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取参数可用值</para>
+        /// <para>Obtains available values of parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7249,7 +7909,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取参数可用值</para>
+        /// <para>Obtains available values of parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7311,7 +7971,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取参数可用值</para>
+        /// <para>Obtains available values of parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7329,7 +7989,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取参数可用值</para>
+        /// <para>Obtains available values of parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7847,6 +8507,178 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListChatConfigurationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatConfigurationsResponse
+        /// </returns>
+        public ListChatConfigurationsResponse ListChatConfigurationsWithOptions(ListChatConfigurationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChatConfigurations",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChatConfigurationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListChatConfigurationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatConfigurationsResponse
+        /// </returns>
+        public async Task<ListChatConfigurationsResponse> ListChatConfigurationsWithOptionsAsync(ListChatConfigurationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filters))
+            {
+                query["Filters"] = request.Filters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListChatConfigurations",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListChatConfigurationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListChatConfigurationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatConfigurationsResponse
+        /// </returns>
+        public ListChatConfigurationsResponse ListChatConfigurations(ListChatConfigurationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListChatConfigurationsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListChatConfigurationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListChatConfigurationsResponse
+        /// </returns>
+        public async Task<ListChatConfigurationsResponse> ListChatConfigurationsAsync(ListChatConfigurationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListChatConfigurationsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the logs of an execution.</para>
         /// </summary>
         /// 
@@ -7869,6 +8701,10 @@ namespace AlibabaCloud.SDK.Oos20190601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionId))
             {
                 query["ExecutionId"] = request.ExecutionId;
@@ -7936,6 +8772,10 @@ namespace AlibabaCloud.SDK.Oos20190601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutionId))
             {
                 query["ExecutionId"] = request.ExecutionId;
@@ -8173,11 +9013,19 @@ namespace AlibabaCloud.SDK.Oos20190601
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListExecutionsShrinkRequest request = new ListExecutionsShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RdFolderIds))
+            {
+                request.RdFolderIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RdFolderIds, "RdFolderIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Categories))
             {
                 query["Categories"] = request.Categories;
@@ -8233,6 +9081,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRole))
             {
                 query["RamRole"] = request.RamRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RdFolderIdsShrink))
+            {
+                query["RdFolderIds"] = request.RdFolderIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -8317,11 +9169,19 @@ namespace AlibabaCloud.SDK.Oos20190601
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListExecutionsShrinkRequest request = new ListExecutionsShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RdFolderIds))
+            {
+                request.RdFolderIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RdFolderIds, "RdFolderIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Categories))
             {
                 query["Categories"] = request.Categories;
@@ -8377,6 +9237,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRole))
             {
                 query["RamRole"] = request.RamRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RdFolderIdsShrink))
+            {
+                query["RdFolderIds"] = request.RdFolderIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -9615,7 +10479,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the patches of an instance.</para>
+        /// <para>Queries the patches of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9673,7 +10537,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the patches of an instance.</para>
+        /// <para>Queries the patches of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9731,7 +10595,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the patches of an instance.</para>
+        /// <para>Queries the patches of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9749,7 +10613,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the patches of an instance.</para>
+        /// <para>Queries the patches of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9927,7 +10791,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries O\&amp;M items.</para>
+        /// <para>Queries O\\\&amp;M items.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9999,7 +10863,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries O\&amp;M items.</para>
+        /// <para>Queries O\\\&amp;M items.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10071,7 +10935,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries O\&amp;M items.</para>
+        /// <para>Queries O\\\&amp;M items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10089,7 +10953,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries O\&amp;M items.</para>
+        /// <para>Queries O\\\&amp;M items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10707,7 +11571,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a scheduled execution that involves O&amp;M operations on Elastic Compute Service (ECS) instances.</para>
+        /// <para>Queries the information about a scheduled execution that involves O\&amp;M operations on Elastic Compute Service (ECS) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10761,7 +11625,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a scheduled execution that involves O&amp;M operations on Elastic Compute Service (ECS) instances.</para>
+        /// <para>Queries the information about a scheduled execution that involves O\&amp;M operations on Elastic Compute Service (ECS) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10815,7 +11679,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a scheduled execution that involves O&amp;M operations on Elastic Compute Service (ECS) instances.</para>
+        /// <para>Queries the information about a scheduled execution that involves O\&amp;M operations on Elastic Compute Service (ECS) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10833,7 +11697,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a scheduled execution that involves O&amp;M operations on Elastic Compute Service (ECS) instances.</para>
+        /// <para>Queries the information about a scheduled execution that involves O\&amp;M operations on Elastic Compute Service (ECS) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11891,6 +12755,142 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>用于获取任务执行内部的云助手脚本执行ID</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTaskExecutionInvocationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskExecutionInvocationsResponse
+        /// </returns>
+        public ListTaskExecutionInvocationsResponse ListTaskExecutionInvocationsWithOptions(ListTaskExecutionInvocationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskExecutionId))
+            {
+                query["TaskExecutionId"] = request.TaskExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTaskExecutionInvocations",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTaskExecutionInvocationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于获取任务执行内部的云助手脚本执行ID</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTaskExecutionInvocationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskExecutionInvocationsResponse
+        /// </returns>
+        public async Task<ListTaskExecutionInvocationsResponse> ListTaskExecutionInvocationsWithOptionsAsync(ListTaskExecutionInvocationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskExecutionId))
+            {
+                query["TaskExecutionId"] = request.TaskExecutionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTaskExecutionInvocations",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTaskExecutionInvocationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于获取任务执行内部的云助手脚本执行ID</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTaskExecutionInvocationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskExecutionInvocationsResponse
+        /// </returns>
+        public ListTaskExecutionInvocationsResponse ListTaskExecutionInvocations(ListTaskExecutionInvocationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTaskExecutionInvocationsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于获取任务执行内部的云助手脚本执行ID</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTaskExecutionInvocationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTaskExecutionInvocationsResponse
+        /// </returns>
+        public async Task<ListTaskExecutionInvocationsResponse> ListTaskExecutionInvocationsAsync(ListTaskExecutionInvocationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTaskExecutionInvocationsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries task executions. Multiple methods are supported to filter task executions.</para>
         /// </summary>
         /// 
@@ -11908,6 +12908,10 @@ namespace AlibabaCloud.SDK.Oos20190601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDateAfter))
             {
                 query["EndDateAfter"] = request.EndDateAfter;
@@ -12010,6 +13014,10 @@ namespace AlibabaCloud.SDK.Oos20190601
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDateAfter))
             {
                 query["EndDateAfter"] = request.EndDateAfter;
@@ -12131,7 +13139,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of versions of a template.</para>
+        /// <para>Queries the versions of a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12189,7 +13197,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of versions of a template.</para>
+        /// <para>Queries the versions of a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12247,7 +13255,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of versions of a template.</para>
+        /// <para>Queries the versions of a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12265,7 +13273,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of versions of a template.</para>
+        /// <para>Queries the versions of a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13063,10 +14071,10 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the feature of delivering template execution records and sets the storage location.</para>
+        /// <para>Enables or disables the feature of delivering template execution records and sets the storage location and organization ID.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// SetServiceSettingsRequest
         /// </param>
         /// <param name="runtime">
@@ -13076,9 +14084,15 @@ namespace AlibabaCloud.SDK.Oos20190601
         /// <returns>
         /// SetServiceSettingsResponse
         /// </returns>
-        public SetServiceSettingsResponse SetServiceSettingsWithOptions(SetServiceSettingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public SetServiceSettingsResponse SetServiceSettingsWithOptions(SetServiceSettingsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SetServiceSettingsShrinkRequest request = new SetServiceSettingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RdFolderIds))
+            {
+                request.RdFolderIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RdFolderIds, "RdFolderIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryOssBucketName))
             {
@@ -13100,6 +14114,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["DeliverySlsProjectName"] = request.DeliverySlsProjectName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RdFolderIdsShrink))
+            {
+                query["RdFolderIds"] = request.RdFolderIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RdcEnterpriseId))
             {
                 query["RdcEnterpriseId"] = request.RdcEnterpriseId;
@@ -13107,6 +14125,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceAccessRdEnabled))
+            {
+                query["ServiceAccessRdEnabled"] = request.ServiceAccessRdEnabled;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13129,10 +14151,10 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the feature of delivering template execution records and sets the storage location.</para>
+        /// <para>Enables or disables the feature of delivering template execution records and sets the storage location and organization ID.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// SetServiceSettingsRequest
         /// </param>
         /// <param name="runtime">
@@ -13142,9 +14164,15 @@ namespace AlibabaCloud.SDK.Oos20190601
         /// <returns>
         /// SetServiceSettingsResponse
         /// </returns>
-        public async Task<SetServiceSettingsResponse> SetServiceSettingsWithOptionsAsync(SetServiceSettingsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<SetServiceSettingsResponse> SetServiceSettingsWithOptionsAsync(SetServiceSettingsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SetServiceSettingsShrinkRequest request = new SetServiceSettingsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RdFolderIds))
+            {
+                request.RdFolderIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RdFolderIds, "RdFolderIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryOssBucketName))
             {
@@ -13166,6 +14194,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["DeliverySlsProjectName"] = request.DeliverySlsProjectName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RdFolderIdsShrink))
+            {
+                query["RdFolderIds"] = request.RdFolderIdsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RdcEnterpriseId))
             {
                 query["RdcEnterpriseId"] = request.RdcEnterpriseId;
@@ -13173,6 +14205,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceAccessRdEnabled))
+            {
+                query["ServiceAccessRdEnabled"] = request.ServiceAccessRdEnabled;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13195,7 +14231,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the feature of delivering template execution records and sets the storage location.</para>
+        /// <para>Enables or disables the feature of delivering template execution records and sets the storage location and organization ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13213,7 +14249,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the feature of delivering template execution records and sets the storage location.</para>
+        /// <para>Enables or disables the feature of delivering template execution records and sets the storage location and organization ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14310,6 +15346,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             {
                 query["DeployedRevisionId"] = request.DeployedRevisionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorMetadata))
+            {
+                query["MonitorMetadata"] = request.MonitorMetadata;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -14381,6 +15421,10 @@ namespace AlibabaCloud.SDK.Oos20190601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployedRevisionId))
             {
                 query["DeployedRevisionId"] = request.DeployedRevisionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MonitorMetadata))
+            {
+                query["MonitorMetadata"] = request.MonitorMetadata;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -14459,7 +15503,195 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update executions that are in Running or Waiting status.</para>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateChatConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChatConfigurationResponse
+        /// </returns>
+        public UpdateChatConfigurationResponse UpdateChatConfigurationWithOptions(UpdateChatConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configuration))
+            {
+                query["Configuration"] = request.Configuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRole))
+            {
+                query["RamRole"] = request.RamRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateChatConfiguration",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateChatConfigurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateChatConfigurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChatConfigurationResponse
+        /// </returns>
+        public async Task<UpdateChatConfigurationResponse> UpdateChatConfigurationWithOptionsAsync(UpdateChatConfigurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configuration))
+            {
+                query["Configuration"] = request.Configuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RamRole))
+            {
+                query["RamRole"] = request.RamRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateChatConfiguration",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateChatConfigurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateChatConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChatConfigurationResponse
+        /// </returns>
+        public UpdateChatConfigurationResponse UpdateChatConfiguration(UpdateChatConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateChatConfigurationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于创建、更新、查询和删除聊天配置，支持钉钉等平台。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API主要用于管理和配置与钉钉等即时通讯工具集成的聊天机器人设置，包括但不限于创建新的聊天配置、更新现有配置、获取特定配置详情以及删除不再需要的配置。通过此API，可以实现对不同用户或用户组权限的精细化控制，并能够指定具体的RAM角色来执行相关操作。此外，还支持为每个配置添加标签以便于管理和分类。
+        /// 特别注意的是，在调用此API时，需确保提供的<c>RegionId</c>、<c>ConversationId</c>以及请求体中的各项参数准确无误，尤其是涉及到安全敏感信息如<c>ClientId</c>、<c>ClientSecret</c>等字段时更应谨慎处理，避免泄露给非授权方。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateChatConfigurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateChatConfigurationResponse
+        /// </returns>
+        public async Task<UpdateChatConfigurationResponse> UpdateChatConfigurationAsync(UpdateChatConfigurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateChatConfigurationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates an execution in the Running or Waiting state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14525,7 +15757,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update executions that are in Running or Waiting status.</para>
+        /// <para>Updates an execution in the Running or Waiting state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14591,7 +15823,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update executions that are in Running or Waiting status.</para>
+        /// <para>Updates an execution in the Running or Waiting state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14609,7 +15841,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update executions that are in Running or Waiting status.</para>
+        /// <para>Updates an execution in the Running or Waiting state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14807,7 +16039,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an O\\\\\\&amp;M item.</para>
+        /// <para>Modifies an O\\\\\\\\\\&amp;M item.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14911,7 +16143,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an O\\\\\\&amp;M item.</para>
+        /// <para>Modifies an O\\\\\\\\\\&amp;M item.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15015,7 +16247,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an O\\\\\\&amp;M item.</para>
+        /// <para>Modifies an O\\\\\\\\\\&amp;M item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15033,7 +16265,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an O\\\\\\&amp;M item.</para>
+        /// <para>Modifies an O\\\\\\\\\\&amp;M item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15455,7 +16687,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an encryption parameter.</para>
+        /// <para>Updates an encryption parameter. Make sure that you have the permissions to call the UpdateSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15523,7 +16755,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an encryption parameter.</para>
+        /// <para>Updates an encryption parameter. Make sure that you have the permissions to call the UpdateSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15591,7 +16823,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an encryption parameter.</para>
+        /// <para>Updates an encryption parameter. Make sure that you have the permissions to call the UpdateSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15609,7 +16841,7 @@ namespace AlibabaCloud.SDK.Oos20190601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an encryption parameter.</para>
+        /// <para>Updates an encryption parameter. Make sure that you have the permissions to call the UpdateSecretValue operation of Key Management Service (KMS) before you call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16015,6 +17247,166 @@ namespace AlibabaCloud.SDK.Oos20190601
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新模板属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTemplateAttributesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTemplateAttributesResponse
+        /// </returns>
+        public UpdateTemplateAttributesResponse UpdateTemplateAttributesWithOptions(UpdateTemplateAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIds))
+            {
+                query["AccountIds"] = request.AccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsFavorite))
+            {
+                query["IsFavorite"] = request.IsFavorite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharePermissionAction))
+            {
+                query["SharePermissionAction"] = request.SharePermissionAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTemplateVersion))
+            {
+                query["ShareTemplateVersion"] = request.ShareTemplateVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTemplateAttributes",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTemplateAttributesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新模板属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTemplateAttributesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTemplateAttributesResponse
+        /// </returns>
+        public async Task<UpdateTemplateAttributesResponse> UpdateTemplateAttributesWithOptionsAsync(UpdateTemplateAttributesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIds))
+            {
+                query["AccountIds"] = request.AccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsFavorite))
+            {
+                query["IsFavorite"] = request.IsFavorite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SharePermissionAction))
+            {
+                query["SharePermissionAction"] = request.SharePermissionAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareTemplateVersion))
+            {
+                query["ShareTemplateVersion"] = request.ShareTemplateVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTemplateAttributes",
+                Version = "2019-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTemplateAttributesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新模板属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTemplateAttributesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTemplateAttributesResponse
+        /// </returns>
+        public UpdateTemplateAttributesResponse UpdateTemplateAttributes(UpdateTemplateAttributesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateTemplateAttributesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新模板属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTemplateAttributesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTemplateAttributesResponse
+        /// </returns>
+        public async Task<UpdateTemplateAttributesResponse> UpdateTemplateAttributesAsync(UpdateTemplateAttributesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateTemplateAttributesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

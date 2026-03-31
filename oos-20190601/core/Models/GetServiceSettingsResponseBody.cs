@@ -77,6 +77,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             public string DeliverySlsProjectName { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>rd-123</para>
+            /// </summary>
+            [NameInMap("RdFolders")]
+            [Validation(Required=false)]
+            public string RdFolders { get; set; }
+
+            /// <summary>
             /// <para>The id of RDC Enterprise.</para>
             /// 
             /// <b>Example:</b>
@@ -85,6 +93,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [NameInMap("RdcEnterpriseId")]
             [Validation(Required=false)]
             public string RdcEnterpriseId { get; set; }
+
+            [NameInMap("ServiceAccessRdEnabled")]
+            [Validation(Required=false)]
+            public bool? ServiceAccessRdEnabled { get; set; }
 
         }
 

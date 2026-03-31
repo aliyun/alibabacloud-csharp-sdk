@@ -132,6 +132,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string ImportTagValue { get; set; }
 
+            [NameInMap("MonitorMetadata")]
+            [Validation(Required=false)]
+            public string MonitorMetadata { get; set; }
+
             /// <summary>
             /// <para>The name of the application group.</para>
             /// 

@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         public List<ListExecutionsResponseBodyExecutions> Executions { get; set; }
         public class ListExecutionsResponseBodyExecutions : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>123456789</para>
+            /// </summary>
+            [NameInMap("AccountId")]
+            [Validation(Required=false)]
+            public string AccountId { get; set; }
+
+            /// <summary>
             /// <para>The type of the execution template. Valid values: Other, TimerTrigger, EventTrigger, and AlarmTrigger.</para>
             /// 
             /// <b>Example:</b>

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Oos20190601.Models
 {
-    public class SetServiceSettingsRequest : TeaModel {
+    public class SetServiceSettingsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The name of OSS bucket to deliver.</para>
         /// 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
 
         [NameInMap("RdFolderIds")]
         [Validation(Required=false)]
-        public List<string> RdFolderIds { get; set; }
+        public string RdFolderIdsShrink { get; set; }
 
         /// <summary>
         /// <para>The id of RDC Enterprise.</para>

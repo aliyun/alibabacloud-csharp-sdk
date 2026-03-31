@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
             [Validation(Required=false)]
             public string RdcEnterpriseId { get; set; }
 
+            [NameInMap("ServiceAccessRdEnabled")]
+            [Validation(Required=false)]
+            public bool? ServiceAccessRdEnabled { get; set; }
+
         }
 
     }

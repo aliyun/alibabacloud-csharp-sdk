@@ -24,6 +24,10 @@ namespace AlibabaCloud.SDK.Oos20190601.Models
         [Validation(Required=false)]
         public string DeployedRevisionId { get; set; }
 
+        [NameInMap("MonitorMetadata")]
+        [Validation(Required=false)]
+        public string MonitorMetadata { get; set; }
+
         /// <summary>
         /// <para>The name of the application group.</para>
         /// <para>This parameter is required.</para>
