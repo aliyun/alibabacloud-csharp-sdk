@@ -1523,6 +1523,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["PromotionId"] = request.PromotionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                query["SaleMode"] = request.SaleMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamMode))
             {
                 query["StreamMode"] = request.StreamMode;
@@ -1683,6 +1687,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
             {
                 query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
+            {
+                query["SaleMode"] = request.SaleMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamMode))
             {

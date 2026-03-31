@@ -275,6 +275,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
+        [NameInMap("SaleMode")]
+        [Validation(Required=false)]
+        public string SaleMode { get; set; }
+
         [NameInMap("StreamMode")]
         [Validation(Required=false)]
         public int? StreamMode { get; set; }
