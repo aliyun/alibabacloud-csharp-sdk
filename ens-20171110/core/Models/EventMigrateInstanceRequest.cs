@@ -72,6 +72,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public long? PlanTime { get; set; }
 
+        [NameInMap("PlanUtcTime")]
+        [Validation(Required=false)]
+        public string PlanUtcTime { get; set; }
+
         /// <summary>
         /// <para>The ID of the resource.</para>
         /// <para>This parameter is required.</para>

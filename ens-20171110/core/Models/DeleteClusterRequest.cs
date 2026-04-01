@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("RetainResources")]
+        [Validation(Required=false)]
+        public bool? RetainResources { get; set; }
+
     }
 
 }

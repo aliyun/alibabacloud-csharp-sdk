@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? DataDiskMinSize { get; set; }
 
-        /// <summary>
-        /// <para>The information about instance specifications.</para>
-        /// </summary>
         [NameInMap("InstanceSpecs")]
         [Validation(Required=false)]
         public DescribeInstanceSpecResponseBodyInstanceSpecs InstanceSpecs { get; set; }
@@ -60,42 +57,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeInstanceSpecResponseBodyInstanceSpecsInstanceSpec> InstanceSpec { get; set; }
             public class DescribeInstanceSpecResponseBodyInstanceSpecsInstanceSpec : TeaModel {
-                /// <summary>
-                /// <para>The number of CPU cores.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Core")]
                 [Validation(Required=false)]
                 public string Core { get; set; }
 
-                /// <summary>
-                /// <para>The display name of the instance type.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Computational 1C2G</para>
-                /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
-                /// <summary>
-                /// <para>The type of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ens.sn1.stiny</para>
-                /// </summary>
                 [NameInMap("InstanceType")]
                 [Validation(Required=false)]
                 public string InstanceType { get; set; }
 
-                /// <summary>
-                /// <para>The memory size. Unit: MB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2048</para>
-                /// </summary>
                 [NameInMap("Memory")]
                 [Validation(Required=false)]
                 public string Memory { get; set; }

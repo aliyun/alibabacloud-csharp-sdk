@@ -59,9 +59,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string EnsRegionId { get; set; }
 
-        /// <summary>
-        /// <para>A list of high-availability VIP instance IDs.</para>
-        /// </summary>
         [NameInMap("HaVipIds")]
         [Validation(Required=false)]
         public DescribeVSwitchAttributesResponseBodyHaVipIds HaVipIds { get; set; }
@@ -72,9 +69,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
-        /// <summary>
-        /// <para>A list of instance IDs.</para>
-        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public DescribeVSwitchAttributesResponseBodyInstanceIds InstanceIds { get; set; }
@@ -85,9 +79,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
-        /// <summary>
-        /// <para>A list of load balancer instance IDs.</para>
-        /// </summary>
         [NameInMap("LoadBalancerIds")]
         [Validation(Required=false)]
         public DescribeVSwitchAttributesResponseBodyLoadBalancerIds LoadBalancerIds { get; set; }
@@ -98,9 +89,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
-        /// <summary>
-        /// <para>A list of NAT gateway IDs.</para>
-        /// </summary>
         [NameInMap("NatGatewayIds")]
         [Validation(Required=false)]
         public DescribeVSwitchAttributesResponseBodyNatGatewayIds NatGatewayIds { get; set; }
@@ -121,9 +109,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string NetworkId { get; set; }
 
-        /// <summary>
-        /// <para>A list of elastic network interface IDs.</para>
-        /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
         public DescribeVSwitchAttributesResponseBodyNetworkInterfaceIds NetworkInterfaceIds { get; set; }

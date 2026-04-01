@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string CidrBlock { get; set; }
 
-        /// <summary>
-        /// <para>The list of resources in the network.</para>
-        /// </summary>
         [NameInMap("CloudResources")]
         [Validation(Required=false)]
         public DescribeNetworkAttributeResponseBodyCloudResources CloudResources { get; set; }
@@ -30,22 +27,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeNetworkAttributeResponseBodyCloudResourcesCloudResourceSetType> CloudResourceSetType { get; set; }
             public class DescribeNetworkAttributeResponseBodyCloudResourcesCloudResourceSetType : TeaModel {
-                /// <summary>
-                /// <para>The number of resources in the network.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("ResourceCount")]
                 [Validation(Required=false)]
                 public int? ResourceCount { get; set; }
 
-                /// <summary>
-                /// <para>The resource type. VSwitch.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>VSwitch</para>
-                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
@@ -94,9 +79,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string GatewayRouteTableId { get; set; }
 
-        /// <summary>
-        /// <para>List of HaVipIds.</para>
-        /// </summary>
         [NameInMap("HaVipIds")]
         [Validation(Required=false)]
         public DescribeNetworkAttributeResponseBodyHaVipIds HaVipIds { get; set; }
@@ -107,9 +89,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
-        /// <summary>
-        /// <para>The instance IDs.</para>
-        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public DescribeNetworkAttributeResponseBodyInstanceIds InstanceIds { get; set; }
@@ -120,9 +99,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
-        /// <summary>
-        /// <para>List of ELB instances.</para>
-        /// </summary>
         [NameInMap("LoadBalancerIds")]
         [Validation(Required=false)]
         public DescribeNetworkAttributeResponseBodyLoadBalancerIds LoadBalancerIds { get; set; }
@@ -133,9 +109,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
         }
 
-        /// <summary>
-        /// <para>List of NAT Gateways.</para>
-        /// </summary>
         [NameInMap("NatGatewayIds")]
         [Validation(Required=false)]
         public DescribeNetworkAttributeResponseBodyNatGatewayIds NatGatewayIds { get; set; }
@@ -166,9 +139,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string NetworkId { get; set; }
 
-        /// <summary>
-        /// <para>A list of multicast source IDs.</para>
-        /// </summary>
         [NameInMap("NetworkInterfaceIds")]
         [Validation(Required=false)]
         public DescribeNetworkAttributeResponseBodyNetworkInterfaceIds NetworkInterfaceIds { get; set; }
@@ -209,9 +179,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string RouteTableId { get; set; }
 
-        /// <summary>
-        /// <para>List of routing table IDs.</para>
-        /// </summary>
         [NameInMap("RouteTableIds")]
         [Validation(Required=false)]
         public DescribeNetworkAttributeResponseBodyRouteTableIds RouteTableIds { get; set; }
@@ -256,9 +223,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
-        /// <summary>
-        /// <para>The list of vSwitches in the network.</para>
-        /// </summary>
         [NameInMap("VSwitchIds")]
         [Validation(Required=false)]
         public DescribeNetworkAttributeResponseBodyVSwitchIds VSwitchIds { get; set; }

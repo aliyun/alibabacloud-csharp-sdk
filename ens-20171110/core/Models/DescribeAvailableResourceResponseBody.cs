@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        /// <summary>
-        /// <para>The details of the images.</para>
-        /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
         public DescribeAvailableResourceResponseBodyImages Images { get; set; }
@@ -30,22 +27,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeAvailableResourceResponseBodyImagesImage> Image { get; set; }
             public class DescribeAvailableResourceResponseBodyImagesImage : TeaModel {
-                /// <summary>
-                /// <para>The ID of the image.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>centos_6_08_64_20G_alibase_20171208</para>
-                /// </summary>
                 [NameInMap("ImageId")]
                 [Validation(Required=false)]
                 public string ImageId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the image.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>centos_6_08_64_20G_alibase_****</para>
-                /// </summary>
                 [NameInMap("ImageName")]
                 [Validation(Required=false)]
                 public string ImageName { get; set; }
@@ -64,9 +49,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The specifications of resources that you can purchase.</para>
-        /// </summary>
         [NameInMap("SupportResources")]
         [Validation(Required=false)]
         public DescribeAvailableResourceResponseBodySupportResources SupportResources { get; set; }
@@ -75,52 +57,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeAvailableResourceResponseBodySupportResourcesSupportResource> SupportResource { get; set; }
             public class DescribeAvailableResourceResponseBodySupportResourcesSupportResource : TeaModel {
-                /// <summary>
-                /// <para>The size of the data disk. Unit: GB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>500</para>
-                /// </summary>
                 [NameInMap("DataDiskSize")]
                 [Validation(Required=false)]
                 public string DataDiskSize { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the edge node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-beijing-cmcc</para>
-                /// </summary>
                 [NameInMap("EnsRegionId")]
                 [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
 
-                /// <summary>
-                /// <para>The specifications of the resource plan.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ens.sn1.stiny</para>
-                /// </summary>
                 [NameInMap("InstanceSpec")]
                 [Validation(Required=false)]
                 public string InstanceSpec { get; set; }
 
-                /// <summary>
-                /// <para>The number of resources that you can purchase.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>9</para>
-                /// </summary>
                 [NameInMap("SupportResourcesCount")]
                 [Validation(Required=false)]
                 public string SupportResourcesCount { get; set; }
 
-                /// <summary>
-                /// <para>The size of the system disk. Unit: GiB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>20</para>
-                /// </summary>
                 [NameInMap("SystemDiskSize")]
                 [Validation(Required=false)]
                 public string SystemDiskSize { get; set; }

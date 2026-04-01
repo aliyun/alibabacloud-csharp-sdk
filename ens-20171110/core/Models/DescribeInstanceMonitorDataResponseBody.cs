@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        /// <summary>
-        /// <para>The set of InstanceMonitorDataType data.</para>
-        /// </summary>
         [NameInMap("MonitorData")]
         [Validation(Required=false)]
         public DescribeInstanceMonitorDataResponseBodyMonitorData MonitorData { get; set; }
@@ -30,32 +27,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData> InstanceMonitorData { get; set; }
             public class DescribeInstanceMonitorDataResponseBodyMonitorDataInstanceMonitorData : TeaModel {
-                /// <summary>
-                /// <para>The vCPU usage of the instance, which is raw data. For example, a value of 0.02 indicates that the usage is 2%.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.02</para>
-                /// </summary>
                 [NameInMap("CPU")]
                 [Validation(Required=false)]
                 public string CPU { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>yourInstance ID</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>This parameter is not yet supported.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Not currently supported</para>
-                /// </summary>
                 [NameInMap("Memory")]
                 [Validation(Required=false)]
                 public string Memory { get; set; }

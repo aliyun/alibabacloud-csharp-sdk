@@ -22,9 +22,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        /// <summary>
-        /// <para>The IDs of instances.</para>
-        /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public CreateInstanceResponseBodyInstanceIds InstanceIds { get; set; }

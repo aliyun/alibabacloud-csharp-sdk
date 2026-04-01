@@ -1587,6 +1587,346 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>添加已有节点到集群节点池</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AttachInstancesToNodePoolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachInstancesToNodePoolResponse
+        /// </returns>
+        public AttachInstancesToNodePoolResponse AttachInstancesToNodePoolWithOptions(AttachInstancesToNodePoolRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachInstancesToNodePoolShrinkRequest request = new AttachInstancesToNodePoolShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Instances))
+            {
+                request.InstancesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Instances, "Instances", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstancesShrink))
+            {
+                query["Instances"] = request.InstancesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolId))
+            {
+                query["NodepoolId"] = request.NodepoolId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachInstancesToNodePool",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachInstancesToNodePoolResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加已有节点到集群节点池</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AttachInstancesToNodePoolRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachInstancesToNodePoolResponse
+        /// </returns>
+        public async Task<AttachInstancesToNodePoolResponse> AttachInstancesToNodePoolWithOptionsAsync(AttachInstancesToNodePoolRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachInstancesToNodePoolShrinkRequest request = new AttachInstancesToNodePoolShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Instances))
+            {
+                request.InstancesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Instances, "Instances", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstancesShrink))
+            {
+                query["Instances"] = request.InstancesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolId))
+            {
+                query["NodepoolId"] = request.NodepoolId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachInstancesToNodePool",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachInstancesToNodePoolResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加已有节点到集群节点池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachInstancesToNodePoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachInstancesToNodePoolResponse
+        /// </returns>
+        public AttachInstancesToNodePoolResponse AttachInstancesToNodePool(AttachInstancesToNodePoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AttachInstancesToNodePoolWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加已有节点到集群节点池</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AttachInstancesToNodePoolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachInstancesToNodePoolResponse
+        /// </returns>
+        public async Task<AttachInstancesToNodePoolResponse> AttachInstancesToNodePoolAsync(AttachInstancesToNodePoolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AttachInstancesToNodePoolWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Secure Shell (SSH) key pair to specific instances. You can bind a maximum of 30 instances at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>This operation is used to bind a key pair to instances. Only disabled instances are supported.</para>
+        /// <list type="bullet">
+        /// <item><description>You can bind a maximum of 30 instances at a time.</description></item>
+        /// <item><description>At least one of the key_pair_name and key_pair_id parameters is not empty.</description></item>
+        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// AttachKeyPairRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachKeyPairResponse
+        /// </returns>
+        public AttachKeyPairResponse AttachKeyPairWithOptions(AttachKeyPairRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachKeyPairShrinkRequest request = new AttachKeyPairShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairId))
+            {
+                query["KeyPairId"] = request.KeyPairId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
+            {
+                query["KeyPairName"] = request.KeyPairName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachKeyPair",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachKeyPairResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Secure Shell (SSH) key pair to specific instances. You can bind a maximum of 30 instances at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>This operation is used to bind a key pair to instances. Only disabled instances are supported.</para>
+        /// <list type="bullet">
+        /// <item><description>You can bind a maximum of 30 instances at a time.</description></item>
+        /// <item><description>At least one of the key_pair_name and key_pair_id parameters is not empty.</description></item>
+        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// AttachKeyPairRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachKeyPairResponse
+        /// </returns>
+        public async Task<AttachKeyPairResponse> AttachKeyPairWithOptionsAsync(AttachKeyPairRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AttachKeyPairShrinkRequest request = new AttachKeyPairShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairId))
+            {
+                query["KeyPairId"] = request.KeyPairId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
+            {
+                query["KeyPairName"] = request.KeyPairName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AttachKeyPair",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AttachKeyPairResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Secure Shell (SSH) key pair to specific instances. You can bind a maximum of 30 instances at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>This operation is used to bind a key pair to instances. Only disabled instances are supported.</para>
+        /// <list type="bullet">
+        /// <item><description>You can bind a maximum of 30 instances at a time.</description></item>
+        /// <item><description>At least one of the key_pair_name and key_pair_id parameters is not empty.</description></item>
+        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachKeyPairRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachKeyPairResponse
+        /// </returns>
+        public AttachKeyPairResponse AttachKeyPair(AttachKeyPairRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AttachKeyPairWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Binds a Secure Shell (SSH) key pair to specific instances. You can bind a maximum of 30 instances at a time.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>This operation is used to bind a key pair to instances. Only disabled instances are supported.</para>
+        /// <list type="bullet">
+        /// <item><description>You can bind a maximum of 30 instances at a time.</description></item>
+        /// <item><description>At least one of the key_pair_name and key_pair_id parameters is not empty.</description></item>
+        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AttachKeyPairRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AttachKeyPairResponse
+        /// </returns>
+        public async Task<AttachKeyPairResponse> AttachKeyPairAsync(AttachKeyPairRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AttachKeyPairWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Attaches an Elastic Network Interface (ENI) to an Edge Node Service (ECS) instance.</para>
         /// </summary>
         /// 
@@ -10464,6 +10804,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetainResources))
+            {
+                query["RetainResources"] = request.RetainResources;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -10505,6 +10849,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetainResources))
+            {
+                query["RetainResources"] = request.RetainResources;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10722,6 +11070,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseNode))
+            {
+                query["ReleaseNode"] = request.ReleaseNode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -10773,6 +11125,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseNode))
+            {
+                query["ReleaseNode"] = request.ReleaseNode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -16259,6 +16615,142 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询添加已有节点到集群节点池的脚本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterAttachScriptsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterAttachScriptsResponse
+        /// </returns>
+        public DescribeClusterAttachScriptsResponse DescribeClusterAttachScriptsWithOptions(DescribeClusterAttachScriptsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolId))
+            {
+                query["NodepoolId"] = request.NodepoolId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                query["Options"] = request.Options;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeClusterAttachScripts",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeClusterAttachScriptsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询添加已有节点到集群节点池的脚本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterAttachScriptsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterAttachScriptsResponse
+        /// </returns>
+        public async Task<DescribeClusterAttachScriptsResponse> DescribeClusterAttachScriptsWithOptionsAsync(DescribeClusterAttachScriptsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodepoolId))
+            {
+                query["NodepoolId"] = request.NodepoolId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
+            {
+                query["Options"] = request.Options;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeClusterAttachScripts",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeClusterAttachScriptsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询添加已有节点到集群节点池的脚本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterAttachScriptsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterAttachScriptsResponse
+        /// </returns>
+        public DescribeClusterAttachScriptsResponse DescribeClusterAttachScripts(DescribeClusterAttachScriptsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeClusterAttachScriptsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询添加已有节点到集群节点池的脚本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeClusterAttachScriptsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeClusterAttachScriptsResponse
+        /// </returns>
+        public async Task<DescribeClusterAttachScriptsResponse> DescribeClusterAttachScriptsAsync(DescribeClusterAttachScriptsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeClusterAttachScriptsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询集群详细信息</para>
         /// </summary>
         /// 
@@ -21403,7 +21895,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about file systems.</para>
+        /// <para>Queries the information about Apsara File Storage NAS (NAS) file systems.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21441,7 +21933,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about file systems.</para>
+        /// <para>Queries the information about Apsara File Storage NAS (NAS) file systems.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21479,7 +21971,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about file systems.</para>
+        /// <para>Queries the information about Apsara File Storage NAS (NAS) file systems.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21497,7 +21989,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about file systems.</para>
+        /// <para>Queries the information about Apsara File Storage NAS (NAS) file systems.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30643,6 +31135,202 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Unbinds a Secure Shell (SSH) key pair from specific instances by specifying the name or ID of the SSH key pair.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</para>
+        /// <list type="bullet">
+        /// <item><description>You can unbind a maximum of 30 instances at a time.</description></item>
+        /// <item><description>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</description></item>
+        /// <item><description>At least one of key_pair_name and key_pair_id is not empty.</description></item>
+        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetachKeyPairRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachKeyPairResponse
+        /// </returns>
+        public DetachKeyPairResponse DetachKeyPairWithOptions(DetachKeyPairRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DetachKeyPairShrinkRequest request = new DetachKeyPairShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairId))
+            {
+                query["KeyPairId"] = request.KeyPairId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
+            {
+                query["KeyPairName"] = request.KeyPairName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachKeyPair",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetachKeyPairResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a Secure Shell (SSH) key pair from specific instances by specifying the name or ID of the SSH key pair.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</para>
+        /// <list type="bullet">
+        /// <item><description>You can unbind a maximum of 30 instances at a time.</description></item>
+        /// <item><description>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</description></item>
+        /// <item><description>At least one of key_pair_name and key_pair_id is not empty.</description></item>
+        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DetachKeyPairRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachKeyPairResponse
+        /// </returns>
+        public async Task<DetachKeyPairResponse> DetachKeyPairWithOptionsAsync(DetachKeyPairRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DetachKeyPairShrinkRequest request = new DetachKeyPairShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairId))
+            {
+                query["KeyPairId"] = request.KeyPairId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyPairName))
+            {
+                query["KeyPairName"] = request.KeyPairName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachKeyPair",
+                Version = "2017-11-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetachKeyPairResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a Secure Shell (SSH) key pair from specific instances by specifying the name or ID of the SSH key pair.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</para>
+        /// <list type="bullet">
+        /// <item><description>You can unbind a maximum of 30 instances at a time.</description></item>
+        /// <item><description>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</description></item>
+        /// <item><description>At least one of key_pair_name and key_pair_id is not empty.</description></item>
+        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachKeyPairRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachKeyPairResponse
+        /// </returns>
+        public DetachKeyPairResponse DetachKeyPair(DetachKeyPairRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetachKeyPairWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds a Secure Shell (SSH) key pair from specific instances by specifying the name or ID of the SSH key pair.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2><a href="#"></a></h2>
+        /// <para>This operation is used to unbind a key pair from instances. Only disabled instances are supported.</para>
+        /// <list type="bullet">
+        /// <item><description>You can unbind a maximum of 30 instances at a time.</description></item>
+        /// <item><description>If the name of the SSH key pair that is bound to an instance is not same as the value of the keyPairName parameter, an exception is thrown.</description></item>
+        /// <item><description>At least one of key_pair_name and key_pair_id is not empty.</description></item>
+        /// <item><description>Specify the key_pair_id parameter when you call this parameter. The key_pair_name parameter will be discarded.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DetachKeyPairRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachKeyPairResponse
+        /// </returns>
+        public async Task<DetachKeyPairResponse> DetachKeyPairAsync(DetachKeyPairRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetachKeyPairWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Detach an elastic network interface (ENI) from an instance.</para>
         /// </summary>
         /// 
@@ -30985,6 +31673,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["PlanTime"] = request.PlanTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanUtcTime))
+            {
+                query["PlanUtcTime"] = request.PlanUtcTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
                 query["ResourceId"] = request.ResourceId;
@@ -31051,6 +31743,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanTime))
             {
                 query["PlanTime"] = request.PlanTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanUtcTime))
+            {
+                query["PlanUtcTime"] = request.PlanUtcTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
@@ -31157,6 +31853,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["PlanTime"] = request.PlanTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanUtcTime))
+            {
+                query["PlanUtcTime"] = request.PlanUtcTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
                 query["ResourceId"] = request.ResourceId;
@@ -31215,6 +31915,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanTime))
             {
                 query["PlanTime"] = request.PlanTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanUtcTime))
+            {
+                query["PlanUtcTime"] = request.PlanUtcTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
@@ -31321,6 +32025,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["PlanTime"] = request.PlanTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanUtcTime))
+            {
+                query["PlanUtcTime"] = request.PlanUtcTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
                 query["ResourceId"] = request.ResourceId;
@@ -31379,6 +32087,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanTime))
             {
                 query["PlanTime"] = request.PlanTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanUtcTime))
+            {
+                query["PlanUtcTime"] = request.PlanUtcTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
@@ -32987,7 +33699,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为当前用户创建ENS的服务关联角色（SLR），管控资源。</para>
+        /// <para>Create a service-linked role (SLR) for ENS for the current user to manage resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33020,7 +33732,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为当前用户创建ENS的服务关联角色（SLR），管控资源。</para>
+        /// <para>Create a service-linked role (SLR) for ENS for the current user to manage resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33053,7 +33765,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为当前用户创建ENS的服务关联角色（SLR），管控资源。</para>
+        /// <para>Create a service-linked role (SLR) for ENS for the current user to manage resources.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -33067,7 +33779,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为当前用户创建ENS的服务关联角色（SLR），管控资源。</para>
+        /// <para>Create a service-linked role (SLR) for ENS for the current user to manage resources.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -34815,7 +35527,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取所有产品能力</para>
+        /// <para>Lists all service capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34848,7 +35560,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取所有产品能力</para>
+        /// <para>Lists all service capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34881,7 +35593,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取所有产品能力</para>
+        /// <para>Lists all service capabilities.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -34895,7 +35607,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取所有产品能力</para>
+        /// <para>Lists all service capabilities.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -38621,7 +39333,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改snat规则</para>
+        /// <para>Modifies a specified SNAT entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38679,7 +39391,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改snat规则</para>
+        /// <para>Modifies a specified SNAT entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38737,7 +39449,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改snat规则</para>
+        /// <para>Modifies a specified SNAT entry.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38755,7 +39467,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改snat规则</para>
+        /// <para>Modifies a specified SNAT entry.</para>
         /// </summary>
         /// 
         /// <param name="request">

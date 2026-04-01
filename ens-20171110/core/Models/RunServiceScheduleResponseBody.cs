@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class RunServiceScheduleResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The execution results of the commands.</para>
-        /// </summary>
         [NameInMap("CommandResults")]
         [Validation(Required=false)]
         public RunServiceScheduleResponseBodyCommandResults CommandResults { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<RunServiceScheduleResponseBodyCommandResultsCommandResult> CommandResult { get; set; }
             public class RunServiceScheduleResponseBodyCommandResultsCommandResult : TeaModel {
-                /// <summary>
-                /// <para>The command.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ls -l /data</para>
-                /// </summary>
                 [NameInMap("Command")]
                 [Validation(Required=false)]
                 public string Command { get; set; }
 
-                /// <summary>
-                /// <para>The name of the container.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>android</para>
-                /// </summary>
                 [NameInMap("ContainerName")]
                 [Validation(Required=false)]
                 public string ContainerName { get; set; }
 
-                /// <summary>
-                /// <para>The execution result of the command.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>success</para>
-                /// </summary>
                 [NameInMap("ResultMsg")]
                 [Validation(Required=false)]
                 public string ResultMsg { get; set; }

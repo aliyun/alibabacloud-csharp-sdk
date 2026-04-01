@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        /// <summary>
-        /// <para>Details about the instance types.</para>
-        /// </summary>
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
         public DescribeInstanceTypesResponseBodyInstanceTypes InstanceTypes { get; set; }
@@ -30,42 +27,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceType> InstanceType { get; set; }
             public class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType : TeaModel {
-                /// <summary>
-                /// <para>The number of vCPUs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("CpuCoreCount")]
                 [Validation(Required=false)]
                 public int? CpuCoreCount { get; set; }
 
-                /// <summary>
-                /// <para>This parameter is unavailable.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>This parameter is not needed temporarily.</para>
-                /// </summary>
                 [NameInMap("InstanceTypeId")]
                 [Validation(Required=false)]
                 public string InstanceTypeId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the instance type.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ens.xxx.small</para>
-                /// </summary>
                 [NameInMap("InstanceTypeName")]
                 [Validation(Required=false)]
                 public string InstanceTypeName { get; set; }
 
-                /// <summary>
-                /// <para>The memory size. Unit: MB.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>8192</para>
-                /// </summary>
                 [NameInMap("MemorySize")]
                 [Validation(Required=false)]
                 public int? MemorySize { get; set; }

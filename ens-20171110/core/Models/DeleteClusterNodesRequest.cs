@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("ReleaseNode")]
+        [Validation(Required=false)]
+        public bool? ReleaseNode { get; set; }
+
     }
 
 }

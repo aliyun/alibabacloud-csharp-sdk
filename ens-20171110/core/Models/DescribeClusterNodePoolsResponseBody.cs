@@ -173,6 +173,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
+                [NameInMap("FailedNodes")]
+                [Validation(Required=false)]
+                public int? FailedNodes { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("InitialNodes")]
                 [Validation(Required=false)]
                 public int? InitialNodes { get; set; }

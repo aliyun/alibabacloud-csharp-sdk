@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         /// </summary>
         [NameInMap("AllowSameActionOverlap")]
         [Validation(Required=false)]
-        public string AllowSameActionOverlap { get; set; }
+        public bool? AllowSameActionOverlap { get; set; }
 
         /// <summary>
         /// <para>The name of the bucket.</para>

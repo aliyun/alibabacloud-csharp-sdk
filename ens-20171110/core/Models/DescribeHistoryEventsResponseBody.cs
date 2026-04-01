@@ -101,6 +101,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public long? NotBefore { get; set; }
 
+            [NameInMap("NotBeforeUtcTime")]
+            [Validation(Required=false)]
+            public string NotBeforeUtcTime { get; set; }
+
             /// <summary>
             /// <para>The release time in milliseconds.</para>
             /// 
@@ -110,6 +114,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [NameInMap("PublishTime")]
             [Validation(Required=false)]
             public long? PublishTime { get; set; }
+
+            [NameInMap("PublishUtcTime")]
+            [Validation(Required=false)]
+            public string PublishUtcTime { get; set; }
 
             /// <summary>
             /// <para>The event cause.</para>

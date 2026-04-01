@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        /// <summary>
-        /// <para>The information about the regions.</para>
-        /// </summary>
         [NameInMap("EnsRegions")]
         [Validation(Required=false)]
         public DescribeEnsRegionsResponseBodyEnsRegions EnsRegions { get; set; }
@@ -30,52 +27,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeEnsRegionsResponseBodyEnsRegionsEnsRegions> EnsRegions { get; set; }
             public class DescribeEnsRegionsResponseBodyEnsRegionsEnsRegions : TeaModel {
-                /// <summary>
-                /// <para>The code of the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>NorthEastChina</para>
-                /// </summary>
                 [NameInMap("Area")]
                 [Validation(Required=false)]
                 public string Area { get; set; }
 
-                /// <summary>
-                /// <para>The name of the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>NorthChina</para>
-                /// </summary>
                 [NameInMap("EnName")]
                 [Validation(Required=false)]
                 public string EnName { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-dalian-unicom</para>
-                /// </summary>
                 [NameInMap("EnsRegionId")]
                 [Validation(Required=false)]
                 public string EnsRegionId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Dalian Unicom</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <para>The province where the node is deployed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Liaoning Province</para>
-                /// </summary>
                 [NameInMap("Province")]
                 [Validation(Required=false)]
                 public string Province { get; set; }

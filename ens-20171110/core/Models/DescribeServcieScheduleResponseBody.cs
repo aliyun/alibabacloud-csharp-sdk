@@ -66,9 +66,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public bool? ContainerService { get; set; }
 
-            /// <summary>
-            /// <para>The information about the container.</para>
-            /// </summary>
             [NameInMap("ContainerStatuses")]
             [Validation(Required=false)]
             public DescribeServcieScheduleResponseBodyPodAbstractInfoContainerStatuses ContainerStatuses { get; set; }
@@ -77,22 +74,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [Validation(Required=false)]
                 public List<DescribeServcieScheduleResponseBodyPodAbstractInfoContainerStatusesContainerStatus> ContainerStatus { get; set; }
                 public class DescribeServcieScheduleResponseBodyPodAbstractInfoContainerStatusesContainerStatus : TeaModel {
-                    /// <summary>
-                    /// <para>The ID of the container.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>container_e79_1638372147094_158091_02_000001</para>
-                    /// </summary>
                     [NameInMap("ContainerId")]
                     [Validation(Required=false)]
                     public string ContainerId { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the container.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>nginx</para>
-                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }

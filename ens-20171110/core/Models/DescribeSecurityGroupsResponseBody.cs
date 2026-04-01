@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Details about security groups.</para>
-        /// </summary>
         [NameInMap("SecurityGroups")]
         [Validation(Required=false)]
         public DescribeSecurityGroupsResponseBodySecurityGroups SecurityGroups { get; set; }
@@ -50,39 +47,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup> SecurityGroup { get; set; }
             public class DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroup : TeaModel {
-                /// <summary>
-                /// <para>The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-11-01T06:08:46Z</para>
-                /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
-                /// <summary>
-                /// <para>The description of the security group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestDescription</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The number of associated instances.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>5</para>
-                /// </summary>
                 [NameInMap("InstanceCount")]
                 [Validation(Required=false)]
                 public int? InstanceCount { get; set; }
 
-                /// <summary>
-                /// <para>The IDs of the instances that are associated with the security group.</para>
-                /// </summary>
                 [NameInMap("InstanceIds")]
                 [Validation(Required=false)]
                 public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupInstanceIds InstanceIds { get; set; }
@@ -93,9 +69,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
                 }
 
-                /// <summary>
-                /// <para>The IDs of the ENIs that are associated with the security group.</para>
-                /// </summary>
                 [NameInMap("NetworkInterfaceIds")]
                 [Validation(Required=false)]
                 public DescribeSecurityGroupsResponseBodySecurityGroupsSecurityGroupNetworkInterfaceIds NetworkInterfaceIds { get; set; }
@@ -106,22 +79,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
 
                 }
 
-                /// <summary>
-                /// <para>The ID of the security group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>sg-bp67acfmxazb4ph***</para>
-                /// </summary>
                 [NameInMap("SecurityGroupId")]
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the security group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>DocTest</para>
-                /// </summary>
                 [NameInMap("SecurityGroupName")]
                 [Validation(Required=false)]
                 public string SecurityGroupName { get; set; }

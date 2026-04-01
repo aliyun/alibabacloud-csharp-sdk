@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        /// <summary>
-        /// <para>The network levels.</para>
-        /// </summary>
         [NameInMap("EnsNetLevels")]
         [Validation(Required=false)]
         public DescribeEnsNetLevelResponseBodyEnsNetLevels EnsNetLevels { get; set; }
@@ -30,17 +27,6 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeEnsNetLevelResponseBodyEnsNetLevelsEnsNetLevel> EnsNetLevel { get; set; }
             public class DescribeEnsNetLevelResponseBodyEnsNetLevelsEnsNetLevel : TeaModel {
-                /// <summary>
-                /// <para>The network level. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Big: greater area.</description></item>
-                /// <item><description>Middle: province.</description></item>
-                /// <item><description>Small: city.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Big</para>
-                /// </summary>
                 [NameInMap("EnsNetLevelCode")]
                 [Validation(Required=false)]
                 public string EnsNetLevelCode { get; set; }

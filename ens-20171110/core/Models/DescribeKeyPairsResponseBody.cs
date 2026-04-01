@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ens20171110.Models
 {
     public class DescribeKeyPairsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>Details about the key pairs.</para>
-        /// </summary>
         [NameInMap("KeyPairs")]
         [Validation(Required=false)]
         public DescribeKeyPairsResponseBodyKeyPairs KeyPairs { get; set; }
@@ -20,42 +17,18 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
             [Validation(Required=false)]
             public List<DescribeKeyPairsResponseBodyKeyPairsKeyPair> KeyPair { get; set; }
             public class DescribeKeyPairsResponseBodyKeyPairsKeyPair : TeaModel {
-                /// <summary>
-                /// <para>The time when the key pair was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2020-04-26T15:38:27Z</para>
-                /// </summary>
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
-                /// <summary>
-                /// <para>The fingerprint of the key pair.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>fdaf8ff7a756ef843814fc****</para>
-                /// </summary>
                 [NameInMap("KeyPairFingerPrint")]
                 [Validation(Required=false)]
                 public string KeyPairFingerPrint { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the key pair.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ssh-50cynkq42sgj4ej1tn78t4***</para>
-                /// </summary>
                 [NameInMap("KeyPairId")]
                 [Validation(Required=false)]
                 public string KeyPairId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the SSH key pair.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestKeyPairName</para>
-                /// </summary>
                 [NameInMap("KeyPairName")]
                 [Validation(Required=false)]
                 public string KeyPairName { get; set; }
