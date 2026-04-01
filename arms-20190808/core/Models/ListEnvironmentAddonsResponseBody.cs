@@ -377,6 +377,10 @@ namespace AlibabaCloud.SDK.ARMS20190808.Models
 
             }
 
+            [NameInMap("ContainsV2Addon")]
+            [Validation(Required=false)]
+            public bool? ContainsV2Addon { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
