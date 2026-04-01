@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <para>The queried regions.</para>
-        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public DescribeRegionsResponseBodyRegions Regions { get; set; }
@@ -40,32 +37,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public List<DescribeRegionsResponseBodyRegionsRegion> Region { get; set; }
             public class DescribeRegionsResponseBodyRegionsRegion : TeaModel {
-                /// <summary>
-                /// <para>The region name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>East China 1</para>
-                /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
-                /// <summary>
-                /// <para>The endpoint for the region.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>nas.cn-hangzhou.aliyuncs.com</para>
-                /// </summary>
                 [NameInMap("RegionEndpoint")]
                 [Validation(Required=false)]
                 public string RegionEndpoint { get; set; }
 
-                /// <summary>
-                /// <para>The region ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }

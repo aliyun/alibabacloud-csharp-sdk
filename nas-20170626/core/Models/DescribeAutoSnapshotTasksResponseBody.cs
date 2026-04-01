@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeAutoSnapshotTasksResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The queried automatic snapshot tasks.</para>
-        /// </summary>
         [NameInMap("AutoSnapshotTasks")]
         [Validation(Required=false)]
         public DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasks AutoSnapshotTasks { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public List<DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasksAutoSnapshotTask> AutoSnapshotTask { get; set; }
             public class DescribeAutoSnapshotTasksResponseBodyAutoSnapshotTasksAutoSnapshotTask : TeaModel {
-                /// <summary>
-                /// <para>The ID of the automatic snapshot policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>sp-extreme-233e6****</para>
-                /// </summary>
                 [NameInMap("AutoSnapshotPolicyId")]
                 [Validation(Required=false)]
                 public string AutoSnapshotPolicyId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the file system.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>extreme-233e6****</para>
-                /// </summary>
                 [NameInMap("SourceFileSystemId")]
                 [Validation(Required=false)]
                 public string SourceFileSystemId { get; set; }

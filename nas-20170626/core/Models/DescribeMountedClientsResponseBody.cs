@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeMountedClientsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The queried clients.</para>
-        /// </summary>
         [NameInMap("Clients")]
         [Validation(Required=false)]
         public DescribeMountedClientsResponseBodyClients Clients { get; set; }
@@ -20,12 +17,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public List<DescribeMountedClientsResponseBodyClientsClient> Client { get; set; }
             public class DescribeMountedClientsResponseBodyClientsClient : TeaModel {
-                /// <summary>
-                /// <para>The IP address of the client.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10.10.10.1</para>
-                /// </summary>
                 [NameInMap("ClientIP")]
                 [Validation(Required=false)]
                 public string ClientIP { get; set; }

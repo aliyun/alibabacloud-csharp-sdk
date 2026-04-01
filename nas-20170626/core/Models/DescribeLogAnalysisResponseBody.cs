@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeLogAnalysisResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The collection of log dump information.</para>
-        /// </summary>
         [NameInMap("Analyses")]
         [Validation(Required=false)]
         public DescribeLogAnalysisResponseBodyAnalyses Analyses { get; set; }
@@ -20,59 +17,26 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public List<DescribeLogAnalysisResponseBodyAnalysesAnalysis> Analysis { get; set; }
             public class DescribeLogAnalysisResponseBodyAnalysesAnalysis : TeaModel {
-                /// <summary>
-                /// <para>The ID of the file system.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0c7154xxxx</para>
-                /// </summary>
                 [NameInMap("MetaKey")]
                 [Validation(Required=false)]
                 public string MetaKey { get; set; }
 
-                /// <summary>
-                /// <para>The log dump information of the file system.</para>
-                /// </summary>
                 [NameInMap("MetaValue")]
                 [Validation(Required=false)]
                 public DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue MetaValue { get; set; }
                 public class DescribeLogAnalysisResponseBodyAnalysesAnalysisMetaValue : TeaModel {
-                    /// <summary>
-                    /// <para>The name of the dedicated Logstore that is used to store NAS operation logs.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>nas-nfs</para>
-                    /// </summary>
                     [NameInMap("Logstore")]
                     [Validation(Required=false)]
                     public string Logstore { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the project where the dedicated Logstore resides.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>nas-1746495857602745-cn-hangzhou</para>
-                    /// </summary>
                     [NameInMap("Project")]
                     [Validation(Required=false)]
                     public string Project { get; set; }
 
-                    /// <summary>
-                    /// <para>The region where the dedicated Logstore resides.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>cn-hangzhou</para>
-                    /// </summary>
                     [NameInMap("Region")]
                     [Validation(Required=false)]
                     public string Region { get; set; }
 
-                    /// <summary>
-                    /// <para>The role that is used by NAS to access Simple Log Service.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>acs:ram::162165525211xxxx:role/aliyunnaslogarchiverole</para>
-                    /// </summary>
                     [NameInMap("RoleArn")]
                     [Validation(Required=false)]
                     public string RoleArn { get; set; }

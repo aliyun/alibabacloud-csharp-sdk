@@ -51,9 +51,6 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
-        /// <summary>
-        /// <para>A collection of file system and virtual channel association data.</para>
-        /// </summary>
         [NameInMap("VscAttachInfo")]
         [Validation(Required=false)]
         public DescribeFilesystemsVscAttachInfoResponseBodyVscAttachInfo VscAttachInfo { get; set; }
@@ -62,39 +59,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             [Validation(Required=false)]
             public List<DescribeFilesystemsVscAttachInfoResponseBodyVscAttachInfoVscAttachInfo> VscAttachInfo { get; set; }
             public class DescribeFilesystemsVscAttachInfoResponseBodyVscAttachInfoVscAttachInfo : TeaModel {
-                /// <summary>
-                /// <para>The ID of the file system.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>bmcpfs-290t15yn4uo8lid****</para>
-                /// </summary>
                 [NameInMap("FileSystemId")]
                 [Validation(Required=false)]
                 public string FileSystemId { get; set; }
 
-                /// <summary>
-                /// <para>The association status of the file system and virtual channel. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Attaching: The association is being made.</description></item>
-                /// <item><description>Attached: The association is complete.</description></item>
-                /// <item><description>Detaching: The association is being canceled.</description></item>
-                /// <item><description>Detached: The association is canceled.</description></item>
-                /// <item><description>Failed: The association failed.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Attached</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the virtual storage channel.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vsc-8vb864o3ppwfvh****</para>
-                /// </summary>
                 [NameInMap("VscId")]
                 [Validation(Required=false)]
                 public string VscId { get; set; }

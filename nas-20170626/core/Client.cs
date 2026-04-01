@@ -11662,8 +11662,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询文件系统关联的 HpnZone 列表</para>
+        /// <para>Retrieves the list of HpnZones for a file system. Access performance is optimal when compute nodes are located in one of the associated HpnZones.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query up to 20 file systems at a time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeFilesystemsAssociatedHpnZonesRequest
@@ -11714,8 +11722,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询文件系统关联的 HpnZone 列表</para>
+        /// <para>Retrieves the list of HpnZones for a file system. Access performance is optimal when compute nodes are located in one of the associated HpnZones.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query up to 20 file systems at a time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeFilesystemsAssociatedHpnZonesRequest
@@ -11766,8 +11782,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询文件系统关联的 HpnZone 列表</para>
+        /// <para>Retrieves the list of HpnZones for a file system. Access performance is optimal when compute nodes are located in one of the associated HpnZones.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query up to 20 file systems at a time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFilesystemsAssociatedHpnZonesRequest
@@ -11784,8 +11808,16 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询文件系统关联的 HpnZone 列表</para>
+        /// <para>Retrieves the list of HpnZones for a file system. Access performance is optimal when compute nodes are located in one of the associated HpnZones.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>  Only CPFS for Lingjun supports this operation.</para>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query up to 20 file systems at a time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFilesystemsAssociatedHpnZonesRequest
@@ -12098,6 +12130,150 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeLifecyclePoliciesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询生命周期策略日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLifecyclePolicyLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLifecyclePolicyLogsResponse
+        /// </returns>
+        public DescribeLifecyclePolicyLogsResponse DescribeLifecyclePolicyLogsWithOptions(DescribeLifecyclePolicyLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyId))
+            {
+                query["LifecyclePolicyId"] = request.LifecyclePolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLifecyclePolicyLogs",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLifecyclePolicyLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询生命周期策略日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLifecyclePolicyLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLifecyclePolicyLogsResponse
+        /// </returns>
+        public async Task<DescribeLifecyclePolicyLogsResponse> DescribeLifecyclePolicyLogsWithOptionsAsync(DescribeLifecyclePolicyLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyId))
+            {
+                query["LifecyclePolicyId"] = request.LifecyclePolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeLifecyclePolicyLogs",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeLifecyclePolicyLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询生命周期策略日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLifecyclePolicyLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLifecyclePolicyLogsResponse
+        /// </returns>
+        public DescribeLifecyclePolicyLogsResponse DescribeLifecyclePolicyLogs(DescribeLifecyclePolicyLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeLifecyclePolicyLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询生命周期策略日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeLifecyclePolicyLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeLifecyclePolicyLogsResponse
+        /// </returns>
+        public async Task<DescribeLifecyclePolicyLogsResponse> DescribeLifecyclePolicyLogsAsync(DescribeLifecyclePolicyLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeLifecyclePolicyLogsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15062,7 +15238,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询协议机挂载点</para>
+        /// <para>Query the export directory information of the protocol service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15124,7 +15300,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询协议机挂载点</para>
+        /// <para>Query the export directory information of the protocol service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15186,7 +15362,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询协议机挂载点</para>
+        /// <para>Query the export directory information of the protocol service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15204,7 +15380,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询协议机挂载点</para>
+        /// <para>Query the export directory information of the protocol service</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19940,6 +20116,134 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>启动生命周期策略运行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartLifecyclePolicyExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartLifecyclePolicyExecutionResponse
+        /// </returns>
+        public StartLifecyclePolicyExecutionResponse StartLifecyclePolicyExecutionWithOptions(StartLifecyclePolicyExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyId))
+            {
+                query["LifecyclePolicyId"] = request.LifecyclePolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartLifecyclePolicyExecution",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartLifecyclePolicyExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动生命周期策略运行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartLifecyclePolicyExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartLifecyclePolicyExecutionResponse
+        /// </returns>
+        public async Task<StartLifecyclePolicyExecutionResponse> StartLifecyclePolicyExecutionWithOptionsAsync(StartLifecyclePolicyExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyId))
+            {
+                query["LifecyclePolicyId"] = request.LifecyclePolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartLifecyclePolicyExecution",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartLifecyclePolicyExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动生命周期策略运行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartLifecyclePolicyExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartLifecyclePolicyExecutionResponse
+        /// </returns>
+        public StartLifecyclePolicyExecutionResponse StartLifecyclePolicyExecution(StartLifecyclePolicyExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StartLifecyclePolicyExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动生命周期策略运行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartLifecyclePolicyExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartLifecyclePolicyExecutionResponse
+        /// </returns>
+        public async Task<StartLifecyclePolicyExecutionResponse> StartLifecyclePolicyExecutionAsync(StartLifecyclePolicyExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StartLifecyclePolicyExecutionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Disables a dataflow.</para>
         /// </summary>
         /// 
@@ -20132,7 +20436,135 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates tags and binds the tags to file systems.</para>
+        /// <para>停止生命周期策略运行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopLifecyclePolicyExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopLifecyclePolicyExecutionResponse
+        /// </returns>
+        public StopLifecyclePolicyExecutionResponse StopLifecyclePolicyExecutionWithOptions(StopLifecyclePolicyExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyId))
+            {
+                query["LifecyclePolicyId"] = request.LifecyclePolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopLifecyclePolicyExecution",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopLifecyclePolicyExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止生命周期策略运行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopLifecyclePolicyExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopLifecyclePolicyExecutionResponse
+        /// </returns>
+        public async Task<StopLifecyclePolicyExecutionResponse> StopLifecyclePolicyExecutionWithOptionsAsync(StopLifecyclePolicyExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyId))
+            {
+                query["LifecyclePolicyId"] = request.LifecyclePolicyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopLifecyclePolicyExecution",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopLifecyclePolicyExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止生命周期策略运行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopLifecyclePolicyExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopLifecyclePolicyExecutionResponse
+        /// </returns>
+        public StopLifecyclePolicyExecutionResponse StopLifecyclePolicyExecution(StopLifecyclePolicyExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return StopLifecyclePolicyExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止生命周期策略运行</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopLifecyclePolicyExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopLifecyclePolicyExecutionResponse
+        /// </returns>
+        public async Task<StopLifecyclePolicyExecutionResponse> StopLifecyclePolicyExecutionAsync(StopLifecyclePolicyExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await StopLifecyclePolicyExecutionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates and adds tags to specified resources. File systems and access points are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20182,7 +20614,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates tags and binds the tags to file systems.</para>
+        /// <para>Creates and adds tags to specified resources. File systems and access points are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20232,7 +20664,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates tags and binds the tags to file systems.</para>
+        /// <para>Creates and adds tags to specified resources. File systems and access points are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20250,7 +20682,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates tags and binds the tags to file systems.</para>
+        /// <para>Creates and adds tags to specified resources. File systems and access points are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20268,7 +20700,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from a file system.</para>
+        /// <para>Deletes a tag from a specified resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20322,7 +20754,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from a file system.</para>
+        /// <para>Deletes a tag from a specified resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20376,7 +20808,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from a file system.</para>
+        /// <para>Deletes a tag from a specified resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20394,7 +20826,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes tags from a file system.</para>
+        /// <para>Deletes a tag from a specified resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20408,6 +20840,174 @@ namespace AlibabaCloud.SDK.NAS20170626
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UntagResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新生命周期策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLifecyclePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLifecyclePolicyResponse
+        /// </returns>
+        public UpdateLifecyclePolicyResponse UpdateLifecyclePolicyWithOptions(UpdateLifecyclePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyId))
+            {
+                query["LifecyclePolicyId"] = request.LifecyclePolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Paths))
+            {
+                query["Paths"] = request.Paths;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetrieveRules))
+            {
+                query["RetrieveRules"] = request.RetrieveRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRules))
+            {
+                query["TransitRules"] = request.TransitRules;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLifecyclePolicy",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateLifecyclePolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新生命周期策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLifecyclePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLifecyclePolicyResponse
+        /// </returns>
+        public async Task<UpdateLifecyclePolicyResponse> UpdateLifecyclePolicyWithOptionsAsync(UpdateLifecyclePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LifecyclePolicyId))
+            {
+                query["LifecyclePolicyId"] = request.LifecyclePolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Paths))
+            {
+                query["Paths"] = request.Paths;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetrieveRules))
+            {
+                query["RetrieveRules"] = request.RetrieveRules;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TransitRules))
+            {
+                query["TransitRules"] = request.TransitRules;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLifecyclePolicy",
+                Version = "2017-06-26",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateLifecyclePolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新生命周期策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLifecyclePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLifecyclePolicyResponse
+        /// </returns>
+        public UpdateLifecyclePolicyResponse UpdateLifecyclePolicy(UpdateLifecyclePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateLifecyclePolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新生命周期策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLifecyclePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLifecyclePolicyResponse
+        /// </returns>
+        public async Task<UpdateLifecyclePolicyResponse> UpdateLifecyclePolicyAsync(UpdateLifecyclePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateLifecyclePolicyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
