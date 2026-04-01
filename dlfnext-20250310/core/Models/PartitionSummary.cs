@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [Validation(Required=false)]
         public long? LastAccessTime { get; set; }
 
+        [NameInMap("lastRequester")]
+        [Validation(Required=false)]
+        public string LastRequester { get; set; }
+
         /// <summary>
         /// <para>Partition identifier</para>
         /// 
@@ -70,6 +74,22 @@ namespace AlibabaCloud.SDK.DlfNext20250310.Models
         [NameInMap("tableName")]
         [Validation(Required=false)]
         public string TableName { get; set; }
+
+        [NameInMap("topRequester")]
+        [Validation(Required=false)]
+        public string TopRequester { get; set; }
+
+        [NameInMap("totalFileAccessNum")]
+        [Validation(Required=false)]
+        public long? TotalFileAccessNum { get; set; }
+
+        [NameInMap("totalFileAccessNum30d")]
+        [Validation(Required=false)]
+        public long? TotalFileAccessNum30d { get; set; }
+
+        [NameInMap("totalFileAccessNum7d")]
+        [Validation(Required=false)]
+        public long? TotalFileAccessNum7d { get; set; }
 
         /// <summary>
         /// <para>24h access count</para>

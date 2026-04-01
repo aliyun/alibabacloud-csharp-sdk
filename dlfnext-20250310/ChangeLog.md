@@ -1,3 +1,6 @@
+2026-04-01 Version: 1.8.2
+- Generated csharp 2025-03-10 for DlfNext.
+
 2026-03-30 Version: 1.8.1
 - Generated csharp 2025-03-10 for DlfNext.
 
