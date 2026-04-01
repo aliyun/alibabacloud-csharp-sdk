@@ -39,6 +39,158 @@ namespace AlibabaCloud.SDK.Sophonsoar20250903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>停止剧本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AbortPlaybookExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AbortPlaybookExecutionResponse
+        /// </returns>
+        public AbortPlaybookExecutionResponse AbortPlaybookExecutionWithOptions(AbortPlaybookExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlaybookExecutionUuid))
+            {
+                body["PlaybookExecutionUuid"] = request.PlaybookExecutionUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlaybookUuid))
+            {
+                body["PlaybookUuid"] = request.PlaybookUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AbortPlaybookExecution",
+                Version = "2025-09-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AbortPlaybookExecutionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止剧本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AbortPlaybookExecutionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AbortPlaybookExecutionResponse
+        /// </returns>
+        public async Task<AbortPlaybookExecutionResponse> AbortPlaybookExecutionWithOptionsAsync(AbortPlaybookExecutionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlaybookExecutionUuid))
+            {
+                body["PlaybookExecutionUuid"] = request.PlaybookExecutionUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlaybookUuid))
+            {
+                body["PlaybookUuid"] = request.PlaybookUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleFor))
+            {
+                body["RoleFor"] = request.RoleFor;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleType))
+            {
+                body["RoleType"] = request.RoleType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AbortPlaybookExecution",
+                Version = "2025-09-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AbortPlaybookExecutionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止剧本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AbortPlaybookExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AbortPlaybookExecutionResponse
+        /// </returns>
+        public AbortPlaybookExecutionResponse AbortPlaybookExecution(AbortPlaybookExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AbortPlaybookExecutionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止剧本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AbortPlaybookExecutionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AbortPlaybookExecutionResponse
+        /// </returns>
+        public async Task<AbortPlaybookExecutionResponse> AbortPlaybookExecutionAsync(AbortPlaybookExecutionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AbortPlaybookExecutionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Create Component Asset.</para>
         /// </summary>
         /// 
@@ -711,8 +863,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20250903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行组件动作</para>
+        /// <para>Execute component action.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this interface, please make sure you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the Response Orchestration product (i.e., Threat Analysis and Response Log Ingress Traffic).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecuteComponentRequest
@@ -777,8 +934,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20250903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行组件动作</para>
+        /// <para>Execute component action.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this interface, please make sure you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the Response Orchestration product (i.e., Threat Analysis and Response Log Ingress Traffic).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecuteComponentRequest
@@ -843,8 +1005,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20250903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行组件动作</para>
+        /// <para>Execute component action.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this interface, please make sure you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the Response Orchestration product (i.e., Threat Analysis and Response Log Ingress Traffic).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecuteComponentRequest
@@ -861,8 +1028,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20250903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行组件动作</para>
+        /// <para>Execute component action.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this interface, please make sure you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the Response Orchestration product (i.e., Threat Analysis and Response Log Ingress Traffic).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecuteComponentRequest

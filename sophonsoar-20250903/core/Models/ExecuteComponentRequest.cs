@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20250903.Models
 {
     public class ExecuteComponentRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the component action.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>doRequest</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20250903.Models
         public string ComponentActionName { get; set; }
 
         /// <summary>
+        /// <para>Asset UUID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1C5F11E9-<b><b>-51F0-</b></b>-43BB312A0557</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20250903.Models
         public string ComponentAssetUuid { get; set; }
 
         /// <summary>
+        /// <para>Component input parameters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20250903.Models
         public string ComponentInput { get; set; }
 
         /// <summary>
+        /// <para>The name of the component.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SLS</para>
         /// </summary>
@@ -42,6 +50,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20250903.Models
         public string ComponentName { get; set; }
 
         /// <summary>
+        /// <para>The language type for requests and responses. Values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -50,6 +66,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20250903.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The name of the node corresponding to the current component in the playbook.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>node1</para>
         /// </summary>
@@ -58,6 +76,11 @@ namespace AlibabaCloud.SDK.Sophonsoar20250903.Models
         public string PlayBookNodeName { get; set; }
 
         /// <summary>
+        /// <para>The UUID of the playbook.</para>
+        /// <remarks>
+        /// <para>You can obtain this parameter by calling the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> interface.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>ac343acc-1a61-4084-9a1cxxxxx</para>
         /// </summary>
