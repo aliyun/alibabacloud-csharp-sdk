@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("Identifiers")]
+        [Validation(Required=false)]
+        public string Identifiers { get; set; }
+
+        [NameInMap("KeyWord")]
+        [Validation(Required=false)]
+        public string KeyWord { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>50</para>

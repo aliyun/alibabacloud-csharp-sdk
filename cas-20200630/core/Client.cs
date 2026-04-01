@@ -2685,7 +2685,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a root certificate authority (CA) certificate or an intermediate CA certificate.</para>
+        /// <para>Queries the details about a certificate authority (CA) certificate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2735,7 +2735,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a root certificate authority (CA) certificate or an intermediate CA certificate.</para>
+        /// <para>Queries the details about a certificate authority (CA) certificate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2785,7 +2785,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a root certificate authority (CA) certificate or an intermediate CA certificate.</para>
+        /// <para>Queries the details about a certificate authority (CA) certificate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2811,7 +2811,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about a root certificate authority (CA) certificate or an intermediate CA certificate.</para>
+        /// <para>Queries the details about a certificate authority (CA) certificate.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3563,7 +3563,7 @@ namespace AlibabaCloud.SDK.Cas20200630
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取客户端证书</para>
+        /// <para>Queries the details about multiple client certificates or server certificates at a time by using the serial numbers of the certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3611,7 +3611,7 @@ namespace AlibabaCloud.SDK.Cas20200630
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取客户端证书</para>
+        /// <para>Queries the details about multiple client certificates or server certificates at a time by using the serial numbers of the certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3659,7 +3659,7 @@ namespace AlibabaCloud.SDK.Cas20200630
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取客户端证书</para>
+        /// <para>Queries the details about multiple client certificates or server certificates at a time by using the serial numbers of the certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3683,7 +3683,7 @@ namespace AlibabaCloud.SDK.Cas20200630
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取客户端证书</para>
+        /// <para>Queries the details about multiple client certificates or server certificates at a time by using the serial numbers of the certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3851,7 +3851,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取客户端证书状态</para>
+        /// <para>Queries the status information about client certificates or server certificates by using the serial numbers of the certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3893,7 +3893,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取客户端证书状态</para>
+        /// <para>Queries the status information about client certificates or server certificates by using the serial numbers of the certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3935,7 +3935,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取客户端证书状态</para>
+        /// <para>Queries the status information about client certificates or server certificates by using the serial numbers of the certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3953,7 +3953,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取客户端证书状态</para>
+        /// <para>Queries the status information about client certificates or server certificates by using the serial numbers of the certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3969,10 +3969,6 @@ namespace AlibabaCloud.SDK.Cas20200630
             return await DescribeClientCertificateStatusForSerialNumberWithOptionsAsync(request, runtime);
         }
 
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.
-        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>返回用户所有CaCertificate，包括PCA内部产生的与导入的外部证书</para>
@@ -3988,8 +3984,6 @@ namespace AlibabaCloud.SDK.Cas20200630
         /// <returns>
         /// DescribePcaAndExternalCACertificateListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.")]
-        // Deprecated
         public DescribePcaAndExternalCACertificateListResponse DescribePcaAndExternalCACertificateListWithOptions(DescribePcaAndExternalCACertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -3997,6 +3991,14 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifiers))
+            {
+                query["Identifiers"] = request.Identifiers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
+            {
+                query["KeyWord"] = request.KeyWord;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
             {
@@ -4021,10 +4023,6 @@ namespace AlibabaCloud.SDK.Cas20200630
             return TeaModel.ToObject<DescribePcaAndExternalCACertificateListResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.
-        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>返回用户所有CaCertificate，包括PCA内部产生的与导入的外部证书</para>
@@ -4040,8 +4038,6 @@ namespace AlibabaCloud.SDK.Cas20200630
         /// <returns>
         /// DescribePcaAndExternalCACertificateListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.")]
-        // Deprecated
         public async Task<DescribePcaAndExternalCACertificateListResponse> DescribePcaAndExternalCACertificateListWithOptionsAsync(DescribePcaAndExternalCACertificateListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -4049,6 +4045,14 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifiers))
+            {
+                query["Identifiers"] = request.Identifiers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyWord))
+            {
+                query["KeyWord"] = request.KeyWord;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowSize))
             {
@@ -4073,10 +4077,6 @@ namespace AlibabaCloud.SDK.Cas20200630
             return TeaModel.ToObject<DescribePcaAndExternalCACertificateListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.
-        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>返回用户所有CaCertificate，包括PCA内部产生的与导入的外部证书</para>
@@ -4089,18 +4089,12 @@ namespace AlibabaCloud.SDK.Cas20200630
         /// <returns>
         /// DescribePcaAndExternalCACertificateListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.")]
-        // Deprecated
         public DescribePcaAndExternalCACertificateListResponse DescribePcaAndExternalCACertificateList(DescribePcaAndExternalCACertificateListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DescribePcaAndExternalCACertificateListWithOptions(request, runtime);
         }
 
-        /// <term><b>Deprecated</b></term>
-        /// 
-        /// OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.
-        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>返回用户所有CaCertificate，包括PCA内部产生的与导入的外部证书</para>
@@ -4113,8 +4107,6 @@ namespace AlibabaCloud.SDK.Cas20200630
         /// <returns>
         /// DescribePcaAndExternalCACertificateListResponse
         /// </returns>
-        [Obsolete("OpenAPI DescribePcaAndExternalCACertificateList is deprecated, please use cas::2020-06-30::ListAllEndEntityInstance instead.")]
-        // Deprecated
         public async Task<DescribePcaAndExternalCACertificateListResponse> DescribePcaAndExternalCACertificateListAsync(DescribePcaAndExternalCACertificateListRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -4439,7 +4431,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取证书日志</para>
+        /// <para>Queries the operation logs of a certificate authority (CA) certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4481,7 +4473,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取证书日志</para>
+        /// <para>Queries the operation logs of a certificate authority (CA) certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4523,7 +4515,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取证书日志</para>
+        /// <para>Queries the operation logs of a certificate authority (CA) certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4541,7 +4533,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取证书日志</para>
+        /// <para>Queries the operation logs of a certificate authority (CA) certificate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4559,7 +4551,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取证书列表</para>
+        /// <para>Queries a list of certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4637,7 +4629,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取证书列表</para>
+        /// <para>Queries a list of certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4715,7 +4707,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取证书列表</para>
+        /// <para>Queries a list of certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4733,7 +4725,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取证书列表</para>
+        /// <para>Queries a list of certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4923,7 +4915,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询私有CA机构证书</para>
+        /// <para>Queries private certificate authority (CA) certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4969,7 +4961,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询私有CA机构证书</para>
+        /// <para>Queries private certificate authority (CA) certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5015,7 +5007,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询私有CA机构证书</para>
+        /// <para>Queries private certificate authority (CA) certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5033,7 +5025,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询私有CA机构证书</para>
+        /// <para>Queries private certificate authority (CA) certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6131,7 +6123,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传pca证书到SSL上传证书</para>
+        /// <para>Synchronizes private certificate authority (CA) certificates to the list of SSL certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6173,7 +6165,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传pca证书到SSL上传证书</para>
+        /// <para>Synchronizes private certificate authority (CA) certificates to the list of SSL certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6215,7 +6207,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传pca证书到SSL上传证书</para>
+        /// <para>Synchronizes private certificate authority (CA) certificates to the list of SSL certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6233,7 +6225,7 @@ namespace AlibabaCloud.SDK.Cas20200630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传pca证书到SSL上传证书</para>
+        /// <para>Synchronizes private certificate authority (CA) certificates to the list of SSL certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">

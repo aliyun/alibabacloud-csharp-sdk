@@ -37,18 +37,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
                 [Validation(Required=false)]
                 public List<ListTagResourcesResponseBodyDataTagResourcesTagResources> TagResources { get; set; }
                 public class ListTagResourcesResponseBodyDataTagResourcesTagResources : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>cas-upload-xgjcng</para>
-                    /// </summary>
                     [NameInMap("ResourceId")]
                     [Validation(Required=false)]
                     public string ResourceId { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>ALIYUN::CAS::PCACERTIFICATE</para>
-                    /// </summary>
                     [NameInMap("ResourceType")]
                     [Validation(Required=false)]
                     public string ResourceType { get; set; }
@@ -57,10 +49,6 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
                     [Validation(Required=false)]
                     public string TagKey { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>PVDCDC</para>
-                    /// </summary>
                     [NameInMap("TagValue")]
                     [Validation(Required=false)]
                     public string TagValue { get; set; }
