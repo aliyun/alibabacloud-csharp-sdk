@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
     public class VerifySendMessageRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1773718320000</para>
+        /// </summary>
+        [NameInMap("deliveryTimeStamp")]
+        [Validation(Required=false)]
+        public long? DeliveryTimeStamp { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>abc</para>
         /// </summary>
         [NameInMap("liteTopicName")]
@@ -26,6 +34,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>testMessageGroup</para>
+        /// </summary>
+        [NameInMap("messageGroup")]
+        [Validation(Required=false)]
+        public string MessageGroup { get; set; }
 
         /// <summary>
         /// <para>The message key.</para>
@@ -46,6 +62,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [NameInMap("messageTag")]
         [Validation(Required=false)]
         public string MessageTag { get; set; }
+
+        [NameInMap("userProperties")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> UserProperties { get; set; }
 
     }
 

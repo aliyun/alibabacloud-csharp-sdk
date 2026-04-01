@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Disaster Recovery Plan Entry</para>
+        /// <para>Adds a topic mapping to a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Disaster Recovery Plan Entry</para>
+        /// <para>Adds a topic mapping to a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Disaster Recovery Plan Entry</para>
+        /// <para>Adds a topic mapping to a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Disaster Recovery Plan Entry</para>
+        /// <para>Adds a topic mapping to a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1861,7 +1861,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除容灾计划条目</para>
+        /// <para>Deletes a topic mapping of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1897,7 +1897,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除容灾计划条目</para>
+        /// <para>Deletes a topic mapping of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1933,7 +1933,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除容灾计划条目</para>
+        /// <para>Deletes a topic mapping of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1948,7 +1948,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除容灾计划条目</para>
+        /// <para>Deletes a topic mapping of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2065,7 +2065,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a ApsaraMQ for RocketMQ instance.</para>
+        /// <para>Releases an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2112,7 +2112,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a ApsaraMQ for RocketMQ instance.</para>
+        /// <para>Releases an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2159,7 +2159,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a ApsaraMQ for RocketMQ instance.</para>
+        /// <para>Releases an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2185,7 +2185,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a ApsaraMQ for RocketMQ instance.</para>
+        /// <para>Releases an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2723,7 +2723,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行迁移操作</para>
+        /// <para>Executes a specific operation on a specific migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2775,7 +2775,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行迁移操作</para>
+        /// <para>Executes a specific operation on a specific migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2827,7 +2827,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行迁移操作</para>
+        /// <para>Executes a specific operation on a specific migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2846,7 +2846,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行迁移操作</para>
+        /// <para>Executes a specific operation on a specific migration task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2995,7 +2995,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询topic可重置时间范围</para>
+        /// <para>Queries the time range within which the consumer offset in a topic can be reset.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3031,7 +3031,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询topic可重置时间范围</para>
+        /// <para>Queries the time range within which the consumer offset in a topic can be reset.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3067,7 +3067,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询topic可重置时间范围</para>
+        /// <para>Queries the time range within which the consumer offset in a topic can be reset.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3082,7 +3082,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询topic可重置时间范围</para>
+        /// <para>Queries the time range within which the consumer offset in a topic can be reset.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3597,7 +3597,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询容灾计划条目详情</para>
+        /// <para>Queries the details of a topic mapping in a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3633,7 +3633,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询容灾计划条目详情</para>
+        /// <para>Queries the details of a topic mapping in a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3669,7 +3669,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询容灾计划条目详情</para>
+        /// <para>Queries the details of a topic mapping in a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3684,7 +3684,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询容灾计划条目详情</para>
+        /// <para>Queries the details of a topic mapping in a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4683,7 +4683,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询支持的可用区</para>
+        /// <para>Queries the supported zones.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4719,7 +4719,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询支持的可用区</para>
+        /// <para>Queries the supported zones.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4755,7 +4755,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询支持的可用区</para>
+        /// <para>Queries the supported zones.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4770,7 +4770,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询支持的可用区</para>
+        /// <para>Queries the supported zones.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4785,7 +4785,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者客户端连接信息</para>
+        /// <para>Queries the connections of a specific consumer client.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4835,7 +4835,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者客户端连接信息</para>
+        /// <para>Queries the connections of a specific consumer client.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4885,7 +4885,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者客户端连接信息</para>
+        /// <para>Queries the connections of a specific consumer client.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4904,7 +4904,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询消费者客户端连接信息</para>
+        /// <para>Queries the connections of a specific consumer client.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5227,7 +5227,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query disaster recovery plan consumption progress information</para>
+        /// <para>Queries consumer progress synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5285,7 +5285,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query disaster recovery plan consumption progress information</para>
+        /// <para>Queries consumer progress synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5343,7 +5343,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query disaster recovery plan consumption progress information</para>
+        /// <para>Queries consumer progress synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5362,7 +5362,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query disaster recovery plan consumption progress information</para>
+        /// <para>Queries consumer progress synchronization tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6361,7 +6361,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of messages.</para>
+        /// <para>Queries messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6435,7 +6435,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of messages.</para>
+        /// <para>Queries messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6509,7 +6509,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of messages.</para>
+        /// <para>Queries messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6528,7 +6528,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of messages.</para>
+        /// <para>Queries messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6685,7 +6685,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询迁移操作列表</para>
+        /// <para>Queries a list of migration operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6747,7 +6747,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询迁移操作列表</para>
+        /// <para>Queries a list of migration operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6809,7 +6809,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询迁移操作列表</para>
+        /// <para>Queries a list of migration operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6828,7 +6828,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询迁移操作列表</para>
+        /// <para>Queries a list of migration operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6847,7 +6847,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询迁移列表</para>
+        /// <para>Queries migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6909,7 +6909,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询迁移列表</para>
+        /// <para>Queries migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6971,7 +6971,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询迁移列表</para>
+        /// <para>Queries migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6990,7 +6990,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询迁移列表</para>
+        /// <para>Queries migration tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7111,7 +7111,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query visible resource tag relationships</para>
+        /// <para>Queries the tags that are added to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7177,7 +7177,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query visible resource tag relationships</para>
+        /// <para>Queries the tags that are added to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7243,7 +7243,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query visible resource tag relationships</para>
+        /// <para>Queries the tags that are added to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7262,7 +7262,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query visible resource tag relationships</para>
+        /// <para>Queries the tags that are added to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7735,7 +7735,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the consumer offset of a consumer group.</para>
+        /// <para>Resets the consumer offset of a consumer group. If you reset a consumer offset, the offset from which a consumer starts to consume messages is changed. If faults occur or wrong messages are consumed during message consumption, you can reset the consumer offset to roll back the consumption to a specific offset for reconsumption. You can also reset the consumer offset to the latest offset and temporarily leave the accumulated messages unhandled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7785,7 +7785,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the consumer offset of a consumer group.</para>
+        /// <para>Resets the consumer offset of a consumer group. If you reset a consumer offset, the offset from which a consumer starts to consume messages is changed. If faults occur or wrong messages are consumed during message consumption, you can reset the consumer offset to roll back the consumption to a specific offset for reconsumption. You can also reset the consumer offset to the latest offset and temporarily leave the accumulated messages unhandled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7835,7 +7835,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the consumer offset of a consumer group.</para>
+        /// <para>Resets the consumer offset of a consumer group. If you reset a consumer offset, the offset from which a consumer starts to consume messages is changed. If faults occur or wrong messages are consumed during message consumption, you can reset the consumer offset to roll back the consumption to a specific offset for reconsumption. You can also reset the consumer offset to the latest offset and temporarily leave the accumulated messages unhandled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7854,7 +7854,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the consumer offset of a consumer group.</para>
+        /// <para>Resets the consumer offset of a consumer group. If you reset a consumer offset, the offset from which a consumer starts to consume messages is changed. If faults occur or wrong messages are consumed during message consumption, you can reset the consumer offset to roll back the consumption to a specific offset for reconsumption. You can also reset the consumer offset to the latest offset and temporarily leave the accumulated messages unhandled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7873,7 +7873,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable Disaster Recovery Plan Entry</para>
+        /// <para>Starts a topic mapping of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7909,7 +7909,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable Disaster Recovery Plan Entry</para>
+        /// <para>Starts a topic mapping of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7945,7 +7945,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable Disaster Recovery Plan Entry</para>
+        /// <para>Starts a topic mapping of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7960,7 +7960,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable Disaster Recovery Plan Entry</para>
+        /// <para>Starts a topic mapping of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7975,7 +7975,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deactivate Disaster Recovery Plan Entry</para>
+        /// <para>Stops a topic mapping of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8011,7 +8011,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deactivate Disaster Recovery Plan Entry</para>
+        /// <para>Stops a topic mapping of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8047,7 +8047,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deactivate Disaster Recovery Plan Entry</para>
+        /// <para>Stops a topic mapping of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8062,7 +8062,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deactivate Disaster Recovery Plan Entry</para>
+        /// <para>Stops a topic mapping of a Global Replicator task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9771,6 +9771,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryTimeStamp))
+            {
+                body["deliveryTimeStamp"] = request.DeliveryTimeStamp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicName))
             {
                 body["liteTopicName"] = request.LiteTopicName;
@@ -9779,6 +9783,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["message"] = request.Message;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageGroup))
+            {
+                body["messageGroup"] = request.MessageGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageKey))
             {
                 body["messageKey"] = request.MessageKey;
@@ -9786,6 +9794,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageTag))
             {
                 body["messageTag"] = request.MessageTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserProperties))
+            {
+                body["userProperties"] = request.UserProperties;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9829,6 +9841,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryTimeStamp))
+            {
+                body["deliveryTimeStamp"] = request.DeliveryTimeStamp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LiteTopicName))
             {
                 body["liteTopicName"] = request.LiteTopicName;
@@ -9837,6 +9853,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["message"] = request.Message;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageGroup))
+            {
+                body["messageGroup"] = request.MessageGroup;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageKey))
             {
                 body["messageKey"] = request.MessageKey;
@@ -9844,6 +9864,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessageTag))
             {
                 body["messageTag"] = request.MessageTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserProperties))
+            {
+                body["userProperties"] = request.UserProperties;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

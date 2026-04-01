@@ -310,6 +310,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             public string CapacityType { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>async_cross_az</para>
+            /// </summary>
+            [NameInMap("drReplicationMode")]
+            [Validation(Required=false)]
+            public string DrReplicationMode { get; set; }
+
+            /// <summary>
             /// <para>The retention period of messages. Unit: hours.</para>
             /// <para>For information about the valid values of this parameter, see the &quot;Limits on resource quotas&quot; section of the <a href="https://help.aliyun.com/document_detail/440347.html">Limits</a> topic.</para>
             /// <para>ApsaraMQ for RocketMQ supports serverless scaling of message storage. You are charged storage fees based on your actual storage usage. You can change the retention period of messages to manage storage capacity. For more information, see <a href="https://help.aliyun.com/document_detail/427238.html">Storage fees</a>.</para>
