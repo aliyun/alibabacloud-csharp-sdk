@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDBInstanceEndpointsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeDBInstanceEndpointsResponseBodyData Data { get; set; }
@@ -97,16 +100,38 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
             }
 
+            /// <summary>
+            /// <para>The name of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rm-u****</para>
+            /// </summary>
             [NameInMap("DBInstanceName")]
             [Validation(Required=false)]
             public string DBInstanceName { get; set; }
 
+            /// <summary>
+            /// <para>The version of the IP protocol. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ipv4</b></description></item>
+            /// <item><description><b>ipv6</b></description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ipv4</para>
+            /// </summary>
             [NameInMap("IpVersion")]
             [Validation(Required=false)]
             public string IpVersion { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>777C4593-8053-427B-****105593277CAB</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

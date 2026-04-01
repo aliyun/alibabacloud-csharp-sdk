@@ -24,8 +24,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ExternalReplication { get; set; }
 
         /// <summary>
-        /// <para>The executed global transaction identifier.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>bd2a34b9-8b8d-11ef-8917-00163e1298b9:1-20567</para>
         /// </summary>
@@ -34,7 +32,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string GtidExecuted { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether full data has been successfully imported.</para>
+        /// <para>COMPLETED: 导入完成，INIT: 初始化，IMPORTING: 正在导入</para>
         /// 
         /// <b>Example:</b>
         /// <para>COMPLETED</para>
@@ -64,8 +62,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReplicationErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The replication IP address.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>192.168.10.x</para>
         /// </summary>
@@ -74,8 +70,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ReplicationIp { get; set; }
 
         /// <summary>
-        /// <para>The replication port.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>3306</para>
         /// </summary>
@@ -87,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The source of the native replication.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.XX.XX</para>
+        /// <para>192.168.x.x</para>
         /// </summary>
         [NameInMap("ReplicationSource")]
         [Validation(Required=false)]
@@ -103,7 +97,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Stopped</para>
+        /// <para>Running
+        /// Connecting
+        /// Stopped
+        /// Error</para>
         /// </summary>
         [NameInMap("ReplicationState")]
         [Validation(Required=false)]

@@ -44,23 +44,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
-        /// <summary>
-        /// <para>The stop mode to use when stopping the instance. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>StopCharging: economical mode. When economical mode is enabled:</para>
-        /// <list type="bullet">
-        /// <item><description>Computing resources are no longer billed.</description></item>
-        /// <item><description>System disk and data disk continue to be billed.</description></item>
-        /// <item><description>Because computing resources are revoked, the instance might fail to start due to insufficient inventory. In this case, try again later or change the instance type.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>KeepCharging: normal stop mode. The instance continues to incur charges after it is stopped.</para>
-        /// </description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>KeepCharging</para>
-        /// </summary>
         [NameInMap("StoppedMode")]
         [Validation(Required=false)]
         public string StoppedMode { get; set; }

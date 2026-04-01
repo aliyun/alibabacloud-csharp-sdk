@@ -45,22 +45,52 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <para>The page number of the page returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <para>The number of log files on the current page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("PageRecordCount")]
         [Validation(Required=false)]
         public int? PageRecordCount { get; set; }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F8EC669C-FC85-43D7-AF06-C3641626B37E</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The total size of log files. Unit: bytes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2300</para>
+        /// </summary>
         [NameInMap("TotalFileSize")]
         [Validation(Required=false)]
         public long? TotalFileSize { get; set; }
 
+        /// <summary>
+        /// <para>The total number of log files.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>17</para>
+        /// </summary>
         [NameInMap("TotalRecordCount")]
         [Validation(Required=false)]
         public int? TotalRecordCount { get; set; }

@@ -117,10 +117,26 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <para>The network type of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>VPC</b>: a virtual private cloud (VPC)</description></item>
+        /// <item><description><b>Classic</b>: classic network</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>VPC</para>
+        /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]
         public string InstanceNetworkType { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>61DF1F28-F409-50C0-B90A-CCE82D44****</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

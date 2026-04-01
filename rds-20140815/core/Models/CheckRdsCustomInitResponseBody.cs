@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string HasServiceLinkedRole { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("RegisterUidSuccess")]
         [Validation(Required=false)]
         public bool? RegisterUidSuccess { get; set; }

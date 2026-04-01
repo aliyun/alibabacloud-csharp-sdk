@@ -17,8 +17,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public List<DescribeRCDisksResponseBodyDisks> Disks { get; set; }
         public class DescribeRCDisksResponseBodyDisks : TeaModel {
             /// <summary>
-            /// <para>The mount time.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>2017-12-05T2340:00Z</para>
             /// </summary>
@@ -40,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>cloud_auto</para>
+            /// <para>cloud_ssd</para>
             /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]

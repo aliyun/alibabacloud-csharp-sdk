@@ -35,19 +35,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string BucketRegion { get; set; }
 
-        /// <summary>
-        /// <para>Specifies whether to automatically set up replication. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: Yes. The <c>MasterInfo</c> parameter is required.</description></item>
-        /// <item><description>false: No.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This applies only to native replication instances and requires the <c>DBInstanceId</c> parameter to be passed when invoking the API.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("BuildReplication")]
         [Validation(Required=false)]
         public bool? BuildReplication { get; set; }
@@ -82,35 +69,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
-        /// <summary>
-        /// <para>A case-sensitive JSON array containing the Master information for setting up MySQL replication. Example:</para>
-        /// <pre><c>{&quot;masterIp&quot;:&quot;172.20.xx.xx&quot;,&quot;masterPort&quot;:&quot;3306&quot;,&quot;masterUser&quot;:&quot;replica&quot;,&quot;masterPassword&quot;:&quot;W33uopkehBQ=&quot;}
-        /// </c></pre>
-        /// <para>The parameters in the array are described as follows:</para>
-        /// <list type="bullet">
-        /// <item><description><c>masterIp</c>: Primary database IP address.</description></item>
-        /// <item><description><c>masterPort</c>: Primary database port.</description></item>
-        /// <item><description><c>masterUser</c>: Replication account for the primary database.</description></item>
-        /// <item><description><c>masterPassword</c>: Password for the replication account of the primary database, which must be Base64-encoded.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This applies only to native replication instances and requires the <c>DBInstanceId</c> parameter to be passed when invoking the API.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{&quot;masterIp&quot;:&quot;172.20.xx.xx&quot;,&quot;masterPort&quot;:&quot;3306&quot;,&quot;masterUser&quot;:&quot;replica&quot;,&quot;masterPassword&quot;:&quot;W33uopkehBQ=&quot;}</para>
-        /// </summary>
         [NameInMap("MasterInfo")]
         [Validation(Required=false)]
         public string MasterInfo { get; set; }
 
         /// <summary>
-        /// <para>Import mode. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>oss: Download the backup from OSS and import it.</description></item>
-        /// <item><description>stream: Import the backup over the network.</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>oss</para>
         /// </summary>
@@ -183,24 +146,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public int? Retention { get; set; }
 
-        /// <summary>
-        /// <para>A case-sensitive JSON array that provides the source information for a full backup. Example:</para>
-        /// <pre><c>{&quot;sourceIp&quot;:&quot;172.20.xx.xx&quot;,&quot;sourcePort&quot;:&quot;9999&quot;}
-        /// </c></pre>
-        /// <para>The parameters in the array are described as follows:</para>
-        /// <list type="bullet">
-        /// <item><description><para><c>sourceIp</c>: Source IP address.</para>
-        /// </description></item>
-        /// <item><description><para><c>sourcePort</c>: Port on which Netcat listens at the source.</para>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This applies only to native replication instances and requires the <c>DBInstanceId</c> parameter to be passed when invoking the API.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{&quot;sourceIp&quot;:&quot;172.20.xx.xx&quot;,&quot;sourcePort&quot;:&quot;9999&quot;}</para>
-        /// </summary>
         [NameInMap("SourceInfo")]
         [Validation(Required=false)]
         public string SourceInfo { get; set; }

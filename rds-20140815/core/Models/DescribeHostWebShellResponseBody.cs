@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeHostWebShellResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The webshell URL.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <hr>
+        /// </summary>
         [NameInMap("LoginUrl")]
         [Validation(Required=false)]
         public string LoginUrl { get; set; }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>842B73C8-5776-4BD9-9872-69C8C46DD7D3</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

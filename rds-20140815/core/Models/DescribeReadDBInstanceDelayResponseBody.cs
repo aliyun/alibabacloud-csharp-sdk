@@ -9,10 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeReadDBInstanceDelayResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The primary instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-bp*****</para>
+        /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The latency of data replication. Unit: seconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("DelayTime")]
         [Validation(Required=false)]
         public int? DelayTime { get; set; }
@@ -97,10 +109,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <para>The read-only instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rr-bp*****</para>
+        /// </summary>
         [NameInMap("ReadDBInstanceId")]
         [Validation(Required=false)]
         public string ReadDBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>F1BDDEA8-452D-450B-AB10-CD5C5BAFC5DF</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

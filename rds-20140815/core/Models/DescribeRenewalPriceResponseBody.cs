@@ -9,22 +9,46 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRenewalPriceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Details of price information.</para>
+        /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
         public DescribeRenewalPriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribeRenewalPriceResponseBodyPriceInfo : TeaModel {
+            /// <summary>
+            /// <para>The information about the promotion.</para>
+            /// </summary>
             [NameInMap("ActivityInfo")]
             [Validation(Required=false)]
             public DescribeRenewalPriceResponseBodyPriceInfoActivityInfo ActivityInfo { get; set; }
             public class DescribeRenewalPriceResponseBodyPriceInfoActivityInfo : TeaModel {
+                /// <summary>
+                /// <para>The returned message.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Error description</para>
+                /// </summary>
                 [NameInMap("CheckErrMsg")]
                 [Validation(Required=false)]
                 public string CheckErrMsg { get; set; }
 
+                /// <summary>
+                /// <para>The error code that is returned.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>123456</para>
+                /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether the request was successful.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Success</para>
+                /// </summary>
                 [NameInMap("Success")]
                 [Validation(Required=false)]
                 public string Success { get; set; }
@@ -59,14 +83,32 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
             }
 
+            /// <summary>
+            /// <para>The currency unit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CNY</para>
+            /// </summary>
             [NameInMap("Currency")]
             [Validation(Required=false)]
             public string Currency { get; set; }
 
+            /// <summary>
+            /// <para>The discount.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>27</para>
+            /// </summary>
             [NameInMap("DiscountPrice")]
             [Validation(Required=false)]
             public float? DiscountPrice { get; set; }
 
+            /// <summary>
+            /// <para>The original price.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>138</para>
+            /// </summary>
             [NameInMap("OriginalPrice")]
             [Validation(Required=false)]
             public float? OriginalPrice { get; set; }
@@ -81,12 +123,24 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
             }
 
+            /// <summary>
+            /// <para>The transaction price, which is equal to the original price minus the discount.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>111</para>
+            /// </summary>
             [NameInMap("TradePrice")]
             [Validation(Required=false)]
             public float? TradePrice { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DC9F4EF6-D038-4405-B497-1F48E722C9F2</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

@@ -29,23 +29,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>17.0</para>
+        /// <para>12.0</para>
         /// </summary>
         [NameInMap("TargetMajorVersion")]
         [Validation(Required=false)]
         public string TargetMajorVersion { get; set; }
 
-        /// <summary>
-        /// <para>Upgrade mode. Valid values:  </para>
-        /// <list type="bullet">
-        /// <item><description><b>zeroDownTimeUpgrade</b>: Zero downtime.  </description></item>
-        /// <item><description><b>inPlaceUpgrade</b>: In-place upgrade.  </description></item>
-        /// <item><description><b>greenBlueDeployment</b>: Blue-green deployment.</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>zeroDownTimeUpgrade</para>
-        /// </summary>
         [NameInMap("UpgradeMode")]
         [Validation(Required=false)]
         public string UpgradeMode { get; set; }

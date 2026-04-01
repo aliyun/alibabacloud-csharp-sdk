@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RdsCustomInitResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("RegisterUidSuccess")]
         [Validation(Required=false)]
         public bool? RegisterUidSuccess { get; set; }

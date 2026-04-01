@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class CancelActiveOperationTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of tasks that you want to cancel at a time. Separate multiple IDs with commas (,). We recommend that you configure up to 25 IDs at a time.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>188****,188****,188****</para>
         /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]

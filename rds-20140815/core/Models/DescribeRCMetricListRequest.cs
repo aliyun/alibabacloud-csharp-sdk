@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCMetricListRequest : TeaModel {
-        /// <summary>
-        /// <para>Custom for SQL Server to batch query monitoring data for specified resources.<br>Format: a collection of key:value pairs.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>[{&quot;instanceId&quot;:&quot;rc-l9hv3rv74ql7oa******&quot;},{&quot;instanceId&quot;:&quot;rc-b532l1uj8n6sex******&quot;}]</para>
-        /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
         public string Dimensions { get; set; }
@@ -78,7 +72,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The pagination token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6178f1825f9fb76ce0b5e8707e******</para>
+        /// <para>6178f1825f9fb76ce0b5e8707e68181f</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

@@ -33,12 +33,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string BackupMethod { get; set; }
 
-        /// <summary>
-        /// <para>When the <b>BackupStrategy</b> of an SQL Server instance is set to <b>db</b>, the <b>BackupMethod</b> is <b>Physical</b>, and the <b>BackupType</b> is <b>FullBackup</b>, you can specify the retention period for the backup set. Valid values are 7 to 730 days or -1 (permanent retention).</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>7</para>
-        /// </summary>
         [NameInMap("BackupRetentionPeriod")]
         [Validation(Required=false)]
         public long? BackupRetentionPeriod { get; set; }

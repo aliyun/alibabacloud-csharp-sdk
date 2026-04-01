@@ -173,68 +173,22 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             [Validation(Required=false)]
             public string UpgradeMode { get; set; }
 
-            /// <summary>
-            /// <para>Indicates whether a switch is performed.</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b>: Yes.</description></item>
-            /// <item><description><b>false</b>: No.</description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
             [NameInMap("cutOver")]
             [Validation(Required=false)]
             public bool? CutOver { get; set; }
 
-            /// <summary>
-            /// <para>Estimated synchronization time for logical replication delay, in seconds.  </para>
-            /// <remarks>
-            /// <para>This is used only for <b>zero-downtime</b> major version upgrades.</para>
-            /// </remarks>
-            /// 
-            /// <b>Example:</b>
-            /// <para>10</para>
-            /// </summary>
             [NameInMap("totalLogicRepDelayTime")]
             [Validation(Required=false)]
             public int? TotalLogicRepDelayTime { get; set; }
 
-            /// <summary>
-            /// <para>Logical replication delay size, in MB.</para>
-            /// <remarks>
-            /// <para>Applies only to <b>zero-downtime</b> major version upgrades.</para>
-            /// </remarks>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
             [NameInMap("totalLogicRepLatencyMB")]
             [Validation(Required=false)]
             public int? TotalLogicRepLatencyMB { get; set; }
 
-            /// <summary>
-            /// <para>Temporary internal endpoint for zero-downtime major version upgrade, in the format <c>****.pg.rds.aliyuncs.com</c>.  </para>
-            /// <remarks>
-            /// <para>Applies only to <b>zero-downtime</b> major version upgrades.</para>
-            /// </remarks>
-            /// 
-            /// <b>Example:</b>
-            /// <para>****.pg.rds.aliyuncs.com</para>
-            /// </summary>
             [NameInMap("zeroDownTimeConnectionString")]
             [Validation(Required=false)]
             public string ZeroDownTimeConnectionString { get; set; }
 
-            /// <summary>
-            /// <para>Port of the higher-version instance, which is the same as the source instance port.  </para>
-            /// <remarks>
-            /// <para>Applies only to <b>zero-downtime</b> major version upgrades.</para>
-            /// </remarks>
-            /// 
-            /// <b>Example:</b>
-            /// <para>5432</para>
-            /// </summary>
             [NameInMap("zeroDownTimePort")]
             [Validation(Required=false)]
             public int? ZeroDownTimePort { get; set; }

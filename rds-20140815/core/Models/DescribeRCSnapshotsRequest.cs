@@ -64,29 +64,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string SnapshotIds { get; set; }
 
-        /// <summary>
-        /// <para>Tag Details.</para>
-        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeRCSnapshotsRequestTag> Tag { get; set; }
         public class DescribeRCSnapshotsRequestTag : TeaModel {
-            /// <summary>
-            /// <para>The tag value.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>testRC</para>
-            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
-            /// <summary>
-            /// <para>The tag key.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>test01</para>
-            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

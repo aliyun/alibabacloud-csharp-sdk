@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyMaskingRulesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +20,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Database name</para>
-        /// 
         /// <b>Example:</b>
         /// <para>myDB</para>
         /// </summary>
@@ -31,8 +28,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>Name of the default encryption or masking algorithm</para>
-        /// 
         /// <b>Example:</b>
         /// <para>sm4-128-gcm</para>
         /// </summary>
@@ -41,8 +36,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DefaultAlgo { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the rule is enabled. Valid values: true, false</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -51,8 +44,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string Enabled { get; set; }
 
         /// <summary>
-        /// <para>Rule algorithm. Multiple algorithms can be specified. Masking Algorithm can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, number of encrypted digits}}</para>
-        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;name&quot;: &quot;sha256&quot;},
         ///         {&quot;name&quot;:&quot;sm4-128-gcm&quot;}]</para>
@@ -66,8 +57,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Region ID</para>
-        /// 
         /// <b>Example:</b>
         /// <para>ap-southeast-1</para>
         /// </summary>
@@ -83,15 +72,11 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
-        /// <summary>
-        /// <para>Rule configuration, in JSON string format</para>
-        /// </summary>
         [NameInMap("RuleConfig")]
         [Validation(Required=false)]
         public string RuleConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>Name of the rule to modify</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

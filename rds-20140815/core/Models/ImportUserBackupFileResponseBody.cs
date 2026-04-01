@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The ID of the full backup file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>b-n8tpg24c6i0v****</para>
+        /// <para>b-n8tpg24c6i0v********</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

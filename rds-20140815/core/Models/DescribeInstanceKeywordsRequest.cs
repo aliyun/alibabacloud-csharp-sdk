@@ -9,6 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeInstanceKeywordsRequest : TeaModel {
+        /// <summary>
+        /// <para>The type of reserved keyword to query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>account</b></description></item>
+        /// <item><description><b>database</b></description></item>
+        /// </list>
+        /// <remarks>
+        /// <para> This parameter is required.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>account</para>
+        /// </summary>
         [NameInMap("Key")]
         [Validation(Required=false)]
         public string Key { get; set; }

@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The coupon ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>22120151****</para>
+        /// <para>221201******</para>
         /// </summary>
         [NameInMap("YouhuiId")]
         [Validation(Required=false)]

@@ -20,8 +20,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Precheck task ID</para>
-        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>

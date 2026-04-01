@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class SwitchOverMajorVersionUpgradeRequest : TeaModel {
-        /// <summary>
-        /// <para>Used to ensure the idempotence of the request and prevent duplicate submissions. The client generates this parameter value, which must be unique across different requests. It can contain a maximum of 64 ASCII characters and must not include non-ASCII characters.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ETnLKlblzczshOTUbOCzxxxxxxxxxx</para>
-        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -47,12 +41,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public byte[] RegionId { get; set; }
 
-        /// <summary>
-        /// <para>Resource group ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rg-acfmy****</para>
-        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

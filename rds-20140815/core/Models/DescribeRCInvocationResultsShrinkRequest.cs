@@ -9,26 +9,42 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeRCInvocationResultsShrinkRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>c-7d2a745b412b4601b2d47f6a768d****</para>
+        /// </summary>
         [NameInMap("CommandId")]
         [Validation(Required=false)]
         public string CommandId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>PlainText</para>
+        /// <para>Base64</para>
         /// </summary>
         [NameInMap("ContentEncoding")]
         [Validation(Required=false)]
         public string ContentEncoding { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("IncludeHistory")]
         [Validation(Required=false)]
         public bool? IncludeHistory { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rc-i322y2t562oh7o******</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>t-7d2a745b412b4601b2d47f6a768d****</para>
+        /// </summary>
         [NameInMap("InvokeId")]
         [Validation(Required=false)]
         public string InvokeId { get; set; }
@@ -41,17 +57,25 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string InvokeRecordStatus { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AAAAAdDWBF2</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -59,7 +83,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -67,11 +91,18 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg-acfmx****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

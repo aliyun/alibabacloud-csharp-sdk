@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

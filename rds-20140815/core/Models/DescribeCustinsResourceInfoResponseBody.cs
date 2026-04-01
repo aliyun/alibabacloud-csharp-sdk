@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rm-wz9s06u4drm******</para>
+            /// <para>rm-wz92gn1ll9fe5d3a4</para>
             /// </summary>
             [NameInMap("DBInstanceId")]
             [Validation(Required=false)]
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
             /// <para>The memory increase percentage.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>20</para>
+            /// <para>2023-10-25</para>
             /// </summary>
             [NameInMap("MemoryIncreaseRatio")]
             [Validation(Required=false)]

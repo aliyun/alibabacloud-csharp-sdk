@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class ModifyParameterTimedScheduleTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>6EF82B07-28D2-48D1-B5D6-7E78FED277C7</para>
         /// </summary>

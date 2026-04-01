@@ -26,12 +26,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
-        /// <summary>
-        /// <para>The disk ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>rcd-x4462840nwinu6rr61m5o</para>
-        /// </summary>
         [NameInMap("DiskId")]
         [Validation(Required=false)]
         public string DiskId { get; set; }

@@ -26,19 +26,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
-        /// <summary>
-        /// <para>Specifies whether to automatically use a coupon. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b> (default): Yes.</description></item>
-        /// <item><description><b>false</b>: No.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>If you use a coupon and later decrease the quota, the amount offset by the coupon will not be refunded.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
@@ -94,43 +81,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
-        /// <summary>
-        /// <para>The coupon code.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>72329885****</para>
-        /// </summary>
         [NameInMap("PromotionCode")]
         [Validation(Required=false)]
         public string PromotionCode { get; set; }
 
-        /// <summary>
-        /// <para>The restart time of the instance.</para>
-        /// <list type="bullet">
-        /// <item><description>If <b>RebootWhenFinished</b> is set to <b>false</b>, you <b>must</b> specify a restart time within 48 hours.</description></item>
-        /// <item><description>The time must follow the ISO 8601 standard in UTC+0. Format: <c>yyyy-MM-ddTHH:mmZ</c>.</description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2025-04-03T12:05Z</para>
-        /// </summary>
         [NameInMap("RebootTime")]
         [Validation(Required=false)]
         public string RebootTime { get; set; }
 
-        /// <summary>
-        /// <para>Whether to restart the instance immediately after the upgrade/downgrade operation ends. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b> (default): Yes.</description></item>
-        /// <item><description><b>false</b>: No.<remarks>
-        /// <para>If the instance is in the <b>paused</b> status, it remains in that status even if you set <c>RebootWhenFinished=true</c>, and the restart operation will not be executed.</para>
-        /// </remarks>
-        /// </description></item>
-        /// </list>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("RebootWhenFinished")]
         [Validation(Required=false)]
         public bool? RebootWhenFinished { get; set; }

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-t4n3a****</para>
+        /// <para>rm-t4n3axxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>exclusive</para>
+        /// <para>DedicatedProxy</para>
         /// </summary>
         [NameInMap("DBProxyInstanceType")]
         [Validation(Required=false)]
@@ -48,9 +48,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>Dimension.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>service,node
-        /// server,node
-        /// service</para>
+        /// <para>service</para>
         /// </summary>
         [NameInMap("Dimension")]
         [Validation(Required=false)]

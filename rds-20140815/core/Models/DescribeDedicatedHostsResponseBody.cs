@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeDedicatedHostsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The host group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dhg-7a9xxxxxxxx</para>
+        /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
         public string DedicatedHostGroupId { get; set; }
@@ -137,6 +143,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>C860658E-68A6-46C1-AF6E-3AE7C4D3CACF</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

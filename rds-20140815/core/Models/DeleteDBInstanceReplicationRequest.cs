@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DeleteDBInstanceReplicationRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the replication channel, used to identify the replication link.</para>
+        /// <para>复制通道名称，用于标识需要删除的复制链路</para>
         /// 
         /// <b>Example:</b>
         /// <para>replication-channel-001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string ChannelName { get; set; }
 
         /// <summary>
-        /// <para>Instance ID. You can invoke DescribeDBInstances to obtain it.</para>
+        /// <para>目标RDS实例ID，复制链路将从此实例上删除</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Region ID. You can invoke DescribeRegions to obtain it.</para>
+        /// <para>地域ID，表示RDS实例所在的地域</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

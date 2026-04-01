@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeImportTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID. You can obtain it by calling DescribeDBInstances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +24,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Region ID. You can obtain it by calling DescribeRegions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,6 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

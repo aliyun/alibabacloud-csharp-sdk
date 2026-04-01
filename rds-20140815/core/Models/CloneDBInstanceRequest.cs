@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>A reserved parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("BpeEnabled")]
         [Validation(Required=false)]
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5****</para>
+        /// <para>rm-uf6wjk5xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>general_essd</para>
+        /// <para>cloud_essd</para>
         /// </summary>
         [NameInMap("DBInstanceStorageType")]
         [Validation(Required=false)]
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The ID of the dedicated cluster.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dhg-7a9****</para>
+        /// <para>dhg-7a9xxxxxxxx</para>
         /// </summary>
         [NameInMap("DedicatedHostGroupId")]
         [Validation(Required=false)]
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("IoAccelerationEnabled")]
         [Validation(Required=false)]
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The internal IP address of the new instance, which must be within the CIDR block supported by the specified vSwitch. The system automatically assigns an internal IP address based on the values of the <b>VPCId</b> and <b>VSwitchId</b> parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>172.XX.XX.69</para>
+        /// <para>172.XX.XXX.69</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]
@@ -456,7 +456,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-uf6f7l4fg90****</para>
+        /// <para>vpc-uf6f7l4fg90xxxxxxxxxx</para>
         /// </summary>
         [NameInMap("VPCId")]
         [Validation(Required=false)]
@@ -470,7 +470,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-uf6adz52c2p****</para>
+        /// <para>vsw-uf6adz52c2pxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]

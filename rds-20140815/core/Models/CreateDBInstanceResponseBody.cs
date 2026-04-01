@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The internal endpoint of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5****.mysql.rds.aliyuncs.com</para>
+        /// <para>rm-uf6wjk5*****.mysql.rds.aliyuncs.com</para>
         /// </summary>
         [NameInMap("ConnectionString")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>For example, if the value of the <b>Amount</b> parameter is <b>3</b>, three instance IDs are returned. Examples: <c>rm-uf6wjk5*****1,rm-uf6wjk5*****2,rm-uf6wjk5*****3</c></para>
         /// 
         /// <b>Example:</b>
-        /// <para>rm-uf6wjk5****</para>
+        /// <para>rm-uf6wjk5*****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1007893702****</para>
+        /// <para>1007893702*****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>s2365879-a9d0-55af-fgae-f2****</para>
+        /// <para>s2365879-a9d0-55af-fgae-f2*****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

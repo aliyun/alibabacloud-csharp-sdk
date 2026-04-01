@@ -10,21 +10,33 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class RevokeAccountPrivilegeRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the account.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test1</para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rm-uf6wjk5xxxxxxx</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the database. You can revoke all permissions of the account on this database. Separate multiple databases with commas (,).</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testDB</para>
         /// </summary>
         [NameInMap("DBName")]
         [Validation(Required=false)]

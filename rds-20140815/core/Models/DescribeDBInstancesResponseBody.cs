@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         /// <para>The token that is used to display the next page. If the returned entries are displayed on multiple pages, the next page can be displayed when you call this operation again with <b>NextToken</b> specified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>o7PORW5o2TJg****</para>
+        /// <para>o7PORW5o2TJg**********</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

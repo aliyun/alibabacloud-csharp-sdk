@@ -9,14 +9,32 @@ using Tea;
 namespace AlibabaCloud.SDK.Rds20140815.Models
 {
     public class DescribeParameterTemplatesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The database engine of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>mysql</para>
+        /// </summary>
         [NameInMap("Engine")]
         [Validation(Required=false)]
         public string Engine { get; set; }
 
+        /// <summary>
+        /// <para>The version of the database engine.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8.0</para>
+        /// </summary>
         [NameInMap("EngineVersion")]
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        /// <summary>
+        /// <para>The number of parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("ParameterCount")]
         [Validation(Required=false)]
         public string ParameterCount { get; set; }
@@ -57,6 +75,12 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
 
         }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0F9B7410-EC73-510C-B385-8339455C12C6</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
