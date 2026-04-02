@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public List<DescribeEndpointGroupResponseBodyEndpointConfigurations> EndpointConfigurations { get; set; }
         public class DescribeEndpointGroupResponseBodyEndpointConfigurations : TeaModel {
+            [NameInMap("ApiKeys")]
+            [Validation(Required=false)]
+            public List<string> ApiKeys { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the client IP address preservation feature is enabled. Valid values:</para>
             /// <list type="bullet">
@@ -131,6 +135,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("ProbeProtocol")]
             [Validation(Required=false)]
             public string ProbeProtocol { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>BAILIAN</para>
+            /// </summary>
+            [NameInMap("Provider")]
+            [Validation(Required=false)]
+            public string Provider { get; set; }
 
             /// <summary>
             /// <para>The private IP address of the ENI.</para>

@@ -4783,25 +4783,7 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you configure a custom routing listener for a Global Accelerator (GA) instance, the GA instance generates a port mapping table based on the listener port range, mapping information (protocols and port ranges) of the associated endpoint groups, and IP addresses of endpoints (vSwitches), and forwards client requests to the specified IP addresses and ports in the vSwitches.
-        /// You can call this operation to create mappings for an endpoint group of a custom routing listener. Take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description><b>CreateCustomRoutingEndpointGroupDestinations</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> operation to query the status of the task.<list type="bullet">
-        /// <item><description>If the endpoint group is in the <b>updating</b> state, it indicates that the mappings are being created for the endpoint group. In this case, you can perform only query operations.</description></item>
-        /// <item><description>If the endpoint group is in the <b>active</b> state, it indicates that the mappings are created for the endpoint group.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>You cannot call the <b>CreateCustomRoutingEndpointGroupDestinations</b> operation again on the same GA instance before the previous task is completed.</description></item>
-        /// </list>
-        /// <h3>Prerequisites</h3>
-        /// <para>Make sure that the following prerequisites are met before you call this operation:</para>
-        /// <list type="bullet">
-        /// <item><description>A standard GA instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</description></item>
-        /// <item><description>A bandwidth plan is associated with the standard GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</description></item>
-        /// <item><description>An application is deployed as an endpoint to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.</description></item>
-        /// <item><description>The permissions to use custom routing listeners are acquired and a custom routing listener is created for the GA instance. The custom routing listener feature is in invitational preview. To use the feature, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex">submit a ticket</a>. For information about how to create a custom routing listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</description></item>
-        /// <item><description>An endpoint group is created for the custom routing listener. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</description></item>
-        /// </list>
+        /// <para>Creates mappings for an endpoint group that is associated with a custom routing listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4864,25 +4846,7 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you configure a custom routing listener for a Global Accelerator (GA) instance, the GA instance generates a port mapping table based on the listener port range, mapping information (protocols and port ranges) of the associated endpoint groups, and IP addresses of endpoints (vSwitches), and forwards client requests to the specified IP addresses and ports in the vSwitches.
-        /// You can call this operation to create mappings for an endpoint group of a custom routing listener. Take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description><b>CreateCustomRoutingEndpointGroupDestinations</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> operation to query the status of the task.<list type="bullet">
-        /// <item><description>If the endpoint group is in the <b>updating</b> state, it indicates that the mappings are being created for the endpoint group. In this case, you can perform only query operations.</description></item>
-        /// <item><description>If the endpoint group is in the <b>active</b> state, it indicates that the mappings are created for the endpoint group.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>You cannot call the <b>CreateCustomRoutingEndpointGroupDestinations</b> operation again on the same GA instance before the previous task is completed.</description></item>
-        /// </list>
-        /// <h3>Prerequisites</h3>
-        /// <para>Make sure that the following prerequisites are met before you call this operation:</para>
-        /// <list type="bullet">
-        /// <item><description>A standard GA instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</description></item>
-        /// <item><description>A bandwidth plan is associated with the standard GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</description></item>
-        /// <item><description>An application is deployed as an endpoint to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.</description></item>
-        /// <item><description>The permissions to use custom routing listeners are acquired and a custom routing listener is created for the GA instance. The custom routing listener feature is in invitational preview. To use the feature, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex">submit a ticket</a>. For information about how to create a custom routing listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</description></item>
-        /// <item><description>An endpoint group is created for the custom routing listener. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</description></item>
-        /// </list>
+        /// <para>Creates mappings for an endpoint group that is associated with a custom routing listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4945,25 +4909,7 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you configure a custom routing listener for a Global Accelerator (GA) instance, the GA instance generates a port mapping table based on the listener port range, mapping information (protocols and port ranges) of the associated endpoint groups, and IP addresses of endpoints (vSwitches), and forwards client requests to the specified IP addresses and ports in the vSwitches.
-        /// You can call this operation to create mappings for an endpoint group of a custom routing listener. Take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description><b>CreateCustomRoutingEndpointGroupDestinations</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> operation to query the status of the task.<list type="bullet">
-        /// <item><description>If the endpoint group is in the <b>updating</b> state, it indicates that the mappings are being created for the endpoint group. In this case, you can perform only query operations.</description></item>
-        /// <item><description>If the endpoint group is in the <b>active</b> state, it indicates that the mappings are created for the endpoint group.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>You cannot call the <b>CreateCustomRoutingEndpointGroupDestinations</b> operation again on the same GA instance before the previous task is completed.</description></item>
-        /// </list>
-        /// <h3>Prerequisites</h3>
-        /// <para>Make sure that the following prerequisites are met before you call this operation:</para>
-        /// <list type="bullet">
-        /// <item><description>A standard GA instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</description></item>
-        /// <item><description>A bandwidth plan is associated with the standard GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</description></item>
-        /// <item><description>An application is deployed as an endpoint to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.</description></item>
-        /// <item><description>The permissions to use custom routing listeners are acquired and a custom routing listener is created for the GA instance. The custom routing listener feature is in invitational preview. To use the feature, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex">submit a ticket</a>. For information about how to create a custom routing listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</description></item>
-        /// <item><description>An endpoint group is created for the custom routing listener. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</description></item>
-        /// </list>
+        /// <para>Creates mappings for an endpoint group that is associated with a custom routing listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4986,25 +4932,7 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you configure a custom routing listener for a Global Accelerator (GA) instance, the GA instance generates a port mapping table based on the listener port range, mapping information (protocols and port ranges) of the associated endpoint groups, and IP addresses of endpoints (vSwitches), and forwards client requests to the specified IP addresses and ports in the vSwitches.
-        /// You can call this operation to create mappings for an endpoint group of a custom routing listener. Take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description><b>CreateCustomRoutingEndpointGroupDestinations</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/449373.html">DescribeCustomRoutingEndpointGroup</a> operation to query the status of the task.<list type="bullet">
-        /// <item><description>If the endpoint group is in the <b>updating</b> state, it indicates that the mappings are being created for the endpoint group. In this case, you can perform only query operations.</description></item>
-        /// <item><description>If the endpoint group is in the <b>active</b> state, it indicates that the mappings are created for the endpoint group.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description>You cannot call the <b>CreateCustomRoutingEndpointGroupDestinations</b> operation again on the same GA instance before the previous task is completed.</description></item>
-        /// </list>
-        /// <h3>Prerequisites</h3>
-        /// <para>Make sure that the following prerequisites are met before you call this operation:</para>
-        /// <list type="bullet">
-        /// <item><description>A standard GA instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/206786.html">CreateAccelerator</a>.</description></item>
-        /// <item><description>A bandwidth plan is associated with the standard GA instance. For more information, see <a href="https://help.aliyun.com/document_detail/153239.html">BandwidthPackageAddAccelerator</a>.</description></item>
-        /// <item><description>An application is deployed as an endpoint to receive requests that are forwarded from GA. You can specify only vSwitches as endpoints for custom routing listeners.</description></item>
-        /// <item><description>The permissions to use custom routing listeners are acquired and a custom routing listener is created for the GA instance. The custom routing listener feature is in invitational preview. To use the feature, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex">submit a ticket</a>. For information about how to create a custom routing listener, see <a href="https://help.aliyun.com/document_detail/153253.html">CreateListener</a>.</description></item>
-        /// <item><description>An endpoint group is created for the custom routing listener. For more information, see <a href="https://help.aliyun.com/document_detail/449363.html">CreateCustomRoutingEndpointGroups</a>.</description></item>
-        /// </list>
+        /// <para>Creates mappings for an endpoint group that is associated with a custom routing listener.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22195,7 +22123,7 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Inquire about the approval status of cross-border permissions for an Alibaba Cloud account (main account).</para>
+        /// <para>Queries the approval status of cross-border permissions for an Alibaba Cloud account (main account).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22237,7 +22165,7 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Inquire about the approval status of cross-border permissions for an Alibaba Cloud account (main account).</para>
+        /// <para>Queries the approval status of cross-border permissions for an Alibaba Cloud account (main account).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22279,7 +22207,7 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Inquire about the approval status of cross-border permissions for an Alibaba Cloud account (main account).</para>
+        /// <para>Queries the approval status of cross-border permissions for an Alibaba Cloud account (main account).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22297,7 +22225,7 @@ namespace AlibabaCloud.SDK.Ga20191120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Inquire about the approval status of cross-border permissions for an Alibaba Cloud account (main account).</para>
+        /// <para>Queries the approval status of cross-border permissions for an Alibaba Cloud account (main account).</para>
         /// </summary>
         /// 
         /// <param name="request">

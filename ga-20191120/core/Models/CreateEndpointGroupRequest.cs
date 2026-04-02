@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         [Validation(Required=false)]
         public List<CreateEndpointGroupRequestEndpointConfigurations> EndpointConfigurations { get; set; }
         public class CreateEndpointGroupRequestEndpointConfigurations : TeaModel {
+            [NameInMap("ApiKeys")]
+            [Validation(Required=false)]
+            public List<string> ApiKeys { get; set; }
+
             /// <summary>
             /// <para>Specifies whether to automatically preserve client IP addresses. Valid values:</para>
             /// <list type="bullet">
@@ -123,6 +127,14 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [NameInMap("Endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>BAILIAN</para>
+            /// </summary>
+            [NameInMap("Provider")]
+            [Validation(Required=false)]
+            public string Provider { get; set; }
 
             /// <summary>
             /// <para>The private IP address of the ENI.</para>

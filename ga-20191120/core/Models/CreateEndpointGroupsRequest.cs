@@ -49,65 +49,221 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
+        /// <para>The information about the endpoint groups.</para>
+        /// <para>You can enter the information about up to 10 endpoint groups.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EndpointGroupConfigurations")]
         [Validation(Required=false)]
         public List<CreateEndpointGroupsRequestEndpointGroupConfigurations> EndpointGroupConfigurations { get; set; }
         public class CreateEndpointGroupsRequestEndpointGroupConfigurations : TeaModel {
+            /// <summary>
+            /// <para>The endpoints that are associated with the intelligent routing listener.</para>
+            /// </summary>
             [NameInMap("EndpointConfigurations")]
             [Validation(Required=false)]
             public List<CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations> EndpointConfigurations { get; set; }
             public class CreateEndpointGroupsRequestEndpointGroupConfigurationsEndpointConfigurations : TeaModel {
+                [NameInMap("ApiKeys")]
+                [Validation(Required=false)]
+                public List<string> ApiKeys { get; set; }
+
+                /// <summary>
+                /// <para>Specifies whether to automatically preserve client IP addresses. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b> (default)</description></item>
+                /// </list>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description>By default, client IP address preservation is disabled for an endpoint group of a UDP or TCP listener. You can configure this parameter based on your business requirements.</description></item>
+                /// <item><description>By default, client IP address preservation is enabled for an endpoint group of an HTTP or HTTP listener. You can obtain client IP addresses by using the X-Forwarded-For header. You cannot disable the feature.</description></item>
+                /// <item><description>EnableClientIPPreservation and EnableProxyProtocol cannot be set to true at the same time.<remarks>
+                /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client IP addresses</a>.</para>
+                /// </remarks>
+                /// </description></item>
+                /// </list>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("EnableClientIPPreservation")]
                 [Validation(Required=false)]
                 public bool? EnableClientIPPreservation { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether to use the proxy protocol to preserve client IP addresses. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b></description></item>
+                /// <item><description><b>false</b> (default)</description></item>
+                /// </list>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description>This parameter is available only to endpoint groups of TCP listeners.</description></item>
+                /// <item><description>EnableClientIPPreservation and EnableProxyProtocol cannot be set to true at the same time.<remarks>
+                /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/158080.html">Preserve client IP addresses</a>.</para>
+                /// </remarks>
+                /// </description></item>
+                /// </list>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("EnableProxyProtocol")]
                 [Validation(Required=false)]
                 public bool? EnableProxyProtocol { get; set; }
 
+                /// <summary>
+                /// <para>The IP address or domain name of the endpoint that is associated with the intelligent routing listener.</para>
+                /// <para>You can enter the IP addresses or domain names of up to 100 endpoints in an endpoint group that is associated with the intelligent routing listener.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>47.0.XX.XX</para>
+                /// </summary>
                 [NameInMap("Endpoint")]
                 [Validation(Required=false)]
                 public string Endpoint { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>BAILIAN</para>
+                /// </summary>
+                [NameInMap("Provider")]
+                [Validation(Required=false)]
+                public string Provider { get; set; }
+
+                /// <summary>
+                /// <para>The private IP address of the ENI.</para>
+                /// <remarks>
+                /// <para> This parameter is available only when you set the endpoint type to <b>ENI</b>. If you leave this parameter empty, the primary private IP address of the ENI is used.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>172.168.XX.XX</para>
+                /// </summary>
                 [NameInMap("SubAddress")]
                 [Validation(Required=false)]
                 public string SubAddress { get; set; }
 
+                /// <summary>
+                /// <para>The type of the endpoint that is associated with the intelligent routing listener. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Domain</b>: a custom domain name.</description></item>
+                /// <item><description><b>Ip</b>: a custom IP address.</description></item>
+                /// <item><description><b>IpTarget</b>: a custom private IP address.</description></item>
+                /// <item><description><b>PublicIp</b>: a public IP address provided by Alibaba Cloud.</description></item>
+                /// <item><description><b>ECS</b>: an Elastic Compute Service (ECS) instance.</description></item>
+                /// <item><description><b>SLB</b>: a Server Load Balancer (SLB) instance.</description></item>
+                /// <item><description><b>ALB</b>: an Application Load Balancer (ALB) instance.</description></item>
+                /// <item><description><b>OSS</b>: an Object Storage Service (OSS) bucket.</description></item>
+                /// <item><description><b>ENI</b>: an elastic network interface (ENI).</description></item>
+                /// <item><description><b>NLB</b>: a Network Load Balancer (NLB) instance.</description></item>
+                /// </list>
+                /// <para>You can specify up to 100 endpoint types in the endpoint group that is associated with the intelligent routing listener.</para>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description>If you set <b>Type</b> to <b>Standard</b>, you can configure the endpoint group and endpoint that are associated with the intelligent routing listener. In addition, this parameter is required.</description></item>
+                /// <item><description>If you set this parameter to <b>ECS</b>, <b>ENI</b>, <b>SLB</b>, <b>ALB</b>, <b>NLB</b>, or <b>IpTarget</b> and the AliyunServiceRoleForGaVpcEndpoint service-linked role does not exist, the system automatically creates the role.</description></item>
+                /// <item><description>If you set this parameter to <b>ALB</b> and the AliyunServiceRoleForGaAlb service-linked role does not exist, the system automatically creates the role.</description></item>
+                /// <item><description>If you set this parameter to <b>OSS</b> and the AliyunServiceRoleForGaOss service-linked role does not exist, the system automatically creates the role.</description></item>
+                /// <item><description>If you set this parameter to <b>NLB</b> and the AliyunServiceRoleForGaNlb service-linked role does not exist, the system automatically creates the role.<remarks>
+                /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/178360.html">Service-linked roles</a>.</para>
+                /// </remarks>
+                /// </description></item>
+                /// </list>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Ip</para>
+                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
+                /// <summary>
+                /// <para>The IDs of vSwitches that are deployed in the VPC.</para>
+                /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
                 public List<string> VSwitchIds { get; set; }
 
+                /// <summary>
+                /// <para>The virtual private cloud (VPC) ID.</para>
+                /// <para>You can specify one VPC ID for an endpoint group of an intelligent routing listener.</para>
+                /// <remarks>
+                /// <para> This parameter is valid and required only if Type is set to <b>IpTarget</b>.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>vpc-2zekzii824szm3hps****</para>
+                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
+                /// <summary>
+                /// <para>The weight of the endpoint.</para>
+                /// <para>Valid values: <b>0</b> to <b>255</b>.</para>
+                /// <remarks>
+                /// <para> If you set the weight of an endpoint to 0, GA stops distributing traffic to the endpoint. Proceed with caution.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
                 public long? Weight { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The description of the endpoint group.</para>
+            /// <para>The description must be up to 200 characters in length, and cannot start with http:// or https://.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>group1</para>
+            /// </summary>
             [NameInMap("EndpointGroupDescription")]
             [Validation(Required=false)]
             public string EndpointGroupDescription { get; set; }
 
+            /// <summary>
+            /// <para>The name of the endpoint group.</para>
+            /// <para>The name must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The name must start with a letter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>group1</para>
+            /// </summary>
             [NameInMap("EndpointGroupName")]
             [Validation(Required=false)]
             public string EndpointGroupName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the region where the endpoint group is created.</para>
+            /// <para>You can enter the IDs of up to 10 regions.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
             /// </summary>
             [NameInMap("EndpointGroupRegion")]
             [Validation(Required=false)]
             public string EndpointGroupRegion { get; set; }
 
+            /// <summary>
+            /// <para>The type of the endpoint group associated with the intelligent routing listener. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>default</b> (default)</description></item>
+            /// <item><description><b>virtual</b>: a virtual endpoint group.</description></item>
+            /// </list>
+            /// <para>You can specify up to 10 endpoint group types.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>default</para>
+            /// </summary>
             [NameInMap("EndpointGroupType")]
             [Validation(Required=false)]
             public string EndpointGroupType { get; set; }
@@ -116,14 +272,54 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string EndpointIpVersion { get; set; }
 
+            /// <summary>
+            /// <para>The backend service protocol of the endpoint that is associated with the intelligent routing listener. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>HTTP1.1</b> (default)</description></item>
+            /// <item><description><b>HTTP2</b></description></item>
+            /// </list>
+            /// <remarks>
+            /// <para> You can specify this parameter only if the EndpointRequestProtocol parameter is set to HTTPS.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>HTTP1.1</para>
+            /// </summary>
             [NameInMap("EndpointProtocolVersion")]
             [Validation(Required=false)]
             public string EndpointProtocolVersion { get; set; }
 
+            /// <summary>
+            /// <para>The backend service protocol. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>HTTP</b></description></item>
+            /// <item><description><b>HTTPS</b></description></item>
+            /// </list>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>You can specify this parameter only if the listener that is associated with the endpoint group uses HTTP or HTTPS.</description></item>
+            /// <item><description>The backend service protocol of an HTTP listener must be HTTP.</description></item>
+            /// </list>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>HTTP</para>
+            /// </summary>
             [NameInMap("EndpointRequestProtocol")]
             [Validation(Required=false)]
             public string EndpointRequestProtocol { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable health checks for the endpoint group. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: enables the health check feature.</description></item>
+            /// <item><description><b>false</b> (default): disables the health check feature.</description></item>
+            /// </list>
+            /// <para>You can enable the health check feature for up to 10 endpoint groups.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("HealthCheckEnabled")]
             [Validation(Required=false)]
             public bool? HealthCheckEnabled { get; set; }
@@ -132,72 +328,183 @@ namespace AlibabaCloud.SDK.Ga20191120.Models
             [Validation(Required=false)]
             public string HealthCheckHost { get; set; }
 
+            /// <summary>
+            /// <para>The interval at which health checks are performed. Unit: seconds.</para>
+            /// <para>You can specify up to 10 health check intervals.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("HealthCheckIntervalSeconds")]
             [Validation(Required=false)]
             public long? HealthCheckIntervalSeconds { get; set; }
 
+            /// <summary>
+            /// <para>The health check path.</para>
+            /// <para>You can specify up to 10 health check paths.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>/healthcheck</para>
+            /// </summary>
             [NameInMap("HealthCheckPath")]
             [Validation(Required=false)]
             public string HealthCheckPath { get; set; }
 
+            /// <summary>
+            /// <para>The port that you want to use for health checks. Valid values: <b>1</b> to <b>65535</b>.</para>
+            /// <para>You can specify up to 10 ports for health checks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("HealthCheckPort")]
             [Validation(Required=false)]
             public long? HealthCheckPort { get; set; }
 
+            /// <summary>
+            /// <para>The protocol over which health check requests are sent. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>tcp</b> or <b>TCP</b></description></item>
+            /// <item><description><b>http</b> or <b>HTTP</b></description></item>
+            /// <item><description><b>https</b> or <b>HTTPS</b></description></item>
+            /// </list>
+            /// <para>You can specify up to 10 health check protocols.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>tcp</para>
+            /// </summary>
             [NameInMap("HealthCheckProtocol")]
             [Validation(Required=false)]
             public string HealthCheckProtocol { get; set; }
 
+            /// <summary>
+            /// <para>The port mappings.</para>
+            /// </summary>
             [NameInMap("PortOverrides")]
             [Validation(Required=false)]
             public List<CreateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides> PortOverrides { get; set; }
             public class CreateEndpointGroupsRequestEndpointGroupConfigurationsPortOverrides : TeaModel {
+                /// <summary>
+                /// <para>The endpoint port that is mapped to the listener port.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>80</para>
+                /// </summary>
                 [NameInMap("EndpointPort")]
                 [Validation(Required=false)]
                 public long? EndpointPort { get; set; }
 
+                /// <summary>
+                /// <para>The listener port.</para>
+                /// <para>Valid values: <b>1</b> to <b>65499</b>.</para>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description>You cannot configure port mappings for virtual endpoint groups of TCP listeners. If a virtual endpoint group already exists on the listener, you cannot configure port mappings for the default endpoint group. If port mappings are configured for the default endpoint group, you cannot add a virtual endpoint group.</description></item>
+                /// <item><description>If you configure port mappings for a listener, you cannot modify the listener protocol. You can only switch between HTTP and HTTPS.</description></item>
+                /// <item><description>Listener port: When you modify the listener port range, make sure that the port range includes the ports configured in port mappings. For example, if you set the listener port range to 80 to 82 and map the listener ports to endpoint ports 100 to 102, you cannot change the listener port range to 80 to 81.</description></item>
+                /// </list>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>443</para>
+                /// </summary>
                 [NameInMap("ListenerPort")]
                 [Validation(Required=false)]
                 public long? ListenerPort { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>This parameter is not in use. Ignore this parameter.</para>
+            /// </summary>
             [NameInMap("SystemTag")]
             [Validation(Required=false)]
             public List<CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag> SystemTag { get; set; }
             public class CreateEndpointGroupsRequestEndpointGroupConfigurationsSystemTag : TeaModel {
+                /// <summary>
+                /// <para>This parameter is not in use. Ignore this parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>system-tag-key</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>This parameter is not in use. Ignore this parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>public</para>
+                /// </summary>
                 [NameInMap("Scope")]
                 [Validation(Required=false)]
                 public string Scope { get; set; }
 
+                /// <summary>
+                /// <para>This parameter is not in use. Ignore this parameter.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>system-tag-value</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The tags of the endpoint group.</para>
+            /// </summary>
             [NameInMap("Tag")]
             [Validation(Required=false)]
             public List<CreateEndpointGroupsRequestEndpointGroupConfigurationsTag> Tag { get; set; }
             public class CreateEndpointGroupsRequestEndpointGroupConfigurationsTag : TeaModel {
+                /// <summary>
+                /// <para>The tag key of the endpoint group. The tag key cannot be an empty string.</para>
+                /// <para>The tag key must be up to 64 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+                /// <para>You can enter up to 20 tag keys.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tag-key</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag value of the endpoint group. The tag value can be an empty string.</para>
+                /// <para>The tag value can be up to 128 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+                /// <para>You can enter up to 20 tag values.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tag-value</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The number of consecutive health check failures that must occur before a healthy endpoint group is considered unhealthy, or the number of consecutive health check successes that must occur before an unhealthy endpoint group is considered healthy. Valid values: <b>2</b> to <b>10</b>. Default value: <b>3</b>.</para>
+            /// <para>You can specify up to 10 values (the number of consecutive health check successes or consecutive health check failures).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("ThresholdCount")]
             [Validation(Required=false)]
             public long? ThresholdCount { get; set; }
 
+            /// <summary>
+            /// <para>The traffic distribution ratio. If an intelligent routing listener is associated with multiple endpoint groups, you can configure this parameter to specify the ratio of traffic distributed to each endpoint group.</para>
+            /// <para>Valid values: <b>1</b> to <b>100</b>. Default value: <b>100</b>.</para>
+            /// <para>You can specify the traffic distribution ratios for up to 10 endpoint groups.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("TrafficPercentage")]
             [Validation(Required=false)]
             public long? TrafficPercentage { get; set; }
