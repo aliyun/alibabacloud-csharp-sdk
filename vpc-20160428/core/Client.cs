@@ -646,7 +646,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</para>
+        /// <para>AddCommonBandwidthPackageIp</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -725,7 +725,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</para>
+        /// <para>AddCommonBandwidthPackageIp</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -804,7 +804,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</para>
+        /// <para>AddCommonBandwidthPackageIp</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -827,7 +827,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an elastic IP address (EIP) with an Internet Shared Bandwidth instance.</para>
+        /// <para>AddCommonBandwidthPackageIp</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10002,6 +10002,230 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateDhcpOptionsSetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建增强型VPN网关</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnhancedVpnGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnhancedVpnGatewayResponse
+        /// </returns>
+        public CreateEnhancedVpnGatewayResponse CreateEnhancedVpnGatewayWithOptions(CreateEnhancedVpnGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisasterRecoveryVSwitchId))
+            {
+                query["DisasterRecoveryVSwitchId"] = request.DisasterRecoveryVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
+            {
+                query["GatewayType"] = request.GatewayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpnType))
+            {
+                query["VpnType"] = request.VpnType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEnhancedVpnGateway",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEnhancedVpnGatewayResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建增强型VPN网关</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnhancedVpnGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnhancedVpnGatewayResponse
+        /// </returns>
+        public async Task<CreateEnhancedVpnGatewayResponse> CreateEnhancedVpnGatewayWithOptionsAsync(CreateEnhancedVpnGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisasterRecoveryVSwitchId))
+            {
+                query["DisasterRecoveryVSwitchId"] = request.DisasterRecoveryVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
+            {
+                query["GatewayType"] = request.GatewayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpnType))
+            {
+                query["VpnType"] = request.VpnType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateEnhancedVpnGateway",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateEnhancedVpnGatewayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建增强型VPN网关</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnhancedVpnGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnhancedVpnGatewayResponse
+        /// </returns>
+        public CreateEnhancedVpnGatewayResponse CreateEnhancedVpnGateway(CreateEnhancedVpnGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateEnhancedVpnGatewayWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建增强型VPN网关</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateEnhancedVpnGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateEnhancedVpnGatewayResponse
+        /// </returns>
+        public async Task<CreateEnhancedVpnGatewayResponse> CreateEnhancedVpnGatewayAsync(CreateEnhancedVpnGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateEnhancedVpnGatewayWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -25466,6 +25690,174 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes an Enhanced VPN gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEnhancedVpnGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnhancedVpnGatewayResponse
+        /// </returns>
+        public DeleteEnhancedVpnGatewayResponse DeleteEnhancedVpnGatewayWithOptions(DeleteEnhancedVpnGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpnGatewayId))
+            {
+                query["VpnGatewayId"] = request.VpnGatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEnhancedVpnGateway",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEnhancedVpnGatewayResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Enhanced VPN gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEnhancedVpnGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnhancedVpnGatewayResponse
+        /// </returns>
+        public async Task<DeleteEnhancedVpnGatewayResponse> DeleteEnhancedVpnGatewayWithOptionsAsync(DeleteEnhancedVpnGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpnGatewayId))
+            {
+                query["VpnGatewayId"] = request.VpnGatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteEnhancedVpnGateway",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteEnhancedVpnGatewayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Enhanced VPN gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEnhancedVpnGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnhancedVpnGatewayResponse
+        /// </returns>
+        public DeleteEnhancedVpnGatewayResponse DeleteEnhancedVpnGateway(DeleteEnhancedVpnGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteEnhancedVpnGatewayWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Enhanced VPN gateway.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteEnhancedVpnGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteEnhancedVpnGatewayResponse
+        /// </returns>
+        public async Task<DeleteEnhancedVpnGatewayResponse> DeleteEnhancedVpnGatewayAsync(DeleteEnhancedVpnGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteEnhancedVpnGatewayWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a Express Connect instance, including the initiator and acceptor.</para>
         /// </summary>
         /// 
@@ -38250,7 +38642,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and get up to 400 data points in each request.</para>
+        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and obtain up to 400 data points in each request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -38329,7 +38721,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and get up to 400 data points in each request.</para>
+        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and obtain up to 400 data points in each request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -38408,7 +38800,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and get up to 400 data points in each request.</para>
+        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and obtain up to 400 data points in each request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -38431,7 +38823,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and get up to 400 data points in each request.</para>
+        /// <para>Queries the monitoring data of an elastic IP address (EIP). You can query monitoring data within the last 30 days, and obtain up to 400 data points in each request.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -58788,7 +59180,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries he connection features supported by a Express Connect circuit.</para>
+        /// <para>Querying the connection features supported by a Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58854,7 +59246,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries he connection features supported by a Express Connect circuit.</para>
+        /// <para>Querying the connection features supported by a Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58920,7 +59312,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries he connection features supported by a Express Connect circuit.</para>
+        /// <para>Querying the connection features supported by a Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58938,7 +59330,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries he connection features supported by a Express Connect circuit.</para>
+        /// <para>Querying the connection features supported by a Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77228,7 +77620,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an EIP from an Internet Shared Bandwidth instance.</para>
+        /// <para>The region ID of the Internet Shared Bandwidth instance.
+        /// You can call the [DescribeRegions]\(<del>36063</del>) operation to query the most recent region list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77298,7 +77691,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an EIP from an Internet Shared Bandwidth instance.</para>
+        /// <para>The region ID of the Internet Shared Bandwidth instance.
+        /// You can call the [DescribeRegions]\(<del>36063</del>) operation to query the most recent region list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77368,7 +77762,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an EIP from an Internet Shared Bandwidth instance.</para>
+        /// <para>The region ID of the Internet Shared Bandwidth instance.
+        /// You can call the [DescribeRegions]\(<del>36063</del>) operation to query the most recent region list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77386,7 +77781,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an EIP from an Internet Shared Bandwidth instance.</para>
+        /// <para>The region ID of the Internet Shared Bandwidth instance.
+        /// You can call the [DescribeRegions]\(<del>36063</del>) operation to query the most recent region list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82948,6 +83344,198 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateDhcpOptionsSetAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改增强型VPN实例属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEnhancedVpnGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEnhancedVpnGatewayResponse
+        /// </returns>
+        public UpdateEnhancedVpnGatewayResponse UpdateEnhancedVpnGatewayWithOptions(UpdateEnhancedVpnGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPropagate))
+            {
+                query["AutoPropagate"] = request.AutoPropagate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpnGatewayId))
+            {
+                query["VpnGatewayId"] = request.VpnGatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEnhancedVpnGateway",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEnhancedVpnGatewayResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改增强型VPN实例属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEnhancedVpnGatewayRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEnhancedVpnGatewayResponse
+        /// </returns>
+        public async Task<UpdateEnhancedVpnGatewayResponse> UpdateEnhancedVpnGatewayWithOptionsAsync(UpdateEnhancedVpnGatewayRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPropagate))
+            {
+                query["AutoPropagate"] = request.AutoPropagate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpnGatewayId))
+            {
+                query["VpnGatewayId"] = request.VpnGatewayId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateEnhancedVpnGateway",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateEnhancedVpnGatewayResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改增强型VPN实例属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEnhancedVpnGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEnhancedVpnGatewayResponse
+        /// </returns>
+        public UpdateEnhancedVpnGatewayResponse UpdateEnhancedVpnGateway(UpdateEnhancedVpnGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateEnhancedVpnGatewayWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改增强型VPN实例属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateEnhancedVpnGatewayRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateEnhancedVpnGatewayResponse
+        /// </returns>
+        public async Task<UpdateEnhancedVpnGatewayResponse> UpdateEnhancedVpnGatewayAsync(UpdateEnhancedVpnGatewayRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateEnhancedVpnGatewayWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

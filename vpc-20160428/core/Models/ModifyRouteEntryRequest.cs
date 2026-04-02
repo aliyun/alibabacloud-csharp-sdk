@@ -21,7 +21,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The destination CIDR block of the route entry. Only IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported.</para>
+        /// <para>The destination CIDR block of the route entry, which supports IPv4 CIDR blocks and IPv6 CIDR blocks.</para>
+        /// <remarks>
+        /// <para>When the <b>RouteEntryId</b> parameter is not provided, both the <b>DestinationCidrBlock</b> and <b>RouteTableId</b> parameters are required.
+        /// When modifying a route whose destination CIDR block points to a prefix list, the <b>RouteEntryId</b> parameter is required, and the <b>DestinationCidrBlock</b> parameter does not support prefix list CIDR blocks or prefix list instance IDs.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.0/24</para>

@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class UpdateNetworkAclEntriesRequestEgressAclEntries : TeaModel {
             /// <summary>
             /// <para>The description of the outbound rule.</para>
-            /// <para>The description must be 1 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is EgressAclEntries.</para>
@@ -56,17 +56,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The destination CIDR block.</para>
+            /// <para>The destination CIDR block. Alternatively, a prefix list ID can be provided.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10.0.0.0/24</para>
+            /// <para>10.0.0.0/24
+            /// pl-xxxxxx</para>
             /// </summary>
             [NameInMap("DestinationCidrIp")]
             [Validation(Required=false)]
             public string DestinationCidrIp { get; set; }
 
             /// <summary>
-            /// <para>The type of the rule. Set the value to <b>custom</b>, which specifies custom rules.</para>
+            /// <para>The rule type. Set the value to <b>custom</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>
@@ -76,9 +77,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string EntryType { get; set; }
 
             /// <summary>
-            /// <para>The IP version. Valid values:</para>
+            /// <para>The IP version:</para>
             /// <list type="bullet">
-            /// <item><description><b>IPv4</b> (default)</description></item>
+            /// <item><description><b>IPv4</b></description></item>
             /// <item><description><b>IPv6</b></description></item>
             /// </list>
             /// 
@@ -91,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The ID of the outbound rule.</para>
-            /// <para>Valid values of <b>N</b>: <b>0</b> to <b>99</b>. You can specify at most 100 outbound rules.</para>
+            /// <para>Valid values of <b>N</b>: <b>0</b> to <b>99</b>. You can specify at most 100 outbound rule IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nae-2zecs97e0brcge46****</para>
@@ -112,7 +113,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NetworkAclEntryName { get; set; }
 
             /// <summary>
-            /// <para>The action to be performed on network traffic that matches the rule. Valid values:</para>
+            /// <para>The access control policy. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>accept</b></description></item>
             /// <item><description><b>drop</b></description></item>
@@ -128,8 +129,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The destination port range of the outbound traffic.</para>
             /// <list type="bullet">
-            /// <item><description>If the <b>protocol</b> of the outbound rule is set to <b>all</b>, <b>icmp</b>, or <b>gre</b>, the port range is -1/-1, which specified all ports.</description></item>
-            /// <item><description>If the <b>protocol</b> of the outbound rule is set to <b>tcp</b> or <b>udp</b>, set the port range in the following format: <b>1/200</b> or <b>80/80</b>, which specifies port 1 to port 200 or port 80. Valid values for a port: <b>1</b> to <b>65535</b>.</description></item>
+            /// <item><description>If <b>Protocol</b> is set to <b>all</b>, <b>icmp</b>, or <b>gre</b>, the port range is -1/-1, which indicates all ports are available.</description></item>
+            /// <item><description>If <b>Protocol</b> is set to <b>tcp</b> or <b>udp</b>, valid port numbers are <b>1</b> to <b>65535</b>. Format: <b>1/200</b> (port 1 to 200) or <b>80/80</b> (port 80).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,13 +141,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The protocol. Valid values:</para>
+            /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>icmp</b></description></item>
             /// <item><description><b>gre</b></description></item>
             /// <item><description><b>tcp</b></description></item>
             /// <item><description><b>udp</b></description></item>
             /// <item><description><b>all</b></description></item>
+            /// <item><description><b>icmpv6</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -159,7 +161,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>The information about the inbound rule.</para>
+        /// <para>The information about the inbound rules.</para>
         /// </summary>
         [NameInMap("IngressAclEntries")]
         [Validation(Required=false)]
@@ -167,7 +169,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class UpdateNetworkAclEntriesRequestIngressAclEntries : TeaModel {
             /// <summary>
             /// <para>The description of the inbound rule.</para>
-            /// <para>The description must be 1 to 256 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The description must be 1 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is IngressAclEntries.</para>
@@ -177,7 +179,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The type of the rule. Set the value to <b>custom</b>, which specifies custom rules.</para>
+            /// <para>The rule type. Set the value to <b>custom</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>
@@ -187,9 +189,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string EntryType { get; set; }
 
             /// <summary>
-            /// <para>The IP version. Valid values:</para>
+            /// <para>The IP version:</para>
             /// <list type="bullet">
-            /// <item><description><b>IPv4</b> (default)</description></item>
+            /// <item><description><b>IPv4</b></description></item>
             /// <item><description><b>IPv6</b></description></item>
             /// </list>
             /// 
@@ -202,7 +204,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The ID of the inbound rule.</para>
-            /// <para>Valid values of <b>N</b>: <b>0</b> to <b>99</b>. You can specify at most 100 inbound rules.</para>
+            /// <para>Valid values of <b>N</b>: <b>0</b> to <b>99</b>. You can specify at most 100 inbound rule IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nae-2zepn32de59j8m4****</para>
@@ -223,9 +225,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string NetworkAclEntryName { get; set; }
 
             /// <summary>
-            /// <para>The action to be performed on network traffic that matches the rule. Valid values:</para>
+            /// <para>The access control policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>accept</b></description></item>
+            /// <item><description><b>accept</b>: allows network traffic.</description></item>
             /// <item><description><b>drop</b></description></item>
             /// </list>
             /// 
@@ -239,8 +241,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The source port range of the inbound rule.</para>
             /// <list type="bullet">
-            /// <item><description>If the <b>protocol</b> of the inbound rule is set to <b>all</b>, <b>icmp</b>, or <b>gre</b>, the port range is -1/-1, which specifies all ports.</description></item>
-            /// <item><description>If the <b>protocol</b> of the inbound rule is set to <b>tcp</b> or <b>udp</b>, set the port range in the following format: <b>1/200</b> or <b>80/80</b>, which specifies port 1 to port 200 or port 80. Valid ports: <b>1</b> to <b>65535</b>.</description></item>
+            /// <item><description>If <b>Protocol</b> is set to <b>all</b>, <b>icmp</b>, or <b>gre</b>, the port range is -1/-1, which indicates all ports are available.</description></item>
+            /// <item><description>If <b>Protocol</b> is set to <b>tcp</b> or <b>udp</b>, valid port numbers are <b>1</b> to <b>65535</b>. Format: <b>1/200</b> (port 1 to 200) or <b>80/80</b> (port 80).</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -251,13 +253,14 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The protocol. Valid values:</para>
+            /// <para>Protocol type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>icmp</b></description></item>
             /// <item><description><b>gre</b></description></item>
             /// <item><description><b>tcp</b></description></item>
             /// <item><description><b>udp</b></description></item>
             /// <item><description><b>all</b></description></item>
+            /// <item><description><b>icmpv6</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -268,10 +271,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The source CIDR block.</para>
+            /// <para>The source CIDR block. Alternatively, a prefix list ID can be provided.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10.0.0.0/24</para>
+            /// <para>10.0.0.0/24
+            /// pl-xxxxxx</para>
             /// </summary>
             [NameInMap("SourceCidrIp")]
             [Validation(Required=false)]

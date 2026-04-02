@@ -1,3 +1,9 @@
+2026-04-02 Version: 7.1.0
+- Support API CreateEnhancedVpnGateway.
+- Support API DeleteEnhancedVpnGateway.
+- Support API UpdateEnhancedVpnGateway.
+
+
 2026-02-28 Version: 7.0.1
 - Generated csharp 2016-04-28 for Vpc.
 
