@@ -113,6 +113,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public string KmsKeyId { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>tcp_and_ssl</para>
+                /// </summary>
+                [NameInMap("ListenerMode")]
+                [Validation(Required=false)]
+                public string ListenerMode { get; set; }
+
+                /// <summary>
                 /// <para>The maximum number of Internet-based transactions per second (TPS) for the instance.</para>
                 /// 
                 /// <b>Example:</b>
@@ -211,6 +219,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>sg-xxx</para>
+                /// </summary>
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
+                /// <summary>
                 /// <para>The instance status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>DEPLOYING: The instance is being deployed.</description></item>
@@ -277,6 +293,18 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                     public string Value { get; set; }
 
                 }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>vpc-xxx</para>
+                /// </summary>
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
+
+                [NameInMap("VswitchIds")]
+                [Validation(Required=false)]
+                public List<string> VswitchIds { get; set; }
 
             }
 

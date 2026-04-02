@@ -578,6 +578,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VswitchIds))
+            {
+                request.VswitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VswitchIds, "VswitchIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -610,6 +614,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
             {
                 query["KmsKeyId"] = request.KmsKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListenerMode))
+            {
+                query["ListenerMode"] = request.ListenerMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConnections))
             {
@@ -655,6 +663,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessChargeType))
             {
                 query["ServerlessChargeType"] = request.ServerlessChargeType;
@@ -678,6 +690,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TracingStorageTime))
             {
                 query["TracingStorageTime"] = request.TracingStorageTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchIdsShrink))
+            {
+                query["VswitchIds"] = request.VswitchIdsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -727,6 +747,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VswitchIds))
+            {
+                request.VswitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VswitchIds, "VswitchIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
@@ -759,6 +783,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
             {
                 query["KmsKeyId"] = request.KmsKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListenerMode))
+            {
+                query["ListenerMode"] = request.ListenerMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxConnections))
             {
@@ -804,6 +832,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessChargeType))
             {
                 query["ServerlessChargeType"] = request.ServerlessChargeType;
@@ -827,6 +859,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TracingStorageTime))
             {
                 query["TracingStorageTime"] = request.TracingStorageTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VswitchIdsShrink))
+            {
+                query["VswitchIds"] = request.VswitchIdsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

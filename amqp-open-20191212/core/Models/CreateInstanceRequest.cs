@@ -104,6 +104,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string KmsKeyId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>tcp_and_ssl</para>
+        /// </summary>
+        [NameInMap("ListenerMode")]
+        [Validation(Required=false)]
+        public string ListenerMode { get; set; }
+
+        /// <summary>
         /// <para>The maximum number of connections that can be established to the instance.</para>
         /// <para>Configure this parameter based on the values provided on the <a href="https://common-buy.aliyun.com/?commodityCode=ons_onsproxy_pre">ApsaraMQ for RocketMQ buy page</a>.</para>
         /// 
@@ -235,6 +243,16 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sg-xxx</para>
+        /// </summary>
+        [NameInMap("SecurityGroupId")]
+        [Validation(Required=false)]
+        public string SecurityGroupId { get; set; }
+
+        /// <summary>
         /// <para>The billing method of the serverless instance. Valid value:</para>
         /// <list type="bullet">
         /// <item><description>onDemand: You are charged based on your actual usage.</description></item>
@@ -339,6 +357,23 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [NameInMap("TracingStorageTime")]
         [Validation(Required=false)]
         public int? TracingStorageTime { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-xxx</para>
+        /// </summary>
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("VswitchIds")]
+        [Validation(Required=false)]
+        public List<string> VswitchIds { get; set; }
 
     }
 

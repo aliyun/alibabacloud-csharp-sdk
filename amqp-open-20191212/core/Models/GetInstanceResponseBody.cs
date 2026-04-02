@@ -75,6 +75,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>tcp_and_ssl</para>
+            /// </summary>
+            [NameInMap("ListenerMode")]
+            [Validation(Required=false)]
+            public string ListenerMode { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>1500</para>
             /// </summary>
             [NameInMap("MaxConnections")]
@@ -155,6 +163,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>sg-xxx</para>
+            /// </summary>
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>SERVING</para>
             /// </summary>
             [NameInMap("Status")]
@@ -206,6 +222,18 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
             [NameInMap("TracingStorageTime")]
             [Validation(Required=false)]
             public int? TracingStorageTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>vpc-xxx</para>
+            /// </summary>
+            [NameInMap("VpcId")]
+            [Validation(Required=false)]
+            public string VpcId { get; set; }
+
+            [NameInMap("VswitchIds")]
+            [Validation(Required=false)]
+            public List<string> VswitchIds { get; set; }
 
         }
 
