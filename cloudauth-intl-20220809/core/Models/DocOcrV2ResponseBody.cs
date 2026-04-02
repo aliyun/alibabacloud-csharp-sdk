@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
-    public class InitializeResponseBody : TeaModel {
+    public class DocOcrV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message</para>
-        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -30,64 +26,46 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4EB35****87EBA1</para>
+        /// <para>86C40EC3-5940-5F47-995C-BFE90B70E540</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>Return result</para>
-        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public InitializeResponseBodyResult Result { get; set; }
-        public class InitializeResponseBodyResult : TeaModel {
-            /// <summary>
-            /// <para>Client configuration</para>
-            /// 
-            /// <b>Example:</b>
-            /// <hr>
-            /// </summary>
-            [NameInMap("ClientCfg")]
+        public DocOcrV2ResponseBodyResult Result { get; set; }
+        public class DocOcrV2ResponseBodyResult : TeaModel {
+            [NameInMap("ExtIdInfo")]
             [Validation(Required=false)]
-            public string ClientCfg { get; set; }
+            public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>Standard encryption protocol for authentication.</para>
-            /// <remarks>
-            /// <para>Required when integrating with H5 web pages using iframe embedding.</para>
-            /// </remarks>
-            /// 
             /// <b>Example:</b>
-            /// <para>hksb7ba1b28130d24e015d*********</para>
+            /// <para>Y</para>
             /// </summary>
-            [NameInMap("Protocol")]
+            [NameInMap("Passed")]
             [Validation(Required=false)]
-            public string Protocol { get; set; }
+            public string Passed { get; set; }
 
             /// <summary>
-            /// <para>Authentication ID</para>
-            /// 
+            /// <b>Example:</b>
+            /// <para>200</para>
+            /// </summary>
+            [NameInMap("SubCode")]
+            [Validation(Required=false)]
+            public string SubCode { get; set; }
+
+            /// <summary>
             /// <b>Example:</b>
             /// <para>08573be80f944d95ac812e019e3655a8</para>
             /// </summary>
             [NameInMap("TransactionId")]
             [Validation(Required=false)]
             public string TransactionId { get; set; }
-
-            /// <summary>
-            /// <para>Web authentication URL</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>http****</para>
-            /// </summary>
-            [NameInMap("TransactionUrl")]
-            [Validation(Required=false)]
-            public string TransactionUrl { get; set; }
 
         }
 

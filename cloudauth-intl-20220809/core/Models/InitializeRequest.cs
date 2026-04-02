@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class InitializeRequest : TeaModel {
         /// <summary>
-        /// <para><warning>This feature is currently not supported by <b>Web SDK</b>. Please refer to the App SDK integration if needed.</warning></para>
-        /// <para>Whether to enable strict face quality detection:</para>
+        /// <para><warning>This feature is not supported by <b>Web SDK</b>. Please refer to the App SDK integration if needed.</warning></para>
+        /// <para>Whether to enable strict face quality check:</para>
         /// <list type="bullet">
-        /// <item><description>Y: Enable (default)</description></item>
-        /// <item><description>N: Disable</description></item>
+        /// <item><description>Y: Enabled (default)</description></item>
+        /// <item><description>N: Disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string AutoRegistration { get; set; }
 
         /// <summary>
-        /// <para>Security Token, used for preventing duplication and tampering. If this parameter is passed, the CallbackToken field will be displayed in the callback address.</para>
+        /// <para>Security token used for preventing duplication and tampering. If this parameter is passed, the CallbackToken field will be displayed in the callback URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7ca5c68d869344ea8eeb30cdfd544544-6358700</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CallbackToken { get; set; }
 
         /// <summary>
-        /// <para>Callback notification address for authentication results. The default callback request method is GET, and the callback address must start with https. After completing the authentication, the platform will call back this address and automatically add the transactionId, passed, and subcode fields.</para>
+        /// <para>Callback notification URL for authentication results. The default callback request method is GET, and the callback URL must start with https. After completing the authentication, the platform will call back this URL and automatically add the transactionId, passed, and subcode fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.aliyun.com?callbackToken=1000004826&transactionId=shaxxxx&passed=Y&subCode=200">https://www.aliyun.com?callbackToken=1000004826&amp;transactionId=shaxxxx&amp;passed=Y&amp;subCode=200</a></para>
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>Whether to enable adaptive color-changing window border</para>
         /// <list type="bullet">
-        /// <item><description><b>Y</b>: Enable</description></item>
-        /// <item><description><b>N</b>: Disable</description></item>
+        /// <item><description><b>Y</b>: Enabled</description></item>
+        /// <item><description><b>N</b>: Disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DateOfExpiry { get; set; }
 
         /// <summary>
-        /// <para>User\&quot;s real name.</para>
+        /// <para>The real name of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>张三</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocNo { get; set; }
 
         /// <summary>
-        /// <para>Customer-defined input to specify whether to collect more pages</para>
+        /// <para>Customer-defined input for whether to capture additional pages</para>
         /// </summary>
         [NameInMap("DocPageConfig")]
         [Validation(Required=false)]
@@ -156,26 +156,31 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocScanMode { get; set; }
 
         /// <summary>
-        /// <para>Document type, uniquely identified by an 8-digit combination.
-        /// Note: This parameter is required only when ProductCode is KYC_GLOBAL, OCR_GLOBAL, or IDR_GLOBAL.</para>
+        /// <para>Document type</para>
+        /// <remarks>
+        /// <para>For eKYC_PRO and ID_OCR_MAX solutions, see the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr">https://www.alibabacloud.com/help/zh/ekyc/latest/certificate-code-table?spm=a2c63.p38356.help-menu-445633.d_2_8_2_0.279147abwKAWbr</a></para>
+        /// </remarks>
+        /// <remarks>
+        /// <para>For ID_OCR, eKYC, and eYKC_MIN solutions, see the official documentation: Document Type List <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7">https://www.alibabacloud.com/help/zh/ekyc/latest/gnhekqy05ni51m4c?spm=a2c63.p38356.help-menu-445633.d_2_3_1_0_0_0.6243244777KoZ7</a></para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>​01560000</para>
+        /// <para>00000001</para>
         /// </summary>
         [NameInMap("DocType")]
         [Validation(Required=false)]
         public string DocType { get; set; }
 
         /// <summary>
-        /// <para>Whether to require a video for evidence.</para>
+        /// <para>Whether to require evidence video.</para>
         /// <list type="bullet">
         /// <item><description><para>N: Not required (default).</para>
         /// </description></item>
-        /// <item><description><para>Y: During the authentication process, a 1~2 second video of the user\&quot;s face will be captured and returned via the query interface.</para>
+        /// <item><description><para>Y: During the authentication process, a 1-2 second video of the user\&quot;s face will be captured and returned via the query interface.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Due to the large size of the video file, the system may discard it when the network is unstable, prioritizing the transmission of necessary images for authentication.</para>
+        /// <para>Due to the large size of video files, the system may discard them in case of network instability, prioritizing the transmission of necessary images for authentication.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -199,7 +204,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocumentNumber { get; set; }
 
         /// <summary>
-        /// <para>In the document OCR recognition step, whether the recognition result page is editable:</para>
+        /// <para>Whether the OCR result page is editable in the document OCR recognition process:</para>
         /// <list type="bullet">
         /// <item><description><para><b>0</b>: Not editable</para>
         /// </description></item>
@@ -214,6 +219,17 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string EditOcrResult { get; set; }
 
+        /// <summary>
+        /// <para>Enter an Indonesian email address. This field is only effective when Authorize=T.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This field is required only when the Indonesian data source is enabled.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="mailto:evxxx@imigxxxxx.go.id">evxxx@imigxxxxx.go.id</a></para>
+        /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
@@ -229,7 +245,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ExperienceCode { get; set; }
 
         /// <summary>
-        /// <para>Face library to be compared</para>
+        /// <para>The face library to be compared</para>
         /// 
         /// <b>Example:</b>
         /// <para>0e0c34a77f</para>
@@ -239,8 +255,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceGroupCodes { get; set; }
 
         /// <summary>
-        /// <para>Base64 encoded face image. If you choose to pass the face image via FacePictureBase64, please check the image size and do not upload images larger than 1 MB.
-        /// When productCode is FV_GLOBAL, choose one of the parameters between FacePictureBase64 and FacePictureUrl to pass in.</para>
+        /// <para>Base64 encoded photo. If you choose to pass the face photo via FacePictureBase64, please check the photo size and avoid uploading overly large photos.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Base64</para>
@@ -250,7 +265,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FacePictureBase64 { get; set; }
 
         /// <summary>
-        /// <para>Face image URL. A publicly accessible HTTP or HTTPS link. When productCode is FV_GLOBAL, choose one of the parameters between FacePictureUrl and FacePictureBase to pass in.</para>
+        /// <para>URL of the face photo. A publicly accessible HTTP or HTTPS link.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -300,12 +315,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdSpoof { get; set; }
 
         /// <summary>
-        /// <para>Custom OCR quality detection threshold mode:</para>
+        /// <para>Custom OCR quality check threshold mode:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Standard mode</description></item>
         /// <item><description><b>1</b>: Strict mode</description></item>
         /// <item><description><b>2</b>: Lenient mode</description></item>
-        /// <item><description><b>3</b> (default): Disable quality detection</description></item>
+        /// <item><description><b>3</b> (default): Quality check disabled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -326,13 +341,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string LanguageConfig { get; set; }
 
         /// <summary>
-        /// <para>Source of MRTD verification parameters. This parameter is required to decrypt information when reading the document chip via NFC.</para>
+        /// <para>Source of MRTD verification parameters. This parameter is required for decrypting information when reading the document chip via NFC.</para>
         /// <list type="bullet">
         /// <item><description><para><b>0</b>: User input</para>
         /// </description></item>
         /// <item><description><para><b>1</b>: OCR read</para>
         /// </description></item>
-        /// <item><description><para><b>2</b>: Passed through the API</para>
+        /// <item><description><para><b>2</b>: Passed through the interface</para>
         /// </description></item>
         /// </list>
         /// 
@@ -344,7 +359,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MRTDInput { get; set; }
 
         /// <summary>
-        /// <para>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure its uniqueness.</para>
+        /// <para>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Ensure its uniqueness.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a***353888</para>
@@ -354,7 +369,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>Your custom user ID or other identifiers that can recognize specific users, such as phone numbers or email addresses. It is strongly recommended to pre-desensitize the value of this field, for example, by hashing it.</para>
+        /// <para>Your custom user ID or other identifiers that can uniquely identify a specific user, such as a phone number or email address. It is strongly recommended to pre-desensitize the value of this field, for example, by hashing it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1221****6543</para>
@@ -373,22 +388,33 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string MetaInfo { get; set; }
 
+        /// <summary>
+        /// <para>Enter an Indonesian phone number, which must be in the format (starting with +62, followed by 9-11 digits). This field is only effective when Authorize=T.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This field is required only when the Indonesian data source is enabled.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>+6281293671234</para>
+        /// </summary>
         [NameInMap("Mobile")]
         [Validation(Required=false)]
         public string Mobile { get; set; }
 
         /// <summary>
-        /// <para>The type of liveness detection to be performed:</para>
+        /// <para>Type of liveness detection to be performed:</para>
         /// <list type="bullet">
         /// <item><description><para><b>LIVENESS</b> (default): Blinking action liveness detection.</para>
         /// </description></item>
-        /// <item><description><para><b>PHOTINUS_LIVENESS</b>: Blinking action liveness + photinus liveness dual detection.</para>
+        /// <item><description><para><b>PHOTINUS_LIVENESS</b>: Dual liveness detection with blinking action and photinus liveness.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>For supported SDK versions, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/sdk-publishing-record?spm=a2c63.p38356.0.i99">SDK Publishing Record</a>.</description></item>
-        /// <item><description>PC does not support photinus liveness dual detection.</description></item>
+        /// <item><description>For supported SDK versions, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/sdk-publishing-record?spm=a2c63.p38356.0.i99">SDK Release Records</a>.</description></item>
+        /// <item><description>PC does not support dual liveness detection with photinus.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -410,7 +436,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Ocr { get; set; }
 
         /// <summary>
-        /// <para>Page configuration for collection, multiple pages are connected using commas. The value range is as follows:</para>
+        /// <para>Page configuration for collection, multiple pages are connected using commas. Value range:</para>
         /// <list type="bullet">
         /// <item><description><para><b>01</b>: Front side of the document</para>
         /// </description></item>
@@ -418,7 +444,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>When this value is 01,02, currently only Chinese and Vietnamese IDs are supported.</para>
+        /// <para>When this value is set to 01,02, it currently only supports Chinese and Vietnamese IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -431,15 +457,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>When compatibility issues occur with H5-based mobile authentication, whether to allow a fallback handling method.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>url</b> (default): Support fallback. The page displays the authentication URL, which users can copy and open in another browser to continue the authentication process.</para>
+        /// <item><description><para><b>url</b> (default): Fallback supported. The page displays the authentication URL, which users can copy and open or switch browsers to continue the authentication process.</para>
         /// </description></item>
-        /// <item><description><para><b>keep</b>: Do not support fallback. Directly return the error reason and end the authentication process.</para>
+        /// <item><description><para><b>keep</b>: Fallback not supported. The error reason is returned directly, and the authentication process ends.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This switch is not supported on PC.</description></item>
-        /// <item><description>If the business scenario involves completing authentication through an embedded web page in an app, it is recommended to set this parameter to <c>keep</c> to disallow URL fallback.</description></item>
+        /// <item><description>If the business scenario involves completing authentication within an embedded web page in an app, it is recommended to set this parameter to keep, disallowing URL fallback.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -451,24 +477,20 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProcedurePriority { get; set; }
 
         /// <summary>
-        /// <para>The product solution to be integrated. The values are as follows:</para>
-        /// <list type="bullet">
-        /// <item><description>KYC_GLOBAL (eKYC product solution)</description></item>
-        /// <item><description>FV_GLOBAL (Live Face Verification)</description></item>
-        /// <item><description>FL_GLOBAL (Liveness Detection)</description></item>
-        /// <item><description>IDR_GLOBAL (Single Document Verification)</description></item>
-        /// <item><description>OCR_GLOBAL (Single Document OCR)</description></item>
-        /// </list>
+        /// <para>The product solution to be integrated</para>
+        /// <remarks>
+        /// <para>For more details, see the official documentation: <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1">https://www.alibabacloud.com/help/zh/ekyc/latest/product-introduction?spm=a2c63.p38356.0.i1</a></para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>KYC_GLOBAL</para>
+        /// <para>eKYC</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Supports card and face sequential arrangement:</para>
+        /// <para>Supports card and face sequence arrangement:</para>
         /// <list type="bullet">
         /// <item><description>DOC_FACE (default)</description></item>
         /// <item><description>FACE_DOC</description></item>
@@ -493,7 +515,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ReturnFaces { get; set; }
 
         /// <summary>
-        /// <para>Client-side callback address.</para>
+        /// <para>Callback URL on the client side.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http*****</para>
@@ -523,9 +545,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// <para>Represents different security levels in the authentication process. The available values are as follows:</para>
+        /// <para>Represents different security levels in the authentication process. Available values:</para>
         /// <para>01: Normal mode (default).
-        /// 02: Secure mode, a relatively strict mode, suitable for high-risk scenarios. (IDV product input parameter)</para>
+        /// 02: Secure mode, a relatively strict mode suitable for high-risk scenarios. (IDV product input parameter)</para>
         /// 
         /// <b>Example:</b>
         /// <para>01</para>
@@ -535,7 +557,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SecurityLevel { get; set; }
 
         /// <summary>
-        /// <para>In the document OCR recognition step, whether to display the album upload entry:</para>
+        /// <para>Whether to display the album upload entry during the document OCR recognition phase:</para>
         /// <list type="bullet">
         /// <item><description><para><b>1</b>: Display (default)</para>
         /// </description></item>
@@ -551,7 +573,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ShowAlbumIcon { get; set; }
 
         /// <summary>
-        /// <para>Switch to control whether to display the guide page:</para>
+        /// <para>Switch for displaying the guide page:</para>
         /// <list type="bullet">
         /// <item><description><para><b>1</b>: Display (default)</para>
         /// </description></item>
@@ -567,7 +589,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ShowGuidePage { get; set; }
 
         /// <summary>
-        /// <para>In the document OCR recognition step, whether to display the recognition result page:</para>
+        /// <para>Whether to display the recognition result page during the document OCR recognition phase:</para>
         /// <list type="bullet">
         /// <item><description><para><b>1</b>: Display (default)</para>
         /// </description></item>
@@ -583,7 +605,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ShowOcrResult { get; set; }
 
         /// <summary>
-        /// <para>Custom UI configuration. Based on the configuration template, convert your custom UI configuration into a JSON string and pass it through this interface. For more information, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/idv-kyc-custom-skin?spm=a2c63.p38356.0.i60">IDV UI Customization</a>.</para>
+        /// <para>Custom UI configuration. Based on the configuration template, convert your custom UI settings into a JSON string and pass it through this interface. For more information, see <a href="https://www.alibabacloud.com/help/zh/ekyc/latest/idv-kyc-custom-skin?spm=a2c63.p38356.0.i60">IDV UI Customization</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -608,7 +630,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string TargetFacePicture { get; set; }
 
         /// <summary>
-        /// <para>Portrait image URL, accessible via public HTTP or HTTPS link.</para>
+        /// <para>Portrait image URL, accessible via HTTP or HTTPS on the public network.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.xxxxx.com/1.jpg">https://www.xxxxx.com/1.jpg</a></para>
@@ -618,10 +640,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string TargetFacePictureUrl { get; set; }
 
         /// <summary>
-        /// <para>When <b>DocType</b>=01000000 (global passport), you can choose whether to enable NFC verification.</para>
+        /// <para>Optional to enable NFC verification when <b>DocType</b>=01000000 (global passport).</para>
         /// <list type="bullet">
-        /// <item><description><b>Y</b> (enable)</description></item>
-        /// <item><description><b>N</b> (disable)</description></item>
+        /// <item><description><b>Y</b> (Enabled)</description></item>
+        /// <item><description><b>N</b> (Disabled)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -632,7 +654,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string UseNFC { get; set; }
 
         /// <summary>
-        /// <para>Type of verification</para>
+        /// <para>The type of verification</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
