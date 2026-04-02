@@ -1,3 +1,6 @@
+2026-04-02 Version: 1.2.2
+- Generated csharp 2022-05-30 for eflo.
+
 2026-02-28 Version: 1.2.1
 - Generated csharp 2022-05-30 for eflo.
 
