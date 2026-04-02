@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ExperimentConfig : TeaModel {
+        [NameInMap("endpointConnectorId")]
+        [Validation(Required=false)]
+        public string EndpointConnectorId { get; set; }
+
         [NameInMap("label")]
         [Validation(Required=false)]
         public string Label { get; set; }
