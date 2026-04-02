@@ -297,6 +297,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public double? RerankFactor { get; set; }
 
+        [NameInMap("RerankModel")]
+        [Validation(Required=false)]
+        public string RerankModelShrink { get; set; }
+
         /// <summary>
         /// <para>The number of the returned top results.</para>
         /// 

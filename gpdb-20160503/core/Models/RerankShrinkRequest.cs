@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DocumentsShrink { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>Given a web search query, retrieve relevant passages that answer the query</para>
+        /// </summary>
+        [NameInMap("Instruct")]
+        [Validation(Required=false)]
+        public string Instruct { get; set; }
+
+        /// <summary>
         /// <para>Maximum number of chunks allowed when the text exceeds the model window:</para>
         /// <list type="bullet">
         /// <item><description>bge-reranker-v2-m3: default value is 10.</description></item>

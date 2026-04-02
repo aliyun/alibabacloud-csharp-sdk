@@ -122,6 +122,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public double? RerankFactor { get; set; }
 
+        [NameInMap("RerankModel")]
+        [Validation(Required=false)]
+        public QueryKnowledgeBasesContentRequestRerankModel RerankModel { get; set; }
+        public class QueryKnowledgeBasesContentRequestRerankModel : TeaModel {
+            [NameInMap("Instruct")]
+            [Validation(Required=false)]
+            public string Instruct { get; set; }
+
+            [NameInMap("Name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The information about collections to retrieve from.</para>
         /// <para>This parameter is required.</para>
@@ -336,6 +350,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [NameInMap("RerankFactor")]
                 [Validation(Required=false)]
                 public double? RerankFactor { get; set; }
+
+                [NameInMap("RerankModel")]
+                [Validation(Required=false)]
+                public QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel RerankModel { get; set; }
+                public class QueryKnowledgeBasesContentRequestSourceCollectionQueryParamsRerankModel : TeaModel {
+                    [NameInMap("Instruct")]
+                    [Validation(Required=false)]
+                    public string Instruct { get; set; }
+
+                    [NameInMap("Name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
 
                 /// <summary>
                 /// <para>The number of top results.</para>

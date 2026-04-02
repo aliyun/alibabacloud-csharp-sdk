@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateCollectionRequest : TeaModel {
+        [NameInMap("Algorithm")]
+        [Validation(Required=false)]
+        public string Algorithm { get; set; }
+
         /// <summary>
         /// <para>The name of the collection that you want to create.</para>
         /// <remarks>
@@ -226,6 +230,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public CreateCollectionRequestSparseVectorIndexConfig SparseVectorIndexConfig { get; set; }
         public class CreateCollectionRequestSparseVectorIndexConfig : TeaModel {
+            [NameInMap("Algorithm")]
+            [Validation(Required=false)]
+            public string Algorithm { get; set; }
+
             [NameInMap("HnswEfConstruction")]
             [Validation(Required=false)]
             public int? HnswEfConstruction { get; set; }
@@ -239,6 +247,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("SupportSparse")]
         [Validation(Required=false)]
         public bool? SupportSparse { get; set; }
+
+        [NameInMap("VectorIndexConfig")]
+        [Validation(Required=false)]
+        public CreateCollectionRequestVectorIndexConfig VectorIndexConfig { get; set; }
+        public class CreateCollectionRequestVectorIndexConfig : TeaModel {
+            [NameInMap("Nlist")]
+            [Validation(Required=false)]
+            public int? Nlist { get; set; }
+
+            [NameInMap("RabitqBits")]
+            [Validation(Required=false)]
+            public int? RabitqBits { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The ID of the workspace that consists of multiple AnalyticDB for PostgreSQL instances. You must specify one of the WorkspaceId and DBInstanceId parameters. If you specify both parameters, the WorkspaceId parameter takes effect.</para>

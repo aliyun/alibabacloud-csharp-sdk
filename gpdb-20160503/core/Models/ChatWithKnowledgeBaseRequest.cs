@@ -116,6 +116,28 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public double? RerankFactor { get; set; }
 
+            [NameInMap("RerankModel")]
+            [Validation(Required=false)]
+            public ChatWithKnowledgeBaseRequestKnowledgeParamsRerankModel RerankModel { get; set; }
+            public class ChatWithKnowledgeBaseRequestKnowledgeParamsRerankModel : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Given a web search query, retrieve relevant passages that answer the query</para>
+                /// </summary>
+                [NameInMap("Instruct")]
+                [Validation(Required=false)]
+                public string Instruct { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>qwen3-rerank</para>
+                /// </summary>
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+            }
+
             /// <summary>
             /// <para>Knowledge base.</para>
             /// <para>This parameter is required.</para>
@@ -300,6 +322,28 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     [NameInMap("RerankFactor")]
                     [Validation(Required=false)]
                     public double? RerankFactor { get; set; }
+
+                    [NameInMap("RerankModel")]
+                    [Validation(Required=false)]
+                    public ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel RerankModel { get; set; }
+                    public class ChatWithKnowledgeBaseRequestKnowledgeParamsSourceCollectionQueryParamsRerankModel : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>Given a web search query, retrieve relevant passages that answer the query</para>
+                        /// </summary>
+                        [NameInMap("Instruct")]
+                        [Validation(Required=false)]
+                        public string Instruct { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>qwen3-rerank</para>
+                        /// </summary>
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                    }
 
                     /// <summary>
                     /// <para>The number of top results.</para>

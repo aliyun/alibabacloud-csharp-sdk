@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDocumentCollectionRequest : TeaModel {
+        [NameInMap("Algorithm")]
+        [Validation(Required=false)]
+        public string Algorithm { get; set; }
+
         /// <summary>
         /// <para>The name of the document collection that you want to create.</para>
         /// <remarks>
@@ -288,6 +292,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public CreateDocumentCollectionRequestSparseVectorIndexConfig SparseVectorIndexConfig { get; set; }
         public class CreateDocumentCollectionRequestSparseVectorIndexConfig : TeaModel {
+            [NameInMap("Algorithm")]
+            [Validation(Required=false)]
+            public string Algorithm { get; set; }
+
             [NameInMap("HnswEfConstruction")]
             [Validation(Required=false)]
             public int? HnswEfConstruction { get; set; }
@@ -301,6 +309,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("SupportSparse")]
         [Validation(Required=false)]
         public bool? SupportSparse { get; set; }
+
+        [NameInMap("VectorIndexConfig")]
+        [Validation(Required=false)]
+        public CreateDocumentCollectionRequestVectorIndexConfig VectorIndexConfig { get; set; }
+        public class CreateDocumentCollectionRequestVectorIndexConfig : TeaModel {
+            [NameInMap("Nlist")]
+            [Validation(Required=false)]
+            public int? Nlist { get; set; }
+
+            [NameInMap("RabitqBits")]
+            [Validation(Required=false)]
+            public int? RabitqBits { get; set; }
+
+        }
 
     }
 

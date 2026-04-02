@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateVectorIndexRequest : TeaModel {
+        [NameInMap("Algorithm")]
+        [Validation(Required=false)]
+        public string Algorithm { get; set; }
+
         /// <summary>
         /// <para>Collection name.</para>
         /// <remarks>
@@ -142,6 +146,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        [NameInMap("Nlist")]
+        [Validation(Required=false)]
+        public int? Nlist { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -159,6 +167,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("PqEnable")]
         [Validation(Required=false)]
         public int? PqEnable { get; set; }
+
+        [NameInMap("RabitqBits")]
+        [Validation(Required=false)]
+        public int? RabitqBits { get; set; }
 
         /// <summary>
         /// <para>Region ID where the instance is located.</para>

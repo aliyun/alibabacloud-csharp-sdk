@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDocumentCollectionShrinkRequest : TeaModel {
+        [NameInMap("Algorithm")]
+        [Validation(Required=false)]
+        public string Algorithm { get; set; }
+
         /// <summary>
         /// <para>The name of the document collection that you want to create.</para>
         /// <remarks>
@@ -291,6 +295,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("SupportSparse")]
         [Validation(Required=false)]
         public bool? SupportSparse { get; set; }
+
+        [NameInMap("VectorIndexConfig")]
+        [Validation(Required=false)]
+        public string VectorIndexConfigShrink { get; set; }
 
     }
 
