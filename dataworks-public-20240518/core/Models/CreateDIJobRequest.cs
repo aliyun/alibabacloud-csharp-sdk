@@ -36,6 +36,20 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public string DataSourceName { get; set; }
 
+            [NameInMap("DataSourceProperties")]
+            [Validation(Required=false)]
+            public CreateDIJobRequestDestinationDataSourceSettingsDataSourceProperties DataSourceProperties { get; set; }
+            public class CreateDIJobRequestDestinationDataSourceSettingsDataSourceProperties : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>{     &quot;instanceType&quot;: &quot;serverless&quot;,     &quot;username&quot;: &quot;zmtest&quot;,     &quot;password&quot;: &quot;xxxxxxx&quot;,     &quot;regionId&quot;: &quot;cn-beijing&quot;,     &quot;appName&quot;: &quot;es-servexxxx&quot; }</para>
+                /// </summary>
+                [NameInMap("ConnectionProperties")]
+                [Validation(Required=false)]
+                public string ConnectionProperties { get; set; }
+
+            }
+
         }
 
         /// <summary>
@@ -434,6 +448,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             [Validation(Required=false)]
             public CreateDIJobRequestSourceDataSourceSettingsDataSourceProperties DataSourceProperties { get; set; }
             public class CreateDIJobRequestSourceDataSourceSettingsDataSourceProperties : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>{     &quot;instanceId&quot;: &quot;rm-2ze09gn3x6xxx&quot;,     &quot;password&quot;: &quot;xxxx&quot;,     &quot;database&quot;: &quot;agent&quot;,     &quot;username&quot;: &quot;zmtest&quot;     &quot;regionId&quot;: &quot;cn-beijing&quot; }</para>
+                /// </summary>
+                [NameInMap("ConnectionProperties")]
+                [Validation(Required=false)]
+                public string ConnectionProperties { get; set; }
+
                 /// <summary>
                 /// <para>The database encoding.</para>
                 /// 
