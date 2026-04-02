@@ -1,3 +1,9 @@
+2026-04-02 Version: 6.1.2
+- Update API CreateCodeSource: add request parameters body.CloneType.
+- Update API GetCodeSource: add response parameters Body.CloneType.
+- Update API UpdateCodeSource: add request parameters body.CloneType.
+
+
 2026-03-26 Version: 6.1.1
 - Update API CreateDataset: add request parameters body.AccessibleRoleIdList.
 - Update API GetDataset: add response parameters Body.AccessibleRoleIdList.

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class UpdateCodeSourceRequest : TeaModel {
+        [NameInMap("CloneType")]
+        [Validation(Required=false)]
+        public int? CloneType { get; set; }
+
         /// <summary>
         /// <para>The name of the code branch.</para>
         /// 

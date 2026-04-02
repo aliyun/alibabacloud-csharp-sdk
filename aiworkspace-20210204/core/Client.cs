@@ -844,6 +844,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["Accessibility"] = request.Accessibility;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloneType))
+            {
+                body["CloneType"] = request.CloneType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeBranch))
             {
                 body["CodeBranch"] = request.CodeBranch;
@@ -925,6 +929,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
             {
                 body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloneType))
+            {
+                body["CloneType"] = request.CloneType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeBranch))
             {
@@ -15132,6 +15140,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloneType))
+            {
+                body["CloneType"] = request.CloneType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeBranch))
             {
                 body["CodeBranch"] = request.CodeBranch;
@@ -15206,6 +15218,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloneType))
+            {
+                body["CloneType"] = request.CloneType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CodeBranch))
             {
                 body["CodeBranch"] = request.CodeBranch;

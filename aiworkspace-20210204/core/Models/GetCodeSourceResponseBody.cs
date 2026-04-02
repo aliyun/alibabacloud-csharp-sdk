@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Accessibility { get; set; }
 
+        [NameInMap("CloneType")]
+        [Validation(Required=false)]
+        public int? CloneType { get; set; }
+
         /// <summary>
         /// <para>The code repository branch.</para>
         /// 
