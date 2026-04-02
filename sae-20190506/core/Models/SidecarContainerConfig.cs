@@ -113,6 +113,14 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("PostStart")]
+        [Validation(Required=false)]
+        public string PostStart { get; set; }
+
+        [NameInMap("PreStop")]
+        [Validation(Required=false)]
+        public string PreStop { get; set; }
+
         [NameInMap("Readiness")]
         [Validation(Required=false)]
         public string Readiness { get; set; }
