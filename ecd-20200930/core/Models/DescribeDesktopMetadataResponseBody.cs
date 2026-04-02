@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeDesktopMetadataResponseBodyDesktops> Desktops { get; set; }
         public class DescribeDesktopMetadataResponseBodyDesktops : TeaModel {
+            [NameInMap("AgentProviderList")]
+            [Validation(Required=false)]
+            public List<string> AgentProviderList { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>PostPaid</para>

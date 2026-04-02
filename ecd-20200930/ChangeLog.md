@@ -1,3 +1,8 @@
+2026-04-02 Version: 4.21.3
+- Update API DescribeDesktopMetadata: add response parameters Body.Desktops.$.AgentProviderList.
+- Update API DescribeDesktops: add response parameters Body.Desktops.$.AgentProviderList.
+
+
 2026-03-31 Version: 4.21.2
 - Update API DescribeDesktopGroups: add response parameters Body.DesktopGroups.$.EnvId.
 - Update API DescribeDesktopGroups: add response parameters Body.DesktopGroups.$.EnvType.

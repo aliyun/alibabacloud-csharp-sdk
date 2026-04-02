@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string AccountType { get; set; }
 
+            [NameInMap("AgentProviderList")]
+            [Validation(Required=false)]
+            public List<string> AgentProviderList { get; set; }
+
             /// <summary>
             /// <para>The number of concurrent sessions of each cloud computer in a multi-session cloud computer pool.</para>
             /// 
