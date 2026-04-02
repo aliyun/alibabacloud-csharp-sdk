@@ -4512,6 +4512,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["SecurityIPType"] = request.SecurityIPType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillTemplateId))
+            {
+                query["SkillTemplateId"] = request.SkillTemplateId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -4707,6 +4711,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPType))
             {
                 query["SecurityIPType"] = request.SecurityIPType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillTemplateId))
+            {
+                query["SkillTemplateId"] = request.SkillTemplateId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {

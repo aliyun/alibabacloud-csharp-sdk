@@ -347,6 +347,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string SecurityIPType { get; set; }
 
+        [NameInMap("SkillTemplateId")]
+        [Validation(Required=false)]
+        public string SkillTemplateId { get; set; }
+
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateApplicationRequestTag> Tag { get; set; }

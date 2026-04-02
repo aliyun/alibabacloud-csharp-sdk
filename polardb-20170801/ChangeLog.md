@@ -1,3 +1,8 @@
+2026-04-02 Version: 6.10.3
+- Update API CreateApplication: add request parameters SkillTemplateId.
+- Update API DescribeApplicationAttribute: add response parameters Body.PolarClawSaaSApplicationAttribute.SupabaseClusterId.
+
+
 2026-03-30 Version: 6.10.2
 - Update API CreateApplication: add request parameters AuthProvider.
 - Update API CreateApplication: add request parameters AuthProviderConfig.
