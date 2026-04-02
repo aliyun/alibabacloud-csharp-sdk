@@ -59,6 +59,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// <para>Current page number, starting at <b>1</b>, default is <b>1</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,6 +70,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// <para>The number of rows per page when paginating queries, with a maximum value of <b>100</b>, and a default of <b>20</b>.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
