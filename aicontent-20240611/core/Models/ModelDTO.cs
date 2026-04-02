@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("extensions")]
+        [Validation(Required=false)]
+        public string Extensions { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("id")]
         [Validation(Required=false)]
         public long? Id { get; set; }
+
+        [NameInMap("inOut")]
+        [Validation(Required=false)]
+        public string InOut { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

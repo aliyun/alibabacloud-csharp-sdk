@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
     public class ModelRouterQueryNacosTagsRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>providers</para>
+        /// </summary>
+        [NameInMap("configType")]
+        [Validation(Required=false)]
+        public string ConfigType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>resourceId</para>
         /// </summary>
         [NameInMap("groupBy")]

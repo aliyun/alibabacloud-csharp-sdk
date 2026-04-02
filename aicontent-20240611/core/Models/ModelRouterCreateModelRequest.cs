@@ -39,6 +39,22 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("extensions")]
+        [Validation(Required=false)]
+        public string Extensions { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>text</para>
+        /// </summary>
+        [NameInMap("inOut")]
+        [Validation(Required=false)]
+        public string InOut { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>32K</para>
         /// </summary>
         [NameInMap("maxInputLength")]

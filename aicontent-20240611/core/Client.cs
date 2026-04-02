@@ -6151,6 +6151,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             {
                 body["name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
+            {
+                body["parentId"] = request.ParentId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 body["remark"] = request.Remark;
@@ -6212,6 +6216,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
+            {
+                body["parentId"] = request.ParentId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
@@ -6455,6 +6463,14 @@ namespace AlibabaCloud.SDK.AiContent20240611
             {
                 body["description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extensions))
+            {
+                body["extensions"] = request.Extensions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InOut))
+            {
+                body["inOut"] = request.InOut;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxInputLength))
             {
                 body["maxInputLength"] = request.MaxInputLength;
@@ -6536,6 +6552,14 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extensions))
+            {
+                body["extensions"] = request.Extensions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InOut))
+            {
+                body["inOut"] = request.InOut;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxInputLength))
             {
@@ -7985,6 +8009,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             {
                 query["maxResults"] = request.MaxResults;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelType))
+            {
+                query["modelType"] = request.ModelType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
             {
                 query["needTotalCount"] = request.NeedTotalCount;
@@ -8066,6 +8094,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelType))
+            {
+                query["modelType"] = request.ModelType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedTotalCount))
             {
@@ -8361,6 +8393,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["configType"] = request.ConfigType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
             {
                 query["groupBy"] = request.GroupBy;
@@ -8435,6 +8471,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["configType"] = request.ConfigType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
             {
                 query["groupBy"] = request.GroupBy;

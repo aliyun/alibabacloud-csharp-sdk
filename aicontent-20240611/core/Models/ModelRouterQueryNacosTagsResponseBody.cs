@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public List<ModelRouterQueryNacosTagsResponseBodyData> Data { get; set; }
         public class ModelRouterQueryNacosTagsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>文本生成</para>
+            /// </summary>
+            [NameInMap("label")]
+            [Validation(Required=false)]
+            public string Label { get; set; }
+
             [NameInMap("tag")]
             [Validation(Required=false)]
             public string Tag { get; set; }
@@ -24,6 +32,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             [NameInMap("tagName")]
             [Validation(Required=false)]
             public string TagName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>NLP</para>
+            /// </summary>
+            [NameInMap("value")]
+            [Validation(Required=false)]
+            public string Value { get; set; }
 
         }
 

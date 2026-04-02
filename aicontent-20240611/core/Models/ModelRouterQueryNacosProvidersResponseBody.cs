@@ -25,9 +25,27 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
             [Validation(Required=false)]
             public List<ModelRouterQueryNacosProvidersResponseBodyDataModels> Models { get; set; }
             public class ModelRouterQueryNacosProvidersResponseBodyDataModels : TeaModel {
+                [NameInMap("extensions")]
+                [Validation(Required=false)]
+                public ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions Extensions { get; set; }
+                public class ModelRouterQueryNacosProvidersResponseBodyDataModelsExtensions : TeaModel {
+                    [NameInMap("async")]
+                    [Validation(Required=false)]
+                    public bool? Async { get; set; }
+
+                }
+
                 [NameInMap("identifier")]
                 [Validation(Required=false)]
                 public string Identifier { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>text</para>
+                /// </summary>
+                [NameInMap("inOut")]
+                [Validation(Required=false)]
+                public string InOut { get; set; }
 
                 [NameInMap("inputToken")]
                 [Validation(Required=false)]
@@ -36,6 +54,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
                 [NameInMap("outputToken")]
                 [Validation(Required=false)]
                 public string OutputToken { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Chat</para>
+                /// </summary>
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
 
             }
 

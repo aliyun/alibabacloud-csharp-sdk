@@ -8,54 +8,54 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class ModelRouterCreateClientRequest : TeaModel {
+    public class UsageInfoDTO : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>杭州市</para>
+        /// <para>50</para>
         /// </summary>
-        [NameInMap("address")]
+        [NameInMap("completionTokens")]
         [Validation(Required=false)]
-        public string Address { get; set; }
+        public int? CompletionTokens { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1,2,3</para>
+        /// <para>0</para>
         /// </summary>
-        [NameInMap("allowedModels")]
+        [NameInMap("imageCount")]
         [Validation(Required=false)]
-        public string AllowedModels { get; set; }
+        public int? ImageCount { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>13800138000</para>
+        /// <para>100</para>
         /// </summary>
-        [NameInMap("contact")]
+        [NameInMap("promptTokens")]
         [Validation(Required=false)]
-        public string Contact { get; set; }
+        public int? PromptTokens { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>我的客户</para>
+        /// <para>150</para>
         /// </summary>
-        [NameInMap("name")]
+        [NameInMap("totalTokens")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public int? TotalTokens { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>0</para>
         /// </summary>
-        [NameInMap("parentId")]
+        [NameInMap("videoCount")]
         [Validation(Required=false)]
-        public long? ParentId { get; set; }
+        public int? VideoCount { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>备注</para>
+        /// <para>0</para>
         /// </summary>
-        [NameInMap("remark")]
+        [NameInMap("videoDuration")]
         [Validation(Required=false)]
-        public string Remark { get; set; }
+        public int? VideoDuration { get; set; }
 
     }
 

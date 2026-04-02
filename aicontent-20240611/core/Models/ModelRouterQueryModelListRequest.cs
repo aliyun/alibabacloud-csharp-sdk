@@ -35,6 +35,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>Chat</para>
+        /// </summary>
+        [NameInMap("modelType")]
+        [Validation(Required=false)]
+        public string ModelType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("needTotalCount")]

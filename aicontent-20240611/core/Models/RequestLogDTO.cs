@@ -99,6 +99,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>Chat</para>
+        /// </summary>
+        [NameInMap("modelType")]
+        [Validation(Required=false)]
+        public string ModelType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
         [NameInMap("promptTokens")]
@@ -176,6 +184,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("totalTokens")]
         [Validation(Required=false)]
         public int? TotalTokens { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;prompt_tokens&quot;:100,&quot;completion_tokens&quot;:50,&quot;total_tokens&quot;:150}</para>
+        /// </summary>
+        [NameInMap("usage")]
+        [Validation(Required=false)]
+        public UsageInfoDTO Usage { get; set; }
 
     }
 
