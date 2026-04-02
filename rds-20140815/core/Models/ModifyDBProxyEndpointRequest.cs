@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DbEndpointAliases { get; set; }
 
+        [NameInMap("DbEndpointCostThresholdForDuckdb")]
+        [Validation(Required=false)]
+        public string DbEndpointCostThresholdForDuckdb { get; set; }
+
         /// <summary>
         /// <para>The minimum number of reserved instances.</para>
         /// 

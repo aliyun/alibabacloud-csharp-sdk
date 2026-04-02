@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         [Validation(Required=false)]
         public string DBProxyConnectStringPort { get; set; }
 
+        [NameInMap("DBProxyEndpointCostThresholdForDuckdb")]
+        [Validation(Required=false)]
+        public string DBProxyEndpointCostThresholdForDuckdb { get; set; }
+
         /// <summary>
         /// <para>The ID of the proxy endpoint.</para>
         /// 

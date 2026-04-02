@@ -67129,6 +67129,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             {
                 query["DbEndpointAliases"] = request.DbEndpointAliases;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEndpointCostThresholdForDuckdb))
+            {
+                query["DbEndpointCostThresholdForDuckdb"] = request.DbEndpointCostThresholdForDuckdb;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEndpointMinSlaveCount))
             {
                 query["DbEndpointMinSlaveCount"] = request.DbEndpointMinSlaveCount;
@@ -67271,6 +67275,10 @@ namespace AlibabaCloud.SDK.Rds20140815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEndpointAliases))
             {
                 query["DbEndpointAliases"] = request.DbEndpointAliases;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEndpointCostThresholdForDuckdb))
+            {
+                query["DbEndpointCostThresholdForDuckdb"] = request.DbEndpointCostThresholdForDuckdb;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbEndpointMinSlaveCount))
             {

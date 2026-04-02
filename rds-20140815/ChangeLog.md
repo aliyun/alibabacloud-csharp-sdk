@@ -1,3 +1,8 @@
+2026-04-02 Version: 15.8.1
+- Update API DescribeDBProxyEndpoint: add response parameters Body.DBProxyEndpointCostThresholdForDuckdb.
+- Update API ModifyDBProxyEndpoint: add request parameters DbEndpointCostThresholdForDuckdb.
+
+
 2026-04-01 Version: 15.8.0
 - Support API ModifyDBInstance.
 
