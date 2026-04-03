@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AzureInstanceCount { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
+            [NameInMap("BaiduInstanceCount")]
+            [Validation(Required=false)]
+            public int? BaiduInstanceCount { get; set; }
+
+            /// <summary>
             /// <para>The number of cores of exposed assets.</para>
             /// 
             /// <b>Example:</b>
@@ -155,6 +163,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("InstanceSyncTaskCount")]
             [Validation(Required=false)]
             public int? InstanceSyncTaskCount { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
+            [NameInMap("KingsoftInstanceCount")]
+            [Validation(Required=false)]
+            public int? KingsoftInstanceCount { get; set; }
 
             /// <summary>
             /// <para>The number of cores of new servers.</para>
@@ -277,6 +293,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? RiskInstanceCount { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
+            [NameInMap("StateCloudInstanceCount")]
+            [Validation(Required=false)]
+            public int? StateCloudInstanceCount { get; set; }
+
+            /// <summary>
             /// <para>The total number of cloud services that are protected by Security Center.</para>
             /// 
             /// <b>Example:</b>
@@ -305,6 +329,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("TripartiteInstanceCount")]
             [Validation(Required=false)]
             public int? TripartiteInstanceCount { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
+            [NameInMap("UcloudInstanceCount")]
+            [Validation(Required=false)]
+            public int? UcloudInstanceCount { get; set; }
 
             /// <summary>
             /// <para>The number of servers that are in the Unknown state.</para>
