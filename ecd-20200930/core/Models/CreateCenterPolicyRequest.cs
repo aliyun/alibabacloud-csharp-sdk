@@ -32,6 +32,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string AdminAccess { get; set; }
 
+        [NameInMap("AdminKeyboardOnFullScreen")]
+        [Validation(Required=false)]
+        public string AdminKeyboardOnFullScreen { get; set; }
+
+        [NameInMap("AdminKeyboardOnWindows")]
+        [Validation(Required=false)]
+        public string AdminKeyboardOnWindows { get; set; }
+
         /// <summary>
         /// <para>The anti-screenshot policy.</para>
         /// <para>Valid values:</para>
@@ -426,6 +434,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? CpuSingleRateLimit { get; set; }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to display the peripheral connection prompt.</para>
         /// 
@@ -805,6 +817,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("InternetPrinter")]
         [Validation(Required=false)]
         public string InternetPrinter { get; set; }
+
+        [NameInMap("KeyboardControl")]
+        [Validation(Required=false)]
+        public string KeyboardControl { get; set; }
 
         /// <summary>
         /// <para>The read/write permissions on the on-premises drive.</para>

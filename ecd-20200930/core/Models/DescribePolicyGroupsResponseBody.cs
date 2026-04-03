@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string AdminAccess { get; set; }
 
+            [NameInMap("AdminKeyboardOnFullScreen")]
+            [Validation(Required=false)]
+            public string AdminKeyboardOnFullScreen { get; set; }
+
+            [NameInMap("AdminKeyboardOnWindows")]
+            [Validation(Required=false)]
+            public string AdminKeyboardOnWindows { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the anti-screenshot feature is enabled.</para>
             /// <para>Valid values:</para>
@@ -366,6 +374,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("CpuSingleRateLimit")]
             [Validation(Required=false)]
             public int? CpuSingleRateLimit { get; set; }
+
+            [NameInMap("Description")]
+            [Validation(Required=false)]
+            public string Description { get; set; }
 
             /// <summary>
             /// <para>The number of cloud computers bound with this policy.</para>
@@ -770,6 +782,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("InternetPrinter")]
             [Validation(Required=false)]
             public string InternetPrinter { get; set; }
+
+            [NameInMap("KeyboardControl")]
+            [Validation(Required=false)]
+            public string KeyboardControl { get; set; }
 
             /// <summary>
             /// <para>The permissions on local disk mapping.</para>

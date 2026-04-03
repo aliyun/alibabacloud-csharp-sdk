@@ -6304,6 +6304,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AdminAccess"] = request.AdminAccess;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminKeyboardOnFullScreen))
+            {
+                query["AdminKeyboardOnFullScreen"] = request.AdminKeyboardOnFullScreen;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminKeyboardOnWindows))
+            {
+                query["AdminKeyboardOnWindows"] = request.AdminKeyboardOnWindows;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppContentProtection))
             {
                 query["AppContentProtection"] = request.AppContentProtection;
@@ -6392,6 +6400,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["CpuSingleRateLimit"] = request.CpuSingleRateLimit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceConnectHint))
             {
                 query["DeviceConnectHint"] = request.DeviceConnectHint;
@@ -6479,6 +6491,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetPrinter))
             {
                 query["InternetPrinter"] = request.InternetPrinter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyboardControl))
+            {
+                query["KeyboardControl"] = request.KeyboardControl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
@@ -6858,6 +6874,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AdminAccess"] = request.AdminAccess;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminKeyboardOnFullScreen))
+            {
+                query["AdminKeyboardOnFullScreen"] = request.AdminKeyboardOnFullScreen;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminKeyboardOnWindows))
+            {
+                query["AdminKeyboardOnWindows"] = request.AdminKeyboardOnWindows;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppContentProtection))
             {
                 query["AppContentProtection"] = request.AppContentProtection;
@@ -6946,6 +6970,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["CpuSingleRateLimit"] = request.CpuSingleRateLimit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceConnectHint))
             {
                 query["DeviceConnectHint"] = request.DeviceConnectHint;
@@ -7033,6 +7061,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InternetPrinter))
             {
                 query["InternetPrinter"] = request.InternetPrinter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyboardControl))
+            {
+                query["KeyboardControl"] = request.KeyboardControl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalDrive))
             {
@@ -37660,6 +37692,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AdminAccess"] = request.AdminAccess;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminKeyboardOnFullScreen))
+            {
+                query["AdminKeyboardOnFullScreen"] = request.AdminKeyboardOnFullScreen;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminKeyboardOnWindows))
+            {
+                query["AdminKeyboardOnWindows"] = request.AdminKeyboardOnWindows;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppContentProtection))
             {
                 query["AppContentProtection"] = request.AppContentProtection;
@@ -37747,6 +37787,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuSingleRateLimit))
             {
                 query["CpuSingleRateLimit"] = request.CpuSingleRateLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceConnectHint))
             {
@@ -38226,6 +38270,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AdminAccess"] = request.AdminAccess;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminKeyboardOnFullScreen))
+            {
+                query["AdminKeyboardOnFullScreen"] = request.AdminKeyboardOnFullScreen;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdminKeyboardOnWindows))
+            {
+                query["AdminKeyboardOnWindows"] = request.AdminKeyboardOnWindows;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppContentProtection))
             {
                 query["AppContentProtection"] = request.AppContentProtection;
@@ -38313,6 +38365,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpuSingleRateLimit))
             {
                 query["CpuSingleRateLimit"] = request.CpuSingleRateLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceConnectHint))
             {
