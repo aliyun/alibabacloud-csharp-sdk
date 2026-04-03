@@ -43,6 +43,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public RoutingConfiguration RoutingConfiguration { get; set; }
 
         /// <summary>
+        /// <para>端点的弹性伸缩配置，包括最小实例数和定时扩容策略（复用 ScalingConfig）</para>
+        /// </summary>
+        [NameInMap("scalingConfig")]
+        [Validation(Required=false)]
+        public ScalingConfig ScalingConfig { get; set; }
+
+        /// <summary>
         /// <para>智能体运行时的目标版本</para>
         /// 
         /// <b>Example:</b>

@@ -51,6 +51,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 
         /// <summary>
         /// <para><c>string</c>，必填</para>
+        /// </summary>
+        [NameInMap("dbInstanceId")]
+        [Validation(Required=false)]
+        public string DbInstanceId { get; set; }
+
+        /// <summary>
+        /// <para><c>string</c>，必填</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("dbName")]

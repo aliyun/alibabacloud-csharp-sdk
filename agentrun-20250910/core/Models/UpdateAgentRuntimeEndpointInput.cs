@@ -18,6 +18,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeEndpointName { get; set; }
 
         /// <summary>
+        /// <para>为 true 时删除该端点的弹性配置</para>
+        /// </summary>
+        [NameInMap("deleteScalingConfig")]
+        [Validation(Required=false)]
+        public bool? DeleteScalingConfig { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>Updated endpoint configuration</para>
         /// </summary>
@@ -41,6 +48,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [NameInMap("routingConfiguration")]
         [Validation(Required=false)]
         public RoutingConfiguration RoutingConfiguration { get; set; }
+
+        /// <summary>
+        /// <para>端点的弹性伸缩配置，包括最小实例数和定时扩容策略（复用 ScalingConfig）</para>
+        /// </summary>
+        [NameInMap("scalingConfig")]
+        [Validation(Required=false)]
+        public ScalingConfig ScalingConfig { get; set; }
 
         /// <summary>
         /// <para>智能体运行时的目标版本</para>
