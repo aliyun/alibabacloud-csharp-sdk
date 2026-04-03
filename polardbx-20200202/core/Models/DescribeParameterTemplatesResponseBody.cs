@@ -89,6 +89,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 [Validation(Required=false)]
                 public int? Revisable { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("UserChangable")]
+                [Validation(Required=false)]
+                public int? UserChangable { get; set; }
+
             }
 
         }
