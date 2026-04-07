@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public ListDataServicePublishedApisResponseBodyData Data { get; set; }
         public class ListDataServicePublishedApisResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the APIs in the published state.</para>
+            /// <para>Information about published APIs.</para>
             /// </summary>
             [NameInMap("Apis")]
             [Validation(Required=false)]
@@ -686,6 +686,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 }
 
                 /// <summary>
+                /// <para>SQL mode. 0: Basic SQL; 1: Advanced SQL.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>

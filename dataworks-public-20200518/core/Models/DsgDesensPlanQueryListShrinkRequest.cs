@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class DsgDesensPlanQueryListRequest : TeaModel {
+    public class DsgDesensPlanQueryListShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The owner of the data masking rule.</para>
         /// 
@@ -78,25 +78,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         [NameInMap("columns")]
         [Validation(Required=false)]
-        public List<DsgDesensPlanQueryListRequestColumns> Columns { get; set; }
-        public class DsgDesensPlanQueryListRequestColumns : TeaModel {
-            [NameInMap("column")]
-            [Validation(Required=false)]
-            public string Column { get; set; }
-
-            [NameInMap("dbType")]
-            [Validation(Required=false)]
-            public string DbType { get; set; }
-
-            [NameInMap("project")]
-            [Validation(Required=false)]
-            public string Project { get; set; }
-
-            [NameInMap("table")]
-            [Validation(Required=false)]
-            public string Table { get; set; }
-
-        }
+        public string ColumnsShrink { get; set; }
 
         [NameInMap("dataType")]
         [Validation(Required=false)]

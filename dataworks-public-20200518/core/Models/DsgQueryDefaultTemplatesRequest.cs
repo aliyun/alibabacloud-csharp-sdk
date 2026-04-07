@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         /// </summary>
         [NameInMap("SceneId")]
         [Validation(Required=false)]
-        public int? SceneId { get; set; }
+        public long? SceneId { get; set; }
 
     }
 

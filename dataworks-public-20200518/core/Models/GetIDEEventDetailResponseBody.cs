@@ -623,8 +623,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     /// <summary>
                     /// <para>Indicates whether the column is a partition key column. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>true</description></item>
-                    /// <item><description>false</description></item>
+                    /// <item><description>true: The column is a partition key column.</description></item>
+                    /// <item><description>false: The column is not a partition key column.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

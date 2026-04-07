@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? IgnoreParentSkipRunningProperty { get; set; }
 
         /// <summary>
-        /// <para>Custom image ID</para>
+        /// <para>The ID of the custom image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-bp1h4b5a8ogkbll2f3tr</para>

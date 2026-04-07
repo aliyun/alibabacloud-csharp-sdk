@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListPermissionApplyOrdersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The query results returned by page.</para>
+        /// <para>The paginated query results of permission requests.</para>
         /// </summary>
         [NameInMap("ApplyOrders")]
         [Validation(Required=false)]
         public ListPermissionApplyOrdersResponseBodyApplyOrders ApplyOrders { get; set; }
         public class ListPermissionApplyOrdersResponseBodyApplyOrders : TeaModel {
             /// <summary>
-            /// <para>The list of the permission request orders.</para>
+            /// <para>The list of permission requests.</para>
             /// </summary>
             [NameInMap("ApplyOrder")]
             [Validation(Required=false)]
             public List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder> ApplyOrder { get; set; }
             public class ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrder : TeaModel {
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account that was used to submit the permission request order.</para>
+                /// <para>The Alibaba Cloud account ID of the user who submitted the permission request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>267842600408993176</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string ApplyBaseId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the permission request order was submitted. The parameter value is a UNIX timestamp.</para>
+                /// <para>The time when the permission request was submitted, in Unix timestamp format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1615284086000</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public long? ApplyTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The content of the permission request order.</para>
+                /// <para>The content of the permission request.</para>
                 /// </summary>
                 [NameInMap("ApproveContent")]
                 [Validation(Required=false)]
                 public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContent ApproveContent { get; set; }
                 public class ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContent : TeaModel {
                     /// <summary>
-                    /// <para>The reason for your request. The administrator determines whether to approve the request based on the reason.</para>
+                    /// <para>The reason for the permission request, which is used by administrators for evaluation and approval.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>I need to use this table</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public string ApplyReason { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</para>
+                    /// <para>The type of permission request. Only the value 1 is supported, which indicates an ACL permission request for objects.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -71,25 +71,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                     public int? OrderType { get; set; }
 
                     /// <summary>
-                    /// <para>The content of the object on which you requested permissions.</para>
+                    /// <para>The content of the requested object.</para>
                     /// </summary>
                     [NameInMap("ProjectMeta")]
                     [Validation(Required=false)]
                     public ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMeta ProjectMeta { get; set; }
                     public class ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMeta : TeaModel {
                         /// <summary>
-                        /// <para>The information about the object on which you requested permissions.</para>
+                        /// <para>The information about the requested object.</para>
                         /// </summary>
                         [NameInMap("ObjectMetaList")]
                         [Validation(Required=false)]
                         public List<ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList> ObjectMetaList { get; set; }
                         public class ListPermissionApplyOrdersResponseBodyApplyOrdersApplyOrderApproveContentProjectMetaObjectMetaList : TeaModel {
+                            /// <summary>
+                            /// <para>The operation type.</para>
+                            /// </summary>
                             [NameInMap("Actions")]
                             [Validation(Required=false)]
                             public List<string> Actions { get; set; }
 
                             /// <summary>
-                            /// <para>The name of the table on which you requested permissions.</para>
+                            /// <para>The name of the requested table.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>aTableName</para>
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                         }
 
                         /// <summary>
-                        /// <para>The name of the DataWorks workspace that is associated with the MaxCompute project in which you requested permissions on a table.</para>
+                        /// <para>The name of the DataWorks workspace that contains the MaxCompute project for which permissions are requested.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>aWorkspaceName</para>
@@ -114,16 +117,28 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 }
 
+                /// <summary>
+                /// <para>The final approval comment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>agree</para>
+                /// </summary>
                 [NameInMap("FinishApprovalComment")]
                 [Validation(Required=false)]
                 public string FinishApprovalComment { get; set; }
 
+                /// <summary>
+                /// <para>The final approval timestamp. Displayed as a Unix timestamp.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1757496687000</para>
+                /// </summary>
                 [NameInMap("FinishApprovalTimestamp")]
                 [Validation(Required=false)]
                 public long? FinishApprovalTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the permission request order.</para>
+                /// <para>The permission request ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ad8da78d-8135-455e-9486-27cf213fc140</para>
@@ -133,12 +148,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string FlowId { get; set; }
 
                 /// <summary>
-                /// <para>The status of the permission request order. Valid values:</para>
+                /// <para>The status of the permission request. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: to be processed</description></item>
-                /// <item><description>2: approved and authorized</description></item>
-                /// <item><description>3: approved but authorization failed</description></item>
-                /// <item><description>4: rejected</description></item>
+                /// <item><description>1: Pending approval</description></item>
+                /// <item><description>2: Approved and authorization succeeded</description></item>
+                /// <item><description>3: Approved but authorization failed</description></item>
+                /// <item><description>4: Rejected</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -171,7 +186,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of permission requests returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>150</para>

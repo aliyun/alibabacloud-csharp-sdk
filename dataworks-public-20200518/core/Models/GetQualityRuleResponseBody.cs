@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetQualityRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the monitoring rule.</para>
+        /// <para>Information about the retrieved rule.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -207,7 +207,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The type of the monitoring rule.</para>
+            /// <para>Rule type:</para>
+            /// <list type="bullet">
+            /// <item><description>0: System template rule</description></item>
+            /// <item><description>1: Custom SQL rule</description></item>
+            /// <item><description>4: Custom template rule</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

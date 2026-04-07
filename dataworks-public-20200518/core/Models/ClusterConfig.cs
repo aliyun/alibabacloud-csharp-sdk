@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ClusterConfig : TeaModel {
         /// <summary>
+        /// <para>The configuration value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;spark.driver.memory&quot;:&quot;1g&quot;}</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ConfigValue { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to overwrite the advanced settings of nodes in DataStudio. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true</description></item>
+        /// <item><description>false</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -26,6 +34,16 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? EnableOverwrite { get; set; }
 
         /// <summary>
+        /// <para>The module in which the cluster is configured. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ide: DataStudio.</description></item>
+        /// <item><description>da: DataAnalysis.</description></item>
+        /// <item><description>scheduler.auto: Operation Center - auto triggered instances.</description></item>
+        /// <item><description>scheduler.backfill: Operation Center - data backfill instances.</description></item>
+        /// <item><description>scheduler.test: Operation Center - test instances.</description></item>
+        /// <item><description>scheduler.manual: Operation Center - manually triggered instances.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ide</para>
         /// </summary>

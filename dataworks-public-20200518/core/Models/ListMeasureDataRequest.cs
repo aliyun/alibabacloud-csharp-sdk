@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListMeasureDataRequest : TeaModel {
         /// <summary>
-        /// <para>The measurement component. Valid values:</para>
+        /// <para>The metering component. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Count: phone call-based alerts and text message-based alerts</description></item>
+        /// <item><description>Count: The number of DideAlarmPhone (telephone/call) alerts, and the number of DideAlarmSms (SMS/text message) alerts.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string DomainCode { get; set; }
 
         /// <summary>
-        /// <para>The end timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the previous 30 days.</para>
+        /// <para>The end timestamp of the metering cycle, in milliseconds. The metering data is aggregated by day. The time range between EndTime and StartTime cannot exceed 30 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The start timestamp of the measurement period, in milliseconds. The measurement period is calculated in days. You can query only the data within the previous 30 days.</para>
+        /// <para>The start timestamp of the metering cycle, in milliseconds. The metering data is aggregated by day. The time range between EndTime and StartTime cannot exceed 30 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

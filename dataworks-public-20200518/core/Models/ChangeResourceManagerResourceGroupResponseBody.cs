@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ChangeResourceManagerResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the resource group is changed.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -30,8 +26,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1AFAE64E-D1BE-432B-A9****</para>
         /// </summary>
@@ -40,8 +34,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

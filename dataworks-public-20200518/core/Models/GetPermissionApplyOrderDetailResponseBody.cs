@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetPermissionApplyOrderDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the permission request order.</para>
+        /// <para>Details of the permission request order.</para>
         /// </summary>
         [NameInMap("ApplyOrderDetail")]
         [Validation(Required=false)]
@@ -189,10 +189,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1757496687000</para>
+            /// </summary>
             [NameInMap("FinishAapprovalTimestamp")]
             [Validation(Required=false)]
             public long? FinishAapprovalTimestamp { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>agree</para>
+            /// </summary>
             [NameInMap("FinishApprovalComment")]
             [Validation(Required=false)]
             public string FinishApprovalComment { get; set; }

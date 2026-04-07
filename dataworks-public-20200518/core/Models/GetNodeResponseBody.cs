@@ -107,7 +107,9 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? DqcType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the file.</para>
+            /// <para>The file ID.</para>
+            /// <para>**</para>
+            /// <para><b>Warning</b> The field is deprecated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>

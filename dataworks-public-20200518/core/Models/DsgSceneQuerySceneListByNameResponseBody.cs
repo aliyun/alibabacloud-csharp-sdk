@@ -139,6 +139,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [Validation(Required=false)]
             public string UserGroups { get; set; }
 
+            [NameInMap("scenceDbType")]
+            [Validation(Required=false)]
+            public string ScenceDbType { get; set; }
+
         }
 
         /// <summary>

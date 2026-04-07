@@ -33,7 +33,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
             /// <summary>
             /// <para>The sensitive field type.</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>phone</para>
@@ -87,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
-            public int? Id { get; set; }
+            public long? Id { get; set; }
 
             /// <summary>
             /// <para>The owner of the data masking rule.</para>
@@ -117,7 +116,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// </summary>
             [NameInMap("SceneIds")]
             [Validation(Required=false)]
-            public List<int?> SceneIds { get; set; }
+            public List<long?> SceneIds { get; set; }
 
             /// <summary>
             /// <para>The status of the data masking rule. Valid values:</para>
@@ -132,6 +131,44 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public int? Status { get; set; }
+
+            [NameInMap("columns")]
+            [Validation(Required=false)]
+            public List<DsgDesensPlanAddOrUpdateRequestDesensRulesColumns> Columns { get; set; }
+            public class DsgDesensPlanAddOrUpdateRequestDesensRulesColumns : TeaModel {
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// </summary>
+                [NameInMap("column")]
+                [Validation(Required=false)]
+                public string Column { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// </summary>
+                [NameInMap("dbType")]
+                [Validation(Required=false)]
+                public string DbType { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// </summary>
+                [NameInMap("project")]
+                [Validation(Required=false)]
+                public string Project { get; set; }
+
+                /// <summary>
+                /// <para>This parameter is required.</para>
+                /// </summary>
+                [NameInMap("table")]
+                [Validation(Required=false)]
+                public string Table { get; set; }
+
+            }
+
+            [NameInMap("emptyNotDesesn")]
+            [Validation(Required=false)]
+            public bool? EmptyNotDesesn { get; set; }
 
         }
 

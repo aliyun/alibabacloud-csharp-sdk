@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The measurement results.</para>
+        /// <para>The metering results.</para>
         /// </summary>
         [NameInMap("MeasureDatas")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string DomainCode { get; set; }
 
             /// <summary>
-            /// <para>The end timestamp of the measurement period, in milliseconds.</para>
+            /// <para>The end timestamp of the metering cycle, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1717430400000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The start timestamp of the measurement period, in milliseconds.</para>
+            /// <para>The start timestamp of the metering cycle, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1717344000000</para>

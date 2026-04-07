@@ -193,11 +193,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The type of the monitoring rule. Valid values:</para>
+        /// <para>Rule type:</para>
         /// <list type="bullet">
-        /// <item><description>0: The monitoring rule is created by the system.</description></item>
-        /// <item><description>1: The monitoring rule is created by a user.</description></item>
-        /// <item><description>2: The monitoring rule is a workspace-level rule.</description></item>
+        /// <item><description>0: System template rule</description></item>
+        /// <item><description>1: Custom SQL rule</description></item>
+        /// <item><description>4: Custom template rule</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

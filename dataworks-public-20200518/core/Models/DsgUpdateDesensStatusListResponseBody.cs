@@ -8,10 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class DeleteFolderResponseBody : TeaModel {
+    public class DsgUpdateDesensStatusListResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>Invalid.Tenant.ConnectionNotExists</para>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public bool? Data { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1010040007</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
@@ -19,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>The connection does not exist.</para>
+        /// <para>The specified parameters are invalid.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
@@ -35,7 +43,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>0000-ABCD-EFG****</para>
+        /// <para>AFBB799F-8578-51C5-A766-E922EDB8XXXX</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

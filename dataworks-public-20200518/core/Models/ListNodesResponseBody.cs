@@ -115,6 +115,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 
                 /// <summary>
                 /// <para>The file ID. You can call the ListFiles operation to query the ID.</para>
+                /// <para>**</para>
+                /// <para><b>Warning</b> This field is deprecated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>

@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
-                public int? Id { get; set; }
+                public long? Id { get; set; }
 
                 /// <summary>
                 /// <para>The name of the user group.</para>
@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [NameInMap("Owner")]
                 [Validation(Required=false)]
                 public string Owner { get; set; }
+
+                [NameInMap("mcAggregationInfo")]
+                [Validation(Required=false)]
+                public string McAggregationInfo { get; set; }
 
             }
 

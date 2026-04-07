@@ -23,7 +23,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             /// <item><description>If a user group is created by using an Alibaba Cloud account and a RAM role, you can call the <a href="https://help.aliyun.com/document_detail/2786445.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</description></item>
             /// <item><description>If a user group is created by using a MaxCompute role, you can call the <a href="https://help.aliyun.com/document_detail/2785695.html">DsgUserGroupQueryUserList</a> operation to query the users in the group.</description></item>
             /// </list>
-            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Accounts")]
             [Validation(Required=false)]
@@ -90,6 +89,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             [NameInMap("UserGroupType")]
             [Validation(Required=false)]
             public int? UserGroupType { get; set; }
+
+            [NameInMap("projects")]
+            [Validation(Required=false)]
+            public string Projects { get; set; }
 
         }
 

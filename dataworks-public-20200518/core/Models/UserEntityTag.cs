@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class UserEntityTag : TeaModel {
         /// <summary>
+        /// <para>The tag key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>priority</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string TagKey { get; set; }
 
         /// <summary>
+        /// <para>The tag value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>p1</para>
         /// </summary>

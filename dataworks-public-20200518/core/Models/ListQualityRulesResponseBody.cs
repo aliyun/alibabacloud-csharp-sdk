@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class ListQualityRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of monitoring rules.</para>
+        /// <para>The list of retrieved rules.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The details of the monitoring rules.</para>
+            /// <para>The details of the validation rule.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
@@ -248,11 +248,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the monitoring rule. Valid values:</para>
+                /// <para>Rule type:</para>
                 /// <list type="bullet">
-                /// <item><description>0: The monitoring rule is created by the system.</description></item>
-                /// <item><description>1: The monitoring rule is created by a user.</description></item>
-                /// <item><description>2: The monitoring rule is a workspace-level rule.</description></item>
+                /// <item><description>0: System template rule</description></item>
+                /// <item><description>1: Custom SQL rule</description></item>
+                /// <item><description>1: Custom template rule</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

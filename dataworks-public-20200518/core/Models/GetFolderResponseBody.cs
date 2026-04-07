@@ -9,16 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
     public class GetFolderResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The details of the folder.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetFolderResponseBodyData Data { get; set; }
         public class GetFolderResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The folder ID.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>2735****</para>
             /// </summary>
@@ -27,8 +22,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
             public string FolderId { get; set; }
 
             /// <summary>
-            /// <para>The path of the folder.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>Business_process/my_first_business_process/MaxCompute/ods_layer</para>
             /// </summary>
@@ -39,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>GetFolder</para>
         /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ConnectionNotExists</para>
@@ -49,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The connection does not exist.</para>
@@ -59,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The path of the folder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -69,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para><a href="http://100.67.165.184/business/api/folders/detail">http://100.67.165.184/business/api/folders/detail</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -79,8 +72,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

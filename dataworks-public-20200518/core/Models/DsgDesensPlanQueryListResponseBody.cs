@@ -225,6 +225,32 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
+                [NameInMap("columns")]
+                [Validation(Required=false)]
+                public List<DsgDesensPlanQueryListResponseBodyPageDataDataColumns> Columns { get; set; }
+                public class DsgDesensPlanQueryListResponseBodyPageDataDataColumns : TeaModel {
+                    [NameInMap("column")]
+                    [Validation(Required=false)]
+                    public string Column { get; set; }
+
+                    [NameInMap("dbType")]
+                    [Validation(Required=false)]
+                    public string DbType { get; set; }
+
+                    [NameInMap("project")]
+                    [Validation(Required=false)]
+                    public string Project { get; set; }
+
+                    [NameInMap("table")]
+                    [Validation(Required=false)]
+                    public string Table { get; set; }
+
+                }
+
+                [NameInMap("emptyNotDesesn")]
+                [Validation(Required=false)]
+                public bool? EmptyNotDesesn { get; set; }
+
             }
 
             /// <summary>

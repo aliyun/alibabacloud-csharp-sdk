@@ -22,120 +22,271 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             this._endpointMap = new Dictionary<string, string>
             {
                 {"ap-northeast-1", "dataworks.ap-northeast-1.aliyuncs.com"},
-                {"ap-south-1", "dataworks.ap-south-1.aliyuncs.com"},
+                {"ap-northeast-2-pop", "dataworks.aliyuncs.com"},
+                {"ap-south-1", "dataworks.aliyuncs.com"},
                 {"ap-southeast-1", "dataworks.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-2", "dataworks.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-2", "dataworks.aliyuncs.com"},
                 {"ap-southeast-3", "dataworks.ap-southeast-3.aliyuncs.com"},
                 {"ap-southeast-5", "dataworks.ap-southeast-5.aliyuncs.com"},
                 {"cn-beijing", "dataworks.cn-beijing.aliyuncs.com"},
+                {"cn-beijing-finance-1", "dataworks.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-beijing-finance-pop", "dataworks.aliyuncs.com"},
+                {"cn-beijing-gov-1", "dataworks.aliyuncs.com"},
+                {"cn-beijing-nu16-b01", "dataworks.aliyuncs.com"},
                 {"cn-chengdu", "dataworks.cn-chengdu.aliyuncs.com"},
+                {"cn-edge-1", "dataworks.aliyuncs.com"},
+                {"cn-fujian", "dataworks.aliyuncs.com"},
+                {"cn-haidian-cm12-c01", "dataworks.aliyuncs.com"},
                 {"cn-hangzhou", "dataworks.cn-hangzhou.aliyuncs.com"},
+                {"cn-hangzhou-bj-b01", "dataworks.aliyuncs.com"},
+                {"cn-hangzhou-finance", "dataworks.aliyuncs.com"},
+                {"cn-hangzhou-internal-prod-1", "dataworks.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-1", "dataworks.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-2", "dataworks.aliyuncs.com"},
+                {"cn-hangzhou-internal-test-3", "dataworks.aliyuncs.com"},
+                {"cn-hangzhou-test-306", "dataworks.aliyuncs.com"},
                 {"cn-hongkong", "dataworks.cn-hongkong.aliyuncs.com"},
+                {"cn-hongkong-finance-pop", "dataworks.aliyuncs.com"},
                 {"cn-huhehaote", "dataworks.aliyuncs.com"},
+                {"cn-huhehaote-nebula-1", "dataworks.aliyuncs.com"},
+                {"cn-north-2-gov-1", "dataworks.cn-north-2-gov-1.aliyuncs.com"},
                 {"cn-qingdao", "dataworks.aliyuncs.com"},
+                {"cn-qingdao-nebula", "dataworks.aliyuncs.com"},
                 {"cn-shanghai", "dataworks.cn-shanghai.aliyuncs.com"},
+                {"cn-shanghai-et15-b01", "dataworks.aliyuncs.com"},
+                {"cn-shanghai-et2-b01", "dataworks.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "dataworks.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai-inner", "dataworks.aliyuncs.com"},
+                {"cn-shanghai-internal-test-1", "dataworks.aliyuncs.com"},
                 {"cn-shenzhen", "dataworks.cn-shenzhen.aliyuncs.com"},
-                {"cn-zhangjiakou", "dataworks.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "dataworks.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-shenzhen-inner", "dataworks.aliyuncs.com"},
+                {"cn-shenzhen-st4-d01", "dataworks.aliyuncs.com"},
+                {"cn-shenzhen-su18-b01", "dataworks.aliyuncs.com"},
+                {"cn-wuhan", "dataworks.aliyuncs.com"},
+                {"cn-wulanchabu", "dataworks.cn-wulanchabu.aliyuncs.com"},
+                {"cn-yushanfang", "dataworks.aliyuncs.com"},
+                {"cn-zhangbei", "dataworks.aliyuncs.com"},
+                {"cn-zhangbei-na61-b01", "dataworks.aliyuncs.com"},
+                {"cn-zhangjiakou", "dataworks.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-zhangjiakou-na62-a01", "dataworks.aliyuncs.com"},
+                {"cn-zhengzhou-nebula-1", "dataworks.aliyuncs.com"},
                 {"eu-central-1", "dataworks.eu-central-1.aliyuncs.com"},
                 {"eu-west-1", "dataworks.eu-west-1.aliyuncs.com"},
+                {"eu-west-1-oxs", "dataworks.aliyuncs.com"},
                 {"me-east-1", "dataworks.me-east-1.aliyuncs.com"},
+                {"rus-west-1-pop", "dataworks.aliyuncs.com"},
                 {"us-east-1", "dataworks.us-east-1.aliyuncs.com"},
                 {"us-west-1", "dataworks.us-west-1.aliyuncs.com"},
-                {"cn-hangzhou-finance", "dataworks.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "dataworks.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "dataworks.aliyuncs.com"},
-                {"cn-north-2-gov-1", "dataworks.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dataworks-public", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
 
-        public Dictionary<string, object> _postOSSObject(string bucketName, Dictionary<string, object> data)
+        public Dictionary<string, object> _postOSSObject(string bucketName, Dictionary<string, object> data, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            TeaRequest request_ = new TeaRequest();
-            Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
-            string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-            string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
-            request_.Protocol = "HTTPS";
-            request_.Method = "POST";
-            request_.Pathname = "/";
-            request_.Headers = new Dictionary<string, string>
+            Dictionary<string, object> runtime_ = new Dictionary<string, object>
             {
-                {"host", host},
-                {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
-                {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
-            };
-            request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
-            request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
-            TeaResponse response_ = TeaCore.DoAction(request_);
-
-            Dictionary<string, object> respMap = null;
-            string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
-            if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
-            {
-                respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-                Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
-                throw new TeaException(new Dictionary<string, object>
+                {"timeouted", "retry"},
+                {"key", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Key, _key)},
+                {"cert", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Cert, _cert)},
+                {"ca", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Ca, _ca)},
+                {"readTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ReadTimeout, _readTimeout)},
+                {"connectTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ConnectTimeout, _connectTimeout)},
+                {"httpProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpProxy, _httpProxy)},
+                {"httpsProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpsProxy, _httpsProxy)},
+                {"noProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.NoProxy, _noProxy)},
+                {"socks5Proxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5Proxy, _socks5Proxy)},
+                {"socks5NetWork", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5NetWork, _socks5NetWork)},
+                {"maxIdleConns", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxIdleConns, _maxIdleConns)},
+                {"retry", new Dictionary<string, object>
                 {
-                    {"code", err.Get("Code")},
-                    {"message", err.Get("Message")},
-                    {"data", new Dictionary<string, object>
+                    {"retryable", runtime.Autoretry},
+                    {"maxAttempts", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxAttempts, 3)},
+                }},
+                {"backoff", new Dictionary<string, object>
+                {
+                    {"policy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.BackoffPolicy, "no")},
+                    {"period", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.BackoffPeriod, 1)},
+                }},
+                {"ignoreSSL", AlibabaCloud.OpenApiClient.Client.DefaultAny(runtime.IgnoreSSL, false)},
+                {"tlsMinVersion", _tlsMinVersion},
+            };
+
+            TeaRequest _lastRequest = null;
+            Exception _lastException = null;
+            long _now = System.DateTime.Now.Millisecond;
+            int _retryTimes = 0;
+            while (TeaCore.AllowRetry((IDictionary) runtime_["retry"], _retryTimes, _now))
+            {
+                if (_retryTimes > 0)
+                {
+                    int backoffTime = TeaCore.GetBackoffTime((IDictionary)runtime_["backoff"], _retryTimes);
+                    if (backoffTime > 0)
                     {
-                        {"httpCode", response_.StatusCode},
-                        {"requestId", err.Get("RequestId")},
-                        {"hostId", err.Get("HostId")},
-                    }},
-                });
+                        TeaCore.Sleep(backoffTime);
+                    }
+                }
+                _retryTimes = _retryTimes + 1;
+                try
+                {
+                    TeaRequest request_ = new TeaRequest();
+                    Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
+                    string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
+                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    request_.Protocol = "HTTPS";
+                    request_.Method = "POST";
+                    request_.Pathname = "/";
+                    request_.Headers = new Dictionary<string, string>
+                    {
+                        {"host", host},
+                        {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
+                        {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
+                    };
+                    request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
+                    request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
+                    _lastRequest = request_;
+                    TeaResponse response_ = TeaCore.DoAction(request_, runtime_);
+
+                    Dictionary<string, object> respMap = null;
+                    string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
+                    if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
+                    {
+                        respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                        Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
+                        throw new TeaException(new Dictionary<string, object>
+                        {
+                            {"code", err.Get("Code")},
+                            {"message", err.Get("Message")},
+                            {"data", new Dictionary<string, object>
+                            {
+                                {"httpCode", response_.StatusCode},
+                                {"requestId", err.Get("RequestId")},
+                                {"hostId", err.Get("HostId")},
+                            }},
+                        });
+                    }
+                    respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                    return TeaConverter.merge<object>
+                    (
+                        respMap
+                    );
+                }
+                catch (Exception e)
+                {
+                    if (TeaCore.IsRetryable(e))
+                    {
+                        _lastException = e;
+                        continue;
+                    }
+                    throw e;
+                }
             }
-            respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-            return TeaConverter.merge<object>
-            (
-                respMap
-            );
+
+            throw new TeaUnretryableException(_lastRequest, _lastException);
         }
 
-        public async Task<Dictionary<string, object>> _postOSSObjectAsync(string bucketName, Dictionary<string, object> data)
+        public async Task<Dictionary<string, object>> _postOSSObjectAsync(string bucketName, Dictionary<string, object> data, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            TeaRequest request_ = new TeaRequest();
-            Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
-            string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-            string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
-            request_.Protocol = "HTTPS";
-            request_.Method = "POST";
-            request_.Pathname = "/";
-            request_.Headers = new Dictionary<string, string>
+            Dictionary<string, object> runtime_ = new Dictionary<string, object>
             {
-                {"host", host},
-                {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
-                {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
-            };
-            request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
-            request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
-            TeaResponse response_ = await TeaCore.DoActionAsync(request_);
-
-            Dictionary<string, object> respMap = null;
-            string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
-            if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
-            {
-                respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-                Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
-                throw new TeaException(new Dictionary<string, object>
+                {"timeouted", "retry"},
+                {"key", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Key, _key)},
+                {"cert", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Cert, _cert)},
+                {"ca", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Ca, _ca)},
+                {"readTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ReadTimeout, _readTimeout)},
+                {"connectTimeout", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.ConnectTimeout, _connectTimeout)},
+                {"httpProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpProxy, _httpProxy)},
+                {"httpsProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.HttpsProxy, _httpsProxy)},
+                {"noProxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.NoProxy, _noProxy)},
+                {"socks5Proxy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5Proxy, _socks5Proxy)},
+                {"socks5NetWork", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.Socks5NetWork, _socks5NetWork)},
+                {"maxIdleConns", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxIdleConns, _maxIdleConns)},
+                {"retry", new Dictionary<string, object>
                 {
-                    {"code", err.Get("Code")},
-                    {"message", err.Get("Message")},
-                    {"data", new Dictionary<string, object>
+                    {"retryable", runtime.Autoretry},
+                    {"maxAttempts", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.MaxAttempts, 3)},
+                }},
+                {"backoff", new Dictionary<string, object>
+                {
+                    {"policy", AlibabaCloud.TeaUtil.Common.DefaultString(runtime.BackoffPolicy, "no")},
+                    {"period", AlibabaCloud.TeaUtil.Common.DefaultNumber(runtime.BackoffPeriod, 1)},
+                }},
+                {"ignoreSSL", AlibabaCloud.OpenApiClient.Client.DefaultAny(runtime.IgnoreSSL, false)},
+                {"tlsMinVersion", _tlsMinVersion},
+            };
+
+            TeaRequest _lastRequest = null;
+            Exception _lastException = null;
+            long _now = System.DateTime.Now.Millisecond;
+            int _retryTimes = 0;
+            while (TeaCore.AllowRetry((IDictionary) runtime_["retry"], _retryTimes, _now))
+            {
+                if (_retryTimes > 0)
+                {
+                    int backoffTime = TeaCore.GetBackoffTime((IDictionary)runtime_["backoff"], _retryTimes);
+                    if (backoffTime > 0)
                     {
-                        {"httpCode", response_.StatusCode},
-                        {"requestId", err.Get("RequestId")},
-                        {"hostId", err.Get("HostId")},
-                    }},
-                });
+                        TeaCore.Sleep(backoffTime);
+                    }
+                }
+                _retryTimes = _retryTimes + 1;
+                try
+                {
+                    TeaRequest request_ = new TeaRequest();
+                    Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
+                    string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
+                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    request_.Protocol = "HTTPS";
+                    request_.Method = "POST";
+                    request_.Pathname = "/";
+                    request_.Headers = new Dictionary<string, string>
+                    {
+                        {"host", host},
+                        {"date", AlibabaCloud.TeaUtil.Common.GetDateUTCString()},
+                        {"user-agent", AlibabaCloud.TeaUtil.Common.GetUserAgent("")},
+                    };
+                    request_.Headers["content-type"] = "multipart/form-data; boundary=" + boundary;
+                    request_.Body = AlibabaCloud.SDK.TeaFileform.Client.ToFileForm(form, boundary);
+                    _lastRequest = request_;
+                    TeaResponse response_ = await TeaCore.DoActionAsync(request_, runtime_);
+
+                    Dictionary<string, object> respMap = null;
+                    string bodyStr = AlibabaCloud.TeaUtil.Common.ReadAsString(response_.Body);
+                    if (AlibabaCloud.TeaUtil.Common.Is4xx(response_.StatusCode) || AlibabaCloud.TeaUtil.Common.Is5xx(response_.StatusCode))
+                    {
+                        respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                        Dictionary<string, object> err = AlibabaCloud.TeaUtil.Common.AssertAsMap(respMap.Get("Error"));
+                        throw new TeaException(new Dictionary<string, object>
+                        {
+                            {"code", err.Get("Code")},
+                            {"message", err.Get("Message")},
+                            {"data", new Dictionary<string, object>
+                            {
+                                {"httpCode", response_.StatusCode},
+                                {"requestId", err.Get("RequestId")},
+                                {"hostId", err.Get("HostId")},
+                            }},
+                        });
+                    }
+                    respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
+                    return TeaConverter.merge<object>
+                    (
+                        respMap
+                    );
+                }
+                catch (Exception e)
+                {
+                    if (TeaCore.IsRetryable(e))
+                    {
+                        _lastException = e;
+                        continue;
+                    }
+                    throw e;
+                }
             }
-            respMap = AlibabaCloud.TeaXML.Client.ParseXml(bodyStr, null);
-            return TeaConverter.merge<object>
-            (
-                respMap
-            );
+
+            throw new TeaUnretryableException(_lastRequest, _lastException);
         }
 
         public string GetEndpoint(string productId, string regionId, string endpointRule, string network, string suffix, Dictionary<string, string> endpointMap, string endpoint)
@@ -4825,7 +4976,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to \<em>\<em>CreateFolder\</em>\</em>.</para>
+        /// <para>The operation that you want to perform. Set the value to \\<em>\\<em>CreateFolder\\</em>\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4875,7 +5026,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to \<em>\<em>CreateFolder\</em>\</em>.</para>
+        /// <para>The operation that you want to perform. Set the value to \\<em>\\<em>CreateFolder\\</em>\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4925,7 +5076,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to \<em>\<em>CreateFolder\</em>\</em>.</para>
+        /// <para>The operation that you want to perform. Set the value to \\<em>\\<em>CreateFolder\\</em>\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4943,7 +5094,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The operation that you want to perform. Set the value to \<em>\<em>CreateFolder\</em>\</em>.</para>
+        /// <para>The operation that you want to perform. Set the value to \\<em>\\<em>CreateFolder\\</em>\\</em>.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5312,7 +5463,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 createImportMigrationReq.PackageFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             CreateImportMigrationResponse createImportMigrationResp = CreateImportMigrationWithOptions(createImportMigrationReq, runtime);
@@ -5408,7 +5559,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 createImportMigrationReq.PackageFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             CreateImportMigrationResponse createImportMigrationResp = await CreateImportMigrationWithOptionsAsync(createImportMigrationReq, runtime);
@@ -6447,6 +6598,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await CreateProjectMemberWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityEntity is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a partition filter expression.</para>
@@ -6462,6 +6617,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityEntity is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.")]
+        // Deprecated
         public CreateQualityEntityResponse CreateQualityEntityWithOptions(CreateQualityEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6509,6 +6666,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateQualityEntityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityEntity is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a partition filter expression.</para>
@@ -6524,6 +6685,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityEntity is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.")]
+        // Deprecated
         public async Task<CreateQualityEntityResponse> CreateQualityEntityWithOptionsAsync(CreateQualityEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6571,6 +6734,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateQualityEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityEntity is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a partition filter expression.</para>
@@ -6583,12 +6750,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityEntity is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.")]
+        // Deprecated
         public CreateQualityEntityResponse CreateQualityEntity(CreateQualityEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateQualityEntityWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityEntity is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a partition filter expression.</para>
@@ -6601,12 +6774,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityEntity is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.")]
+        // Deprecated
         public async Task<CreateQualityEntityResponse> CreateQualityEntityAsync(CreateQualityEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateQualityEntityWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityFollower is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a subscriber for a partition filter expression.</para>
@@ -6622,6 +6801,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityFollower is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityAlertRule instead.")]
+        // Deprecated
         public CreateQualityFollowerResponse CreateQualityFollowerWithOptions(CreateQualityFollowerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6665,6 +6846,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateQualityFollowerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityFollower is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a subscriber for a partition filter expression.</para>
@@ -6680,6 +6865,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityFollower is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityAlertRule instead.")]
+        // Deprecated
         public async Task<CreateQualityFollowerResponse> CreateQualityFollowerWithOptionsAsync(CreateQualityFollowerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6723,6 +6910,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateQualityFollowerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityFollower is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a subscriber for a partition filter expression.</para>
@@ -6735,12 +6926,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityFollower is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityAlertRule instead.")]
+        // Deprecated
         public CreateQualityFollowerResponse CreateQualityFollower(CreateQualityFollowerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateQualityFollowerWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityFollower is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a subscriber for a partition filter expression.</para>
@@ -6753,12 +6950,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityFollower is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityAlertRule instead.")]
+        // Deprecated
         public async Task<CreateQualityFollowerResponse> CreateQualityFollowerAsync(CreateQualityFollowerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateQualityFollowerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Associates a node with a partition filter expression.</para>
@@ -6774,6 +6977,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityRelativeNodeResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public CreateQualityRelativeNodeResponse CreateQualityRelativeNodeWithOptions(CreateQualityRelativeNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6829,6 +7034,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateQualityRelativeNodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Associates a node with a partition filter expression.</para>
@@ -6844,6 +7053,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityRelativeNodeResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public async Task<CreateQualityRelativeNodeResponse> CreateQualityRelativeNodeWithOptionsAsync(CreateQualityRelativeNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -6899,6 +7110,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateQualityRelativeNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Associates a node with a partition filter expression.</para>
@@ -6911,12 +7126,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityRelativeNodeResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public CreateQualityRelativeNodeResponse CreateQualityRelativeNode(CreateQualityRelativeNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateQualityRelativeNodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Associates a node with a partition filter expression.</para>
@@ -6929,12 +7150,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityRelativeNodeResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public async Task<CreateQualityRelativeNodeResponse> CreateQualityRelativeNodeAsync(CreateQualityRelativeNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateQualityRelativeNodeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a monitoring rule.</para>
@@ -6950,6 +7177,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.")]
+        // Deprecated
         public CreateQualityRuleResponse CreateQualityRuleWithOptions(CreateQualityRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7053,6 +7282,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateQualityRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a monitoring rule.</para>
@@ -7068,6 +7301,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.")]
+        // Deprecated
         public async Task<CreateQualityRuleResponse> CreateQualityRuleWithOptionsAsync(CreateQualityRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7171,6 +7406,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateQualityRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a monitoring rule.</para>
@@ -7183,12 +7422,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.")]
+        // Deprecated
         public CreateQualityRuleResponse CreateQualityRule(CreateQualityRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateQualityRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a monitoring rule.</para>
@@ -7201,6 +7446,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateQualityRule is deprecated, please use dataworks-public::2024-05-18::CreateDataQualityScan instead.")]
+        // Deprecated
         public async Task<CreateQualityRuleResponse> CreateQualityRuleAsync(CreateQualityRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7744,7 +7991,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader);
+                _postOSSObject(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 createResourceFileReq.ResourceFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             CreateResourceFileResponse createResourceFileResp = CreateResourceFileWithOptions(createResourceFileReq, runtime);
@@ -7840,13 +8087,17 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
                     {"file", fileObj},
                     {"success_action_status", "201"},
                 };
-                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader);
+                await _postOSSObjectAsync(authResponseBody.Get("Bucket"), ossHeader, runtime);
                 createResourceFileReq.ResourceFile = "http://" + authResponseBody.Get("Bucket") + "." + authResponseBody.Get("Endpoint") + "/" + authResponseBody.Get("ObjectKey");
             }
             CreateResourceFileResponse createResourceFileResp = await CreateResourceFileWithOptionsAsync(createResourceFileReq, runtime);
             return createResourceFileResp;
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateTable is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a MaxCompute table or view.</para>
@@ -7862,6 +8113,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateTableResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateTable is deprecated")]
+        // Deprecated
         public CreateTableResponse CreateTableWithOptions(CreateTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -7967,6 +8220,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateTableResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateTable is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a MaxCompute table or view.</para>
@@ -7982,6 +8239,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateTableResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateTable is deprecated")]
+        // Deprecated
         public async Task<CreateTableResponse> CreateTableWithOptionsAsync(CreateTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -8087,6 +8346,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<CreateTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateTable is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a MaxCompute table or view.</para>
@@ -8099,12 +8362,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateTableResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateTable is deprecated")]
+        // Deprecated
         public CreateTableResponse CreateTable(CreateTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return CreateTableWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreateTable is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Creates a MaxCompute table or view.</para>
@@ -8117,6 +8386,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// CreateTableResponse
         /// </returns>
+        [Obsolete("OpenAPI CreateTable is deprecated")]
+        // Deprecated
         public async Task<CreateTableResponse> CreateTableAsync(CreateTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -8125,7 +8396,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a table level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Creates a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8179,7 +8450,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a table level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Creates a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8233,7 +8504,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a table level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Creates a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8251,7 +8522,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a table level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Creates a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8755,6 +9026,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await DeleteBaselineWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a workflow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteBusinessRequest
         /// </param>
@@ -8800,6 +9076,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteBusinessResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a workflow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteBusinessRequest
         /// </param>
@@ -8845,6 +9126,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteBusinessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a workflow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteBusinessRequest
         /// </param>
@@ -8858,6 +9144,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return DeleteBusinessWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a workflow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteBusinessRequest
         /// </param>
@@ -9967,6 +10258,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await DeleteFileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder from DataStudio.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteFolderRequest
         /// </param>
@@ -10012,6 +10308,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteFolderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder from DataStudio.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteFolderRequest
         /// </param>
@@ -10057,6 +10358,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteFolderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder from DataStudio.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteFolderRequest
         /// </param>
@@ -10070,6 +10376,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return DeleteFolderWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a folder from DataStudio.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteFolderRequest
         /// </param>
@@ -10863,6 +11174,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await DeleteProjectMemberWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityEntity is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Deletes a partition filter expression.</para>
@@ -10878,6 +11193,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityEntity is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.")]
+        // Deprecated
         public DeleteQualityEntityResponse DeleteQualityEntityWithOptions(DeleteQualityEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10917,6 +11234,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteQualityEntityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityEntity is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Deletes a partition filter expression.</para>
@@ -10932,6 +11253,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityEntity is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.")]
+        // Deprecated
         public async Task<DeleteQualityEntityResponse> DeleteQualityEntityWithOptionsAsync(DeleteQualityEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -10971,6 +11294,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteQualityEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityEntity is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Deletes a partition filter expression.</para>
@@ -10983,12 +11310,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityEntity is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.")]
+        // Deprecated
         public DeleteQualityEntityResponse DeleteQualityEntity(DeleteQualityEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteQualityEntityWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityEntity is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Deletes a partition filter expression.</para>
@@ -11001,15 +11334,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityEntity is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityScan instead.")]
+        // Deprecated
         public async Task<DeleteQualityEntityResponse> DeleteQualityEntityAsync(DeleteQualityEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteQualityEntityWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a subscriber of a partition filter expression.</para>
+        /// <para>Calls DeleteQualityFollower to delete the subscribers of a partition expression.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11027,6 +11366,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.")]
+        // Deprecated
         public DeleteQualityFollowerResponse DeleteQualityFollowerWithOptions(DeleteQualityFollowerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11062,9 +11403,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteQualityFollowerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a subscriber of a partition filter expression.</para>
+        /// <para>Calls DeleteQualityFollower to delete the subscribers of a partition expression.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11082,6 +11427,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.")]
+        // Deprecated
         public async Task<DeleteQualityFollowerResponse> DeleteQualityFollowerWithOptionsAsync(DeleteQualityFollowerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11117,9 +11464,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteQualityFollowerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a subscriber of a partition filter expression.</para>
+        /// <para>Calls DeleteQualityFollower to delete the subscribers of a partition expression.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11134,15 +11485,21 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.")]
+        // Deprecated
         public DeleteQualityFollowerResponse DeleteQualityFollower(DeleteQualityFollowerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteQualityFollowerWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a subscriber of a partition filter expression.</para>
+        /// <para>Calls DeleteQualityFollower to delete the subscribers of a partition expression.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11157,12 +11514,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityFollower is deprecated, please use dataworks-public::2024-05-18::DeleteDataQualityAlertRule instead.")]
+        // Deprecated
         public async Task<DeleteQualityFollowerResponse> DeleteQualityFollowerAsync(DeleteQualityFollowerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteQualityFollowerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a node from a partition filter expression.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteQualityRelativeNodeRequest
         /// </param>
@@ -11173,6 +11541,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityRelativeNodeResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public DeleteQualityRelativeNodeResponse DeleteQualityRelativeNodeWithOptions(DeleteQualityRelativeNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11228,6 +11598,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteQualityRelativeNodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a node from a partition filter expression.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteQualityRelativeNodeRequest
         /// </param>
@@ -11238,6 +11617,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityRelativeNodeResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public async Task<DeleteQualityRelativeNodeResponse> DeleteQualityRelativeNodeWithOptionsAsync(DeleteQualityRelativeNodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11293,6 +11674,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteQualityRelativeNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a node from a partition filter expression.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteQualityRelativeNodeRequest
         /// </param>
@@ -11300,12 +11690,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityRelativeNodeResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public DeleteQualityRelativeNodeResponse DeleteQualityRelativeNode(DeleteQualityRelativeNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteQualityRelativeNodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disassociates a node from a partition filter expression.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteQualityRelativeNodeRequest
         /// </param>
@@ -11313,12 +11714,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityRelativeNodeResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityRelativeNode is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public async Task<DeleteQualityRelativeNodeResponse> DeleteQualityRelativeNodeAsync(DeleteQualityRelativeNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteQualityRelativeNodeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Deletes a monitoring rule.</para>
@@ -11334,6 +11741,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public DeleteQualityRuleResponse DeleteQualityRuleWithOptions(DeleteQualityRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11369,6 +11778,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteQualityRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Deletes a monitoring rule.</para>
@@ -11384,6 +11797,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public async Task<DeleteQualityRuleResponse> DeleteQualityRuleWithOptionsAsync(DeleteQualityRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11419,6 +11834,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteQualityRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Deletes a monitoring rule.</para>
@@ -11431,12 +11850,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public DeleteQualityRuleResponse DeleteQualityRule(DeleteQualityRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteQualityRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Deletes a monitoring rule.</para>
@@ -11449,6 +11874,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public async Task<DeleteQualityRuleResponse> DeleteQualityRuleAsync(DeleteQualityRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11703,6 +12130,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await DeleteRemindWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteTable is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MaxCompute table.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTableRequest
         /// </param>
@@ -11713,6 +12149,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteTableResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteTable is deprecated")]
+        // Deprecated
         public DeleteTableResponse DeleteTableWithOptions(DeleteTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11756,6 +12194,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteTableResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteTable is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MaxCompute table.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTableRequest
         /// </param>
@@ -11766,6 +12213,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteTableResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteTable is deprecated")]
+        // Deprecated
         public async Task<DeleteTableResponse> DeleteTableWithOptionsAsync(DeleteTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -11809,6 +12258,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<DeleteTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteTable is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MaxCompute table.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTableRequest
         /// </param>
@@ -11816,12 +12274,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteTableResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteTable is deprecated")]
+        // Deprecated
         public DeleteTableResponse DeleteTable(DeleteTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return DeleteTableWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI DeleteTable is deprecated
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a MaxCompute table.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteTableRequest
         /// </param>
@@ -11829,6 +12298,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DeleteTableResponse
         /// </returns>
+        [Obsolete("OpenAPI DeleteTable is deprecated")]
+        // Deprecated
         public async Task<DeleteTableResponse> DeleteTableAsync(DeleteTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -11837,7 +12308,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a table level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Deletes a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11883,7 +12354,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a table level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Deletes a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11929,7 +12400,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a table level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Deletes a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11947,7 +12418,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a table level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Deletes a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12768,7 +13239,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <para>Queries a list of data masking rules.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DsgDesensPlanQueryListRequest
         /// </param>
         /// <param name="runtime">
@@ -12778,9 +13249,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DsgDesensPlanQueryListResponse
         /// </returns>
-        public DsgDesensPlanQueryListResponse DsgDesensPlanQueryListWithOptions(DsgDesensPlanQueryListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DsgDesensPlanQueryListResponse DsgDesensPlanQueryListWithOptions(DsgDesensPlanQueryListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DsgDesensPlanQueryListShrinkRequest request = new DsgDesensPlanQueryListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Columns))
+            {
+                request.ColumnsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Columns, "columns", "json");
+            }
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -12806,7 +13283,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <para>Queries a list of data masking rules.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DsgDesensPlanQueryListRequest
         /// </param>
         /// <param name="runtime">
@@ -12816,9 +13293,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// DsgDesensPlanQueryListResponse
         /// </returns>
-        public async Task<DsgDesensPlanQueryListResponse> DsgDesensPlanQueryListWithOptionsAsync(DsgDesensPlanQueryListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DsgDesensPlanQueryListResponse> DsgDesensPlanQueryListWithOptionsAsync(DsgDesensPlanQueryListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DsgDesensPlanQueryListShrinkRequest request = new DsgDesensPlanQueryListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Columns))
+            {
+                request.ColumnsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Columns, "columns", "json");
+            }
             Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -13245,6 +13728,118 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DsgQueryDefaultTemplatesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the status of the masking switch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DsgQueryDesensStatusListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DsgQueryDesensStatusListResponse
+        /// </returns>
+        public DsgQueryDesensStatusListResponse DsgQueryDesensStatusListWithOptions(DsgQueryDesensStatusListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgQueryDesensStatusList",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgQueryDesensStatusListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the status of the masking switch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DsgQueryDesensStatusListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DsgQueryDesensStatusListResponse
+        /// </returns>
+        public async Task<DsgQueryDesensStatusListResponse> DsgQueryDesensStatusListWithOptionsAsync(DsgQueryDesensStatusListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgQueryDesensStatusList",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgQueryDesensStatusListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the status of the masking switch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DsgQueryDesensStatusListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DsgQueryDesensStatusListResponse
+        /// </returns>
+        public DsgQueryDesensStatusListResponse DsgQueryDesensStatusList(DsgQueryDesensStatusListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DsgQueryDesensStatusListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the status of the masking switch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DsgQueryDesensStatusListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DsgQueryDesensStatusListResponse
+        /// </returns>
+        public async Task<DsgQueryDesensStatusListResponse> DsgQueryDesensStatusListAsync(DsgQueryDesensStatusListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DsgQueryDesensStatusListWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14161,6 +14756,146 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DsgStopSensIdentifyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of the masking switch.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DsgUpdateDesensStatusListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DsgUpdateDesensStatusListResponse
+        /// </returns>
+        public DsgUpdateDesensStatusListResponse DsgUpdateDesensStatusListWithOptions(DsgUpdateDesensStatusListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DsgUpdateDesensStatusListShrinkRequest request = new DsgUpdateDesensStatusListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesensStatus))
+            {
+                query["DesensStatus"] = request.DesensStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                query["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgUpdateDesensStatusList",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgUpdateDesensStatusListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of the masking switch.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DsgUpdateDesensStatusListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DsgUpdateDesensStatusListResponse
+        /// </returns>
+        public async Task<DsgUpdateDesensStatusListResponse> DsgUpdateDesensStatusListWithOptionsAsync(DsgUpdateDesensStatusListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DsgUpdateDesensStatusListShrinkRequest request = new DsgUpdateDesensStatusListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesensStatus))
+            {
+                query["DesensStatus"] = request.DesensStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                query["Ids"] = request.IdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DsgUpdateDesensStatusList",
+                Version = "2020-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DsgUpdateDesensStatusListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of the masking switch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DsgUpdateDesensStatusListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DsgUpdateDesensStatusListResponse
+        /// </returns>
+        public DsgUpdateDesensStatusListResponse DsgUpdateDesensStatusList(DsgUpdateDesensStatusListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DsgUpdateDesensStatusListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status of the masking switch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DsgUpdateDesensStatusListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DsgUpdateDesensStatusListResponse
+        /// </returns>
+        public async Task<DsgUpdateDesensStatusListResponse> DsgUpdateDesensStatusListAsync(DsgUpdateDesensStatusListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DsgUpdateDesensStatusListWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15385,6 +16120,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await EditRecognizeRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a table to a workflow. The call to this API operation is equivalent to performing the following operations: Go to the DataStudio page, find the desired workflow, and then click the workflow name. Right-click Table under the desired folder and select Import Table.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EstablishRelationTableToBusinessRequest
         /// </param>
@@ -15438,6 +16178,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<EstablishRelationTableToBusinessResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a table to a workflow. The call to this API operation is equivalent to performing the following operations: Go to the DataStudio page, find the desired workflow, and then click the workflow name. Right-click Table under the desired folder and select Import Table.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EstablishRelationTableToBusinessRequest
         /// </param>
@@ -15491,6 +16236,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<EstablishRelationTableToBusinessResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a table to a workflow. The call to this API operation is equivalent to performing the following operations: Go to the DataStudio page, find the desired workflow, and then click the workflow name. Right-click Table under the desired folder and select Import Table.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EstablishRelationTableToBusinessRequest
         /// </param>
@@ -15504,6 +16254,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return EstablishRelationTableToBusinessWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Imports a table to a workflow. The call to this API operation is equivalent to performing the following operations: Go to the DataStudio page, find the desired workflow, and then click the workflow name. Right-click Table under the desired folder and select Import Table.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// EstablishRelationTableToBusinessRequest
         /// </param>
@@ -16741,6 +17496,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GetBusinessWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetDDLJobStatus is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the status of a table creation, update, or deletion task.</para>
@@ -16756,6 +17515,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetDDLJobStatusResponse
         /// </returns>
+        [Obsolete("OpenAPI GetDDLJobStatus is deprecated")]
+        // Deprecated
         public GetDDLJobStatusResponse GetDDLJobStatusWithOptions(GetDDLJobStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16779,6 +17540,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetDDLJobStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetDDLJobStatus is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the status of a table creation, update, or deletion task.</para>
@@ -16794,6 +17559,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetDDLJobStatusResponse
         /// </returns>
+        [Obsolete("OpenAPI GetDDLJobStatus is deprecated")]
+        // Deprecated
         public async Task<GetDDLJobStatusResponse> GetDDLJobStatusWithOptionsAsync(GetDDLJobStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -16817,6 +17584,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetDDLJobStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetDDLJobStatus is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the status of a table creation, update, or deletion task.</para>
@@ -16829,12 +17600,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetDDLJobStatusResponse
         /// </returns>
+        [Obsolete("OpenAPI GetDDLJobStatus is deprecated")]
+        // Deprecated
         public GetDDLJobStatusResponse GetDDLJobStatus(GetDDLJobStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetDDLJobStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetDDLJobStatus is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the status of a table creation, update, or deletion task.</para>
@@ -16847,6 +17624,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetDDLJobStatusResponse
         /// </returns>
+        [Obsolete("OpenAPI GetDDLJobStatus is deprecated")]
+        // Deprecated
         public async Task<GetDDLJobStatusResponse> GetDDLJobStatusAsync(GetDDLJobStatusRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -21849,6 +22628,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GetMetaTableColumnWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetMetaTableFullInfo is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the complete information about a table, including information about fields in the table.</para>
@@ -21869,6 +22652,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetMetaTableFullInfoResponse
         /// </returns>
+        [Obsolete("OpenAPI GetMetaTableFullInfo is deprecated")]
+        // Deprecated
         public GetMetaTableFullInfoResponse GetMetaTableFullInfoWithOptions(GetMetaTableFullInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21892,6 +22677,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetMetaTableFullInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetMetaTableFullInfo is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the complete information about a table, including information about fields in the table.</para>
@@ -21912,6 +22701,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetMetaTableFullInfoResponse
         /// </returns>
+        [Obsolete("OpenAPI GetMetaTableFullInfo is deprecated")]
+        // Deprecated
         public async Task<GetMetaTableFullInfoResponse> GetMetaTableFullInfoWithOptionsAsync(GetMetaTableFullInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -21935,6 +22726,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetMetaTableFullInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetMetaTableFullInfo is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the complete information about a table, including information about fields in the table.</para>
@@ -21952,12 +22747,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetMetaTableFullInfoResponse
         /// </returns>
+        [Obsolete("OpenAPI GetMetaTableFullInfo is deprecated")]
+        // Deprecated
         public GetMetaTableFullInfoResponse GetMetaTableFullInfo(GetMetaTableFullInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetMetaTableFullInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetMetaTableFullInfo is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the complete information about a table, including information about fields in the table.</para>
@@ -21975,6 +22776,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetMetaTableFullInfoResponse
         /// </returns>
+        [Obsolete("OpenAPI GetMetaTableFullInfo is deprecated")]
+        // Deprecated
         public async Task<GetMetaTableFullInfoResponse> GetMetaTableFullInfoAsync(GetMetaTableFullInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -22927,7 +23730,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the themes and levels of a metatable.</para>
+        /// <para>Fetches topics and hierarchy metadata for tables</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22965,7 +23768,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the themes and levels of a metatable.</para>
+        /// <para>Fetches topics and hierarchy metadata for tables</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23003,7 +23806,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the themes and levels of a metatable.</para>
+        /// <para>Fetches topics and hierarchy metadata for tables</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23021,7 +23824,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the themes and levels of a metatable.</para>
+        /// <para>Fetches topics and hierarchy metadata for tables</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24877,6 +25680,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await GetProjectDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetQualityEntity is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a partition filter expression.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityEntityRequest
         /// </param>
@@ -24887,6 +25699,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetQualityEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI GetQualityEntity is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.")]
+        // Deprecated
         public GetQualityEntityResponse GetQualityEntityWithOptions(GetQualityEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24930,6 +25744,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetQualityEntityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetQualityEntity is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a partition filter expression.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityEntityRequest
         /// </param>
@@ -24940,6 +25763,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetQualityEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI GetQualityEntity is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.")]
+        // Deprecated
         public async Task<GetQualityEntityResponse> GetQualityEntityWithOptionsAsync(GetQualityEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -24983,6 +25808,15 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetQualityEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetQualityEntity is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a partition filter expression.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityEntityRequest
         /// </param>
@@ -24990,12 +25824,23 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetQualityEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI GetQualityEntity is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.")]
+        // Deprecated
         public GetQualityEntityResponse GetQualityEntity(GetQualityEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetQualityEntityWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetQualityEntity is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+        /// 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the information about a partition filter expression.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityEntityRequest
         /// </param>
@@ -25003,12 +25848,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetQualityEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI GetQualityEntity is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.")]
+        // Deprecated
         public async Task<GetQualityEntityResponse> GetQualityEntityAsync(GetQualityEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetQualityEntityWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetQualityFollower is deprecated, please use dataworks-public::2024-05-18::GetDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the subscribers of a partition filter expression.</para>
@@ -25024,6 +25875,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI GetQualityFollower is deprecated, please use dataworks-public::2024-05-18::GetDataQualityAlertRule instead.")]
+        // Deprecated
         public GetQualityFollowerResponse GetQualityFollowerWithOptions(GetQualityFollowerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25059,6 +25912,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetQualityFollowerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetQualityFollower is deprecated, please use dataworks-public::2024-05-18::GetDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the subscribers of a partition filter expression.</para>
@@ -25074,6 +25931,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI GetQualityFollower is deprecated, please use dataworks-public::2024-05-18::GetDataQualityAlertRule instead.")]
+        // Deprecated
         public async Task<GetQualityFollowerResponse> GetQualityFollowerWithOptionsAsync(GetQualityFollowerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25109,6 +25968,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetQualityFollowerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetQualityFollower is deprecated, please use dataworks-public::2024-05-18::GetDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the subscribers of a partition filter expression.</para>
@@ -25121,12 +25984,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI GetQualityFollower is deprecated, please use dataworks-public::2024-05-18::GetDataQualityAlertRule instead.")]
+        // Deprecated
         public GetQualityFollowerResponse GetQualityFollower(GetQualityFollowerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetQualityFollowerWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetQualityFollower is deprecated, please use dataworks-public::2024-05-18::GetDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the subscribers of a partition filter expression.</para>
@@ -25139,12 +26008,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI GetQualityFollower is deprecated, please use dataworks-public::2024-05-18::GetDataQualityAlertRule instead.")]
+        // Deprecated
         public async Task<GetQualityFollowerResponse> GetQualityFollowerAsync(GetQualityFollowerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetQualityFollowerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the information about a monitoring rule.</para>
@@ -25160,6 +26035,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI GetQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.")]
+        // Deprecated
         public GetQualityRuleResponse GetQualityRuleWithOptions(GetQualityRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25195,6 +26072,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetQualityRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the information about a monitoring rule.</para>
@@ -25210,6 +26091,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI GetQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.")]
+        // Deprecated
         public async Task<GetQualityRuleResponse> GetQualityRuleWithOptionsAsync(GetQualityRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -25245,6 +26128,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<GetQualityRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the information about a monitoring rule.</para>
@@ -25257,12 +26144,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI GetQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.")]
+        // Deprecated
         public GetQualityRuleResponse GetQualityRule(GetQualityRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return GetQualityRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries the information about a monitoring rule.</para>
@@ -25275,6 +26168,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// GetQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI GetQualityRule is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.")]
+        // Deprecated
         public async Task<GetQualityRuleResponse> GetQualityRuleAsync(GetQualityRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -33563,7 +34458,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views permission requests.</para>
+        /// <para>Queries a list of permission requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33653,7 +34548,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views permission requests.</para>
+        /// <para>Queries a list of permission requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33743,7 +34638,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views permission requests.</para>
+        /// <para>Queries a list of permission requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33761,7 +34656,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views permission requests.</para>
+        /// <para>Queries a list of permission requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34505,6 +35400,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await ListProjectsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries a list of historical check results based on a partition filter expression.</para>
@@ -34525,6 +35424,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListQualityResultsByEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.")]
+        // Deprecated
         public ListQualityResultsByEntityResponse ListQualityResultsByEntityWithOptions(ListQualityResultsByEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -34576,6 +35477,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListQualityResultsByEntityResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries a list of historical check results based on a partition filter expression.</para>
@@ -34596,6 +35501,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListQualityResultsByEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.")]
+        // Deprecated
         public async Task<ListQualityResultsByEntityResponse> ListQualityResultsByEntityWithOptionsAsync(ListQualityResultsByEntityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -34647,6 +35554,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListQualityResultsByEntityResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries a list of historical check results based on a partition filter expression.</para>
@@ -34664,12 +35575,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListQualityResultsByEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.")]
+        // Deprecated
         public ListQualityResultsByEntityResponse ListQualityResultsByEntity(ListQualityResultsByEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListQualityResultsByEntityWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries a list of historical check results based on a partition filter expression.</para>
@@ -34687,12 +35604,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListQualityResultsByEntityResponse
         /// </returns>
+        [Obsolete("OpenAPI ListQualityResultsByEntity is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.")]
+        // Deprecated
         public async Task<ListQualityResultsByEntityResponse> ListQualityResultsByEntityAsync(ListQualityResultsByEntityRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListQualityResultsByEntityWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListQualityResultsByRule is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries monitoring results after the data quality of a data source or a compute engine is monitored based on monitoring rules.</para>
@@ -34708,6 +35631,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListQualityResultsByRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI ListQualityResultsByRule is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.")]
+        // Deprecated
         public ListQualityResultsByRuleResponse ListQualityResultsByRuleWithOptions(ListQualityResultsByRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -34759,6 +35684,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListQualityResultsByRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListQualityResultsByRule is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries monitoring results after the data quality of a data source or a compute engine is monitored based on monitoring rules.</para>
@@ -34774,6 +35703,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListQualityResultsByRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI ListQualityResultsByRule is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.")]
+        // Deprecated
         public async Task<ListQualityResultsByRuleResponse> ListQualityResultsByRuleWithOptionsAsync(ListQualityResultsByRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -34825,6 +35756,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListQualityResultsByRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListQualityResultsByRule is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries monitoring results after the data quality of a data source or a compute engine is monitored based on monitoring rules.</para>
@@ -34837,12 +35772,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListQualityResultsByRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI ListQualityResultsByRule is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.")]
+        // Deprecated
         public ListQualityResultsByRuleResponse ListQualityResultsByRule(ListQualityResultsByRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListQualityResultsByRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListQualityResultsByRule is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries monitoring results after the data quality of a data source or a compute engine is monitored based on monitoring rules.</para>
@@ -34855,12 +35796,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListQualityResultsByRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI ListQualityResultsByRule is deprecated, please use dataworks-public::2024-05-18::ListDataQualityScanRuns instead.")]
+        // Deprecated
         public async Task<ListQualityResultsByRuleResponse> ListQualityResultsByRuleAsync(ListQualityResultsByRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListQualityResultsByRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListQualityRules is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries monitoring rules based on a partition filter expression.</para>
@@ -34876,6 +35823,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListQualityRulesResponse
         /// </returns>
+        [Obsolete("OpenAPI ListQualityRules is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.")]
+        // Deprecated
         public ListQualityRulesResponse ListQualityRulesWithOptions(ListQualityRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -34919,6 +35868,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListQualityRulesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListQualityRules is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries monitoring rules based on a partition filter expression.</para>
@@ -34934,6 +35887,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListQualityRulesResponse
         /// </returns>
+        [Obsolete("OpenAPI ListQualityRules is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.")]
+        // Deprecated
         public async Task<ListQualityRulesResponse> ListQualityRulesWithOptionsAsync(ListQualityRulesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -34977,6 +35932,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<ListQualityRulesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListQualityRules is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries monitoring rules based on a partition filter expression.</para>
@@ -34989,12 +35948,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListQualityRulesResponse
         /// </returns>
+        [Obsolete("OpenAPI ListQualityRules is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.")]
+        // Deprecated
         public ListQualityRulesResponse ListQualityRules(ListQualityRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListQualityRulesWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListQualityRules is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Queries monitoring rules based on a partition filter expression.</para>
@@ -35007,6 +35972,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// ListQualityRulesResponse
         /// </returns>
+        [Obsolete("OpenAPI ListQualityRules is deprecated, please use dataworks-public::2024-05-18::GetDataQualityScan instead.")]
+        // Deprecated
         public async Task<ListQualityRulesResponse> ListQualityRulesAsync(ListQualityRulesRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -35923,7 +36890,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of table levels. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Lists hierarchy levels. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35961,7 +36928,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of table levels. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Lists hierarchy levels. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35999,7 +36966,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of table levels. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Lists hierarchy levels. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36017,7 +36984,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of table levels. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Lists hierarchy levels. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36035,7 +37002,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of table themes. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Lists table themes. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36073,7 +37040,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of table themes. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Lists table themes. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36111,7 +37078,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of table themes. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Lists table themes. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36129,7 +37096,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of table themes. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Lists table themes. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38505,7 +39472,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a suspended instance.</para>
+        /// <para>Calls the ResumeInstance operation to resume a suspended instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38551,7 +39518,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a suspended instance.</para>
+        /// <para>Calls the ResumeInstance operation to resume a suspended instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38597,7 +39564,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a suspended instance.</para>
+        /// <para>Calls the ResumeInstance operation to resume a suspended instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38615,7 +39582,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resumes a suspended instance.</para>
+        /// <para>Calls the ResumeInstance operation to resume a suspended instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45301,8 +46268,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata information about a table. Only MaxCompute tables are supported.</para>
+        /// <para>This operation updates the metadata of a table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports MaxCompute tables only.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMetaTableRequest
@@ -45385,8 +46357,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata information about a table. Only MaxCompute tables are supported.</para>
+        /// <para>This operation updates the metadata of a table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports MaxCompute tables only.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMetaTableRequest
@@ -45469,8 +46446,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata information about a table. Only MaxCompute tables are supported.</para>
+        /// <para>This operation updates the metadata of a table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports MaxCompute tables only.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMetaTableRequest
@@ -45487,8 +46469,13 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the metadata information about a table. Only MaxCompute tables are supported.</para>
+        /// <para>This operation updates the metadata of a table.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports MaxCompute tables only.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateMetaTableRequest
@@ -45907,6 +46894,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await UpdateNodeRunModeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateQualityFollower is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates a subscription relationship.</para>
@@ -45922,6 +46913,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateQualityFollower is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityAlertRule instead.")]
+        // Deprecated
         public UpdateQualityFollowerResponse UpdateQualityFollowerWithOptions(UpdateQualityFollowerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -45965,6 +46958,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateQualityFollowerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateQualityFollower is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates a subscription relationship.</para>
@@ -45980,6 +46977,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateQualityFollower is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityAlertRule instead.")]
+        // Deprecated
         public async Task<UpdateQualityFollowerResponse> UpdateQualityFollowerWithOptionsAsync(UpdateQualityFollowerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -46023,6 +47022,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateQualityFollowerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateQualityFollower is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates a subscription relationship.</para>
@@ -46035,12 +47038,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateQualityFollower is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityAlertRule instead.")]
+        // Deprecated
         public UpdateQualityFollowerResponse UpdateQualityFollower(UpdateQualityFollowerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateQualityFollowerWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateQualityFollower is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityAlertRule instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates a subscription relationship.</para>
@@ -46053,12 +47062,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateQualityFollowerResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateQualityFollower is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityAlertRule instead.")]
+        // Deprecated
         public async Task<UpdateQualityFollowerResponse> UpdateQualityFollowerAsync(UpdateQualityFollowerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateQualityFollowerWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates a monitoring rule.</para>
@@ -46074,6 +47089,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public UpdateQualityRuleResponse UpdateQualityRuleWithOptions(UpdateQualityRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -46185,6 +47202,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateQualityRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates a monitoring rule.</para>
@@ -46200,6 +47221,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public async Task<UpdateQualityRuleResponse> UpdateQualityRuleWithOptionsAsync(UpdateQualityRuleRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -46311,6 +47334,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateQualityRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates a monitoring rule.</para>
@@ -46323,12 +47350,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public UpdateQualityRuleResponse UpdateQualityRule(UpdateQualityRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateQualityRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates a monitoring rule.</para>
@@ -46341,6 +47374,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateQualityRuleResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateQualityRule is deprecated, please use dataworks-public::2024-05-18::UpdateDataQualityScan instead.")]
+        // Deprecated
         public async Task<UpdateQualityRuleResponse> UpdateQualityRuleAsync(UpdateQualityRuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -46603,6 +47638,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return await UpdateRemindWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateTable is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates a MaxCompute table.</para>
@@ -46618,6 +47657,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateTableResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateTable is deprecated")]
+        // Deprecated
         public UpdateTableResponse UpdateTableWithOptions(UpdateTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -46723,6 +47764,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateTableResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateTable is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates a MaxCompute table.</para>
@@ -46738,6 +47783,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateTableResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateTable is deprecated")]
+        // Deprecated
         public async Task<UpdateTableResponse> UpdateTableWithOptionsAsync(UpdateTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -46843,6 +47890,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateTableResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateTable is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates a MaxCompute table.</para>
@@ -46855,12 +47906,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateTableResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateTable is deprecated")]
+        // Deprecated
         public UpdateTableResponse UpdateTable(UpdateTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTableWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateTable is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates a MaxCompute table.</para>
@@ -46873,12 +47930,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateTableResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateTable is deprecated")]
+        // Deprecated
         public async Task<UpdateTableResponse> UpdateTableAsync(UpdateTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateTableWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateTableAddColumn is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates the fields in a MaxCompute table.</para>
@@ -46894,6 +47957,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateTableAddColumnResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateTableAddColumn is deprecated")]
+        // Deprecated
         public UpdateTableAddColumnResponse UpdateTableAddColumnWithOptions(UpdateTableAddColumnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -46927,6 +47992,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateTableAddColumnResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateTableAddColumn is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates the fields in a MaxCompute table.</para>
@@ -46942,6 +48011,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateTableAddColumnResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateTableAddColumn is deprecated")]
+        // Deprecated
         public async Task<UpdateTableAddColumnResponse> UpdateTableAddColumnWithOptionsAsync(UpdateTableAddColumnRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -46975,6 +48046,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
             return TeaModel.ToObject<UpdateTableAddColumnResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateTableAddColumn is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates the fields in a MaxCompute table.</para>
@@ -46987,12 +48062,18 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateTableAddColumnResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateTableAddColumn is deprecated")]
+        // Deprecated
         public UpdateTableAddColumnResponse UpdateTableAddColumn(UpdateTableAddColumnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return UpdateTableAddColumnWithOptions(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI UpdateTableAddColumn is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Updates the fields in a MaxCompute table.</para>
@@ -47005,6 +48086,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
         /// <returns>
         /// UpdateTableAddColumnResponse
         /// </returns>
+        [Obsolete("OpenAPI UpdateTableAddColumn is deprecated")]
+        // Deprecated
         public async Task<UpdateTableAddColumnResponse> UpdateTableAddColumnAsync(UpdateTableAddColumnRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -47013,7 +48096,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a table level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Updates a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47071,7 +48154,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a table level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Updates a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47129,7 +48212,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a table level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Updates a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47147,7 +48230,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a table level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
+        /// <para>Updates a hierarchy level. This operation will be replaced soon. We recommend that you do not call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">

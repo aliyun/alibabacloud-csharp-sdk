@@ -18,6 +18,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public Dictionary<string, string> Attributes { get; set; }
 
         /// <summary>
+        /// <para>Detail url of entity</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://domain.test.url/entity">http://domain.test.url/entity</a></para>
         /// </summary>
@@ -34,6 +36,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string EntityType { get; set; }
 
         /// <summary>
+        /// <para>Name of entity</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tableName</para>
         /// </summary>
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string Owner { get; set; }
 
         /// <summary>
+        /// <para>Parent name of entity</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dbName</para>
         /// </summary>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public string ParentName { get; set; }
 
         /// <summary>
+        /// <para>Unique identifier of entity</para>
+        /// 
         /// <b>Example:</b>
         /// <para>maxcompute-table.projectName.tablename</para>
         /// </summary>

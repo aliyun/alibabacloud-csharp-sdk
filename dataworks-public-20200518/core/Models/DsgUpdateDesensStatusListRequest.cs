@@ -8,28 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class Cluster : TeaModel {
+    public class DsgUpdateDesensStatusListRequest : TeaModel {
         /// <summary>
-        /// <para>The unique business identifier of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>c-d8a7523****</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("ClusterBizId")]
+        [NameInMap("DesensStatus")]
         [Validation(Required=false)]
-        public string ClusterBizId { get; set; }
+        public int? DesensStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster associated with DataWorks.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1234</para>
         /// </summary>
-        [NameInMap("ClusterId")]
+        [NameInMap("Ids")]
         [Validation(Required=false)]
-        public long? ClusterId { get; set; }
+        public List<int?> Ids { get; set; }
 
     }
 

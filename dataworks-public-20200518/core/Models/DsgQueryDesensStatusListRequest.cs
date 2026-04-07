@@ -8,9 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
 {
-    public class ListFoldersRequest : TeaModel {
+    public class DsgQueryDesensStatusListRequest : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <b>Example:</b>
+        /// <para>my</para>
+        /// </summary>
+        [NameInMap("Keyword")]
+        [Validation(Required=false)]
+        public string Keyword { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +28,6 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,35 +38,22 @@ namespace AlibabaCloud.SDK.Dataworks_public20200518.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>0000-ABCD-EFG****</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Business_process/my_first_business_process/MaxCompute</para>
+        /// <para>dataworks_display_desense_code</para>
         /// </summary>
-        [NameInMap("ParentFolderPath")]
+        [NameInMap("SceneCode")]
         [Validation(Required=false)]
-        public string ParentFolderPath { get; set; }
+        public string SceneCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>124</para>
         /// </summary>
-        [NameInMap("ProjectId")]
+        [NameInMap("sceneId")]
         [Validation(Required=false)]
-        public long? ProjectId { get; set; }
-
-        /// <summary>
-        /// <para>The request ID. You can troubleshoot issues based on the ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>dw_project</para>
-        /// </summary>
-        [NameInMap("ProjectIdentifier")]
-        [Validation(Required=false)]
-        public string ProjectIdentifier { get; set; }
+        public string SceneId { get; set; }
 
     }
 
