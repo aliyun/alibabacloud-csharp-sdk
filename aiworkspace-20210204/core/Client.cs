@@ -9674,6 +9674,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
                 request.ModelTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModelTypes, "ModelTypes", "simple");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                query["Accessibility"] = request.Accessibility;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionIdsShrink))
             {
                 query["ConnectionIds"] = request.ConnectionIdsShrink;
@@ -9782,6 +9786,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
                 request.ModelTypesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ModelTypes, "ModelTypes", "simple");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                query["Accessibility"] = request.Accessibility;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectionIdsShrink))
             {
                 query["ConnectionIds"] = request.ConnectionIdsShrink;

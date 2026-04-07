@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListConnectionsRequest : TeaModel {
+        [NameInMap("Accessibility")]
+        [Validation(Required=false)]
+        public string Accessibility { get; set; }
+
         /// <summary>
         /// <para>The list of connection IDs.</para>
         /// </summary>

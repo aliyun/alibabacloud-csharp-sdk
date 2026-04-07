@@ -1,3 +1,7 @@
+2026-04-07 Version: 6.1.3
+- Update API ListConnections: add request parameters Accessibility.
+
+
 2026-04-02 Version: 6.1.2
 - Update API CreateCodeSource: add request parameters body.CloneType.
 - Update API GetCodeSource: add response parameters Body.CloneType.
