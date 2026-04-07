@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
+        [NameInMap("AudioCodec")]
+        [Validation(Required=false)]
+        public string AudioCodec { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
