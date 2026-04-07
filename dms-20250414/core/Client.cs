@@ -9253,6 +9253,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.DataSourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSource, "DataSource", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSources))
+            {
+                request.DataSourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSources, "DataSources", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SessionConfig))
             {
                 request.SessionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SessionConfig, "SessionConfig", "json");
@@ -9269,6 +9273,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceShrink))
             {
                 query["DataSource"] = request.DataSourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourcesShrink))
+            {
+                query["DataSources"] = request.DataSourcesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {
@@ -9345,6 +9353,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.DataSourceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSource, "DataSource", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSources))
+            {
+                request.DataSourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSources, "DataSources", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SessionConfig))
             {
                 request.SessionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SessionConfig, "SessionConfig", "json");
@@ -9361,6 +9373,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceShrink))
             {
                 query["DataSource"] = request.DataSourceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourcesShrink))
+            {
+                query["DataSources"] = request.DataSourcesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
             {

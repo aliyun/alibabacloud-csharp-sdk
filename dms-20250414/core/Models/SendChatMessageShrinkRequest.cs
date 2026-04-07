@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string DataSourceShrink { get; set; }
 
+        [NameInMap("DataSources")]
+        [Validation(Required=false)]
+        public string DataSourcesShrink { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

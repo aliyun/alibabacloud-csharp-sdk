@@ -117,6 +117,56 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
         }
 
+        [NameInMap("DataSources")]
+        [Validation(Required=false)]
+        public List<SendChatMessageRequestDataSources> DataSources { get; set; }
+        public class SendChatMessageRequestDataSources : TeaModel {
+            [NameInMap("DataSourceId")]
+            [Validation(Required=false)]
+            public string DataSourceId { get; set; }
+
+            [NameInMap("DataSourceType")]
+            [Validation(Required=false)]
+            public string DataSourceType { get; set; }
+
+            [NameInMap("Database")]
+            [Validation(Required=false)]
+            public string Database { get; set; }
+
+            [NameInMap("DbName")]
+            [Validation(Required=false)]
+            public string DbName { get; set; }
+
+            [NameInMap("DmsDatabaseId")]
+            [Validation(Required=false)]
+            public string DmsDatabaseId { get; set; }
+
+            [NameInMap("DmsInstanceId")]
+            [Validation(Required=false)]
+            public string DmsInstanceId { get; set; }
+
+            [NameInMap("Engine")]
+            [Validation(Required=false)]
+            public string Engine { get; set; }
+
+            [NameInMap("FileId")]
+            [Validation(Required=false)]
+            public string FileId { get; set; }
+
+            [NameInMap("Location")]
+            [Validation(Required=false)]
+            public string Location { get; set; }
+
+            [NameInMap("RegionId")]
+            [Validation(Required=false)]
+            public string RegionId { get; set; }
+
+            [NameInMap("Tables")]
+            [Validation(Required=false)]
+            public List<string> Tables { get; set; }
+
+        }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

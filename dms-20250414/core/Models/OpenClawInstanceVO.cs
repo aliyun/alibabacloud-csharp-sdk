@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string BasicAuthUsername { get; set; }
 
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
         [NameInMap("Cpu")]
         [Validation(Required=false)]
         public double? Cpu { get; set; }
@@ -83,6 +87,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string LastActiveTime { get; set; }
 
+        [NameInMap("LockTime")]
+        [Validation(Required=false)]
+        public string LockTime { get; set; }
+
         [NameInMap("MemorySize")]
         [Validation(Required=false)]
         public int? MemorySize { get; set; }
@@ -110,6 +118,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [NameInMap("StatusMessage")]
         [Validation(Required=false)]
         public string StatusMessage { get; set; }
+
+        [NameInMap("TrialExpireTime")]
+        [Validation(Required=false)]
+        public string TrialExpireTime { get; set; }
 
         [NameInMap("Variables")]
         [Validation(Required=false)]

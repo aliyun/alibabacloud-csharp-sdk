@@ -1,3 +1,7 @@
+2026-04-07 Version: 1.10.2
+- Update API SendChatMessage: add request parameters DataSources.
+
+
 2026-03-17 Version: 1.10.1
 - Update API CreateCustomAgent: add request parameters CallbackConfig.
 - Update API CreateCustomAgent: add response parameters Body.Data.CallbackConfig.
