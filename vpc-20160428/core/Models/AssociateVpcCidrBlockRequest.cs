@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ch-hangzhou</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description>The CIDR block cannot overlap with the primary CIDR block or an existing secondary CIDR block of the VPC.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You must and can specify only one of <b>SecondaryCidrBlock</b> and <b>Ipv6CidrBlock</b>.</para>
+        /// <para> You must and can specify only one of <b>SecondaryCidrBlock</b> and <b>IPv6CidrBlock</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

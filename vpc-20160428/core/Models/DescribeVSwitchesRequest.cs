@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch name.</para>
+        /// <para>The exact name of the vSwitch that you want to query. Fuzzy match is not supported.</para>
         /// <para>The name must be 1 to 128 characters in length, and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>

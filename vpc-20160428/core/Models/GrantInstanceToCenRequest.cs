@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The user ID (UID) of the Apsara Stack tenant account to which the CEN instance belongs.</para>
+        /// <para>The user ID (UID) of the Alibaba Cloud account to which the CEN instance belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

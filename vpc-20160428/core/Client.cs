@@ -3303,7 +3303,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):</para>
         /// <ol>
         /// <item><description>Call the AllocateVpcIpv6Cidr operation to reserve the IPv6 CIDR block.</description></item>
-        /// <item><description>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <b>RegionId</b>, <b>VpcId</b>, and <b>IPv6CidrBlock</b> to the IPv6 CIDR bock, and set <b>IpVersion</b> to <b>ipv6</b>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <b>RegionId</b> and <b>Ipv6CidrBlock</b> to the IPv6 CIDR block, and set <b>EnableIpv6</b> to <b>true</b>.</description></item>
+        /// <item><description>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <b>RegionId</b>, <b>VpcId</b>, and <b>IPv6CidrBlock</b> to the IPv6 CIDR block, and set <b>IpVersion</b> to <b>ipv6</b>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <b>RegionId</b> and <b>Ipv6CidrBlock</b> to the IPv6 CIDR block, and set <b>EnableIpv6</b> to <b>true</b>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -3391,7 +3391,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):</para>
         /// <ol>
         /// <item><description>Call the AllocateVpcIpv6Cidr operation to reserve the IPv6 CIDR block.</description></item>
-        /// <item><description>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <b>RegionId</b>, <b>VpcId</b>, and <b>IPv6CidrBlock</b> to the IPv6 CIDR bock, and set <b>IpVersion</b> to <b>ipv6</b>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <b>RegionId</b> and <b>Ipv6CidrBlock</b> to the IPv6 CIDR block, and set <b>EnableIpv6</b> to <b>true</b>.</description></item>
+        /// <item><description>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <b>RegionId</b>, <b>VpcId</b>, and <b>IPv6CidrBlock</b> to the IPv6 CIDR block, and set <b>IpVersion</b> to <b>ipv6</b>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <b>RegionId</b> and <b>Ipv6CidrBlock</b> to the IPv6 CIDR block, and set <b>EnableIpv6</b> to <b>true</b>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -3479,7 +3479,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):</para>
         /// <ol>
         /// <item><description>Call the AllocateVpcIpv6Cidr operation to reserve the IPv6 CIDR block.</description></item>
-        /// <item><description>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <b>RegionId</b>, <b>VpcId</b>, and <b>IPv6CidrBlock</b> to the IPv6 CIDR bock, and set <b>IpVersion</b> to <b>ipv6</b>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <b>RegionId</b> and <b>Ipv6CidrBlock</b> to the IPv6 CIDR block, and set <b>EnableIpv6</b> to <b>true</b>.</description></item>
+        /// <item><description>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <b>RegionId</b>, <b>VpcId</b>, and <b>IPv6CidrBlock</b> to the IPv6 CIDR block, and set <b>IpVersion</b> to <b>ipv6</b>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <b>RegionId</b> and <b>Ipv6CidrBlock</b> to the IPv6 CIDR block, and set <b>EnableIpv6</b> to <b>true</b>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -3507,7 +3507,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>The following section describes how to allocate an IPv6 CIDR block to a virtual private cloud (VPC):</para>
         /// <ol>
         /// <item><description>Call the AllocateVpcIpv6Cidr operation to reserve the IPv6 CIDR block.</description></item>
-        /// <item><description>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <b>RegionId</b>, <b>VpcId</b>, and <b>IPv6CidrBlock</b> to the IPv6 CIDR bock, and set <b>IpVersion</b> to <b>ipv6</b>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <b>RegionId</b> and <b>Ipv6CidrBlock</b> to the IPv6 CIDR block, and set <b>EnableIpv6</b> to <b>true</b>.</description></item>
+        /// <item><description>To allocate an IPv6 CIDR block to an existing VPC, call the <a href="https://help.aliyun.com/document_detail/146745.html">AssociateVpcCidrBlock</a> operation. Set <b>RegionId</b>, <b>VpcId</b>, and <b>IPv6CidrBlock</b> to the IPv6 CIDR block, and set <b>IpVersion</b> to <b>ipv6</b>. To allocate an IPv6 CIDR block when you create a VPC, call the <a href="https://help.aliyun.com/document_detail/35737.html">CreateVpc</a> operation. Set <b>RegionId</b> and <b>Ipv6CidrBlock</b> to the IPv6 CIDR block, and set <b>EnableIpv6</b> to <b>true</b>.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -21551,11 +21551,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>After you create a VPC, a vRouter and a route table are automatically created.</description></item>
         /// <item><description>At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if both 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.</description></item>
         /// <item><description><b>CreateVpc</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of the task:<list type="bullet">
-        /// <item><description>If the VPC is in the <b>Creating</b> state, the VPC is being created.</description></item>
-        /// <item><description>If the VPC is in the <b>Created</b> state, the VPC is created.</description></item>
+        /// <item><description>If the VPC is in the <b>Pending</b> state, the VPC is being created.</description></item>
+        /// <item><description>If the VPC is in the <b>Available</b> state, the VPC is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>DeleteRouteEntry</b> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>CreateVpc</b> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21691,11 +21691,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>After you create a VPC, a vRouter and a route table are automatically created.</description></item>
         /// <item><description>At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if both 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.</description></item>
         /// <item><description><b>CreateVpc</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of the task:<list type="bullet">
-        /// <item><description>If the VPC is in the <b>Creating</b> state, the VPC is being created.</description></item>
-        /// <item><description>If the VPC is in the <b>Created</b> state, the VPC is created.</description></item>
+        /// <item><description>If the VPC is in the <b>Pending</b> state, the VPC is being created.</description></item>
+        /// <item><description>If the VPC is in the <b>Available</b> state, the VPC is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>DeleteRouteEntry</b> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>CreateVpc</b> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21831,11 +21831,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>After you create a VPC, a vRouter and a route table are automatically created.</description></item>
         /// <item><description>At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if both 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.</description></item>
         /// <item><description><b>CreateVpc</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of the task:<list type="bullet">
-        /// <item><description>If the VPC is in the <b>Creating</b> state, the VPC is being created.</description></item>
-        /// <item><description>If the VPC is in the <b>Created</b> state, the VPC is created.</description></item>
+        /// <item><description>If the VPC is in the <b>Pending</b> state, the VPC is being created.</description></item>
+        /// <item><description>If the VPC is in the <b>Available</b> state, the VPC is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>DeleteRouteEntry</b> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>CreateVpc</b> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -21867,11 +21867,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>After you create a VPC, a vRouter and a route table are automatically created.</description></item>
         /// <item><description>At most three user CIDR blocks can be added to a VPC. If a user CIDR block includes another user CIDR block, the one with the shorter subnet mask takes effect. For example, if both 10.0.0.0/8 and 10.1.0.0/16 are specified, only 10.0.0.0/8 takes effect.</description></item>
         /// <item><description><b>CreateVpc</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of the task:<list type="bullet">
-        /// <item><description>If the VPC is in the <b>Creating</b> state, the VPC is being created.</description></item>
-        /// <item><description>If the VPC is in the <b>Created</b> state, the VPC is created.</description></item>
+        /// <item><description>If the VPC is in the <b>Pending</b> state, the VPC is being created.</description></item>
+        /// <item><description>If the VPC is in the <b>Available</b> state, the VPC is created.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>You cannot repeatedly call the <b>DeleteRouteEntry</b> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</description></item>
+        /// <item><description>You cannot repeatedly call the <b>CreateVpc</b> operation to create default VPCs within a specific time period. However, you can repeatedly call this operation to create custom VPCs within a specific time period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -33501,8 +33501,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>You can delete only vSwitches that are in the <b>Available</b> state.</description></item>
         /// <item><description>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</description></item>
         /// <item><description><b>DeleteVSwitch</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<list type="bullet">
-        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the vSwitch is being deleted.</description></item>
-        /// <item><description>If you cannot query the vSwitch, the vSwitch is deleted.</description></item>
+        /// <item><description>If the vSwitch is in the <b>Deleting</b> state, the vSwitch is being deleted.</description></item>
+        /// <item><description>If the DescribeVSwitchAttributes operation returns empty values for the vSwitch attributes, the vSwitch is deleted.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>DeleteVSwitch</b> operation to delete a vSwitch within the specified period of time.</description></item>
@@ -33583,8 +33583,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>You can delete only vSwitches that are in the <b>Available</b> state.</description></item>
         /// <item><description>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</description></item>
         /// <item><description><b>DeleteVSwitch</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<list type="bullet">
-        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the vSwitch is being deleted.</description></item>
-        /// <item><description>If you cannot query the vSwitch, the vSwitch is deleted.</description></item>
+        /// <item><description>If the vSwitch is in the <b>Deleting</b> state, the vSwitch is being deleted.</description></item>
+        /// <item><description>If the DescribeVSwitchAttributes operation returns empty values for the vSwitch attributes, the vSwitch is deleted.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>DeleteVSwitch</b> operation to delete a vSwitch within the specified period of time.</description></item>
@@ -33665,8 +33665,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>You can delete only vSwitches that are in the <b>Available</b> state.</description></item>
         /// <item><description>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</description></item>
         /// <item><description><b>DeleteVSwitch</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<list type="bullet">
-        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the vSwitch is being deleted.</description></item>
-        /// <item><description>If you cannot query the vSwitch, the vSwitch is deleted.</description></item>
+        /// <item><description>If the vSwitch is in the <b>Deleting</b> state, the vSwitch is being deleted.</description></item>
+        /// <item><description>If the DescribeVSwitchAttributes operation returns empty values for the vSwitch attributes, the vSwitch is deleted.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>DeleteVSwitch</b> operation to delete a vSwitch within the specified period of time.</description></item>
@@ -33699,8 +33699,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <item><description>You can delete only vSwitches that are in the <b>Available</b> state.</description></item>
         /// <item><description>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</description></item>
         /// <item><description><b>DeleteVSwitch</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<list type="bullet">
-        /// <item><description>If the vSwitch is in the <b>Pending</b> state, the vSwitch is being deleted.</description></item>
-        /// <item><description>If you cannot query the vSwitch, the vSwitch is deleted.</description></item>
+        /// <item><description>If the vSwitch is in the <b>Deleting</b> state, the vSwitch is being deleted.</description></item>
+        /// <item><description>If the DescribeVSwitchAttributes operation returns empty values for the vSwitch attributes, the vSwitch is deleted.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>DeleteVSwitch</b> operation to delete a vSwitch within the specified period of time.</description></item>
@@ -49149,6 +49149,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Queries the configuration of a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Debugging</h2>
+        /// <para><a href="https://api.aliyun.com/#product=Vpc%5C&api=DescribeVpcAttribute%5C&type=RPC%5C&version=2016-04-28">You can run this interface directly in OpenAPI Explorer, saving you the trouble of calculating signatures. After running successfully, OpenAPI Explorer can automatically generate SDK code samples.</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVpcAttributeRequest
         /// </param>
@@ -49218,6 +49224,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Queries the configuration of a virtual private cloud (VPC).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Debugging</h2>
+        /// <para><a href="https://api.aliyun.com/#product=Vpc%5C&api=DescribeVpcAttribute%5C&type=RPC%5C&version=2016-04-28">You can run this interface directly in OpenAPI Explorer, saving you the trouble of calculating signatures. After running successfully, OpenAPI Explorer can automatically generate SDK code samples.</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeVpcAttributeRequest
@@ -49289,6 +49301,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Queries the configuration of a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Debugging</h2>
+        /// <para><a href="https://api.aliyun.com/#product=Vpc%5C&api=DescribeVpcAttribute%5C&type=RPC%5C&version=2016-04-28">You can run this interface directly in OpenAPI Explorer, saving you the trouble of calculating signatures. After running successfully, OpenAPI Explorer can automatically generate SDK code samples.</a></para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeVpcAttributeRequest
         /// </param>
@@ -49306,6 +49324,12 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Queries the configuration of a virtual private cloud (VPC).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Debugging</h2>
+        /// <para><a href="https://api.aliyun.com/#product=Vpc%5C&api=DescribeVpcAttribute%5C&type=RPC%5C&version=2016-04-28">You can run this interface directly in OpenAPI Explorer, saving you the trouble of calculating signatures. After running successfully, OpenAPI Explorer can automatically generate SDK code samples.</a></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeVpcAttributeRequest
@@ -71568,7 +71592,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a vSwitch.</para>
+        /// <para>Modifies the name, description, and IPv6 settings of a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71660,7 +71684,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a vSwitch.</para>
+        /// <para>Modifies the name, description, and IPv6 settings of a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71752,7 +71776,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a vSwitch.</para>
+        /// <para>Modifies the name, description, and IPv6 settings of a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71780,7 +71804,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a vSwitch.</para>
+        /// <para>Modifies the name, description, and IPv6 settings of a vSwitch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -72628,7 +72652,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a specified VPC.</para>
+        /// <para>Modifies the name and description of a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -72724,7 +72748,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a specified VPC.</para>
+        /// <para>Modifies the name and description of a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -72820,7 +72844,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a specified VPC.</para>
+        /// <para>Modifies the name and description of a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -72844,7 +72868,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a specified VPC.</para>
+        /// <para>Modifies the name and description of a virtual private cloud (VPC).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

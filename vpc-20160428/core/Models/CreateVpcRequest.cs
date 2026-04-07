@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateVpcRequest : TeaModel {
         /// <summary>
-        /// <para>The CIDR block of the VPC.</para>
+        /// <para>VPC CIDR.</para>
         /// <list type="bullet">
         /// <item><description>We recommend using the private IPv4 address specified in RFC 1918 as the primary IPv4 CIDR block of the VPC with a recommended mask length of 16 to 28 bits. For example, 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</description></item>
         /// <item><description>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the primary IPv4 CIDR block.</description></item>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>For more information about user CIDR blocks, see the <c>What is a user CIDR block?</c> section in <a href="https://help.aliyun.com/document_detail/185311.html">VPC FAQ</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.0.0/12</para>
+        /// <para>192.168.0.0/16</para>
         /// </summary>
         [NameInMap("UserCidr")]
         [Validation(Required=false)]

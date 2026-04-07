@@ -12,7 +12,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The secondary IPv6 CIDR block to be deleted.</para>
         /// <remarks>
-        /// <para> You must set one of the <b>Ipv6CidrBlock</b> and <b>SecondaryCidrBlock</b> parameters.</para>
+        /// <list type="bullet">
+        /// <item><description>You must set one of the Ipv6CidrBlock and SecondaryCidrBlock parameters.</description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -32,11 +34,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the VPC to which the secondary CIDR block to be deleted belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ch-hangzhou</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -53,7 +55,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The secondary IPv4 CIDR block to be deleted.</para>
         /// <remarks>
-        /// <para> You must set one of the <b>SecondaryCidrBlock</b> and <b>Ipv6CidrBlock</b> parameters.</para>
+        /// <list type="bullet">
+        /// <item><description>You must set one of the SecondaryCidrBlock and Ipv6CidrBlock parameters.</description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>

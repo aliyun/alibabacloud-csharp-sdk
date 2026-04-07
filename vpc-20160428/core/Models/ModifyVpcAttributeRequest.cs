@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the DNS hostname feature is enabled. Valid values:</para>
+        /// <para>Specifies whether to enable the DNS hostname feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>false</b> (default): disabled.</description></item>
         /// <item><description><b>true</b>: enabled.</description></item>

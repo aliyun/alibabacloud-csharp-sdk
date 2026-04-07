@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The CIDR block of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.168.0.1/24</para>
+        /// <para>192.168.0.0/24</para>
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
@@ -55,6 +55,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>true</b></description></item>
         /// <item><description><b>false</b></description></item>
         /// </list>
+        /// <para>This field is returned only when IPv6 is enabled for the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -91,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The network access control list (ACL) rules.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>nacl-bp1fg655nh68xyz9****</para>
         /// </summary>
         [NameInMap("NetworkAclId")]
         [Validation(Required=false)]
@@ -101,7 +102,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The ID of the Alibaba Cloud account to which the resource belongs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>287683832402436789</para>
+        /// <para>28768383240243****</para>
         /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
