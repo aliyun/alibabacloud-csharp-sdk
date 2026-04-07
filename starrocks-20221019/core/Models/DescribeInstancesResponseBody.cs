@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public long? BeginTime { get; set; }
 
+            [NameInMap("EnableAiFunction")]
+            [Validation(Required=false)]
+            public bool? EnableAiFunction { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>true</para>
