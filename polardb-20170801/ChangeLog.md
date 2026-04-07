@@ -1,3 +1,11 @@
+2026-04-07 Version: 6.10.4
+- Update API DescribeDBClusterEndpoints: add response parameters Body.Items.$.ConnectionString.
+- Update API DescribeDBClusterEndpoints: add response parameters Body.Items.$.NetType.
+- Update API DescribeDBClusterEndpoints: add response parameters Body.Items.$.Port.
+- Update API DescribeDBClusterEndpoints: add response parameters Body.Items.$.Protocol.
+- Update API DescribeDBClusterEndpoints: add response parameters Body.Items.$.VPCId.
+
+
 2026-04-02 Version: 6.10.3
 - Update API CreateApplication: add request parameters SkillTemplateId.
 - Update API DescribeApplicationAttribute: add response parameters Body.PolarClawSaaSApplicationAttribute.SupabaseClusterId.

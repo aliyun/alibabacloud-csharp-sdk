@@ -140,6 +140,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string AutoAddNewNodes { get; set; }
 
+            [NameInMap("ConnectionString")]
+            [Validation(Required=false)]
+            public string ConnectionString { get; set; }
+
             /// <summary>
             /// <para>The ID of the cluster.</para>
             /// 
@@ -218,6 +222,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string EndpointType { get; set; }
 
+            [NameInMap("NetType")]
+            [Validation(Required=false)]
+            public string NetType { get; set; }
+
             /// <summary>
             /// <para>The role name of each node in the endpoint. The role name of the primary node is <b>Writer</b>. Multiple read-only nodes can be associated with an endpoint. Therefore, the role name of each read-only node is suffixed with a number. For example, you can use <b>Reader1</b> and <b>Reader2</b> as the role names.</para>
             /// <remarks>
@@ -265,6 +273,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string PolarSccWaitTimeout { get; set; }
 
+            [NameInMap("Port")]
+            [Validation(Required=false)]
+            public string Port { get; set; }
+
+            [NameInMap("Protocol")]
+            [Validation(Required=false)]
+            public string Protocol { get; set; }
+
             /// <summary>
             /// <para>The read/write mode. Valid values:</para>
             /// <list type="bullet">
@@ -296,6 +312,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
+
+            [NameInMap("VPCId")]
+            [Validation(Required=false)]
+            public string VPCId { get; set; }
 
         }
 

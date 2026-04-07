@@ -43,7 +43,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query endpoint IDs.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pe-****************</para>
