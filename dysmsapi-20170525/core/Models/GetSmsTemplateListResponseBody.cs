@@ -74,6 +74,16 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
                 public string TemplateCode { get; set; }
 
                 /// <summary>
+                /// <para>模板内容</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>示例值示例值示例值</para>
+                /// </summary>
+                [NameInMap("TemplateContent")]
+                [Validation(Required=false)]
+                public string TemplateContent { get; set; }
+
+                /// <summary>
                 /// <para>模板名称</para>
                 /// 
                 /// <b>Example:</b>

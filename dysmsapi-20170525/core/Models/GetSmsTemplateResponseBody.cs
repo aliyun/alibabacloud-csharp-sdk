@@ -158,6 +158,16 @@ namespace AlibabaCloud.SDK.Dysmsapi20170525.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SignList")]
+        [Validation(Required=false)]
+        public GetSmsTemplateResponseBodySignList SignList { get; set; }
+        public class GetSmsTemplateResponseBodySignList : TeaModel {
+            [NameInMap("SignList")]
+            [Validation(Required=false)]
+            public List<string> SignList { get; set; }
+
+        }
+
         /// <summary>
         /// <para>SMS template code.</para>
         /// 
