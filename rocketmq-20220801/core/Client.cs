@@ -6688,7 +6688,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <para>Queries a list of migration operations.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListMigrationOperationsRequest
         /// </param>
         /// <param name="headers">
@@ -6701,10 +6701,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <returns>
         /// ListMigrationOperationsResponse
         /// </returns>
-        public ListMigrationOperationsResponse ListMigrationOperationsWithOptions(string migrationId, string stageType, ListMigrationOperationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListMigrationOperationsResponse ListMigrationOperationsWithOptions(string migrationId, string stageType, ListMigrationOperationsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListMigrationOperationsShrinkRequest request = new ListMigrationOperationsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BusinessStatus))
+            {
+                request.BusinessStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BusinessStatus, "businessStatus", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OperationStatus))
+            {
+                request.OperationStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperationStatus, "operationStatus", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessStatusShrink))
+            {
+                query["businessStatus"] = request.BusinessStatusShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["filter"] = request.Filter;
@@ -6712,6 +6726,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationStatusShrink))
+            {
+                query["operationStatus"] = request.OperationStatusShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationType))
             {
@@ -6750,7 +6768,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <para>Queries a list of migration operations.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ListMigrationOperationsRequest
         /// </param>
         /// <param name="headers">
@@ -6763,10 +6781,24 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
         /// <returns>
         /// ListMigrationOperationsResponse
         /// </returns>
-        public async Task<ListMigrationOperationsResponse> ListMigrationOperationsWithOptionsAsync(string migrationId, string stageType, ListMigrationOperationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListMigrationOperationsResponse> ListMigrationOperationsWithOptionsAsync(string migrationId, string stageType, ListMigrationOperationsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListMigrationOperationsShrinkRequest request = new ListMigrationOperationsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BusinessStatus))
+            {
+                request.BusinessStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BusinessStatus, "businessStatus", "simple");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OperationStatus))
+            {
+                request.OperationStatusShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OperationStatus, "operationStatus", "simple");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessStatusShrink))
+            {
+                query["businessStatus"] = request.BusinessStatusShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 query["filter"] = request.Filter;
@@ -6774,6 +6806,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["instanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationStatusShrink))
+            {
+                query["operationStatus"] = request.OperationStatusShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationType))
             {

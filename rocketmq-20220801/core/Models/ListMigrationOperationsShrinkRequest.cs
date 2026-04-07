@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 {
-    public class ListMigrationOperationsRequest : TeaModel {
+    public class ListMigrationOperationsShrinkRequest : TeaModel {
         [NameInMap("businessStatus")]
         [Validation(Required=false)]
-        public List<string> BusinessStatus { get; set; }
+        public string BusinessStatusShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
         [NameInMap("operationStatus")]
         [Validation(Required=false)]
-        public List<string> OperationStatus { get; set; }
+        public string OperationStatusShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
