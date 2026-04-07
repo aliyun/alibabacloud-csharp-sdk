@@ -81,6 +81,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        [NameInMap("OuterFileUrl")]
+        [Validation(Required=false)]
+        public string OuterFileUrl { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>C166D79D-436B-45F0-B5A5-25E1959F****</para>
