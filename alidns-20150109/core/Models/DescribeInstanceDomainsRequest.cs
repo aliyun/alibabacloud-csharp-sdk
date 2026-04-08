@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeInstanceDomainsRequest : TeaModel {
+        [NameInMap("DomainKeywords")]
+        [Validation(Required=false)]
+        public string DomainKeywords { get; set; }
+
         /// <summary>
         /// <para>The ID of the Alibaba Cloud Domain Name System (DNS) instance. You can call the <a href="https://www.alibabacloud.com/help/zh/dns/api-alidns-2015-01-09-describedomaininfo?spm=a2c63.p38356.help-menu-search-29697.d_0">DescribeDomainInfo</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
