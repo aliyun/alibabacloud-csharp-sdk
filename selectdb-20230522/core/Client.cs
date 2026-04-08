@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SelectDB实例创建前检查</para>
+        /// <para>Performs a precheck before an ApsaraDB for SelectDB instance is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -441,7 +441,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SelectDB实例创建前检查</para>
+        /// <para>Performs a precheck before an ApsaraDB for SelectDB instance is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -547,7 +547,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SelectDB实例创建前检查</para>
+        /// <para>Performs a precheck before an ApsaraDB for SelectDB instance is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -565,7 +565,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SelectDB实例创建前检查</para>
+        /// <para>Performs a precheck before an ApsaraDB for SelectDB instance is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -695,7 +695,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查服务关联角色</para>
+        /// <para>Queries the service-linked role of ApsaraDB for SelectDB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -741,7 +741,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查服务关联角色</para>
+        /// <para>Queries the service-linked role of ApsaraDB for SelectDB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -787,7 +787,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查服务关联角色</para>
+        /// <para>Queries the service-linked role of ApsaraDB for SelectDB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -805,7 +805,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查服务关联角色</para>
+        /// <para>Queries the service-linked role of ApsaraDB for SelectDB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2383,7 +2383,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DB实例</para>
+        /// <para>Deletes an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2435,7 +2435,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DB实例</para>
+        /// <para>Deletes an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2487,7 +2487,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DB实例</para>
+        /// <para>Deletes an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2505,7 +2505,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DB实例</para>
+        /// <para>Deletes an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5063,7 +5063,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>集群变配</para>
+        /// <para>Scales a cluster in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5145,7 +5145,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>集群变配</para>
+        /// <para>Scales a cluster in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5227,7 +5227,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>集群变配</para>
+        /// <para>Scales a cluster in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5245,7 +5245,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>集群变配</para>
+        /// <para>Scales a cluster in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6499,7 +6499,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停后恢复集群</para>
+        /// <para>Starts a cluster in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6553,7 +6553,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停后恢复集群</para>
+        /// <para>Starts a cluster in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6607,7 +6607,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停后恢复集群</para>
+        /// <para>Starts a cluster in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6625,7 +6625,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停后恢复集群</para>
+        /// <para>Starts a cluster in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6643,7 +6643,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停BE集群</para>
+        /// <para>Stops a cluster in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6697,7 +6697,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停BE集群</para>
+        /// <para>Stops a cluster in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6751,7 +6751,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停BE集群</para>
+        /// <para>Stops a cluster in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6769,7 +6769,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停BE集群</para>
+        /// <para>Stops a cluster in an ApsaraDB for SelectDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

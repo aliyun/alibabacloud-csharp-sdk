@@ -434,6 +434,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
         }
 
+        [NameInMap("OTelBearerToken")]
+        [Validation(Required=false)]
+        public string OTelBearerToken { get; set; }
+
+        [NameInMap("OTelGrafanaServiceStatus")]
+        [Validation(Required=false)]
+        public string OTelGrafanaServiceStatus { get; set; }
+
         /// <summary>
         /// <para>The storage capacity of the instance.</para>
         /// 
