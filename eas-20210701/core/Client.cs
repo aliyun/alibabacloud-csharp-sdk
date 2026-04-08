@@ -1606,6 +1606,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 body["SystemDiskSize"] = request.SystemDiskSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageMode))
+            {
+                body["UsageMode"] = request.UsageMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Zone))
             {
                 body["Zone"] = request.Zone;
@@ -1692,6 +1696,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemDiskSize))
             {
                 body["SystemDiskSize"] = request.SystemDiskSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageMode))
+            {
+                body["UsageMode"] = request.UsageMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Zone))
             {
@@ -9957,6 +9965,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             {
                 query["Sort"] = request.Sort;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageMode))
+            {
+                query["UsageMode"] = request.UsageMode;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -10030,6 +10042,10 @@ namespace AlibabaCloud.SDK.Eas20210701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Sort))
             {
                 query["Sort"] = request.Sort;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageMode))
+            {
+                query["UsageMode"] = request.UsageMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

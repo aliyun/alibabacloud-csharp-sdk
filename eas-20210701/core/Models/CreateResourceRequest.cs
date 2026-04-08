@@ -204,6 +204,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? SystemDiskSize { get; set; }
 
+        [NameInMap("UsageMode")]
+        [Validation(Required=false)]
+        public string UsageMode { get; set; }
+
         /// <summary>
         /// <para>The ID of the zone in which the instance resides.</para>
         /// 
