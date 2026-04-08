@@ -124,6 +124,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
             [Validation(Required=false)]
             public bool? Skip { get; set; }
 
+            [NameInMap("SqlId")]
+            [Validation(Required=false)]
+            public long? SqlId { get; set; }
+
             /// <summary>
             /// <para>The type of the SQL statement, such as DELETE, UPDATE, or ALTER_TABLE.</para>
             /// 
