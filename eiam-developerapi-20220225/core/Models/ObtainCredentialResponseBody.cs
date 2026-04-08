@@ -120,6 +120,16 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         public string CredentialScenarioLabel { get; set; }
 
         /// <summary>
+        /// <para>凭据的共享范围。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>user_exclusive</para>
+        /// </summary>
+        [NameInMap("credentialSharingScope")]
+        [Validation(Required=false)]
+        public string CredentialSharingScope { get; set; }
+
+        /// <summary>
         /// <para>凭据所属的主体ID。</para>
         /// 
         /// <b>Example:</b>
@@ -158,6 +168,16 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        /// <summary>
+        /// <para>凭据的专属账户ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>user_xxx</para>
+        /// </summary>
+        [NameInMap("exclusiveUserId")]
+        [Validation(Required=false)]
+        public string ExclusiveUserId { get; set; }
 
         /// <summary>
         /// <para>EIAM实例ID。</para>
