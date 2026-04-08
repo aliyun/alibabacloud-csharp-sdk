@@ -974,6 +974,256 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>CreateMmsTimer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMmsTimerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMmsTimerResponse
+        /// </returns>
+        public CreateMmsTimerResponse CreateMmsTimerWithOptions(string sourceId, CreateMmsTimerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnMapping))
+            {
+                body["columnMapping"] = request.ColumnMapping;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDataMigration))
+            {
+                body["enableDataMigration"] = request.EnableDataMigration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSchemaMigration))
+            {
+                body["enableSchemaMigration"] = request.EnableSchemaMigration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableVerification))
+            {
+                body["enableVerification"] = request.EnableVerification;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Others))
+            {
+                body["others"] = request.Others;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionFilters))
+            {
+                body["partitionFilters"] = request.PartitionFilters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Partitions))
+            {
+                body["partitions"] = request.Partitions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleType))
+            {
+                body["scheduleType"] = request.ScheduleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcDbName))
+            {
+                body["srcDbName"] = request.SrcDbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableBlackList))
+            {
+                body["tableBlackList"] = request.TableBlackList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMapping))
+            {
+                body["tableMapping"] = request.TableMapping;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableWhiteList))
+            {
+                body["tableWhiteList"] = request.TableWhiteList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tables))
+            {
+                body["tables"] = request.Tables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                body["value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMmsTimer",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/mms/datasources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceId) + "/timers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMmsTimerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateMmsTimer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMmsTimerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMmsTimerResponse
+        /// </returns>
+        public async Task<CreateMmsTimerResponse> CreateMmsTimerWithOptionsAsync(string sourceId, CreateMmsTimerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnMapping))
+            {
+                body["columnMapping"] = request.ColumnMapping;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDataMigration))
+            {
+                body["enableDataMigration"] = request.EnableDataMigration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSchemaMigration))
+            {
+                body["enableSchemaMigration"] = request.EnableSchemaMigration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableVerification))
+            {
+                body["enableVerification"] = request.EnableVerification;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Others))
+            {
+                body["others"] = request.Others;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PartitionFilters))
+            {
+                body["partitionFilters"] = request.PartitionFilters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Partitions))
+            {
+                body["partitions"] = request.Partitions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleType))
+            {
+                body["scheduleType"] = request.ScheduleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                body["sourceId"] = request.SourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcDbName))
+            {
+                body["srcDbName"] = request.SrcDbName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableBlackList))
+            {
+                body["tableBlackList"] = request.TableBlackList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMapping))
+            {
+                body["tableMapping"] = request.TableMapping;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableWhiteList))
+            {
+                body["tableWhiteList"] = request.TableWhiteList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tables))
+            {
+                body["tables"] = request.Tables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Value))
+            {
+                body["value"] = request.Value;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMmsTimer",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/mms/datasources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceId) + "/timers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMmsTimerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateMmsTimer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMmsTimerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMmsTimerResponse
+        /// </returns>
+        public CreateMmsTimerResponse CreateMmsTimer(string sourceId, CreateMmsTimerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateMmsTimerWithOptions(sourceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateMmsTimer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMmsTimerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMmsTimerResponse
+        /// </returns>
+        public async Task<CreateMmsTimerResponse> CreateMmsTimerAsync(string sourceId, CreateMmsTimerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateMmsTimerWithOptionsAsync(sourceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a package.</para>
         /// </summary>
         /// 
@@ -1942,6 +2192,108 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteMmsJobWithOptionsAsync(sourceId, jobId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteMmsTimer</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMmsTimerResponse
+        /// </returns>
+        public DeleteMmsTimerResponse DeleteMmsTimerWithOptions(string sourceId, string timerId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMmsTimer",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/mms/datasources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceId) + "/timers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(timerId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMmsTimerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteMmsTimer</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMmsTimerResponse
+        /// </returns>
+        public async Task<DeleteMmsTimerResponse> DeleteMmsTimerWithOptionsAsync(string sourceId, string timerId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMmsTimer",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/mms/datasources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceId) + "/timers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(timerId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMmsTimerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteMmsTimer</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteMmsTimerResponse
+        /// </returns>
+        public DeleteMmsTimerResponse DeleteMmsTimer(string sourceId, string timerId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteMmsTimerWithOptions(sourceId, timerId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DeleteMmsTimer</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// DeleteMmsTimerResponse
+        /// </returns>
+        public async Task<DeleteMmsTimerResponse> DeleteMmsTimerAsync(string sourceId, string timerId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteMmsTimerWithOptionsAsync(sourceId, timerId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3680,6 +4032,108 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetMmsTaskWithOptionsAsync(sourceId, taskId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsTimer</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMmsTimerResponse
+        /// </returns>
+        public GetMmsTimerResponse GetMmsTimerWithOptions(string sourceId, string timerId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMmsTimer",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/mms/datasources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceId) + "/timers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(timerId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMmsTimerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsTimer</para>
+        /// </summary>
+        /// 
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMmsTimerResponse
+        /// </returns>
+        public async Task<GetMmsTimerResponse> GetMmsTimerWithOptionsAsync(string sourceId, string timerId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMmsTimer",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/mms/datasources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceId) + "/timers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(timerId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMmsTimerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsTimer</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetMmsTimerResponse
+        /// </returns>
+        public GetMmsTimerResponse GetMmsTimer(string sourceId, string timerId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMmsTimerWithOptions(sourceId, timerId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetMmsTimer</para>
+        /// </summary>
+        /// 
+        /// <returns>
+        /// GetMmsTimerResponse
+        /// </returns>
+        public async Task<GetMmsTimerResponse> GetMmsTimerAsync(string sourceId, string timerId)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMmsTimerWithOptionsAsync(sourceId, timerId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7166,6 +7620,144 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>ListMmsDataSourceConfigItems</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMmsDataSourceConfigItemsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMmsDataSourceConfigItemsResponse
+        /// </returns>
+        public ListMmsDataSourceConfigItemsResponse ListMmsDataSourceConfigItemsWithOptions(ListMmsDataSourceConfigItemsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["sourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMmsDataSourceConfigItems",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/mms/configItems",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMmsDataSourceConfigItemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsDataSourceConfigItems</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMmsDataSourceConfigItemsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMmsDataSourceConfigItemsResponse
+        /// </returns>
+        public async Task<ListMmsDataSourceConfigItemsResponse> ListMmsDataSourceConfigItemsWithOptionsAsync(ListMmsDataSourceConfigItemsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["sourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMmsDataSourceConfigItems",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/mms/configItems",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMmsDataSourceConfigItemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsDataSourceConfigItems</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMmsDataSourceConfigItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMmsDataSourceConfigItemsResponse
+        /// </returns>
+        public ListMmsDataSourceConfigItemsResponse ListMmsDataSourceConfigItems(ListMmsDataSourceConfigItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMmsDataSourceConfigItemsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsDataSourceConfigItems</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMmsDataSourceConfigItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMmsDataSourceConfigItemsResponse
+        /// </returns>
+        public async Task<ListMmsDataSourceConfigItemsResponse> ListMmsDataSourceConfigItemsAsync(ListMmsDataSourceConfigItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMmsDataSourceConfigItemsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of MaxCompute Migration Assist (MMA) data sources.</para>
         /// </summary>
         /// 
@@ -8504,6 +9096,144 @@ namespace AlibabaCloud.SDK.MaxCompute20220104
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListMmsTasksWithOptionsAsync(sourceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTimerLogs</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMmsTimerLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMmsTimerLogsResponse
+        /// </returns>
+        public ListMmsTimerLogsResponse ListMmsTimerLogsWithOptions(string sourceId, string timerId, ListMmsTimerLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["pageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMmsTimerLogs",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/mms/datasources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceId) + "/timers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(timerId) + "/logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMmsTimerLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTimerLogs</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMmsTimerLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMmsTimerLogsResponse
+        /// </returns>
+        public async Task<ListMmsTimerLogsResponse> ListMmsTimerLogsWithOptionsAsync(string sourceId, string timerId, ListMmsTimerLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["pageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMmsTimerLogs",
+                Version = "2022-01-04",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/mms/datasources/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(sourceId) + "/timers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(timerId) + "/logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMmsTimerLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTimerLogs</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMmsTimerLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMmsTimerLogsResponse
+        /// </returns>
+        public ListMmsTimerLogsResponse ListMmsTimerLogs(string sourceId, string timerId, ListMmsTimerLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMmsTimerLogsWithOptions(sourceId, timerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ListMmsTimerLogs</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMmsTimerLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMmsTimerLogsResponse
+        /// </returns>
+        public async Task<ListMmsTimerLogsResponse> ListMmsTimerLogsAsync(string sourceId, string timerId, ListMmsTimerLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMmsTimerLogsWithOptionsAsync(sourceId, timerId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
