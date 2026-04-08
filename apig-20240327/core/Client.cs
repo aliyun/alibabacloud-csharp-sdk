@@ -5786,6 +5786,9 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Exports an HTTP API.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ExportHttpApiRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5796,11 +5799,26 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// ExportHttpApiResponse
         /// </returns>
-        public ExportHttpApiResponse ExportHttpApiWithOptions(string httpApiId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ExportHttpApiResponse ExportHttpApiWithOptions(string httpApiId, ExportHttpApiRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionConfig))
+            {
+                body["extensionConfig"] = request.ExtensionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationIds))
+            {
+                body["operationIds"] = request.OperationIds;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5822,6 +5840,9 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Exports an HTTP API.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ExportHttpApiRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5832,11 +5853,26 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// ExportHttpApiResponse
         /// </returns>
-        public async Task<ExportHttpApiResponse> ExportHttpApiWithOptionsAsync(string httpApiId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ExportHttpApiResponse> ExportHttpApiWithOptionsAsync(string httpApiId, ExportHttpApiRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExtensionConfig))
+            {
+                body["extensionConfig"] = request.ExtensionConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                body["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationIds))
+            {
+                body["operationIds"] = request.OperationIds;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -5858,14 +5894,18 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Exports an HTTP API.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ExportHttpApiRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ExportHttpApiResponse
         /// </returns>
-        public ExportHttpApiResponse ExportHttpApi(string httpApiId)
+        public ExportHttpApiResponse ExportHttpApi(string httpApiId, ExportHttpApiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ExportHttpApiWithOptions(httpApiId, headers, runtime);
+            return ExportHttpApiWithOptions(httpApiId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5873,14 +5913,18 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Exports an HTTP API.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ExportHttpApiRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ExportHttpApiResponse
         /// </returns>
-        public async Task<ExportHttpApiResponse> ExportHttpApiAsync(string httpApiId)
+        public async Task<ExportHttpApiResponse> ExportHttpApiAsync(string httpApiId, ExportHttpApiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ExportHttpApiWithOptionsAsync(httpApiId, headers, runtime);
+            return await ExportHttpApiWithOptionsAsync(httpApiId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9151,6 +9195,168 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListEnvironmentsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网关外的服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListExternalServicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExternalServicesResponse
+        /// </returns>
+        public ListExternalServicesResponse ListExternalServicesWithOptions(string gatewayId, ListExternalServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImportableOnly))
+            {
+                query["importableOnly"] = request.ImportableOnly;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameLike))
+            {
+                query["nameLike"] = request.NameLike;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaiWorkspaceId))
+            {
+                query["paiWorkspaceId"] = request.PaiWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["sourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExternalServices",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/external-services",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExternalServicesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网关外的服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListExternalServicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExternalServicesResponse
+        /// </returns>
+        public async Task<ListExternalServicesResponse> ListExternalServicesWithOptionsAsync(string gatewayId, ListExternalServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImportableOnly))
+            {
+                query["importableOnly"] = request.ImportableOnly;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NameLike))
+            {
+                query["nameLike"] = request.NameLike;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaiWorkspaceId))
+            {
+                query["paiWorkspaceId"] = request.PaiWorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["sourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExternalServices",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/external-services",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExternalServicesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网关外的服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListExternalServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExternalServicesResponse
+        /// </returns>
+        public ListExternalServicesResponse ListExternalServices(string gatewayId, ListExternalServicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListExternalServicesWithOptions(gatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取网关外的服务信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListExternalServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExternalServicesResponse
+        /// </returns>
+        public async Task<ListExternalServicesResponse> ListExternalServicesAsync(string gatewayId, ListExternalServicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListExternalServicesWithOptionsAsync(gatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14535,10 +14741,6 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["backendConfig"] = request.BackendConfig;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployConfigs))
-            {
-                body["deployConfigs"] = request.DeployConfigs;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -14558,10 +14760,6 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpRouteConfig))
             {
                 body["mcpRouteConfig"] = request.McpRouteConfig;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                body["name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyConfigs))
             {
@@ -14613,10 +14811,6 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["backendConfig"] = request.BackendConfig;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployConfigs))
-            {
-                body["deployConfigs"] = request.DeployConfigs;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["description"] = request.Description;
@@ -14636,10 +14830,6 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpRouteConfig))
             {
                 body["mcpRouteConfig"] = request.McpRouteConfig;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
-            {
-                body["name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyConfigs))
             {

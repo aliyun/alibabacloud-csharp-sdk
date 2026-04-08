@@ -106,6 +106,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// 
                 /// <summary>
                 /// <para>The configurations of existing services. For single-service publishing, only one entry is allowed. For other scenarios, multiple entries are allowed.</para>
+                /// 
+                /// <b>if can be null:</b>
+                /// <c>true</c>
                 /// </summary>
                 [NameInMap("serviceConfigs")]
                 [Validation(Required=false)]
