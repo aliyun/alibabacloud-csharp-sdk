@@ -897,6 +897,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             {
                 body["Duration"] = request.Duration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMultiAz))
+            {
+                body["EnableMultiAz"] = request.EnableMultiAz;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Encrypted))
             {
                 body["Encrypted"] = request.Encrypted;
@@ -1062,6 +1066,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
                 body["Duration"] = request.Duration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMultiAz))
+            {
+                body["EnableMultiAz"] = request.EnableMultiAz;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Encrypted))
             {

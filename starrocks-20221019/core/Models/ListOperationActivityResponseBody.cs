@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public string ActivityStatus { get; set; }
 
+            [NameInMap("ConsoleRetryCount")]
+            [Validation(Required=false)]
+            public int? ConsoleRetryCount { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1742178604000</para>
@@ -44,6 +48,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [NameInMap("EndTime")]
             [Validation(Required=false)]
             public long? EndTime { get; set; }
+
+            [NameInMap("ErrMessage")]
+            [Validation(Required=false)]
+            public string ErrMessage { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

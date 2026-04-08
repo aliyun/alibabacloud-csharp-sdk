@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public bool? EnableAutoMinorVersionUpgrade { get; set; }
 
+            [NameInMap("EnableMultiAz")]
+            [Validation(Required=false)]
+            public bool? EnableMultiAz { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>true</para>
