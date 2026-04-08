@@ -171,6 +171,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? RaspDefend { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
+        /// <summary>
         /// <para>The tag that is used to search for the vulnerabilities. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Restart required</description></item>
