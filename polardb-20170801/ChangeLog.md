@@ -1,3 +1,7 @@
+2026-04-08 Version: 6.10.5
+- Update API CreateApplication: add request parameters Parameters.
+
+
 2026-04-07 Version: 6.10.4
 - Update API DescribeDBClusterEndpoints: add response parameters Body.Items.$.ConnectionString.
 - Update API DescribeDBClusterEndpoints: add response parameters Body.Items.$.NetType.

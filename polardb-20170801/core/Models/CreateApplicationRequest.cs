@@ -283,6 +283,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public List<CreateApplicationRequestParameters> Parameters { get; set; }
+        public class CreateApplicationRequestParameters : TeaModel {
+            [NameInMap("ParameterName")]
+            [Validation(Required=false)]
+            public string ParameterName { get; set; }
+
+            [NameInMap("ParameterValue")]
+            [Validation(Required=false)]
+            public string ParameterValue { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Postpaid</para>

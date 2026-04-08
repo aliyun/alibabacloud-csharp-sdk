@@ -149,6 +149,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public string ParametersShrink { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Postpaid</para>
