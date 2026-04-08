@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string AgentRuntimeName { get; set; }
 
+        [NameInMap("armsConfiguration")]
+        [Validation(Required=false)]
+        public ArmsConfiguration ArmsConfiguration { get; set; }
+
         /// <summary>
         /// <para>指定智能体运行时的部署类型，支持Code（代码模式）和Container（容器模式）</para>
         /// <para>This parameter is required.</para>
