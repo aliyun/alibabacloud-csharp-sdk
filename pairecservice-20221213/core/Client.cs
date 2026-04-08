@@ -10423,6 +10423,152 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>部署流量调控任务的flink code</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployTrafficControlTaskCodeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployTrafficControlTaskCodeResponse
+        /// </returns>
+        public DeployTrafficControlTaskCodeResponse DeployTrafficControlTaskCodeWithOptions(string TrafficControlTaskId, DeployTrafficControlTaskCodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
+            {
+                body["Environment"] = request.Environment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryDeploy))
+            {
+                body["RetryDeploy"] = request.RetryDeploy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeployTrafficControlTaskCode",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/deploycode",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeployTrafficControlTaskCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署流量调控任务的flink code</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployTrafficControlTaskCodeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployTrafficControlTaskCodeResponse
+        /// </returns>
+        public async Task<DeployTrafficControlTaskCodeResponse> DeployTrafficControlTaskCodeWithOptionsAsync(string TrafficControlTaskId, DeployTrafficControlTaskCodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
+            {
+                body["Environment"] = request.Environment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryDeploy))
+            {
+                body["RetryDeploy"] = request.RetryDeploy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeployTrafficControlTaskCode",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/deploycode",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeployTrafficControlTaskCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署流量调控任务的flink code</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployTrafficControlTaskCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployTrafficControlTaskCodeResponse
+        /// </returns>
+        public DeployTrafficControlTaskCodeResponse DeployTrafficControlTaskCode(string TrafficControlTaskId, DeployTrafficControlTaskCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeployTrafficControlTaskCodeWithOptions(TrafficControlTaskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署流量调控任务的flink code</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeployTrafficControlTaskCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeployTrafficControlTaskCodeResponse
+        /// </returns>
+        public async Task<DeployTrafficControlTaskCodeResponse> DeployTrafficControlTaskCodeAsync(string TrafficControlTaskId, DeployTrafficControlTaskCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeployTrafficControlTaskCodeWithOptionsAsync(TrafficControlTaskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>生成算法定制脚本</para>
         /// </summary>
         /// 
@@ -22047,6 +22193,298 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await QueryTrafficControlTargetItemReportDetailWithOptionsAsync(TrafficControlTargetId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取流量调控任务部署的结果。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTrafficControlTaskDeployResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTrafficControlTaskDeployResultResponse
+        /// </returns>
+        public QueryTrafficControlTaskDeployResultResponse QueryTrafficControlTaskDeployResultWithOptions(string TrafficControlTaskId, QueryTrafficControlTaskDeployResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
+            {
+                query["Environment"] = request.Environment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTrafficControlTaskDeployResult",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/queryresult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTrafficControlTaskDeployResultResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取流量调控任务部署的结果。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTrafficControlTaskDeployResultRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTrafficControlTaskDeployResultResponse
+        /// </returns>
+        public async Task<QueryTrafficControlTaskDeployResultResponse> QueryTrafficControlTaskDeployResultWithOptionsAsync(string TrafficControlTaskId, QueryTrafficControlTaskDeployResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
+            {
+                query["Environment"] = request.Environment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTrafficControlTaskDeployResult",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/queryresult",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTrafficControlTaskDeployResultResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取流量调控任务部署的结果。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTrafficControlTaskDeployResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTrafficControlTaskDeployResultResponse
+        /// </returns>
+        public QueryTrafficControlTaskDeployResultResponse QueryTrafficControlTaskDeployResult(string TrafficControlTaskId, QueryTrafficControlTaskDeployResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return QueryTrafficControlTaskDeployResultWithOptions(TrafficControlTaskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取流量调控任务部署的结果。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTrafficControlTaskDeployResultRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTrafficControlTaskDeployResultResponse
+        /// </returns>
+        public async Task<QueryTrafficControlTaskDeployResultResponse> QueryTrafficControlTaskDeployResultAsync(string TrafficControlTaskId, QueryTrafficControlTaskDeployResultRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await QueryTrafficControlTaskDeployResultWithOptionsAsync(TrafficControlTaskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量调控任务单品调控报表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTrafficControlTaskItemReportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTrafficControlTaskItemReportResponse
+        /// </returns>
+        public QueryTrafficControlTaskItemReportResponse QueryTrafficControlTaskItemReportWithOptions(string TrafficControlTaskId, QueryTrafficControlTaskItemReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
+            {
+                query["Environment"] = request.Environment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTrafficControlTaskItemReport",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/queryitemreport",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTrafficControlTaskItemReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量调控任务单品调控报表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTrafficControlTaskItemReportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTrafficControlTaskItemReportResponse
+        /// </returns>
+        public async Task<QueryTrafficControlTaskItemReportResponse> QueryTrafficControlTaskItemReportWithOptionsAsync(string TrafficControlTaskId, QueryTrafficControlTaskItemReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
+            {
+                query["Environment"] = request.Environment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTrafficControlTaskItemReport",
+                Version = "2022-12-13",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/trafficcontroltasks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TrafficControlTaskId) + "/action/queryitemreport",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTrafficControlTaskItemReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量调控任务单品调控报表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTrafficControlTaskItemReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTrafficControlTaskItemReportResponse
+        /// </returns>
+        public QueryTrafficControlTaskItemReportResponse QueryTrafficControlTaskItemReport(string TrafficControlTaskId, QueryTrafficControlTaskItemReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return QueryTrafficControlTaskItemReportWithOptions(TrafficControlTaskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询流量调控任务单品调控报表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTrafficControlTaskItemReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTrafficControlTaskItemReportResponse
+        /// </returns>
+        public async Task<QueryTrafficControlTaskItemReportResponse> QueryTrafficControlTaskItemReportAsync(string TrafficControlTaskId, QueryTrafficControlTaskItemReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await QueryTrafficControlTaskItemReportWithOptionsAsync(TrafficControlTaskId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

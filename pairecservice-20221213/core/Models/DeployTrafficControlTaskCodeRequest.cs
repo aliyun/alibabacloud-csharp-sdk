@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
-    public class GenerateTrafficControlTaskCodeRequest : TeaModel {
+    public class DeployTrafficControlTaskCodeRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>Daily</para>
@@ -18,14 +18,16 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>pairec-test1</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("RetryDeploy")]
+        [Validation(Required=false)]
+        public bool? RetryDeploy { get; set; }
 
     }
 

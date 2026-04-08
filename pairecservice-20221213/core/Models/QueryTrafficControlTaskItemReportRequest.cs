@@ -8,16 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
-    public class CheckTrafficControlTaskExpressionRequest : TeaModel {
+    public class QueryTrafficControlTaskItemReportRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>event=exposure</para>
+        /// <para>2024-01-02 10:30:00</para>
         /// </summary>
-        [NameInMap("Expression")]
+        [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public string Expression { get; set; }
+        public string EndTime { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Pre</para>
+        /// </summary>
+        [NameInMap("Environment")]
+        [Validation(Required=false)]
+        public string Environment { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -33,11 +43,11 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2024-01-01 10:30:00</para>
         /// </summary>
-        [NameInMap("TableMetaId")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
-        public string TableMetaId { get; set; }
+        public string StartTime { get; set; }
 
     }
 

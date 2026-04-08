@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class QueryTrafficControlTargetItemReportDetailResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
@@ -25,14 +29,26 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 [Validation(Required=false)]
                 public Dictionary<string, object> Features { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>794872809896</para>
+                /// </summary>
                 [NameInMap("ItemId")]
                 [Validation(Required=false)]
                 public string ItemId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>49%</para>
+                /// </summary>
                 [NameInMap("TargetProgress")]
                 [Validation(Required=false)]
                 public string TargetProgress { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
                 [NameInMap("TargetTraffic")]
                 [Validation(Required=false)]
                 public long? TargetTraffic { get; set; }
@@ -47,14 +63,26 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                 [Validation(Required=false)]
                 public Dictionary<string, object> Features { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>398734</para>
+                /// </summary>
                 [NameInMap("ItemId")]
                 [Validation(Required=false)]
                 public string ItemId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>49%</para>
+                /// </summary>
                 [NameInMap("TargetProgress")]
                 [Validation(Required=false)]
                 public string TargetProgress { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
                 [NameInMap("TargetTraffic")]
                 [Validation(Required=false)]
                 public long? TargetTraffic { get; set; }
