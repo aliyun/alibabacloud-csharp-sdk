@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>登录token主动失效</para>
+        /// <para>Manually invalidates a logon token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>登录token主动失效</para>
+        /// <para>Manually invalidates a logon token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>登录token主动失效</para>
+        /// <para>Manually invalidates a logon token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>登录token主动失效</para>
+        /// <para>Manually invalidates a logon token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取授权码</para>
+        /// <para>Obtains an authorization code that includes the identity and permission information of a user. You can use the code to launch cloud apps in integration scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -199,6 +199,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
         public GetAuthCodeResponse GetAuthCodeWithOptions(GetAuthCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenType))
+            {
+                query["TokenType"] = request.TokenType;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateUser))
             {
@@ -218,6 +223,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -237,7 +243,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取授权码</para>
+        /// <para>Obtains an authorization code that includes the identity and permission information of a user. You can use the code to launch cloud apps in integration scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -253,6 +259,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
         public async Task<GetAuthCodeResponse> GetAuthCodeWithOptionsAsync(GetAuthCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TokenType))
+            {
+                query["TokenType"] = request.TokenType;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateUser))
             {
@@ -272,6 +283,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -291,7 +303,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取授权码</para>
+        /// <para>Obtains an authorization code that includes the identity and permission information of a user. You can use the code to launch cloud apps in integration scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -309,7 +321,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210218
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取授权码</para>
+        /// <para>Obtains an authorization code that includes the identity and permission information of a user. You can use the code to launch cloud apps in integration scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210218.Models
         [Validation(Required=false)]
         public string Policy { get; set; }
 
+        [NameInMap("TokenType")]
+        [Validation(Required=false)]
+        public string TokenType { get; set; }
+
     }
 
 }
