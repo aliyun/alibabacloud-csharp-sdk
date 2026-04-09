@@ -84,7 +84,6 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 
         /// <summary>
         /// <para>The name of the forwarding rule. You can name the rule based on your business requirements.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

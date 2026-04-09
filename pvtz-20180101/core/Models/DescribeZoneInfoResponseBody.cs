@@ -33,9 +33,6 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 
         }
 
-        /// <summary>
-        /// <para>The VPCs associated with the zone.</para>
-        /// </summary>
         [NameInMap("BindVpcs")]
         [Validation(Required=false)]
         public DescribeZoneInfoResponseBodyBindVpcs BindVpcs { get; set; }
@@ -44,66 +41,26 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             [Validation(Required=false)]
             public List<DescribeZoneInfoResponseBodyBindVpcsVpc> Vpc { get; set; }
             public class DescribeZoneInfoResponseBodyBindVpcsVpc : TeaModel {
-                /// <summary>
-                /// <para>The region ID of the VPC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-heyuan</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the region where the VPC resides.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>China (Heyuan)</para>
-                /// </summary>
                 [NameInMap("RegionName")]
                 [Validation(Required=false)]
                 public string RegionName { get; set; }
 
-                /// <summary>
-                /// <para>The VPC ID. This ID uniquely identifies the VPC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-f8zvrvr1payllgz38****</para>
-                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
-                /// <summary>
-                /// <para>The VPC name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc_test</para>
-                /// </summary>
                 [NameInMap("VpcName")]
                 [Validation(Required=false)]
                 public string VpcName { get; set; }
 
-                /// <summary>
-                /// <para>The VPC type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>STANDARD: standard VPC</description></item>
-                /// <item><description>EDS: Elastic Desktop Service (EDS) workspace VPC</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>STANDARD</para>
-                /// </summary>
                 [NameInMap("VpcType")]
                 [Validation(Required=false)]
                 public string VpcType { get; set; }
 
-                /// <summary>
-                /// <para>The user ID to which the VPC belongs. If null is returned, the VPC belongs to the current user.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>141339776561****</para>
-                /// </summary>
                 [NameInMap("VpcUserId")]
                 [Validation(Required=false)]
                 public long? VpcUserId { get; set; }

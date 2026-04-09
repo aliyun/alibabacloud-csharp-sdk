@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeSyncEcsHostTaskResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The synchronized regions where the ECS instances are deployed.</para>
-        /// </summary>
         [NameInMap("EcsRegions")]
         [Validation(Required=false)]
         public DescribeSyncEcsHostTaskResponseBodyEcsRegions EcsRegions { get; set; }
@@ -20,9 +17,6 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             [Validation(Required=false)]
             public List<DescribeSyncEcsHostTaskResponseBodyEcsRegionsEcsRegion> EcsRegion { get; set; }
             public class DescribeSyncEcsHostTaskResponseBodyEcsRegionsEcsRegion : TeaModel {
-                /// <summary>
-                /// <para>The synchronized region IDs.</para>
-                /// </summary>
                 [NameInMap("RegionIds")]
                 [Validation(Required=false)]
                 public DescribeSyncEcsHostTaskResponseBodyEcsRegionsEcsRegionRegionIds RegionIds { get; set; }
@@ -33,12 +27,6 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The user ID to which the region belongs. This parameter is used in cross-account synchronization scenarios.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>141339776561****</para>
-                /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public long? UserId { get; set; }
@@ -47,9 +35,6 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 
         }
 
-        /// <summary>
-        /// <para>The synchronized region IDs of the ECS instances.</para>
-        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public DescribeSyncEcsHostTaskResponseBodyRegions Regions { get; set; }
