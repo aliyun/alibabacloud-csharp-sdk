@@ -61,6 +61,36 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public class ListDatasetsResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
+            /// <para>private</para>
+            /// </summary>
+            [NameInMap("AccessLevel")]
+            [Validation(Required=false)]
+            public string AccessLevel { get; set; }
+
+            [NameInMap("Administrators")]
+            [Validation(Required=false)]
+            public List<ListDatasetsResponseBodyDataAdministrators> Administrators { get; set; }
+            public class ListDatasetsResponseBodyDataAdministrators : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>xx</para>
+                /// </summary>
+                [NameInMap("UserId")]
+                [Validation(Required=false)]
+                public string UserId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>xx</para>
+                /// </summary>
+                [NameInMap("Username")]
+                [Validation(Required=false)]
+                public string Username { get; set; }
+
+            }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>2024-11-12 21:46:24</para>
             /// </summary>
             [NameInMap("CreateTime")]

@@ -8,48 +8,44 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
-    public class UpdateDatasetShrinkRequest : TeaModel {
+    public class ListDataPermissionsRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>private</para>
+        /// <para>SystemSearch.QuarkCommonNews</para>
         /// </summary>
-        [NameInMap("AccessLevel")]
+        [NameInMap("DataId")]
         [Validation(Required=false)]
-        public string AccessLevel { get; set; }
-
-        [NameInMap("DatasetConfig")]
-        [Validation(Required=false)]
-        public string DatasetConfigShrink { get; set; }
+        public string DataId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>企业自定义数据集</para>
+        /// <para>dataset</para>
         /// </summary>
-        [NameInMap("DatasetDescription")]
+        [NameInMap("DataType")]
         [Validation(Required=false)]
-        public string DatasetDescription { get; set; }
+        public string DataType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
-        [NameInMap("DatasetId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public long? DatasetId { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>3</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("SearchDatasetEnable")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public int? SearchDatasetEnable { get; set; }
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx</para>
+        /// <para>llm-xx</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

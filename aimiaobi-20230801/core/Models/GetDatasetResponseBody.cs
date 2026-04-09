@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public class GetDatasetResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
+            /// <para>private</para>
+            /// </summary>
+            [NameInMap("AccessLevel")]
+            [Validation(Required=false)]
+            public string AccessLevel { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>2024-11-12 21:46:24</para>
             /// </summary>
             [NameInMap("CreateTime")]

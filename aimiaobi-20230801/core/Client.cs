@@ -2347,6 +2347,162 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>用户数据集权限-批量添加</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDataPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataPermissionsResponse
+        /// </returns>
+        public CreateDataPermissionsResponse CreateDataPermissionsWithOptions(CreateDataPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataPermissionsShrinkRequest request = new CreateDataPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PermissionUserInfos))
+            {
+                request.PermissionUserInfosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PermissionUserInfos, "PermissionUserInfos", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataId))
+            {
+                body["DataId"] = request.DataId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                body["DataType"] = request.DataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionUserInfosShrink))
+            {
+                body["PermissionUserInfos"] = request.PermissionUserInfosShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataPermissions",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataPermissionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户数据集权限-批量添加</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateDataPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataPermissionsResponse
+        /// </returns>
+        public async Task<CreateDataPermissionsResponse> CreateDataPermissionsWithOptionsAsync(CreateDataPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateDataPermissionsShrinkRequest request = new CreateDataPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PermissionUserInfos))
+            {
+                request.PermissionUserInfosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PermissionUserInfos, "PermissionUserInfos", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataId))
+            {
+                body["DataId"] = request.DataId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                body["DataType"] = request.DataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermissionUserInfosShrink))
+            {
+                body["PermissionUserInfos"] = request.PermissionUserInfosShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataPermissions",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataPermissionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户数据集权限-批量添加</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataPermissionsResponse
+        /// </returns>
+        public CreateDataPermissionsResponse CreateDataPermissions(CreateDataPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDataPermissionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户数据集权限-批量添加</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataPermissionsResponse
+        /// </returns>
+        public async Task<CreateDataPermissionsResponse> CreateDataPermissionsAsync(CreateDataPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDataPermissionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>数据集管理-创建</para>
         /// </summary>
         /// 
@@ -2374,6 +2530,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 request.DocumentHandleConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentHandleConfig, "DocumentHandleConfig", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLevel))
+            {
+                body["AccessLevel"] = request.AccessLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
             {
                 body["DatasetConfig"] = request.DatasetConfigShrink;
@@ -2454,6 +2614,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 request.DocumentHandleConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DocumentHandleConfig, "DocumentHandleConfig", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLevel))
+            {
+                body["AccessLevel"] = request.AccessLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
             {
                 body["DatasetConfig"] = request.DatasetConfigShrink;
@@ -3667,6 +3831,146 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCustomTopicViewPointByIdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户数据集权限-批量删除</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteDataPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataPermissionsResponse
+        /// </returns>
+        public DeleteDataPermissionsResponse DeleteDataPermissionsWithOptions(DeleteDataPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteDataPermissionsShrinkRequest request = new DeleteDataPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataPermissions",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataPermissionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户数据集权限-批量删除</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DeleteDataPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataPermissionsResponse
+        /// </returns>
+        public async Task<DeleteDataPermissionsResponse> DeleteDataPermissionsWithOptionsAsync(DeleteDataPermissionsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DeleteDataPermissionsShrinkRequest request = new DeleteDataPermissionsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Ids))
+            {
+                request.IdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Ids, "Ids", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdsShrink))
+            {
+                body["Ids"] = request.IdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataPermissions",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataPermissionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户数据集权限-批量删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataPermissionsResponse
+        /// </returns>
+        public DeleteDataPermissionsResponse DeleteDataPermissions(DeleteDataPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDataPermissionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户数据集权限-批量删除</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataPermissionsResponse
+        /// </returns>
+        public async Task<DeleteDataPermissionsResponse> DeleteDataPermissionsAsync(DeleteDataPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDataPermissionsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15847,6 +16151,158 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>用户数据集权限-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataPermissionsResponse
+        /// </returns>
+        public ListDataPermissionsResponse ListDataPermissionsWithOptions(ListDataPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataId))
+            {
+                body["DataId"] = request.DataId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                body["DataType"] = request.DataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataPermissions",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataPermissionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户数据集权限-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataPermissionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataPermissionsResponse
+        /// </returns>
+        public async Task<ListDataPermissionsResponse> ListDataPermissionsWithOptionsAsync(ListDataPermissionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataId))
+            {
+                body["DataId"] = request.DataId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataType))
+            {
+                body["DataType"] = request.DataType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataPermissions",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataPermissionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户数据集权限-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataPermissionsResponse
+        /// </returns>
+        public ListDataPermissionsResponse ListDataPermissions(ListDataPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataPermissionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户数据集权限-列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataPermissionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataPermissionsResponse
+        /// </returns>
+        public async Task<ListDataPermissionsResponse> ListDataPermissionsAsync(ListDataPermissionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataPermissionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询数据集文档列表</para>
         /// </summary>
         /// 
@@ -16220,6 +16676,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetDescription))
+            {
+                body["DatasetDescription"] = request.DatasetDescription;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
             {
                 body["DatasetId"] = request.DatasetId;
@@ -16298,6 +16758,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetDescription))
+            {
+                body["DatasetDescription"] = request.DatasetDescription;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
             {
                 body["DatasetId"] = request.DatasetId;
@@ -31946,6 +32410,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLevel))
+            {
+                body["AccessLevel"] = request.AccessLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
             {
                 body["DatasetConfig"] = request.DatasetConfigShrink;
@@ -32010,6 +32478,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
                 request.DatasetConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DatasetConfig, "DatasetConfig", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessLevel))
+            {
+                body["AccessLevel"] = request.AccessLevel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetConfigShrink))
             {
                 body["DatasetConfig"] = request.DatasetConfigShrink;

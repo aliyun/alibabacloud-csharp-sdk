@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
     public class ListDatasetsRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>xx</para>
+        /// </summary>
+        [NameInMap("DatasetDescription")]
+        [Validation(Required=false)]
+        public string DatasetDescription { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
         [NameInMap("DatasetId")]

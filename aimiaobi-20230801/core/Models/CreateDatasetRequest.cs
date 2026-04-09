@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class CreateDatasetRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>private</para>
+        /// </summary>
+        [NameInMap("AccessLevel")]
+        [Validation(Required=false)]
+        public string AccessLevel { get; set; }
+
         [NameInMap("DatasetConfig")]
         [Validation(Required=false)]
         public CreateDatasetRequestDatasetConfig DatasetConfig { get; set; }
