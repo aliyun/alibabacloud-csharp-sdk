@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             [Validation(Required=false)]
             public List<ListDomainsResponseBodyDomainInfosDomainInfo> DomainInfo { get; set; }
             public class ListDomainsResponseBodyDomainInfosDomainInfo : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para><a href="http://www.example.com">www.example.com</a></para>
-                /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
@@ -33,18 +29,10 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
                 [Validation(Required=false)]
                 public long? ResolveHttpsAes { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>10</para>
-                /// </summary>
                 [NameInMap("Resolved")]
                 [Validation(Required=false)]
                 public long? Resolved { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>20</para>
-                /// </summary>
                 [NameInMap("Resolved6")]
                 [Validation(Required=false)]
                 public long? Resolved6 { get; set; }
@@ -53,18 +41,10 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
                 [Validation(Required=false)]
                 public long? ResolvedDoh { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>10</para>
-                /// </summary>
                 [NameInMap("ResolvedHttps")]
                 [Validation(Required=false)]
                 public long? ResolvedHttps { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>20</para>
-                /// </summary>
                 [NameInMap("ResolvedHttps6")]
                 [Validation(Required=false)]
                 public long? ResolvedHttps6 { get; set; }

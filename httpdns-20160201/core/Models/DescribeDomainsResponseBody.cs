@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             [Validation(Required=false)]
             public List<DescribeDomainsResponseBodyDomainsDomain> Domain { get; set; }
             public class DescribeDomainsResponseBodyDomainsDomain : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
-                /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }

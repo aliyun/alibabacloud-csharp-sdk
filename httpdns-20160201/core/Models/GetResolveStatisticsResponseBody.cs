@@ -17,18 +17,10 @@ namespace AlibabaCloud.SDK.Httpdns20160201.Models
             [Validation(Required=false)]
             public List<GetResolveStatisticsResponseBodyDataPointsDataPoint> DataPoint { get; set; }
             public class GetResolveStatisticsResponseBodyDataPointsDataPoint : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>9703</para>
-                /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1488297600</para>
-                /// </summary>
                 [NameInMap("Time")]
                 [Validation(Required=false)]
                 public int? Time { get; set; }
