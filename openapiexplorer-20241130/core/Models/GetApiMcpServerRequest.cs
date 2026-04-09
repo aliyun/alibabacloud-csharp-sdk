@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
 {
     public class GetApiMcpServerRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the API MCP service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.OpenAPIExplorer20241130.Models
 {
-    public class UpdateApiMcpServerUserConfigResponseBody : TeaModel {
+    public class ListProductsRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>9BFC4AC1-6BE4-5405-BDEC-CA288D404812</para>
+        /// <para>ECS</para>
         /// </summary>
-        [NameInMap("requestId")]
+        [NameInMap("filter")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string Filter { get; set; }
 
     }
 
