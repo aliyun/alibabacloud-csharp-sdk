@@ -907,9 +907,200 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建账户专属凭据。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserExclusiveCredentialRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateUserExclusiveCredentialHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserExclusiveCredentialResponse
+        /// </returns>
+        public CreateUserExclusiveCredentialResponse CreateUserExclusiveCredentialWithOptions(string instanceId, CreateUserExclusiveCredentialRequest request, CreateUserExclusiveCredentialHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialContent))
+            {
+                body["credentialContent"] = request.CredentialContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialIdentifier))
+            {
+                body["credentialIdentifier"] = request.CredentialIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialName))
+            {
+                body["credentialName"] = request.CredentialName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialScenarioLabel))
+            {
+                body["credentialScenarioLabel"] = request.CredentialScenarioLabel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialType))
+            {
+                body["credentialType"] = request.CredentialType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUserExclusiveCredential",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/credentials/_/actions/createUserExclusive",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUserExclusiveCredentialResponse>(DoROARequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建账户专属凭据。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserExclusiveCredentialRequest
+        /// </param>
+        /// <param name="headers">
+        /// CreateUserExclusiveCredentialHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserExclusiveCredentialResponse
+        /// </returns>
+        public async Task<CreateUserExclusiveCredentialResponse> CreateUserExclusiveCredentialWithOptionsAsync(string instanceId, CreateUserExclusiveCredentialRequest request, CreateUserExclusiveCredentialHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialContent))
+            {
+                body["credentialContent"] = request.CredentialContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialIdentifier))
+            {
+                body["credentialIdentifier"] = request.CredentialIdentifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialName))
+            {
+                body["credentialName"] = request.CredentialName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialScenarioLabel))
+            {
+                body["credentialScenarioLabel"] = request.CredentialScenarioLabel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialType))
+            {
+                body["credentialType"] = request.CredentialType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Authorization))
+            {
+                realHeaders["Authorization"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Authorization);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUserExclusiveCredential",
+                Version = "2022-02-25",
+                Protocol = "HTTPS",
+                Pathname = "/v2/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(instanceId) + "/credentials/_/actions/createUserExclusive",
+                Method = "POST",
+                AuthType = "Anonymous",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUserExclusiveCredentialResponse>(await DoROARequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.Pathname, params_.BodyType, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建账户专属凭据。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserExclusiveCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserExclusiveCredentialResponse
+        /// </returns>
+        public CreateUserExclusiveCredentialResponse CreateUserExclusiveCredential(string instanceId, CreateUserExclusiveCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateUserExclusiveCredentialHeaders headers = new CreateUserExclusiveCredentialHeaders();
+            return CreateUserExclusiveCredentialWithOptions(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建账户专属凭据。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateUserExclusiveCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserExclusiveCredentialResponse
+        /// </returns>
+        public async Task<CreateUserExclusiveCredentialResponse> CreateUserExclusiveCredentialAsync(string instanceId, CreateUserExclusiveCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            CreateUserExclusiveCredentialHeaders headers = new CreateUserExclusiveCredentialHeaders();
+            return await CreateUserExclusiveCredentialWithOptionsAsync(instanceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteGroupRequest
+        /// </param>
         /// <param name="headers">
         /// DeleteGroupHeaders
         /// </param>
@@ -920,8 +1111,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// DeleteGroupResponse
         /// </returns>
-        public DeleteGroupResponse DeleteGroupWithOptions(string instanceId, string applicationId, string groupId, DeleteGroupHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteGroupResponse DeleteGroupWithOptions(string instanceId, string applicationId, string groupId, DeleteGroupRequest request, DeleteGroupHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -955,6 +1147,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Deletes a group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteGroupRequest
+        /// </param>
         /// <param name="headers">
         /// DeleteGroupHeaders
         /// </param>
@@ -965,8 +1160,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// DeleteGroupResponse
         /// </returns>
-        public async Task<DeleteGroupResponse> DeleteGroupWithOptionsAsync(string instanceId, string applicationId, string groupId, DeleteGroupHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteGroupResponse> DeleteGroupWithOptionsAsync(string instanceId, string applicationId, string groupId, DeleteGroupRequest request, DeleteGroupHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1000,14 +1196,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Deletes a group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteGroupRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteGroupResponse
         /// </returns>
-        public DeleteGroupResponse DeleteGroup(string instanceId, string applicationId, string groupId)
+        public DeleteGroupResponse DeleteGroup(string instanceId, string applicationId, string groupId, DeleteGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             DeleteGroupHeaders headers = new DeleteGroupHeaders();
-            return DeleteGroupWithOptions(instanceId, applicationId, groupId, headers, runtime);
+            return DeleteGroupWithOptions(instanceId, applicationId, groupId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1015,14 +1215,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Deletes a group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteGroupRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteGroupResponse
         /// </returns>
-        public async Task<DeleteGroupResponse> DeleteGroupAsync(string instanceId, string applicationId, string groupId)
+        public async Task<DeleteGroupResponse> DeleteGroupAsync(string instanceId, string applicationId, string groupId, DeleteGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             DeleteGroupHeaders headers = new DeleteGroupHeaders();
-            return await DeleteGroupWithOptionsAsync(instanceId, applicationId, groupId, headers, runtime);
+            return await DeleteGroupWithOptionsAsync(instanceId, applicationId, groupId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1030,6 +1234,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Deletes an organizational unit.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteOrganizationalUnitRequest
+        /// </param>
         /// <param name="headers">
         /// DeleteOrganizationalUnitHeaders
         /// </param>
@@ -1040,8 +1247,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// DeleteOrganizationalUnitResponse
         /// </returns>
-        public DeleteOrganizationalUnitResponse DeleteOrganizationalUnitWithOptions(string instanceId, string applicationId, string organizationalUnitId, DeleteOrganizationalUnitHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteOrganizationalUnitResponse DeleteOrganizationalUnitWithOptions(string instanceId, string applicationId, string organizationalUnitId, DeleteOrganizationalUnitRequest request, DeleteOrganizationalUnitHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1075,6 +1283,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Deletes an organizational unit.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteOrganizationalUnitRequest
+        /// </param>
         /// <param name="headers">
         /// DeleteOrganizationalUnitHeaders
         /// </param>
@@ -1085,8 +1296,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// DeleteOrganizationalUnitResponse
         /// </returns>
-        public async Task<DeleteOrganizationalUnitResponse> DeleteOrganizationalUnitWithOptionsAsync(string instanceId, string applicationId, string organizationalUnitId, DeleteOrganizationalUnitHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteOrganizationalUnitResponse> DeleteOrganizationalUnitWithOptionsAsync(string instanceId, string applicationId, string organizationalUnitId, DeleteOrganizationalUnitRequest request, DeleteOrganizationalUnitHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1120,14 +1332,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Deletes an organizational unit.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteOrganizationalUnitRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteOrganizationalUnitResponse
         /// </returns>
-        public DeleteOrganizationalUnitResponse DeleteOrganizationalUnit(string instanceId, string applicationId, string organizationalUnitId)
+        public DeleteOrganizationalUnitResponse DeleteOrganizationalUnit(string instanceId, string applicationId, string organizationalUnitId, DeleteOrganizationalUnitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             DeleteOrganizationalUnitHeaders headers = new DeleteOrganizationalUnitHeaders();
-            return DeleteOrganizationalUnitWithOptions(instanceId, applicationId, organizationalUnitId, headers, runtime);
+            return DeleteOrganizationalUnitWithOptions(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1135,14 +1351,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Deletes an organizational unit.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteOrganizationalUnitRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteOrganizationalUnitResponse
         /// </returns>
-        public async Task<DeleteOrganizationalUnitResponse> DeleteOrganizationalUnitAsync(string instanceId, string applicationId, string organizationalUnitId)
+        public async Task<DeleteOrganizationalUnitResponse> DeleteOrganizationalUnitAsync(string instanceId, string applicationId, string organizationalUnitId, DeleteOrganizationalUnitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             DeleteOrganizationalUnitHeaders headers = new DeleteOrganizationalUnitHeaders();
-            return await DeleteOrganizationalUnitWithOptionsAsync(instanceId, applicationId, organizationalUnitId, headers, runtime);
+            return await DeleteOrganizationalUnitWithOptionsAsync(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1150,6 +1370,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Deletes an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteUserRequest
+        /// </param>
         /// <param name="headers">
         /// DeleteUserHeaders
         /// </param>
@@ -1160,8 +1383,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// DeleteUserResponse
         /// </returns>
-        public DeleteUserResponse DeleteUserWithOptions(string instanceId, string applicationId, string userId, DeleteUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteUserResponse DeleteUserWithOptions(string instanceId, string applicationId, string userId, DeleteUserRequest request, DeleteUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1195,6 +1419,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Deletes an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteUserRequest
+        /// </param>
         /// <param name="headers">
         /// DeleteUserHeaders
         /// </param>
@@ -1205,8 +1432,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// DeleteUserResponse
         /// </returns>
-        public async Task<DeleteUserResponse> DeleteUserWithOptionsAsync(string instanceId, string applicationId, string userId, DeleteUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteUserResponse> DeleteUserWithOptionsAsync(string instanceId, string applicationId, string userId, DeleteUserRequest request, DeleteUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1240,14 +1468,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Deletes an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteUserRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteUserResponse
         /// </returns>
-        public DeleteUserResponse DeleteUser(string instanceId, string applicationId, string userId)
+        public DeleteUserResponse DeleteUser(string instanceId, string applicationId, string userId, DeleteUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             DeleteUserHeaders headers = new DeleteUserHeaders();
-            return DeleteUserWithOptions(instanceId, applicationId, userId, headers, runtime);
+            return DeleteUserWithOptions(instanceId, applicationId, userId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1255,14 +1487,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Deletes an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteUserRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteUserResponse
         /// </returns>
-        public async Task<DeleteUserResponse> DeleteUserAsync(string instanceId, string applicationId, string userId)
+        public async Task<DeleteUserResponse> DeleteUserAsync(string instanceId, string applicationId, string userId, DeleteUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             DeleteUserHeaders headers = new DeleteUserHeaders();
-            return await DeleteUserWithOptionsAsync(instanceId, applicationId, userId, headers, runtime);
+            return await DeleteUserWithOptionsAsync(instanceId, applicationId, userId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1270,6 +1506,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Disables an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DisableUserRequest
+        /// </param>
         /// <param name="headers">
         /// DisableUserHeaders
         /// </param>
@@ -1280,8 +1519,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// DisableUserResponse
         /// </returns>
-        public DisableUserResponse DisableUserWithOptions(string instanceId, string applicationId, string userId, DisableUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DisableUserResponse DisableUserWithOptions(string instanceId, string applicationId, string userId, DisableUserRequest request, DisableUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1315,6 +1555,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Disables an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DisableUserRequest
+        /// </param>
         /// <param name="headers">
         /// DisableUserHeaders
         /// </param>
@@ -1325,8 +1568,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// DisableUserResponse
         /// </returns>
-        public async Task<DisableUserResponse> DisableUserWithOptionsAsync(string instanceId, string applicationId, string userId, DisableUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DisableUserResponse> DisableUserWithOptionsAsync(string instanceId, string applicationId, string userId, DisableUserRequest request, DisableUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1360,14 +1604,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Disables an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DisableUserRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DisableUserResponse
         /// </returns>
-        public DisableUserResponse DisableUser(string instanceId, string applicationId, string userId)
+        public DisableUserResponse DisableUser(string instanceId, string applicationId, string userId, DisableUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             DisableUserHeaders headers = new DisableUserHeaders();
-            return DisableUserWithOptions(instanceId, applicationId, userId, headers, runtime);
+            return DisableUserWithOptions(instanceId, applicationId, userId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1375,14 +1623,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Disables an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DisableUserRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DisableUserResponse
         /// </returns>
-        public async Task<DisableUserResponse> DisableUserAsync(string instanceId, string applicationId, string userId)
+        public async Task<DisableUserResponse> DisableUserAsync(string instanceId, string applicationId, string userId, DisableUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             DisableUserHeaders headers = new DisableUserHeaders();
-            return await DisableUserWithOptionsAsync(instanceId, applicationId, userId, headers, runtime);
+            return await DisableUserWithOptionsAsync(instanceId, applicationId, userId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1390,6 +1642,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Enables an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// EnableUserRequest
+        /// </param>
         /// <param name="headers">
         /// EnableUserHeaders
         /// </param>
@@ -1400,8 +1655,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// EnableUserResponse
         /// </returns>
-        public EnableUserResponse EnableUserWithOptions(string instanceId, string applicationId, string userId, EnableUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public EnableUserResponse EnableUserWithOptions(string instanceId, string applicationId, string userId, EnableUserRequest request, EnableUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1435,6 +1691,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Enables an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// EnableUserRequest
+        /// </param>
         /// <param name="headers">
         /// EnableUserHeaders
         /// </param>
@@ -1445,8 +1704,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// EnableUserResponse
         /// </returns>
-        public async Task<EnableUserResponse> EnableUserWithOptionsAsync(string instanceId, string applicationId, string userId, EnableUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<EnableUserResponse> EnableUserWithOptionsAsync(string instanceId, string applicationId, string userId, EnableUserRequest request, EnableUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -1480,14 +1740,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Enables an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// EnableUserRequest
+        /// </param>
+        /// 
         /// <returns>
         /// EnableUserResponse
         /// </returns>
-        public EnableUserResponse EnableUser(string instanceId, string applicationId, string userId)
+        public EnableUserResponse EnableUser(string instanceId, string applicationId, string userId, EnableUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             EnableUserHeaders headers = new EnableUserHeaders();
-            return EnableUserWithOptions(instanceId, applicationId, userId, headers, runtime);
+            return EnableUserWithOptions(instanceId, applicationId, userId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1495,14 +1759,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Enables an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// EnableUserRequest
+        /// </param>
+        /// 
         /// <returns>
         /// EnableUserResponse
         /// </returns>
-        public async Task<EnableUserResponse> EnableUserAsync(string instanceId, string applicationId, string userId)
+        public async Task<EnableUserResponse> EnableUserAsync(string instanceId, string applicationId, string userId, EnableUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             EnableUserHeaders headers = new EnableUserHeaders();
-            return await EnableUserWithOptionsAsync(instanceId, applicationId, userId, headers, runtime);
+            return await EnableUserWithOptionsAsync(instanceId, applicationId, userId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2489,6 +2757,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// </list>
         /// </description>
         /// 
+        /// <param name="request">
+        /// GetApplicationProvisioningScopeRequest
+        /// </param>
         /// <param name="headers">
         /// GetApplicationProvisioningScopeHeaders
         /// </param>
@@ -2499,8 +2770,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// GetApplicationProvisioningScopeResponse
         /// </returns>
-        public GetApplicationProvisioningScopeResponse GetApplicationProvisioningScopeWithOptions(string instanceId, string applicationId, GetApplicationProvisioningScopeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetApplicationProvisioningScopeResponse GetApplicationProvisioningScopeWithOptions(string instanceId, string applicationId, GetApplicationProvisioningScopeRequest request, GetApplicationProvisioningScopeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2543,6 +2815,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// </list>
         /// </description>
         /// 
+        /// <param name="request">
+        /// GetApplicationProvisioningScopeRequest
+        /// </param>
         /// <param name="headers">
         /// GetApplicationProvisioningScopeHeaders
         /// </param>
@@ -2553,8 +2828,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// GetApplicationProvisioningScopeResponse
         /// </returns>
-        public async Task<GetApplicationProvisioningScopeResponse> GetApplicationProvisioningScopeWithOptionsAsync(string instanceId, string applicationId, GetApplicationProvisioningScopeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetApplicationProvisioningScopeResponse> GetApplicationProvisioningScopeWithOptionsAsync(string instanceId, string applicationId, GetApplicationProvisioningScopeRequest request, GetApplicationProvisioningScopeHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2597,14 +2873,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// </list>
         /// </description>
         /// 
+        /// <param name="request">
+        /// GetApplicationProvisioningScopeRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetApplicationProvisioningScopeResponse
         /// </returns>
-        public GetApplicationProvisioningScopeResponse GetApplicationProvisioningScope(string instanceId, string applicationId)
+        public GetApplicationProvisioningScopeResponse GetApplicationProvisioningScope(string instanceId, string applicationId, GetApplicationProvisioningScopeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetApplicationProvisioningScopeHeaders headers = new GetApplicationProvisioningScopeHeaders();
-            return GetApplicationProvisioningScopeWithOptions(instanceId, applicationId, headers, runtime);
+            return GetApplicationProvisioningScopeWithOptions(instanceId, applicationId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2621,14 +2901,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// </list>
         /// </description>
         /// 
+        /// <param name="request">
+        /// GetApplicationProvisioningScopeRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetApplicationProvisioningScopeResponse
         /// </returns>
-        public async Task<GetApplicationProvisioningScopeResponse> GetApplicationProvisioningScopeAsync(string instanceId, string applicationId)
+        public async Task<GetApplicationProvisioningScopeResponse> GetApplicationProvisioningScopeAsync(string instanceId, string applicationId, GetApplicationProvisioningScopeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetApplicationProvisioningScopeHeaders headers = new GetApplicationProvisioningScopeHeaders();
-            return await GetApplicationProvisioningScopeWithOptionsAsync(instanceId, applicationId, headers, runtime);
+            return await GetApplicationProvisioningScopeWithOptionsAsync(instanceId, applicationId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2636,6 +2920,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the details of a group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetGroupRequest
+        /// </param>
         /// <param name="headers">
         /// GetGroupHeaders
         /// </param>
@@ -2646,8 +2933,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// GetGroupResponse
         /// </returns>
-        public GetGroupResponse GetGroupWithOptions(string instanceId, string applicationId, string groupId, GetGroupHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetGroupResponse GetGroupWithOptions(string instanceId, string applicationId, string groupId, GetGroupRequest request, GetGroupHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2681,6 +2969,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the details of a group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetGroupRequest
+        /// </param>
         /// <param name="headers">
         /// GetGroupHeaders
         /// </param>
@@ -2691,8 +2982,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// GetGroupResponse
         /// </returns>
-        public async Task<GetGroupResponse> GetGroupWithOptionsAsync(string instanceId, string applicationId, string groupId, GetGroupHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetGroupResponse> GetGroupWithOptionsAsync(string instanceId, string applicationId, string groupId, GetGroupRequest request, GetGroupHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2726,14 +3018,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the details of a group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetGroupRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetGroupResponse
         /// </returns>
-        public GetGroupResponse GetGroup(string instanceId, string applicationId, string groupId)
+        public GetGroupResponse GetGroup(string instanceId, string applicationId, string groupId, GetGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetGroupHeaders headers = new GetGroupHeaders();
-            return GetGroupWithOptions(instanceId, applicationId, groupId, headers, runtime);
+            return GetGroupWithOptions(instanceId, applicationId, groupId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2741,14 +3037,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the details of a group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetGroupRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetGroupResponse
         /// </returns>
-        public async Task<GetGroupResponse> GetGroupAsync(string instanceId, string applicationId, string groupId)
+        public async Task<GetGroupResponse> GetGroupAsync(string instanceId, string applicationId, string groupId, GetGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetGroupHeaders headers = new GetGroupHeaders();
-            return await GetGroupWithOptionsAsync(instanceId, applicationId, groupId, headers, runtime);
+            return await GetGroupWithOptionsAsync(instanceId, applicationId, groupId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2756,6 +3056,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the information of an organizational unit.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetOrganizationalUnitRequest
+        /// </param>
         /// <param name="headers">
         /// GetOrganizationalUnitHeaders
         /// </param>
@@ -2766,8 +3069,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// GetOrganizationalUnitResponse
         /// </returns>
-        public GetOrganizationalUnitResponse GetOrganizationalUnitWithOptions(string instanceId, string applicationId, string organizationalUnitId, GetOrganizationalUnitHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetOrganizationalUnitResponse GetOrganizationalUnitWithOptions(string instanceId, string applicationId, string organizationalUnitId, GetOrganizationalUnitRequest request, GetOrganizationalUnitHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2801,6 +3105,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the information of an organizational unit.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetOrganizationalUnitRequest
+        /// </param>
         /// <param name="headers">
         /// GetOrganizationalUnitHeaders
         /// </param>
@@ -2811,8 +3118,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// GetOrganizationalUnitResponse
         /// </returns>
-        public async Task<GetOrganizationalUnitResponse> GetOrganizationalUnitWithOptionsAsync(string instanceId, string applicationId, string organizationalUnitId, GetOrganizationalUnitHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetOrganizationalUnitResponse> GetOrganizationalUnitWithOptionsAsync(string instanceId, string applicationId, string organizationalUnitId, GetOrganizationalUnitRequest request, GetOrganizationalUnitHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -2846,14 +3154,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the information of an organizational unit.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetOrganizationalUnitRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetOrganizationalUnitResponse
         /// </returns>
-        public GetOrganizationalUnitResponse GetOrganizationalUnit(string instanceId, string applicationId, string organizationalUnitId)
+        public GetOrganizationalUnitResponse GetOrganizationalUnit(string instanceId, string applicationId, string organizationalUnitId, GetOrganizationalUnitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetOrganizationalUnitHeaders headers = new GetOrganizationalUnitHeaders();
-            return GetOrganizationalUnitWithOptions(instanceId, applicationId, organizationalUnitId, headers, runtime);
+            return GetOrganizationalUnitWithOptions(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2861,14 +3173,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the information of an organizational unit.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetOrganizationalUnitRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetOrganizationalUnitResponse
         /// </returns>
-        public async Task<GetOrganizationalUnitResponse> GetOrganizationalUnitAsync(string instanceId, string applicationId, string organizationalUnitId)
+        public async Task<GetOrganizationalUnitResponse> GetOrganizationalUnitAsync(string instanceId, string applicationId, string organizationalUnitId, GetOrganizationalUnitRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetOrganizationalUnitHeaders headers = new GetOrganizationalUnitHeaders();
-            return await GetOrganizationalUnitWithOptionsAsync(instanceId, applicationId, organizationalUnitId, headers, runtime);
+            return await GetOrganizationalUnitWithOptionsAsync(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3040,6 +3356,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the details of an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
         /// <param name="headers">
         /// GetUserHeaders
         /// </param>
@@ -3050,8 +3369,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// GetUserResponse
         /// </returns>
-        public GetUserResponse GetUserWithOptions(string instanceId, string applicationId, string userId, GetUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetUserResponse GetUserWithOptions(string instanceId, string applicationId, string userId, GetUserRequest request, GetUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -3085,6 +3405,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the details of an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
         /// <param name="headers">
         /// GetUserHeaders
         /// </param>
@@ -3095,8 +3418,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// GetUserResponse
         /// </returns>
-        public async Task<GetUserResponse> GetUserWithOptionsAsync(string instanceId, string applicationId, string userId, GetUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetUserResponse> GetUserWithOptionsAsync(string instanceId, string applicationId, string userId, GetUserRequest request, GetUserHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -3130,14 +3454,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the details of an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetUserResponse
         /// </returns>
-        public GetUserResponse GetUser(string instanceId, string applicationId, string userId)
+        public GetUserResponse GetUser(string instanceId, string applicationId, string userId, GetUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetUserHeaders headers = new GetUserHeaders();
-            return GetUserWithOptions(instanceId, applicationId, userId, headers, runtime);
+            return GetUserWithOptions(instanceId, applicationId, userId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3145,14 +3473,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the details of an Employee Identity and Access Management (EIAM) account.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetUserResponse
         /// </returns>
-        public async Task<GetUserResponse> GetUserAsync(string instanceId, string applicationId, string userId)
+        public async Task<GetUserResponse> GetUserAsync(string instanceId, string applicationId, string userId, GetUserRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetUserHeaders headers = new GetUserHeaders();
-            return await GetUserWithOptionsAsync(instanceId, applicationId, userId, headers, runtime);
+            return await GetUserWithOptionsAsync(instanceId, applicationId, userId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3768,6 +4100,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the information of a user by using the user token.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetUserInfoRequest
+        /// </param>
         /// <param name="headers">
         /// GetUserInfoHeaders
         /// </param>
@@ -3778,8 +4113,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// GetUserInfoResponse
         /// </returns>
-        public GetUserInfoResponse GetUserInfoWithOptions(string instanceId, string applicationId, GetUserInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetUserInfoResponse GetUserInfoWithOptions(string instanceId, string applicationId, GetUserInfoRequest request, GetUserInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -3813,6 +4149,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the information of a user by using the user token.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetUserInfoRequest
+        /// </param>
         /// <param name="headers">
         /// GetUserInfoHeaders
         /// </param>
@@ -3823,8 +4162,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// GetUserInfoResponse
         /// </returns>
-        public async Task<GetUserInfoResponse> GetUserInfoWithOptionsAsync(string instanceId, string applicationId, GetUserInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetUserInfoResponse> GetUserInfoWithOptionsAsync(string instanceId, string applicationId, GetUserInfoRequest request, GetUserInfoHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -3858,14 +4198,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the information of a user by using the user token.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetUserInfoRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetUserInfoResponse
         /// </returns>
-        public GetUserInfoResponse GetUserInfo(string instanceId, string applicationId)
+        public GetUserInfoResponse GetUserInfo(string instanceId, string applicationId, GetUserInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetUserInfoHeaders headers = new GetUserInfoHeaders();
-            return GetUserInfoWithOptions(instanceId, applicationId, headers, runtime);
+            return GetUserInfoWithOptions(instanceId, applicationId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3873,14 +4217,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the information of a user by using the user token.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetUserInfoRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetUserInfoResponse
         /// </returns>
-        public async Task<GetUserInfoResponse> GetUserInfoAsync(string instanceId, string applicationId)
+        public async Task<GetUserInfoResponse> GetUserInfoAsync(string instanceId, string applicationId, GetUserInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             GetUserInfoHeaders headers = new GetUserInfoHeaders();
-            return await GetUserInfoWithOptionsAsync(instanceId, applicationId, headers, runtime);
+            return await GetUserInfoWithOptionsAsync(instanceId, applicationId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4396,6 +4744,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the information of all the parent organizational units of an organizational unit.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListOrganizationalUnitParentIdsRequest
+        /// </param>
         /// <param name="headers">
         /// ListOrganizationalUnitParentIdsHeaders
         /// </param>
@@ -4406,8 +4757,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// ListOrganizationalUnitParentIdsResponse
         /// </returns>
-        public ListOrganizationalUnitParentIdsResponse ListOrganizationalUnitParentIdsWithOptions(string instanceId, string applicationId, string organizationalUnitId, ListOrganizationalUnitParentIdsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListOrganizationalUnitParentIdsResponse ListOrganizationalUnitParentIdsWithOptions(string instanceId, string applicationId, string organizationalUnitId, ListOrganizationalUnitParentIdsRequest request, ListOrganizationalUnitParentIdsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -4441,6 +4793,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the information of all the parent organizational units of an organizational unit.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListOrganizationalUnitParentIdsRequest
+        /// </param>
         /// <param name="headers">
         /// ListOrganizationalUnitParentIdsHeaders
         /// </param>
@@ -4451,8 +4806,9 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <returns>
         /// ListOrganizationalUnitParentIdsResponse
         /// </returns>
-        public async Task<ListOrganizationalUnitParentIdsResponse> ListOrganizationalUnitParentIdsWithOptionsAsync(string instanceId, string applicationId, string organizationalUnitId, ListOrganizationalUnitParentIdsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListOrganizationalUnitParentIdsResponse> ListOrganizationalUnitParentIdsWithOptionsAsync(string instanceId, string applicationId, string organizationalUnitId, ListOrganizationalUnitParentIdsRequest request, ListOrganizationalUnitParentIdsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
             {
@@ -4486,14 +4842,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the information of all the parent organizational units of an organizational unit.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListOrganizationalUnitParentIdsRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListOrganizationalUnitParentIdsResponse
         /// </returns>
-        public ListOrganizationalUnitParentIdsResponse ListOrganizationalUnitParentIds(string instanceId, string applicationId, string organizationalUnitId)
+        public ListOrganizationalUnitParentIdsResponse ListOrganizationalUnitParentIds(string instanceId, string applicationId, string organizationalUnitId, ListOrganizationalUnitParentIdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             ListOrganizationalUnitParentIdsHeaders headers = new ListOrganizationalUnitParentIdsHeaders();
-            return ListOrganizationalUnitParentIdsWithOptions(instanceId, applicationId, organizationalUnitId, headers, runtime);
+            return ListOrganizationalUnitParentIdsWithOptions(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4501,14 +4861,18 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
         /// <para>Queries the information of all the parent organizational units of an organizational unit.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListOrganizationalUnitParentIdsRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListOrganizationalUnitParentIdsResponse
         /// </returns>
-        public async Task<ListOrganizationalUnitParentIdsResponse> ListOrganizationalUnitParentIdsAsync(string instanceId, string applicationId, string organizationalUnitId)
+        public async Task<ListOrganizationalUnitParentIdsResponse> ListOrganizationalUnitParentIdsAsync(string instanceId, string applicationId, string organizationalUnitId, ListOrganizationalUnitParentIdsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             ListOrganizationalUnitParentIdsHeaders headers = new ListOrganizationalUnitParentIdsHeaders();
-            return await ListOrganizationalUnitParentIdsWithOptionsAsync(instanceId, applicationId, organizationalUnitId, headers, runtime);
+            return await ListOrganizationalUnitParentIdsWithOptionsAsync(instanceId, applicationId, organizationalUnitId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
