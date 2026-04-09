@@ -611,6 +611,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string VSwitchId { get; set; }
 
+        [NameInMap("VpdId")]
+        [Validation(Required=false)]
+        public string VpdId { get; set; }
+
+        [NameInMap("VpdVSwitchIds")]
+        [Validation(Required=false)]
+        public List<string> VpdVSwitchIds { get; set; }
+
     }
 
 }

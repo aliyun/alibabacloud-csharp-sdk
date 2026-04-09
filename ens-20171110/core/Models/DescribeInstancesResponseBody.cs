@@ -249,6 +249,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                         [Validation(Required=false)]
                         public string Type { get; set; }
 
+                        [NameInMap("VpdId")]
+                        [Validation(Required=false)]
+                        public string VpdId { get; set; }
+
+                        [NameInMap("VpdVSwitchId")]
+                        [Validation(Required=false)]
+                        public string VpdVSwitchId { get; set; }
+
                     }
 
                 }

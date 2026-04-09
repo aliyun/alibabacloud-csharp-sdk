@@ -15954,9 +15954,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the resources that can be created.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeAvailableResourceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -15987,9 +15984,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the resources that can be created.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeAvailableResourceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -16048,9 +16042,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the specifications of resources that you can purchase when you create an instance.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeAvailableResourceInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -16081,9 +16072,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the specifications of resources that you can purchase when you create an instance.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeAvailableResourceInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -16142,9 +16130,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries available bandwidth metering methods.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeBandWithdChargeTypeRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -16175,9 +16160,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries available bandwidth metering methods.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeBandWithdChargeTypeRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -16380,9 +16362,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the available resources in a region.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeCloudDiskAvailableResourceInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -16413,9 +16392,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the available resources in a region.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeCloudDiskAvailableResourceInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -18738,9 +18714,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the specifications of resources that you can purchase when you create an instance.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeElbAvailableResourceInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -18771,9 +18744,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the specifications of resources that you can purchase when you create an instance.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeElbAvailableResourceInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -19416,9 +19386,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the supported network levels.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeEnsNetLevelRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -19449,9 +19416,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the supported network levels.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeEnsNetLevelRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -23894,9 +23858,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the instance specifications that you can purchase.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeInstanceSpecRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -23927,9 +23888,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the instance specifications that you can purchase.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeInstanceSpecRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -23988,9 +23946,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the specifications of instance types.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeInstanceTypesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -24021,9 +23976,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the specifications of instance types.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeInstanceTypesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -24323,6 +24275,14 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["VSwitchId"] = request.VSwitchId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpdId))
+            {
+                query["VpdId"] = request.VpdId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpdVSwitchId))
+            {
+                query["VpdVSwitchId"] = request.VpdVSwitchId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -24467,6 +24427,14 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpdId))
+            {
+                query["VpdId"] = request.VpdId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpdVSwitchId))
+            {
+                query["VpdVSwitchId"] = request.VpdVSwitchId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -26314,9 +26282,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the specifications of resources that you can purchase when you create a NAS.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeNASAvailableResourceInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -26347,9 +26312,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the specifications of resources that you can purchase when you create a NAS.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeNASAvailableResourceInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -28092,9 +28054,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the specifications of resources that you can purchase.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeReservedResourceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -28125,9 +28084,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Queries the specifications of resources that you can purchase.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeReservedResourceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -33982,9 +33938,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Create a service-linked role (SLR) for ENS for the current user to manage resources.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// InitializeENSECKServiceRoleRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -34015,9 +33968,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Create a service-linked role (SLR) for ENS for the current user to manage resources.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// InitializeENSECKServiceRoleRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -35116,9 +35066,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Querying the details of a cluster component</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListAddonsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -35149,9 +35096,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Querying the details of a cluster component</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListAddonsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -35810,9 +35754,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Lists all service capabilities.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListProductAbilitiesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -35843,9 +35784,6 @@ namespace AlibabaCloud.SDK.Ens20171110
         /// <para>Lists all service capabilities.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListProductAbilitiesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -45115,6 +45053,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 request.SystemDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SystemDisk, "SystemDisk", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VpdVSwitchIds))
+            {
+                request.VpdVSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VpdVSwitchIds, "VpdVSwitchIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
             {
@@ -45283,6 +45225,14 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpdId))
+            {
+                query["VpdId"] = request.VpdId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpdVSwitchIdsShrink))
+            {
+                query["VpdVSwitchIds"] = request.VpdVSwitchIdsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -45331,6 +45281,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 request.SystemDiskShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SystemDisk, "SystemDisk", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VpdVSwitchIds))
+            {
+                request.VpdVSwitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VpdVSwitchIds, "VpdVSwitchIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
             {
@@ -45499,6 +45453,14 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
             {
                 query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpdId))
+            {
+                query["VpdId"] = request.VpdId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpdVSwitchIdsShrink))
+            {
+                query["VpdVSwitchIds"] = request.VpdVSwitchIdsShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
