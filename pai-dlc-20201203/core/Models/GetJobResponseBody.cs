@@ -146,6 +146,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
 
         }
 
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         /// <summary>
         /// <para>The job name.</para>
         /// 

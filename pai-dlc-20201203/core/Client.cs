@@ -134,6 +134,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["DebuggerConfigContent"] = request.DebuggerConfigContent;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
                 body["DisplayName"] = request.DisplayName;
@@ -276,6 +280,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DebuggerConfigContent))
             {
                 body["DebuggerConfigContent"] = request.DebuggerConfigContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
@@ -704,6 +712,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Deletes a completed or stopped job.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteJobRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -714,8 +725,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <returns>
         /// DeleteJobResponse
         /// </returns>
-        public DeleteJobResponse DeleteJobWithOptions(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteJobResponse DeleteJobWithOptions(string JobId, DeleteJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -740,6 +752,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Deletes a completed or stopped job.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteJobRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -750,8 +765,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <returns>
         /// DeleteJobResponse
         /// </returns>
-        public async Task<DeleteJobResponse> DeleteJobWithOptionsAsync(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteJobResponse> DeleteJobWithOptionsAsync(string JobId, DeleteJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -776,14 +792,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Deletes a completed or stopped job.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteJobRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteJobResponse
         /// </returns>
-        public DeleteJobResponse DeleteJob(string JobId)
+        public DeleteJobResponse DeleteJob(string JobId, DeleteJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteJobWithOptions(JobId, headers, runtime);
+            return DeleteJobWithOptions(JobId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -791,14 +811,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Deletes a completed or stopped job.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteJobRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteJobResponse
         /// </returns>
-        public async Task<DeleteJobResponse> DeleteJobAsync(string JobId)
+        public async Task<DeleteJobResponse> DeleteJobAsync(string JobId, DeleteJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteJobWithOptionsAsync(JobId, headers, runtime);
+            return await DeleteJobWithOptionsAsync(JobId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3055,6 +3079,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 query["Caller"] = request.Caller;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
                 query["DisplayName"] = request.DisplayName;
@@ -3242,6 +3270,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Caller))
             {
                 query["Caller"] = request.Caller;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
             {
@@ -3846,6 +3878,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Stops a running job.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StopJobRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3856,8 +3891,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <returns>
         /// StopJobResponse
         /// </returns>
-        public StopJobResponse StopJobWithOptions(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StopJobResponse StopJobWithOptions(string JobId, StopJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3882,6 +3918,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Stops a running job.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StopJobRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3892,8 +3931,9 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <returns>
         /// StopJobResponse
         /// </returns>
-        public async Task<StopJobResponse> StopJobWithOptionsAsync(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StopJobResponse> StopJobWithOptionsAsync(string JobId, StopJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3918,14 +3958,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Stops a running job.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StopJobRequest
+        /// </param>
+        /// 
         /// <returns>
         /// StopJobResponse
         /// </returns>
-        public StopJobResponse StopJob(string JobId)
+        public StopJobResponse StopJob(string JobId, StopJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return StopJobWithOptions(JobId, headers, runtime);
+            return StopJobWithOptions(JobId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3933,14 +3977,18 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Stops a running job.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StopJobRequest
+        /// </param>
+        /// 
         /// <returns>
         /// StopJobResponse
         /// </returns>
-        public async Task<StopJobResponse> StopJobAsync(string JobId)
+        public async Task<StopJobResponse> StopJobAsync(string JobId, StopJobRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await StopJobWithOptionsAsync(JobId, headers, runtime);
+            return await StopJobWithOptionsAsync(JobId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4099,6 +4147,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["Accessibility"] = request.Accessibility;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSpecs))
             {
                 body["JobSpecs"] = request.JobSpecs;
@@ -4152,6 +4204,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
             {
                 body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobSpecs))
             {
