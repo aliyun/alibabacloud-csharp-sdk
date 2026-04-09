@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string ABMetricId { get; set; }
 
+            [NameInMap("AggregationByUser")]
+            [Validation(Required=false)]
+            public bool? AggregationByUser { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>sum(click_cnt)</para>
@@ -29,9 +33,21 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string Definition { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>pv</para>
+            /// </summary>
+            [NameInMap("Denominator")]
+            [Validation(Required=false)]
+            public string Denominator { get; set; }
+
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
+
+            [NameInMap("IsBinomialDistribution")]
+            [Validation(Required=false)]
+            public bool? IsBinomialDistribution { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -48,6 +64,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("NeedSignificance")]
+            [Validation(Required=false)]
+            public bool? NeedSignificance { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>click</para>
+            /// </summary>
+            [NameInMap("Numerator")]
+            [Validation(Required=false)]
+            public string Numerator { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

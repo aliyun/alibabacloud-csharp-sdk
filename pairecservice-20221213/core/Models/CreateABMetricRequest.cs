@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class CreateABMetricRequest : TeaModel {
+        [NameInMap("AggregationByUser")]
+        [Validation(Required=false)]
+        public bool? AggregationByUser { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -18,6 +22,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [NameInMap("Definition")]
         [Validation(Required=false)]
         public string Definition { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>pv</para>
+        /// </summary>
+        [NameInMap("Denominator")]
+        [Validation(Required=false)]
+        public string Denominator { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -36,6 +48,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("IsBinomialDistribution")]
+        [Validation(Required=false)]
+        public bool? IsBinomialDistribution { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2</para>
@@ -53,6 +69,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("NeedSignificance")]
+        [Validation(Required=false)]
+        public bool? NeedSignificance { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>click</para>
+        /// </summary>
+        [NameInMap("Numerator")]
+        [Validation(Required=false)]
+        public string Numerator { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

@@ -1795,9 +1795,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregationByUser))
+            {
+                body["AggregationByUser"] = request.AggregationByUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Definition))
             {
                 body["Definition"] = request.Definition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Denominator))
+            {
+                body["Denominator"] = request.Denominator;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -1807,6 +1815,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsBinomialDistribution))
+            {
+                body["IsBinomialDistribution"] = request.IsBinomialDistribution;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LeftMetricId))
             {
                 body["LeftMetricId"] = request.LeftMetricId;
@@ -1814,6 +1826,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedSignificance))
+            {
+                body["NeedSignificance"] = request.NeedSignificance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Numerator))
+            {
+                body["Numerator"] = request.Numerator;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
             {
@@ -1889,9 +1909,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregationByUser))
+            {
+                body["AggregationByUser"] = request.AggregationByUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Definition))
             {
                 body["Definition"] = request.Definition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Denominator))
+            {
+                body["Denominator"] = request.Denominator;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -1901,6 +1929,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsBinomialDistribution))
+            {
+                body["IsBinomialDistribution"] = request.IsBinomialDistribution;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LeftMetricId))
             {
                 body["LeftMetricId"] = request.LeftMetricId;
@@ -1908,6 +1940,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedSignificance))
+            {
+                body["NeedSignificance"] = request.NeedSignificance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Numerator))
+            {
+                body["Numerator"] = request.Numerator;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
             {
@@ -8374,6 +8414,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>删除指定实例下的指定配置资源。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteInstanceResourceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -8384,8 +8427,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <returns>
         /// DeleteInstanceResourceResponse
         /// </returns>
-        public DeleteInstanceResourceResponse DeleteInstanceResourceWithOptions(string InstanceId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteInstanceResourceResponse DeleteInstanceResourceWithOptions(string InstanceId, string ResourceId, DeleteInstanceResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8410,6 +8454,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>删除指定实例下的指定配置资源。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteInstanceResourceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -8420,8 +8467,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <returns>
         /// DeleteInstanceResourceResponse
         /// </returns>
-        public async Task<DeleteInstanceResourceResponse> DeleteInstanceResourceWithOptionsAsync(string InstanceId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteInstanceResourceResponse> DeleteInstanceResourceWithOptionsAsync(string InstanceId, string ResourceId, DeleteInstanceResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8446,14 +8494,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>删除指定实例下的指定配置资源。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteInstanceResourceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteInstanceResourceResponse
         /// </returns>
-        public DeleteInstanceResourceResponse DeleteInstanceResource(string InstanceId, string ResourceId)
+        public DeleteInstanceResourceResponse DeleteInstanceResource(string InstanceId, string ResourceId, DeleteInstanceResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteInstanceResourceWithOptions(InstanceId, ResourceId, headers, runtime);
+            return DeleteInstanceResourceWithOptions(InstanceId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8461,14 +8513,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>删除指定实例下的指定配置资源。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteInstanceResourceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteInstanceResourceResponse
         /// </returns>
-        public async Task<DeleteInstanceResourceResponse> DeleteInstanceResourceAsync(string InstanceId, string ResourceId)
+        public async Task<DeleteInstanceResourceResponse> DeleteInstanceResourceAsync(string InstanceId, string ResourceId, DeleteInstanceResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteInstanceResourceWithOptionsAsync(InstanceId, ResourceId, headers, runtime);
+            return await DeleteInstanceResourceWithOptionsAsync(InstanceId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12156,6 +12212,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>获取指定推荐全链路深度定制开发平台实例信息。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetInstanceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12166,8 +12225,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <returns>
         /// GetInstanceResponse
         /// </returns>
-        public GetInstanceResponse GetInstanceWithOptions(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetInstanceResponse GetInstanceWithOptions(string InstanceId, GetInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12192,6 +12252,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>获取指定推荐全链路深度定制开发平台实例信息。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetInstanceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12202,8 +12265,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <returns>
         /// GetInstanceResponse
         /// </returns>
-        public async Task<GetInstanceResponse> GetInstanceWithOptionsAsync(string InstanceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetInstanceResponse> GetInstanceWithOptionsAsync(string InstanceId, GetInstanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12228,14 +12292,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>获取指定推荐全链路深度定制开发平台实例信息。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetInstanceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetInstanceResponse
         /// </returns>
-        public GetInstanceResponse GetInstance(string InstanceId)
+        public GetInstanceResponse GetInstance(string InstanceId, GetInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetInstanceWithOptions(InstanceId, headers, runtime);
+            return GetInstanceWithOptions(InstanceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12243,14 +12311,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>获取指定推荐全链路深度定制开发平台实例信息。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetInstanceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetInstanceResponse
         /// </returns>
-        public async Task<GetInstanceResponse> GetInstanceAsync(string InstanceId)
+        public async Task<GetInstanceResponse> GetInstanceAsync(string InstanceId, GetInstanceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetInstanceWithOptionsAsync(InstanceId, headers, runtime);
+            return await GetInstanceWithOptionsAsync(InstanceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12258,6 +12330,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>获取指定实例下指定资源的详细信息。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetInstanceResourceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12268,8 +12343,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <returns>
         /// GetInstanceResourceResponse
         /// </returns>
-        public GetInstanceResourceResponse GetInstanceResourceWithOptions(string InstanceId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetInstanceResourceResponse GetInstanceResourceWithOptions(string InstanceId, string ResourceId, GetInstanceResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12294,6 +12370,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>获取指定实例下指定资源的详细信息。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetInstanceResourceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12304,8 +12383,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <returns>
         /// GetInstanceResourceResponse
         /// </returns>
-        public async Task<GetInstanceResourceResponse> GetInstanceResourceWithOptionsAsync(string InstanceId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetInstanceResourceResponse> GetInstanceResourceWithOptionsAsync(string InstanceId, string ResourceId, GetInstanceResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12330,14 +12410,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>获取指定实例下指定资源的详细信息。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetInstanceResourceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetInstanceResourceResponse
         /// </returns>
-        public GetInstanceResourceResponse GetInstanceResource(string InstanceId, string ResourceId)
+        public GetInstanceResourceResponse GetInstanceResource(string InstanceId, string ResourceId, GetInstanceResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetInstanceResourceWithOptions(InstanceId, ResourceId, headers, runtime);
+            return GetInstanceResourceWithOptions(InstanceId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12345,14 +12429,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>获取指定实例下指定资源的详细信息。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetInstanceResourceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetInstanceResourceResponse
         /// </returns>
-        public async Task<GetInstanceResourceResponse> GetInstanceResourceAsync(string InstanceId, string ResourceId)
+        public async Task<GetInstanceResourceResponse> GetInstanceResourceAsync(string InstanceId, string ResourceId, GetInstanceResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetInstanceResourceWithOptionsAsync(InstanceId, ResourceId, headers, runtime);
+            return await GetInstanceResourceWithOptionsAsync(InstanceId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12360,6 +12448,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>获取数据源下指定表的详细信息。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetInstanceResourceTableRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12370,8 +12461,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <returns>
         /// GetInstanceResourceTableResponse
         /// </returns>
-        public GetInstanceResourceTableResponse GetInstanceResourceTableWithOptions(string InstanceId, string ResourceId, string TableName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetInstanceResourceTableResponse GetInstanceResourceTableWithOptions(string InstanceId, string ResourceId, string TableName, GetInstanceResourceTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12396,6 +12488,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>获取数据源下指定表的详细信息。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetInstanceResourceTableRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12406,8 +12501,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <returns>
         /// GetInstanceResourceTableResponse
         /// </returns>
-        public async Task<GetInstanceResourceTableResponse> GetInstanceResourceTableWithOptionsAsync(string InstanceId, string ResourceId, string TableName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetInstanceResourceTableResponse> GetInstanceResourceTableWithOptionsAsync(string InstanceId, string ResourceId, string TableName, GetInstanceResourceTableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12432,14 +12528,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>获取数据源下指定表的详细信息。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetInstanceResourceTableRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetInstanceResourceTableResponse
         /// </returns>
-        public GetInstanceResourceTableResponse GetInstanceResourceTable(string InstanceId, string ResourceId, string TableName)
+        public GetInstanceResourceTableResponse GetInstanceResourceTable(string InstanceId, string ResourceId, string TableName, GetInstanceResourceTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetInstanceResourceTableWithOptions(InstanceId, ResourceId, TableName, headers, runtime);
+            return GetInstanceResourceTableWithOptions(InstanceId, ResourceId, TableName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12447,14 +12547,18 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         /// <para>获取数据源下指定表的详细信息。</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetInstanceResourceTableRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetInstanceResourceTableResponse
         /// </returns>
-        public async Task<GetInstanceResourceTableResponse> GetInstanceResourceTableAsync(string InstanceId, string ResourceId, string TableName)
+        public async Task<GetInstanceResourceTableResponse> GetInstanceResourceTableAsync(string InstanceId, string ResourceId, string TableName, GetInstanceResourceTableRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetInstanceResourceTableWithOptionsAsync(InstanceId, ResourceId, TableName, headers, runtime);
+            return await GetInstanceResourceTableWithOptionsAsync(InstanceId, ResourceId, TableName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24151,9 +24255,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregationByUser))
+            {
+                body["AggregationByUser"] = request.AggregationByUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Definition))
             {
                 body["Definition"] = request.Definition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Denominator))
+            {
+                body["Denominator"] = request.Denominator;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -24163,6 +24275,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsBinomialDistribution))
+            {
+                body["IsBinomialDistribution"] = request.IsBinomialDistribution;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LeftMetricId))
             {
                 body["LeftMetricId"] = request.LeftMetricId;
@@ -24170,6 +24286,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedSignificance))
+            {
+                body["NeedSignificance"] = request.NeedSignificance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Numerator))
+            {
+                body["Numerator"] = request.Numerator;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
             {
@@ -24245,9 +24369,17 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AggregationByUser))
+            {
+                body["AggregationByUser"] = request.AggregationByUser;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Definition))
             {
                 body["Definition"] = request.Definition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Denominator))
+            {
+                body["Denominator"] = request.Denominator;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -24257,6 +24389,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsBinomialDistribution))
+            {
+                body["IsBinomialDistribution"] = request.IsBinomialDistribution;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LeftMetricId))
             {
                 body["LeftMetricId"] = request.LeftMetricId;
@@ -24264,6 +24400,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedSignificance))
+            {
+                body["NeedSignificance"] = request.NeedSignificance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Numerator))
+            {
+                body["Numerator"] = request.Numerator;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operator))
             {
