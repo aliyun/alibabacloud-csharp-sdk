@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public AIAgentConfig AgentConfig { get; set; }
 
+            [NameInMap("CallInfo")]
+            [Validation(Required=false)]
+            public AIAgentCallInfo CallInfo { get; set; }
+
             /// <summary>
             /// <para>The URL of the call log file.</para>
             /// 

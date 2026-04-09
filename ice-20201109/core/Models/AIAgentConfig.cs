@@ -133,6 +133,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
 
                 }
 
+                [NameInMap("Mode")]
+                [Validation(Required=false)]
+                public string Mode { get; set; }
+
                 [NameInMap("WaitTime")]
                 [Validation(Required=false)]
                 public int? WaitTime { get; set; }
@@ -143,6 +147,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             [Validation(Required=false)]
             public AIAgentConfigAutoSpeechConfigUserIdle UserIdle { get; set; }
             public class AIAgentConfigAutoSpeechConfigUserIdle : TeaModel {
+                [NameInMap("HangupEndWord")]
+                [Validation(Required=false)]
+                public string HangupEndWord { get; set; }
+
                 [NameInMap("MaxRepeats")]
                 [Validation(Required=false)]
                 public int? MaxRepeats { get; set; }

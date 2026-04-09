@@ -18485,9 +18485,6 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>Generates a random Key Management Service (KMS) data key used for HTTP Live Streaming (HLS) encryption and transcoding of videos.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GenerateKMSDataKeyRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -18518,9 +18515,6 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>Generates a random Key Management Service (KMS) data key used for HTTP Live Streaming (HLS) encryption and transcoding of videos.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GenerateKMSDataKeyRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -20019,9 +20013,6 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>获取内容分析搜索配置</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetContentAnalyzeConfigRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -20052,9 +20043,6 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>获取内容分析搜索配置</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetContentAnalyzeConfigRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -20625,9 +20613,6 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>获取用户默认存储地址</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetDefaultStorageLocationRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -20658,9 +20643,6 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>获取用户默认存储地址</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetDefaultStorageLocationRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -21207,9 +21189,6 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>Queries event callback configurations.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetEventCallbackRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -21240,9 +21219,6 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>Queries event callback configurations.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetEventCallbackRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -23009,9 +22985,6 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>Retrieves all regions where MediaConnect is available.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetMediaConnectAvailableRegionRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -23042,9 +23015,6 @@ namespace AlibabaCloud.SDK.ICE20201109
         /// <para>Retrieves all regions where MediaConnect is available.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetMediaConnectAvailableRegionRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -47788,6 +47758,134 @@ namespace AlibabaCloud.SDK.ICE20201109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopRtcRobotInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>扣减用户积分</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubYikeUserCreditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubYikeUserCreditResponse
+        /// </returns>
+        public SubYikeUserCreditResponse SubYikeUserCreditWithOptions(SubYikeUserCreditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Credit))
+            {
+                query["Credit"] = request.Credit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YikeUserId))
+            {
+                query["YikeUserId"] = request.YikeUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubYikeUserCredit",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubYikeUserCreditResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>扣减用户积分</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubYikeUserCreditRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubYikeUserCreditResponse
+        /// </returns>
+        public async Task<SubYikeUserCreditResponse> SubYikeUserCreditWithOptionsAsync(SubYikeUserCreditRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Credit))
+            {
+                query["Credit"] = request.Credit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YikeUserId))
+            {
+                query["YikeUserId"] = request.YikeUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubYikeUserCredit",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubYikeUserCreditResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>扣减用户积分</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubYikeUserCreditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubYikeUserCreditResponse
+        /// </returns>
+        public SubYikeUserCreditResponse SubYikeUserCredit(SubYikeUserCreditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubYikeUserCreditWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>扣减用户积分</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubYikeUserCreditRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubYikeUserCreditResponse
+        /// </returns>
+        public async Task<SubYikeUserCreditResponse> SubYikeUserCreditAsync(SubYikeUserCreditRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubYikeUserCreditWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

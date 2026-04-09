@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [Validation(Required=false)]
         public string AIAgentUserId { get; set; }
 
+        [NameInMap("AvatarUserId")]
+        [Validation(Required=false)]
+        public string AvatarUserId { get; set; }
+
         /// <summary>
         /// <para>The ARTC channel ID.</para>
         /// 
