@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateFederatedCredentialProviderRequest : TeaModel {
+        [NameInMap("CloudIdPProviderConfig")]
+        [Validation(Required=false)]
+        public CreateFederatedCredentialProviderRequestCloudIdPProviderConfig CloudIdPProviderConfig { get; set; }
+        public class CreateFederatedCredentialProviderRequestCloudIdPProviderConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>idp_m7hk2hbnew5ir3ycfabug6xxxx</para>
+            /// </summary>
+            [NameInMap("IdentityProviderId")]
+            [Validation(Required=false)]
+            public string IdentityProviderId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>联邦凭证提供方描述</para>
         /// 

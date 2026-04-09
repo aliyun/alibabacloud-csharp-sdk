@@ -13,6 +13,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public List<ListFederatedCredentialProvidersResponseBodyFederatedCredentialProviders> FederatedCredentialProviders { get; set; }
         public class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProviders : TeaModel {
+            [NameInMap("CloudIdPProviderConfig")]
+            [Validation(Required=false)]
+            public ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersCloudIdPProviderConfig CloudIdPProviderConfig { get; set; }
+            public class ListFederatedCredentialProvidersResponseBodyFederatedCredentialProvidersCloudIdPProviderConfig : TeaModel {
+                [NameInMap("IdentityProviderId")]
+                [Validation(Required=false)]
+                public string IdentityProviderId { get; set; }
+
+            }
+
             /// <summary>
             /// <para>创建时间</para>
             /// 

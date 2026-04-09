@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public List<string> CredentialIds { get; set; }
 
+        [NameInMap("CredentialSharingScopes")]
+        [Validation(Required=false)]
+        public List<string> CredentialSharingScopes { get; set; }
+
         [NameInMap("CredentialTypes")]
         [Validation(Required=false)]
         public List<string> CredentialTypes { get; set; }

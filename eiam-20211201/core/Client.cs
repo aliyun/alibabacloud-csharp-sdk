@@ -4800,6 +4800,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["CredentialScenarioLabel"] = request.CredentialScenarioLabel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialSharingScope))
+            {
+                query["CredentialSharingScope"] = request.CredentialSharingScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialSubjectId))
             {
                 query["CredentialSubjectId"] = request.CredentialSubjectId;
@@ -4815,6 +4819,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExclusiveUserId))
+            {
+                query["ExclusiveUserId"] = request.ExclusiveUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -4878,6 +4886,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["CredentialScenarioLabel"] = request.CredentialScenarioLabel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialSharingScope))
+            {
+                query["CredentialSharingScope"] = request.CredentialSharingScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialSubjectId))
             {
                 query["CredentialSubjectId"] = request.CredentialSubjectId;
@@ -4893,6 +4905,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExclusiveUserId))
+            {
+                query["ExclusiveUserId"] = request.ExclusiveUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -5788,6 +5804,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudIdPProviderConfig))
+            {
+                query["CloudIdPProviderConfig"] = request.CloudIdPProviderConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -5858,6 +5878,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudIdPProviderConfig))
+            {
+                query["CloudIdPProviderConfig"] = request.CloudIdPProviderConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -30524,6 +30548,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["CredentialIds"] = request.CredentialIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialSharingScopes))
+            {
+                query["CredentialSharingScopes"] = request.CredentialSharingScopes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialTypes))
             {
                 query["CredentialTypes"] = request.CredentialTypes;
@@ -30589,6 +30617,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialIds))
             {
                 query["CredentialIds"] = request.CredentialIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialSharingScopes))
+            {
+                query["CredentialSharingScopes"] = request.CredentialSharingScopes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialTypes))
             {
@@ -31362,9 +31394,6 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <para>Queries the regions in which Employee Identity and Access Management (EIAM) V1.0 instances or EIAM V2.0 instances reside.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListEiamRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -31395,9 +31424,6 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <para>Queries the regions in which Employee Identity and Access Management (EIAM) V1.0 instances or EIAM V2.0 instances reside.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListEiamRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -32960,9 +32986,6 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <para>Get a list of regions that support network access endpoints.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListNetworkAccessEndpointAvailableRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -32993,9 +33016,6 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <para>Get a list of regions that support network access endpoints.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListNetworkAccessEndpointAvailableRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -34238,9 +34258,6 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <para>Queries a list of supported Alibaba Cloud regions.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -34271,9 +34288,6 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <para>Queries a list of supported Alibaba Cloud regions.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
