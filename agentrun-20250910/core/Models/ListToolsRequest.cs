@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>tool-1</para>
+        /// </summary>
+        [NameInMap("toolName")]
+        [Validation(Required=false)]
+        public string ToolName { get; set; }
+
+        /// <summary>
         /// <para>按工具类型过滤，可选值：MCP、FUNCTIONCALL、SKILL</para>
         /// 
         /// <b>Example:</b>

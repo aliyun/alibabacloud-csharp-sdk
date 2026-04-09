@@ -18,6 +18,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeName { get; set; }
 
         /// <summary>
+        /// <para>应用实时监控服务（ARMS）的配置信息</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("armsConfiguration")]
+        [Validation(Required=false)]
+        public ArmsConfiguration ArmsConfiguration { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>Code</para>
         /// </summary>

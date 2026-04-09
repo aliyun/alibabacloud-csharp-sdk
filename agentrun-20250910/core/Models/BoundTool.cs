@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class BoundTool : TeaModel {
+        [NameInMap("apis")]
+        [Validation(Required=false)]
+        public List<BoundToolApi> Apis { get; set; }
+
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>绑定的 HTTP 请求方法，支持：GET、PUT、POST、PATCH、DELETE、OPTIONS</para>
         /// 
@@ -17,8 +23,11 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// </summary>
         [NameInMap("method")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Method { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>绑定的 URL 路径，用于路由匹配</para>
         /// 
@@ -27,6 +36,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// </summary>
         [NameInMap("path")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Path { get; set; }
 
         /// <summary>
