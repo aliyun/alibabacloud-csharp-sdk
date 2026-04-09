@@ -58,6 +58,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Roles { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2788******129</para>
+        /// </summary>
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
+
     }
 
 }
