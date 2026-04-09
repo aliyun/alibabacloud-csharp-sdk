@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份认证查询接口</para>
+        /// <para>Queries the information about identity providers by logon identifier.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份认证查询接口</para>
+        /// <para>Queries the information about identity providers by logon identifier.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份认证查询接口</para>
+        /// <para>Queries the information about identity providers by logon identifier.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>身份认证查询接口</para>
+        /// <para>Queries the information about identity providers by logon identifier.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetLoginToken</para>
+        /// <para>Queries a logon token using an enterprise identifier.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -587,7 +587,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetLoginToken</para>
+        /// <para>Queries a logon token using an enterprise identifier.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -783,7 +783,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetLoginToken</para>
+        /// <para>Queries a logon token using an enterprise identifier.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -801,7 +801,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetLoginToken</para>
+        /// <para>Queries a logon token using an enterprise identifier.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -819,7 +819,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取无影StsToken</para>
+        /// <para>Obtains an STS token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -881,7 +881,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取无影StsToken</para>
+        /// <para>Obtains an STS token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -943,7 +943,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取无影StsToken</para>
+        /// <para>Obtains an STS token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -961,7 +961,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取无影StsToken</para>
+        /// <para>Obtains an STS token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -977,6 +977,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             return await GetStsTokenWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes a logon token.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RefreshLoginTokenRequest
         /// </param>
@@ -1046,6 +1051,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             return TeaModel.ToObject<RefreshLoginTokenResponse>(DoRPCRequest(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes a logon token.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RefreshLoginTokenRequest
         /// </param>
@@ -1115,6 +1125,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             return TeaModel.ToObject<RefreshLoginTokenResponse>(await DoRPCRequestAsync(params_.Action, params_.Version, params_.Protocol, params_.Method, params_.AuthType, params_.BodyType, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes a logon token.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RefreshLoginTokenRequest
         /// </param>
@@ -1128,6 +1143,11 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             return RefreshLoginTokenWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Refreshes a logon token.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RefreshLoginTokenRequest
         /// </param>

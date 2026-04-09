@@ -21,6 +21,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
         [Validation(Required=false)]
         public GetStsTokenResponseBodyStsTokenModel StsTokenModel { get; set; }
         public class GetStsTokenResponseBodyStsTokenModel : TeaModel {
+            [NameInMap("EndUserId")]
+            [Validation(Required=false)]
+            public string EndUserId { get; set; }
+
+            [NameInMap("LoginToken")]
+            [Validation(Required=false)]
+            public string LoginToken { get; set; }
+
+            [NameInMap("ProfileRegion")]
+            [Validation(Required=false)]
+            public string ProfileRegion { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>be4be09e-cd00-4b4c-add7-11b4d8****</para>
