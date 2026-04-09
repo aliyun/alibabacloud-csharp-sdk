@@ -676,6 +676,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpInstanceId))
             {
                 query["IpInstanceId"] = request.IpInstanceId;
@@ -754,6 +758,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpInstanceId))
             {
@@ -14265,6 +14273,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -14360,6 +14372,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -14513,6 +14529,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -14608,6 +14628,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -28873,6 +28897,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6EgressOnlyRuleId))
             {
                 query["Ipv6EgressOnlyRuleId"] = request.Ipv6EgressOnlyRuleId;
@@ -28952,6 +28980,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6EgressOnlyRuleId))
             {
@@ -51610,7 +51642,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an SSL server.</para>
+        /// <para>Queries the log entries of an SSL server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51696,7 +51728,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an SSL server.</para>
+        /// <para>Queries the log entries of an SSL server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51782,7 +51814,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an SSL server.</para>
+        /// <para>Queries the log entries of an SSL server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51800,7 +51832,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the log of an SSL server.</para>
+        /// <para>Queries the log entries of an SSL server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -58081,9 +58113,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Queries the most recent region list.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListGeographicSubRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -58114,9 +58143,6 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Queries the most recent region list.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListGeographicSubRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -73876,7 +73902,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a VPN Gateway or the automatic route advertisement feature.</para>
+        /// <para>Modifies the name and description of a VPN gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -73964,7 +73990,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a VPN Gateway or the automatic route advertisement feature.</para>
+        /// <para>Modifies the name and description of a VPN gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -74052,7 +74078,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a VPN Gateway or the automatic route advertisement feature.</para>
+        /// <para>Modifies the name and description of a VPN gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -74080,7 +74106,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name and description of a VPN Gateway or the automatic route advertisement feature.</para>
+        /// <para>Modifies the name and description of a VPN gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -77670,6 +77696,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpInstanceId))
             {
                 query["IpInstanceId"] = request.IpInstanceId;
@@ -77740,6 +77770,10 @@ namespace AlibabaCloud.SDK.Vpc20160428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpInstanceId))
             {

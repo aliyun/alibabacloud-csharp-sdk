@@ -1,3 +1,11 @@
+2026-04-09 Version: 7.1.2
+- Update API AddCommonBandwidthPackageIp: add request parameters DryRun.
+- Update API CreateIpv6EgressOnlyRule: add request parameters DryRun.
+- Update API CreateIpv6Gateway: add request parameters DryRun.
+- Update API DeleteIpv6EgressOnlyRule: add request parameters DryRun.
+- Update API RemoveCommonBandwidthPackageIp: add request parameters DryRun.
+
+
 2026-04-07 Version: 7.1.1
 - Generated csharp 2016-04-28 for Vpc.
 

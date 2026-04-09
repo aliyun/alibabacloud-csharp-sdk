@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// <para>The ID of the IPv6 address for which you want to create an egress-only rule.</para>
         /// <para>This parameter is required.</para>
