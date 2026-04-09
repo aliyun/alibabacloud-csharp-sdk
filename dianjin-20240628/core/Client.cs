@@ -73,7 +73,8 @@ namespace AlibabaCloud.SDK.DianJin20240628
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -176,7 +177,8 @@ namespace AlibabaCloud.SDK.DianJin20240628
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -2967,6 +2969,9 @@ namespace AlibabaCloud.SDK.DianJin20240628
         /// <para>获取app配置</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetAppConfigRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2977,8 +2982,9 @@ namespace AlibabaCloud.SDK.DianJin20240628
         /// <returns>
         /// GetAppConfigResponse
         /// </returns>
-        public GetAppConfigResponse GetAppConfigWithOptions(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetAppConfigResponse GetAppConfigWithOptions(string workspaceId, GetAppConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3003,6 +3009,9 @@ namespace AlibabaCloud.SDK.DianJin20240628
         /// <para>获取app配置</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetAppConfigRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3013,8 +3022,9 @@ namespace AlibabaCloud.SDK.DianJin20240628
         /// <returns>
         /// GetAppConfigResponse
         /// </returns>
-        public async Task<GetAppConfigResponse> GetAppConfigWithOptionsAsync(string workspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetAppConfigResponse> GetAppConfigWithOptionsAsync(string workspaceId, GetAppConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3039,14 +3049,18 @@ namespace AlibabaCloud.SDK.DianJin20240628
         /// <para>获取app配置</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetAppConfigRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetAppConfigResponse
         /// </returns>
-        public GetAppConfigResponse GetAppConfig(string workspaceId)
+        public GetAppConfigResponse GetAppConfig(string workspaceId, GetAppConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetAppConfigWithOptions(workspaceId, headers, runtime);
+            return GetAppConfigWithOptions(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3054,14 +3068,18 @@ namespace AlibabaCloud.SDK.DianJin20240628
         /// <para>获取app配置</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetAppConfigRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetAppConfigResponse
         /// </returns>
-        public async Task<GetAppConfigResponse> GetAppConfigAsync(string workspaceId)
+        public async Task<GetAppConfigResponse> GetAppConfigAsync(string workspaceId, GetAppConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetAppConfigWithOptionsAsync(workspaceId, headers, runtime);
+            return await GetAppConfigWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8725,7 +8743,7 @@ namespace AlibabaCloud.SDK.DianJin20240628
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -8821,7 +8839,7 @@ namespace AlibabaCloud.SDK.DianJin20240628
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
