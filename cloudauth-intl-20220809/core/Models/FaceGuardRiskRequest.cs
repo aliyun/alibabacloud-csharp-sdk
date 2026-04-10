@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
     }
 
 }

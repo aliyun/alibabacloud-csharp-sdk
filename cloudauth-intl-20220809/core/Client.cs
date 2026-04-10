@@ -73,7 +73,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -176,7 +177,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -491,7 +493,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -587,7 +589,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -2647,7 +2649,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -2743,7 +2745,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -3211,7 +3213,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -3307,7 +3309,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -4431,7 +4433,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -4527,7 +4529,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -5231,7 +5233,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -5257,7 +5259,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -5353,7 +5355,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -5379,7 +5381,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -5819,7 +5821,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -5845,7 +5847,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -5941,7 +5943,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -5967,7 +5969,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -6465,6 +6467,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["ProductCode"] = request.ProductCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -6518,6 +6524,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7799,9 +7809,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <para>If your server makes infrequent calls to the ID Verification API, you can call the KeepaliveIntl operation to maintain the client connection.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// KeepaliveIntlRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7832,9 +7839,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// <para>If your server makes infrequent calls to the ID Verification API, you can call the KeepaliveIntl operation to maintain the client connection.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// KeepaliveIntlRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
