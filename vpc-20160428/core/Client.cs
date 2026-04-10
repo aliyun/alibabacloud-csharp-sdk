@@ -83406,7 +83406,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改增强型VPN实例属性</para>
+        /// <para>Modifies the name, description, or route auto-propagation feature of an Enhanced VPN gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -83484,7 +83484,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改增强型VPN实例属性</para>
+        /// <para>Modifies the name, description, or route auto-propagation feature of an Enhanced VPN gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -83562,7 +83562,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改增强型VPN实例属性</para>
+        /// <para>Modifies the name, description, or route auto-propagation feature of an Enhanced VPN gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -83580,7 +83580,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改增强型VPN实例属性</para>
+        /// <para>Modifies the name, description, or route auto-propagation feature of an Enhanced VPN gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">

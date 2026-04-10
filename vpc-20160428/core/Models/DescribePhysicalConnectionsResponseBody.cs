@@ -101,6 +101,38 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public string LoaStatus { get; set; }
 
+                [NameInMap("MacsecKeys")]
+                [Validation(Required=false)]
+                public DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeys MacsecKeys { get; set; }
+                public class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeys : TeaModel {
+                    [NameInMap("MacsecKey")]
+                    [Validation(Required=false)]
+                    public List<DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey> MacsecKey { get; set; }
+                    public class DescribePhysicalConnectionsResponseBodyPhysicalConnectionSetPhysicalConnectionTypeMacsecKeysMacsecKey : TeaModel {
+                        [NameInMap("Cak")]
+                        [Validation(Required=false)]
+                        public string Cak { get; set; }
+
+                        [NameInMap("CipherSuite")]
+                        [Validation(Required=false)]
+                        public string CipherSuite { get; set; }
+
+                        [NameInMap("Ckn")]
+                        [Validation(Required=false)]
+                        public string Ckn { get; set; }
+
+                        [NameInMap("StartOn")]
+                        [Validation(Required=false)]
+                        public string StartOn { get; set; }
+
+                        [NameInMap("Status")]
+                        [Validation(Required=false)]
+                        public string Status { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
