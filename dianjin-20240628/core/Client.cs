@@ -2820,6 +2820,186 @@ namespace AlibabaCloud.SDK.DianJin20240628
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>兑换权益</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExchangeEntitlementRequest
+        /// </param>
+        /// <param name="headers">
+        /// ExchangeEntitlementHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExchangeEntitlementResponse
+        /// </returns>
+        public ExchangeEntitlementResponse ExchangeEntitlementWithOptions(string workspaceId, string tenantId, ExchangeEntitlementRequest request, ExchangeEntitlementHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["externalUserId"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyHash))
+            {
+                body["keyHash"] = request.KeyHash;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExchangeEntitlement",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/v1/tenants/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tenantId) + "/redeem",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExchangeEntitlementResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>兑换权益</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExchangeEntitlementRequest
+        /// </param>
+        /// <param name="headers">
+        /// ExchangeEntitlementHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExchangeEntitlementResponse
+        /// </returns>
+        public async Task<ExchangeEntitlementResponse> ExchangeEntitlementWithOptionsAsync(string workspaceId, string tenantId, ExchangeEntitlementRequest request, ExchangeEntitlementHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["externalUserId"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeyHash))
+            {
+                body["keyHash"] = request.KeyHash;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
+            {
+                body["requestId"] = request.RequestId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                body["templateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["userName"] = request.UserName;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExchangeEntitlement",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/v1/tenants/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tenantId) + "/redeem",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExchangeEntitlementResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>兑换权益</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExchangeEntitlementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExchangeEntitlementResponse
+        /// </returns>
+        public ExchangeEntitlementResponse ExchangeEntitlement(string workspaceId, string tenantId, ExchangeEntitlementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ExchangeEntitlementHeaders headers = new ExchangeEntitlementHeaders();
+            return ExchangeEntitlementWithOptions(workspaceId, tenantId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>兑换权益</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExchangeEntitlementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExchangeEntitlementResponse
+        /// </returns>
+        public async Task<ExchangeEntitlementResponse> ExchangeEntitlementAsync(string workspaceId, string tenantId, ExchangeEntitlementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ExchangeEntitlementHeaders headers = new ExchangeEntitlementHeaders();
+            return await ExchangeEntitlementWithOptionsAsync(workspaceId, tenantId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>根据文档解析问答QA</para>
         /// </summary>
         /// 
@@ -5552,6 +5732,162 @@ namespace AlibabaCloud.SDK.DianJin20240628
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询用量明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUsageRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetUsageHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUsageResponse
+        /// </returns>
+        public GetUsageResponse GetUsageWithOptions(string workspaceId, string tenantId, GetUsageRequest request, GetUsageHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                query["externalUserId"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedemptionOrderNo))
+            {
+                query["redemptionOrderNo"] = request.RedemptionOrderNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUsage",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/v1/tenants/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tenantId) + "/usage",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUsageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用量明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUsageRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetUsageHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUsageResponse
+        /// </returns>
+        public async Task<GetUsageResponse> GetUsageWithOptionsAsync(string workspaceId, string tenantId, GetUsageRequest request, GetUsageHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                query["externalUserId"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedemptionOrderNo))
+            {
+                query["redemptionOrderNo"] = request.RedemptionOrderNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUsage",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/v1/tenants/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tenantId) + "/usage",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUsageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用量明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUsageResponse
+        /// </returns>
+        public GetUsageResponse GetUsage(string workspaceId, string tenantId, GetUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetUsageHeaders headers = new GetUsageHeaders();
+            return GetUsageWithOptions(workspaceId, tenantId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用量明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUsageResponse
+        /// </returns>
+        public async Task<GetUsageResponse> GetUsageAsync(string workspaceId, string tenantId, GetUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetUsageHeaders headers = new GetUsageHeaders();
+            return await GetUsageWithOptionsAsync(workspaceId, tenantId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取视频生成任务结果</para>
         /// </summary>
         /// 
@@ -5972,6 +6308,326 @@ namespace AlibabaCloud.SDK.DianJin20240628
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await PreviewDocumentWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询兑换记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApiKeysRequest
+        /// </param>
+        /// <param name="headers">
+        /// QueryApiKeysHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApiKeysResponse
+        /// </returns>
+        public QueryApiKeysResponse QueryApiKeysWithOptions(string workspaceId, string tenantId, QueryApiKeysRequest request, QueryApiKeysHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                query["externalUserId"] = request.ExternalUserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryApiKeys",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/v1/tenants/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tenantId) + "/apikeys",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryApiKeysResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询兑换记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApiKeysRequest
+        /// </param>
+        /// <param name="headers">
+        /// QueryApiKeysHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApiKeysResponse
+        /// </returns>
+        public async Task<QueryApiKeysResponse> QueryApiKeysWithOptionsAsync(string workspaceId, string tenantId, QueryApiKeysRequest request, QueryApiKeysHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                query["externalUserId"] = request.ExternalUserId;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryApiKeys",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/v1/tenants/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tenantId) + "/apikeys",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryApiKeysResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询兑换记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApiKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApiKeysResponse
+        /// </returns>
+        public QueryApiKeysResponse QueryApiKeys(string workspaceId, string tenantId, QueryApiKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryApiKeysHeaders headers = new QueryApiKeysHeaders();
+            return QueryApiKeysWithOptions(workspaceId, tenantId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询兑换记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryApiKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryApiKeysResponse
+        /// </returns>
+        public async Task<QueryApiKeysResponse> QueryApiKeysAsync(string workspaceId, string tenantId, QueryApiKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryApiKeysHeaders headers = new QueryApiKeysHeaders();
+            return await QueryApiKeysWithOptionsAsync(workspaceId, tenantId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询兑换记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryRedemptionRecordsRequest
+        /// </param>
+        /// <param name="headers">
+        /// QueryRedemptionRecordsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryRedemptionRecordsResponse
+        /// </returns>
+        public QueryRedemptionRecordsResponse QueryRedemptionRecordsWithOptions(string workspaceId, string tenantId, QueryRedemptionRecordsRequest request, QueryRedemptionRecordsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                query["externalUserId"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedemptionOrderNo))
+            {
+                query["redemptionOrderNo"] = request.RedemptionOrderNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryRedemptionRecords",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/v1/tenants/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tenantId) + "/redemption-records",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryRedemptionRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询兑换记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryRedemptionRecordsRequest
+        /// </param>
+        /// <param name="headers">
+        /// QueryRedemptionRecordsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryRedemptionRecordsResponse
+        /// </returns>
+        public async Task<QueryRedemptionRecordsResponse> QueryRedemptionRecordsWithOptionsAsync(string workspaceId, string tenantId, QueryRedemptionRecordsRequest request, QueryRedemptionRecordsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                query["externalUserId"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedemptionOrderNo))
+            {
+                query["redemptionOrderNo"] = request.RedemptionOrderNo;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.XLoadTest))
+            {
+                realHeaders["X-Load-Test"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.XLoadTest);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryRedemptionRecords",
+                Version = "2024-06-28",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/api/v1/tenants/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(tenantId) + "/redemption-records",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryRedemptionRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询兑换记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryRedemptionRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryRedemptionRecordsResponse
+        /// </returns>
+        public QueryRedemptionRecordsResponse QueryRedemptionRecords(string workspaceId, string tenantId, QueryRedemptionRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryRedemptionRecordsHeaders headers = new QueryRedemptionRecordsHeaders();
+            return QueryRedemptionRecordsWithOptions(workspaceId, tenantId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询兑换记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryRedemptionRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryRedemptionRecordsResponse
+        /// </returns>
+        public async Task<QueryRedemptionRecordsResponse> QueryRedemptionRecordsAsync(string workspaceId, string tenantId, QueryRedemptionRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            QueryRedemptionRecordsHeaders headers = new QueryRedemptionRecordsHeaders();
+            return await QueryRedemptionRecordsWithOptionsAsync(workspaceId, tenantId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

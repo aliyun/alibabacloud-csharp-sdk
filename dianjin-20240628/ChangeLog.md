@@ -1,3 +1,10 @@
+2026-04-10 Version: 1.19.0
+- Support API ExchangeEntitlement.
+- Support API GetUsage.
+- Support API QueryApiKeys.
+- Support API QueryRedemptionRecords.
+
+
 2026-04-09 Version: 1.18.6
 - Generated csharp 2024-06-28 for DianJin.
 
