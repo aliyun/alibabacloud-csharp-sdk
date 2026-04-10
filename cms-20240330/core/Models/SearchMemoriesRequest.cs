@@ -25,13 +25,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</para>
-        /// </summary>
-        [NameInMap("metadata")]
+        [NameInMap("filters")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Metadata { get; set; }
+        public Dictionary<string, object> Filters { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -51,11 +47,27 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>L1</para>
+        /// </summary>
+        [NameInMap("retrieveLevel")]
+        [Validation(Required=false)]
+        public string RetrieveLevel { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>test_session_001</para>
         /// </summary>
         [NameInMap("runId")]
         [Validation(Required=false)]
         public string RunId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0.3</para>
+        /// </summary>
+        [NameInMap("threshold")]
+        [Validation(Required=false)]
+        public double? Threshold { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

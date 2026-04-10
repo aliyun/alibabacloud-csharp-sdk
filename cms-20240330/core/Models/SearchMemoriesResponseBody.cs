@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// </summary>
             [NameInMap("metadata")]
             [Validation(Required=false)]
-            public string Metadata { get; set; }
+            public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

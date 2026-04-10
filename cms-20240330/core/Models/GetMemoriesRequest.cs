@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("filters")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Filters { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
