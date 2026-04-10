@@ -81,6 +81,50 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? BlktagUsed { get; set; }
 
+        [NameInMap("Branch")]
+        [Validation(Required=false)]
+        public DescribeDBClusterAttributeResponseBodyBranch Branch { get; set; }
+        public class DescribeDBClusterAttributeResponseBodyBranch : TeaModel {
+            [NameInMap("BranchLsn")]
+            [Validation(Required=false)]
+            public string BranchLsn { get; set; }
+
+            [NameInMap("BranchTime")]
+            [Validation(Required=false)]
+            public string BranchTime { get; set; }
+
+            [NameInMap("ChildBranch")]
+            [Validation(Required=false)]
+            public List<DescribeDBClusterAttributeResponseBodyBranchChildBranch> ChildBranch { get; set; }
+            public class DescribeDBClusterAttributeResponseBodyBranchChildBranch : TeaModel {
+                [NameInMap("BranchLsn")]
+                [Validation(Required=false)]
+                public string BranchLsn { get; set; }
+
+                [NameInMap("BranchTime")]
+                [Validation(Required=false)]
+                public string BranchTime { get; set; }
+
+                [NameInMap("DBClusterDescription")]
+                [Validation(Required=false)]
+                public string DBClusterDescription { get; set; }
+
+                [NameInMap("HasChild")]
+                [Validation(Required=false)]
+                public bool? HasChild { get; set; }
+
+                [NameInMap("InsName")]
+                [Validation(Required=false)]
+                public string InsName { get; set; }
+
+            }
+
+            [NameInMap("ParentInsName")]
+            [Validation(Required=false)]
+            public string ParentInsName { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>false</para>

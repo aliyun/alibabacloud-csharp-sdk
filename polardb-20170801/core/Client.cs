@@ -31940,9 +31940,6 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <para>查询资源包列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeResourcePackagesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -31973,9 +31970,6 @@ namespace AlibabaCloud.SDK.Polardb20170801
         /// <para>查询资源包列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeResourcePackagesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -51863,6 +51857,174 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RevokeAccountPrivilegeZonalWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检索记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchMemoriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchMemoriesResponse
+        /// </returns>
+        public SearchMemoriesResponse SearchMemoriesWithOptions(SearchMemoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeBegin))
+            {
+                query["CreateTimeBegin"] = request.CreateTimeBegin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                query["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryAgentId))
+            {
+                query["MemoryAgentId"] = request.MemoryAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryUserId))
+            {
+                query["MemoryUserId"] = request.MemoryUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                query["TopK"] = request.TopK;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchMemories",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchMemoriesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检索记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchMemoriesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchMemoriesResponse
+        /// </returns>
+        public async Task<SearchMemoriesResponse> SearchMemoriesWithOptionsAsync(SearchMemoriesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeBegin))
+            {
+                query["CreateTimeBegin"] = request.CreateTimeBegin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTimeEnd))
+            {
+                query["CreateTimeEnd"] = request.CreateTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryAgentId))
+            {
+                query["MemoryAgentId"] = request.MemoryAgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryUserId))
+            {
+                query["MemoryUserId"] = request.MemoryUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
+            {
+                query["TopK"] = request.TopK;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchMemories",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchMemoriesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检索记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchMemoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchMemoriesResponse
+        /// </returns>
+        public SearchMemoriesResponse SearchMemories(SearchMemoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SearchMemoriesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检索记忆</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchMemoriesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchMemoriesResponse
+        /// </returns>
+        public async Task<SearchMemoriesResponse> SearchMemoriesAsync(SearchMemoriesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SearchMemoriesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
