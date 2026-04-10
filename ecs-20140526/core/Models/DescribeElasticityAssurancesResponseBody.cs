@@ -53,9 +53,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                         }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>1</para>
+                        /// </summary>
+                        [NameInMap("FailedAmount")]
+                        [Validation(Required=false)]
+                        public int? FailedAmount { get; set; }
+
                         [NameInMap("InstanceType")]
                         [Validation(Required=false)]
                         public string InstanceType { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>1</para>
+                        /// </summary>
+                        [NameInMap("LockedAmount")]
+                        [Validation(Required=false)]
+                        public int? LockedAmount { get; set; }
 
                         [NameInMap("TotalAmount")]
                         [Validation(Required=false)]
