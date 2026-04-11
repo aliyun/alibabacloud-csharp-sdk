@@ -9,6 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class UninstallAppResponseBody : TeaModel {
+        [NameInMap("ChildTaskInfo")]
+        [Validation(Required=false)]
+        public List<UninstallAppResponseBodyChildTaskInfo> ChildTaskInfo { get; set; }
+        public class UninstallAppResponseBodyChildTaskInfo : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>t-ybde48cevxxxx</para>
+            /// </summary>
+            [NameInMap("ChildTaskId")]
+            [Validation(Required=false)]
+            public string ChildTaskId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>acp-ty3bnd7b9xxxx</para>
+            /// </summary>
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 

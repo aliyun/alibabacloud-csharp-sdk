@@ -86,6 +86,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string InstanceGroupName { get; set; }
 
+        [NameInMap("InstanceVersion")]
+        [Validation(Required=false)]
+        public string InstanceVersion { get; set; }
+
         /// <summary>
         /// <para>The ID of the bound key pair.</para>
         /// 
@@ -162,6 +166,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("SaleMode")]
         [Validation(Required=false)]
         public string SaleMode { get; set; }
+
+        [NameInMap("SortKey")]
+        [Validation(Required=false)]
+        public string SortKey { get; set; }
+
+        [NameInMap("SortType")]
+        [Validation(Required=false)]
+        public string SortType { get; set; }
 
         /// <summary>
         /// <para>The state of the instance.</para>

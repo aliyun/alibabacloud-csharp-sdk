@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string InstanceGroupName { get; set; }
 
+        [NameInMap("InstanceVersion")]
+        [Validation(Required=false)]
+        public string InstanceVersion { get; set; }
+
         /// <summary>
         /// <para>The ID of the key pair.</para>
         /// 

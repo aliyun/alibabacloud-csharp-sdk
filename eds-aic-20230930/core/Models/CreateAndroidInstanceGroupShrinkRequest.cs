@@ -170,6 +170,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string InstanceGroupSpec { get; set; }
 
+        [NameInMap("InstanceVersion")]
+        [Validation(Required=false)]
+        public string InstanceVersion { get; set; }
+
         /// <summary>
         /// <remarks>
         /// <para> This parameter is not publicly available.</para>

@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> AndroidInstanceIdList { get; set; }
 
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
         /// <summary>
         /// <para>The path to the file that you want to pull from the cloud phone instance.</para>
         /// <para>This parameter is required.</para>
