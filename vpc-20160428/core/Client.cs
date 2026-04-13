@@ -4534,6 +4534,158 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>关联MACSec配置到物理专线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateMacSecKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateMacSecKeyResponse
+        /// </returns>
+        public AssociateMacSecKeyResponse AssociateMacSecKeyWithOptions(AssociateMacSecKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cak))
+            {
+                query["Cak"] = request.Cak;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherSuite))
+            {
+                query["CipherSuite"] = request.CipherSuite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ckn))
+            {
+                query["Ckn"] = request.Ckn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhysicalConnectionId))
+            {
+                query["PhysicalConnectionId"] = request.PhysicalConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateMacSecKey",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateMacSecKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关联MACSec配置到物理专线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateMacSecKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateMacSecKeyResponse
+        /// </returns>
+        public async Task<AssociateMacSecKeyResponse> AssociateMacSecKeyWithOptionsAsync(AssociateMacSecKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cak))
+            {
+                query["Cak"] = request.Cak;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherSuite))
+            {
+                query["CipherSuite"] = request.CipherSuite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ckn))
+            {
+                query["Ckn"] = request.Ckn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhysicalConnectionId))
+            {
+                query["PhysicalConnectionId"] = request.PhysicalConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateMacSecKey",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateMacSecKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关联MACSec配置到物理专线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateMacSecKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateMacSecKeyResponse
+        /// </returns>
+        public AssociateMacSecKeyResponse AssociateMacSecKey(AssociateMacSecKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AssociateMacSecKeyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关联MACSec配置到物理专线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateMacSecKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateMacSecKeyResponse
+        /// </returns>
+        public async Task<AssociateMacSecKeyResponse> AssociateMacSecKeyAsync(AssociateMacSecKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AssociateMacSecKeyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Associates a network access control list (ACL) with a vSwitch.</para>
         /// </summary>
         /// 
@@ -52806,6 +52958,142 @@ namespace AlibabaCloud.SDK.Vpc20160428
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DisableVpcClassicLinkWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消关联MACSec配置到物理专线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateMacSecKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateMacSecKeyResponse
+        /// </returns>
+        public DisassociateMacSecKeyResponse DisassociateMacSecKeyWithOptions(DisassociateMacSecKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ckn))
+            {
+                query["Ckn"] = request.Ckn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhysicalConnectionId))
+            {
+                query["PhysicalConnectionId"] = request.PhysicalConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisassociateMacSecKey",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisassociateMacSecKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消关联MACSec配置到物理专线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateMacSecKeyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateMacSecKeyResponse
+        /// </returns>
+        public async Task<DisassociateMacSecKeyResponse> DisassociateMacSecKeyWithOptionsAsync(DisassociateMacSecKeyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ckn))
+            {
+                query["Ckn"] = request.Ckn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhysicalConnectionId))
+            {
+                query["PhysicalConnectionId"] = request.PhysicalConnectionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisassociateMacSecKey",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisassociateMacSecKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消关联MACSec配置到物理专线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateMacSecKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateMacSecKeyResponse
+        /// </returns>
+        public DisassociateMacSecKeyResponse DisassociateMacSecKey(DisassociateMacSecKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisassociateMacSecKeyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消关联MACSec配置到物理专线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisassociateMacSecKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisassociateMacSecKeyResponse
+        /// </returns>
+        public async Task<DisassociateMacSecKeyResponse> DisassociateMacSecKeyAsync(DisassociateMacSecKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisassociateMacSecKeyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
