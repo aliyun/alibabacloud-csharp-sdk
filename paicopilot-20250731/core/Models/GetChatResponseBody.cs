@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PAICopilot20250731.Models
 {
-    public class Chat : TeaModel {
+    public class GetChatResponseBody : TeaModel {
         [NameInMap("Answer")]
         [Validation(Required=false)]
         public ChatDetail Answer { get; set; }
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.PAICopilot20250731.Models
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2026-01-20T09:41:23Z</para>
+        /// <para>2025-12-01T17:52:05+08:00</para>
         /// </summary>
         [NameInMap("GmtModified")]
         [Validation(Required=false)]
@@ -68,6 +68,14 @@ namespace AlibabaCloud.SDK.PAICopilot20250731.Models
         [NameInMap("Question")]
         [Validation(Required=false)]
         public ChatDetail Question { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>44553E9A-******-37ADC33FE2</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
