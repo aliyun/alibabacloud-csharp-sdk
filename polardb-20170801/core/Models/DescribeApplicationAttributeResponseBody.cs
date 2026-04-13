@@ -381,6 +381,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string AuthCallbackURL { get; set; }
 
+            [NameInMap("AuthProviders")]
+            [Validation(Required=false)]
+            public List<string> AuthProviders { get; set; }
+
             [NameInMap("SupabaseClusterId")]
             [Validation(Required=false)]
             public string SupabaseClusterId { get; set; }
