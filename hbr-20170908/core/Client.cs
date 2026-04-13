@@ -10068,9 +10068,6 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <para>Queries available regions.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -10101,9 +10098,6 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <para>Queries available regions.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -12708,6 +12702,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             {
                 query["CreatedByProduct"] = request.CreatedByProduct;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasSnapshot))
+            {
+                query["HasSnapshot"] = request.HasSnapshot;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -12769,6 +12767,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatedByProduct))
             {
                 query["CreatedByProduct"] = request.CreatedByProduct;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasSnapshot))
+            {
+                query["HasSnapshot"] = request.HasSnapshot;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -12850,9 +12852,6 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <para>Activates Cloud Backup.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// OpenHbrServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -12883,9 +12882,6 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <para>Activates Cloud Backup.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// OpenHbrServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>

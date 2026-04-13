@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         [Validation(Required=false)]
         public string CreatedByProduct { get; set; }
 
+        [NameInMap("HasSnapshot")]
+        [Validation(Required=false)]
+        public bool? HasSnapshot { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>10</para>

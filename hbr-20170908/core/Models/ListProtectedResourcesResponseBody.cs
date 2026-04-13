@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public class ListProtectedResourcesResponseBodyProtectedResources : TeaModel {
             /// <summary>
             /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("BackupPlanCount")]
+            [Validation(Required=false)]
+            public long? BackupPlanCount { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>BASIC</para>
             /// </summary>
             [NameInMap("CreatedByProduct")]
@@ -84,6 +92,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [NameInMap("ResourceOwnerId")]
             [Validation(Required=false)]
             public long? ResourceOwnerId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
+            [NameInMap("ResourceRegionId")]
+            [Validation(Required=false)]
+            public string ResourceRegionId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

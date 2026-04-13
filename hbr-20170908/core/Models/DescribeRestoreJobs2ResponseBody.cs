@@ -219,6 +219,14 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public string SourceInstanceId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>i-123***7890</para>
+                /// </summary>
+                [NameInMap("SourceResourceId")]
+                [Validation(Required=false)]
+                public string SourceResourceId { get; set; }
+
                 [NameInMap("SourceType")]
                 [Validation(Required=false)]
                 public string SourceType { get; set; }
