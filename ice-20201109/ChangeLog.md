@@ -1,3 +1,9 @@
+2026-04-13 Version: 6.17.1
+- Update API QueryVideoCognitionJob: add response parameters Body.Input.
+- Update API QueryVideoCognitionJob: add response parameters Body.Params.
+- Update API QueryVideoCognitionJob: add response parameters Body.TemplateId.
+
+
 2026-04-12 Version: 6.17.0
 - Support API GetYikeUser.
 

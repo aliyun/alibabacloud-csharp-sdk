@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.ICE20201109.Models
 {
     public class QueryVideoCognitionJobResponseBody : TeaModel {
+        [NameInMap("Input")]
+        [Validation(Required=false)]
+        public QueryVideoCognitionJobResponseBodyInput Input { get; set; }
+        public class QueryVideoCognitionJobResponseBodyInput : TeaModel {
+            [NameInMap("Media")]
+            [Validation(Required=false)]
+            public string Media { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The status of the task. Valid values:</para>
         /// <list type="bullet">
@@ -24,6 +38,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
         [NameInMap("JobStatus")]
         [Validation(Required=false)]
         public string JobStatus { get; set; }
+
+        [NameInMap("Params")]
+        [Validation(Required=false)]
+        public string Params { get; set; }
 
         /// <summary>
         /// <para>The request ID.</para>
@@ -54,6 +72,10 @@ namespace AlibabaCloud.SDK.ICE20201109.Models
             }
 
         }
+
+        [NameInMap("TemplateId")]
+        [Validation(Required=false)]
+        public string TemplateId { get; set; }
 
         /// <summary>
         /// <para>The user-defined data.</para>
