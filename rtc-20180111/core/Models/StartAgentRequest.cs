@@ -188,6 +188,10 @@ namespace AlibabaCloud.SDK.Rtc20180111.Models
                 [Validation(Required=false)]
                 public bool? UserTurnEnd { get; set; }
 
+                [NameInMap("Version")]
+                [Validation(Required=false)]
+                public int? Version { get; set; }
+
             }
 
             /// <summary>

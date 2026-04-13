@@ -3170,9 +3170,6 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>列出系统支持的事件回调</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeAllCallbackRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -3203,9 +3200,6 @@ namespace AlibabaCloud.SDK.Rtc20180111
         /// <para>列出系统支持的事件回调</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeAllCallbackRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
