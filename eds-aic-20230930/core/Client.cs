@@ -4371,6 +4371,126 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询具体Task的相关信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAgentTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgentTaskResponse
+        /// </returns>
+        public DescribeAgentTaskResponse DescribeAgentTaskWithOptions(DescribeAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
+            {
+                query["TaskIds"] = request.TaskIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAgentTask",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAgentTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询具体Task的相关信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAgentTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgentTaskResponse
+        /// </returns>
+        public async Task<DescribeAgentTaskResponse> DescribeAgentTaskWithOptionsAsync(DescribeAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
+            {
+                query["TaskIds"] = request.TaskIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAgentTask",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAgentTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询具体Task的相关信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAgentTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgentTaskResponse
+        /// </returns>
+        public DescribeAgentTaskResponse DescribeAgentTask(DescribeAgentTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAgentTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询具体Task的相关信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAgentTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAgentTaskResponse
+        /// </returns>
+        public async Task<DescribeAgentTaskResponse> DescribeAgentTaskAsync(DescribeAgentTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAgentTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of an instance group.</para>
         /// </summary>
         /// 
@@ -12923,6 +13043,158 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetAndroidInstancesInGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发云手机内的 Agent 执行 AI 自动化任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunAgentTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunAgentTaskResponse
+        /// </returns>
+        public RunAgentTaskResponse RunAgentTaskWithOptions(RunAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSteps))
+            {
+                query["MaxSteps"] = request.MaxSteps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutSeconds))
+            {
+                query["TimeoutSeconds"] = request.TimeoutSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrompt))
+            {
+                query["UserPrompt"] = request.UserPrompt;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunAgentTask",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunAgentTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发云手机内的 Agent 执行 AI 自动化任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunAgentTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunAgentTaskResponse
+        /// </returns>
+        public async Task<RunAgentTaskResponse> RunAgentTaskWithOptionsAsync(RunAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxSteps))
+            {
+                query["MaxSteps"] = request.MaxSteps;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeoutSeconds))
+            {
+                query["TimeoutSeconds"] = request.TimeoutSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserPrompt))
+            {
+                query["UserPrompt"] = request.UserPrompt;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunAgentTask",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunAgentTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发云手机内的 Agent 执行 AI 自动化任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunAgentTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunAgentTaskResponse
+        /// </returns>
+        public RunAgentTaskResponse RunAgentTask(RunAgentTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunAgentTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>触发云手机内的 Agent 执行 AI 自动化任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunAgentTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunAgentTaskResponse
+        /// </returns>
+        public async Task<RunAgentTaskResponse> RunAgentTaskAsync(RunAgentTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunAgentTaskWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

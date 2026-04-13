@@ -1,3 +1,8 @@
+2026-04-13 Version: 4.19.0
+- Support API DescribeAgentTask.
+- Support API RunAgentTask.
+
+
 2026-04-11 Version: 4.18.2
 - Update API CreateAndroidInstanceGroup: add request parameters InstanceVersion.
 - Update API DescribeAndroidInstanceGroups: add request parameters InstanceVersion.
