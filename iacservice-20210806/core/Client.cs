@@ -73,7 +73,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -176,7 +177,8 @@ namespace AlibabaCloud.SDK.IaCService20210806
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -386,6 +388,152 @@ namespace AlibabaCloud.SDK.IaCService20210806
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await AddSharedAccountsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将参数集关联资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateDetectConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateDetectConfigResponse
+        /// </returns>
+        public AssociateDetectConfigResponse AssociateDetectConfigWithOptions(AssociateDetectConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectConfigId))
+            {
+                body["detectConfigId"] = request.DetectConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                body["targetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateDetectConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig/operations/associate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateDetectConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将参数集关联资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateDetectConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateDetectConfigResponse
+        /// </returns>
+        public async Task<AssociateDetectConfigResponse> AssociateDetectConfigWithOptionsAsync(AssociateDetectConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectConfigId))
+            {
+                body["detectConfigId"] = request.DetectConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                body["targetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssociateDetectConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig/operations/associate",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssociateDetectConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将参数集关联资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateDetectConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateDetectConfigResponse
+        /// </returns>
+        public AssociateDetectConfigResponse AssociateDetectConfig(AssociateDetectConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AssociateDetectConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>将参数集关联资源</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssociateDetectConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssociateDetectConfigResponse
+        /// </returns>
+        public async Task<AssociateDetectConfigResponse> AssociateDetectConfigAsync(AssociateDetectConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AssociateDetectConfigWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -816,6 +964,184 @@ namespace AlibabaCloud.SDK.IaCService20210806
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CancelResourceExportTaskWithOptionsAsync(exportTaskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建偏差检测配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDetectConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDetectConfigResponse
+        /// </returns>
+        public CreateDetectConfigResponse CreateDetectConfigWithOptions(CreateDetectConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmConfigs))
+            {
+                body["alarmConfigs"] = request.AlarmConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
+            {
+                body["cronExpression"] = request.CronExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectConfigName))
+            {
+                body["detectConfigName"] = request.DetectConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerType))
+            {
+                body["triggerType"] = request.TriggerType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDetectConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDetectConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建偏差检测配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDetectConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDetectConfigResponse
+        /// </returns>
+        public async Task<CreateDetectConfigResponse> CreateDetectConfigWithOptionsAsync(CreateDetectConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmConfigs))
+            {
+                body["alarmConfigs"] = request.AlarmConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
+            {
+                body["cronExpression"] = request.CronExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectConfigName))
+            {
+                body["detectConfigName"] = request.DetectConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerType))
+            {
+                body["triggerType"] = request.TriggerType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDetectConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDetectConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建偏差检测配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDetectConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDetectConfigResponse
+        /// </returns>
+        public CreateDetectConfigResponse CreateDetectConfig(CreateDetectConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateDetectConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建偏差检测配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDetectConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDetectConfigResponse
+        /// </returns>
+        public async Task<CreateDetectConfigResponse> CreateDetectConfigAsync(CreateDetectConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateDetectConfigWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2648,9 +2974,130 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除偏差检测配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDetectConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDetectConfigResponse
+        /// </returns>
+        public DeleteDetectConfigResponse DeleteDetectConfigWithOptions(string detectConfigId, DeleteDetectConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDetectConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(detectConfigId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDetectConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除偏差检测配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDetectConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDetectConfigResponse
+        /// </returns>
+        public async Task<DeleteDetectConfigResponse> DeleteDetectConfigWithOptionsAsync(string detectConfigId, DeleteDetectConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDetectConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(detectConfigId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDetectConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除偏差检测配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDetectConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDetectConfigResponse
+        /// </returns>
+        public DeleteDetectConfigResponse DeleteDetectConfig(string detectConfigId, DeleteDetectConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteDetectConfigWithOptions(detectConfigId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除偏差检测配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDetectConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDetectConfigResponse
+        /// </returns>
+        public async Task<DeleteDetectConfigResponse> DeleteDetectConfigAsync(string detectConfigId, DeleteDetectConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteDetectConfigWithOptionsAsync(detectConfigId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除分组</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteGroupRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2661,8 +3108,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteGroupResponse
         /// </returns>
-        public DeleteGroupResponse DeleteGroupWithOptions(string groupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteGroupResponse DeleteGroupWithOptions(string groupId, DeleteGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2687,6 +3135,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除分组</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteGroupRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2697,8 +3148,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteGroupResponse
         /// </returns>
-        public async Task<DeleteGroupResponse> DeleteGroupWithOptionsAsync(string groupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteGroupResponse> DeleteGroupWithOptionsAsync(string groupId, DeleteGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2723,14 +3175,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除分组</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteGroupRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteGroupResponse
         /// </returns>
-        public DeleteGroupResponse DeleteGroup(string groupId)
+        public DeleteGroupResponse DeleteGroup(string groupId, DeleteGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteGroupWithOptions(groupId, headers, runtime);
+            return DeleteGroupWithOptions(groupId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2738,14 +3194,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除分组</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteGroupRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteGroupResponse
         /// </returns>
-        public async Task<DeleteGroupResponse> DeleteGroupAsync(string groupId)
+        public async Task<DeleteGroupResponse> DeleteGroupAsync(string groupId, DeleteGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteGroupWithOptionsAsync(groupId, headers, runtime);
+            return await DeleteGroupWithOptionsAsync(groupId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2753,6 +3213,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除模板</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteModuleRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2763,8 +3226,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteModuleResponse
         /// </returns>
-        public DeleteModuleResponse DeleteModuleWithOptions(string moduleId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteModuleResponse DeleteModuleWithOptions(string moduleId, DeleteModuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2789,6 +3253,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除模板</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteModuleRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2799,8 +3266,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteModuleResponse
         /// </returns>
-        public async Task<DeleteModuleResponse> DeleteModuleWithOptionsAsync(string moduleId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteModuleResponse> DeleteModuleWithOptionsAsync(string moduleId, DeleteModuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2825,14 +3293,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除模板</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteModuleRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteModuleResponse
         /// </returns>
-        public DeleteModuleResponse DeleteModule(string moduleId)
+        public DeleteModuleResponse DeleteModule(string moduleId, DeleteModuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteModuleWithOptions(moduleId, headers, runtime);
+            return DeleteModuleWithOptions(moduleId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2840,14 +3312,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除模板</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteModuleRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteModuleResponse
         /// </returns>
-        public async Task<DeleteModuleResponse> DeleteModuleAsync(string moduleId)
+        public async Task<DeleteModuleResponse> DeleteModuleAsync(string moduleId, DeleteModuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteModuleWithOptionsAsync(moduleId, headers, runtime);
+            return await DeleteModuleWithOptionsAsync(moduleId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2855,6 +3331,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除参数集</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteParameterSetRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2865,8 +3344,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteParameterSetResponse
         /// </returns>
-        public DeleteParameterSetResponse DeleteParameterSetWithOptions(string parameterSetId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteParameterSetResponse DeleteParameterSetWithOptions(string parameterSetId, DeleteParameterSetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2891,6 +3371,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除参数集</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteParameterSetRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2901,8 +3384,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteParameterSetResponse
         /// </returns>
-        public async Task<DeleteParameterSetResponse> DeleteParameterSetWithOptionsAsync(string parameterSetId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteParameterSetResponse> DeleteParameterSetWithOptionsAsync(string parameterSetId, DeleteParameterSetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2927,14 +3411,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除参数集</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteParameterSetRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteParameterSetResponse
         /// </returns>
-        public DeleteParameterSetResponse DeleteParameterSet(string parameterSetId)
+        public DeleteParameterSetResponse DeleteParameterSet(string parameterSetId, DeleteParameterSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteParameterSetWithOptions(parameterSetId, headers, runtime);
+            return DeleteParameterSetWithOptions(parameterSetId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2942,14 +3430,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除参数集</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteParameterSetRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteParameterSetResponse
         /// </returns>
-        public async Task<DeleteParameterSetResponse> DeleteParameterSetAsync(string parameterSetId)
+        public async Task<DeleteParameterSetResponse> DeleteParameterSetAsync(string parameterSetId, DeleteParameterSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteParameterSetWithOptionsAsync(parameterSetId, headers, runtime);
+            return await DeleteParameterSetWithOptionsAsync(parameterSetId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2957,6 +3449,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除项目</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2967,8 +3462,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteProjectResponse
         /// </returns>
-        public DeleteProjectResponse DeleteProjectWithOptions(string projectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteProjectResponse DeleteProjectWithOptions(string projectId, DeleteProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2993,6 +3489,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除项目</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3003,8 +3502,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteProjectResponse
         /// </returns>
-        public async Task<DeleteProjectResponse> DeleteProjectWithOptionsAsync(string projectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteProjectResponse> DeleteProjectWithOptionsAsync(string projectId, DeleteProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3029,14 +3529,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除项目</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteProjectResponse
         /// </returns>
-        public DeleteProjectResponse DeleteProject(string projectId)
+        public DeleteProjectResponse DeleteProject(string projectId, DeleteProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteProjectWithOptions(projectId, headers, runtime);
+            return DeleteProjectWithOptions(projectId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3044,14 +3548,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除项目</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteProjectRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteProjectResponse
         /// </returns>
-        public async Task<DeleteProjectResponse> DeleteProjectAsync(string projectId)
+        public async Task<DeleteProjectResponse> DeleteProjectAsync(string projectId, DeleteProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteProjectWithOptionsAsync(projectId, headers, runtime);
+            return await DeleteProjectWithOptionsAsync(projectId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3059,6 +3567,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除RegistryModule</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteRegistryModuleRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3069,8 +3580,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteRegistryModuleResponse
         /// </returns>
-        public DeleteRegistryModuleResponse DeleteRegistryModuleWithOptions(string namespaceName, string moduleName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteRegistryModuleResponse DeleteRegistryModuleWithOptions(string namespaceName, string moduleName, DeleteRegistryModuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3095,6 +3607,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除RegistryModule</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteRegistryModuleRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3105,8 +3620,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteRegistryModuleResponse
         /// </returns>
-        public async Task<DeleteRegistryModuleResponse> DeleteRegistryModuleWithOptionsAsync(string namespaceName, string moduleName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteRegistryModuleResponse> DeleteRegistryModuleWithOptionsAsync(string namespaceName, string moduleName, DeleteRegistryModuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3131,14 +3647,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除RegistryModule</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteRegistryModuleRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteRegistryModuleResponse
         /// </returns>
-        public DeleteRegistryModuleResponse DeleteRegistryModule(string namespaceName, string moduleName)
+        public DeleteRegistryModuleResponse DeleteRegistryModule(string namespaceName, string moduleName, DeleteRegistryModuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteRegistryModuleWithOptions(namespaceName, moduleName, headers, runtime);
+            return DeleteRegistryModuleWithOptions(namespaceName, moduleName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3146,14 +3666,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除RegistryModule</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteRegistryModuleRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteRegistryModuleResponse
         /// </returns>
-        public async Task<DeleteRegistryModuleResponse> DeleteRegistryModuleAsync(string namespaceName, string moduleName)
+        public async Task<DeleteRegistryModuleResponse> DeleteRegistryModuleAsync(string namespaceName, string moduleName, DeleteRegistryModuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteRegistryModuleWithOptionsAsync(namespaceName, moduleName, headers, runtime);
+            return await DeleteRegistryModuleWithOptionsAsync(namespaceName, moduleName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3161,6 +3685,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除RegistryModule版本</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteRegistryModuleVersionRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3171,8 +3698,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteRegistryModuleVersionResponse
         /// </returns>
-        public DeleteRegistryModuleVersionResponse DeleteRegistryModuleVersionWithOptions(string namespaceName, string moduleName, string version, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteRegistryModuleVersionResponse DeleteRegistryModuleVersionWithOptions(string namespaceName, string moduleName, string version, DeleteRegistryModuleVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3197,6 +3725,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除RegistryModule版本</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteRegistryModuleVersionRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3207,8 +3738,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteRegistryModuleVersionResponse
         /// </returns>
-        public async Task<DeleteRegistryModuleVersionResponse> DeleteRegistryModuleVersionWithOptionsAsync(string namespaceName, string moduleName, string version, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteRegistryModuleVersionResponse> DeleteRegistryModuleVersionWithOptionsAsync(string namespaceName, string moduleName, string version, DeleteRegistryModuleVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3233,14 +3765,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除RegistryModule版本</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteRegistryModuleVersionRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteRegistryModuleVersionResponse
         /// </returns>
-        public DeleteRegistryModuleVersionResponse DeleteRegistryModuleVersion(string namespaceName, string moduleName, string version)
+        public DeleteRegistryModuleVersionResponse DeleteRegistryModuleVersion(string namespaceName, string moduleName, string version, DeleteRegistryModuleVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteRegistryModuleVersionWithOptions(namespaceName, moduleName, version, headers, runtime);
+            return DeleteRegistryModuleVersionWithOptions(namespaceName, moduleName, version, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3248,14 +3784,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除RegistryModule版本</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteRegistryModuleVersionRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteRegistryModuleVersionResponse
         /// </returns>
-        public async Task<DeleteRegistryModuleVersionResponse> DeleteRegistryModuleVersionAsync(string namespaceName, string moduleName, string version)
+        public async Task<DeleteRegistryModuleVersionResponse> DeleteRegistryModuleVersionAsync(string namespaceName, string moduleName, string version, DeleteRegistryModuleVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteRegistryModuleVersionWithOptionsAsync(namespaceName, moduleName, version, headers, runtime);
+            return await DeleteRegistryModuleVersionWithOptionsAsync(namespaceName, moduleName, version, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3263,6 +3803,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除工作空间</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteRegistryNamespaceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3273,8 +3816,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteRegistryNamespaceResponse
         /// </returns>
-        public DeleteRegistryNamespaceResponse DeleteRegistryNamespaceWithOptions(string namespaceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteRegistryNamespaceResponse DeleteRegistryNamespaceWithOptions(string namespaceName, DeleteRegistryNamespaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3299,6 +3843,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除工作空间</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteRegistryNamespaceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3309,8 +3856,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteRegistryNamespaceResponse
         /// </returns>
-        public async Task<DeleteRegistryNamespaceResponse> DeleteRegistryNamespaceWithOptionsAsync(string namespaceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteRegistryNamespaceResponse> DeleteRegistryNamespaceWithOptionsAsync(string namespaceName, DeleteRegistryNamespaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3335,14 +3883,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除工作空间</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteRegistryNamespaceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteRegistryNamespaceResponse
         /// </returns>
-        public DeleteRegistryNamespaceResponse DeleteRegistryNamespace(string namespaceName)
+        public DeleteRegistryNamespaceResponse DeleteRegistryNamespace(string namespaceName, DeleteRegistryNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteRegistryNamespaceWithOptions(namespaceName, headers, runtime);
+            return DeleteRegistryNamespaceWithOptions(namespaceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3350,14 +3902,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除工作空间</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteRegistryNamespaceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteRegistryNamespaceResponse
         /// </returns>
-        public async Task<DeleteRegistryNamespaceResponse> DeleteRegistryNamespaceAsync(string namespaceName)
+        public async Task<DeleteRegistryNamespaceResponse> DeleteRegistryNamespaceAsync(string namespaceName, DeleteRegistryNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteRegistryNamespaceWithOptionsAsync(namespaceName, headers, runtime);
+            return await DeleteRegistryNamespaceWithOptionsAsync(namespaceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3365,6 +3921,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除资源导出任务</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceExportTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3375,8 +3934,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteResourceExportTaskResponse
         /// </returns>
-        public DeleteResourceExportTaskResponse DeleteResourceExportTaskWithOptions(string exportTaskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteResourceExportTaskResponse DeleteResourceExportTaskWithOptions(string exportTaskId, DeleteResourceExportTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3401,6 +3961,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除资源导出任务</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceExportTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3411,8 +3974,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteResourceExportTaskResponse
         /// </returns>
-        public async Task<DeleteResourceExportTaskResponse> DeleteResourceExportTaskWithOptionsAsync(string exportTaskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteResourceExportTaskResponse> DeleteResourceExportTaskWithOptionsAsync(string exportTaskId, DeleteResourceExportTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3437,14 +4001,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除资源导出任务</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceExportTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteResourceExportTaskResponse
         /// </returns>
-        public DeleteResourceExportTaskResponse DeleteResourceExportTask(string exportTaskId)
+        public DeleteResourceExportTaskResponse DeleteResourceExportTask(string exportTaskId, DeleteResourceExportTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteResourceExportTaskWithOptions(exportTaskId, headers, runtime);
+            return DeleteResourceExportTaskWithOptions(exportTaskId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3452,14 +4020,148 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除资源导出任务</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceExportTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteResourceExportTaskResponse
         /// </returns>
-        public async Task<DeleteResourceExportTaskResponse> DeleteResourceExportTaskAsync(string exportTaskId)
+        public async Task<DeleteResourceExportTaskResponse> DeleteResourceExportTaskAsync(string exportTaskId, DeleteResourceExportTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteResourceExportTaskWithOptionsAsync(exportTaskId, headers, runtime);
+            return await DeleteResourceExportTaskWithOptionsAsync(exportTaskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除资源栈</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteStackRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteStackResponse
+        /// </returns>
+        public DeleteStackResponse DeleteStackWithOptions(string stackId, DeleteStackRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanResources))
+            {
+                query["cleanResources"] = request.CleanResources;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteStack",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/stacks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(stackId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteStackResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除资源栈</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteStackRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteStackResponse
+        /// </returns>
+        public async Task<DeleteStackResponse> DeleteStackWithOptionsAsync(string stackId, DeleteStackRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanResources))
+            {
+                query["cleanResources"] = request.CleanResources;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteStack",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/stacks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(stackId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteStackResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除资源栈</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteStackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteStackResponse
+        /// </returns>
+        public DeleteStackResponse DeleteStack(string stackId, DeleteStackRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteStackWithOptions(stackId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除资源栈</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteStackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteStackResponse
+        /// </returns>
+        public async Task<DeleteStackResponse> DeleteStackAsync(string stackId, DeleteStackRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteStackWithOptionsAsync(stackId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3467,6 +4169,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除任务</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3477,8 +4182,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteTaskResponse
         /// </returns>
-        public DeleteTaskResponse DeleteTaskWithOptions(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteTaskResponse DeleteTaskWithOptions(string taskId, DeleteTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3503,6 +4209,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除任务</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3513,8 +4222,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// DeleteTaskResponse
         /// </returns>
-        public async Task<DeleteTaskResponse> DeleteTaskWithOptionsAsync(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteTaskResponse> DeleteTaskWithOptionsAsync(string taskId, DeleteTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3539,14 +4249,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除任务</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteTaskResponse
         /// </returns>
-        public DeleteTaskResponse DeleteTask(string taskId)
+        public DeleteTaskResponse DeleteTask(string taskId, DeleteTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteTaskWithOptions(taskId, headers, runtime);
+            return DeleteTaskWithOptions(taskId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3554,14 +4268,310 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>删除任务</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteTaskResponse
         /// </returns>
-        public async Task<DeleteTaskResponse> DeleteTaskAsync(string taskId)
+        public async Task<DeleteTaskResponse> DeleteTaskAsync(string taskId, DeleteTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteTaskWithOptionsAsync(taskId, headers, runtime);
+            return await DeleteTaskWithOptionsAsync(taskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起状态文件一致性检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetectTerraformStateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectTerraformStateResponse
+        /// </returns>
+        public DetectTerraformStateResponse DetectTerraformStateWithOptions(DetectTerraformStateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifier))
+            {
+                body["identifier"] = request.Identifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetectTerraformState",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detect",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetectTerraformStateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起状态文件一致性检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetectTerraformStateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectTerraformStateResponse
+        /// </returns>
+        public async Task<DetectTerraformStateResponse> DetectTerraformStateWithOptionsAsync(DetectTerraformStateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Identifier))
+            {
+                body["identifier"] = request.Identifier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetectTerraformState",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detect",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetectTerraformStateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起状态文件一致性检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetectTerraformStateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectTerraformStateResponse
+        /// </returns>
+        public DetectTerraformStateResponse DetectTerraformState(DetectTerraformStateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DetectTerraformStateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发起状态文件一致性检测</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetectTerraformStateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetectTerraformStateResponse
+        /// </returns>
+        public async Task<DetectTerraformStateResponse> DetectTerraformStateAsync(DetectTerraformStateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DetectTerraformStateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解除参数集关联资源关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DissociateDetectConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateDetectConfigResponse
+        /// </returns>
+        public DissociateDetectConfigResponse DissociateDetectConfigWithOptions(DissociateDetectConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectConfigId))
+            {
+                body["detectConfigId"] = request.DetectConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                body["targetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DissociateDetectConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig/operations/dissociate",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DissociateDetectConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解除参数集关联资源关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DissociateDetectConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateDetectConfigResponse
+        /// </returns>
+        public async Task<DissociateDetectConfigResponse> DissociateDetectConfigWithOptionsAsync(DissociateDetectConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectConfigId))
+            {
+                body["detectConfigId"] = request.DetectConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                body["targetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                body["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DissociateDetectConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig/operations/dissociate",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DissociateDetectConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解除参数集关联资源关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DissociateDetectConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateDetectConfigResponse
+        /// </returns>
+        public DissociateDetectConfigResponse DissociateDetectConfig(DissociateDetectConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DissociateDetectConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解除参数集关联资源关系</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DissociateDetectConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DissociateDetectConfigResponse
+        /// </returns>
+        public async Task<DissociateDetectConfigResponse> DissociateDetectConfigAsync(DissociateDetectConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DissociateDetectConfigWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4734,9 +5744,130 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>偏差检测配置详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDetectConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDetectConfigResponse
+        /// </returns>
+        public GetDetectConfigResponse GetDetectConfigWithOptions(string detectConfigId, GetDetectConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDetectConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(detectConfigId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDetectConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>偏差检测配置详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDetectConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDetectConfigResponse
+        /// </returns>
+        public async Task<GetDetectConfigResponse> GetDetectConfigWithOptionsAsync(string detectConfigId, GetDetectConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDetectConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(detectConfigId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDetectConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>偏差检测配置详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDetectConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDetectConfigResponse
+        /// </returns>
+        public GetDetectConfigResponse GetDetectConfig(string detectConfigId, GetDetectConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDetectConfigWithOptions(detectConfigId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>偏差检测配置详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDetectConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDetectConfigResponse
+        /// </returns>
+        public async Task<GetDetectConfigResponse> GetDetectConfigAsync(string detectConfigId, GetDetectConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDetectConfigWithOptionsAsync(detectConfigId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取Terraform运行结果</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetExecuteStateRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4747,8 +5878,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetExecuteStateResponse
         /// </returns>
-        public GetExecuteStateResponse GetExecuteStateWithOptions(string stateId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetExecuteStateResponse GetExecuteStateWithOptions(string stateId, GetExecuteStateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4773,6 +5905,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取Terraform运行结果</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetExecuteStateRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4783,8 +5918,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetExecuteStateResponse
         /// </returns>
-        public async Task<GetExecuteStateResponse> GetExecuteStateWithOptionsAsync(string stateId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetExecuteStateResponse> GetExecuteStateWithOptionsAsync(string stateId, GetExecuteStateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4809,14 +5945,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取Terraform运行结果</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetExecuteStateRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetExecuteStateResponse
         /// </returns>
-        public GetExecuteStateResponse GetExecuteState(string stateId)
+        public GetExecuteStateResponse GetExecuteState(string stateId, GetExecuteStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetExecuteStateWithOptions(stateId, headers, runtime);
+            return GetExecuteStateWithOptions(stateId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4824,14 +5964,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取Terraform运行结果</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetExecuteStateRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetExecuteStateResponse
         /// </returns>
-        public async Task<GetExecuteStateResponse> GetExecuteStateAsync(string stateId)
+        public async Task<GetExecuteStateResponse> GetExecuteStateAsync(string stateId, GetExecuteStateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetExecuteStateWithOptionsAsync(stateId, headers, runtime);
+            return await GetExecuteStateWithOptionsAsync(stateId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4839,6 +5983,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>查询分组</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetGroupRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4849,8 +5996,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetGroupResponse
         /// </returns>
-        public GetGroupResponse GetGroupWithOptions(string groupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetGroupResponse GetGroupWithOptions(string groupId, GetGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4875,6 +6023,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>查询分组</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetGroupRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4885,8 +6036,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetGroupResponse
         /// </returns>
-        public async Task<GetGroupResponse> GetGroupWithOptionsAsync(string groupId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetGroupResponse> GetGroupWithOptionsAsync(string groupId, GetGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4911,14 +6063,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>查询分组</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetGroupRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetGroupResponse
         /// </returns>
-        public GetGroupResponse GetGroup(string groupId)
+        public GetGroupResponse GetGroup(string groupId, GetGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetGroupWithOptions(groupId, headers, runtime);
+            return GetGroupWithOptions(groupId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4926,14 +6082,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>查询分组</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetGroupRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetGroupResponse
         /// </returns>
-        public async Task<GetGroupResponse> GetGroupAsync(string groupId)
+        public async Task<GetGroupResponse> GetGroupAsync(string groupId, GetGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetGroupWithOptionsAsync(groupId, headers, runtime);
+            return await GetGroupWithOptionsAsync(groupId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5071,6 +6231,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>Get Module Details</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetModuleRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5081,8 +6244,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetModuleResponse
         /// </returns>
-        public GetModuleResponse GetModuleWithOptions(string moduleId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetModuleResponse GetModuleWithOptions(string moduleId, GetModuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5107,6 +6271,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>Get Module Details</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetModuleRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5117,8 +6284,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetModuleResponse
         /// </returns>
-        public async Task<GetModuleResponse> GetModuleWithOptionsAsync(string moduleId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetModuleResponse> GetModuleWithOptionsAsync(string moduleId, GetModuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5143,14 +6311,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>Get Module Details</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetModuleRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetModuleResponse
         /// </returns>
-        public GetModuleResponse GetModule(string moduleId)
+        public GetModuleResponse GetModule(string moduleId, GetModuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetModuleWithOptions(moduleId, headers, runtime);
+            return GetModuleWithOptions(moduleId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5158,14 +6330,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>Get Module Details</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetModuleRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetModuleResponse
         /// </returns>
-        public async Task<GetModuleResponse> GetModuleAsync(string moduleId)
+        public async Task<GetModuleResponse> GetModuleAsync(string moduleId, GetModuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetModuleWithOptionsAsync(moduleId, headers, runtime);
+            return await GetModuleWithOptionsAsync(moduleId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5173,6 +6349,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>模板版本详情</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetModuleVersionRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5183,8 +6362,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetModuleVersionResponse
         /// </returns>
-        public GetModuleVersionResponse GetModuleVersionWithOptions(string moduleId, string moduleVersion, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetModuleVersionResponse GetModuleVersionWithOptions(string moduleId, string moduleVersion, GetModuleVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5209,6 +6389,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>模板版本详情</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetModuleVersionRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5219,8 +6402,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetModuleVersionResponse
         /// </returns>
-        public async Task<GetModuleVersionResponse> GetModuleVersionWithOptionsAsync(string moduleId, string moduleVersion, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetModuleVersionResponse> GetModuleVersionWithOptionsAsync(string moduleId, string moduleVersion, GetModuleVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5245,14 +6429,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>模板版本详情</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetModuleVersionRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetModuleVersionResponse
         /// </returns>
-        public GetModuleVersionResponse GetModuleVersion(string moduleId, string moduleVersion)
+        public GetModuleVersionResponse GetModuleVersion(string moduleId, string moduleVersion, GetModuleVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetModuleVersionWithOptions(moduleId, moduleVersion, headers, runtime);
+            return GetModuleVersionWithOptions(moduleId, moduleVersion, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5260,14 +6448,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>模板版本详情</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetModuleVersionRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetModuleVersionResponse
         /// </returns>
-        public async Task<GetModuleVersionResponse> GetModuleVersionAsync(string moduleId, string moduleVersion)
+        public async Task<GetModuleVersionResponse> GetModuleVersionAsync(string moduleId, string moduleVersion, GetModuleVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetModuleVersionWithOptionsAsync(moduleId, moduleVersion, headers, runtime);
+            return await GetModuleVersionWithOptionsAsync(moduleId, moduleVersion, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5275,6 +6467,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>参数集详情</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetParameterSetRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5285,8 +6480,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetParameterSetResponse
         /// </returns>
-        public GetParameterSetResponse GetParameterSetWithOptions(string parameterSetId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetParameterSetResponse GetParameterSetWithOptions(string parameterSetId, GetParameterSetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5311,6 +6507,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>参数集详情</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetParameterSetRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5321,8 +6520,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetParameterSetResponse
         /// </returns>
-        public async Task<GetParameterSetResponse> GetParameterSetWithOptionsAsync(string parameterSetId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetParameterSetResponse> GetParameterSetWithOptionsAsync(string parameterSetId, GetParameterSetRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5347,14 +6547,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>参数集详情</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetParameterSetRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetParameterSetResponse
         /// </returns>
-        public GetParameterSetResponse GetParameterSet(string parameterSetId)
+        public GetParameterSetResponse GetParameterSet(string parameterSetId, GetParameterSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetParameterSetWithOptions(parameterSetId, headers, runtime);
+            return GetParameterSetWithOptions(parameterSetId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5362,14 +6566,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>参数集详情</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetParameterSetRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetParameterSetResponse
         /// </returns>
-        public async Task<GetParameterSetResponse> GetParameterSetAsync(string parameterSetId)
+        public async Task<GetParameterSetResponse> GetParameterSetAsync(string parameterSetId, GetParameterSetRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetParameterSetWithOptionsAsync(parameterSetId, headers, runtime);
+            return await GetParameterSetWithOptionsAsync(parameterSetId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5377,6 +6585,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>查询项目</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5387,8 +6598,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetProjectResponse
         /// </returns>
-        public GetProjectResponse GetProjectWithOptions(string projectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetProjectResponse GetProjectWithOptions(string projectId, GetProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5413,6 +6625,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>查询项目</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5423,8 +6638,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetProjectResponse
         /// </returns>
-        public async Task<GetProjectResponse> GetProjectWithOptionsAsync(string projectId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetProjectResponse> GetProjectWithOptionsAsync(string projectId, GetProjectRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5449,14 +6665,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>查询项目</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetProjectResponse
         /// </returns>
-        public GetProjectResponse GetProject(string projectId)
+        public GetProjectResponse GetProject(string projectId, GetProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetProjectWithOptions(projectId, headers, runtime);
+            return GetProjectWithOptions(projectId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5464,14 +6684,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>查询项目</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetProjectRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetProjectResponse
         /// </returns>
-        public async Task<GetProjectResponse> GetProjectAsync(string projectId)
+        public async Task<GetProjectResponse> GetProjectAsync(string projectId, GetProjectRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetProjectWithOptionsAsync(projectId, headers, runtime);
+            return await GetProjectWithOptionsAsync(projectId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5479,6 +6703,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取RegistryModule信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetRegistryModuleRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5489,8 +6716,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetRegistryModuleResponse
         /// </returns>
-        public GetRegistryModuleResponse GetRegistryModuleWithOptions(string namespaceName, string moduleName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetRegistryModuleResponse GetRegistryModuleWithOptions(string namespaceName, string moduleName, GetRegistryModuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5515,6 +6743,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取RegistryModule信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetRegistryModuleRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5525,8 +6756,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetRegistryModuleResponse
         /// </returns>
-        public async Task<GetRegistryModuleResponse> GetRegistryModuleWithOptionsAsync(string namespaceName, string moduleName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetRegistryModuleResponse> GetRegistryModuleWithOptionsAsync(string namespaceName, string moduleName, GetRegistryModuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5551,14 +6783,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取RegistryModule信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetRegistryModuleRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetRegistryModuleResponse
         /// </returns>
-        public GetRegistryModuleResponse GetRegistryModule(string namespaceName, string moduleName)
+        public GetRegistryModuleResponse GetRegistryModule(string namespaceName, string moduleName, GetRegistryModuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetRegistryModuleWithOptions(namespaceName, moduleName, headers, runtime);
+            return GetRegistryModuleWithOptions(namespaceName, moduleName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5566,14 +6802,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取RegistryModule信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetRegistryModuleRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetRegistryModuleResponse
         /// </returns>
-        public async Task<GetRegistryModuleResponse> GetRegistryModuleAsync(string namespaceName, string moduleName)
+        public async Task<GetRegistryModuleResponse> GetRegistryModuleAsync(string namespaceName, string moduleName, GetRegistryModuleRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetRegistryModuleWithOptionsAsync(namespaceName, moduleName, headers, runtime);
+            return await GetRegistryModuleWithOptionsAsync(namespaceName, moduleName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5581,6 +6821,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取RegistryModule版本信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetRegistryModuleVersionRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5591,8 +6834,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetRegistryModuleVersionResponse
         /// </returns>
-        public GetRegistryModuleVersionResponse GetRegistryModuleVersionWithOptions(string namespaceName, string moduleName, string version, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetRegistryModuleVersionResponse GetRegistryModuleVersionWithOptions(string namespaceName, string moduleName, string version, GetRegistryModuleVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5617,6 +6861,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取RegistryModule版本信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetRegistryModuleVersionRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5627,8 +6874,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetRegistryModuleVersionResponse
         /// </returns>
-        public async Task<GetRegistryModuleVersionResponse> GetRegistryModuleVersionWithOptionsAsync(string namespaceName, string moduleName, string version, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetRegistryModuleVersionResponse> GetRegistryModuleVersionWithOptionsAsync(string namespaceName, string moduleName, string version, GetRegistryModuleVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5653,14 +6901,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取RegistryModule版本信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetRegistryModuleVersionRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetRegistryModuleVersionResponse
         /// </returns>
-        public GetRegistryModuleVersionResponse GetRegistryModuleVersion(string namespaceName, string moduleName, string version)
+        public GetRegistryModuleVersionResponse GetRegistryModuleVersion(string namespaceName, string moduleName, string version, GetRegistryModuleVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetRegistryModuleVersionWithOptions(namespaceName, moduleName, version, headers, runtime);
+            return GetRegistryModuleVersionWithOptions(namespaceName, moduleName, version, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5668,14 +6920,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取RegistryModule版本信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetRegistryModuleVersionRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetRegistryModuleVersionResponse
         /// </returns>
-        public async Task<GetRegistryModuleVersionResponse> GetRegistryModuleVersionAsync(string namespaceName, string moduleName, string version)
+        public async Task<GetRegistryModuleVersionResponse> GetRegistryModuleVersionAsync(string namespaceName, string moduleName, string version, GetRegistryModuleVersionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetRegistryModuleVersionWithOptionsAsync(namespaceName, moduleName, version, headers, runtime);
+            return await GetRegistryModuleVersionWithOptionsAsync(namespaceName, moduleName, version, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5683,6 +6939,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取工作空间信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetRegistryNamespaceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5693,8 +6952,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetRegistryNamespaceResponse
         /// </returns>
-        public GetRegistryNamespaceResponse GetRegistryNamespaceWithOptions(string namespaceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetRegistryNamespaceResponse GetRegistryNamespaceWithOptions(string namespaceName, GetRegistryNamespaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5719,6 +6979,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取工作空间信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetRegistryNamespaceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5729,8 +6992,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetRegistryNamespaceResponse
         /// </returns>
-        public async Task<GetRegistryNamespaceResponse> GetRegistryNamespaceWithOptionsAsync(string namespaceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetRegistryNamespaceResponse> GetRegistryNamespaceWithOptionsAsync(string namespaceName, GetRegistryNamespaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5755,14 +7019,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取工作空间信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetRegistryNamespaceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetRegistryNamespaceResponse
         /// </returns>
-        public GetRegistryNamespaceResponse GetRegistryNamespace(string namespaceName)
+        public GetRegistryNamespaceResponse GetRegistryNamespace(string namespaceName, GetRegistryNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetRegistryNamespaceWithOptions(namespaceName, headers, runtime);
+            return GetRegistryNamespaceWithOptions(namespaceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5770,14 +7038,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取工作空间信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetRegistryNamespaceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetRegistryNamespaceResponse
         /// </returns>
-        public async Task<GetRegistryNamespaceResponse> GetRegistryNamespaceAsync(string namespaceName)
+        public async Task<GetRegistryNamespaceResponse> GetRegistryNamespaceAsync(string namespaceName, GetRegistryNamespaceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetRegistryNamespaceWithOptionsAsync(namespaceName, headers, runtime);
+            return await GetRegistryNamespaceWithOptionsAsync(namespaceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6058,9 +7330,182 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>部署详情接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetStackDeploymentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStackDeploymentsResponse
+        /// </returns>
+        public GetStackDeploymentsResponse GetStackDeploymentsWithOptions(string stackId, GetStackDeploymentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigVersion))
+            {
+                query["configVersion"] = request.ConfigVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentName))
+            {
+                query["deploymentName"] = request.DeploymentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentNo))
+            {
+                query["deploymentNo"] = request.DeploymentNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStackDeployments",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/stacks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(stackId) + "/deployments",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStackDeploymentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署详情接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetStackDeploymentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStackDeploymentsResponse
+        /// </returns>
+        public async Task<GetStackDeploymentsResponse> GetStackDeploymentsWithOptionsAsync(string stackId, GetStackDeploymentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigVersion))
+            {
+                query["configVersion"] = request.ConfigVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentName))
+            {
+                query["deploymentName"] = request.DeploymentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentNo))
+            {
+                query["deploymentNo"] = request.DeploymentNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetStackDeployments",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/stacks/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(stackId) + "/deployments",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetStackDeploymentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署详情接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetStackDeploymentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStackDeploymentsResponse
+        /// </returns>
+        public GetStackDeploymentsResponse GetStackDeployments(string stackId, GetStackDeploymentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetStackDeploymentsWithOptions(stackId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>部署详情接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetStackDeploymentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetStackDeploymentsResponse
+        /// </returns>
+        public async Task<GetStackDeploymentsResponse> GetStackDeploymentsAsync(string stackId, GetStackDeploymentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetStackDeploymentsWithOptionsAsync(stackId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取资源栈部署结果</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetStackExecutionResultRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6071,8 +7516,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetStackExecutionResultResponse
         /// </returns>
-        public GetStackExecutionResultResponse GetStackExecutionResultWithOptions(string triggerId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetStackExecutionResultResponse GetStackExecutionResultWithOptions(string triggerId, GetStackExecutionResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6097,6 +7543,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取资源栈部署结果</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetStackExecutionResultRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6107,8 +7556,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetStackExecutionResultResponse
         /// </returns>
-        public async Task<GetStackExecutionResultResponse> GetStackExecutionResultWithOptionsAsync(string triggerId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetStackExecutionResultResponse> GetStackExecutionResultWithOptionsAsync(string triggerId, GetStackExecutionResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6133,14 +7583,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取资源栈部署结果</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetStackExecutionResultRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetStackExecutionResultResponse
         /// </returns>
-        public GetStackExecutionResultResponse GetStackExecutionResult(string triggerId)
+        public GetStackExecutionResultResponse GetStackExecutionResult(string triggerId, GetStackExecutionResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetStackExecutionResultWithOptions(triggerId, headers, runtime);
+            return GetStackExecutionResultWithOptions(triggerId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6148,14 +7602,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>获取资源栈部署结果</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetStackExecutionResultRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetStackExecutionResultResponse
         /// </returns>
-        public async Task<GetStackExecutionResultResponse> GetStackExecutionResultAsync(string triggerId)
+        public async Task<GetStackExecutionResultResponse> GetStackExecutionResultAsync(string triggerId, GetStackExecutionResultRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetStackExecutionResultWithOptionsAsync(triggerId, headers, runtime);
+            return await GetStackExecutionResultWithOptionsAsync(triggerId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6163,6 +7621,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>查询任务详情</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6173,8 +7634,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetTaskResponse
         /// </returns>
-        public GetTaskResponse GetTaskWithOptions(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetTaskResponse GetTaskWithOptions(string taskId, GetTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6199,6 +7661,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>查询任务详情</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6209,8 +7674,9 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <returns>
         /// GetTaskResponse
         /// </returns>
-        public async Task<GetTaskResponse> GetTaskWithOptionsAsync(string taskId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetTaskResponse> GetTaskWithOptionsAsync(string taskId, GetTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6235,14 +7701,18 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>查询任务详情</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetTaskResponse
         /// </returns>
-        public GetTaskResponse GetTask(string taskId)
+        public GetTaskResponse GetTask(string taskId, GetTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetTaskWithOptions(taskId, headers, runtime);
+            return GetTaskWithOptions(taskId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6250,14 +7720,428 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <para>查询任务详情</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetTaskResponse
         /// </returns>
-        public async Task<GetTaskResponse> GetTaskAsync(string taskId)
+        public async Task<GetTaskResponse> GetTaskAsync(string taskId, GetTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetTaskWithOptionsAsync(taskId, headers, runtime);
+            return await GetTaskWithOptionsAsync(taskId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取状态文件检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTerraformStateDetectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTerraformStateDetectionResponse
+        /// </returns>
+        public GetTerraformStateDetectionResponse GetTerraformStateDetectionWithOptions(string detectionId, GetTerraformStateDetectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTerraformStateDetection",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detect/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(detectionId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTerraformStateDetectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取状态文件检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTerraformStateDetectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTerraformStateDetectionResponse
+        /// </returns>
+        public async Task<GetTerraformStateDetectionResponse> GetTerraformStateDetectionWithOptionsAsync(string detectionId, GetTerraformStateDetectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTerraformStateDetection",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detect/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(detectionId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTerraformStateDetectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取状态文件检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTerraformStateDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTerraformStateDetectionResponse
+        /// </returns>
+        public GetTerraformStateDetectionResponse GetTerraformStateDetection(string detectionId, GetTerraformStateDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetTerraformStateDetectionWithOptions(detectionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取状态文件检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTerraformStateDetectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTerraformStateDetectionResponse
+        /// </returns>
+        public async Task<GetTerraformStateDetectionResponse> GetTerraformStateDetectionAsync(string detectionId, GetTerraformStateDetectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetTerraformStateDetectionWithOptionsAsync(detectionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关联到资源的偏差检测配置列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDetectConfigRelationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDetectConfigRelationsResponse
+        /// </returns>
+        public ListDetectConfigRelationsResponse ListDetectConfigRelationsWithOptions(ListDetectConfigRelationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectConfigId))
+            {
+                query["detectConfigId"] = request.DetectConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                query["targetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDetectConfigRelations",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig/operations/relation",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDetectConfigRelationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关联到资源的偏差检测配置列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDetectConfigRelationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDetectConfigRelationsResponse
+        /// </returns>
+        public async Task<ListDetectConfigRelationsResponse> ListDetectConfigRelationsWithOptionsAsync(ListDetectConfigRelationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectConfigId))
+            {
+                query["detectConfigId"] = request.DetectConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                query["targetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDetectConfigRelations",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig/operations/relation",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDetectConfigRelationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关联到资源的偏差检测配置列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDetectConfigRelationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDetectConfigRelationsResponse
+        /// </returns>
+        public ListDetectConfigRelationsResponse ListDetectConfigRelations(ListDetectConfigRelationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListDetectConfigRelationsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关联到资源的偏差检测配置列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDetectConfigRelationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDetectConfigRelationsResponse
+        /// </returns>
+        public async Task<ListDetectConfigRelationsResponse> ListDetectConfigRelationsAsync(ListDetectConfigRelationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListDetectConfigRelationsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>偏差检测配置列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDetectConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDetectConfigsResponse
+        /// </returns>
+        public ListDetectConfigsResponse ListDetectConfigsWithOptions(ListDetectConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectConfigName))
+            {
+                query["detectConfigName"] = request.DetectConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDetectConfigs",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDetectConfigsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>偏差检测配置列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDetectConfigsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDetectConfigsResponse
+        /// </returns>
+        public async Task<ListDetectConfigsResponse> ListDetectConfigsWithOptionsAsync(ListDetectConfigsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectConfigName))
+            {
+                query["detectConfigName"] = request.DetectConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDetectConfigs",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDetectConfigsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>偏差检测配置列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDetectConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDetectConfigsResponse
+        /// </returns>
+        public ListDetectConfigsResponse ListDetectConfigs(ListDetectConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListDetectConfigsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>偏差检测配置列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDetectConfigsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDetectConfigsResponse
+        /// </returns>
+        public async Task<ListDetectConfigsResponse> ListDetectConfigsAsync(ListDetectConfigsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListDetectConfigsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10392,6 +12276,184 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新偏差检测配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDetectConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDetectConfigResponse
+        /// </returns>
+        public UpdateDetectConfigResponse UpdateDetectConfigWithOptions(string detectConfigId, UpdateDetectConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmConfigs))
+            {
+                body["alarmConfigs"] = request.AlarmConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
+            {
+                body["cronExpression"] = request.CronExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectConfigName))
+            {
+                body["detectConfigName"] = request.DetectConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerType))
+            {
+                body["triggerType"] = request.TriggerType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDetectConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(detectConfigId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDetectConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新偏差检测配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDetectConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDetectConfigResponse
+        /// </returns>
+        public async Task<UpdateDetectConfigResponse> UpdateDetectConfigWithOptionsAsync(string detectConfigId, UpdateDetectConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmConfigs))
+            {
+                body["alarmConfigs"] = request.AlarmConfigs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CronExpression))
+            {
+                body["cronExpression"] = request.CronExpression;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectConfigName))
+            {
+                body["detectConfigName"] = request.DetectConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerType))
+            {
+                body["triggerType"] = request.TriggerType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateDetectConfig",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/terraformState/detectConfig/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(detectConfigId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateDetectConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新偏差检测配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDetectConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDetectConfigResponse
+        /// </returns>
+        public UpdateDetectConfigResponse UpdateDetectConfig(string detectConfigId, UpdateDetectConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateDetectConfigWithOptions(detectConfigId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新偏差检测配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateDetectConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateDetectConfigResponse
+        /// </returns>
+        public async Task<UpdateDetectConfigResponse> UpdateDetectConfigAsync(string detectConfigId, UpdateDetectConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateDetectConfigWithOptionsAsync(detectConfigId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>修改ExplorerModule</para>
         /// </summary>
         /// 
@@ -12223,7 +14285,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -12319,7 +14381,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
