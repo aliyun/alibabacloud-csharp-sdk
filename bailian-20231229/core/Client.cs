@@ -661,6 +661,164 @@ namespace AlibabaCloud.SDK.Bailian20231229
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>添加表格</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AddTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddTableResponse
+        /// </returns>
+        public AddTableResponse AddTableWithOptions(string WorkspaceId, AddTableRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddTableShrinkRequest request = new AddTableShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TableColumns))
+            {
+                request.TableColumnsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TableColumns, "TableColumns", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectorId))
+            {
+                body["ConnectorId"] = request.ConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableColumnsShrink))
+            {
+                body["TableColumns"] = request.TableColumnsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                body["TableName"] = request.TableName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddTable",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/table",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加表格</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AddTableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddTableResponse
+        /// </returns>
+        public async Task<AddTableResponse> AddTableWithOptionsAsync(string WorkspaceId, AddTableRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddTableShrinkRequest request = new AddTableShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TableColumns))
+            {
+                request.TableColumnsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TableColumns, "TableColumns", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectorId))
+            {
+                body["ConnectorId"] = request.ConnectorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableColumnsShrink))
+            {
+                body["TableColumns"] = request.TableColumnsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                body["TableName"] = request.TableName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddTable",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/table",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加表格</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddTableResponse
+        /// </returns>
+        public AddTableResponse AddTable(string WorkspaceId, AddTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AddTableWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加表格</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddTableResponse
+        /// </returns>
+        public async Task<AddTableResponse> AddTableAsync(string WorkspaceId, AddTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AddTableWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Applies for a document upload lease to upload a document. You cannot use the API to upload structured documents. Use the console instead.</para>
         /// </summary>
         /// 
@@ -2272,6 +2430,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>删除智能体</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteAgentRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2282,8 +2443,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DeleteAgentResponse
         /// </returns>
-        public DeleteAgentResponse DeleteAgentWithOptions(string workspaceId, string appCode, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteAgentResponse DeleteAgentWithOptions(string workspaceId, string appCode, DeleteAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2308,6 +2470,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>删除智能体</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteAgentRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2318,8 +2483,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DeleteAgentResponse
         /// </returns>
-        public async Task<DeleteAgentResponse> DeleteAgentWithOptionsAsync(string workspaceId, string appCode, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteAgentResponse> DeleteAgentWithOptionsAsync(string workspaceId, string appCode, DeleteAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2344,14 +2510,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>删除智能体</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteAgentRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteAgentResponse
         /// </returns>
-        public DeleteAgentResponse DeleteAgent(string workspaceId, string appCode)
+        public DeleteAgentResponse DeleteAgent(string workspaceId, string appCode, DeleteAgentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteAgentWithOptions(workspaceId, appCode, headers, runtime);
+            return DeleteAgentWithOptions(workspaceId, appCode, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2359,14 +2529,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>删除智能体</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteAgentRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteAgentResponse
         /// </returns>
-        public async Task<DeleteAgentResponse> DeleteAgentAsync(string workspaceId, string appCode)
+        public async Task<DeleteAgentResponse> DeleteAgentAsync(string workspaceId, string appCode, DeleteAgentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteAgentWithOptionsAsync(workspaceId, appCode, headers, runtime);
+            return await DeleteAgentWithOptionsAsync(workspaceId, appCode, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2374,6 +2548,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Deletes a specified category permanently.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteCategoryRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2384,8 +2561,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DeleteCategoryResponse
         /// </returns>
-        public DeleteCategoryResponse DeleteCategoryWithOptions(string CategoryId, string WorkspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteCategoryResponse DeleteCategoryWithOptions(string CategoryId, string WorkspaceId, DeleteCategoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2410,6 +2588,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Deletes a specified category permanently.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteCategoryRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2420,8 +2601,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DeleteCategoryResponse
         /// </returns>
-        public async Task<DeleteCategoryResponse> DeleteCategoryWithOptionsAsync(string CategoryId, string WorkspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteCategoryResponse> DeleteCategoryWithOptionsAsync(string CategoryId, string WorkspaceId, DeleteCategoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2446,14 +2628,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Deletes a specified category permanently.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteCategoryRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteCategoryResponse
         /// </returns>
-        public DeleteCategoryResponse DeleteCategory(string CategoryId, string WorkspaceId)
+        public DeleteCategoryResponse DeleteCategory(string CategoryId, string WorkspaceId, DeleteCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteCategoryWithOptions(CategoryId, WorkspaceId, headers, runtime);
+            return DeleteCategoryWithOptions(CategoryId, WorkspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2461,14 +2647,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Deletes a specified category permanently.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteCategoryRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteCategoryResponse
         /// </returns>
-        public async Task<DeleteCategoryResponse> DeleteCategoryAsync(string CategoryId, string WorkspaceId)
+        public async Task<DeleteCategoryResponse> DeleteCategoryAsync(string CategoryId, string WorkspaceId, DeleteCategoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteCategoryWithOptionsAsync(CategoryId, WorkspaceId, headers, runtime);
+            return await DeleteCategoryWithOptionsAsync(CategoryId, WorkspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2690,6 +2880,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Deletes a specified unstructured document permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteFileRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2700,8 +2893,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DeleteFileResponse
         /// </returns>
-        public DeleteFileResponse DeleteFileWithOptions(string FileId, string WorkspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteFileResponse DeleteFileWithOptions(string FileId, string WorkspaceId, DeleteFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2726,6 +2920,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Deletes a specified unstructured document permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteFileRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -2736,8 +2933,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DeleteFileResponse
         /// </returns>
-        public async Task<DeleteFileResponse> DeleteFileWithOptionsAsync(string FileId, string WorkspaceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteFileResponse> DeleteFileWithOptionsAsync(string FileId, string WorkspaceId, DeleteFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2762,14 +2960,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Deletes a specified unstructured document permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteFileRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteFileResponse
         /// </returns>
-        public DeleteFileResponse DeleteFile(string FileId, string WorkspaceId)
+        public DeleteFileResponse DeleteFile(string FileId, string WorkspaceId, DeleteFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteFileWithOptions(FileId, WorkspaceId, headers, runtime);
+            return DeleteFileWithOptions(FileId, WorkspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2777,14 +2979,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Deletes a specified unstructured document permanently. You cannot use the API to delete structured documents, see the Usage notes section of this topic.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteFileRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteFileResponse
         /// </returns>
-        public async Task<DeleteFileResponse> DeleteFileAsync(string FileId, string WorkspaceId)
+        public async Task<DeleteFileResponse> DeleteFileAsync(string FileId, string WorkspaceId, DeleteFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteFileWithOptionsAsync(FileId, WorkspaceId, headers, runtime);
+            return await DeleteFileWithOptionsAsync(FileId, WorkspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3160,6 +3366,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>删除memory</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteMemoryRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3170,8 +3379,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DeleteMemoryResponse
         /// </returns>
-        public DeleteMemoryResponse DeleteMemoryWithOptions(string workspaceId, string memoryId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteMemoryResponse DeleteMemoryWithOptions(string workspaceId, string memoryId, DeleteMemoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3196,6 +3406,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>删除memory</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteMemoryRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3206,8 +3419,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DeleteMemoryResponse
         /// </returns>
-        public async Task<DeleteMemoryResponse> DeleteMemoryWithOptionsAsync(string workspaceId, string memoryId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteMemoryResponse> DeleteMemoryWithOptionsAsync(string workspaceId, string memoryId, DeleteMemoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3232,14 +3446,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>删除memory</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteMemoryRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteMemoryResponse
         /// </returns>
-        public DeleteMemoryResponse DeleteMemory(string workspaceId, string memoryId)
+        public DeleteMemoryResponse DeleteMemory(string workspaceId, string memoryId, DeleteMemoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteMemoryWithOptions(workspaceId, memoryId, headers, runtime);
+            return DeleteMemoryWithOptions(workspaceId, memoryId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3247,14 +3465,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>删除memory</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteMemoryRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteMemoryResponse
         /// </returns>
-        public async Task<DeleteMemoryResponse> DeleteMemoryAsync(string workspaceId, string memoryId)
+        public async Task<DeleteMemoryResponse> DeleteMemoryAsync(string workspaceId, string memoryId, DeleteMemoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteMemoryWithOptionsAsync(workspaceId, memoryId, headers, runtime);
+            return await DeleteMemoryWithOptionsAsync(workspaceId, memoryId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3262,6 +3484,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>删除记忆Node</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteMemoryNodeRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3272,8 +3497,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DeleteMemoryNodeResponse
         /// </returns>
-        public DeleteMemoryNodeResponse DeleteMemoryNodeWithOptions(string workspaceId, string memoryId, string memoryNodeId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteMemoryNodeResponse DeleteMemoryNodeWithOptions(string workspaceId, string memoryId, string memoryNodeId, DeleteMemoryNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3298,6 +3524,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>删除记忆Node</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteMemoryNodeRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3308,8 +3537,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DeleteMemoryNodeResponse
         /// </returns>
-        public async Task<DeleteMemoryNodeResponse> DeleteMemoryNodeWithOptionsAsync(string workspaceId, string memoryId, string memoryNodeId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteMemoryNodeResponse> DeleteMemoryNodeWithOptionsAsync(string workspaceId, string memoryId, string memoryNodeId, DeleteMemoryNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3334,14 +3564,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>删除记忆Node</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteMemoryNodeRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteMemoryNodeResponse
         /// </returns>
-        public DeleteMemoryNodeResponse DeleteMemoryNode(string workspaceId, string memoryId, string memoryNodeId)
+        public DeleteMemoryNodeResponse DeleteMemoryNode(string workspaceId, string memoryId, string memoryNodeId, DeleteMemoryNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteMemoryNodeWithOptions(workspaceId, memoryId, memoryNodeId, headers, runtime);
+            return DeleteMemoryNodeWithOptions(workspaceId, memoryId, memoryNodeId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3349,14 +3583,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>删除记忆Node</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteMemoryNodeRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteMemoryNodeResponse
         /// </returns>
-        public async Task<DeleteMemoryNodeResponse> DeleteMemoryNodeAsync(string workspaceId, string memoryId, string memoryNodeId)
+        public async Task<DeleteMemoryNodeResponse> DeleteMemoryNodeAsync(string workspaceId, string memoryId, string memoryNodeId, DeleteMemoryNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteMemoryNodeWithOptionsAsync(workspaceId, memoryId, memoryNodeId, headers, runtime);
+            return await DeleteMemoryNodeWithOptionsAsync(workspaceId, memoryId, memoryNodeId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3364,6 +3602,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Deletes a prompt template based on the template ID.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeletePromptTemplateRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3374,8 +3615,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DeletePromptTemplateResponse
         /// </returns>
-        public DeletePromptTemplateResponse DeletePromptTemplateWithOptions(string workspaceId, string promptTemplateId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeletePromptTemplateResponse DeletePromptTemplateWithOptions(string workspaceId, string promptTemplateId, DeletePromptTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3400,6 +3642,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Deletes a prompt template based on the template ID.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeletePromptTemplateRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3410,8 +3655,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DeletePromptTemplateResponse
         /// </returns>
-        public async Task<DeletePromptTemplateResponse> DeletePromptTemplateWithOptionsAsync(string workspaceId, string promptTemplateId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeletePromptTemplateResponse> DeletePromptTemplateWithOptionsAsync(string workspaceId, string promptTemplateId, DeletePromptTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3436,14 +3682,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Deletes a prompt template based on the template ID.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeletePromptTemplateRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeletePromptTemplateResponse
         /// </returns>
-        public DeletePromptTemplateResponse DeletePromptTemplate(string workspaceId, string promptTemplateId)
+        public DeletePromptTemplateResponse DeletePromptTemplate(string workspaceId, string promptTemplateId, DeletePromptTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeletePromptTemplateWithOptions(workspaceId, promptTemplateId, headers, runtime);
+            return DeletePromptTemplateWithOptions(workspaceId, promptTemplateId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3451,14 +3701,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Deletes a prompt template based on the template ID.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeletePromptTemplateRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeletePromptTemplateResponse
         /// </returns>
-        public async Task<DeletePromptTemplateResponse> DeletePromptTemplateAsync(string workspaceId, string promptTemplateId)
+        public async Task<DeletePromptTemplateResponse> DeletePromptTemplateAsync(string workspaceId, string promptTemplateId, DeletePromptTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeletePromptTemplateWithOptionsAsync(workspaceId, promptTemplateId, headers, runtime);
+            return await DeletePromptTemplateWithOptionsAsync(workspaceId, promptTemplateId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3476,6 +3730,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// </list>
         /// </description>
         /// 
+        /// <param name="request">
+        /// DescribeFileRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3486,8 +3743,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DescribeFileResponse
         /// </returns>
-        public DescribeFileResponse DescribeFileWithOptions(string WorkspaceId, string FileId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeFileResponse DescribeFileWithOptions(string WorkspaceId, string FileId, DescribeFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3522,6 +3780,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// </list>
         /// </description>
         /// 
+        /// <param name="request">
+        /// DescribeFileRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3532,8 +3793,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// DescribeFileResponse
         /// </returns>
-        public async Task<DescribeFileResponse> DescribeFileWithOptionsAsync(string WorkspaceId, string FileId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeFileResponse> DescribeFileWithOptionsAsync(string WorkspaceId, string FileId, DescribeFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3568,14 +3830,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// </list>
         /// </description>
         /// 
+        /// <param name="request">
+        /// DescribeFileRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeFileResponse
         /// </returns>
-        public DescribeFileResponse DescribeFile(string WorkspaceId, string FileId)
+        public DescribeFileResponse DescribeFile(string WorkspaceId, string FileId, DescribeFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeFileWithOptions(WorkspaceId, FileId, headers, runtime);
+            return DescribeFileWithOptions(WorkspaceId, FileId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3593,14 +3859,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// </list>
         /// </description>
         /// 
+        /// <param name="request">
+        /// DescribeFileRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeFileResponse
         /// </returns>
-        public async Task<DescribeFileResponse> DescribeFileAsync(string WorkspaceId, string FileId)
+        public async Task<DescribeFileResponse> DescribeFileAsync(string WorkspaceId, string FileId, DescribeFileRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeFileWithOptionsAsync(WorkspaceId, FileId, headers, runtime);
+            return await DescribeFileWithOptionsAsync(WorkspaceId, FileId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4350,6 +4620,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>获取memory</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetMemoryRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4360,8 +4633,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// GetMemoryResponse
         /// </returns>
-        public GetMemoryResponse GetMemoryWithOptions(string workspaceId, string memoryId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetMemoryResponse GetMemoryWithOptions(string workspaceId, string memoryId, GetMemoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4386,6 +4660,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>获取memory</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetMemoryRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4396,8 +4673,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// GetMemoryResponse
         /// </returns>
-        public async Task<GetMemoryResponse> GetMemoryWithOptionsAsync(string workspaceId, string memoryId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetMemoryResponse> GetMemoryWithOptionsAsync(string workspaceId, string memoryId, GetMemoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4422,14 +4700,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>获取memory</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetMemoryRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetMemoryResponse
         /// </returns>
-        public GetMemoryResponse GetMemory(string workspaceId, string memoryId)
+        public GetMemoryResponse GetMemory(string workspaceId, string memoryId, GetMemoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetMemoryWithOptions(workspaceId, memoryId, headers, runtime);
+            return GetMemoryWithOptions(workspaceId, memoryId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4437,14 +4719,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>获取memory</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetMemoryRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetMemoryResponse
         /// </returns>
-        public async Task<GetMemoryResponse> GetMemoryAsync(string workspaceId, string memoryId)
+        public async Task<GetMemoryResponse> GetMemoryAsync(string workspaceId, string memoryId, GetMemoryRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetMemoryWithOptionsAsync(workspaceId, memoryId, headers, runtime);
+            return await GetMemoryWithOptionsAsync(workspaceId, memoryId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4452,6 +4738,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>获取记忆Node</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetMemoryNodeRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4462,8 +4751,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// GetMemoryNodeResponse
         /// </returns>
-        public GetMemoryNodeResponse GetMemoryNodeWithOptions(string workspaceId, string memoryId, string memoryNodeId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetMemoryNodeResponse GetMemoryNodeWithOptions(string workspaceId, string memoryId, string memoryNodeId, GetMemoryNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4488,6 +4778,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>获取记忆Node</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetMemoryNodeRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4498,8 +4791,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// GetMemoryNodeResponse
         /// </returns>
-        public async Task<GetMemoryNodeResponse> GetMemoryNodeWithOptionsAsync(string workspaceId, string memoryId, string memoryNodeId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetMemoryNodeResponse> GetMemoryNodeWithOptionsAsync(string workspaceId, string memoryId, string memoryNodeId, GetMemoryNodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4524,14 +4818,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>获取记忆Node</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetMemoryNodeRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetMemoryNodeResponse
         /// </returns>
-        public GetMemoryNodeResponse GetMemoryNode(string workspaceId, string memoryId, string memoryNodeId)
+        public GetMemoryNodeResponse GetMemoryNode(string workspaceId, string memoryId, string memoryNodeId, GetMemoryNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetMemoryNodeWithOptions(workspaceId, memoryId, memoryNodeId, headers, runtime);
+            return GetMemoryNodeWithOptions(workspaceId, memoryId, memoryNodeId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4539,14 +4837,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>获取记忆Node</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetMemoryNodeRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetMemoryNodeResponse
         /// </returns>
-        public async Task<GetMemoryNodeResponse> GetMemoryNodeAsync(string workspaceId, string memoryId, string memoryNodeId)
+        public async Task<GetMemoryNodeResponse> GetMemoryNodeAsync(string workspaceId, string memoryId, string memoryNodeId, GetMemoryNodeRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetMemoryNodeWithOptionsAsync(workspaceId, memoryId, memoryNodeId, headers, runtime);
+            return await GetMemoryNodeWithOptionsAsync(workspaceId, memoryId, memoryNodeId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4684,6 +4986,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Obtains a prompt template based on the template ID.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetPromptTemplateRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4694,8 +4999,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// GetPromptTemplateResponse
         /// </returns>
-        public GetPromptTemplateResponse GetPromptTemplateWithOptions(string workspaceId, string promptTemplateId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetPromptTemplateResponse GetPromptTemplateWithOptions(string workspaceId, string promptTemplateId, GetPromptTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4720,6 +5026,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Obtains a prompt template based on the template ID.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetPromptTemplateRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4730,8 +5039,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// GetPromptTemplateResponse
         /// </returns>
-        public async Task<GetPromptTemplateResponse> GetPromptTemplateWithOptionsAsync(string workspaceId, string promptTemplateId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetPromptTemplateResponse> GetPromptTemplateWithOptionsAsync(string workspaceId, string promptTemplateId, GetPromptTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4756,14 +5066,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Obtains a prompt template based on the template ID.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetPromptTemplateRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetPromptTemplateResponse
         /// </returns>
-        public GetPromptTemplateResponse GetPromptTemplate(string workspaceId, string promptTemplateId)
+        public GetPromptTemplateResponse GetPromptTemplate(string workspaceId, string promptTemplateId, GetPromptTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetPromptTemplateWithOptions(workspaceId, promptTemplateId, headers, runtime);
+            return GetPromptTemplateWithOptions(workspaceId, promptTemplateId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4771,14 +5085,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>Obtains a prompt template based on the template ID.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetPromptTemplateRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetPromptTemplateResponse
         /// </returns>
-        public async Task<GetPromptTemplateResponse> GetPromptTemplateAsync(string workspaceId, string promptTemplateId)
+        public async Task<GetPromptTemplateResponse> GetPromptTemplateAsync(string workspaceId, string promptTemplateId, GetPromptTemplateRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetPromptTemplateWithOptionsAsync(workspaceId, promptTemplateId, headers, runtime);
+            return await GetPromptTemplateWithOptionsAsync(workspaceId, promptTemplateId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4786,6 +5104,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>获取发布态智能体应用</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetPublishedAgentRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4796,8 +5117,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// GetPublishedAgentResponse
         /// </returns>
-        public GetPublishedAgentResponse GetPublishedAgentWithOptions(string workspaceId, string appCode, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetPublishedAgentResponse GetPublishedAgentWithOptions(string workspaceId, string appCode, GetPublishedAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4822,6 +5144,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>获取发布态智能体应用</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetPublishedAgentRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4832,8 +5157,9 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <returns>
         /// GetPublishedAgentResponse
         /// </returns>
-        public async Task<GetPublishedAgentResponse> GetPublishedAgentWithOptionsAsync(string workspaceId, string appCode, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetPublishedAgentResponse> GetPublishedAgentWithOptionsAsync(string workspaceId, string appCode, GetPublishedAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4858,14 +5184,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>获取发布态智能体应用</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetPublishedAgentRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetPublishedAgentResponse
         /// </returns>
-        public GetPublishedAgentResponse GetPublishedAgent(string workspaceId, string appCode)
+        public GetPublishedAgentResponse GetPublishedAgent(string workspaceId, string appCode, GetPublishedAgentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetPublishedAgentWithOptions(workspaceId, appCode, headers, runtime);
+            return GetPublishedAgentWithOptions(workspaceId, appCode, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4873,14 +5203,18 @@ namespace AlibabaCloud.SDK.Bailian20231229
         /// <para>获取发布态智能体应用</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetPublishedAgentRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetPublishedAgentResponse
         /// </returns>
-        public async Task<GetPublishedAgentResponse> GetPublishedAgentAsync(string workspaceId, string appCode)
+        public async Task<GetPublishedAgentResponse> GetPublishedAgentAsync(string workspaceId, string appCode, GetPublishedAgentRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetPublishedAgentWithOptionsAsync(workspaceId, appCode, headers, runtime);
+            return await GetPublishedAgentWithOptionsAsync(workspaceId, appCode, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8777,6 +9111,160 @@ namespace AlibabaCloud.SDK.Bailian20231229
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdatePromptTemplateWithOptionsAsync(workspaceId, promptTemplateId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从oss上传table</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTableFromAuthorizedOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTableFromAuthorizedOssResponse
+        /// </returns>
+        public UpdateTableFromAuthorizedOssResponse UpdateTableFromAuthorizedOssWithOptions(string WorkspaceId, string TableId, UpdateTableFromAuthorizedOssRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucket))
+            {
+                body["OssBucket"] = request.OssBucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                body["OssKey"] = request.OssKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssRegionId))
+            {
+                body["OssRegionId"] = request.OssRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateMode))
+            {
+                body["UpdateMode"] = request.UpdateMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTableFromAuthorizedOss",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/table/fromoss/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TableId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTableFromAuthorizedOssResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从oss上传table</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTableFromAuthorizedOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTableFromAuthorizedOssResponse
+        /// </returns>
+        public async Task<UpdateTableFromAuthorizedOssResponse> UpdateTableFromAuthorizedOssWithOptionsAsync(string WorkspaceId, string TableId, UpdateTableFromAuthorizedOssRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucket))
+            {
+                body["OssBucket"] = request.OssBucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssKey))
+            {
+                body["OssKey"] = request.OssKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssRegionId))
+            {
+                body["OssRegionId"] = request.OssRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateMode))
+            {
+                body["UpdateMode"] = request.UpdateMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTableFromAuthorizedOss",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/table/fromoss/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TableId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTableFromAuthorizedOssResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从oss上传table</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTableFromAuthorizedOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTableFromAuthorizedOssResponse
+        /// </returns>
+        public UpdateTableFromAuthorizedOssResponse UpdateTableFromAuthorizedOss(string WorkspaceId, string TableId, UpdateTableFromAuthorizedOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateTableFromAuthorizedOssWithOptions(WorkspaceId, TableId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从oss上传table</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTableFromAuthorizedOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTableFromAuthorizedOssResponse
+        /// </returns>
+        public async Task<UpdateTableFromAuthorizedOssResponse> UpdateTableFromAuthorizedOssAsync(string WorkspaceId, string TableId, UpdateTableFromAuthorizedOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateTableFromAuthorizedOssWithOptionsAsync(WorkspaceId, TableId, request, headers, runtime);
         }
 
     }
