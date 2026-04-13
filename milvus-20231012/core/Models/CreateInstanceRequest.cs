@@ -17,13 +17,39 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("aiFunction")]
+        [Validation(Required=false)]
+        public bool? AiFunction { get; set; }
+
         [NameInMap("autoBackup")]
         [Validation(Required=false)]
         public bool? AutoBackup { get; set; }
 
+        [NameInMap("autoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
         [NameInMap("autoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
+
+        [NameInMap("backupRestoreInfo")]
+        [Validation(Required=false)]
+        public CreateInstanceRequestBackupRestoreInfo BackupRestoreInfo { get; set; }
+        public class CreateInstanceRequestBackupRestoreInfo : TeaModel {
+            [NameInMap("backupId")]
+            [Validation(Required=false)]
+            public string BackupId { get; set; }
+
+            [NameInMap("backupName")]
+            [Validation(Required=false)]
+            public string BackupName { get; set; }
+
+            [NameInMap("sourceClusterId")]
+            [Validation(Required=false)]
+            public string SourceClusterId { get; set; }
+
+        }
 
         [NameInMap("components")]
         [Validation(Required=false)]

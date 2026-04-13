@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         [Validation(Required=false)]
         public bool? AutoBackup { get; set; }
 
+        [NameInMap("autoPay")]
+        [Validation(Required=false)]
+        public bool? AutoPay { get; set; }
+
         [NameInMap("components")]
         [Validation(Required=false)]
         public List<UpdateInstanceRequestComponents> Components { get; set; }
@@ -38,6 +42,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [NameInMap("cuNum")]
             [Validation(Required=false)]
             public int? CuNum { get; set; }
+
+            [NameInMap("payType")]
+            [Validation(Required=false)]
+            public string PayType { get; set; }
 
             /// <summary>
             /// <para>This parameter is required.</para>

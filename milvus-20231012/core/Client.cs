@@ -332,13 +332,25 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 query["clientToken"] = request.ClientToken;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiFunction))
+            {
+                body["aiFunction"] = request.AiFunction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoBackup))
             {
                 body["autoBackup"] = request.AutoBackup;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                body["autoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 body["autoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupRestoreInfo))
+            {
+                body["backupRestoreInfo"] = request.BackupRestoreInfo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Components))
             {
@@ -472,13 +484,25 @@ namespace AlibabaCloud.SDK.Milvus20231012
                 query["clientToken"] = request.ClientToken;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiFunction))
+            {
+                body["aiFunction"] = request.AiFunction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoBackup))
             {
                 body["autoBackup"] = request.AutoBackup;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                body["autoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 body["autoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupRestoreInfo))
+            {
+                body["backupRestoreInfo"] = request.BackupRestoreInfo;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Components))
             {
@@ -2344,6 +2368,10 @@ namespace AlibabaCloud.SDK.Milvus20231012
             {
                 body["autoBackup"] = request.AutoBackup;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                body["autoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Components))
             {
                 body["components"] = request.Components;
@@ -2419,6 +2447,10 @@ namespace AlibabaCloud.SDK.Milvus20231012
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoBackup))
             {
                 body["autoBackup"] = request.AutoBackup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                body["autoPay"] = request.AutoPay;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Components))
             {

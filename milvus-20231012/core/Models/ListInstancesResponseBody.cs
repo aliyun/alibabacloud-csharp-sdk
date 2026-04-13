@@ -346,6 +346,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
 
             }
 
+            [NameInMap("TemplateVersion")]
+            [Validation(Required=false)]
+            public string TemplateVersion { get; set; }
+
             [NameInMap("Version")]
             [Validation(Required=false)]
             public string Version { get; set; }

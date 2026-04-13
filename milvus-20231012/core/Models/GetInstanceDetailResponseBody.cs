@@ -166,6 +166,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
                     [Validation(Required=false)]
                     public string DiskType { get; set; }
 
+                    [NameInMap("PayType")]
+                    [Validation(Required=false)]
+                    public string PayType { get; set; }
+
                     /// <summary>
                     /// <para>The number of replicas.</para>
                     /// 
@@ -319,6 +323,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [NameInMap("KmsKeyId")]
             [Validation(Required=false)]
             public string KmsKeyId { get; set; }
+
+            [NameInMap("MaintainablePeriod")]
+            [Validation(Required=false)]
+            public string MaintainablePeriod { get; set; }
 
             [NameInMap("MeasureConfig")]
             [Validation(Required=false)]

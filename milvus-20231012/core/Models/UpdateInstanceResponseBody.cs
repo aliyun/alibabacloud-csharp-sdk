@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
         [Validation(Required=false)]
         public bool? Data { get; set; }
 
+        [NameInMap("orderId")]
+        [Validation(Required=false)]
+        public string OrderId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>true</para>

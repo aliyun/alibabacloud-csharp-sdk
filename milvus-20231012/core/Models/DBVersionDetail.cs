@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [Validation(Required=false)]
             public bool? IsStandalone { get; set; }
 
+            [NameInMap("isStandalonePro")]
+            [Validation(Required=false)]
+            public bool? IsStandalonePro { get; set; }
+
             [NameInMap("zoneMode")]
             [Validation(Required=false)]
             public string ZoneMode { get; set; }
