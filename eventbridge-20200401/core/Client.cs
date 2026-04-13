@@ -3879,9 +3879,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// <para>You can call this API operation to query all Alibaba Cloud service event sources.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// ListAliyunOfficialEventSourcesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -3917,9 +3914,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         /// <para>You can call this API operation to query all Alibaba Cloud service event sources.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// ListAliyunOfficialEventSourcesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>

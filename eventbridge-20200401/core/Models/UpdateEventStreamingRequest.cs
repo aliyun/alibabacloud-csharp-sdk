@@ -5002,6 +5002,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                [NameInMap("NetworkType")]
+                [Validation(Required=false)]
+                public string NetworkType { get; set; }
+
                 /// <summary>
                 /// <para>The ID of the region where the ApsaraMQ for MQTT instance resides.</para>
                 /// 
@@ -5012,6 +5016,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
+                [NameInMap("SecurityGroupId")]
+                [Validation(Required=false)]
+                public string SecurityGroupId { get; set; }
+
                 /// <summary>
                 /// <para>The name of the topic on the ApsaraMQ for MQTT instance.</para>
                 /// 
@@ -5021,6 +5029,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [NameInMap("Topic")]
                 [Validation(Required=false)]
                 public string Topic { get; set; }
+
+                [NameInMap("VSwitchIds")]
+                [Validation(Required=false)]
+                public string VSwitchIds { get; set; }
+
+                [NameInMap("VpcId")]
+                [Validation(Required=false)]
+                public string VpcId { get; set; }
 
             }
 
