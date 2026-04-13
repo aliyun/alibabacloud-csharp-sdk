@@ -346,6 +346,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Commits the Worker0 container in the custom container service and deploys the container as a new image.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// CommitServiceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -356,8 +359,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// CommitServiceResponse
         /// </returns>
-        public CommitServiceResponse CommitServiceWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CommitServiceResponse CommitServiceWithOptions(string ClusterId, string ServiceName, CommitServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -382,6 +386,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Commits the Worker0 container in the custom container service and deploys the container as a new image.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// CommitServiceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -392,8 +399,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// CommitServiceResponse
         /// </returns>
-        public async Task<CommitServiceResponse> CommitServiceWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CommitServiceResponse> CommitServiceWithOptionsAsync(string ClusterId, string ServiceName, CommitServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -418,14 +426,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Commits the Worker0 container in the custom container service and deploys the container as a new image.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// CommitServiceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// CommitServiceResponse
         /// </returns>
-        public CommitServiceResponse CommitService(string ClusterId, string ServiceName)
+        public CommitServiceResponse CommitService(string ClusterId, string ServiceName, CommitServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return CommitServiceWithOptions(ClusterId, ServiceName, headers, runtime);
+            return CommitServiceWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -433,14 +445,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Commits the Worker0 container in the custom container service and deploys the container as a new image.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// CommitServiceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// CommitServiceResponse
         /// </returns>
-        public async Task<CommitServiceResponse> CommitServiceAsync(string ClusterId, string ServiceName)
+        public async Task<CommitServiceResponse> CommitServiceAsync(string ClusterId, string ServiceName, CommitServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await CommitServiceWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await CommitServiceWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3146,6 +3162,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteBenchmarkTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3156,8 +3175,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteBenchmarkTaskResponse
         /// </returns>
-        public DeleteBenchmarkTaskResponse DeleteBenchmarkTaskWithOptions(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteBenchmarkTaskResponse DeleteBenchmarkTaskWithOptions(string ClusterId, string TaskName, DeleteBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3182,6 +3202,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteBenchmarkTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3192,8 +3215,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteBenchmarkTaskResponse
         /// </returns>
-        public async Task<DeleteBenchmarkTaskResponse> DeleteBenchmarkTaskWithOptionsAsync(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteBenchmarkTaskResponse> DeleteBenchmarkTaskWithOptionsAsync(string ClusterId, string TaskName, DeleteBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3218,14 +3242,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteBenchmarkTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteBenchmarkTaskResponse
         /// </returns>
-        public DeleteBenchmarkTaskResponse DeleteBenchmarkTask(string ClusterId, string TaskName)
+        public DeleteBenchmarkTaskResponse DeleteBenchmarkTask(string ClusterId, string TaskName, DeleteBenchmarkTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteBenchmarkTaskWithOptions(ClusterId, TaskName, headers, runtime);
+            return DeleteBenchmarkTaskWithOptions(ClusterId, TaskName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3233,14 +3261,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteBenchmarkTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteBenchmarkTaskResponse
         /// </returns>
-        public async Task<DeleteBenchmarkTaskResponse> DeleteBenchmarkTaskAsync(string ClusterId, string TaskName)
+        public async Task<DeleteBenchmarkTaskResponse> DeleteBenchmarkTaskAsync(string ClusterId, string TaskName, DeleteBenchmarkTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, headers, runtime);
+            return await DeleteBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3248,6 +3280,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>删除故障注入任务</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteFaultInjectionRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3258,8 +3293,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteFaultInjectionResponse
         /// </returns>
-        public DeleteFaultInjectionResponse DeleteFaultInjectionWithOptions(string ClusterId, string ServiceName, string InstanceName, string FaultType, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteFaultInjectionResponse DeleteFaultInjectionWithOptions(string ClusterId, string ServiceName, string InstanceName, string FaultType, DeleteFaultInjectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3284,6 +3320,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>删除故障注入任务</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteFaultInjectionRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3294,8 +3333,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteFaultInjectionResponse
         /// </returns>
-        public async Task<DeleteFaultInjectionResponse> DeleteFaultInjectionWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, string FaultType, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteFaultInjectionResponse> DeleteFaultInjectionWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, string FaultType, DeleteFaultInjectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3320,14 +3360,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>删除故障注入任务</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteFaultInjectionRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteFaultInjectionResponse
         /// </returns>
-        public DeleteFaultInjectionResponse DeleteFaultInjection(string ClusterId, string ServiceName, string InstanceName, string FaultType)
+        public DeleteFaultInjectionResponse DeleteFaultInjection(string ClusterId, string ServiceName, string InstanceName, string FaultType, DeleteFaultInjectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteFaultInjectionWithOptions(ClusterId, ServiceName, InstanceName, FaultType, headers, runtime);
+            return DeleteFaultInjectionWithOptions(ClusterId, ServiceName, InstanceName, FaultType, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3335,14 +3379,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>删除故障注入任务</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteFaultInjectionRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteFaultInjectionResponse
         /// </returns>
-        public async Task<DeleteFaultInjectionResponse> DeleteFaultInjectionAsync(string ClusterId, string ServiceName, string InstanceName, string FaultType)
+        public async Task<DeleteFaultInjectionResponse> DeleteFaultInjectionAsync(string ClusterId, string ServiceName, string InstanceName, string FaultType, DeleteFaultInjectionRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteFaultInjectionWithOptionsAsync(ClusterId, ServiceName, InstanceName, FaultType, headers, runtime);
+            return await DeleteFaultInjectionWithOptionsAsync(ClusterId, ServiceName, InstanceName, FaultType, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3350,6 +3398,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteGatewayRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3360,8 +3411,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteGatewayResponse
         /// </returns>
-        public DeleteGatewayResponse DeleteGatewayWithOptions(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteGatewayResponse DeleteGatewayWithOptions(string ClusterId, string GatewayId, DeleteGatewayRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3386,6 +3438,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteGatewayRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3396,8 +3451,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteGatewayResponse
         /// </returns>
-        public async Task<DeleteGatewayResponse> DeleteGatewayWithOptionsAsync(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteGatewayResponse> DeleteGatewayWithOptionsAsync(string ClusterId, string GatewayId, DeleteGatewayRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3422,14 +3478,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteGatewayRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteGatewayResponse
         /// </returns>
-        public DeleteGatewayResponse DeleteGateway(string ClusterId, string GatewayId)
+        public DeleteGatewayResponse DeleteGateway(string ClusterId, string GatewayId, DeleteGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteGatewayWithOptions(ClusterId, GatewayId, headers, runtime);
+            return DeleteGatewayWithOptions(ClusterId, GatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3437,14 +3497,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteGatewayRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteGatewayResponse
         /// </returns>
-        public async Task<DeleteGatewayResponse> DeleteGatewayAsync(string ClusterId, string GatewayId)
+        public async Task<DeleteGatewayResponse> DeleteGatewayAsync(string ClusterId, string GatewayId, DeleteGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteGatewayWithOptionsAsync(ClusterId, GatewayId, headers, runtime);
+            return await DeleteGatewayWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3882,6 +3946,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a resource group that contains no resources or instances.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3892,8 +3959,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteResourceResponse
         /// </returns>
-        public DeleteResourceResponse DeleteResourceWithOptions(string ClusterId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteResourceResponse DeleteResourceWithOptions(string ClusterId, string ResourceId, DeleteResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3918,6 +3986,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a resource group that contains no resources or instances.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3928,8 +3999,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteResourceResponse
         /// </returns>
-        public async Task<DeleteResourceResponse> DeleteResourceWithOptionsAsync(string ClusterId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteResourceResponse> DeleteResourceWithOptionsAsync(string ClusterId, string ResourceId, DeleteResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3954,14 +4026,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a resource group that contains no resources or instances.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteResourceResponse
         /// </returns>
-        public DeleteResourceResponse DeleteResource(string ClusterId, string ResourceId)
+        public DeleteResourceResponse DeleteResource(string ClusterId, string ResourceId, DeleteResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteResourceWithOptions(ClusterId, ResourceId, headers, runtime);
+            return DeleteResourceWithOptions(ClusterId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3969,14 +4045,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a resource group that contains no resources or instances.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteResourceResponse
         /// </returns>
-        public async Task<DeleteResourceResponse> DeleteResourceAsync(string ClusterId, string ResourceId)
+        public async Task<DeleteResourceResponse> DeleteResourceAsync(string ClusterId, string ResourceId, DeleteResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteResourceWithOptionsAsync(ClusterId, ResourceId, headers, runtime);
+            return await DeleteResourceWithOptionsAsync(ClusterId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3984,6 +4064,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the virtual private cloud (VPC) direct connection feature for a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceDLinkRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -3994,8 +4077,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteResourceDLinkResponse
         /// </returns>
-        public DeleteResourceDLinkResponse DeleteResourceDLinkWithOptions(string ClusterId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteResourceDLinkResponse DeleteResourceDLinkWithOptions(string ClusterId, string ResourceId, DeleteResourceDLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4020,6 +4104,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the virtual private cloud (VPC) direct connection feature for a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceDLinkRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4030,8 +4117,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteResourceDLinkResponse
         /// </returns>
-        public async Task<DeleteResourceDLinkResponse> DeleteResourceDLinkWithOptionsAsync(string ClusterId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteResourceDLinkResponse> DeleteResourceDLinkWithOptionsAsync(string ClusterId, string ResourceId, DeleteResourceDLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4056,14 +4144,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the virtual private cloud (VPC) direct connection feature for a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceDLinkRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteResourceDLinkResponse
         /// </returns>
-        public DeleteResourceDLinkResponse DeleteResourceDLink(string ClusterId, string ResourceId)
+        public DeleteResourceDLinkResponse DeleteResourceDLink(string ClusterId, string ResourceId, DeleteResourceDLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteResourceDLinkWithOptions(ClusterId, ResourceId, headers, runtime);
+            return DeleteResourceDLinkWithOptions(ClusterId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4071,14 +4163,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the virtual private cloud (VPC) direct connection feature for a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceDLinkRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteResourceDLinkResponse
         /// </returns>
-        public async Task<DeleteResourceDLinkResponse> DeleteResourceDLinkAsync(string ClusterId, string ResourceId)
+        public async Task<DeleteResourceDLinkResponse> DeleteResourceDLinkAsync(string ClusterId, string ResourceId, DeleteResourceDLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteResourceDLinkWithOptionsAsync(ClusterId, ResourceId, headers, runtime);
+            return await DeleteResourceDLinkWithOptionsAsync(ClusterId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4406,6 +4502,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the LogShipper feature of Log Service for a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceLogRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4416,8 +4515,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteResourceLogResponse
         /// </returns>
-        public DeleteResourceLogResponse DeleteResourceLogWithOptions(string ClusterId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteResourceLogResponse DeleteResourceLogWithOptions(string ClusterId, string ResourceId, DeleteResourceLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4442,6 +4542,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the LogShipper feature of Log Service for a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceLogRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4452,8 +4555,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteResourceLogResponse
         /// </returns>
-        public async Task<DeleteResourceLogResponse> DeleteResourceLogWithOptionsAsync(string ClusterId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteResourceLogResponse> DeleteResourceLogWithOptionsAsync(string ClusterId, string ResourceId, DeleteResourceLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4478,14 +4582,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the LogShipper feature of Log Service for a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceLogRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteResourceLogResponse
         /// </returns>
-        public DeleteResourceLogResponse DeleteResourceLog(string ClusterId, string ResourceId)
+        public DeleteResourceLogResponse DeleteResourceLog(string ClusterId, string ResourceId, DeleteResourceLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteResourceLogWithOptions(ClusterId, ResourceId, headers, runtime);
+            return DeleteResourceLogWithOptions(ClusterId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4493,14 +4601,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the LogShipper feature of Log Service for a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteResourceLogRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteResourceLogResponse
         /// </returns>
-        public async Task<DeleteResourceLogResponse> DeleteResourceLogAsync(string ClusterId, string ResourceId)
+        public async Task<DeleteResourceLogResponse> DeleteResourceLogAsync(string ClusterId, string ResourceId, DeleteResourceLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteResourceLogWithOptionsAsync(ClusterId, ResourceId, headers, runtime);
+            return await DeleteResourceLogWithOptionsAsync(ClusterId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4508,6 +4620,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4518,8 +4633,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteServiceResponse
         /// </returns>
-        public DeleteServiceResponse DeleteServiceWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteServiceResponse DeleteServiceWithOptions(string ClusterId, string ServiceName, DeleteServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4544,6 +4660,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4554,8 +4673,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteServiceResponse
         /// </returns>
-        public async Task<DeleteServiceResponse> DeleteServiceWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteServiceResponse> DeleteServiceWithOptionsAsync(string ClusterId, string ServiceName, DeleteServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4580,14 +4700,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteServiceResponse
         /// </returns>
-        public DeleteServiceResponse DeleteService(string ClusterId, string ServiceName)
+        public DeleteServiceResponse DeleteService(string ClusterId, string ServiceName, DeleteServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteServiceWithOptions(ClusterId, ServiceName, headers, runtime);
+            return DeleteServiceWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4595,14 +4719,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteServiceResponse
         /// </returns>
-        public async Task<DeleteServiceResponse> DeleteServiceAsync(string ClusterId, string ServiceName)
+        public async Task<DeleteServiceResponse> DeleteServiceAsync(string ClusterId, string ServiceName, DeleteServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteServiceWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await DeleteServiceWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4610,6 +4738,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes the existing Autoscaler controller and disables the Autoscaler feature for a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceAutoScalerRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4620,8 +4751,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteServiceAutoScalerResponse
         /// </returns>
-        public DeleteServiceAutoScalerResponse DeleteServiceAutoScalerWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteServiceAutoScalerResponse DeleteServiceAutoScalerWithOptions(string ClusterId, string ServiceName, DeleteServiceAutoScalerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4646,6 +4778,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes the existing Autoscaler controller and disables the Autoscaler feature for a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceAutoScalerRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4656,8 +4791,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteServiceAutoScalerResponse
         /// </returns>
-        public async Task<DeleteServiceAutoScalerResponse> DeleteServiceAutoScalerWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteServiceAutoScalerResponse> DeleteServiceAutoScalerWithOptionsAsync(string ClusterId, string ServiceName, DeleteServiceAutoScalerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4682,14 +4818,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes the existing Autoscaler controller and disables the Autoscaler feature for a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceAutoScalerRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteServiceAutoScalerResponse
         /// </returns>
-        public DeleteServiceAutoScalerResponse DeleteServiceAutoScaler(string ClusterId, string ServiceName)
+        public DeleteServiceAutoScalerResponse DeleteServiceAutoScaler(string ClusterId, string ServiceName, DeleteServiceAutoScalerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteServiceAutoScalerWithOptions(ClusterId, ServiceName, headers, runtime);
+            return DeleteServiceAutoScalerWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4697,14 +4837,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes the existing Autoscaler controller and disables the Autoscaler feature for a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceAutoScalerRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteServiceAutoScalerResponse
         /// </returns>
-        public async Task<DeleteServiceAutoScalerResponse> DeleteServiceAutoScalerAsync(string ClusterId, string ServiceName)
+        public async Task<DeleteServiceAutoScalerResponse> DeleteServiceAutoScalerAsync(string ClusterId, string ServiceName, DeleteServiceAutoScalerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteServiceAutoScalerWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await DeleteServiceAutoScalerWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4712,6 +4856,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the Cronscaler feature for a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceCronScalerRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4722,8 +4869,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteServiceCronScalerResponse
         /// </returns>
-        public DeleteServiceCronScalerResponse DeleteServiceCronScalerWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteServiceCronScalerResponse DeleteServiceCronScalerWithOptions(string ClusterId, string ServiceName, DeleteServiceCronScalerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4748,6 +4896,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the Cronscaler feature for a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceCronScalerRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4758,8 +4909,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteServiceCronScalerResponse
         /// </returns>
-        public async Task<DeleteServiceCronScalerResponse> DeleteServiceCronScalerWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteServiceCronScalerResponse> DeleteServiceCronScalerWithOptionsAsync(string ClusterId, string ServiceName, DeleteServiceCronScalerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4784,14 +4936,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the Cronscaler feature for a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceCronScalerRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteServiceCronScalerResponse
         /// </returns>
-        public DeleteServiceCronScalerResponse DeleteServiceCronScaler(string ClusterId, string ServiceName)
+        public DeleteServiceCronScalerResponse DeleteServiceCronScaler(string ClusterId, string ServiceName, DeleteServiceCronScalerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteServiceCronScalerWithOptions(ClusterId, ServiceName, headers, runtime);
+            return DeleteServiceCronScalerWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4799,14 +4955,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the Cronscaler feature for a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceCronScalerRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteServiceCronScalerResponse
         /// </returns>
-        public async Task<DeleteServiceCronScalerResponse> DeleteServiceCronScalerAsync(string ClusterId, string ServiceName)
+        public async Task<DeleteServiceCronScalerResponse> DeleteServiceCronScalerAsync(string ClusterId, string ServiceName, DeleteServiceCronScalerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteServiceCronScalerWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await DeleteServiceCronScalerWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5126,6 +5286,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the traffic mirroring feature for a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceMirrorRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5136,8 +5299,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteServiceMirrorResponse
         /// </returns>
-        public DeleteServiceMirrorResponse DeleteServiceMirrorWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteServiceMirrorResponse DeleteServiceMirrorWithOptions(string ClusterId, string ServiceName, DeleteServiceMirrorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5162,6 +5326,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the traffic mirroring feature for a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceMirrorRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5172,8 +5339,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteServiceMirrorResponse
         /// </returns>
-        public async Task<DeleteServiceMirrorResponse> DeleteServiceMirrorWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteServiceMirrorResponse> DeleteServiceMirrorWithOptionsAsync(string ClusterId, string ServiceName, DeleteServiceMirrorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5198,14 +5366,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the traffic mirroring feature for a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceMirrorRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteServiceMirrorResponse
         /// </returns>
-        public DeleteServiceMirrorResponse DeleteServiceMirror(string ClusterId, string ServiceName)
+        public DeleteServiceMirrorResponse DeleteServiceMirror(string ClusterId, string ServiceName, DeleteServiceMirrorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteServiceMirrorWithOptions(ClusterId, ServiceName, headers, runtime);
+            return DeleteServiceMirrorWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5213,14 +5385,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Disables the traffic mirroring feature for a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteServiceMirrorRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteServiceMirrorResponse
         /// </returns>
-        public async Task<DeleteServiceMirrorResponse> DeleteServiceMirrorAsync(string ClusterId, string ServiceName)
+        public async Task<DeleteServiceMirrorResponse> DeleteServiceMirrorAsync(string ClusterId, string ServiceName, DeleteServiceMirrorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteServiceMirrorWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await DeleteServiceMirrorWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5228,6 +5404,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a virtual resource group that contains no resources or instances.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteVirtualResourceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5238,8 +5417,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteVirtualResourceResponse
         /// </returns>
-        public DeleteVirtualResourceResponse DeleteVirtualResourceWithOptions(string ClusterId, string VirtualResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteVirtualResourceResponse DeleteVirtualResourceWithOptions(string ClusterId, string VirtualResourceId, DeleteVirtualResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5264,6 +5444,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a virtual resource group that contains no resources or instances.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteVirtualResourceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5274,8 +5457,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DeleteVirtualResourceResponse
         /// </returns>
-        public async Task<DeleteVirtualResourceResponse> DeleteVirtualResourceWithOptionsAsync(string ClusterId, string VirtualResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteVirtualResourceResponse> DeleteVirtualResourceWithOptionsAsync(string ClusterId, string VirtualResourceId, DeleteVirtualResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5300,14 +5484,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a virtual resource group that contains no resources or instances.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteVirtualResourceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteVirtualResourceResponse
         /// </returns>
-        public DeleteVirtualResourceResponse DeleteVirtualResource(string ClusterId, string VirtualResourceId)
+        public DeleteVirtualResourceResponse DeleteVirtualResource(string ClusterId, string VirtualResourceId, DeleteVirtualResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteVirtualResourceWithOptions(ClusterId, VirtualResourceId, headers, runtime);
+            return DeleteVirtualResourceWithOptions(ClusterId, VirtualResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5315,14 +5503,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Deletes a virtual resource group that contains no resources or instances.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteVirtualResourceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteVirtualResourceResponse
         /// </returns>
-        public async Task<DeleteVirtualResourceResponse> DeleteVirtualResourceAsync(string ClusterId, string VirtualResourceId)
+        public async Task<DeleteVirtualResourceResponse> DeleteVirtualResourceAsync(string ClusterId, string VirtualResourceId, DeleteVirtualResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteVirtualResourceWithOptionsAsync(ClusterId, VirtualResourceId, headers, runtime);
+            return await DeleteVirtualResourceWithOptionsAsync(ClusterId, VirtualResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5330,6 +5522,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries details about the configurations of a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeBenchmarkTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5340,8 +5535,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeBenchmarkTaskResponse
         /// </returns>
-        public DescribeBenchmarkTaskResponse DescribeBenchmarkTaskWithOptions(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeBenchmarkTaskResponse DescribeBenchmarkTaskWithOptions(string ClusterId, string TaskName, DescribeBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5366,6 +5562,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries details about the configurations of a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeBenchmarkTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5376,8 +5575,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeBenchmarkTaskResponse
         /// </returns>
-        public async Task<DescribeBenchmarkTaskResponse> DescribeBenchmarkTaskWithOptionsAsync(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeBenchmarkTaskResponse> DescribeBenchmarkTaskWithOptionsAsync(string ClusterId, string TaskName, DescribeBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5402,14 +5602,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries details about the configurations of a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeBenchmarkTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeBenchmarkTaskResponse
         /// </returns>
-        public DescribeBenchmarkTaskResponse DescribeBenchmarkTask(string ClusterId, string TaskName)
+        public DescribeBenchmarkTaskResponse DescribeBenchmarkTask(string ClusterId, string TaskName, DescribeBenchmarkTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeBenchmarkTaskWithOptions(ClusterId, TaskName, headers, runtime);
+            return DescribeBenchmarkTaskWithOptions(ClusterId, TaskName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5417,14 +5621,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries details about the configurations of a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeBenchmarkTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeBenchmarkTaskResponse
         /// </returns>
-        public async Task<DescribeBenchmarkTaskResponse> DescribeBenchmarkTaskAsync(string ClusterId, string TaskName)
+        public async Task<DescribeBenchmarkTaskResponse> DescribeBenchmarkTaskAsync(string ClusterId, string TaskName, DescribeBenchmarkTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, headers, runtime);
+            return await DescribeBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5562,6 +5770,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the details of a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeGatewayRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5572,8 +5783,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeGatewayResponse
         /// </returns>
-        public DescribeGatewayResponse DescribeGatewayWithOptions(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeGatewayResponse DescribeGatewayWithOptions(string ClusterId, string GatewayId, DescribeGatewayRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5598,6 +5810,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the details of a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeGatewayRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5608,8 +5823,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeGatewayResponse
         /// </returns>
-        public async Task<DescribeGatewayResponse> DescribeGatewayWithOptionsAsync(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeGatewayResponse> DescribeGatewayWithOptionsAsync(string ClusterId, string GatewayId, DescribeGatewayRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5634,14 +5850,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the details of a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeGatewayRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeGatewayResponse
         /// </returns>
-        public DescribeGatewayResponse DescribeGateway(string ClusterId, string GatewayId)
+        public DescribeGatewayResponse DescribeGateway(string ClusterId, string GatewayId, DescribeGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeGatewayWithOptions(ClusterId, GatewayId, headers, runtime);
+            return DescribeGatewayWithOptions(ClusterId, GatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5649,14 +5869,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the details of a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeGatewayRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeGatewayResponse
         /// </returns>
-        public async Task<DescribeGatewayResponse> DescribeGatewayAsync(string ClusterId, string GatewayId)
+        public async Task<DescribeGatewayResponse> DescribeGatewayAsync(string ClusterId, string GatewayId, DescribeGatewayRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeGatewayWithOptionsAsync(ClusterId, GatewayId, headers, runtime);
+            return await DescribeGatewayWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5664,6 +5888,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the information about a service group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeGroupRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5674,8 +5901,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeGroupResponse
         /// </returns>
-        public DescribeGroupResponse DescribeGroupWithOptions(string ClusterId, string GroupName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeGroupResponse DescribeGroupWithOptions(string ClusterId, string GroupName, DescribeGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5700,6 +5928,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the information about a service group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeGroupRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5710,8 +5941,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeGroupResponse
         /// </returns>
-        public async Task<DescribeGroupResponse> DescribeGroupWithOptionsAsync(string ClusterId, string GroupName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeGroupResponse> DescribeGroupWithOptionsAsync(string ClusterId, string GroupName, DescribeGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5736,14 +5968,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the information about a service group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeGroupRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeGroupResponse
         /// </returns>
-        public DescribeGroupResponse DescribeGroup(string ClusterId, string GroupName)
+        public DescribeGroupResponse DescribeGroup(string ClusterId, string GroupName, DescribeGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeGroupWithOptions(ClusterId, GroupName, headers, runtime);
+            return DescribeGroupWithOptions(ClusterId, GroupName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5751,14 +5987,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the information about a service group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeGroupRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeGroupResponse
         /// </returns>
-        public async Task<DescribeGroupResponse> DescribeGroupAsync(string ClusterId, string GroupName)
+        public async Task<DescribeGroupResponse> DescribeGroupAsync(string ClusterId, string GroupName, DescribeGroupRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeGroupWithOptionsAsync(ClusterId, GroupName, headers, runtime);
+            return await DescribeGroupWithOptionsAsync(ClusterId, GroupName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5766,6 +6006,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Obtains a list of endpoints of service groups.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeGroupEndpointsRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5776,8 +6019,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeGroupEndpointsResponse
         /// </returns>
-        public DescribeGroupEndpointsResponse DescribeGroupEndpointsWithOptions(string ClusterId, string GroupName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeGroupEndpointsResponse DescribeGroupEndpointsWithOptions(string ClusterId, string GroupName, DescribeGroupEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5802,6 +6046,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Obtains a list of endpoints of service groups.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeGroupEndpointsRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -5812,8 +6059,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeGroupEndpointsResponse
         /// </returns>
-        public async Task<DescribeGroupEndpointsResponse> DescribeGroupEndpointsWithOptionsAsync(string ClusterId, string GroupName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeGroupEndpointsResponse> DescribeGroupEndpointsWithOptionsAsync(string ClusterId, string GroupName, DescribeGroupEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -5838,14 +6086,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Obtains a list of endpoints of service groups.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeGroupEndpointsRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeGroupEndpointsResponse
         /// </returns>
-        public DescribeGroupEndpointsResponse DescribeGroupEndpoints(string ClusterId, string GroupName)
+        public DescribeGroupEndpointsResponse DescribeGroupEndpoints(string ClusterId, string GroupName, DescribeGroupEndpointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeGroupEndpointsWithOptions(ClusterId, GroupName, headers, runtime);
+            return DescribeGroupEndpointsWithOptions(ClusterId, GroupName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5853,14 +6105,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Obtains a list of endpoints of service groups.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeGroupEndpointsRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeGroupEndpointsResponse
         /// </returns>
-        public async Task<DescribeGroupEndpointsResponse> DescribeGroupEndpointsAsync(string ClusterId, string GroupName)
+        public async Task<DescribeGroupEndpointsResponse> DescribeGroupEndpointsAsync(string ClusterId, string GroupName, DescribeGroupEndpointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeGroupEndpointsWithOptionsAsync(ClusterId, GroupName, headers, runtime);
+            return await DescribeGroupEndpointsWithOptionsAsync(ClusterId, GroupName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6128,6 +6384,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the information about a resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeResourceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6138,8 +6397,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeResourceResponse
         /// </returns>
-        public DescribeResourceResponse DescribeResourceWithOptions(string ClusterId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeResourceResponse DescribeResourceWithOptions(string ClusterId, string ResourceId, DescribeResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6164,6 +6424,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the information about a resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeResourceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6174,8 +6437,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeResourceResponse
         /// </returns>
-        public async Task<DescribeResourceResponse> DescribeResourceWithOptionsAsync(string ClusterId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeResourceResponse> DescribeResourceWithOptionsAsync(string ClusterId, string ResourceId, DescribeResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6200,14 +6464,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the information about a resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeResourceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeResourceResponse
         /// </returns>
-        public DescribeResourceResponse DescribeResource(string ClusterId, string ResourceId)
+        public DescribeResourceResponse DescribeResource(string ClusterId, string ResourceId, DescribeResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeResourceWithOptions(ClusterId, ResourceId, headers, runtime);
+            return DescribeResourceWithOptions(ClusterId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6215,14 +6483,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the information about a resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeResourceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeResourceResponse
         /// </returns>
-        public async Task<DescribeResourceResponse> DescribeResourceAsync(string ClusterId, string ResourceId)
+        public async Task<DescribeResourceResponse> DescribeResourceAsync(string ClusterId, string ResourceId, DescribeResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeResourceWithOptionsAsync(ClusterId, ResourceId, headers, runtime);
+            return await DescribeResourceWithOptionsAsync(ClusterId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6230,6 +6502,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries detailed configurations about a virtual private cloud (VPC) direct connection of a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeResourceDLinkRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6240,8 +6515,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeResourceDLinkResponse
         /// </returns>
-        public DescribeResourceDLinkResponse DescribeResourceDLinkWithOptions(string ClusterId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeResourceDLinkResponse DescribeResourceDLinkWithOptions(string ClusterId, string ResourceId, DescribeResourceDLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6266,6 +6542,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries detailed configurations about a virtual private cloud (VPC) direct connection of a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeResourceDLinkRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6276,8 +6555,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeResourceDLinkResponse
         /// </returns>
-        public async Task<DescribeResourceDLinkResponse> DescribeResourceDLinkWithOptionsAsync(string ClusterId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeResourceDLinkResponse> DescribeResourceDLinkWithOptionsAsync(string ClusterId, string ResourceId, DescribeResourceDLinkRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6302,14 +6582,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries detailed configurations about a virtual private cloud (VPC) direct connection of a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeResourceDLinkRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeResourceDLinkResponse
         /// </returns>
-        public DescribeResourceDLinkResponse DescribeResourceDLink(string ClusterId, string ResourceId)
+        public DescribeResourceDLinkResponse DescribeResourceDLink(string ClusterId, string ResourceId, DescribeResourceDLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeResourceDLinkWithOptions(ClusterId, ResourceId, headers, runtime);
+            return DescribeResourceDLinkWithOptions(ClusterId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6317,14 +6601,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries detailed configurations about a virtual private cloud (VPC) direct connection of a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeResourceDLinkRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeResourceDLinkResponse
         /// </returns>
-        public async Task<DescribeResourceDLinkResponse> DescribeResourceDLinkAsync(string ClusterId, string ResourceId)
+        public async Task<DescribeResourceDLinkResponse> DescribeResourceDLinkAsync(string ClusterId, string ResourceId, DescribeResourceDLinkRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeResourceDLinkWithOptionsAsync(ClusterId, ResourceId, headers, runtime);
+            return await DescribeResourceDLinkWithOptionsAsync(ClusterId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6332,6 +6620,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the details about the LogShipper configurations of Log Service for a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeResourceLogRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6342,8 +6633,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeResourceLogResponse
         /// </returns>
-        public DescribeResourceLogResponse DescribeResourceLogWithOptions(string ClusterId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeResourceLogResponse DescribeResourceLogWithOptions(string ClusterId, string ResourceId, DescribeResourceLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6368,6 +6660,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the details about the LogShipper configurations of Log Service for a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeResourceLogRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6378,8 +6673,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeResourceLogResponse
         /// </returns>
-        public async Task<DescribeResourceLogResponse> DescribeResourceLogWithOptionsAsync(string ClusterId, string ResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeResourceLogResponse> DescribeResourceLogWithOptionsAsync(string ClusterId, string ResourceId, DescribeResourceLogRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6404,14 +6700,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the details about the LogShipper configurations of Log Service for a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeResourceLogRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeResourceLogResponse
         /// </returns>
-        public DescribeResourceLogResponse DescribeResourceLog(string ClusterId, string ResourceId)
+        public DescribeResourceLogResponse DescribeResourceLog(string ClusterId, string ResourceId, DescribeResourceLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeResourceLogWithOptions(ClusterId, ResourceId, headers, runtime);
+            return DescribeResourceLogWithOptions(ClusterId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6419,14 +6719,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the details about the LogShipper configurations of Log Service for a dedicated resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeResourceLogRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeResourceLogResponse
         /// </returns>
-        public async Task<DescribeResourceLogResponse> DescribeResourceLogAsync(string ClusterId, string ResourceId)
+        public async Task<DescribeResourceLogResponse> DescribeResourceLogAsync(string ClusterId, string ResourceId, DescribeResourceLogRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeResourceLogWithOptionsAsync(ClusterId, ResourceId, headers, runtime);
+            return await DescribeResourceLogWithOptionsAsync(ClusterId, ResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6434,6 +6738,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the details about a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6444,8 +6751,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceResponse
         /// </returns>
-        public DescribeServiceResponse DescribeServiceWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeServiceResponse DescribeServiceWithOptions(string ClusterId, string ServiceName, DescribeServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6470,6 +6778,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the details about a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6480,8 +6791,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceResponse
         /// </returns>
-        public async Task<DescribeServiceResponse> DescribeServiceWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeServiceResponse> DescribeServiceWithOptionsAsync(string ClusterId, string ServiceName, DescribeServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6506,14 +6818,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the details about a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceResponse
         /// </returns>
-        public DescribeServiceResponse DescribeService(string ClusterId, string ServiceName)
+        public DescribeServiceResponse DescribeService(string ClusterId, string ServiceName, DescribeServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeServiceWithOptions(ClusterId, ServiceName, headers, runtime);
+            return DescribeServiceWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6521,14 +6837,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the details about a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceResponse
         /// </returns>
-        public async Task<DescribeServiceResponse> DescribeServiceAsync(string ClusterId, string ServiceName)
+        public async Task<DescribeServiceResponse> DescribeServiceAsync(string ClusterId, string ServiceName, DescribeServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeServiceWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await DescribeServiceWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6536,6 +6856,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries information about the Autoscaler configurations of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceAutoScalerRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6546,8 +6869,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceAutoScalerResponse
         /// </returns>
-        public DescribeServiceAutoScalerResponse DescribeServiceAutoScalerWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeServiceAutoScalerResponse DescribeServiceAutoScalerWithOptions(string ClusterId, string ServiceName, DescribeServiceAutoScalerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6572,6 +6896,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries information about the Autoscaler configurations of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceAutoScalerRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6582,8 +6909,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceAutoScalerResponse
         /// </returns>
-        public async Task<DescribeServiceAutoScalerResponse> DescribeServiceAutoScalerWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeServiceAutoScalerResponse> DescribeServiceAutoScalerWithOptionsAsync(string ClusterId, string ServiceName, DescribeServiceAutoScalerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6608,14 +6936,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries information about the Autoscaler configurations of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceAutoScalerRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceAutoScalerResponse
         /// </returns>
-        public DescribeServiceAutoScalerResponse DescribeServiceAutoScaler(string ClusterId, string ServiceName)
+        public DescribeServiceAutoScalerResponse DescribeServiceAutoScaler(string ClusterId, string ServiceName, DescribeServiceAutoScalerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeServiceAutoScalerWithOptions(ClusterId, ServiceName, headers, runtime);
+            return DescribeServiceAutoScalerWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6623,14 +6955,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries information about the Autoscaler configurations of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceAutoScalerRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceAutoScalerResponse
         /// </returns>
-        public async Task<DescribeServiceAutoScalerResponse> DescribeServiceAutoScalerAsync(string ClusterId, string ServiceName)
+        public async Task<DescribeServiceAutoScalerResponse> DescribeServiceAutoScalerAsync(string ClusterId, string ServiceName, DescribeServiceAutoScalerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeServiceAutoScalerWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await DescribeServiceAutoScalerWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6638,6 +6974,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the Cron Horizontal Pod Autoscaler (CronHPA) configurations of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceCronScalerRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6648,8 +6987,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceCronScalerResponse
         /// </returns>
-        public DescribeServiceCronScalerResponse DescribeServiceCronScalerWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeServiceCronScalerResponse DescribeServiceCronScalerWithOptions(string ClusterId, string ServiceName, DescribeServiceCronScalerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6674,6 +7014,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the Cron Horizontal Pod Autoscaler (CronHPA) configurations of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceCronScalerRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6684,8 +7027,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceCronScalerResponse
         /// </returns>
-        public async Task<DescribeServiceCronScalerResponse> DescribeServiceCronScalerWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeServiceCronScalerResponse> DescribeServiceCronScalerWithOptionsAsync(string ClusterId, string ServiceName, DescribeServiceCronScalerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6710,14 +7054,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the Cron Horizontal Pod Autoscaler (CronHPA) configurations of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceCronScalerRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceCronScalerResponse
         /// </returns>
-        public DescribeServiceCronScalerResponse DescribeServiceCronScaler(string ClusterId, string ServiceName)
+        public DescribeServiceCronScalerResponse DescribeServiceCronScaler(string ClusterId, string ServiceName, DescribeServiceCronScalerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeServiceCronScalerWithOptions(ClusterId, ServiceName, headers, runtime);
+            return DescribeServiceCronScalerWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6725,14 +7073,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the Cron Horizontal Pod Autoscaler (CronHPA) configurations of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceCronScalerRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceCronScalerResponse
         /// </returns>
-        public async Task<DescribeServiceCronScalerResponse> DescribeServiceCronScalerAsync(string ClusterId, string ServiceName)
+        public async Task<DescribeServiceCronScalerResponse> DescribeServiceCronScalerAsync(string ClusterId, string ServiceName, DescribeServiceCronScalerRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeServiceCronScalerWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await DescribeServiceCronScalerWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6740,6 +7092,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the diagnostics details of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceDiagnosisRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6750,8 +7105,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceDiagnosisResponse
         /// </returns>
-        public DescribeServiceDiagnosisResponse DescribeServiceDiagnosisWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeServiceDiagnosisResponse DescribeServiceDiagnosisWithOptions(string ClusterId, string ServiceName, DescribeServiceDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6776,6 +7132,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the diagnostics details of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceDiagnosisRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6786,8 +7145,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceDiagnosisResponse
         /// </returns>
-        public async Task<DescribeServiceDiagnosisResponse> DescribeServiceDiagnosisWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeServiceDiagnosisResponse> DescribeServiceDiagnosisWithOptionsAsync(string ClusterId, string ServiceName, DescribeServiceDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6812,14 +7172,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the diagnostics details of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceDiagnosisRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceDiagnosisResponse
         /// </returns>
-        public DescribeServiceDiagnosisResponse DescribeServiceDiagnosis(string ClusterId, string ServiceName)
+        public DescribeServiceDiagnosisResponse DescribeServiceDiagnosis(string ClusterId, string ServiceName, DescribeServiceDiagnosisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeServiceDiagnosisWithOptions(ClusterId, ServiceName, headers, runtime);
+            return DescribeServiceDiagnosisWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6827,14 +7191,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the diagnostics details of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceDiagnosisRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceDiagnosisResponse
         /// </returns>
-        public async Task<DescribeServiceDiagnosisResponse> DescribeServiceDiagnosisAsync(string ClusterId, string ServiceName)
+        public async Task<DescribeServiceDiagnosisResponse> DescribeServiceDiagnosisAsync(string ClusterId, string ServiceName, DescribeServiceDiagnosisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeServiceDiagnosisWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await DescribeServiceDiagnosisWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6842,6 +7210,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Obtains a list of service endpoints.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceEndpointsRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6852,8 +7223,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceEndpointsResponse
         /// </returns>
-        public DescribeServiceEndpointsResponse DescribeServiceEndpointsWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeServiceEndpointsResponse DescribeServiceEndpointsWithOptions(string ClusterId, string ServiceName, DescribeServiceEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6878,6 +7250,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Obtains a list of service endpoints.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceEndpointsRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6888,8 +7263,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceEndpointsResponse
         /// </returns>
-        public async Task<DescribeServiceEndpointsResponse> DescribeServiceEndpointsWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeServiceEndpointsResponse> DescribeServiceEndpointsWithOptionsAsync(string ClusterId, string ServiceName, DescribeServiceEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -6914,14 +7290,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Obtains a list of service endpoints.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceEndpointsRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceEndpointsResponse
         /// </returns>
-        public DescribeServiceEndpointsResponse DescribeServiceEndpoints(string ClusterId, string ServiceName)
+        public DescribeServiceEndpointsResponse DescribeServiceEndpoints(string ClusterId, string ServiceName, DescribeServiceEndpointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeServiceEndpointsWithOptions(ClusterId, ServiceName, headers, runtime);
+            return DescribeServiceEndpointsWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6929,14 +7309,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Obtains a list of service endpoints.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceEndpointsRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceEndpointsResponse
         /// </returns>
-        public async Task<DescribeServiceEndpointsResponse> DescribeServiceEndpointsAsync(string ClusterId, string ServiceName)
+        public async Task<DescribeServiceEndpointsResponse> DescribeServiceEndpointsAsync(string ClusterId, string ServiceName, DescribeServiceEndpointsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeServiceEndpointsWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await DescribeServiceEndpointsWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7114,6 +7498,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the diagnostics details of an instance that runs Elastic Algorithm Service (EAS).</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceInstanceDiagnosisRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -7124,8 +7511,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceInstanceDiagnosisResponse
         /// </returns>
-        public DescribeServiceInstanceDiagnosisResponse DescribeServiceInstanceDiagnosisWithOptions(string ClusterId, string ServiceName, string InstanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeServiceInstanceDiagnosisResponse DescribeServiceInstanceDiagnosisWithOptions(string ClusterId, string ServiceName, string InstanceName, DescribeServiceInstanceDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7150,6 +7538,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the diagnostics details of an instance that runs Elastic Algorithm Service (EAS).</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceInstanceDiagnosisRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -7160,8 +7551,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceInstanceDiagnosisResponse
         /// </returns>
-        public async Task<DescribeServiceInstanceDiagnosisResponse> DescribeServiceInstanceDiagnosisWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeServiceInstanceDiagnosisResponse> DescribeServiceInstanceDiagnosisWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, DescribeServiceInstanceDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7186,14 +7578,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the diagnostics details of an instance that runs Elastic Algorithm Service (EAS).</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceInstanceDiagnosisRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceInstanceDiagnosisResponse
         /// </returns>
-        public DescribeServiceInstanceDiagnosisResponse DescribeServiceInstanceDiagnosis(string ClusterId, string ServiceName, string InstanceName)
+        public DescribeServiceInstanceDiagnosisResponse DescribeServiceInstanceDiagnosis(string ClusterId, string ServiceName, string InstanceName, DescribeServiceInstanceDiagnosisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeServiceInstanceDiagnosisWithOptions(ClusterId, ServiceName, InstanceName, headers, runtime);
+            return DescribeServiceInstanceDiagnosisWithOptions(ClusterId, ServiceName, InstanceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7201,14 +7597,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the diagnostics details of an instance that runs Elastic Algorithm Service (EAS).</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceInstanceDiagnosisRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceInstanceDiagnosisResponse
         /// </returns>
-        public async Task<DescribeServiceInstanceDiagnosisResponse> DescribeServiceInstanceDiagnosisAsync(string ClusterId, string ServiceName, string InstanceName)
+        public async Task<DescribeServiceInstanceDiagnosisResponse> DescribeServiceInstanceDiagnosisAsync(string ClusterId, string ServiceName, string InstanceName, DescribeServiceInstanceDiagnosisRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeServiceInstanceDiagnosisWithOptionsAsync(ClusterId, ServiceName, InstanceName, headers, runtime);
+            return await DescribeServiceInstanceDiagnosisWithOptionsAsync(ClusterId, ServiceName, InstanceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7410,6 +7810,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries details about the traffic mirroring settings of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceMirrorRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -7420,8 +7823,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceMirrorResponse
         /// </returns>
-        public DescribeServiceMirrorResponse DescribeServiceMirrorWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeServiceMirrorResponse DescribeServiceMirrorWithOptions(string ClusterId, string ServiceName, DescribeServiceMirrorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7446,6 +7850,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries details about the traffic mirroring settings of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceMirrorRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -7456,8 +7863,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeServiceMirrorResponse
         /// </returns>
-        public async Task<DescribeServiceMirrorResponse> DescribeServiceMirrorWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeServiceMirrorResponse> DescribeServiceMirrorWithOptionsAsync(string ClusterId, string ServiceName, DescribeServiceMirrorRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7482,14 +7890,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries details about the traffic mirroring settings of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceMirrorRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceMirrorResponse
         /// </returns>
-        public DescribeServiceMirrorResponse DescribeServiceMirror(string ClusterId, string ServiceName)
+        public DescribeServiceMirrorResponse DescribeServiceMirror(string ClusterId, string ServiceName, DescribeServiceMirrorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeServiceMirrorWithOptions(ClusterId, ServiceName, headers, runtime);
+            return DescribeServiceMirrorWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7497,14 +7909,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries details about the traffic mirroring settings of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeServiceMirrorRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeServiceMirrorResponse
         /// </returns>
-        public async Task<DescribeServiceMirrorResponse> DescribeServiceMirrorAsync(string ClusterId, string ServiceName)
+        public async Task<DescribeServiceMirrorResponse> DescribeServiceMirrorAsync(string ClusterId, string ServiceName, DescribeServiceMirrorRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeServiceMirrorWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await DescribeServiceMirrorWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7796,6 +8212,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Views the details of a virtual resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeVirtualResourceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -7806,8 +8225,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeVirtualResourceResponse
         /// </returns>
-        public DescribeVirtualResourceResponse DescribeVirtualResourceWithOptions(string ClusterId, string VirtualResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribeVirtualResourceResponse DescribeVirtualResourceWithOptions(string ClusterId, string VirtualResourceId, DescribeVirtualResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7832,6 +8252,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Views the details of a virtual resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeVirtualResourceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -7842,8 +8265,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// DescribeVirtualResourceResponse
         /// </returns>
-        public async Task<DescribeVirtualResourceResponse> DescribeVirtualResourceWithOptionsAsync(string ClusterId, string VirtualResourceId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribeVirtualResourceResponse> DescribeVirtualResourceWithOptionsAsync(string ClusterId, string VirtualResourceId, DescribeVirtualResourceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7868,14 +8292,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Views the details of a virtual resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeVirtualResourceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeVirtualResourceResponse
         /// </returns>
-        public DescribeVirtualResourceResponse DescribeVirtualResource(string ClusterId, string VirtualResourceId)
+        public DescribeVirtualResourceResponse DescribeVirtualResource(string ClusterId, string VirtualResourceId, DescribeVirtualResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DescribeVirtualResourceWithOptions(ClusterId, VirtualResourceId, headers, runtime);
+            return DescribeVirtualResourceWithOptions(ClusterId, VirtualResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7883,14 +8311,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Views the details of a virtual resource group.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DescribeVirtualResourceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DescribeVirtualResourceResponse
         /// </returns>
-        public async Task<DescribeVirtualResourceResponse> DescribeVirtualResourceAsync(string ClusterId, string VirtualResourceId)
+        public async Task<DescribeVirtualResourceResponse> DescribeVirtualResourceAsync(string ClusterId, string VirtualResourceId, DescribeVirtualResourceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DescribeVirtualResourceWithOptionsAsync(ClusterId, VirtualResourceId, headers, runtime);
+            return await DescribeVirtualResourceWithOptionsAsync(ClusterId, VirtualResourceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8724,6 +9156,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries a list of custom domain names of a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListGatewayDomainsRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -8734,8 +9169,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListGatewayDomainsResponse
         /// </returns>
-        public ListGatewayDomainsResponse ListGatewayDomainsWithOptions(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListGatewayDomainsResponse ListGatewayDomainsWithOptions(string ClusterId, string GatewayId, ListGatewayDomainsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8760,6 +9196,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries a list of custom domain names of a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListGatewayDomainsRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -8770,8 +9209,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListGatewayDomainsResponse
         /// </returns>
-        public async Task<ListGatewayDomainsResponse> ListGatewayDomainsWithOptionsAsync(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListGatewayDomainsResponse> ListGatewayDomainsWithOptionsAsync(string ClusterId, string GatewayId, ListGatewayDomainsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8796,14 +9236,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries a list of custom domain names of a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListGatewayDomainsRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListGatewayDomainsResponse
         /// </returns>
-        public ListGatewayDomainsResponse ListGatewayDomains(string ClusterId, string GatewayId)
+        public ListGatewayDomainsResponse ListGatewayDomains(string ClusterId, string GatewayId, ListGatewayDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListGatewayDomainsWithOptions(ClusterId, GatewayId, headers, runtime);
+            return ListGatewayDomainsWithOptions(ClusterId, GatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8811,14 +9255,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries a list of custom domain names of a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListGatewayDomainsRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListGatewayDomainsResponse
         /// </returns>
-        public async Task<ListGatewayDomainsResponse> ListGatewayDomainsAsync(string ClusterId, string GatewayId)
+        public async Task<ListGatewayDomainsResponse> ListGatewayDomainsAsync(string ClusterId, string GatewayId, ListGatewayDomainsRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListGatewayDomainsWithOptionsAsync(ClusterId, GatewayId, headers, runtime);
+            return await ListGatewayDomainsWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8826,6 +9274,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries a list of the internal endpoints of a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListGatewayIntranetLinkedVpcRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -8836,8 +9287,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListGatewayIntranetLinkedVpcResponse
         /// </returns>
-        public ListGatewayIntranetLinkedVpcResponse ListGatewayIntranetLinkedVpcWithOptions(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListGatewayIntranetLinkedVpcResponse ListGatewayIntranetLinkedVpcWithOptions(string ClusterId, string GatewayId, ListGatewayIntranetLinkedVpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8862,6 +9314,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries a list of the internal endpoints of a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListGatewayIntranetLinkedVpcRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -8872,8 +9327,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListGatewayIntranetLinkedVpcResponse
         /// </returns>
-        public async Task<ListGatewayIntranetLinkedVpcResponse> ListGatewayIntranetLinkedVpcWithOptionsAsync(string ClusterId, string GatewayId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListGatewayIntranetLinkedVpcResponse> ListGatewayIntranetLinkedVpcWithOptionsAsync(string ClusterId, string GatewayId, ListGatewayIntranetLinkedVpcRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8898,14 +9354,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries a list of the internal endpoints of a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListGatewayIntranetLinkedVpcRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListGatewayIntranetLinkedVpcResponse
         /// </returns>
-        public ListGatewayIntranetLinkedVpcResponse ListGatewayIntranetLinkedVpc(string ClusterId, string GatewayId)
+        public ListGatewayIntranetLinkedVpcResponse ListGatewayIntranetLinkedVpc(string ClusterId, string GatewayId, ListGatewayIntranetLinkedVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListGatewayIntranetLinkedVpcWithOptions(ClusterId, GatewayId, headers, runtime);
+            return ListGatewayIntranetLinkedVpcWithOptions(ClusterId, GatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8913,14 +9373,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries a list of the internal endpoints of a private gateway.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListGatewayIntranetLinkedVpcRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListGatewayIntranetLinkedVpcResponse
         /// </returns>
-        public async Task<ListGatewayIntranetLinkedVpcResponse> ListGatewayIntranetLinkedVpcAsync(string ClusterId, string GatewayId)
+        public async Task<ListGatewayIntranetLinkedVpcResponse> ListGatewayIntranetLinkedVpcAsync(string ClusterId, string GatewayId, ListGatewayIntranetLinkedVpcRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListGatewayIntranetLinkedVpcWithOptionsAsync(ClusterId, GatewayId, headers, runtime);
+            return await ListGatewayIntranetLinkedVpcWithOptionsAsync(ClusterId, GatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9058,6 +9522,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Obtains the zones supported by a gateway within an intranet.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListGatewayIntranetSupportedZoneRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -9068,8 +9535,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListGatewayIntranetSupportedZoneResponse
         /// </returns>
-        public ListGatewayIntranetSupportedZoneResponse ListGatewayIntranetSupportedZoneWithOptions(string GatewayId, string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListGatewayIntranetSupportedZoneResponse ListGatewayIntranetSupportedZoneWithOptions(string GatewayId, string ClusterId, ListGatewayIntranetSupportedZoneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -9094,6 +9562,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Obtains the zones supported by a gateway within an intranet.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListGatewayIntranetSupportedZoneRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -9104,8 +9575,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListGatewayIntranetSupportedZoneResponse
         /// </returns>
-        public async Task<ListGatewayIntranetSupportedZoneResponse> ListGatewayIntranetSupportedZoneWithOptionsAsync(string GatewayId, string ClusterId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListGatewayIntranetSupportedZoneResponse> ListGatewayIntranetSupportedZoneWithOptionsAsync(string GatewayId, string ClusterId, ListGatewayIntranetSupportedZoneRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -9130,14 +9602,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Obtains the zones supported by a gateway within an intranet.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListGatewayIntranetSupportedZoneRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListGatewayIntranetSupportedZoneResponse
         /// </returns>
-        public ListGatewayIntranetSupportedZoneResponse ListGatewayIntranetSupportedZone(string GatewayId, string ClusterId)
+        public ListGatewayIntranetSupportedZoneResponse ListGatewayIntranetSupportedZone(string GatewayId, string ClusterId, ListGatewayIntranetSupportedZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListGatewayIntranetSupportedZoneWithOptions(GatewayId, ClusterId, headers, runtime);
+            return ListGatewayIntranetSupportedZoneWithOptions(GatewayId, ClusterId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9145,14 +9621,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Obtains the zones supported by a gateway within an intranet.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListGatewayIntranetSupportedZoneRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListGatewayIntranetSupportedZoneResponse
         /// </returns>
-        public async Task<ListGatewayIntranetSupportedZoneResponse> ListGatewayIntranetSupportedZoneAsync(string GatewayId, string ClusterId)
+        public async Task<ListGatewayIntranetSupportedZoneResponse> ListGatewayIntranetSupportedZoneAsync(string GatewayId, string ClusterId, ListGatewayIntranetSupportedZoneRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListGatewayIntranetSupportedZoneWithOptionsAsync(GatewayId, ClusterId, headers, runtime);
+            return await ListGatewayIntranetSupportedZoneWithOptionsAsync(GatewayId, ClusterId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10110,6 +10590,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the containers of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListServiceContainersRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -10120,8 +10603,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListServiceContainersResponse
         /// </returns>
-        public ListServiceContainersResponse ListServiceContainersWithOptions(string ClusterId, string ServiceName, string InstanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListServiceContainersResponse ListServiceContainersWithOptions(string ClusterId, string ServiceName, string InstanceName, ListServiceContainersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -10146,6 +10630,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the containers of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListServiceContainersRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -10156,8 +10643,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListServiceContainersResponse
         /// </returns>
-        public async Task<ListServiceContainersResponse> ListServiceContainersWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListServiceContainersResponse> ListServiceContainersWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, ListServiceContainersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -10182,14 +10670,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the containers of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListServiceContainersRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListServiceContainersResponse
         /// </returns>
-        public ListServiceContainersResponse ListServiceContainers(string ClusterId, string ServiceName, string InstanceName)
+        public ListServiceContainersResponse ListServiceContainers(string ClusterId, string ServiceName, string InstanceName, ListServiceContainersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListServiceContainersWithOptions(ClusterId, ServiceName, InstanceName, headers, runtime);
+            return ListServiceContainersWithOptions(ClusterId, ServiceName, InstanceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10197,14 +10689,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Queries the containers of a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListServiceContainersRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListServiceContainersResponse
         /// </returns>
-        public async Task<ListServiceContainersResponse> ListServiceContainersAsync(string ClusterId, string ServiceName, string InstanceName)
+        public async Task<ListServiceContainersResponse> ListServiceContainersAsync(string ClusterId, string ServiceName, string InstanceName, ListServiceContainersRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListServiceContainersWithOptionsAsync(ClusterId, ServiceName, InstanceName, headers, runtime);
+            return await ListServiceContainersWithOptionsAsync(ClusterId, ServiceName, InstanceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10212,6 +10708,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>获取故障注入信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListServiceInstanceFaultInjectionInfoRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -10222,8 +10721,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListServiceInstanceFaultInjectionInfoResponse
         /// </returns>
-        public ListServiceInstanceFaultInjectionInfoResponse ListServiceInstanceFaultInjectionInfoWithOptions(string ClusterId, string ServiceName, string InstanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListServiceInstanceFaultInjectionInfoResponse ListServiceInstanceFaultInjectionInfoWithOptions(string ClusterId, string ServiceName, string InstanceName, ListServiceInstanceFaultInjectionInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -10248,6 +10748,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>获取故障注入信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListServiceInstanceFaultInjectionInfoRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -10258,8 +10761,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ListServiceInstanceFaultInjectionInfoResponse
         /// </returns>
-        public async Task<ListServiceInstanceFaultInjectionInfoResponse> ListServiceInstanceFaultInjectionInfoWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListServiceInstanceFaultInjectionInfoResponse> ListServiceInstanceFaultInjectionInfoWithOptionsAsync(string ClusterId, string ServiceName, string InstanceName, ListServiceInstanceFaultInjectionInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -10284,14 +10788,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>获取故障注入信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListServiceInstanceFaultInjectionInfoRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListServiceInstanceFaultInjectionInfoResponse
         /// </returns>
-        public ListServiceInstanceFaultInjectionInfoResponse ListServiceInstanceFaultInjectionInfo(string ClusterId, string ServiceName, string InstanceName)
+        public ListServiceInstanceFaultInjectionInfoResponse ListServiceInstanceFaultInjectionInfo(string ClusterId, string ServiceName, string InstanceName, ListServiceInstanceFaultInjectionInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ListServiceInstanceFaultInjectionInfoWithOptions(ClusterId, ServiceName, InstanceName, headers, runtime);
+            return ListServiceInstanceFaultInjectionInfoWithOptions(ClusterId, ServiceName, InstanceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10299,14 +10807,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>获取故障注入信息</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ListServiceInstanceFaultInjectionInfoRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ListServiceInstanceFaultInjectionInfoResponse
         /// </returns>
-        public async Task<ListServiceInstanceFaultInjectionInfoResponse> ListServiceInstanceFaultInjectionInfoAsync(string ClusterId, string ServiceName, string InstanceName)
+        public async Task<ListServiceInstanceFaultInjectionInfoResponse> ListServiceInstanceFaultInjectionInfoAsync(string ClusterId, string ServiceName, string InstanceName, ListServiceInstanceFaultInjectionInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ListServiceInstanceFaultInjectionInfoWithOptionsAsync(ClusterId, ServiceName, InstanceName, headers, runtime);
+            return await ListServiceInstanceFaultInjectionInfoWithOptionsAsync(ClusterId, ServiceName, InstanceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11486,6 +11998,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Resets tenant configurations.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ReinstallTenantAddonRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -11496,8 +12011,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ReinstallTenantAddonResponse
         /// </returns>
-        public ReinstallTenantAddonResponse ReinstallTenantAddonWithOptions(string ClusterId, string TenantAddonName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ReinstallTenantAddonResponse ReinstallTenantAddonWithOptions(string ClusterId, string TenantAddonName, ReinstallTenantAddonRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -11522,6 +12038,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Resets tenant configurations.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ReinstallTenantAddonRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -11532,8 +12051,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// ReinstallTenantAddonResponse
         /// </returns>
-        public async Task<ReinstallTenantAddonResponse> ReinstallTenantAddonWithOptionsAsync(string ClusterId, string TenantAddonName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ReinstallTenantAddonResponse> ReinstallTenantAddonWithOptionsAsync(string ClusterId, string TenantAddonName, ReinstallTenantAddonRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -11558,14 +12078,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Resets tenant configurations.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ReinstallTenantAddonRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ReinstallTenantAddonResponse
         /// </returns>
-        public ReinstallTenantAddonResponse ReinstallTenantAddon(string ClusterId, string TenantAddonName)
+        public ReinstallTenantAddonResponse ReinstallTenantAddon(string ClusterId, string TenantAddonName, ReinstallTenantAddonRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return ReinstallTenantAddonWithOptions(ClusterId, TenantAddonName, headers, runtime);
+            return ReinstallTenantAddonWithOptions(ClusterId, TenantAddonName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11573,14 +12097,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Resets tenant configurations.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// ReinstallTenantAddonRequest
+        /// </param>
+        /// 
         /// <returns>
         /// ReinstallTenantAddonResponse
         /// </returns>
-        public async Task<ReinstallTenantAddonResponse> ReinstallTenantAddonAsync(string ClusterId, string TenantAddonName)
+        public async Task<ReinstallTenantAddonResponse> ReinstallTenantAddonAsync(string ClusterId, string TenantAddonName, ReinstallTenantAddonRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await ReinstallTenantAddonWithOptionsAsync(ClusterId, TenantAddonName, headers, runtime);
+            return await ReinstallTenantAddonWithOptionsAsync(ClusterId, TenantAddonName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11726,6 +12254,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Restarts a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// RestartServiceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -11736,8 +12267,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// RestartServiceResponse
         /// </returns>
-        public RestartServiceResponse RestartServiceWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RestartServiceResponse RestartServiceWithOptions(string ClusterId, string ServiceName, RestartServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -11762,6 +12294,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Restarts a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// RestartServiceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -11772,8 +12307,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// RestartServiceResponse
         /// </returns>
-        public async Task<RestartServiceResponse> RestartServiceWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RestartServiceResponse> RestartServiceWithOptionsAsync(string ClusterId, string ServiceName, RestartServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -11798,14 +12334,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Restarts a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// RestartServiceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// RestartServiceResponse
         /// </returns>
-        public RestartServiceResponse RestartService(string ClusterId, string ServiceName)
+        public RestartServiceResponse RestartService(string ClusterId, string ServiceName, RestartServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return RestartServiceWithOptions(ClusterId, ServiceName, headers, runtime);
+            return RestartServiceWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11813,14 +12353,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Restarts a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// RestartServiceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// RestartServiceResponse
         /// </returns>
-        public async Task<RestartServiceResponse> RestartServiceAsync(string ClusterId, string ServiceName)
+        public async Task<RestartServiceResponse> RestartServiceAsync(string ClusterId, string ServiceName, RestartServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await RestartServiceWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await RestartServiceWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11966,6 +12510,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Starts a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StartBenchmarkTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -11976,8 +12523,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// StartBenchmarkTaskResponse
         /// </returns>
-        public StartBenchmarkTaskResponse StartBenchmarkTaskWithOptions(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StartBenchmarkTaskResponse StartBenchmarkTaskWithOptions(string ClusterId, string TaskName, StartBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12002,6 +12550,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Starts a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StartBenchmarkTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12012,8 +12563,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// StartBenchmarkTaskResponse
         /// </returns>
-        public async Task<StartBenchmarkTaskResponse> StartBenchmarkTaskWithOptionsAsync(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StartBenchmarkTaskResponse> StartBenchmarkTaskWithOptionsAsync(string ClusterId, string TaskName, StartBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12038,14 +12590,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Starts a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StartBenchmarkTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// StartBenchmarkTaskResponse
         /// </returns>
-        public StartBenchmarkTaskResponse StartBenchmarkTask(string ClusterId, string TaskName)
+        public StartBenchmarkTaskResponse StartBenchmarkTask(string ClusterId, string TaskName, StartBenchmarkTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return StartBenchmarkTaskWithOptions(ClusterId, TaskName, headers, runtime);
+            return StartBenchmarkTaskWithOptions(ClusterId, TaskName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12053,14 +12609,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Starts a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StartBenchmarkTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// StartBenchmarkTaskResponse
         /// </returns>
-        public async Task<StartBenchmarkTaskResponse> StartBenchmarkTaskAsync(string ClusterId, string TaskName)
+        public async Task<StartBenchmarkTaskResponse> StartBenchmarkTaskAsync(string ClusterId, string TaskName, StartBenchmarkTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await StartBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, headers, runtime);
+            return await StartBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12068,6 +12628,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Starts a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StartServiceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12078,8 +12641,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// StartServiceResponse
         /// </returns>
-        public StartServiceResponse StartServiceWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StartServiceResponse StartServiceWithOptions(string ClusterId, string ServiceName, StartServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12104,6 +12668,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Starts a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StartServiceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12114,8 +12681,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// StartServiceResponse
         /// </returns>
-        public async Task<StartServiceResponse> StartServiceWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StartServiceResponse> StartServiceWithOptionsAsync(string ClusterId, string ServiceName, StartServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12140,14 +12708,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Starts a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StartServiceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// StartServiceResponse
         /// </returns>
-        public StartServiceResponse StartService(string ClusterId, string ServiceName)
+        public StartServiceResponse StartService(string ClusterId, string ServiceName, StartServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return StartServiceWithOptions(ClusterId, ServiceName, headers, runtime);
+            return StartServiceWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12155,14 +12727,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Starts a service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StartServiceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// StartServiceResponse
         /// </returns>
-        public async Task<StartServiceResponse> StartServiceAsync(string ClusterId, string ServiceName)
+        public async Task<StartServiceResponse> StartServiceAsync(string ClusterId, string ServiceName, StartServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await StartServiceWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await StartServiceWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12170,6 +12746,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Stops a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StopBenchmarkTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12180,8 +12759,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// StopBenchmarkTaskResponse
         /// </returns>
-        public StopBenchmarkTaskResponse StopBenchmarkTaskWithOptions(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StopBenchmarkTaskResponse StopBenchmarkTaskWithOptions(string ClusterId, string TaskName, StopBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12206,6 +12786,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Stops a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StopBenchmarkTaskRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12216,8 +12799,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// StopBenchmarkTaskResponse
         /// </returns>
-        public async Task<StopBenchmarkTaskResponse> StopBenchmarkTaskWithOptionsAsync(string ClusterId, string TaskName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StopBenchmarkTaskResponse> StopBenchmarkTaskWithOptionsAsync(string ClusterId, string TaskName, StopBenchmarkTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12242,14 +12826,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Stops a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StopBenchmarkTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// StopBenchmarkTaskResponse
         /// </returns>
-        public StopBenchmarkTaskResponse StopBenchmarkTask(string ClusterId, string TaskName)
+        public StopBenchmarkTaskResponse StopBenchmarkTask(string ClusterId, string TaskName, StopBenchmarkTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return StopBenchmarkTaskWithOptions(ClusterId, TaskName, headers, runtime);
+            return StopBenchmarkTaskWithOptions(ClusterId, TaskName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12257,14 +12845,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Stops a stress testing task.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StopBenchmarkTaskRequest
+        /// </param>
+        /// 
         /// <returns>
         /// StopBenchmarkTaskResponse
         /// </returns>
-        public async Task<StopBenchmarkTaskResponse> StopBenchmarkTaskAsync(string ClusterId, string TaskName)
+        public async Task<StopBenchmarkTaskResponse> StopBenchmarkTaskAsync(string ClusterId, string TaskName, StopBenchmarkTaskRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await StopBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, headers, runtime);
+            return await StopBenchmarkTaskWithOptionsAsync(ClusterId, TaskName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12272,6 +12864,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Stops a running service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StopServiceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12282,8 +12877,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// StopServiceResponse
         /// </returns>
-        public StopServiceResponse StopServiceWithOptions(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StopServiceResponse StopServiceWithOptions(string ClusterId, string ServiceName, StopServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12308,6 +12904,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Stops a running service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StopServiceRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -12318,8 +12917,9 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <returns>
         /// StopServiceResponse
         /// </returns>
-        public async Task<StopServiceResponse> StopServiceWithOptionsAsync(string ClusterId, string ServiceName, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StopServiceResponse> StopServiceWithOptionsAsync(string ClusterId, string ServiceName, StopServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -12344,14 +12944,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Stops a running service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StopServiceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// StopServiceResponse
         /// </returns>
-        public StopServiceResponse StopService(string ClusterId, string ServiceName)
+        public StopServiceResponse StopService(string ClusterId, string ServiceName, StopServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return StopServiceWithOptions(ClusterId, ServiceName, headers, runtime);
+            return StopServiceWithOptions(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12359,14 +12963,18 @@ namespace AlibabaCloud.SDK.Eas20210701
         /// <para>Stops a running service.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// StopServiceRequest
+        /// </param>
+        /// 
         /// <returns>
         /// StopServiceResponse
         /// </returns>
-        public async Task<StopServiceResponse> StopServiceAsync(string ClusterId, string ServiceName)
+        public async Task<StopServiceResponse> StopServiceAsync(string ClusterId, string ServiceName, StopServiceRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await StopServiceWithOptionsAsync(ClusterId, ServiceName, headers, runtime);
+            return await StopServiceWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

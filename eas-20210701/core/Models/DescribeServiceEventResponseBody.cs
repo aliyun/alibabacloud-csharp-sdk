@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
             [Validation(Required=false)]
             public string Reason { get; set; }
 
+            [NameInMap("Resource")]
+            [Validation(Required=false)]
+            public string Resource { get; set; }
+
             /// <summary>
             /// <para>The time when the event occurred. The time must be in UTC.</para>
             /// 
