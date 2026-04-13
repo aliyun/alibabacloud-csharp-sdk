@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
+                [NameInMap("ElasticStrength")]
+                [Validation(Required=false)]
+                public string ElasticStrength { get; set; }
+
                 /// <summary>
                 /// <para>The instance type of the resource pool.</para>
                 /// 
@@ -236,6 +240,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [NameInMap("Code")]
             [Validation(Required=false)]
             public string Code { get; set; }
+
+            [NameInMap("ElasticStrength")]
+            [Validation(Required=false)]
+            public string ElasticStrength { get; set; }
 
             /// <summary>
             /// <para>The instance type of the resource pool.</para>
