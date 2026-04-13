@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeBackupDBsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The details of the databases.</para>
-        /// </summary>
         [NameInMap("Databases")]
         [Validation(Required=false)]
         public DescribeBackupDBsResponseBodyDatabases Databases { get; set; }
@@ -20,12 +17,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeBackupDBsResponseBodyDatabasesDatabase> Database { get; set; }
             public class DescribeBackupDBsResponseBodyDatabasesDatabase : TeaModel {
-                /// <summary>
-                /// <para>The name of the database.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>mongodbtest</para>
-                /// </summary>
                 [NameInMap("DBName")]
                 [Validation(Required=false)]
                 public string DBName { get; set; }

@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        /// <summary>
-        /// <para>The details of performance metrics.</para>
-        /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
         public DescribeDBInstancePerformanceResponseBodyPerformanceKeys PerformanceKeys { get; set; }
@@ -30,19 +27,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey> PerformanceKey { get; set; }
             public class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKey : TeaModel {
-                /// <summary>
-                /// <para>The performance metrics that are returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CpuUsage</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// <para>The details of the performance metric values.</para>
-                /// </summary>
                 [NameInMap("PerformanceValues")]
                 [Validation(Required=false)]
                 public DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValues PerformanceValues { get; set; }
@@ -51,22 +39,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
                     [Validation(Required=false)]
                     public List<DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue> PerformanceValue { get; set; }
                     public class DescribeDBInstancePerformanceResponseBodyPerformanceKeysPerformanceKeyPerformanceValuesPerformanceValue : TeaModel {
-                        /// <summary>
-                        /// <para>The date and time when the metric value was generated.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2022-06-13T10:58:00Z</para>
-                        /// </summary>
                         [NameInMap("Date")]
                         [Validation(Required=false)]
                         public string Date { get; set; }
 
-                        /// <summary>
-                        /// <para>The value of the performance metric.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0.23</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -75,23 +51,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
 
                 }
 
-                /// <summary>
-                /// <para>The unit of the performance metric.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>%</para>
-                /// </summary>
                 [NameInMap("Unit")]
                 [Validation(Required=false)]
                 public string Unit { get; set; }
 
-                /// <summary>
-                /// <para>The format of the performance metric value. If the performance metric contains multiple fields, the fields are separated with ampersands ( &amp;).</para>
-                /// <para>For example, if you query disk space usage, the returned value of the <b>ValueFormat</b> parameter is <b>ins_size\&amp;data_size\&amp;log_size</b>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cpu_usage</para>
-                /// </summary>
                 [NameInMap("ValueFormat")]
                 [Validation(Required=false)]
                 public string ValueFormat { get; set; }

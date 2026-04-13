@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class DescribeAvailableEngineVersionResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of one or more engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
-        /// <remarks>
-        /// <para> An empty string is returned if the latest version is being used.</para>
-        /// </remarks>
-        /// </summary>
         [NameInMap("EngineVersions")]
         [Validation(Required=false)]
         public DescribeAvailableEngineVersionResponseBodyEngineVersions EngineVersions { get; set; }

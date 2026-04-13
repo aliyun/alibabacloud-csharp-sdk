@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public bool? EnableAudit { get; set; }
 
+        [NameInMap("HotTtlForV2Standard")]
+        [Validation(Required=false)]
+        public long? HotTtlForV2Standard { get; set; }
+
         /// <summary>
         /// <para>Indicates whether a rule to distribute logs to Logtail is created. For more information, see <a href="https://help.aliyun.com/document_detail/28979.html">Logtail overview</a>. Valid values:</para>
         /// <list type="bullet">
@@ -114,6 +118,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("TtlForTrail")]
         [Validation(Required=false)]
         public long? TtlForTrail { get; set; }
+
+        [NameInMap("TtlForV2Standard")]
+        [Validation(Required=false)]
+        public long? TtlForV2Standard { get; set; }
 
         /// <summary>
         /// <para>The used storage capacity for the formal edition of the audit log feature. Unit: bytes.</para>

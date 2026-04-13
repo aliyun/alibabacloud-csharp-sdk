@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dds20151201
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"cn-qingdao", "mongodb.aliyuncs.com"},
+                {"cn-qingdao", "mongodb.cn-qingdao.aliyuncs.com"},
                 {"cn-beijing", "mongodb.aliyuncs.com"},
                 {"cn-zhangjiakou", "mongodb.cn-zhangjiakou.aliyuncs.com"},
                 {"cn-huhehaote", "mongodb.cn-huhehaote.aliyuncs.com"},
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Dds20151201
                 {"cn-shenzhen-finance-1", "mongodb.cn-shenzhen-finance-1.aliyuncs.com"},
                 {"cn-north-2-gov-1", "mongodb.cn-north-2-gov-1.aliyuncs.com"},
                 {"ap-northeast-2-pop", "mongodb.aliyuncs.com"},
-                {"cn-beijing-finance-1", "mongodb.aliyuncs.com"},
+                {"cn-beijing-finance-1", "mongodb.cn-beijing-finance-1.aliyuncs.com"},
                 {"cn-beijing-finance-pop", "mongodb.aliyuncs.com"},
                 {"cn-beijing-gov-1", "mongodb.aliyuncs.com"},
                 {"cn-beijing-nu16-b01", "mongodb.aliyuncs.com"},
@@ -99,6 +99,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for an SRV endpoint for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AllocateDBInstanceSrvNetworkAddressRequest
         /// </param>
@@ -160,6 +165,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<AllocateDBInstanceSrvNetworkAddressResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for an SRV endpoint for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AllocateDBInstanceSrvNetworkAddressRequest
         /// </param>
@@ -221,6 +231,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<AllocateDBInstanceSrvNetworkAddressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for an SRV endpoint for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AllocateDBInstanceSrvNetworkAddressRequest
         /// </param>
@@ -234,6 +249,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return AllocateDBInstanceSrvNetworkAddressWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Applies for an SRV endpoint for an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AllocateDBInstanceSrvNetworkAddressRequest
         /// </param>
@@ -765,7 +785,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// <para>Checks whether Key Management Service (KMS) keys are authorized to an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -832,7 +852,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// <para>Checks whether Key Management Service (KMS) keys are authorized to an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -899,7 +919,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// <para>Checks whether Key Management Service (KMS) keys are authorized to an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -922,7 +942,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to check whether KMS keys are authorized to ApsaraDB for MongoDB instances.</para>
+        /// <para>Checks whether Key Management Service (KMS) keys are authorized to an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1209,7 +1229,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a service-linked role is created.</para>
+        /// <para>Checks whether a service-linked role (SLR) is created for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1259,7 +1279,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a service-linked role is created.</para>
+        /// <para>Checks whether a service-linked role (SLR) is created for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1309,7 +1329,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a service-linked role is created.</para>
+        /// <para>Checks whether a service-linked role (SLR) is created for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1327,7 +1347,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries whether a service-linked role is created.</para>
+        /// <para>Checks whether a service-linked role (SLR) is created for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3489,7 +3509,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除MongoDB备份集</para>
+        /// <para>Deletes the backup set of MongoDB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3551,7 +3571,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除MongoDB备份集</para>
+        /// <para>Deletes the backup set of MongoDB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3613,7 +3633,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除MongoDB备份集</para>
+        /// <para>Deletes the backup set of MongoDB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3631,7 +3651,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除MongoDB备份集</para>
+        /// <para>Deletes the backup set of MongoDB.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4899,6 +4919,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return await DescribeActiveOperationTaskCountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query maintenance task types and task quantities.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeActiveOperationTaskRegionRequest
         /// </param>
@@ -4956,6 +4981,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeActiveOperationTaskRegionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query maintenance task types and task quantities.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeActiveOperationTaskRegionRequest
         /// </param>
@@ -5013,6 +5043,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<DescribeActiveOperationTaskRegionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query maintenance task types and task quantities.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeActiveOperationTaskRegionRequest
         /// </param>
@@ -5026,6 +5061,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return DescribeActiveOperationTaskRegionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query maintenance task types and task quantities.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeActiveOperationTaskRegionRequest
         /// </param>
@@ -6405,7 +6445,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
+        /// <para>Queries the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6463,7 +6503,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
+        /// <para>Queries the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6521,7 +6561,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
+        /// <para>Queries the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6539,7 +6579,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
+        /// <para>Queries the engine versions to which an ApsaraDB for MongoDB instance can be upgraded.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7201,7 +7241,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.</para>
+        /// <para>Queries the backup storage capacity of an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7267,7 +7307,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.</para>
+        /// <para>Queries the backup storage capacity of an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7333,7 +7373,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.</para>
+        /// <para>Queries the backup storage capacity of an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7351,7 +7391,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the storage used for backup in an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks. Note that you are charged only for the backup-used storage of each shard in a sharded cluster instance. You can call this operation only to query the storage used by a single shard in the instance for backup.</para>
+        /// <para>Queries the backup storage capacity of an ApsaraDB for MongoDB replica set or sharded cluster instance that uses cloud disks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7765,6 +7805,238 @@ namespace AlibabaCloud.SDK.Dds20151201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeBackupsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries binary log files bound to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBinlogFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBinlogFilesResponse
+        /// </returns>
+        public DescribeBinlogFilesResponse DescribeBinlogFilesWithOptions(DescribeBinlogFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BinlogId))
+            {
+                query["BinlogId"] = request.BinlogId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestRegion))
+            {
+                query["DestRegion"] = request.DestRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcRegion))
+            {
+                query["SrcRegion"] = request.SrcRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBinlogFiles",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBinlogFilesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries binary log files bound to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBinlogFilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBinlogFilesResponse
+        /// </returns>
+        public async Task<DescribeBinlogFilesResponse> DescribeBinlogFilesWithOptionsAsync(DescribeBinlogFilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BinlogId))
+            {
+                query["BinlogId"] = request.BinlogId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
+            {
+                query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DestRegion))
+            {
+                query["DestRegion"] = request.DestRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeId))
+            {
+                query["NodeId"] = request.NodeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcRegion))
+            {
+                query["SrcRegion"] = request.SrcRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBinlogFiles",
+                Version = "2015-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBinlogFilesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries binary log files bound to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBinlogFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBinlogFilesResponse
+        /// </returns>
+        public DescribeBinlogFilesResponse DescribeBinlogFiles(DescribeBinlogFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeBinlogFilesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries binary log files bound to an ApsaraDB for MongoDB instance.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBinlogFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBinlogFilesResponse
+        /// </returns>
+        public async Task<DescribeBinlogFilesResponse> DescribeBinlogFilesAsync(DescribeBinlogFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeBinlogFilesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9157,7 +9429,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看规格信息详情</para>
+        /// <para>Queries the specifications of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9219,7 +9491,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看规格信息详情</para>
+        /// <para>Queries the specifications of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9281,7 +9553,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看规格信息详情</para>
+        /// <para>Queries the specifications of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9299,7 +9571,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看规格信息详情</para>
+        /// <para>Queries the specifications of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14289,7 +14561,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries entries in operational logs of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the operational logs of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14403,7 +14675,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries entries in operational logs of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the operational logs of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14517,7 +14789,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries entries in operational logs of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the operational logs of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14543,7 +14815,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries entries in operational logs of an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the operational logs of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14569,7 +14841,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the Elastic Compute Service (ECS) security groups that are associated with an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14627,7 +14899,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the Elastic Compute Service (ECS) security groups that are associated with an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14685,7 +14957,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the Elastic Compute Service (ECS) security groups that are associated with an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14703,7 +14975,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query ECS security groups that are bound to an ApsaraDB for MongoDB instance.</para>
+        /// <para>Queries the Elastic Compute Service (ECS) security groups that are associated with an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17143,6 +17415,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return await ModifyAccountDescriptionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the O\\\&amp;M task configurations for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyActiveOperationMaintenanceConfigRequest
         /// </param>
@@ -17212,6 +17489,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyActiveOperationMaintenanceConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the O\\\&amp;M task configurations for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyActiveOperationMaintenanceConfigRequest
         /// </param>
@@ -17281,6 +17563,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyActiveOperationMaintenanceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the O\\\&amp;M task configurations for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyActiveOperationMaintenanceConfigRequest
         /// </param>
@@ -17294,6 +17581,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return ModifyActiveOperationMaintenanceConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the O\\\&amp;M task configurations for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyActiveOperationMaintenanceConfigRequest
         /// </param>
@@ -17309,7 +17601,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
+        /// <para>Modifies the switching time of scheduled O\\\\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17379,7 +17671,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
+        /// <para>Modifies the switching time of scheduled O\\\\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17449,7 +17741,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
+        /// <para>Modifies the switching time of scheduled O\\\\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17467,7 +17759,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the switching time of scheduled O\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
+        /// <para>Modifies the switching time of scheduled O\\\\\\&amp;M tasks for an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17726,6 +18018,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotStoragePeriod))
+            {
+                query["HotStoragePeriod"] = request.HotStoragePeriod;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
                 query["OwnerAccount"] = request.OwnerAccount;
@@ -17807,6 +18103,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceId))
             {
                 query["DBInstanceId"] = request.DBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HotStoragePeriod))
+            {
+                query["HotStoragePeriod"] = request.HotStoragePeriod;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -17905,7 +18205,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改MongoDB备份集的过期时间</para>
+        /// <para>Modifies the expiration time of MongoDB backup sets</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17971,7 +18271,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改MongoDB备份集的过期时间</para>
+        /// <para>Modifies the expiration time of MongoDB backup sets</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18037,7 +18337,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改MongoDB备份集的过期时间</para>
+        /// <para>Modifies the expiration time of MongoDB backup sets</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18055,7 +18355,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改MongoDB备份集的过期时间</para>
+        /// <para>Modifies the expiration time of MongoDB backup sets</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18403,6 +18703,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return await ModifyBackupPolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies existing release protection configurations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceAttributeRequest
         /// </param>
@@ -18460,6 +18765,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceAttributeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies existing release protection configurations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceAttributeRequest
         /// </param>
@@ -18517,6 +18827,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return TeaModel.ToObject<ModifyDBInstanceAttributeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies existing release protection configurations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceAttributeRequest
         /// </param>
@@ -18530,6 +18845,11 @@ namespace AlibabaCloud.SDK.Dds20151201
             return ModifyDBInstanceAttributeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies existing release protection configurations.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceAttributeRequest
         /// </param>
@@ -18545,7 +18865,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例配置</para>
+        /// <para>Modifies the configurations of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18611,7 +18931,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例配置</para>
+        /// <para>Modifies the configurations of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18677,7 +18997,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例配置</para>
+        /// <para>Modifies the configurations of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18695,7 +19015,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例配置</para>
+        /// <para>Modifies the configurations of an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18747,6 +19067,14 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceModifySuffix))
+            {
+                query["ForceModifySuffix"] = request.ForceModifySuffix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewConnectionString))
             {
                 query["NewConnectionString"] = request.NewConnectionString;
@@ -18766,6 +19094,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortModifyOnly))
+            {
+                query["PortModifyOnly"] = request.PortModifyOnly;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -18830,6 +19162,14 @@ namespace AlibabaCloud.SDK.Dds20151201
             {
                 query["DBInstanceId"] = request.DBInstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceModifySuffix))
+            {
+                query["ForceModifySuffix"] = request.ForceModifySuffix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewConnectionString))
             {
                 query["NewConnectionString"] = request.NewConnectionString;
@@ -18849,6 +19189,10 @@ namespace AlibabaCloud.SDK.Dds20151201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PortModifyOnly))
+            {
+                query["PortModifyOnly"] = request.PortModifyOnly;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
             {
@@ -23209,7 +23553,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改MongoDB实例的SRV连接地址</para>
+        /// <para>Modifies the SRV connection string that is used to connect to an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23275,7 +23619,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改MongoDB实例的SRV连接地址</para>
+        /// <para>Modifies the SRV connection string that is used to connect to an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23341,7 +23685,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改MongoDB实例的SRV连接地址</para>
+        /// <para>Modifies the SRV connection string that is used to connect to an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23359,7 +23703,7 @@ namespace AlibabaCloud.SDK.Dds20151201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改MongoDB实例的SRV连接地址</para>
+        /// <para>Modifies the SRV connection string that is used to connect to an ApsaraDB for MongoDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

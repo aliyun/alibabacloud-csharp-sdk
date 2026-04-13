@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
     public class ModifyDBInstanceConnectionStringRequest : TeaModel {
         /// <summary>
         /// <para>The current endpoint that is to be modified.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-bpxxxxxxxx.mongodb.rds.aliyuncs.com</para>
@@ -34,12 +33,23 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        [NameInMap("ForceModifySuffix")]
+        [Validation(Required=false)]
+        public bool? ForceModifySuffix { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vpc</para>
+        /// </summary>
+        [NameInMap("NetworkType")]
+        [Validation(Required=false)]
+        public string NetworkType { get; set; }
+
         /// <summary>
         /// <para>The new endpoint. It must be 8 to 64 characters in length and can contain letters and digits. It must start with a lowercase letter.</para>
         /// <remarks>
         /// <para>You need only to specify the prefix of the endpoint. The content other than the prefix cannot be modified.</para>
         /// </remarks>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyuntest111</para>
@@ -81,6 +91,10 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        [NameInMap("PortModifyOnly")]
+        [Validation(Required=false)]
+        public bool? PortModifyOnly { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]

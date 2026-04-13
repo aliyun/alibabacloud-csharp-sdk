@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dds20151201.Models
 {
     public class ModifyDBInstanceConnectionStringResponseBody : TeaModel {
+        [NameInMap("ModifiedConnectionString")]
+        [Validation(Required=false)]
+        public string ModifiedConnectionString { get; set; }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 

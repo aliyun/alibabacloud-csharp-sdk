@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
         [Validation(Required=false)]
         public string Engine { get; set; }
 
-        /// <summary>
-        /// <para>Details about the operational log entries.</para>
-        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeRunningLogRecordsResponseBodyItems Items { get; set; }
@@ -30,42 +27,18 @@ namespace AlibabaCloud.SDK.Dds20151201.Models
             [Validation(Required=false)]
             public List<DescribeRunningLogRecordsResponseBodyItemsLogRecords> LogRecords { get; set; }
             public class DescribeRunningLogRecordsResponseBodyItemsLogRecords : TeaModel {
-                /// <summary>
-                /// <para>The category of the log entry.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>NETWORK</para>
-                /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
-                /// <summary>
-                /// <para>The connection information of the log entry.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>conn18xxxxxx</para>
-                /// </summary>
                 [NameInMap("ConnInfo")]
                 [Validation(Required=false)]
                 public string ConnInfo { get; set; }
 
-                /// <summary>
-                /// <para>The content of the log entry.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>end connection 11.xxx.xxx.xx:3xxxx (0 connections now open)\n</para>
-                /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
                 public string Content { get; set; }
 
-                /// <summary>
-                /// <para>The time when the log entry was generated. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-02-26T12:09:34Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
