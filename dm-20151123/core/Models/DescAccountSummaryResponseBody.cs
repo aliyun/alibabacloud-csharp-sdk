@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DescAccountSummaryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The daily quota.</para>
+        /// <para>Daily quota</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? DailyQuota { get; set; }
 
         /// <summary>
-        /// <para>The remaining daily free quota.</para>
+        /// <para>remaining amount of daily free quota</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? DailyRemainFreeQuota { get; set; }
 
         /// <summary>
-        /// <para>The status of Dayu. This parameter is deprecated and retained for compatibility.</para>
+        /// <para>Dayu status (deprecated, retained for compatibility reasons.)</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? DayuStatus { get; set; }
 
         /// <summary>
-        /// <para>The number of domain names.</para>
+        /// <para>Number of domains</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? Domains { get; set; }
 
         /// <summary>
-        /// <para>The effective period.</para>
+        /// <para>Effective time</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -60,17 +60,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? EnableTimes { get; set; }
 
         /// <summary>
-        /// <para>The type of the outbound IP channel.</para>
-        /// <ol>
-        /// <item><description><para>backup: A backup IP channel that is not actively maintained. Customers using this channel are advised to purchase a dedicated IP for better stability.</para>
-        /// </description></item>
-        /// <item><description><para>normal: A normal IP channel that is continuously maintained by the email delivery team to ensure stable and reliable service.</para>
-        /// </description></item>
-        /// </ol>
-        /// 
-        /// <b>Example:</b>
-        /// <para>normal</para>
-        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -79,7 +68,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string IpChannelType { get; set; }
 
         /// <summary>
-        /// <para>The number of sender addresses.</para>
+        /// <para>Number of sending addresses</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -89,7 +78,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? MailAddresses { get; set; }
 
         /// <summary>
-        /// <para>The maximum reputation level.</para>
+        /// <para>Maximum level</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -99,7 +88,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? MaxQuotaLevel { get; set; }
 
         /// <summary>
-        /// <para>The monthly quota.</para>
+        /// <para>Monthly quota</para>
         /// 
         /// <b>Example:</b>
         /// <para>60000</para>
@@ -109,7 +98,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? MonthQuota { get; set; }
 
         /// <summary>
-        /// <para>The reputation level.</para>
+        /// <para>Credit level</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -119,7 +108,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? QuotaLevel { get; set; }
 
         /// <summary>
-        /// <para>The number of recipients.</para>
+        /// <para>Number of recipients</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -129,7 +118,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? Receivers { get; set; }
 
         /// <summary>
-        /// <para>The remaining free quota.</para>
+        /// <para>Remaining amount of total free quota</para>
         /// 
         /// <b>Example:</b>
         /// <para>1910</para>
@@ -139,7 +128,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? RemainFreeQuota { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>82B295BB-7E69-491F-9896-ECEAFF09E1A4</para>
@@ -149,7 +138,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. It is retained for compatibility.</para>
+        /// <para>Deprecated, retained for compatibility reasons.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -159,7 +148,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? SmsRecord { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. It is retained for compatibility.</para>
+        /// <para>Deprecated, retained for compatibility reasons.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -169,7 +158,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? SmsSign { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. It is retained for compatibility.</para>
+        /// <para>Deprecated, retained for compatibility reasons.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -179,7 +168,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? SmsTemplates { get; set; }
 
         /// <summary>
-        /// <para>The number of tags.</para>
+        /// <para>Number of tags</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -189,7 +178,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? Tags { get; set; }
 
         /// <summary>
-        /// <para>The number of templates.</para>
+        /// <para>Number of templates</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -199,7 +188,11 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? Templates { get; set; }
 
         /// <summary>
-        /// <para>The status of the user. Valid values: 0: Normal. 1: Freeze. 2: Overdue payment. 4: Outbound messages are restricted. 8: The user is logically deleted.</para>
+        /// <para>User status:
+        /// 1 Frozen
+        /// 2 In arrears
+        /// 4 Restricted from sending
+        /// 8 Logically deleted</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

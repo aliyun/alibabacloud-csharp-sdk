@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryReceiverByParamRequest : TeaModel {
         /// <summary>
-        /// <para>Search keyword. Default value: all information.</para>
+        /// <para>Keyword, defaults to all information if not specified</para>
         /// 
         /// <b>Example:</b>
         /// <para>mesh-notification</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Page number.</para>
+        /// <para>Current page number</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page. Default value: 10.</para>
+        /// <para>Number of items per page, default: 10</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -52,12 +52,12 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>List status. Valid values:</para>
+        /// <para>Delivery result. If not filled, it represents all statuses. Values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: uploading</para>
-        /// </description></item>
-        /// <item><description><para>1: upload complete</para>
-        /// </description></item>
+        /// <item><description>0: Success</description></item>
+        /// <item><description>2: Invalid address</description></item>
+        /// <item><description>3: Spam</description></item>
+        /// <item><description>4: Failure</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

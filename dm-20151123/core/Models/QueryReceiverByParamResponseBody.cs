@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryReceiverByParamResponseBody : TeaModel {
         /// <summary>
-        /// <para>Used for paging. If more results are available, set this value as the NextStart parameter in your next request.</para>
+        /// <para>Used for pagination. If there are more results, set this returned value to the NextStart in the next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6aec200853#102#1638894326#<a href="mailto:test@example.com">test@example.com</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string NextStart { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page.</para>
+        /// <para>Number of items displayed per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of entries.</para>
+        /// <para>Total count</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

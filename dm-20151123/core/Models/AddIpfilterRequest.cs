@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class AddIpfilterRequest : TeaModel {
         /// <summary>
+        /// <para>IP Address/IP Range/IP Segment</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxx.xxx.xxx.xxx
+        /// xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx
+        /// xxx.xxx.xxx.xxx/xxx</para>
         /// </summary>
         [NameInMap("IpAddress")]
         [Validation(Required=false)]

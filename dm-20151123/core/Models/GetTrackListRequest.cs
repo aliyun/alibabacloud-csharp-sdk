@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class GetTrackListRequest : TeaModel {
         /// <summary>
-        /// <para>The sender address.</para>
+        /// <para>Sender address.</para>
         /// <remarks>
-        /// <para>If you omit this parameter, the query returns data for all sender addresses. This parameter is required if you specify the <c>TagName</c> parameter.</para>
+        /// <para>If not filled, it represents all addresses; if TagName is provided, this parameter must not be empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,34 +22,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
-        /// <summary>
-        /// <para>The ID of the configuration set.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xxx</para>
-        /// </summary>
         [NameInMap("ConfigSetId")]
         [Validation(Required=false)]
         public string ConfigSetId { get; set; }
 
-        /// <summary>
-        /// <para>The dedicated IP address to query.</para>
-        /// <para>If this parameter is omitted, data for all dedicated IPs is returned.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xxx.xxx.xxx.xxx</para>
-        /// </summary>
         [NameInMap("DedicatedIp")]
         [Validation(Required=false)]
         public string DedicatedIp { get; set; }
 
-        /// <summary>
-        /// <para>The ID of the dedicated IP pool to query.</para>
-        /// <para>If this parameter is omitted, data for all IP pools is returned.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>xxx</para>
-        /// </summary>
         [NameInMap("DedicatedIpPoolId")]
         [Validation(Required=false)]
         public string DedicatedIpPoolId { get; set; }
@@ -63,7 +43,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>The end date of the query. The duration between the StartTime and EndTime cannot exceed 7 days. The format is <c>yyyy-MM-dd</c>.</para>
+        /// <para>End time, the span between start and end time cannot exceed 7 days. Format: yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,44 +53,25 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        /// <summary>
-        /// <para>The Email Service Provider (ESP) to query. Valid values are:</para>
-        /// <list type="bullet">
-        /// <item><description><para>gmail.com</para>
-        /// </description></item>
-        /// <item><description><para>yahoo.com</para>
-        /// </description></item>
-        /// <item><description><para>outlook.com</para>
-        /// </description></item>
-        /// <item><description><para>icloud.com</para>
-        /// </description></item>
-        /// <item><description><para>Others: Any ESP not listed above.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>If you omit this parameter, the query returns data for all ESPs.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>gmail.com</para>
-        /// </summary>
         [NameInMap("Esp")]
         [Validation(Required=false)]
         public string Esp { get; set; }
 
         /// <summary>
-        /// <para>Set this to 0 for the first query. For subsequent queries, set it to 1 to perform a paged query in chronological order. (This field is deprecated)</para>
+        /// <para>For the first query, set to 0; for subsequent queries, fixed at 1. 1 indicates pagination in ascending order by time. (This field is deprecated)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>（本字段已废弃）</para>
+        /// <para>(This field is deprecated)</para>
         /// </summary>
         [NameInMap("Offset")]
         [Validation(Required=false)]
         public string Offset { get; set; }
 
         /// <summary>
-        /// <para>Used for pagination. Do not set this parameter for the first query. For subsequent queries, set this parameter to the <c>OffsetCreateTime</c> value returned in the previous response. (This field is deprecated)</para>
+        /// <para>Used for pagination. Not set for the first query, but for subsequent queries, it should be set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>（本字段已废弃）</para>
+        /// <para>(This field is deprecated)</para>
         /// </summary>
         [NameInMap("OffsetCreateTime")]
         [Validation(Required=false)]
@@ -120,7 +81,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>(This field is deprecated)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>（本字段已废弃）</para>
+        /// <para>(This field is deprecated)</para>
         /// </summary>
         [NameInMap("OffsetCreateTimeDesc")]
         [Validation(Required=false)]
@@ -131,7 +92,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>Page number</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -141,7 +102,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>Page size</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -159,7 +120,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start date of the query. The date must be within the last 30 days. The format is <c>yyyy-MM-dd</c>.</para>
+        /// <para>Start time, which cannot be earlier than 30 days. Format: yyyy-MM-dd.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -170,7 +131,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The tag name.</para>
+        /// <para>Tag name</para>
         /// 
         /// <b>Example:</b>
         /// <para>tagname</para>
@@ -183,7 +144,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>(This field is deprecated)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>（本字段已废弃）</para>
+        /// <para>(This field is deprecated)</para>
         /// </summary>
         [NameInMap("Total")]
         [Validation(Required=false)]

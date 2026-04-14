@@ -9,18 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DedicatedIpPoolListRequest : TeaModel {
-        /// <summary>
-        /// <para>Specifies whether to return all entries.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>false</para>
-        /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The keyword to search for IP pools by name.</para>
+        /// <para>Search keyword for the name</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -30,7 +24,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The page number to return, starting from 1.</para>
+        /// <para>Page index, starting from 1</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +34,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Number of items per page</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

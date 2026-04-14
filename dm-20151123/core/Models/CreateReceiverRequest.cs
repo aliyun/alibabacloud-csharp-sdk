@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>List description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>描述</para>
+        /// <para>the description</para>
         /// </summary>
         [NameInMap("Desc")]
         [Validation(Required=false)]

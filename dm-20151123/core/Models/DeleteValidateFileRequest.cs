@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DeleteValidateFileRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file that is returned after the task is submitted.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx-xxxx</para>
         /// </summary>

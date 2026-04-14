@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SendTestByTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The sender address. The length cannot exceed 60 characters.</para>
+        /// <para>Sender address, with a maximum length of 60 characters</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>账号+@+域名</para>
+        /// <para><a href="mailto:test@example.com">test@example.com</a></para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The birthday. The length cannot exceed 30 characters.</para>
+        /// <para>Birthday, with a maximum length of 30 characters</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000/01/01</para>
@@ -31,28 +31,28 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Birthday { get; set; }
 
         /// <summary>
-        /// <para>The recipient email address. The length cannot exceed 60 characters.</para>
+        /// <para>Recipient address, with a maximum length of 60 characters</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>账号+@+域名</para>
+        /// <para><a href="mailto:test1@example.com">test1@example.com</a></para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>The gender. The length cannot exceed 30 characters.</para>
+        /// <para>Gender, with a maximum length of 30 characters</para>
         /// 
         /// <b>Example:</b>
-        /// <para>先生</para>
+        /// <para>doctor</para>
         /// </summary>
         [NameInMap("Gender")]
         [Validation(Required=false)]
         public string Gender { get; set; }
 
         /// <summary>
-        /// <para>The mobile number. The length cannot exceed 30 characters.</para>
+        /// <para>Mobile, with a maximum length of 30 characters</para>
         /// 
         /// <b>Example:</b>
         /// <para>1380000****</para>
@@ -62,10 +62,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Mobile { get; set; }
 
         /// <summary>
-        /// <para>The nickname. The length cannot exceed 30 characters.</para>
+        /// <para>NickName, with a maximum length of 30 characters</para>
         /// 
         /// <b>Example:</b>
-        /// <para>昵称</para>
+        /// <para>LC</para>
         /// </summary>
         [NameInMap("NickName")]
         [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The template ID.</para>
+        /// <para>Template ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -103,10 +103,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TemplateParams { get; set; }
 
         /// <summary>
-        /// <para>The user name. The length cannot exceed 30 characters.</para>
+        /// <para>UserName, with a maximum length of 30 characters</para>
         /// 
         /// <b>Example:</b>
-        /// <para>姓名</para>
+        /// <para>Lucy</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

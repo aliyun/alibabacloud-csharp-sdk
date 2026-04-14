@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>Deprecated, kept for historical compatibility.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>废弃，历史原因兼容</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("FromType")]
         [Validation(Required=false)]

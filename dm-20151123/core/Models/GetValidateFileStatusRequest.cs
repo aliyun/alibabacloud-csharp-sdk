@@ -10,7 +10,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class GetValidateFileStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The file ID returned after the task is submitted.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

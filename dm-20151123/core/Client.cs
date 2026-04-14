@@ -73,7 +73,8 @@ namespace AlibabaCloud.SDK.Dm20151123
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -176,7 +177,8 @@ namespace AlibabaCloud.SDK.Dm20151123
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -244,7 +246,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加IP防护信息</para>
+        /// <para>Add IP Protection Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -298,7 +300,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加IP防护信息</para>
+        /// <para>Add IP Protection Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -352,7 +354,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加IP防护信息</para>
+        /// <para>Add IP Protection Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -370,7 +372,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加IP防护信息</para>
+        /// <para>Add IP Protection Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -532,7 +534,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a batch of emails.</para>
+        /// <para>Batch Send Emails</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -634,7 +636,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a batch of emails.</para>
+        /// <para>Batch Send Emails</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -736,7 +738,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a batch of emails.</para>
+        /// <para>Batch Send Emails</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -754,7 +756,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a batch of emails.</para>
+        /// <para>Batch Send Emails</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1348,7 +1350,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a sender address from a configuration set.</para>
+        /// <para>配置集取消关联发信地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1394,7 +1396,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a sender address from a configuration set.</para>
+        /// <para>配置集取消关联发信地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1440,7 +1442,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a sender address from a configuration set.</para>
+        /// <para>配置集取消关联发信地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1458,7 +1460,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates a sender address from a configuration set.</para>
+        /// <para>配置集取消关联发信地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1476,7 +1478,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration set. You can create up to 100 configuration sets.</para>
+        /// <para>配置集创建</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1526,7 +1528,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration set. You can create up to 100 configuration sets.</para>
+        /// <para>配置集创建</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1576,7 +1578,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration set. You can create up to 100 configuration sets.</para>
+        /// <para>配置集创建</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1594,7 +1596,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration set. You can create up to 100 configuration sets.</para>
+        /// <para>配置集创建</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1612,7 +1614,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes configuration sets.</para>
+        /// <para>删除配置集</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1658,7 +1660,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes configuration sets.</para>
+        /// <para>删除配置集</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1704,7 +1706,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes configuration sets.</para>
+        /// <para>删除配置集</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1722,7 +1724,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes configuration sets.</para>
+        /// <para>删除配置集</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1740,7 +1742,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a configuration set.</para>
+        /// <para>配置集详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1782,7 +1784,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a configuration set.</para>
+        /// <para>配置集详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1824,7 +1826,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a configuration set.</para>
+        /// <para>配置集详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1842,7 +1844,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a configuration set.</para>
+        /// <para>配置集详情</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1860,7 +1862,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists configuration sets.</para>
+        /// <para>配置集列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1914,7 +1916,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists configuration sets.</para>
+        /// <para>配置集列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1968,7 +1970,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists configuration sets.</para>
+        /// <para>配置集列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1986,7 +1988,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists configuration sets.</para>
+        /// <para>配置集列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2004,7 +2006,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a configuration set with a sender address.</para>
+        /// <para>配置集关联发信地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2050,7 +2052,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a configuration set with a sender address.</para>
+        /// <para>配置集关联发信地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2096,7 +2098,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a configuration set with a sender address.</para>
+        /// <para>配置集关联发信地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2114,7 +2116,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a configuration set with a sender address.</para>
+        /// <para>配置集关联发信地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2132,7 +2134,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a configuration set.</para>
+        /// <para>配置集更新</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2186,7 +2188,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a configuration set.</para>
+        /// <para>配置集更新</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2240,7 +2242,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a configuration set.</para>
+        /// <para>配置集更新</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2258,7 +2260,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a configuration set.</para>
+        /// <para>配置集更新</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2748,7 +2750,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a tag.</para>
+        /// <para>Create Tag</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2806,7 +2808,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a tag.</para>
+        /// <para>Create Tag</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2864,7 +2866,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a tag.</para>
+        /// <para>Create Tag</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2882,7 +2884,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a tag.</para>
+        /// <para>Create Tag</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3044,7 +3046,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets auto-renewal for a dedicated IP address.</para>
+        /// <para>Set Dedicated IP Auto Renewal</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3090,7 +3092,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets auto-renewal for a dedicated IP address.</para>
+        /// <para>Set Dedicated IP Auto Renewal</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3136,7 +3138,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets auto-renewal for a dedicated IP address.</para>
+        /// <para>Set Dedicated IP Auto Renewal</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3154,7 +3156,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets auto-renewal for a dedicated IP address.</para>
+        /// <para>Set Dedicated IP Auto Renewal</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3172,7 +3174,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the prefetch method for a dedicated IP address.</para>
+        /// <para>Change the warmup method for a dedicated IP</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3218,7 +3220,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the prefetch method for a dedicated IP address.</para>
+        /// <para>Change the warmup method for a dedicated IP</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3264,7 +3266,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the prefetch method for a dedicated IP address.</para>
+        /// <para>Change the warmup method for a dedicated IP</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3282,7 +3284,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the prefetch method for a dedicated IP address.</para>
+        /// <para>Change the warmup method for a dedicated IP</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3300,7 +3302,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP addresses that you have purchased.</para>
+        /// <para>Dedicated IP User IP List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3350,7 +3352,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP addresses that you have purchased.</para>
+        /// <para>Dedicated IP User IP List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3400,7 +3402,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP addresses that you have purchased.</para>
+        /// <para>Dedicated IP User IP List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3418,7 +3420,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP addresses that you have purchased.</para>
+        /// <para>Dedicated IP User IP List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3436,12 +3438,9 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the IP addresses that are not assigned to any IP pool. This operation is used for IP pool configuration.</para>
+        /// <para>Purchased Independent IPs Not Added to Pool</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DedicatedIpNonePoolListRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -3469,12 +3468,9 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the IP addresses that are not assigned to any IP pool. This operation is used for IP pool configuration.</para>
+        /// <para>Purchased Independent IPs Not Added to Pool</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DedicatedIpNonePoolListRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -3502,7 +3498,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the IP addresses that are not assigned to any IP pool. This operation is used for IP pool configuration.</para>
+        /// <para>Purchased Independent IPs Not Added to Pool</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3516,7 +3512,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the IP addresses that are not assigned to any IP pool. This operation is used for IP pool configuration.</para>
+        /// <para>Purchased Independent IPs Not Added to Pool</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3530,7 +3526,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dedicated IP pool.</para>
+        /// <para>Creation of Independent IP Pool</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3576,7 +3572,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dedicated IP pool.</para>
+        /// <para>Creation of Independent IP Pool</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3622,7 +3618,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dedicated IP pool.</para>
+        /// <para>Creation of Independent IP Pool</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3640,7 +3636,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a dedicated IP pool.</para>
+        /// <para>Creation of Independent IP Pool</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3658,7 +3654,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a dedicated IP pool.</para>
+        /// <para>Dedicated IP Pool Deletion</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3700,7 +3696,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a dedicated IP pool.</para>
+        /// <para>Dedicated IP Pool Deletion</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3742,7 +3738,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a dedicated IP pool.</para>
+        /// <para>Dedicated IP Pool Deletion</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3760,7 +3756,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a dedicated IP pool.</para>
+        /// <para>Dedicated IP Pool Deletion</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3778,7 +3774,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists IP pools.</para>
+        /// <para>Dedicated IP Pool List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3836,7 +3832,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists IP pools.</para>
+        /// <para>Dedicated IP Pool List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3894,7 +3890,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists IP pools.</para>
+        /// <para>Dedicated IP Pool List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3912,7 +3908,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists IP pools.</para>
+        /// <para>Dedicated IP Pool List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3930,7 +3926,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an IP pool.</para>
+        /// <para>Update of dedicated IP Pool</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3980,7 +3976,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an IP pool.</para>
+        /// <para>Update of dedicated IP Pool</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4030,7 +4026,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an IP pool.</para>
+        /// <para>Update of dedicated IP Pool</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4048,7 +4044,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an IP pool.</para>
+        /// <para>Update of dedicated IP Pool</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5090,7 +5086,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the verification file after the verification process is complete.</para>
+        /// <para>删除批量校验任务的结果文件</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5132,7 +5128,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the verification file after the verification process is complete.</para>
+        /// <para>删除批量校验任务的结果文件</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5174,7 +5170,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the verification file after the verification process is complete.</para>
+        /// <para>删除批量校验任务的结果文件</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5192,7 +5188,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the verification file after the verification process is complete.</para>
+        /// <para>删除批量校验任务的结果文件</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5210,7 +5206,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves account information.</para>
+        /// <para>Retrieve account information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5260,7 +5256,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves account information.</para>
+        /// <para>Retrieve account information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5310,7 +5306,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves account information.</para>
+        /// <para>Retrieve account information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5328,7 +5324,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves account information.</para>
+        /// <para>Retrieve account information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5346,7 +5342,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can configure domain names.</para>
+        /// <para>Get Domain Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5404,7 +5400,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can configure domain names.</para>
+        /// <para>Get Domain Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5462,7 +5458,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can configure domain names.</para>
+        /// <para>Get Domain Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5480,7 +5476,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can configure domain names.</para>
+        /// <para>Get Domain Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5498,13 +5494,8 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views the information about a template.</para>
+        /// <para>查看模板信息</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to view the information about a template.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescTemplateRequest
@@ -5561,13 +5552,8 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views the information about a template.</para>
+        /// <para>查看模板信息</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to view the information about a template.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescTemplateRequest
@@ -5624,13 +5610,8 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views the information about a template.</para>
+        /// <para>查看模板信息</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to view the information about a template.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescTemplateRequest
@@ -5647,13 +5628,8 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Views the information about a template.</para>
+        /// <para>查看模板信息</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation to view the information about a template.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescTemplateRequest
@@ -5934,7 +5910,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取IP保护信息</para>
+        /// <para>Get IP Protection Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5984,7 +5960,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取IP保护信息</para>
+        /// <para>Get IP Protection Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6034,7 +6010,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取IP保护信息</para>
+        /// <para>Get IP Protection Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6052,7 +6028,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取IP保护信息</para>
+        /// <para>Get IP Protection Information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6209,9 +6185,6 @@ namespace AlibabaCloud.SDK.Dm20151123
         /// <para>获取sendify免登链接</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetSendifyAutoLoginURLRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6242,9 +6215,6 @@ namespace AlibabaCloud.SDK.Dm20151123
         /// <para>获取sendify免登链接</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetSendifyAutoLoginURLRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6303,9 +6273,6 @@ namespace AlibabaCloud.SDK.Dm20151123
         /// <para>免费试用Sendify</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetSendifyInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6336,9 +6303,6 @@ namespace AlibabaCloud.SDK.Dm20151123
         /// <para>免费试用Sendify</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetSendifyInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6530,7 +6494,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Email Tracking retrieves data on sent emails.</para>
+        /// <para>Get tracking information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6640,7 +6604,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Email Tracking retrieves data on sent emails.</para>
+        /// <para>Get tracking information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6750,7 +6714,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Email Tracking retrieves data on sent emails.</para>
+        /// <para>Get tracking information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6768,7 +6732,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Email Tracking retrieves data on sent emails.</para>
+        /// <para>Get tracking information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6786,7 +6750,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves email tracking data that meets specified conditions.</para>
+        /// <para>Get tracking information based on the sender address and tag name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6892,7 +6856,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves email tracking data that meets specified conditions.</para>
+        /// <para>Get tracking information based on the sender address and tag name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6998,7 +6962,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves email tracking data that meets specified conditions.</para>
+        /// <para>Get tracking information based on the sender address and tag name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7016,7 +6980,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves email tracking data that meets specified conditions.</para>
+        /// <para>Get tracking information based on the sender address and tag name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7034,12 +6998,9 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号详情</para>
+        /// <para>Get Account Details</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetUserRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7067,12 +7028,9 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号详情</para>
+        /// <para>Get Account Details</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetUserRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7100,7 +7058,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号详情</para>
+        /// <para>Get Account Details</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7114,7 +7072,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取账号详情</para>
+        /// <para>Get Account Details</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7128,7 +7086,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the results file of a batch validation task.</para>
+        /// <para>获取批量校验任务的结果文件</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7170,7 +7128,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the results file of a batch validation task.</para>
+        /// <para>获取批量校验任务的结果文件</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7212,7 +7170,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the results file of a batch validation task.</para>
+        /// <para>获取批量校验任务的结果文件</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7230,7 +7188,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the results file of a batch validation task.</para>
+        /// <para>获取批量校验任务的结果文件</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7248,7 +7206,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status of a validation file.</para>
+        /// <para>获取批量校验任务的状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7290,7 +7248,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status of a validation file.</para>
+        /// <para>获取批量校验任务的状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7332,7 +7290,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status of a validation file.</para>
+        /// <para>获取批量校验任务的状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7350,7 +7308,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the status of a validation file.</para>
+        /// <para>获取批量校验任务的状态</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7368,12 +7326,9 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the email validation quota.</para>
+        /// <para>获取电子邮件校验额度</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetValidationQuotaRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7401,12 +7356,9 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the email validation quota.</para>
+        /// <para>获取电子邮件校验额度</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetValidationQuotaRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7434,7 +7386,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the email validation quota.</para>
+        /// <para>获取电子邮件校验额度</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7448,7 +7400,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the email validation quota.</para>
+        /// <para>获取电子邮件校验额度</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7462,13 +7414,8 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the email sending blacklist.</para>
+        /// <para>获取发信的黑名单列表</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Queries data about unsubscribes or spam reports.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListBlockSendingRequest
@@ -7533,13 +7480,8 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the email sending blacklist.</para>
+        /// <para>获取发信的黑名单列表</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Queries data about unsubscribes or spam reports.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListBlockSendingRequest
@@ -7604,13 +7546,8 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the email sending blacklist.</para>
+        /// <para>获取发信的黑名单列表</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Queries data about unsubscribes or spam reports.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListBlockSendingRequest
@@ -7627,13 +7564,8 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the email sending blacklist.</para>
+        /// <para>获取发信的黑名单列表</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Queries data about unsubscribes or spam reports.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListBlockSendingRequest
@@ -7842,7 +7774,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of uploaded validation files.</para>
+        /// <para>获取上传的校验文件的列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7900,7 +7832,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of uploaded validation files.</para>
+        /// <para>获取上传的校验文件的列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7958,7 +7890,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of uploaded validation files.</para>
+        /// <para>获取上传的校验文件的列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7976,7 +7908,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of uploaded validation files.</para>
+        /// <para>获取上传的校验文件的列表</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8469,9 +8401,6 @@ namespace AlibabaCloud.SDK.Dm20151123
         /// <para>免费试用Sendify</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// OpenSendifyTrialServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8502,9 +8431,6 @@ namespace AlibabaCloud.SDK.Dm20151123
         /// <para>免费试用Sendify</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// OpenSendifyTrialServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8924,7 +8850,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sender addresses.</para>
+        /// <para>Query the list of sending addresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8990,7 +8916,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sender addresses.</para>
+        /// <para>Query the list of sending addresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9056,7 +8982,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sender addresses.</para>
+        /// <para>Query the list of sending addresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9074,7 +9000,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of sender addresses.</para>
+        /// <para>Query the list of sending addresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9092,7 +9018,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the recipient list.</para>
+        /// <para>Query the details of the recipient list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9158,7 +9084,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the recipient list.</para>
+        /// <para>Query the details of the recipient list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9224,7 +9150,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the recipient list.</para>
+        /// <para>Query the details of the recipient list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9242,7 +9168,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the recipient list.</para>
+        /// <para>Query the details of the recipient list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9588,7 +9514,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tasks based on specified parameters.</para>
+        /// <para>Query task list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9654,7 +9580,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tasks based on specified parameters.</para>
+        /// <para>Query task list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9720,7 +9646,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tasks based on specified parameters.</para>
+        /// <para>Query task list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9738,7 +9664,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tasks based on specified parameters.</para>
+        /// <para>Query task list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9756,13 +9682,8 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve a list of templates.</para>
+        /// <para>查询模板信息</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Performs a paged query to retrieve a list of templates.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// QueryTemplateByParamRequest
@@ -9831,13 +9752,8 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve a list of templates.</para>
+        /// <para>查询模板信息</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Performs a paged query to retrieve a list of templates.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// QueryTemplateByParamRequest
@@ -9906,13 +9822,8 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve a list of templates.</para>
+        /// <para>查询模板信息</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Performs a paged query to retrieve a list of templates.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// QueryTemplateByParamRequest
@@ -9929,13 +9840,8 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs a paged query to retrieve a list of templates.</para>
+        /// <para>查询模板信息</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Performs a paged query to retrieve a list of templates.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// QueryTemplateByParamRequest
@@ -9952,7 +9858,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes system-identified and manually added addresses from the user-level suppression list.</para>
+        /// <para>Delete User\&quot;s Invalid Addresses</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10006,7 +9912,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes system-identified and manually added addresses from the user-level suppression list.</para>
+        /// <para>Delete User\&quot;s Invalid Addresses</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10060,7 +9966,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes system-identified and manually added addresses from the user-level suppression list.</para>
+        /// <para>Delete User\&quot;s Invalid Addresses</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10078,7 +9984,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes system-identified and manually added addresses from the user-level suppression list.</para>
+        /// <para>Delete User\&quot;s Invalid Addresses</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10096,7 +10002,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a single recipient.</para>
+        /// <para>Create a Single Recipient</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10158,7 +10064,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a single recipient.</para>
+        /// <para>Create a Single Recipient</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10220,7 +10126,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a single recipient.</para>
+        /// <para>Create a Single Recipient</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10238,7 +10144,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a single recipient.</para>
+        /// <para>Create a Single Recipient</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10256,7 +10162,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can send a test email.</para>
+        /// <para>Send Template Test Email</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10342,7 +10248,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can send a test email.</para>
+        /// <para>Send Template Test Email</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10428,7 +10334,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can send a test email.</para>
+        /// <para>Send Template Test Email</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10446,7 +10352,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can send a test email.</para>
+        /// <para>Send Template Test Email</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10464,7 +10370,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can upload the list of addresses to be verified.</para>
+        /// <para>提交批量校验任务</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10522,7 +10428,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can upload the list of addresses to be verified.</para>
+        /// <para>提交批量校验任务</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10580,7 +10486,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can upload the list of addresses to be verified.</para>
+        /// <para>提交批量校验任务</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10598,7 +10504,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can upload the list of addresses to be verified.</para>
+        /// <para>提交批量校验任务</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10695,7 +10601,7 @@ namespace AlibabaCloud.SDK.Dm20151123
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -10791,7 +10697,7 @@ namespace AlibabaCloud.SDK.Dm20151123
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -10808,7 +10714,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves sending statistics that match specified criteria.</para>
+        /// <para>Retrieve Sending Data under Specified Conditions</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10890,7 +10796,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves sending statistics that match specified criteria.</para>
+        /// <para>Retrieve Sending Data under Specified Conditions</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10972,7 +10878,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves sending statistics that match specified criteria.</para>
+        /// <para>Retrieve Sending Data under Specified Conditions</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10990,7 +10896,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves sending statistics that match specified criteria.</para>
+        /// <para>Retrieve Sending Data under Specified Conditions</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11008,7 +10914,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sending details.</para>
+        /// <para>Query Delivery Result Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11098,7 +11004,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sending details.</para>
+        /// <para>Query Delivery Result Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11188,7 +11094,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sending details.</para>
+        /// <para>Query Delivery Result Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11206,7 +11112,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries sending details.</para>
+        /// <para>Query Delivery Result Details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11368,7 +11274,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a single email.</para>
+        /// <para>API for Sending Emails</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11506,7 +11412,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a single email.</para>
+        /// <para>API for Sending Emails</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11644,7 +11550,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a single email.</para>
+        /// <para>API for Sending Emails</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11662,7 +11568,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a single email.</para>
+        /// <para>API for Sending Emails</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11764,7 +11670,7 @@ namespace AlibabaCloud.SDK.Dm20151123
                         };
                         ossHeader = new Dictionary<string, object>
                         {
-                            {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                            {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                             {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                             {"policy", authResponseBody.Get("EncodedPolicy")},
                             {"Signature", authResponseBody.Get("Signature")},
@@ -11869,7 +11775,7 @@ namespace AlibabaCloud.SDK.Dm20151123
                         };
                         ossHeader = new Dictionary<string, object>
                         {
-                            {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                            {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                             {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                             {"policy", authResponseBody.Get("EncodedPolicy")},
                             {"Signature", authResponseBody.Get("Signature")},
@@ -11890,7 +11796,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes sending restrictions caused by unsubscribes or complaints.</para>
+        /// <para>Lift sending restrictions due to unsubscription, reporting, etc.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11940,7 +11846,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes sending restrictions caused by unsubscribes or complaints.</para>
+        /// <para>Lift sending restrictions due to unsubscription, reporting, etc.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11990,7 +11896,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes sending restrictions caused by unsubscribes or complaints.</para>
+        /// <para>Lift sending restrictions due to unsubscription, reporting, etc.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12008,7 +11914,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes sending restrictions caused by unsubscribes or complaints.</para>
+        /// <para>Lift sending restrictions due to unsubscription, reporting, etc.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12170,7 +12076,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新帐号信息</para>
+        /// <para>Update account information</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12218,7 +12124,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新帐号信息</para>
+        /// <para>Update account information</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12266,7 +12172,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新帐号信息</para>
+        /// <para>Update account information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12284,7 +12190,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新帐号信息</para>
+        /// <para>Update account information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12302,7 +12208,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates an email address.</para>
+        /// <para>校验电子邮件地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12352,7 +12258,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates an email address.</para>
+        /// <para>校验电子邮件地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12402,7 +12308,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates an email address.</para>
+        /// <para>校验电子邮件地址</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12420,7 +12326,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validates an email address.</para>
+        /// <para>校验电子邮件地址</para>
         /// </summary>
         /// 
         /// <param name="request">

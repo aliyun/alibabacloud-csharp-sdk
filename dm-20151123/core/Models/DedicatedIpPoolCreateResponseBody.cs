@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DedicatedIpPoolCreateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the IP pool.</para>
+        /// <para>IP pool ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>

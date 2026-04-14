@@ -10,27 +10,27 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class GetTrackListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Used for pagination. Do not set this parameter for the first request. For subsequent requests, set this parameter to the OffsetCreateTime value from the previous response. (This field is deprecated.)</para>
+        /// <para>Used for pagination. Not set for the first query, but for subsequent queries, it should be set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>（本字段已废弃）</para>
+        /// <para>(This field is deprecated)</para>
         /// </summary>
         [NameInMap("OffsetCreateTime")]
         [Validation(Required=false)]
         public string OffsetCreateTime { get; set; }
 
         /// <summary>
-        /// <para>(This field is deprecated.)</para>
+        /// <para>(This field is deprecated)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>（本字段已废弃）</para>
+        /// <para>(This field is deprecated)</para>
         /// </summary>
         [NameInMap("OffsetCreateTimeDesc")]
         [Validation(Required=false)]
         public string OffsetCreateTimeDesc { get; set; }
 
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>Current page number</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>Number of items per page</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the request.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of matching records.</para>
+        /// <para>Total number of items</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -69,12 +69,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public int? Total { get; set; }
 
-        /// <summary>
-        /// <para>The total number of pages.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2</para>
-        /// </summary>
         [NameInMap("TotalPages")]
         [Validation(Required=false)]
         public int? TotalPages { get; set; }

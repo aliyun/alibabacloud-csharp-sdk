@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DedicatedIpListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The current page number.</para>
+        /// <para>Current page</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the next page exists.</para>
+        /// <para>Whether there is a next page</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>The list of IP addresses.</para>
+        /// <para>IP list</para>
         /// </summary>
         [NameInMap("Ips")]
         [Validation(Required=false)]
         public List<DedicatedIpListResponseBodyIps> Ips { get; set; }
         public class DedicatedIpListResponseBodyIps : TeaModel {
             /// <summary>
-            /// <para>The expiration time.</para>
+            /// <para>Expiration time</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-12T09:19:20Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The IP address ID. This is the same as the purchased instance ID.</para>
+            /// <para>IP ID, consistent with the purchased instance ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The ID of the purchased instance.</para>
+            /// <para>Purchased instance ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The IP address.</para>
+            /// <para>IP address</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The extended information.</para>
+            /// <para>Extended information</para>
             /// </summary>
             [NameInMap("IpExt")]
             [Validation(Required=false)]
             public DedicatedIpListResponseBodyIpsIpExt IpExt { get; set; }
             public class DedicatedIpListResponseBodyIpsIpExt : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether auto-renewal is enabled.</para>
+                /// <para>Whether auto-renewal is enabled</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public bool? AutoRenewal { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether emails have been sent.</para>
+                /// <para>Whether an email has been sent</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             }
 
             /// <summary>
-            /// <para>The name of the IP pool to which the IP address belongs.</para>
+            /// <para>Name of the IP pool</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string IpPoolName { get; set; }
 
             /// <summary>
-            /// <para>The purchase time.</para>
+            /// <para>Purchase time</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-12T09:19:20Z</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the IP address.</para>
+            /// <para>IP status</para>
             /// 
             /// <b>Example:</b>
             /// <para>sold</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The prefetch status.</para>
+            /// <para>Warm-up status</para>
             /// 
             /// <b>Example:</b>
             /// <para>finish</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string WarmupStatus { get; set; }
 
             /// <summary>
-            /// <para>The prefetch method.</para>
+            /// <para>Warm-up method</para>
             /// 
             /// <b>Example:</b>
             /// <para>cusSelfManager</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Page size</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of purchased IP addresses.</para>
+        /// <para>Total amount of purchased IP data</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

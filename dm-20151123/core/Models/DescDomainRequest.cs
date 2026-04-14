@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DescDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name ID. Obtain this ID by calling the QueryDomainByParam operation.</para>
+        /// <para>Domain ID. Can be obtained through QueryDomainByParam.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform real-time DNS parsing.</para>
+        /// <para>Determines whether to perform real-time DNS resolution</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

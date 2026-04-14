@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryTaskByParamResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>Current page number</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Page size</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>Total count</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DedicatedIpChangeWarmupTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the dedicated IP address.</para>
+        /// <para>Dedicated IP ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The prefetch method.</para>
+        /// <para>Warmup method</para>
         /// 
         /// <b>Example:</b>
         /// <para>sysCusStream</para>

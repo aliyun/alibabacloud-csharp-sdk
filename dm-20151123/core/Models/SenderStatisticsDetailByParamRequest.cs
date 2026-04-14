@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SenderStatisticsDetailByParamRequest : TeaModel {
         /// <summary>
-        /// <para>The sender address. If you leave this parameter empty, emails from all sender addresses are queried.</para>
+        /// <para>Sending address. If not filled, it represents all addresses.</para>
         /// <remarks>
-        /// <para>You can leave <b>AccountName</b>, <b>TagName</b>, and <b>ToAddress</b> empty. You can specify a value for only one of these parameters at a time.</para>
+        /// <para><b>AccountName</b>, <b>TagName</b>, and <b>ToAddress</b> can all be left unfilled. If any are filled, only one of these parameters can be passed; you cannot pass a combination of two or more.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,11 +23,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string AccountName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the configuration set.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>95437e39-5433-4c6c-8b66-0c4eac2f4d97</para>
-        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -36,7 +31,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string ConfigSetId { get; set; }
 
         /// <summary>
-        /// <para>The end time. The time range between the start time and the end time cannot exceed 30 days. The format is yyyy-MM-dd HH:mm.</para>
+        /// <para>End time. The span between start and end times cannot exceed 30 days, format: yyyy-MM-dd HH:mm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-04-29 00:00</para>
@@ -46,11 +41,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the independent IP address pool.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>e42a4d8e-66e0-4ea3-88aa-74c66c661cef</para>
-        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
@@ -59,7 +49,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string IpPoolId { get; set; }
 
         /// <summary>
-        /// <para>The number of results to return. The value can range from 1 to 100.</para>
+        /// <para>Specifies the number of results to return in this request. Range is 1~100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -69,7 +59,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? Length { get; set; }
 
         /// <summary>
-        /// <para>The offset for this request, used for paging. If more results are available, set the \<c>NextStart\\</c> parameter in your next request to this return value.</para>
+        /// <para>Used for pagination. Specifies the offset for this request. If there are more results, set this returned value to the NextStart in the next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90f0243616#203#a***@example.net-1658817837#a***@example.net.247475288187</para>
@@ -91,7 +81,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The start time. The time range between the start time and the end time cannot exceed 30 days. The format is yyyy-MM-dd HH:mm.</para>
+        /// <para>Start time. The span between start and end times cannot exceed 30 days, format: yyyy-MM-dd HH:mm</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-04-28 00:00</para>
@@ -101,16 +91,12 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The delivery status. If you leave this parameter empty, emails in all delivery statuses are queried. Valid values:</para>
+        /// <para>Delivery result. If not filled, it represents all statuses. Values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: delivered successfully</para>
-        /// </description></item>
-        /// <item><description><para>2: invalid address</para>
-        /// </description></item>
-        /// <item><description><para>3: spam</para>
-        /// </description></item>
-        /// <item><description><para>4: failed</para>
-        /// </description></item>
+        /// <item><description>0: Success</description></item>
+        /// <item><description>2: Invalid Address</description></item>
+        /// <item><description>3: Spam</description></item>
+        /// <item><description>4: Failure</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,8 +107,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The email tag. If you leave this parameter empty, emails with all tags are queried.
-        /// When you send an email using SMTP, specify the \<c>TagName\\</c> and its value for the \<c>X-AliDM-Trace\\</c> field. For more information, see the examples for email tracking.</para>
+        /// <para>Email tag. If not filled, it represents all tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EmailQuestionnaireHelioscam</para>
@@ -132,7 +117,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TagName { get; set; }
 
         /// <summary>
-        /// <para>The recipient address. If you leave this parameter empty, emails sent to all recipient addresses are queried.</para>
+        /// <para>Recipient address. If not filled, it represents all recipient addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b***@example.net</para>

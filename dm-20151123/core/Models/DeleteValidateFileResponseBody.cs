@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DeleteValidateFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>yyyy-yyyy-yyyy-yyyy</para>
         /// </summary>

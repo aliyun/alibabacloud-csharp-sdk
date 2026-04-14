@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DedicatedIpPoolUpdateRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the purchased IP instances. Separate multiple IDs with commas. Obtain these IDs from the response of the DedicatedIpNonePoolList operation.</para>
+        /// <para>Purchased IP instance IDs, separated by commas; sourced from the DedicatedIpNonePoolList API\&quot;s returned IP purchase instance IDs</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx,xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string BuyResourceIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IP pool.</para>
+        /// <para>IP pool ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to change the associated IP addresses. Set this parameter to true.</para>
+        /// <para>Whether to change the associated IP, enter true</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

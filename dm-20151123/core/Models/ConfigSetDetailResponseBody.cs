@@ -9,16 +9,11 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ConfigSetDetailResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The details of the configuration set.</para>
-        /// </summary>
         [NameInMap("Detail")]
         [Validation(Required=false)]
         public ConfigSetDetailResponseBodyDetail Detail { get; set; }
         public class ConfigSetDetailResponseBodyDetail : TeaModel {
             /// <summary>
-            /// <para>The description.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -27,8 +22,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the configuration set.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -36,16 +29,11 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public string Id { get; set; }
 
-            /// <summary>
-            /// <para>The associated IP pool.</para>
-            /// </summary>
             [NameInMap("IpPool")]
             [Validation(Required=false)]
             public ConfigSetDetailResponseBodyDetailIpPool IpPool { get; set; }
             public class ConfigSetDetailResponseBodyDetailIpPool : TeaModel {
                 /// <summary>
-                /// <para>The ID of the associated IP pool.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
                 /// </summary>
@@ -54,8 +42,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string IpPoolId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the associated IP pool.</para>
-                /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
                 /// </summary>
@@ -66,8 +52,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             }
 
             /// <summary>
-            /// <para>The name of the configuration set.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -78,8 +62,6 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
