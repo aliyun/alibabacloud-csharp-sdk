@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <b>Example:</b>
         /// <para>分析ID: 56dae746-ef55-4f77-8373-cb3594c41457
-        /// 机器i-bp164ns76pzirbwv0snt分析失败, 失败原因: Not get GPU trace data for &quot;56dae746-ef55-4f77-8373-cb3594c41457&quot; &quot;[&quot;93811&quot;]&quot;!</para>
+        /// 机器i-bp164ns76pzirbwv0snt分析失败, 失败原因: Not get GPU trace data for \&quot;56dae746-ef55-4f77-8373-cb3594c41457\&quot; \&quot;[\&quot;93811\&quot;]\&quot;!</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]

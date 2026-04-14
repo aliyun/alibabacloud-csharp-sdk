@@ -323,6 +323,136 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>cpu高agent流式接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CpuHighAgentStreamResponseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CpuHighAgentStreamResponseResponse
+        /// </returns>
+        public CpuHighAgentStreamResponseResponse CpuHighAgentStreamResponseWithOptions(CpuHighAgentStreamResponseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmParamString))
+            {
+                body["llmParamString"] = request.LlmParamString;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CpuHighAgentStreamResponse",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/highCpuAgent/streamResponse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CpuHighAgentStreamResponseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>cpu高agent流式接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CpuHighAgentStreamResponseRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CpuHighAgentStreamResponseResponse
+        /// </returns>
+        public async Task<CpuHighAgentStreamResponseResponse> CpuHighAgentStreamResponseWithOptionsAsync(CpuHighAgentStreamResponseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmParamString))
+            {
+                body["llmParamString"] = request.LlmParamString;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CpuHighAgentStreamResponse",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/highCpuAgent/streamResponse",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CpuHighAgentStreamResponseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>cpu高agent流式接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CpuHighAgentStreamResponseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CpuHighAgentStreamResponseResponse
+        /// </returns>
+        public CpuHighAgentStreamResponseResponse CpuHighAgentStreamResponse(CpuHighAgentStreamResponseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CpuHighAgentStreamResponseWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>cpu高agent流式接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CpuHighAgentStreamResponseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CpuHighAgentStreamResponseResponse
+        /// </returns>
+        public async Task<CpuHighAgentStreamResponseResponse> CpuHighAgentStreamResponseAsync(CpuHighAgentStreamResponseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CpuHighAgentStreamResponseWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>新增推送告警的策略</para>
         /// </summary>
         /// 
@@ -6735,7 +6865,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一定时间内集群节点/Pod健康度列表</para>
+        /// <para>Obtain a list of cluster node or pod health degrees within a specified time period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6801,7 +6931,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一定时间内集群节点/Pod健康度列表</para>
+        /// <para>Obtain a list of cluster node or pod health degrees within a specified time period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6867,7 +6997,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一定时间内集群节点/Pod健康度列表</para>
+        /// <para>Obtain a list of cluster node or pod health degrees within a specified time period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6886,7 +7016,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一定时间内集群节点/Pod健康度列表</para>
+        /// <para>Obtain a list of cluster node or pod health degrees within a specified time period.</para>
         /// </summary>
         /// 
         /// <param name="request">

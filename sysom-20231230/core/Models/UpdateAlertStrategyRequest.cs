@@ -54,6 +54,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [Validation(Required=false)]
             public List<string> Clusters { get; set; }
 
+            [NameInMap("destinations")]
+            [Validation(Required=false)]
+            public List<int?> Destinations { get; set; }
+
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<string> Items { get; set; }
