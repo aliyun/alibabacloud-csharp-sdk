@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        [NameInMap("tenantId")]
+        [Validation(Required=false)]
+        public string TenantId { get; set; }
+
     }
 
 }
