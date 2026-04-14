@@ -107,6 +107,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public string EncryptType { get; set; }
 
+                [NameInMap("KbUuidList")]
+                [Validation(Required=false)]
+                public List<string> KbUuidList { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>CHINESE</para>

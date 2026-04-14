@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string AccessType { get; set; }
 
+            [NameInMap("KbUuid")]
+            [Validation(Required=false)]
+            public string KbUuid { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>nhdpt9adf6ac**********ca</para>
