@@ -3403,6 +3403,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             {
                 query["Tags"] = request.Tags;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcIds))
+            {
+                query["VpcIds"] = request.VpcIds;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3472,6 +3476,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 query["Tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcIds))
+            {
+                query["VpcIds"] = request.VpcIds;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3861,9 +3869,6 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
         /// <para>查询云数据库ClickHouse所有地域和可用区的信息</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -3894,9 +3899,6 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
         /// <para>查询云数据库ClickHouse所有地域和可用区的信息</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>

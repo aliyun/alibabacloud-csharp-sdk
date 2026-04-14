@@ -101,6 +101,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vpc-2ze4ee9z******,vpc-2ze4ee9z5l******</para>
+        /// </summary>
+        [NameInMap("VpcIds")]
+        [Validation(Required=false)]
+        public string VpcIds { get; set; }
+
     }
 
 }

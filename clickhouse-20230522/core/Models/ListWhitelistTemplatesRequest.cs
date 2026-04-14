@@ -26,6 +26,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>RegionId</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

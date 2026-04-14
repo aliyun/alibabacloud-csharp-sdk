@@ -170,6 +170,10 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
 
+            [NameInMap("LangfuseInstanceIds")]
+            [Validation(Required=false)]
+            public List<string> LangfuseInstanceIds { get; set; }
+
             /// <summary>
             /// <para>The latest minor engine version.</para>
             /// 
