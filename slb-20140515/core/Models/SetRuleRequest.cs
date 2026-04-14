@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public int? CookieTimeout { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable the health check feature. Valid values:</para>
         /// <list type="bullet">

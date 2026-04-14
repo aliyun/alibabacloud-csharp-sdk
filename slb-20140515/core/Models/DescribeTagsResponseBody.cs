@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The tags that are queried.</para>
-        /// </summary>
         [NameInMap("TagSets")]
         [Validation(Required=false)]
         public DescribeTagsResponseBodyTagSets TagSets { get; set; }
@@ -50,32 +47,14 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeTagsResponseBodyTagSetsTagSet> TagSet { get; set; }
             public class DescribeTagsResponseBodyTagSetsTagSet : TeaModel {
-                /// <summary>
-                /// <para>The number of instances to which the tag is added.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10</para>
-                /// </summary>
                 [NameInMap("InstanceCount")]
                 [Validation(Required=false)]
                 public int? InstanceCount { get; set; }
 
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The tag value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>api</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

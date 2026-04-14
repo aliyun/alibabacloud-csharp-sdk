@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public long? AutoReleaseTime { get; set; }
 
-        /// <summary>
-        /// <para>The backend servers of the CLB instance.</para>
-        /// </summary>
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
         public DescribeLoadBalancerAttributeResponseBodyBackendServers BackendServers { get; set; }
@@ -60,55 +57,22 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer> BackendServer { get; set; }
             public class DescribeLoadBalancerAttributeResponseBodyBackendServersBackendServer : TeaModel {
-                /// <summary>
-                /// <para>The description of the backend server.</para>
-                /// <remarks>
-                /// <para>This parameter is not returned if Description is not set.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>backend server description</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The backend server ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-2zej4lxhjoq1icu*****</para>
-                /// </summary>
                 [NameInMap("ServerId")]
                 [Validation(Required=false)]
                 public string ServerId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the elastic network interface (ENI) or elastic container instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>192.XX.XX.11</para>
-                /// </summary>
                 [NameInMap("ServerIp")]
                 [Validation(Required=false)]
                 public string ServerIp { get; set; }
 
-                /// <summary>
-                /// <para>The type of the backend server.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ecs</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
-                /// <summary>
-                /// <para>The weight of the backend server.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>90</para>
-                /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
                 public int? Weight { get; set; }
@@ -209,9 +173,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string InternetChargeType { get; set; }
 
-        /// <summary>
-        /// <para>The frontend port used by the CLB instance.</para>
-        /// </summary>
         [NameInMap("ListenerPorts")]
         [Validation(Required=false)]
         public DescribeLoadBalancerAttributeResponseBodyListenerPorts ListenerPorts { get; set; }
@@ -222,9 +183,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         }
 
-        /// <summary>
-        /// <para>The ports or protocols of the listeners.</para>
-        /// </summary>
         [NameInMap("ListenerPortsAndProtocal")]
         [Validation(Required=false)]
         public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocal ListenerPortsAndProtocal { get; set; }
@@ -233,22 +191,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal> ListenerPortAndProtocal { get; set; }
             public class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocalListenerPortAndProtocal : TeaModel {
-                /// <summary>
-                /// <para>The frontend port that is used by the CLB instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>443</para>
-                /// </summary>
                 [NameInMap("ListenerPort")]
                 [Validation(Required=false)]
                 public int? ListenerPort { get; set; }
 
-                /// <summary>
-                /// <para>The frontend protocol that is used by the CLB instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>http</para>
-                /// </summary>
                 [NameInMap("ListenerProtocal")]
                 [Validation(Required=false)]
                 public string ListenerProtocal { get; set; }
@@ -257,9 +203,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
         }
 
-        /// <summary>
-        /// <para>The ports or protocols of the listeners.</para>
-        /// </summary>
         [NameInMap("ListenerPortsAndProtocol")]
         [Validation(Required=false)]
         public DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocol ListenerPortsAndProtocol { get; set; }
@@ -268,52 +211,22 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol> ListenerPortAndProtocol { get; set; }
             public class DescribeLoadBalancerAttributeResponseBodyListenerPortsAndProtocolListenerPortAndProtocol : TeaModel {
-                /// <summary>
-                /// <para>Indicates whether the listener is enabled.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Listener Description</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The destination listening port to which requests are forwarded. The port must be open and use HTTPS.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>443</para>
-                /// </summary>
                 [NameInMap("ForwardPort")]
                 [Validation(Required=false)]
                 public int? ForwardPort { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the listener is enabled.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>on</para>
-                /// </summary>
                 [NameInMap("ListenerForward")]
                 [Validation(Required=false)]
                 public string ListenerForward { get; set; }
 
-                /// <summary>
-                /// <para>The frontend port that is used by the CLB instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>80</para>
-                /// </summary>
                 [NameInMap("ListenerPort")]
                 [Validation(Required=false)]
                 public int? ListenerPort { get; set; }
 
-                /// <summary>
-                /// <para>The frontend protocol that is used by the CLB instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>https</para>
-                /// </summary>
                 [NameInMap("ListenerProtocol")]
                 [Validation(Required=false)]
                 public string ListenerProtocol { get; set; }
@@ -535,9 +448,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string SlaveZoneId { get; set; }
 
-        /// <summary>
-        /// <para>The tags.</para>
-        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public DescribeLoadBalancerAttributeResponseBodyTags Tags { get; set; }
@@ -546,24 +456,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeLoadBalancerAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeLoadBalancerAttributeResponseBodyTagsTag : TeaModel {
-                /// <summary>
-                /// <para>The tag key. Valid values of N: <b>1</b> to <b>20</b>. The tag key cannot be an empty string.</para>
-                /// <para>The tag key can be at most 64 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It must not start with <c>aliyun</c> or <c>acs:</c>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The tag value. Valid values of N: <b>1</b> to <b>20</b>. The tag value can be an empty string.</para>
-                /// <para>The tag value can be up to 128 characters in length and cannot start with <c>acs:</c> or <c>aliyun</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>value</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

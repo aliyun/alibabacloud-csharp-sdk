@@ -3726,6 +3726,10 @@ namespace AlibabaCloud.SDK.Slb20140515
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListenerPort))
             {
                 query["ListenerPort"] = request.ListenerPort;
@@ -3800,6 +3804,10 @@ namespace AlibabaCloud.SDK.Slb20140515
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListenerPort))
             {
                 query["ListenerPort"] = request.ListenerPort;
@@ -15113,7 +15121,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the whitelist of a specified listener.</para>
+        /// <para>Enables or disables the whitelist of a listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15187,7 +15195,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the whitelist of a specified listener.</para>
+        /// <para>Enables or disables the whitelist of a listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15261,7 +15269,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the whitelist of a specified listener.</para>
+        /// <para>Enables or disables the whitelist of a listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15279,7 +15287,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the whitelist of a specified listener.</para>
+        /// <para>Enables or disables the whitelist of a listener.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15519,6 +15527,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gzip))
             {
                 query["Gzip"] = request.Gzip;
@@ -15717,6 +15729,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gzip))
             {
@@ -15974,6 +15990,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableHttp2))
             {
                 query["EnableHttp2"] = request.EnableHttp2;
@@ -16188,6 +16208,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableHttp2))
             {
                 query["EnableHttp2"] = request.EnableHttp2;
@@ -16397,7 +16421,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of the configuration read-only mode for a Classic Load Balancer (CLB) instance.</para>
+        /// <para>Enable or disable the configuration read-only mode for a Classic Load Balancer (CLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16467,7 +16491,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of the configuration read-only mode for a Classic Load Balancer (CLB) instance.</para>
+        /// <para>Enable or disable the configuration read-only mode for a Classic Load Balancer (CLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16537,7 +16561,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of the configuration read-only mode for a Classic Load Balancer (CLB) instance.</para>
+        /// <para>Enable or disable the configuration read-only mode for a Classic Load Balancer (CLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16555,7 +16579,7 @@ namespace AlibabaCloud.SDK.Slb20140515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of the configuration read-only mode for a Classic Load Balancer (CLB) instance.</para>
+        /// <para>Enable or disable the configuration read-only mode for a Classic Load Balancer (CLB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16962,6 +16986,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EstablishedTimeout))
             {
                 query["EstablishedTimeout"] = request.EstablishedTimeout;
@@ -17139,6 +17167,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EstablishedTimeout))
             {
@@ -17362,6 +17394,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConnectPort))
             {
                 query["HealthCheckConnectPort"] = request.HealthCheckConnectPort;
@@ -17511,6 +17547,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConnectPort))
             {
@@ -17694,6 +17734,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             {
                 query["CookieTimeout"] = request.CookieTimeout;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheck))
             {
                 query["HealthCheck"] = request.HealthCheck;
@@ -17823,6 +17867,10 @@ namespace AlibabaCloud.SDK.Slb20140515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CookieTimeout))
             {
                 query["CookieTimeout"] = request.CookieTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheck))
             {

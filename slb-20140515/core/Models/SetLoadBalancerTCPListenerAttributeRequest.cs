@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// <para>The timeout period of a connection. Unit: seconds. Valid values: <b>10</b> to <b>900</b>.</para>
         /// 

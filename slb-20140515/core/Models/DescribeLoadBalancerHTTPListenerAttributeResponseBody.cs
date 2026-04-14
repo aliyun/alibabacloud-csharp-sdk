@@ -22,9 +22,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string AclId { get; set; }
 
-        /// <summary>
-        /// <para>The ID of the access control list (ACL).</para>
-        /// </summary>
         [NameInMap("AclIds")]
         [Validation(Required=false)]
         public DescribeLoadBalancerHTTPListenerAttributeResponseBodyAclIds AclIds { get; set; }
@@ -320,9 +317,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public int? RequestTimeout { get; set; }
 
-        /// <summary>
-        /// <para>The list of forwarding rules.</para>
-        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public DescribeLoadBalancerHTTPListenerAttributeResponseBodyRules Rules { get; set; }
@@ -331,52 +325,22 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule> Rule { get; set; }
             public class DescribeLoadBalancerHTTPListenerAttributeResponseBodyRulesRule : TeaModel {
-                /// <summary>
-                /// <para>The domain name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="http://www.example.com">www.example.com</a></para>
-                /// </summary>
                 [NameInMap("Domain")]
                 [Validation(Required=false)]
                 public string Domain { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the forwarding rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1234</para>
-                /// </summary>
                 [NameInMap("RuleId")]
                 [Validation(Required=false)]
                 public string RuleId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the forwarding rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("RuleName")]
                 [Validation(Required=false)]
                 public string RuleName { get; set; }
 
-                /// <summary>
-                /// <para>The request URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>/example</para>
-                /// </summary>
                 [NameInMap("Url")]
                 [Validation(Required=false)]
                 public string Url { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the server group specified in the forwarding rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rsp-uf6w******</para>
-                /// </summary>
                 [NameInMap("VServerGroupId")]
                 [Validation(Required=false)]
                 public string VServerGroupId { get; set; }
@@ -463,9 +427,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string StickySessionType { get; set; }
 
-        /// <summary>
-        /// <para>The tags.</para>
-        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public DescribeLoadBalancerHTTPListenerAttributeResponseBodyTags Tags { get; set; }
@@ -474,22 +435,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeLoadBalancerHTTPListenerAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeLoadBalancerHTTPListenerAttributeResponseBodyTagsTag : TeaModel {
-                /// <summary>
-                /// <para>The key of tag N. Valid values of N: <b>1</b> to <b>20</b>. The tag value cannot be an empty string. The tag key can be up to 64 characters in length. The key cannot start with <c>acs:</c> or <c>aliyun</c> or contain <c>http://</c> or <c>https://</c>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestKey</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The value of tag N. Valid values of N: <b>1</b> to <b>20</b>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestValue</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The forwarding rules.</para>
-        /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public CreateRulesResponseBodyRules Rules { get; set; }
@@ -30,22 +27,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<CreateRulesResponseBodyRulesRule> Rule { get; set; }
             public class CreateRulesResponseBodyRulesRule : TeaModel {
-                /// <summary>
-                /// <para>The forwarding rule ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rule-bp12jzy0*****</para>
-                /// </summary>
                 [NameInMap("RuleId")]
                 [Validation(Required=false)]
                 public string RuleId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the forwarding rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Rule2</para>
-                /// </summary>
                 [NameInMap("RuleName")]
                 [Validation(Required=false)]
                 public string RuleName { get; set; }

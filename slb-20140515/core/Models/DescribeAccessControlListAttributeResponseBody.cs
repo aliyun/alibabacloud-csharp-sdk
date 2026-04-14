@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class DescribeAccessControlListAttributeResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about the access control policy.</para>
-        /// </summary>
         [NameInMap("AclEntrys")]
         [Validation(Required=false)]
         public DescribeAccessControlListAttributeResponseBodyAclEntrys AclEntrys { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry> AclEntry { get; set; }
             public class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry : TeaModel {
-                /// <summary>
-                /// <para>The remarks of the ACL entry.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("AclEntryComment")]
                 [Validation(Required=false)]
                 public string AclEntryComment { get; set; }
 
-                /// <summary>
-                /// <para>The IP entry in the ACL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>192.168.0.1</para>
-                /// </summary>
                 [NameInMap("AclEntryIP")]
                 [Validation(Required=false)]
                 public string AclEntryIP { get; set; }
@@ -84,9 +69,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
-        /// <summary>
-        /// <para>The listeners with which the ACL is associated.</para>
-        /// </summary>
         [NameInMap("RelatedListeners")]
         [Validation(Required=false)]
         public DescribeAccessControlListAttributeResponseBodyRelatedListeners RelatedListeners { get; set; }
@@ -95,46 +77,18 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener> RelatedListener { get; set; }
             public class DescribeAccessControlListAttributeResponseBodyRelatedListenersRelatedListener : TeaModel {
-                /// <summary>
-                /// <para>The type of ACL. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>black</b></description></item>
-                /// <item><description><b>white</b></description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>white</para>
-                /// </summary>
                 [NameInMap("AclType")]
                 [Validation(Required=false)]
                 public string AclType { get; set; }
 
-                /// <summary>
-                /// <para>The frontend port of the listener with which the ACL is associated.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>443</para>
-                /// </summary>
                 [NameInMap("ListenerPort")]
                 [Validation(Required=false)]
                 public int? ListenerPort { get; set; }
 
-                /// <summary>
-                /// <para>The CLB instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>lb-bp1qpzldlm38bnexl****</para>
-                /// </summary>
                 [NameInMap("LoadBalancerId")]
                 [Validation(Required=false)]
                 public string LoadBalancerId { get; set; }
 
-                /// <summary>
-                /// <para>The type of protocol that the associated listener uses.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>https</para>
-                /// </summary>
                 [NameInMap("Protocol")]
                 [Validation(Required=false)]
                 public string Protocol { get; set; }
@@ -163,9 +117,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        /// <summary>
-        /// <para>The tags added to the ACL.</para>
-        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public DescribeAccessControlListAttributeResponseBodyTags Tags { get; set; }
@@ -174,22 +125,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeAccessControlListAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeAccessControlListAttributeResponseBodyTagsTag : TeaModel {
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestKey</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The tag value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestValue</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

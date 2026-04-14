@@ -155,10 +155,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string ServerCertificateName { get; set; }
 
-        /// <summary>
-        /// <para>The subject alternative names.</para>
-        /// <para>A domain name list is supported. A maximum of 10 domain names are supported.</para>
-        /// </summary>
         [NameInMap("SubjectAlternativeNames")]
         [Validation(Required=false)]
         public UploadServerCertificateResponseBodySubjectAlternativeNames SubjectAlternativeNames { get; set; }

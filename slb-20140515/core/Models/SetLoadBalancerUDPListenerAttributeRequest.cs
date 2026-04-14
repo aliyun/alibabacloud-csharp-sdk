@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// <para>The port that is used for health checks.</para>
         /// <para>Valid values: <b>1</b> to <b>65535</b>.</para>

@@ -20,9 +20,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string AclId { get; set; }
 
-        /// <summary>
-        /// <para>The IDs of the ACLs.</para>
-        /// </summary>
         [NameInMap("AclIds")]
         [Validation(Required=false)]
         public DescribeLoadBalancerTCPListenerAttributeResponseBodyAclIds AclIds { get; set; }
@@ -363,9 +360,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string SynProxy { get; set; }
 
-        /// <summary>
-        /// <para>The tags.</para>
-        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public DescribeLoadBalancerTCPListenerAttributeResponseBodyTags Tags { get; set; }
@@ -374,22 +368,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeLoadBalancerTCPListenerAttributeResponseBodyTagsTag> Tag { get; set; }
             public class DescribeLoadBalancerTCPListenerAttributeResponseBodyTagsTag : TeaModel {
-                /// <summary>
-                /// <para>The key of tag N. Valid values of N: <b>1</b> to <b>20</b>. The tag value cannot be an empty string. The tag key can be up to 128 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. It cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestKey</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The value of tag N. Valid values of N: <b>1</b> to <b>20</b>. The tag value can be an empty string. The tag value can be up to 128 characters in length, and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>TestValue</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

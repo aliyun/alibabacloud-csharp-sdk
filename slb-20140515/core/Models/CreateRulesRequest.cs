@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class CreateRulesRequest : TeaModel {
+        [NameInMap("DryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
+
         /// <summary>
         /// <para>The frontend listener port that is used by the SLB instance.</para>
         /// <para>Valid values: <b>1 to 65535</b>.</para>

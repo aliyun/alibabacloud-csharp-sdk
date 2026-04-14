@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Slb20140515.Models
 {
     public class AddVServerGroupBackendServersResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The backend servers.</para>
-        /// </summary>
         [NameInMap("BackendServers")]
         [Validation(Required=false)]
         public AddVServerGroupBackendServersResponseBodyBackendServers BackendServers { get; set; }
@@ -20,57 +17,22 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<AddVServerGroupBackendServersResponseBodyBackendServersBackendServer> BackendServer { get; set; }
             public class AddVServerGroupBackendServersResponseBodyBackendServersBackendServer : TeaModel {
-                /// <summary>
-                /// <para>The description of the vServer group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>backend server</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The port that is used by the backend server.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>70</para>
-                /// </summary>
                 [NameInMap("Port")]
                 [Validation(Required=false)]
                 public int? Port { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the ECS instance or ENI.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>eni-hhshhs****</para>
-                /// </summary>
                 [NameInMap("ServerId")]
                 [Validation(Required=false)]
                 public string ServerId { get; set; }
 
-                /// <summary>
-                /// <para>The type of backend server. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>ecs</b> (default): ECS instance</description></item>
-                /// <item><description><b>eni</b>: ENI</description></item>
-                /// <item><description><b>eci</b>: elastic container instance</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ecs</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
 
-                /// <summary>
-                /// <para>The weight of the backend server.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("Weight")]
                 [Validation(Required=false)]
                 public int? Weight { get; set; }

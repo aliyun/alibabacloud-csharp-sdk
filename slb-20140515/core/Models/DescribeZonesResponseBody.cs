@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The zones.</para>
-        /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
         public DescribeZonesResponseBodyZones Zones { get; set; }
@@ -30,19 +27,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
             [Validation(Required=false)]
             public List<DescribeZonesResponseBodyZonesZone> Zone { get; set; }
             public class DescribeZonesResponseBodyZonesZone : TeaModel {
-                /// <summary>
-                /// <para>The name of the zone.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>The list of secondary zones.</para>
-                /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
-                /// <summary>
-                /// <para>The secondary zones.</para>
-                /// </summary>
                 [NameInMap("SlaveZones")]
                 [Validation(Required=false)]
                 public DescribeZonesResponseBodyZonesZoneSlaveZones SlaveZones { get; set; }
@@ -51,22 +39,10 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
                     [Validation(Required=false)]
                     public List<DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone> SlaveZone { get; set; }
                     public class DescribeZonesResponseBodyZonesZoneSlaveZonesSlaveZone : TeaModel {
-                        /// <summary>
-                        /// <para>The name of the secondary zone.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>Queries zones in a specified region.</para>
-                        /// </summary>
                         [NameInMap("LocalName")]
                         [Validation(Required=false)]
                         public string LocalName { get; set; }
 
-                        /// <summary>
-                        /// <para>The ID of the secondary zone.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>cn-hangzhou-g</para>
-                        /// </summary>
                         [NameInMap("ZoneId")]
                         [Validation(Required=false)]
                         public string ZoneId { get; set; }
@@ -75,12 +51,6 @@ namespace AlibabaCloud.SDK.Slb20140515.Models
 
                 }
 
-                /// <summary>
-                /// <para>The ID of the zone.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-b</para>
-                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
