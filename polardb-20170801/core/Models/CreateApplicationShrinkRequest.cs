@@ -105,6 +105,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string EndpointsShrink { get; set; }
 
+        [NameInMap("KnowledgeApplicationSpec")]
+        [Validation(Required=false)]
+        public string KnowledgeApplicationSpecShrink { get; set; }
+
         [NameInMap("MemApplicationSpec")]
         [Validation(Required=false)]
         public string MemApplicationSpecShrink { get; set; }

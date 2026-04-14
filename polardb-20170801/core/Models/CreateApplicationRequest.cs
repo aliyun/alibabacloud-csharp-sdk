@@ -197,6 +197,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         }
 
+        [NameInMap("KnowledgeApplicationSpec")]
+        [Validation(Required=false)]
+        public CreateApplicationRequestKnowledgeApplicationSpec KnowledgeApplicationSpec { get; set; }
+        public class CreateApplicationRequestKnowledgeApplicationSpec : TeaModel {
+            [NameInMap("DashboardPassword")]
+            [Validation(Required=false)]
+            public string DashboardPassword { get; set; }
+
+            [NameInMap("DbPassword")]
+            [Validation(Required=false)]
+            public string DbPassword { get; set; }
+
+            [NameInMap("LlmModel")]
+            [Validation(Required=false)]
+            public string LlmModel { get; set; }
+
+        }
+
         [NameInMap("MemApplicationSpec")]
         [Validation(Required=false)]
         public CreateApplicationRequestMemApplicationSpec MemApplicationSpec { get; set; }

@@ -4387,6 +4387,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 request.EndpointsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Endpoints, "Endpoints", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeApplicationSpec))
+            {
+                request.KnowledgeApplicationSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeApplicationSpec, "KnowledgeApplicationSpec", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MemApplicationSpec))
             {
                 request.MemApplicationSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MemApplicationSpec, "MemApplicationSpec", "json");
@@ -4451,6 +4455,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointsShrink))
             {
                 query["Endpoints"] = request.EndpointsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeApplicationSpecShrink))
+            {
+                query["KnowledgeApplicationSpec"] = request.KnowledgeApplicationSpecShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemApplicationSpecShrink))
             {
@@ -4595,6 +4603,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 request.EndpointsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Endpoints, "Endpoints", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.KnowledgeApplicationSpec))
+            {
+                request.KnowledgeApplicationSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.KnowledgeApplicationSpec, "KnowledgeApplicationSpec", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.MemApplicationSpec))
             {
                 request.MemApplicationSpecShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.MemApplicationSpec, "MemApplicationSpec", "json");
@@ -4659,6 +4671,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointsShrink))
             {
                 query["Endpoints"] = request.EndpointsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeApplicationSpecShrink))
+            {
+                query["KnowledgeApplicationSpec"] = request.KnowledgeApplicationSpecShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemApplicationSpecShrink))
             {
