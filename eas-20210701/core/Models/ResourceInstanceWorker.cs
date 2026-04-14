@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// </summary>
         [NameInMap("MemoryLimit")]
         [Validation(Required=false)]
-        public int? MemoryLimit { get; set; }
+        public long? MemoryLimit { get; set; }
 
         /// <summary>
         /// <para>The memory size that you applied for.</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         /// </summary>
         [NameInMap("RestartCount")]
         [Validation(Required=false)]
-        public int? RestartCount { get; set; }
+        public long? RestartCount { get; set; }
 
         /// <summary>
         /// <para>The service name.</para>
