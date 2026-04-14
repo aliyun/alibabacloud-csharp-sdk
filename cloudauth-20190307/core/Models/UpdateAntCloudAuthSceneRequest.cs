@@ -10,14 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 {
     public class UpdateAntCloudAuthSceneRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to enable binding to a mini program:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Y</b>: Enable</description></item>
-        /// <item><description><b>N (default)</b>: Do not enable<remarks>
-        /// <para>Notice: If enabling the binding of a mini program, please ensure all parameters for the mini program are passed.</para>
-        /// </remarks>
-        /// </description></item>
-        /// </list>
+        /// <para>Update Ant Blockchain Transaction Scenario</para>
         /// 
         /// <b>Example:</b>
         /// <para>Y</para>
@@ -27,7 +20,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string BindMiniProgram { get; set; }
 
         /// <summary>
-        /// <para>Content of the uploaded verification file.</para>
+        /// <para>Whether to enable binding with a mini program:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Y</b>: Enable</description></item>
+        /// <item><description><b>N (default)</b>: Disable<remarks>
+        /// <para>Notice: If you enable binding with a mini program, please ensure that all parameters for the mini program are passed.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>774c4aab45981ff4a86cde9255a11xxx</para>
@@ -37,36 +37,41 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CheckFileBody { get; set; }
 
         /// <summary>
-        /// <para>Name of the uploaded verification file.</para>
+        /// <para>Scenario name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试.txt</para>
+        /// <para>Whether to enable storing the authentication files generated during the authentication process to the user\&quot;s OSS:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Y</b>: Enable</description></item>
+        /// <item><description><b>N (default)</b>: Disable</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("CheckFileName")]
         [Validation(Required=false)]
         public string CheckFileName { get; set; }
 
+        /// <summary>
+        /// <para>Name of the uploaded verification file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
         [NameInMap("DeviceRiskPlus")]
         [Validation(Required=false)]
         public string DeviceRiskPlus { get; set; }
 
         /// <summary>
-        /// <para>Mini program name.</para>
+        /// <para>System-defined parameter. Value: <b>UpdateAntCloudAuthScene</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试APP</para>
+        /// <para>Scenario ID.</para>
         /// </summary>
         [NameInMap("MiniProgramName")]
         [Validation(Required=false)]
         public string MiniProgramName { get; set; }
 
         /// <summary>
-        /// <para>Binding mini program platform:</para>
-        /// <list type="bullet">
-        /// <item><description><b>WECHAT</b>: WeChat</description></item>
-        /// <item><description><b>ALIPAY</b>: Alipay</description></item>
-        /// <item><description><b>TIKTOK</b>: TikTok</description></item>
-        /// </list>
+        /// <para>Currently meaningless, can be omitted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IOS</para>
@@ -75,16 +80,33 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string Platform { get; set; }
 
+        /// <summary>
+        /// <para>Mini program name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ReturnPicCount")]
         [Validation(Required=false)]
         public long? ReturnPicCount { get; set; }
 
+        /// <summary>
+        /// <para>Platform for binding the mini program:</para>
+        /// <list type="bullet">
+        /// <item><description><b>WECHAT</b>: WeChat</description></item>
+        /// <item><description><b>ALIPAY</b>: Alipay</description></item>
+        /// <item><description><b>TIKTOK</b>: TikTok</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("ReturnVideoLength")]
         [Validation(Required=false)]
         public long? ReturnVideoLength { get; set; }
 
         /// <summary>
-        /// <para>Scenario ID.</para>
+        /// <para>Update Financial-Level Authentication Scenario</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +117,11 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public long? SceneId { get; set; }
 
         /// <summary>
-        /// <para>Scenario name.</para>
+        /// <para>Update the information of a financial-level authentication scenario based on the scenario ID.</para>
+        /// <list type="bullet">
+        /// <item><description>Service address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request method: HTTPS POST.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -105,7 +131,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string SceneName { get; set; }
 
         /// <summary>
-        /// <para>Currently meaningless, can be omitted.</para>
+        /// <para>Update Ant Blockchain Transaction Scenario</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">
@@ -117,10 +143,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable delivering the authentication files generated during the authentication process to the user\&quot;s OSS:</para>
+        /// <para>Update the information of a financial-level authentication scenario based on the scenario ID.</para>
         /// <list type="bullet">
-        /// <item><description><b>Y</b>: Enable</description></item>
-        /// <item><description><b>N (default)</b>: Disable</description></item>
+        /// <item><description>Service address: cloudauth.aliyuncs.com.</description></item>
+        /// <item><description>Request method: HTTPS POST.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

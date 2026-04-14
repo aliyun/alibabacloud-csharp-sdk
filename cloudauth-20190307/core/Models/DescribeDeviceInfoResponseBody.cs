@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
-        /// <summary>
-        /// <para>Array of device information.</para>
-        /// </summary>
         [NameInMap("DeviceInfoList")]
         [Validation(Required=false)]
         public DescribeDeviceInfoResponseBodyDeviceInfoList DeviceInfoList { get; set; }
@@ -30,52 +27,22 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
             [Validation(Required=false)]
             public List<DescribeDeviceInfoResponseBodyDeviceInfoListDeviceInfo> DeviceInfo { get; set; }
             public class DescribeDeviceInfoResponseBodyDeviceInfoListDeviceInfo : TeaModel {
-                /// <summary>
-                /// <para>Authorization start date.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>20180101</para>
-                /// </summary>
                 [NameInMap("BeginDay")]
                 [Validation(Required=false)]
                 public string BeginDay { get; set; }
 
-                /// <summary>
-                /// <para>Corresponds to the BizType in the request.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FACE_TEST</para>
-                /// </summary>
                 [NameInMap("BizType")]
                 [Validation(Required=false)]
                 public string BizType { get; set; }
 
-                /// <summary>
-                /// <para>Corresponds to the DeviceId in the request.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>wd.6ziUffspAeW5FVYbaqmexR-1qwNjM</para>
-                /// </summary>
                 [NameInMap("DeviceId")]
                 [Validation(Required=false)]
                 public string DeviceId { get; set; }
 
-                /// <summary>
-                /// <para>Authorization expiration date.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>20180101</para>
-                /// </summary>
                 [NameInMap("ExpiredDay")]
                 [Validation(Required=false)]
                 public string ExpiredDay { get; set; }
 
-                /// <summary>
-                /// <para>Corresponds to the UserDeviceId in the request.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3iJ1AY$oHcu7mC69</para>
-                /// </summary>
                 [NameInMap("UserDeviceId")]
                 [Validation(Required=false)]
                 public string UserDeviceId { get; set; }

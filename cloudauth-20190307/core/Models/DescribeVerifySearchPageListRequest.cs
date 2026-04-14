@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>End date of the query. The format is a Unix timestamp, in milliseconds.</para>
+        /// <para>End time of the query. Format is Unix timestamp, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-16 23:59:59 +0800</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>Whether there is device risk (pass true if root = 1 or simulator = 1 or virtual_video = 1).</para>
+        /// <para>Whether there is a device risk (pass true if root = 1 or simulator = 1 or virtual_video = 1).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public bool? HasDeviceRisk { get; set; }
 
         /// <summary>
-        /// <para>Liveness detection model.</para>
+        /// <para>Model for liveness detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LIVENESS</para>
@@ -115,22 +115,72 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
+        /// <summary>
+        /// <para>Business scenario risk</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: No risk</description></item>
+        /// <item><description><b>1</b>: Risk present</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RiskBizScenario")]
         [Validation(Required=false)]
         public int? RiskBizScenario { get; set; }
 
+        /// <summary>
+        /// <para>Device risk:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: No risk</description></item>
+        /// <item><description><b>1</b>: Risk present</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RiskDevice")]
         [Validation(Required=false)]
         public int? RiskDevice { get; set; }
 
+        /// <summary>
+        /// <para>DeviceToken risk:</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: No risk</description></item>
+        /// <item><description><b>1</b>: Risk present</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("RiskDeviceToken")]
         [Validation(Required=false)]
         public int? RiskDeviceToken { get; set; }
 
+        /// <summary>
+        /// <para>General risk</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: No risk</description></item>
+        /// <item><description><b>1</b>: Risk present</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RiskGeneric")]
         [Validation(Required=false)]
         public int? RiskGeneric { get; set; }
 
+        /// <summary>
+        /// <para>Large model mining risk</para>
+        /// <list type="bullet">
+        /// <item><description><b>0</b>: No risk</description></item>
+        /// <item><description><b>1</b>: Risk present</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("RiskModelMining")]
         [Validation(Required=false)]
         public int? RiskModelMining { get; set; }
@@ -166,7 +216,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public int? Simulator { get; set; }
 
         /// <summary>
-        /// <para>Start date of the query.</para>
+        /// <para>Start time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-10 00:00:00 +0800</para>

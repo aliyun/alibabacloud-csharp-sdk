@@ -73,7 +73,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -176,7 +177,8 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -1591,7 +1593,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -1687,7 +1689,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -3083,7 +3085,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -3179,7 +3181,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -3783,7 +3785,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -3879,7 +3881,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -5551,9 +5553,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeAntAndCloudAuthUserStatusRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5592,9 +5591,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeAntAndCloudAuthUserStatusRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6586,7 +6582,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务导出记录</para>
+        /// <para>Query export task records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6644,7 +6640,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务导出记录</para>
+        /// <para>Query export task records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6702,7 +6698,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务导出记录</para>
+        /// <para>Query export task records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6720,7 +6716,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务导出记录</para>
+        /// <para>Query export task records</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7266,7 +7262,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询页面元数据</para>
+        /// <para>Query Page Metadata</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7360,7 +7356,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询页面元数据</para>
+        /// <para>Query Page Metadata</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7454,7 +7450,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询页面元数据</para>
+        /// <para>Query Page Metadata</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7472,7 +7468,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询页面元数据</para>
+        /// <para>Query Page Metadata</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7490,7 +7486,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询认证统计信息</para>
+        /// <para>Query Authentication Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7540,7 +7536,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询认证统计信息</para>
+        /// <para>Query Authentication Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7590,7 +7586,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询认证统计信息</para>
+        /// <para>Query Authentication Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7608,7 +7604,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询认证统计信息</para>
+        /// <para>Query Authentication Statistics</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7626,7 +7622,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询认证统计页面</para>
+        /// <para>Query Authentication Statistics Page</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7684,7 +7680,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询认证统计页面</para>
+        /// <para>Query Authentication Statistics Page</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7742,7 +7738,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询认证统计页面</para>
+        /// <para>Query Authentication Statistics Page</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7760,7 +7756,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询认证统计页面</para>
+        /// <para>Query Authentication Statistics Page</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8093,9 +8089,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         /// <para>Call DescribeOssUploadToken to get the Token required for uploading photos to OSS.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeOssUploadTokenRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8126,9 +8119,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         /// <para>Call DescribeOssUploadToken to get the Token required for uploading photos to OSS.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeOssUploadTokenRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8352,9 +8342,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         /// <para>Request Method: Only supports sending requests via HTTPS POST method.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribePageSettingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8390,9 +8377,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         /// <para>Request Method: Only supports sending requests via HTTPS POST method.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribePageSettingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8466,9 +8450,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         /// <para>Request Method: Supports sending requests via HTTPS GET/POST methods.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeProductCodeRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8504,9 +8485,6 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         /// <para>Request Method: Supports sending requests via HTTPS GET/POST methods.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeProductCodeRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -12227,7 +12205,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -12253,7 +12231,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -12349,7 +12327,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -12375,7 +12353,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -12651,7 +12629,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -12747,7 +12725,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -13007,7 +12985,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -13033,7 +13011,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -13129,7 +13107,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -13155,7 +13133,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -18065,11 +18043,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update the information of a financial-level authentication scenario based on the scenario ID.</para>
-        /// <list type="bullet">
-        /// <item><description>Service address: cloudauth.aliyuncs.com.</description></item>
-        /// <item><description>Request method: HTTPS POST.</description></item>
-        /// </list>
+        /// <para>Content of the uploaded verification file.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18160,11 +18134,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update the information of a financial-level authentication scenario based on the scenario ID.</para>
-        /// <list type="bullet">
-        /// <item><description>Service address: cloudauth.aliyuncs.com.</description></item>
-        /// <item><description>Request method: HTTPS POST.</description></item>
-        /// </list>
+        /// <para>Content of the uploaded verification file.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18255,11 +18225,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update the information of a financial-level authentication scenario based on the scenario ID.</para>
-        /// <list type="bullet">
-        /// <item><description>Service address: cloudauth.aliyuncs.com.</description></item>
-        /// <item><description>Request method: HTTPS POST.</description></item>
-        /// </list>
+        /// <para>Content of the uploaded verification file.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18282,11 +18248,7 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update the information of a financial-level authentication scenario based on the scenario ID.</para>
-        /// <list type="bullet">
-        /// <item><description>Service address: cloudauth.aliyuncs.com.</description></item>
-        /// <item><description>Request method: HTTPS POST.</description></item>
-        /// </list>
+        /// <para>Content of the uploaded verification file.</para>
         /// </description>
         /// 
         /// <param name="request">

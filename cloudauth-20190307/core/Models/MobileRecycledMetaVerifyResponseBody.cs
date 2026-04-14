@@ -49,6 +49,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>CMCC</para>
+            /// </summary>
+            [NameInMap("IspName")]
+            [Validation(Required=false)]
+            public string IspName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>101</para>
             /// </summary>
             [NameInMap("SubCode")]
