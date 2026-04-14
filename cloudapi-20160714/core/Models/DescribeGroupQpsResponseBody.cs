@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeGroupQpsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The number of requests directed to the API group.</para>
-        /// </summary>
         [NameInMap("GroupQps")]
         [Validation(Required=false)]
         public DescribeGroupQpsResponseBodyGroupQps GroupQps { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeGroupQpsResponseBodyGroupQpsMonitorItem> MonitorItem { get; set; }
             public class DescribeGroupQpsResponseBodyGroupQpsMonitorItem : TeaModel {
-                /// <summary>
-                /// <para>The point in time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2023-08-02T09:15:00Z</para>
-                /// </summary>
                 [NameInMap("ItemTime")]
                 [Validation(Required=false)]
                 public string ItemTime { get; set; }
 
-                /// <summary>
-                /// <para>The number of requests at the specified point in time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>17</para>
-                /// </summary>
                 [NameInMap("ItemValue")]
                 [Validation(Required=false)]
                 public string ItemValue { get; set; }

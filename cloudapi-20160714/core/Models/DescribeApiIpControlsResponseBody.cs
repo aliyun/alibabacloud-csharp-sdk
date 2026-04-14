@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiIpControlsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about the ACLs. The information is an array of ApiIpControlItem data.</para>
-        /// </summary>
         [NameInMap("ApiIpControls")]
         [Validation(Required=false)]
         public DescribeApiIpControlsResponseBodyApiIpControls ApiIpControls { get; set; }
@@ -20,52 +17,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem> ApiIpControlItem { get; set; }
             public class DescribeApiIpControlsResponseBodyApiIpControlsApiIpControlItem : TeaModel {
-                /// <summary>
-                /// <para>The ID of the API.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>46fbb52840d146f186e38e8e70fc8c90</para>
-                /// </summary>
                 [NameInMap("ApiId")]
                 [Validation(Required=false)]
                 public string ApiId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the API.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testapi</para>
-                /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
                 public string ApiName { get; set; }
 
-                /// <summary>
-                /// <para>The time of binding.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2016-07-23T08:28:48Z</para>
-                /// </summary>
                 [NameInMap("BoundTime")]
                 [Validation(Required=false)]
                 public string BoundTime { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the ACL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>dd05f1c54d6749eda95f9fa6d491449a</para>
-                /// </summary>
                 [NameInMap("IpControlId")]
                 [Validation(Required=false)]
                 public string IpControlId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the ACL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testControlName</para>
-                /// </summary>
                 [NameInMap("IpControlName")]
                 [Validation(Required=false)]
                 public string IpControlName { get; set; }

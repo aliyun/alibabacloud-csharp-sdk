@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAppsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The returned app information. It is an array consisting of AppItem data.</para>
-        /// </summary>
         [NameInMap("Apps")]
         [Validation(Required=false)]
         public DescribeAppsResponseBodyApps Apps { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeAppsResponseBodyAppsAppItem> AppItem { get; set; }
             public class DescribeAppsResponseBodyAppsAppItem : TeaModel {
-                /// <summary>
-                /// <para>The ID of the app.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>20112314518278</para>
-                /// </summary>
                 [NameInMap("AppId")]
                 [Validation(Required=false)]
                 public long? AppId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the app.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CreateApptest</para>
-                /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
 
-                /// <summary>
-                /// <para>The description of the app.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>App test</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }

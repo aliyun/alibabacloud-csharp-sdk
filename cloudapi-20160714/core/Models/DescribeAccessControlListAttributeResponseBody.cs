@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeAccessControlListAttributeResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about the access control policy.</para>
-        /// </summary>
         [NameInMap("AclEntrys")]
         [Validation(Required=false)]
         public DescribeAccessControlListAttributeResponseBodyAclEntrys AclEntrys { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry> AclEntry { get; set; }
             public class DescribeAccessControlListAttributeResponseBodyAclEntrysAclEntry : TeaModel {
-                /// <summary>
-                /// <para>The entry description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>default</para>
-                /// </summary>
                 [NameInMap("AclEntryComment")]
                 [Validation(Required=false)]
                 public string AclEntryComment { get; set; }
 
-                /// <summary>
-                /// <para>The ACL entry.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>192.168.1.0/24</para>
-                /// </summary>
                 [NameInMap("AclEntryIp")]
                 [Validation(Required=false)]
                 public string AclEntryIp { get; set; }

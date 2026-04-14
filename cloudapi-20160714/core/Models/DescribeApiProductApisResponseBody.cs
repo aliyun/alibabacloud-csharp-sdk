@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiProductApisResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about the returned APIs.</para>
-        /// </summary>
         [NameInMap("ApiInfoList")]
         [Validation(Required=false)]
         public DescribeApiProductApisResponseBodyApiInfoList ApiInfoList { get; set; }
@@ -20,97 +17,38 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiProductApisResponseBodyApiInfoListApiInfo> ApiInfo { get; set; }
             public class DescribeApiProductApisResponseBodyApiInfoListApiInfo : TeaModel {
-                /// <summary>
-                /// <para>The API ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>dd46297680014a7e8e318308f3345951</para>
-                /// </summary>
                 [NameInMap("ApiId")]
                 [Validation(Required=false)]
                 public string ApiId { get; set; }
 
-                /// <summary>
-                /// <para>The API name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testApi</para>
-                /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
                 public string ApiName { get; set; }
 
-                /// <summary>
-                /// <para>The API description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the API group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1e377f18142345dfb700cd8911c2463a</para>
-                /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the API group to which the API belongs.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testApiGroup</para>
-                /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
                 public string GroupName { get; set; }
 
-                /// <summary>
-                /// <para>The request method of the API.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>POST</para>
-                /// </summary>
                 [NameInMap("Method")]
                 [Validation(Required=false)]
                 public string Method { get; set; }
 
-                /// <summary>
-                /// <para>The request path of the API.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>/test</para>
-                /// </summary>
                 [NameInMap("Path")]
                 [Validation(Required=false)]
                 public string Path { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the region where the API is deployed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>The environment to which the API is published. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>RELEASE</b>: the production environment</description></item>
-                /// <item><description><b>PRE</b>: the staging environment</description></item>
-                /// <item><description><b>TEST</b>: the test environment</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>RELEASE</para>
-                /// </summary>
                 [NameInMap("StageName")]
                 [Validation(Required=false)]
                 public string StageName { get; set; }

@@ -31,12 +31,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
-        /// <summary>
-        /// <para>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>556d15cb-0808-432d-ab07-33e6b961b703</para>
-        /// </summary>
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }

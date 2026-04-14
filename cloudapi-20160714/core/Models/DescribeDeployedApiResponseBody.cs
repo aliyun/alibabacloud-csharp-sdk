@@ -62,9 +62,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string AuthType { get; set; }
 
-        /// <summary>
-        /// <para>The constant parameters.</para>
-        /// </summary>
         [NameInMap("ConstantParameters")]
         [Validation(Required=false)]
         public DescribeDeployedApiResponseBodyConstantParameters ConstantParameters { get; set; }
@@ -73,42 +70,18 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeDeployedApiResponseBodyConstantParametersConstantParameter> ConstantParameter { get; set; }
             public class DescribeDeployedApiResponseBodyConstantParametersConstantParameter : TeaModel {
-                /// <summary>
-                /// <para>The constant value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>constance</para>
-                /// </summary>
                 [NameInMap("ConstantValue")]
                 [Validation(Required=false)]
                 public string ConstantValue { get; set; }
 
-                /// <summary>
-                /// <para>The description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>HEAD</para>
-                /// </summary>
                 [NameInMap("Location")]
                 [Validation(Required=false)]
                 public string Location { get; set; }
 
-                /// <summary>
-                /// <para>The name of the backend service parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>constance</para>
-                /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
                 public string ServiceParameterName { get; set; }
@@ -117,9 +90,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         }
 
-        /// <summary>
-        /// <para>The custom system parameters.</para>
-        /// </summary>
         [NameInMap("CustomSystemParameters")]
         [Validation(Required=false)]
         public DescribeDeployedApiResponseBodyCustomSystemParameters CustomSystemParameters { get; set; }
@@ -128,52 +98,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeDeployedApiResponseBodyCustomSystemParametersCustomSystemParameter> CustomSystemParameter { get; set; }
             public class DescribeDeployedApiResponseBodyCustomSystemParametersCustomSystemParameter : TeaModel {
-                /// <summary>
-                /// <para>Example</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>192.168.1.1</para>
-                /// </summary>
                 [NameInMap("DemoValue")]
                 [Validation(Required=false)]
                 public string DemoValue { get; set; }
 
-                /// <summary>
-                /// <para>The description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>HEAD</para>
-                /// </summary>
                 [NameInMap("Location")]
                 [Validation(Required=false)]
                 public string Location { get; set; }
 
-                /// <summary>
-                /// <para>The name of the custom system parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>appid</para>
-                /// </summary>
                 [NameInMap("ParameterName")]
                 [Validation(Required=false)]
                 public string ParameterName { get; set; }
 
-                /// <summary>
-                /// <para>The name of the corresponding backend parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>clientIp</para>
-                /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
                 public string ServiceParameterName { get; set; }
@@ -218,10 +158,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public bool? DisableInternet { get; set; }
 
-        /// <summary>
-        /// <para>The sample error codes returned by the backend service.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/44392.html">ErrorCodeSample</a>.</para>
-        /// </summary>
         [NameInMap("ErrorCodeSamples")]
         [Validation(Required=false)]
         public DescribeDeployedApiResponseBodyErrorCodeSamples ErrorCodeSamples { get; set; }
@@ -230,32 +166,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeDeployedApiResponseBodyErrorCodeSamplesErrorCodeSample> ErrorCodeSample { get; set; }
             public class DescribeDeployedApiResponseBodyErrorCodeSamplesErrorCodeSample : TeaModel {
-                /// <summary>
-                /// <para>The error code.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Error</para>
-                /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
-                /// <summary>
-                /// <para>The description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Description</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The error message.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>error message</para>
-                /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public string Message { get; set; }
@@ -466,10 +384,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The parameters of API requests sent by the consumer to API Gateway.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/43986.html">RequestParameter</a>.</para>
-        /// </summary>
         [NameInMap("RequestParameters")]
         [Validation(Required=false)]
         public DescribeDeployedApiResponseBodyRequestParameters RequestParameters { get; set; }
@@ -478,172 +392,70 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeDeployedApiResponseBodyRequestParametersRequestParameter> RequestParameter { get; set; }
             public class DescribeDeployedApiResponseBodyRequestParametersRequestParameter : TeaModel {
-                /// <summary>
-                /// <para>The name of the API parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>age</para>
-                /// </summary>
                 [NameInMap("ApiParameterName")]
                 [Validation(Required=false)]
                 public string ApiParameterName { get; set; }
 
-                /// <summary>
-                /// <para>The type of the array element.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>String</para>
-                /// </summary>
                 [NameInMap("ArrayItemsType")]
                 [Validation(Required=false)]
                 public string ArrayItemsType { get; set; }
 
-                /// <summary>
-                /// <para>The default value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>20</para>
-                /// </summary>
                 [NameInMap("DefaultValue")]
                 [Validation(Required=false)]
                 public string DefaultValue { get; set; }
 
-                /// <summary>
-                /// <para>Example</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>20</para>
-                /// </summary>
                 [NameInMap("DemoValue")]
                 [Validation(Required=false)]
                 public string DemoValue { get; set; }
 
-                /// <summary>
-                /// <para>Description</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>parameter description</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The order in the document.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("DocOrder")]
                 [Validation(Required=false)]
                 public int? DocOrder { get; set; }
 
-                /// <summary>
-                /// <para>Specifies whether the document is public. Valid values: PUBLIC and PRIVATE.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>PUBLIC</para>
-                /// </summary>
                 [NameInMap("DocShow")]
                 [Validation(Required=false)]
                 public string DocShow { get; set; }
 
-                /// <summary>
-                /// <para>The hash values that can be entered when ParameterType is set to Int, Long, Float, Double, or String. Separate different values with commas (,), such as 1,2,3,4,9 or A,B,C,E,F.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>boy,girl</para>
-                /// </summary>
                 [NameInMap("EnumValue")]
                 [Validation(Required=false)]
                 public string EnumValue { get; set; }
 
-                /// <summary>
-                /// <para>JSON scheme</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{}</para>
-                /// </summary>
                 [NameInMap("JsonScheme")]
                 [Validation(Required=false)]
                 public string JsonScheme { get; set; }
 
-                /// <summary>
-                /// <para>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>HEAD</para>
-                /// </summary>
                 [NameInMap("Location")]
                 [Validation(Required=false)]
                 public string Location { get; set; }
 
-                /// <summary>
-                /// <para>The maximum parameter length when ParameterType is set to String.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123456</para>
-                /// </summary>
                 [NameInMap("MaxLength")]
                 [Validation(Required=false)]
                 public long? MaxLength { get; set; }
 
-                /// <summary>
-                /// <para>The maximum parameter value when ParameterType is set to Int, Long, Float, or Double.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123456</para>
-                /// </summary>
                 [NameInMap("MaxValue")]
                 [Validation(Required=false)]
                 public long? MaxValue { get; set; }
 
-                /// <summary>
-                /// <para>The minimum parameter length when ParameterType is set to String.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123456</para>
-                /// </summary>
                 [NameInMap("MinLength")]
                 [Validation(Required=false)]
                 public long? MinLength { get; set; }
 
-                /// <summary>
-                /// <para>The minimum parameter value when ParameterType is set to Int, Long, Float, or Double.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123456</para>
-                /// </summary>
                 [NameInMap("MinValue")]
                 [Validation(Required=false)]
                 public long? MinValue { get; set; }
 
-                /// <summary>
-                /// <para>The type of a request parameter. Valid values: String, Int, Long, Float, Double, and Boolean.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>String</para>
-                /// </summary>
                 [NameInMap("ParameterType")]
                 [Validation(Required=false)]
                 public string ParameterType { get; set; }
 
-                /// <summary>
-                /// <para>The regular expression used for parameter validation when ParameterType is set to String.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>xxx</para>
-                /// </summary>
                 [NameInMap("RegularExpression")]
                 [Validation(Required=false)]
                 public string RegularExpression { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the parameter is required. Valid values: REQUIRED and OPTIONAL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>OPTIONAL</para>
-                /// </summary>
                 [NameInMap("Required")]
                 [Validation(Required=false)]
                 public string Required { get; set; }
@@ -662,9 +474,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ResultBodyModel { get; set; }
 
-        /// <summary>
-        /// <para>The return description of the API.</para>
-        /// </summary>
         [NameInMap("ResultDescriptions")]
         [Validation(Required=false)]
         public DescribeDeployedApiResponseBodyResultDescriptions ResultDescriptions { get; set; }
@@ -673,82 +482,34 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeDeployedApiResponseBodyResultDescriptionsResultDescription> ResultDescription { get; set; }
             public class DescribeDeployedApiResponseBodyResultDescriptionsResultDescription : TeaModel {
-                /// <summary>
-                /// <para>The description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>result description</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>Specifies whether a subnode exists.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
                 [NameInMap("HasChild")]
                 [Validation(Required=false)]
                 public bool? HasChild { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the result.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>id</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>The primary key of the result.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>DEMO</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// <para>Specifies whether the parameter is required.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("Mandatory")]
                 [Validation(Required=false)]
                 public bool? Mandatory { get; set; }
 
-                /// <summary>
-                /// <para>The name of the result.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>fwqf</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the parent node.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>pid</para>
-                /// </summary>
                 [NameInMap("Pid")]
                 [Validation(Required=false)]
                 public string Pid { get; set; }
 
-                /// <summary>
-                /// <para>The type of the result.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>String</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -933,9 +694,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public string Mock { get; set; }
 
-            /// <summary>
-            /// <para>The simulated Headers.</para>
-            /// </summary>
             [NameInMap("MockHeaders")]
             [Validation(Required=false)]
             public DescribeDeployedApiResponseBodyServiceConfigMockHeaders MockHeaders { get; set; }
@@ -944,22 +702,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
                 [Validation(Required=false)]
                 public List<DescribeDeployedApiResponseBodyServiceConfigMockHeadersMockHeader> MockHeader { get; set; }
                 public class DescribeDeployedApiResponseBodyServiceConfigMockHeadersMockHeader : TeaModel {
-                    /// <summary>
-                    /// <para>The name of the HTTP header parameter.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>Content-Type</para>
-                    /// </summary>
                     [NameInMap("HeaderName")]
                     [Validation(Required=false)]
                     public string HeaderName { get; set; }
 
-                    /// <summary>
-                    /// <para>The value of the HTTP header parameter.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>86400</para>
-                    /// </summary>
                     [NameInMap("HeaderValue")]
                     [Validation(Required=false)]
                     public string HeaderValue { get; set; }
@@ -1111,10 +857,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         }
 
-        /// <summary>
-        /// <para>The parameters of API requests sent by API Gateway to the backend service.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/43988.html">ServiceParameter</a>.</para>
-        /// </summary>
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]
         public DescribeDeployedApiResponseBodyServiceParameters ServiceParameters { get; set; }
@@ -1123,32 +865,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeDeployedApiResponseBodyServiceParametersServiceParameter> ServiceParameter { get; set; }
             public class DescribeDeployedApiResponseBodyServiceParametersServiceParameter : TeaModel {
-                /// <summary>
-                /// <para>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>HEAD</para>
-                /// </summary>
                 [NameInMap("Location")]
                 [Validation(Required=false)]
                 public string Location { get; set; }
 
-                /// <summary>
-                /// <para>The data type of the back-end service parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>String</para>
-                /// </summary>
                 [NameInMap("ParameterType")]
                 [Validation(Required=false)]
                 public string ParameterType { get; set; }
 
-                /// <summary>
-                /// <para>The name of the backend service parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>clientIp</para>
-                /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
                 public string ServiceParameterName { get; set; }
@@ -1157,10 +881,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 
         }
 
-        /// <summary>
-        /// <para>The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/43989.html">ServiceParameterMap</a>.</para>
-        /// </summary>
         [NameInMap("ServiceParametersMap")]
         [Validation(Required=false)]
         public DescribeDeployedApiResponseBodyServiceParametersMap ServiceParametersMap { get; set; }
@@ -1169,22 +889,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeDeployedApiResponseBodyServiceParametersMapServiceParameterMap> ServiceParameterMap { get; set; }
             public class DescribeDeployedApiResponseBodyServiceParametersMapServiceParameterMap : TeaModel {
-                /// <summary>
-                /// <para>The name of the front-end input parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>sex</para>
-                /// </summary>
                 [NameInMap("RequestParameterName")]
                 [Validation(Required=false)]
                 public string RequestParameterName { get; set; }
 
-                /// <summary>
-                /// <para>The name of the backend service parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>sex</para>
-                /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
                 public string ServiceParameterName { get; set; }
@@ -1208,9 +916,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string StageName { get; set; }
 
-        /// <summary>
-        /// <para>System parameters</para>
-        /// </summary>
         [NameInMap("SystemParameters")]
         [Validation(Required=false)]
         public DescribeDeployedApiResponseBodySystemParameters SystemParameters { get; set; }
@@ -1219,52 +924,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeDeployedApiResponseBodySystemParametersSystemParameter> SystemParameter { get; set; }
             public class DescribeDeployedApiResponseBodySystemParametersSystemParameter : TeaModel {
-                /// <summary>
-                /// <para>Examples</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>192.168.1.1</para>
-                /// </summary>
                 [NameInMap("DemoValue")]
                 [Validation(Required=false)]
                 public string DemoValue { get; set; }
 
-                /// <summary>
-                /// <para>The description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>QueryParamDTO</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The parameter location. Valid values: BODY, HEAD, QUERY, and PATH.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>HEAD</para>
-                /// </summary>
                 [NameInMap("Location")]
                 [Validation(Required=false)]
                 public string Location { get; set; }
 
-                /// <summary>
-                /// <para>The name of the system parameter. Valid values: CaClientIp, CaDomain, CaRequestHandleTime, CaAppId, CaRequestId, CaHttpSchema, and CaProxy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CaClientIp</para>
-                /// </summary>
                 [NameInMap("ParameterName")]
                 [Validation(Required=false)]
                 public string ParameterName { get; set; }
 
-                /// <summary>
-                /// <para>The name of the corresponding backend parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>clientIp</para>
-                /// </summary>
                 [NameInMap("ServiceParameterName")]
                 [Validation(Required=false)]
                 public string ServiceParameterName { get; set; }

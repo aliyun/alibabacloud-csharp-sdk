@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiSignaturesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The returned signature key information. It is an array consisting of ApiSignatureItem data.</para>
-        /// </summary>
         [NameInMap("ApiSignatures")]
         [Validation(Required=false)]
         public DescribeApiSignaturesResponseBodyApiSignatures ApiSignatures { get; set; }
@@ -20,52 +17,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiSignaturesResponseBodyApiSignaturesApiSignatureItem> ApiSignatureItem { get; set; }
             public class DescribeApiSignaturesResponseBodyApiSignaturesApiSignatureItem : TeaModel {
-                /// <summary>
-                /// <para>The ID of the API.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>46fbb52840d146f186e38e8e70fc8c90</para>
-                /// </summary>
                 [NameInMap("ApiId")]
                 [Validation(Required=false)]
                 public string ApiId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the API.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testapi</para>
-                /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
                 public string ApiName { get; set; }
 
-                /// <summary>
-                /// <para>The time when the backend signature key was bound.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2016-07-23T08:28:48Z</para>
-                /// </summary>
                 [NameInMap("BoundTime")]
                 [Validation(Required=false)]
                 public string BoundTime { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the backend signature key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>dd05f1c54d6749eda95f9fa6d491449a</para>
-                /// </summary>
                 [NameInMap("SignatureId")]
                 [Validation(Required=false)]
                 public string SignatureId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the backend signature key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>backendsignature</para>
-                /// </summary>
                 [NameInMap("SignatureName")]
                 [Validation(Required=false)]
                 public string SignatureName { get; set; }

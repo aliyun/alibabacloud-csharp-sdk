@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
-        /// <summary>
-        /// <para>The plug-in information. The information is an array that consists of PluginAttribute data.</para>
-        /// </summary>
         [NameInMap("Plugins")]
         [Validation(Required=false)]
         public DescribePluginsByApiResponseBodyPlugins Plugins { get; set; }
@@ -40,82 +37,34 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribePluginsByApiResponseBodyPluginsPluginAttribute> PluginAttribute { get; set; }
             public class DescribePluginsByApiResponseBodyPluginsPluginAttribute : TeaModel {
-                /// <summary>
-                /// <para>The time when the plug-in was created. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-01-11T09:29:58Z</para>
-                /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
 
-                /// <summary>
-                /// <para>The plug-in description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Traffic throttling</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The time when the plug-in was last modified. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-01-11T09:29:58Z</para>
-                /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
 
-                /// <summary>
-                /// <para>The definition statement of the plug-in.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{\&quot;unit\&quot;:\&quot;MINUTE\&quot;,\&quot;apiDefault\&quot;:20}</para>
-                /// </summary>
                 [NameInMap("PluginData")]
                 [Validation(Required=false)]
                 public string PluginData { get; set; }
 
-                /// <summary>
-                /// <para>The plug-in ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>9a3f1a5279434f2ba74ccd91c295af9f</para>
-                /// </summary>
                 [NameInMap("PluginId")]
                 [Validation(Required=false)]
                 public string PluginId { get; set; }
 
-                /// <summary>
-                /// <para>The plug-in name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>firstPlugin</para>
-                /// </summary>
                 [NameInMap("PluginName")]
                 [Validation(Required=false)]
                 public string PluginName { get; set; }
 
-                /// <summary>
-                /// <para>The plug-in type.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>trafficControl</para>
-                /// </summary>
                 [NameInMap("PluginType")]
                 [Validation(Required=false)]
                 public string PluginType { get; set; }
 
-                /// <summary>
-                /// <para>The region where the plug-in resides.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-qingdao</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }

@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class ModifySignatureRequest : TeaModel {
-        /// <summary>
-        /// <para>The security token included in the WebSocket request header. The system uses this token to authenticate the request.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>436fa39b-b3b9-40c5-ae5d-ce3e000e38c5</para>
-        /// </summary>
         [NameInMap("SecurityToken")]
         [Validation(Required=false)]
         public string SecurityToken { get; set; }

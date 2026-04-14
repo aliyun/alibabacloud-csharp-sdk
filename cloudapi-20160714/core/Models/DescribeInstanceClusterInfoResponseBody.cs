@@ -321,9 +321,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string InstanceClusterVersion { get; set; }
 
-        /// <summary>
-        /// <para>The dedicated instances contained in the cluster.</para>
-        /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public DescribeInstanceClusterInfoResponseBodyInstanceList InstanceList { get; set; }
@@ -332,42 +329,18 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeInstanceClusterInfoResponseBodyInstanceListInstance> Instance { get; set; }
             public class DescribeInstanceClusterInfoResponseBodyInstanceListInstance : TeaModel {
-                /// <summary>
-                /// <para>The error message returned if the call fails.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Instance not found.</para>
-                /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
                 public string ErrorMessage { get; set; }
 
-                /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>apigateway-ht-04e41d95e9c1</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The instance name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>tf-testacceu-central-1apigatewayinstance8752</para>
-                /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
-                /// <summary>
-                /// <para>The instance status.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>RUNNING</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

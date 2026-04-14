@@ -19,12 +19,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The zones available in the current region.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{\&quot;Zone\&quot;: [{\&quot;ZoneId\&quot;: \&quot;cn-hangzhou-i\&quot;}]}</para>
-        /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
         public DescribeZonesResponseBodyZones Zones { get; set; }
@@ -33,22 +27,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeZonesResponseBodyZonesZone> Zone { get; set; }
             public class DescribeZonesResponseBodyZonesZone : TeaModel {
-                /// <summary>
-                /// <para>The name of the zone.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>China (Hangzhou) Multi-zone 2(j,g)</para>
-                /// </summary>
                 [NameInMap("LocalName")]
                 [Validation(Required=false)]
                 public string LocalName { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the zone.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou-MAZ2(j,g)</para>
-                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }

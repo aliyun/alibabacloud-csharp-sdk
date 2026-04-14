@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
-        /// <summary>
-        /// <para>The list of domain names.</para>
-        /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public DescribePurchasedApiGroupResponseBodyDomains Domains { get; set; }
@@ -30,12 +27,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribePurchasedApiGroupResponseBodyDomainsDomainItem> DomainItem { get; set; }
             public class DescribePurchasedApiGroupResponseBodyDomainsDomainItem : TeaModel {
-                /// <summary>
-                /// <para>The domain name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test_domain.com</para>
-                /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }

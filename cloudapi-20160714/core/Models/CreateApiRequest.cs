@@ -77,6 +77,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string BackendId { get; set; }
 
+        /// <summary>
+        /// <para>The parameters of API requests sent by API Gateway to the backend service.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/43988.html">ServiceParameter</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;ServiceParameterName&quot;:&quot;age&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;Number&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;sex&quot;,&quot;Location&quot;:&quot;Query&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;userId&quot;,&quot;Location&quot;:&quot;Path&quot;,&quot;Type&quot;:&quot;Number&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;clientIp&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;SYSTEM&quot;},{&quot;ServiceParameterName&quot;:&quot;constance&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;CONSTANT&quot;}]</para>
+        /// </summary>
         [NameInMap("ConstantParameters")]
         [Validation(Required=false)]
         public string ConstantParameters { get; set; }
@@ -107,10 +114,23 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public bool? DisableInternet { get; set; }
 
+        /// <summary>
+        /// <para>The return description of the API.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
+        /// </summary>
         [NameInMap("ErrorCodeSamples")]
         [Validation(Required=false)]
         public string ErrorCodeSamples { get; set; }
 
+        /// <summary>
+        /// <para>The sample error codes returned by the backend service.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/44392.html">ErrorCodeSample</a>.(Support up to 16KB)</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;errorCode&quot;:&quot;fail&quot;,&quot;errorMessage&quot;:&quot;param invalid&quot;}</para>
+        /// </summary>
         [NameInMap("FailResultSample")]
         [Validation(Required=false)]
         public string FailResultSample { get; set; }
@@ -165,6 +185,12 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string RequestConfig { get; set; }
 
+        /// <summary>
+        /// <para>The common parameters of APIs in JSON format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{\\&quot;demoValue\\&quot;:\\&quot;12345678\\&quot;,\\&quot;description\\&quot;:\\&quot;ConsumerAppKey\\&quot;,\\&quot;location\\&quot;:\\&quot;HEAD\\&quot;,\\&quot;parameterName\\&quot;:\\&quot;CaAppKey\\&quot;,\\&quot;serviceParameterName\\&quot;:\\&quot;X-Ca-Key\\&quot;}]</para>
+        /// </summary>
         [NameInMap("RequestParameters")]
         [Validation(Required=false)]
         public string RequestParameters { get; set; }
@@ -182,10 +208,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ResultBodyModel { get; set; }
 
+        /// <summary>
+        /// <para>The switch status of ACL. Valid values:- <b>on</b> and <b>off</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
+        /// </summary>
         [NameInMap("ResultDescriptions")]
         [Validation(Required=false)]
         public string ResultDescriptions { get; set; }
 
+        /// <summary>
+        /// <para>An example of a response returned by the backend service. This value is used only to generate documentation. The actually returned result shall prevail.(Support up to 32KB)</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("ResultSample")]
         [Validation(Required=false)]
         public string ResultSample { get; set; }
@@ -216,14 +254,33 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ServiceConfig { get; set; }
 
+        /// <summary>
+        /// <para>The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the backend service.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/43989.html">ServiceParameterMap</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;ServiceParameterName&quot;:&quot;age&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;Number&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;sex&quot;,&quot;Location&quot;:&quot;Query&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;userId&quot;,&quot;Location&quot;:&quot;Path&quot;,&quot;Type&quot;:&quot;Number&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;clientIp&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;SYSTEM&quot;},{&quot;ServiceParameterName&quot;:&quot;constance&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;CONSTANT&quot;}]</para>
+        /// </summary>
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]
         public string ServiceParameters { get; set; }
 
+        /// <summary>
+        /// <para>The format of the response from the backend service. Valid values: JSON, TEXT, BINARY, XML, and HTML. Default value: JSON.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;ServiceParameterName&quot;:&quot;age&quot;,&quot;RequestParameterName&quot;:&quot;age&quot;},{&quot;ServiceParameterName&quot;:&quot;sex&quot;,&quot;RequestParameterName&quot;:&quot;sex&quot;},{&quot;ServiceParameterName&quot;:&quot;userId&quot;,&quot;RequestParameterName&quot;:&quot;userId&quot;},{&quot;ServiceParameterName&quot;:&quot;clientIp&quot;,&quot;RequestParameterName&quot;:&quot;CaClientIp&quot;},{&quot;ServiceParameterName&quot;:&quot;constance&quot;,&quot;RequestParameterName&quot;:&quot;constance&quot;}]</para>
+        /// </summary>
         [NameInMap("ServiceParametersMap")]
         [Validation(Required=false)]
         public string ServiceParametersMap { get; set; }
 
+        /// <summary>
+        /// <para>The parameters of the API.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{\&quot;demoValue\&quot;:\&quot;12345678\&quot;,\&quot;description\&quot;:\&quot;ConsumerAppKey\&quot;,\&quot;location\&quot;:\&quot;HEAD\&quot;,\&quot;parameterName\&quot;:\&quot;CaAppKey\&quot;,\&quot;serviceParameterName\&quot;:\&quot;X-Ca-Key\&quot;}]</para>
+        /// </summary>
         [NameInMap("SystemParameters")]
         [Validation(Required=false)]
         public string SystemParameters { get; set; }

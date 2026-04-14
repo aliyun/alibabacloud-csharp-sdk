@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeInstanceHttpCodeResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The HTTP status codes.</para>
-        /// </summary>
         [NameInMap("InstanceHttpCode")]
         [Validation(Required=false)]
         public DescribeInstanceHttpCodeResponseBodyInstanceHttpCode InstanceHttpCode { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeInstanceHttpCodeResponseBodyInstanceHttpCodeMonitorItem> MonitorItem { get; set; }
             public class DescribeInstanceHttpCodeResponseBodyInstanceHttpCodeMonitorItem : TeaModel {
-                /// <summary>
-                /// <para>The HTTP status code returned.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>404</para>
-                /// </summary>
                 [NameInMap("ItemTime")]
                 [Validation(Required=false)]
                 public string ItemTime { get; set; }
 
-                /// <summary>
-                /// <para>The corresponding value.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("ItemValue")]
                 [Validation(Required=false)]
                 public string ItemValue { get; set; }

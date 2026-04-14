@@ -87,6 +87,12 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string BackendId { get; set; }
 
+        /// <summary>
+        /// <para>The constant parameters sent by API Gateway to the backend service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{\&quot;ServiceParameterName\&quot;:\&quot;HOST\&quot;,\&quot;ConstantValue\&quot;:\&quot;uat-cgi.smarket.net.cn\&quot;,\&quot;Location\&quot;:\&quot;HEAD\&quot;,\&quot;Description\&quot;:\&quot;\\u540e\\u7aefVPC-HOST\&quot;}]</para>
+        /// </summary>
         [NameInMap("ConstantParameters")]
         [Validation(Required=false)]
         public string ConstantParameters { get; set; }
@@ -117,10 +123,23 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public bool? DisableInternet { get; set; }
 
+        /// <summary>
+        /// <para>The sample error codes returned by the backend service.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/44392.html">ErrorCodeSample</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;Code&quot;:&quot;400&quot;,&quot;Message&quot;:&quot;Missing the userId&quot;,&quot;Description&quot;:&quot;param invalid&quot;}]</para>
+        /// </summary>
         [NameInMap("ErrorCodeSamples")]
         [Validation(Required=false)]
         public string ErrorCodeSamples { get; set; }
 
+        /// <summary>
+        /// <para>The sample error response from the backend service. This value is used only to generate documents. It does not affect the returned result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;errorCode&quot;:&quot;fail&quot;,&quot;errorMessage&quot;:&quot;param invalid&quot;}</para>
+        /// </summary>
         [NameInMap("FailResultSample")]
         [Validation(Required=false)]
         public string FailResultSample { get; set; }
@@ -176,6 +195,13 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string RequestConfig { get; set; }
 
+        /// <summary>
+        /// <para>The parameters of API requests sent by the consumer to API Gateway.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/43986.html">RequestParameter</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{\\&quot;ParameterName\\&quot;: \\&quot;CaAppId\\&quot;, \\&quot;Location\\&quot;: \\&quot;HEAD\\&quot;, \\&quot;ServiceParameterName\\&quot;: \\&quot;x-ca-appid\\&quot;}]</para>
+        /// </summary>
         [NameInMap("RequestParameters")]
         [Validation(Required=false)]
         public string RequestParameters { get; set; }
@@ -193,10 +219,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ResultBodyModel { get; set; }
 
+        /// <summary>
+        /// <para>The descriptions of API responses.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
+        /// </summary>
         [NameInMap("ResultDescriptions")]
         [Validation(Required=false)]
         public string ResultDescriptions { get; set; }
 
+        /// <summary>
+        /// <para>The sample response that is returned from the backend service. This value is used only to generate documents. It does not affect the actually returned result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("ResultSample")]
         [Validation(Required=false)]
         public string ResultSample { get; set; }
@@ -226,14 +264,34 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string ServiceConfig { get; set; }
 
+        /// <summary>
+        /// <para>The parameters of API requests sent by API Gateway to the back-end service.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/43988.html">ServiceParameter</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;ServiceParameterName&quot;:&quot;age&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;Number&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;sex&quot;,&quot;Location&quot;:&quot;Query&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;userId&quot;,&quot;Location&quot;:&quot;Path&quot;,&quot;Type&quot;:&quot;Number&quot;,&quot;ParameterCatalog&quot;:&quot;REQUEST&quot;},{&quot;ServiceParameterName&quot;:&quot;clientIp&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;SYSTEM&quot;},{&quot;ServiceParameterName&quot;:&quot;constance&quot;,&quot;Location&quot;:&quot;Head&quot;,&quot;Type&quot;:&quot;String&quot;,&quot;ParameterCatalog&quot;:&quot;CONSTANT&quot;}]</para>
+        /// </summary>
         [NameInMap("ServiceParameters")]
         [Validation(Required=false)]
         public string ServiceParameters { get; set; }
 
+        /// <summary>
+        /// <para>The mappings between parameters of requests sent by the consumer to API Gateway and parameters of requests sent by API Gateway to the back-end service.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/43989.html">ServiceParameterMap</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;ServiceParameterName&quot;:&quot;age&quot;,&quot;RequestParameterName&quot;:&quot;age&quot;},{&quot;ServiceParameterName&quot;:&quot;sex&quot;,&quot;RequestParameterName&quot;:&quot;sex&quot;},{&quot;ServiceParameterName&quot;:&quot;userId&quot;,&quot;RequestParameterName&quot;:&quot;userId&quot;},{&quot;ServiceParameterName&quot;:&quot;clientIp&quot;,&quot;RequestParameterName&quot;:&quot;CaClientIp&quot;},{&quot;ServiceParameterName&quot;:&quot;constance&quot;,&quot;RequestParameterName&quot;:&quot;constance&quot;}]</para>
+        /// </summary>
         [NameInMap("ServiceParametersMap")]
         [Validation(Required=false)]
         public string ServiceParametersMap { get; set; }
 
+        /// <summary>
+        /// <para>The system parameters sent by API Gateway to the backend service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{\&quot;ParameterName\&quot;: \&quot;CaAppId\&quot;, \&quot;Location\&quot;: \&quot;HEAD\&quot;, \&quot;ServiceParameterName\&quot;: \&quot;x-ca-appid\&quot;}]</para>
+        /// </summary>
         [NameInMap("SystemParameters")]
         [Validation(Required=false)]
         public string SystemParameters { get; set; }

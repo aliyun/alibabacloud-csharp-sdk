@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiProductsByAppResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about API products.</para>
-        /// </summary>
         [NameInMap("ApiProductInfoList")]
         [Validation(Required=false)]
         public DescribeApiProductsByAppResponseBodyApiProductInfoList ApiProductInfoList { get; set; }
@@ -20,12 +17,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiProductsByAppResponseBodyApiProductInfoListApiProductInfo> ApiProductInfo { get; set; }
             public class DescribeApiProductsByAppResponseBodyApiProductInfoListApiProductInfo : TeaModel {
-                /// <summary>
-                /// <para>The ID of the API product.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>117b7a64a8b3f064eaa4a47ac62aac5e</para>
-                /// </summary>
                 [NameInMap("ApiProductId")]
                 [Validation(Required=false)]
                 public string ApiProductId { get; set; }

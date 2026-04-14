@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The returned information about system parameters. It is an array that consists of SystemParam data.</para>
-        /// </summary>
         [NameInMap("SystemParams")]
         [Validation(Required=false)]
         public DescribeSystemParametersResponseBodySystemParams SystemParams { get; set; }
@@ -30,42 +27,18 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeSystemParametersResponseBodySystemParamsSystemParamItem> SystemParamItem { get; set; }
             public class DescribeSystemParametersResponseBodySystemParamsSystemParamItem : TeaModel {
-                /// <summary>
-                /// <para>Examples</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>192.168.1.1</para>
-                /// </summary>
                 [NameInMap("DemoValue")]
                 [Validation(Required=false)]
                 public string DemoValue { get; set; }
 
-                /// <summary>
-                /// <para>The description of a parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Client IP Address</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The name of the parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CaClientIp</para>
-                /// </summary>
                 [NameInMap("ParamName")]
                 [Validation(Required=false)]
                 public string ParamName { get; set; }
 
-                /// <summary>
-                /// <para>The type of the parameter.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>string</para>
-                /// </summary>
                 [NameInMap("ParamType")]
                 [Validation(Required=false)]
                 public string ParamType { get; set; }

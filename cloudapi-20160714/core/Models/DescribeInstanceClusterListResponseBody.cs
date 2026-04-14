@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeInstanceClusterListResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The instance cluster list.</para>
-        /// </summary>
         [NameInMap("InstanceClusters")]
         [Validation(Required=false)]
         public DescribeInstanceClusterListResponseBodyInstanceClusters InstanceClusters { get; set; }
@@ -20,82 +17,34 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeInstanceClusterListResponseBodyInstanceClustersInstanceCluster> InstanceCluster { get; set; }
             public class DescribeInstanceClusterListResponseBodyInstanceClustersInstanceCluster : TeaModel {
-                /// <summary>
-                /// <para>The time when the cluster was created. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2023-08-14T17:46:59+08:00</para>
-                /// </summary>
                 [NameInMap("CreatedTime")]
                 [Validation(Required=false)]
                 public string CreatedTime { get; set; }
 
-                /// <summary>
-                /// <para>The cluster description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Test TrafficControl</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The cluster ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>apigateway-cluster-hz-xxxxxxxxxxxx</para>
-                /// </summary>
                 [NameInMap("InstanceClusterId")]
                 [Validation(Required=false)]
                 public string InstanceClusterId { get; set; }
 
-                /// <summary>
-                /// <para>The cluster name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test-cluster</para>
-                /// </summary>
                 [NameInMap("InstanceClusterName")]
                 [Validation(Required=false)]
                 public string InstanceClusterName { get; set; }
 
-                /// <summary>
-                /// <para>The cluster status.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>RUNNING</para>
-                /// </summary>
                 [NameInMap("InstanceClusterStatus")]
                 [Validation(Required=false)]
                 public string InstanceClusterStatus { get; set; }
 
-                /// <summary>
-                /// <para>The cluster type.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>normal</para>
-                /// </summary>
                 [NameInMap("InstanceClusterType")]
                 [Validation(Required=false)]
                 public string InstanceClusterType { get; set; }
 
-                /// <summary>
-                /// <para>The time when the cluster was last modified. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2024-01-12T10:11:08+08:00</para>
-                /// </summary>
                 [NameInMap("ModifiedTime")]
                 [Validation(Required=false)]
                 public string ModifiedTime { get; set; }
 
-                /// <summary>
-                /// <para>The region ID of the cluster.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-shenzhen</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }

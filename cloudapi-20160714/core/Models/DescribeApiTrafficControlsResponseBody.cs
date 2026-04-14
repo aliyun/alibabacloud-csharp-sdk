@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.CloudAPI20160714.Models
 {
     public class DescribeApiTrafficControlsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The returned throttling policy information. It is an array consisting of ApiTrafficControlItem data.</para>
-        /// </summary>
         [NameInMap("ApiTrafficControls")]
         [Validation(Required=false)]
         public DescribeApiTrafficControlsResponseBodyApiTrafficControls ApiTrafficControls { get; set; }
@@ -20,52 +17,22 @@ namespace AlibabaCloud.SDK.CloudAPI20160714.Models
             [Validation(Required=false)]
             public List<DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem> ApiTrafficControlItem { get; set; }
             public class DescribeApiTrafficControlsResponseBodyApiTrafficControlsApiTrafficControlItem : TeaModel {
-                /// <summary>
-                /// <para>The ID of the API.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>46fbb52840d146f186e38e8e70fc8c90</para>
-                /// </summary>
                 [NameInMap("ApiId")]
                 [Validation(Required=false)]
                 public string ApiId { get; set; }
 
-                /// <summary>
-                /// <para>API operation</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testapi</para>
-                /// </summary>
                 [NameInMap("ApiName")]
                 [Validation(Required=false)]
                 public string ApiName { get; set; }
 
-                /// <summary>
-                /// <para>The binding time of the throttling policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2016-07-23T08:28:48Z</para>
-                /// </summary>
                 [NameInMap("BoundTime")]
                 [Validation(Required=false)]
                 public string BoundTime { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the throttling policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>dd05f1c54d6749eda95f9fa6d491449a</para>
-                /// </summary>
                 [NameInMap("TrafficControlId")]
                 [Validation(Required=false)]
                 public string TrafficControlId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the throttling policy.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>backendsignature</para>
-                /// </summary>
                 [NameInMap("TrafficControlName")]
                 [Validation(Required=false)]
                 public string TrafficControlName { get; set; }

@@ -2232,7 +2232,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建API分组</para>
+        /// <para>Creates an API group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2294,7 +2294,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建API分组</para>
+        /// <para>Creates an API group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2356,7 +2356,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建API分组</para>
+        /// <para>Creates an API group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2374,7 +2374,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建API分组</para>
+        /// <para>Creates an API group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2580,7 +2580,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application for calling APIs in API Gateway.</para>
+        /// <para>Creates an app for API Gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2662,7 +2662,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application for calling APIs in API Gateway.</para>
+        /// <para>Creates an app for API Gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2744,7 +2744,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application for calling APIs in API Gateway.</para>
+        /// <para>Creates an app for API Gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2774,7 +2774,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application for calling APIs in API Gateway.</para>
+        /// <para>Creates an app for API Gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3236,7 +3236,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建后端服务在环境上的配置</para>
+        /// <para>Creates a backend service configuration in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3298,7 +3298,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建后端服务在环境上的配置</para>
+        /// <para>Creates a backend service configuration in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3360,7 +3360,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建后端服务在环境上的配置</para>
+        /// <para>Creates a backend service configuration in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3378,7 +3378,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建后端服务在环境上的配置</para>
+        /// <para>Creates a backend service configuration in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3548,7 +3548,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义数据集条目</para>
+        /// <para>Creates a data entry in a custom dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3606,7 +3606,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义数据集条目</para>
+        /// <para>Creates a data entry in a custom dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3664,7 +3664,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义数据集条目</para>
+        /// <para>Creates a data entry in a custom dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3682,7 +3682,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义数据集条目</para>
+        /// <para>Creates a data entry in a custom dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3924,7 +3924,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网域名</para>
+        /// <para>Grants an internal second-level domain name to an API group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3970,7 +3970,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网域名</para>
+        /// <para>Grants an internal second-level domain name to an API group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4016,7 +4016,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网域名</para>
+        /// <para>Grants an internal second-level domain name to an API group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4034,7 +4034,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网域名</para>
+        /// <para>Grants an internal second-level domain name to an API group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6412,7 +6412,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application.</para>
+        /// <para>Deletes a specified app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6471,7 +6471,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application.</para>
+        /// <para>Deletes a specified app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6530,7 +6530,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application.</para>
+        /// <para>Deletes a specified app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6557,7 +6557,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application.</para>
+        /// <para>Deletes a specified app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7112,7 +7112,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义数据集</para>
+        /// <para>Deletes a custom dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7158,7 +7158,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义数据集</para>
+        /// <para>Deletes a custom dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7204,7 +7204,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义数据集</para>
+        /// <para>Deletes a custom dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7222,7 +7222,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义数据集</para>
+        /// <para>Deletes a custom dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7984,7 +7984,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the specified log configuration.</para>
+        /// <para>Deletes a log configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8030,7 +8030,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the specified log configuration.</para>
+        /// <para>Deletes a log configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8076,7 +8076,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the specified log configuration.</para>
+        /// <para>Deletes a log configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8094,7 +8094,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the specified log configuration.</para>
+        /// <para>Deletes a log configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9196,7 +9196,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes an API to an environment.</para>
+        /// <para>Publishes an API to a specified environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9263,7 +9263,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes an API to an environment.</para>
+        /// <para>Publishes an API to a specified environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9330,7 +9330,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes an API to an environment.</para>
+        /// <para>Publishes an API to a specified environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9357,7 +9357,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes an API to an environment.</para>
+        /// <para>Publishes an API to a specified environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9384,7 +9384,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量下线API任务</para>
+        /// <para>Queries the progress of an API unpublishing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9430,7 +9430,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量下线API任务</para>
+        /// <para>Queries the progress of an API unpublishing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9476,7 +9476,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量下线API任务</para>
+        /// <para>Queries the progress of an API unpublishing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9494,7 +9494,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量下线API任务</para>
+        /// <para>Queries the progress of an API unpublishing task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13868,7 +13868,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries APIs by application. The environment information is also returned.</para>
+        /// <para>Queries APIs by application and returns the result by environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13942,7 +13942,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries APIs by application. The environment information is also returned.</para>
+        /// <para>Queries APIs by application and returns the result by environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14016,7 +14016,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries APIs by application. The environment information is also returned.</para>
+        /// <para>Queries APIs by application and returns the result by environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14034,7 +14034,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries APIs by application. The environment information is also returned.</para>
+        /// <para>Queries APIs by application and returns the result by environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19361,6 +19361,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             {
                 query["Language"] = request.Language;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
                 query["SecurityToken"] = request.SecurityToken;
@@ -19422,6 +19430,14 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
             {
                 query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
             {
@@ -20668,7 +20684,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询插件列表</para>
+        /// <para>Describes the plug-in modes supported by API Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20714,7 +20730,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询插件列表</para>
+        /// <para>Describes the plug-in modes supported by API Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20760,7 +20776,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询插件列表</para>
+        /// <para>Describes the plug-in modes supported by API Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20778,7 +20794,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询插件列表</para>
+        /// <para>Describes the plug-in modes supported by API Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21140,7 +21156,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the plug-ins that are bound to a running API in an environment.</para>
+        /// <para>Queries the plug-ins that are bound to a running API in a specified environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21210,7 +21226,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the plug-ins that are bound to a running API in an environment.</para>
+        /// <para>Queries the plug-ins that are bound to a running API in a specified environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21280,7 +21296,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the plug-ins that are bound to a running API in an environment.</para>
+        /// <para>Queries the plug-ins that are bound to a running API in a specified environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21306,7 +21322,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the plug-ins that are bound to a running API in an environment.</para>
+        /// <para>Queries the plug-ins that are bound to a running API in a specified environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -21748,7 +21764,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries APIs that are purchased from Alibaba Cloud Marketplace.</para>
+        /// <para>Queries the APIs purchased in the Alibaba Cloud Marketplace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21818,7 +21834,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries APIs that are purchased from Alibaba Cloud Marketplace.</para>
+        /// <para>Queries the APIs purchased in the Alibaba Cloud Marketplace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21888,7 +21904,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries APIs that are purchased from Alibaba Cloud Marketplace.</para>
+        /// <para>Queries the APIs purchased in the Alibaba Cloud Marketplace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21906,7 +21922,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries APIs that are purchased from Alibaba Cloud Marketplace.</para>
+        /// <para>Queries the APIs purchased in the Alibaba Cloud Marketplace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23080,7 +23096,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量更新API后端元定结果</para>
+        /// <para>Queries the update results of associated published APIs after the definition of a backend service is modified in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23126,7 +23142,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量更新API后端元定结果</para>
+        /// <para>Queries the update results of associated published APIs after the definition of a backend service is modified in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23172,7 +23188,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量更新API后端元定结果</para>
+        /// <para>Queries the update results of associated published APIs after the definition of a backend service is modified in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23190,7 +23206,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询批量更新API后端元定结果</para>
+        /// <para>Queries the update results of associated published APIs after the definition of a backend service is modified in an environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23208,7 +23224,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询更新VPC授权的任务</para>
+        /// <para>Queries the update progress of an API that is being published after its associated VPC access authorization is updated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23254,7 +23270,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询更新VPC授权的任务</para>
+        /// <para>Queries the update progress of an API that is being published after its associated VPC access authorization is updated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23300,7 +23316,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询更新VPC授权的任务</para>
+        /// <para>Queries the update progress of an API that is being published after its associated VPC access authorization is updated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23318,7 +23334,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询更新VPC授权的任务</para>
+        /// <para>Queries the update progress of an API that is being published after its associated VPC access authorization is updated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23936,7 +23952,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑插件</para>
+        /// <para>Unbinds a plug-in from an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23994,7 +24010,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑插件</para>
+        /// <para>Unbinds a plug-in from an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24052,7 +24068,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑插件</para>
+        /// <para>Unbinds a plug-in from an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24070,7 +24086,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑插件</para>
+        /// <para>Unbinds a plug-in from an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24712,7 +24728,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出OAS</para>
+        /// <para>Exports APIs based on OpenAPI Specification (OAS).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24788,7 +24804,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出OAS</para>
+        /// <para>Exports APIs based on OpenAPI Specification (OAS).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -24864,7 +24880,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出OAS</para>
+        /// <para>Exports APIs based on OpenAPI Specification (OAS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24882,7 +24898,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出OAS</para>
+        /// <para>Exports APIs based on OpenAPI Specification (OAS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24900,7 +24916,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports APIs based on the OAS standard.</para>
+        /// <para>Imports OpenAPI Specification (OAS)-compliant data to create an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24980,7 +24996,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports APIs based on the OAS standard.</para>
+        /// <para>Imports OpenAPI Specification (OAS)-compliant data to create an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25060,7 +25076,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports APIs based on the OAS standard.</para>
+        /// <para>Imports OpenAPI Specification (OAS)-compliant data to create an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25078,7 +25094,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports APIs based on the OAS standard.</para>
+        /// <para>Imports OpenAPI Specification (OAS)-compliant data to create an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26052,7 +26068,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the draft definition of an API. This operation is different from the ModifyApi operation. This operation does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you specify APP as the value of AuthType and do not need to configure other parameters.</para>
+        /// <para>This API operation is used to modify the draft definition of an API. It is different from the ModifyApi operation in that it does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you need to only specify the value of AuthType, which is APP.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26234,7 +26250,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the draft definition of an API. This operation is different from the ModifyApi operation. This operation does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you specify APP as the value of AuthType and do not need to configure other parameters.</para>
+        /// <para>This API operation is used to modify the draft definition of an API. It is different from the ModifyApi operation in that it does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you need to only specify the value of AuthType, which is APP.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26416,7 +26432,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the draft definition of an API. This operation is different from the ModifyApi operation. This operation does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you specify APP as the value of AuthType and do not need to configure other parameters.</para>
+        /// <para>This API operation is used to modify the draft definition of an API. It is different from the ModifyApi operation in that it does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you need to only specify the value of AuthType, which is APP.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26434,7 +26450,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the draft definition of an API. This operation is different from the ModifyApi operation. This operation does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you specify APP as the value of AuthType and do not need to configure other parameters.</para>
+        /// <para>This API operation is used to modify the draft definition of an API. It is different from the ModifyApi operation in that it does not require all information about the API. You need to only specify the parameters that you want to modify. For example, if you want to change the authentication method of the API from Anonymous to APP, you need to only specify the value of AuthType, which is APP.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27400,7 +27416,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改后端服务</para>
+        /// <para>Modifies the basic information of a backend service, such as name and description. The backend service type cannot be modified once the backend service is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27458,7 +27474,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改后端服务</para>
+        /// <para>Modifies the basic information of a backend service, such as name and description. The backend service type cannot be modified once the backend service is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27516,7 +27532,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改后端服务</para>
+        /// <para>Modifies the basic information of a backend service, such as name and description. The backend service type cannot be modified once the backend service is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27534,7 +27550,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改后端服务</para>
+        /// <para>Modifies the basic information of a backend service, such as name and description. The backend service type cannot be modified once the backend service is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27552,7 +27568,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改后端服务在环境上的定义</para>
+        /// <para>Modifies the definition of a backend service in the environment. After the modification, the backend paths of the APIs that use the backend service in the same environment will be updated at the same time automatically. You do not need to manually publish the APIs again.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27618,7 +27634,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改后端服务在环境上的定义</para>
+        /// <para>Modifies the definition of a backend service in the environment. After the modification, the backend paths of the APIs that use the backend service in the same environment will be updated at the same time automatically. You do not need to manually publish the APIs again.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27684,7 +27700,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改后端服务在环境上的定义</para>
+        /// <para>Modifies the definition of a backend service in the environment. After the modification, the backend paths of the APIs that use the backend service in the same environment will be updated at the same time automatically. You do not need to manually publish the APIs again.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27702,7 +27718,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改后端服务在环境上的定义</para>
+        /// <para>Modifies the definition of a backend service in the environment. After the modification, the backend paths of the APIs that use the backend service in the same environment will be updated at the same time automatically. You do not need to manually publish the APIs again.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27864,7 +27880,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the expiration time and description of a data entry in a custom dataset.</para>
+        /// <para>Modifies the timeout period and description of a data entry in a custom dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27922,7 +27938,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the expiration time and description of a data entry in a custom dataset.</para>
+        /// <para>Modifies the timeout period and description of a data entry in a custom dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27980,7 +27996,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the expiration time and description of a data entry in a custom dataset.</para>
+        /// <para>Modifies the timeout period and description of a data entry in a custom dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27998,7 +28014,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the expiration time and description of a data entry in a custom dataset.</para>
+        /// <para>Modifies the timeout period and description of a data entry in a custom dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29948,7 +29964,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a virtual private cloud (VPC) authorization and updates the metadata of the API associated with the VPC authorization.</para>
+        /// <para>Modifies the information of a VPC access authorization and updates the metadata of the associated API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30022,7 +30038,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a virtual private cloud (VPC) authorization and updates the metadata of the API associated with the VPC authorization.</para>
+        /// <para>Modifies the information of a VPC access authorization and updates the metadata of the associated API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30096,7 +30112,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a virtual private cloud (VPC) authorization and updates the metadata of the API associated with the VPC authorization.</para>
+        /// <para>Modifies the information of a VPC access authorization and updates the metadata of the associated API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30114,7 +30130,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a virtual private cloud (VPC) authorization and updates the metadata of the API associated with the VPC authorization.</para>
+        /// <para>Modifies the information of a VPC access authorization and updates the metadata of the associated API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30132,12 +30148,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通API网关服务</para>
+        /// <para>Activates the API Gateway service.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// OpenApiGatewayServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -30165,12 +30178,9 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通API网关服务</para>
+        /// <para>Activates the API Gateway service.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// OpenApiGatewayServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -30198,7 +30208,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通API网关服务</para>
+        /// <para>Activates the API Gateway service.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -30212,7 +30222,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通API网关服务</para>
+        /// <para>Activates the API Gateway service.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -30530,7 +30540,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制策略中IP条目</para>
+        /// <para>This feature provides instance-level access control for dedicated instances. Deletes an IP address entry from an access control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30580,7 +30590,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制策略中IP条目</para>
+        /// <para>This feature provides instance-level access control for dedicated instances. Deletes an IP address entry from an access control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30630,7 +30640,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制策略中IP条目</para>
+        /// <para>This feature provides instance-level access control for dedicated instances. Deletes an IP address entry from an access control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30648,7 +30658,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除访问控制策略中IP条目</para>
+        /// <para>This feature provides instance-level access control for dedicated instances. Deletes an IP address entry from an access control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31006,7 +31016,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the access permissions on a specified API from multiple applications. In this case, multiple applications map to a single API.</para>
+        /// <para>Revokes the access permissions on a specified API from multiple apps. In this case, multiple apps map to a single API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31072,7 +31082,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the access permissions on a specified API from multiple applications. In this case, multiple applications map to a single API.</para>
+        /// <para>Revokes the access permissions on a specified API from multiple apps. In this case, multiple apps map to a single API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31138,7 +31148,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the access permissions on a specified API from multiple applications. In this case, multiple applications map to a single API.</para>
+        /// <para>Revokes the access permissions on a specified API from multiple apps. In this case, multiple apps map to a single API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31164,7 +31174,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the access permissions on a specified API from multiple applications. In this case, multiple applications map to a single API.</para>
+        /// <para>Revokes the access permissions on a specified API from multiple apps. In this case, multiple apps map to a single API.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31898,7 +31908,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VPC authorization without unpublishing the associated APIs.</para>
+        /// <para>Deletes a VPC access authorization without unpublishing the associated APIs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31967,7 +31977,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VPC authorization without unpublishing the associated APIs.</para>
+        /// <para>Deletes a VPC access authorization without unpublishing the associated APIs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32036,7 +32046,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VPC authorization without unpublishing the associated APIs.</para>
+        /// <para>Deletes a VPC access authorization without unpublishing the associated APIs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32065,7 +32075,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a VPC authorization without unpublishing the associated APIs.</para>
+        /// <para>Deletes a VPC access authorization without unpublishing the associated APIs.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32094,7 +32104,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除VPC授权并下线关联API</para>
+        /// <para>Deletes a VPC access authorization and unpublishes the associated API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32152,7 +32162,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除VPC授权并下线关联API</para>
+        /// <para>Deletes a VPC access authorization and unpublishes the associated API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32210,7 +32220,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除VPC授权并下线关联API</para>
+        /// <para>Deletes a VPC access authorization and unpublishes the associated API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32228,7 +32238,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除VPC授权并下线关联API</para>
+        /// <para>Deletes a VPC access authorization and unpublishes the associated API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32382,7 +32392,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the key of an application.</para>
+        /// <para>Resets the key for an app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32445,7 +32455,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the key of an application.</para>
+        /// <para>Resets the key for an app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32508,7 +32518,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the key of an application.</para>
+        /// <para>Resets the key for an app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32535,7 +32545,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the key of an application.</para>
+        /// <para>Resets the key for an app.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32562,7 +32572,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据APP生成SDK</para>
+        /// <para>Generates an SDK by application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32612,7 +32622,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据APP生成SDK</para>
+        /// <para>Generates an SDK by application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32662,7 +32672,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据APP生成SDK</para>
+        /// <para>Generates an SDK by application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32680,7 +32690,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据APP生成SDK</para>
+        /// <para>Generates an SDK by application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32834,7 +32844,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据分组生成SDK</para>
+        /// <para>Generates an SDK by API group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32884,7 +32894,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据分组生成SDK</para>
+        /// <para>Generates an SDK by API group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32934,7 +32944,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据分组生成SDK</para>
+        /// <para>Generates an SDK by API group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32952,7 +32962,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据分组生成SDK</para>
+        /// <para>Generates an SDK by API group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32970,7 +32980,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改访问控制策略的名称</para>
+        /// <para>This feature provides instance-level access control for dedicated instances. Modifies the name of an access control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33020,7 +33030,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改访问控制策略的名称</para>
+        /// <para>This feature provides instance-level access control for dedicated instances. Modifies the name of an access control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33070,7 +33080,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改访问控制策略的名称</para>
+        /// <para>This feature provides instance-level access control for dedicated instances. Modifies the name of an access control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33088,7 +33098,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改访问控制策略的名称</para>
+        /// <para>This feature provides instance-level access control for dedicated instances. Modifies the name of an access control policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35546,7 +35556,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a tag-resource relationship.</para>
+        /// <para>Adds user tags to resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -35611,7 +35621,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a tag-resource relationship.</para>
+        /// <para>Adds user tags to resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -35676,7 +35686,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a tag-resource relationship.</para>
+        /// <para>Adds user tags to resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -35705,7 +35715,7 @@ namespace AlibabaCloud.SDK.CloudAPI20160714
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a tag-resource relationship.</para>
+        /// <para>Adds user tags to resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
