@@ -10,6 +10,22 @@ namespace AlibabaCloud.SDK.LingMou20250527.Models
 {
     public class CreateChatSessionRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>emaPet0p1tWYNkqD</para>
+        /// </summary>
+        [NameInMap("appId")]
+        [Validation(Required=false)]
+        public string AppId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xzzx1SIcXGYSju3S</para>
+        /// </summary>
+        [NameInMap("deviceId")]
+        [Validation(Required=false)]
+        public string DeviceId { get; set; }
+
+        /// <summary>
         /// <para>需要在<a href="https://common-buy.aliyun.com/?spm=a2c4g.11186623.0.0.457876812ETi6y&commodityCode=avatar_2dchat_public_cn">数字人实时交互服务</a>购买完成对应的服务购买，当前有可用的服务时，前往阿里云-<a href="https://billing-cost.console.aliyun.com/order/list">我的订单</a>页面对应订单详情下进行查询</para>
         /// <para>This parameter is required.</para>
         /// 
