@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取连接信息</para>
+        /// <para>Queries the credential used to connect to an app instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取连接信息</para>
+        /// <para>Queries the credential used to connect to an app instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取连接信息</para>
+        /// <para>Queries the credential used to connect to an app instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -333,7 +333,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取连接信息</para>
+        /// <para>Queries the credential used to connect to an app instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>已上架应用列表</para>
+        /// <para>Queries information about published apps.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -449,7 +449,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>已上架应用列表</para>
+        /// <para>Queries information about published apps.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -547,7 +547,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>已上架应用列表</para>
+        /// <para>Queries information about published apps.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -565,7 +565,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>已上架应用列表</para>
+        /// <para>Queries information about published apps.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -583,7 +583,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行中应用列表</para>
+        /// <para>Queries running apps.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -669,7 +669,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行中应用列表</para>
+        /// <para>Queries running apps.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -755,7 +755,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行中应用列表</para>
+        /// <para>Queries running apps.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -773,7 +773,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行中应用列表</para>
+        /// <para>Queries running apps.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -791,7 +791,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置应用资源</para>
+        /// <para>Resets app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -881,7 +881,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置应用资源</para>
+        /// <para>Resets app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -971,7 +971,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置应用资源</para>
+        /// <para>Resets app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -989,7 +989,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置应用资源</para>
+        /// <para>Resets app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1007,7 +1007,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启应用资源</para>
+        /// <para>Restarts app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1097,7 +1097,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启应用资源</para>
+        /// <para>Restarts app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1187,7 +1187,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启应用资源</para>
+        /// <para>Restarts app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1205,7 +1205,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启应用资源</para>
+        /// <para>Restarts app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1223,7 +1223,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动应用资源</para>
+        /// <para>Starts app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1313,7 +1313,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动应用资源</para>
+        /// <para>Starts app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1403,7 +1403,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动应用资源</para>
+        /// <para>Starts app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1421,7 +1421,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动应用资源</para>
+        /// <para>Starts app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1439,7 +1439,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止应用</para>
+        /// <para>Stops a specific app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1561,7 +1561,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止应用</para>
+        /// <para>Stops a specific app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1683,7 +1683,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止应用</para>
+        /// <para>Stops a specific app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1701,7 +1701,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止应用</para>
+        /// <para>Stops a specific app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1719,7 +1719,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭应用资源</para>
+        /// <para>Stops app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1809,7 +1809,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭应用资源</para>
+        /// <para>Stops app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1899,7 +1899,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭应用资源</para>
+        /// <para>Stops app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1917,7 +1917,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭应用资源</para>
+        /// <para>Stops app resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1935,7 +1935,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑实例</para>
+        /// <para>Unbinds an app instance from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2029,7 +2029,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑实例</para>
+        /// <para>Unbinds an app instance from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2123,7 +2123,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑实例</para>
+        /// <para>Unbinds an app instance from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2141,7 +2141,7 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑实例</para>
+        /// <para>Unbinds an app instance from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
