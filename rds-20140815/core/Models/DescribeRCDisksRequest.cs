@@ -61,6 +61,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>All</para>
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
+
+        /// <summary>
         /// <para>The list of the tags.</para>
         /// </summary>
         [NameInMap("Tag")]

@@ -1,3 +1,8 @@
+2026-04-14 Version: 15.8.2
+- Update API DescribeRCDisks: add request parameters Status.
+- Update API RunRCInstances: add request parameters BusinessInfo.
+
+
 2026-04-02 Version: 15.8.1
 - Update API DescribeDBProxyEndpoint: add response parameters Body.DBProxyEndpointCostThresholdForDuckdb.
 - Update API ModifyDBProxyEndpoint: add request parameters DbEndpointCostThresholdForDuckdb.
