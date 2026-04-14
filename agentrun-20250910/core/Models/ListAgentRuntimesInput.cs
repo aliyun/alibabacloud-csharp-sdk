@@ -49,6 +49,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public List<string> Statuses { get; set; }
 
+        /// <summary>
+        /// <para>按系统标签过滤</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ecs:tag1,acs:ecs:tag2</para>
+        /// </summary>
+        [NameInMap("systemTags")]
+        [Validation(Required=false)]
+        public List<string> SystemTags { get; set; }
+
     }
 
 }

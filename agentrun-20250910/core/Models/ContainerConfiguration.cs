@@ -51,6 +51,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public int? Port { get; set; }
 
+        /// <summary>
+        /// <para>自定义镜像仓库的配置信息，当imageRegistryType为CUSTOM时使用</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("registryConfig")]
+        [Validation(Required=false)]
+        public RegistryConfig RegistryConfig { get; set; }
+
     }
 
 }

@@ -6222,6 +6222,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             {
                 query["status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemTags))
+            {
+                query["systemTags"] = request.SystemTags;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 query["workspaceId"] = request.WorkspaceId;
@@ -6304,6 +6308,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemTags))
+            {
+                query["systemTags"] = request.SystemTags;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {

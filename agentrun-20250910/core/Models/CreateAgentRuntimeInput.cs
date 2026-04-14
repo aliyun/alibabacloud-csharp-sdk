@@ -104,6 +104,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? DiskSize { get; set; }
 
         /// <summary>
+        /// <para>是否启用会话隔离，启用后每个会话将在独立的环境中运行</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("enableSessionIsolation")]
+        [Validation(Required=false)]
+        public bool? EnableSessionIsolation { get; set; }
+
+        /// <summary>
         /// <para>智能体运行时的环境变量配置，用于在运行时传递配置参数</para>
         /// 
         /// <b>Example:</b>

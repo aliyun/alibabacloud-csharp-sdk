@@ -79,6 +79,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>根据系统标签进行过滤，多个标签用逗号分隔，支持精确匹配</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ecs:tag1,acs:ecs:tag2</para>
+        /// </summary>
+        [NameInMap("systemTags")]
+        [Validation(Required=false)]
+        public string SystemTags { get; set; }
+
+        /// <summary>
         /// <para>根据工作空间ID进行过滤，用于资源隔离和权限管理</para>
         /// 
         /// <b>Example:</b>
