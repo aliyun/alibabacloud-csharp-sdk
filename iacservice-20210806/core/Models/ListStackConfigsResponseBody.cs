@@ -221,6 +221,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string DeploymentContent { get; set; }
 
+            [NameInMap("failedReason")]
+            [Validation(Required=false)]
+            public string FailedReason { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Deployed</para>
