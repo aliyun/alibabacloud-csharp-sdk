@@ -1,3 +1,6 @@
+2026-04-15 Version: 1.13.1
+- Generated csharp 2023-08-08 for emr-serverless-spark.
+
 2026-04-14 Version: 1.13.0
 - Support API CreateNetworkService.
 - Support API ListNetworkServices.
