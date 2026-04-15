@@ -177,6 +177,146 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>转换Flow DSL</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConvertFlowDSLRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertFlowDSLResponse
+        /// </returns>
+        public ConvertFlowDSLResponse ConvertFlowDSLWithOptions(ConvertFlowDSLRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConvertFlowDSL",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/action/convertDsl",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConvertFlowDSLResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>转换Flow DSL</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConvertFlowDSLRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertFlowDSLResponse
+        /// </returns>
+        public async Task<ConvertFlowDSLResponse> ConvertFlowDSLWithOptionsAsync(ConvertFlowDSLRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConvertFlowDSL",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/action/convertDsl",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConvertFlowDSLResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>转换Flow DSL</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConvertFlowDSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertFlowDSLResponse
+        /// </returns>
+        public ConvertFlowDSLResponse ConvertFlowDSL(ConvertFlowDSLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ConvertFlowDSLWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>转换Flow DSL</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConvertFlowDSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConvertFlowDSLResponse
+        /// </returns>
+        public async Task<ConvertFlowDSLResponse> ConvertFlowDSLAsync(ConvertFlowDSLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ConvertFlowDSLWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>CreateAgentRuntime</para>
         /// </summary>
         /// 
@@ -973,6 +1113,286 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateCustomDomainWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFlowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowResponse
+        /// </returns>
+        public CreateFlowResponse CreateFlowWithOptions(CreateFlowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFlow",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFlowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowResponse
+        /// </returns>
+        public async Task<CreateFlowResponse> CreateFlowWithOptionsAsync(CreateFlowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFlow",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowResponse
+        /// </returns>
+        public CreateFlowResponse CreateFlow(CreateFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateFlowWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowResponse
+        /// </returns>
+        public async Task<CreateFlowResponse> CreateFlowAsync(CreateFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateFlowWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>为指定工作流创建一个新的端点，用于对外提供服务访问。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFlowEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowEndpointResponse
+        /// </returns>
+        public CreateFlowEndpointResponse CreateFlowEndpointWithOptions(string flowName, CreateFlowEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFlowEndpoint",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/endpoints",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFlowEndpointResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>为指定工作流创建一个新的端点，用于对外提供服务访问。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFlowEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowEndpointResponse
+        /// </returns>
+        public async Task<CreateFlowEndpointResponse> CreateFlowEndpointWithOptionsAsync(string flowName, CreateFlowEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateFlowEndpoint",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/endpoints",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateFlowEndpointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>为指定工作流创建一个新的端点，用于对外提供服务访问。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFlowEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowEndpointResponse
+        /// </returns>
+        public CreateFlowEndpointResponse CreateFlowEndpoint(string flowName, CreateFlowEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateFlowEndpointWithOptions(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>为指定工作流创建一个新的端点，用于对外提供服务访问。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateFlowEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateFlowEndpointResponse
+        /// </returns>
+        public async Task<CreateFlowEndpointResponse> CreateFlowEndpointAsync(string flowName, CreateFlowEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateFlowEndpointWithOptionsAsync(flowName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2781,6 +3201,420 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteCustomDomainWithOptionsAsync(domainName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowResponse
+        /// </returns>
+        public DeleteFlowResponse DeleteFlowWithOptions(string flowName, DeleteFlowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFlow",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowResponse
+        /// </returns>
+        public async Task<DeleteFlowResponse> DeleteFlowWithOptionsAsync(string flowName, DeleteFlowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFlow",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowResponse
+        /// </returns>
+        public DeleteFlowResponse DeleteFlow(string flowName, DeleteFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteFlowWithOptions(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowResponse
+        /// </returns>
+        public async Task<DeleteFlowResponse> DeleteFlowAsync(string flowName, DeleteFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteFlowWithOptionsAsync(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowEndpointResponse
+        /// </returns>
+        public DeleteFlowEndpointResponse DeleteFlowEndpointWithOptions(string flowName, string flowEndpointName, DeleteFlowEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFlowEndpoint",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowEndpointName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFlowEndpointResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowEndpointResponse
+        /// </returns>
+        public async Task<DeleteFlowEndpointResponse> DeleteFlowEndpointWithOptionsAsync(string flowName, string flowEndpointName, DeleteFlowEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFlowEndpoint",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowEndpointName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFlowEndpointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowEndpointResponse
+        /// </returns>
+        public DeleteFlowEndpointResponse DeleteFlowEndpoint(string flowName, string flowEndpointName, DeleteFlowEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteFlowEndpointWithOptions(flowName, flowEndpointName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowEndpointResponse
+        /// </returns>
+        public async Task<DeleteFlowEndpointResponse> DeleteFlowEndpointAsync(string flowName, string flowEndpointName, DeleteFlowEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteFlowEndpointWithOptionsAsync(flowName, flowEndpointName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流版本</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowVersionResponse
+        /// </returns>
+        public DeleteFlowVersionResponse DeleteFlowVersionWithOptions(string flowName, string flowVersion, DeleteFlowVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFlowVersion",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowVersion),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFlowVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流版本</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowVersionResponse
+        /// </returns>
+        public async Task<DeleteFlowVersionResponse> DeleteFlowVersionWithOptionsAsync(string flowName, string flowVersion, DeleteFlowVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteFlowVersion",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowVersion),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteFlowVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流版本</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowVersionResponse
+        /// </returns>
+        public DeleteFlowVersionResponse DeleteFlowVersion(string flowName, string flowVersion, DeleteFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteFlowVersionWithOptions(flowName, flowVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作流版本</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteFlowVersionResponse
+        /// </returns>
+        public async Task<DeleteFlowVersionResponse> DeleteFlowVersionAsync(string flowName, string flowVersion, DeleteFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteFlowVersionWithOptionsAsync(flowName, flowVersion, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4711,6 +5545,558 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetCustomDomainWithOptionsAsync(domainName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据工作流ID获取指定工作流的详细信息，包括配置、定义、版本信息等。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowResponse
+        /// </returns>
+        public GetFlowResponse GetFlowWithOptions(string flowName, GetFlowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlow",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据工作流ID获取指定工作流的详细信息，包括配置、定义、版本信息等。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowResponse
+        /// </returns>
+        public async Task<GetFlowResponse> GetFlowWithOptionsAsync(string flowName, GetFlowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlow",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据工作流ID获取指定工作流的详细信息，包括配置、定义、版本信息等。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowResponse
+        /// </returns>
+        public GetFlowResponse GetFlow(string flowName, GetFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetFlowWithOptions(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据工作流ID获取指定工作流的详细信息，包括配置、定义、版本信息等。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowResponse
+        /// </returns>
+        public async Task<GetFlowResponse> GetFlowAsync(string flowName, GetFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetFlowWithOptionsAsync(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流草稿</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取指定工作流的草稿版本，返回草稿中的配置信息。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowDraftRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowDraftResponse
+        /// </returns>
+        public GetFlowDraftResponse GetFlowDraftWithOptions(string flowName, GetFlowDraftRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlowDraft",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/draft",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlowDraftResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流草稿</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取指定工作流的草稿版本，返回草稿中的配置信息。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowDraftRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowDraftResponse
+        /// </returns>
+        public async Task<GetFlowDraftResponse> GetFlowDraftWithOptionsAsync(string flowName, GetFlowDraftRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlowDraft",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/draft",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlowDraftResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流草稿</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取指定工作流的草稿版本，返回草稿中的配置信息。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowDraftRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowDraftResponse
+        /// </returns>
+        public GetFlowDraftResponse GetFlowDraft(string flowName, GetFlowDraftRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetFlowDraftWithOptions(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流草稿</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取指定工作流的草稿版本，返回草稿中的配置信息。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowDraftRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowDraftResponse
+        /// </returns>
+        public async Task<GetFlowDraftResponse> GetFlowDraftAsync(string flowName, GetFlowDraftRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetFlowDraftWithOptionsAsync(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流端点详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据工作流ID和端点ID获取指定工作流端点的详细信息。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowEndpointResponse
+        /// </returns>
+        public GetFlowEndpointResponse GetFlowEndpointWithOptions(string flowName, string flowEndpointName, GetFlowEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlowEndpoint",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowEndpointName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlowEndpointResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流端点详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据工作流ID和端点ID获取指定工作流端点的详细信息。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowEndpointResponse
+        /// </returns>
+        public async Task<GetFlowEndpointResponse> GetFlowEndpointWithOptionsAsync(string flowName, string flowEndpointName, GetFlowEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlowEndpoint",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowEndpointName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlowEndpointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流端点详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据工作流ID和端点ID获取指定工作流端点的详细信息。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowEndpointResponse
+        /// </returns>
+        public GetFlowEndpointResponse GetFlowEndpoint(string flowName, string flowEndpointName, GetFlowEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetFlowEndpointWithOptions(flowName, flowEndpointName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流端点详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据工作流ID和端点ID获取指定工作流端点的详细信息。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowEndpointResponse
+        /// </returns>
+        public async Task<GetFlowEndpointResponse> GetFlowEndpointAsync(string flowName, string flowEndpointName, GetFlowEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetFlowEndpointWithOptionsAsync(flowName, flowEndpointName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流版本详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowVersionResponse
+        /// </returns>
+        public GetFlowVersionResponse GetFlowVersionWithOptions(string flowName, string flowVersion, GetFlowVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlowVersion",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowVersion),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlowVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流版本详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowVersionResponse
+        /// </returns>
+        public async Task<GetFlowVersionResponse> GetFlowVersionWithOptionsAsync(string flowName, string flowVersion, GetFlowVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetFlowVersion",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowVersion),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetFlowVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流版本详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowVersionResponse
+        /// </returns>
+        public GetFlowVersionResponse GetFlowVersion(string flowName, string flowVersion, GetFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetFlowVersionWithOptions(flowName, flowVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作流版本详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetFlowVersionResponse
+        /// </returns>
+        public async Task<GetFlowVersionResponse> GetFlowVersionAsync(string flowName, string flowVersion, GetFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetFlowVersionWithOptionsAsync(flowName, flowVersion, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7095,6 +8481,504 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>列出工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取指定工作流的所有端点列表，支持分页查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowEndpointsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowEndpointsResponse
+        /// </returns>
+        public ListFlowEndpointsResponse ListFlowEndpointsWithOptions(string flowId, ListFlowEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlowEndpoints",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowId) + "/endpoints",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlowEndpointsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取指定工作流的所有端点列表，支持分页查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowEndpointsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowEndpointsResponse
+        /// </returns>
+        public async Task<ListFlowEndpointsResponse> ListFlowEndpointsWithOptionsAsync(string flowId, ListFlowEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlowEndpoints",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowId) + "/endpoints",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlowEndpointsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取指定工作流的所有端点列表，支持分页查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowEndpointsResponse
+        /// </returns>
+        public ListFlowEndpointsResponse ListFlowEndpoints(string flowId, ListFlowEndpointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListFlowEndpointsWithOptions(flowId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取指定工作流的所有端点列表，支持分页查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowEndpointsResponse
+        /// </returns>
+        public async Task<ListFlowEndpointsResponse> ListFlowEndpointsAsync(string flowId, ListFlowEndpointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListFlowEndpointsWithOptionsAsync(flowId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作流版本</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取指定工作流的所有版本列表，支持分页查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowVersionsResponse
+        /// </returns>
+        public ListFlowVersionsResponse ListFlowVersionsWithOptions(string flowName, ListFlowVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlowVersions",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/versions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlowVersionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作流版本</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取指定工作流的所有版本列表，支持分页查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowVersionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowVersionsResponse
+        /// </returns>
+        public async Task<ListFlowVersionsResponse> ListFlowVersionsWithOptionsAsync(string flowName, ListFlowVersionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlowVersions",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/versions",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlowVersionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作流版本</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取指定工作流的所有版本列表，支持分页查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowVersionsResponse
+        /// </returns>
+        public ListFlowVersionsResponse ListFlowVersions(string flowName, ListFlowVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListFlowVersionsWithOptions(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作流版本</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取指定工作流的所有版本列表，支持分页查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowVersionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowVersionsResponse
+        /// </returns>
+        public async Task<ListFlowVersionsResponse> ListFlowVersionsAsync(string flowName, ListFlowVersionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListFlowVersionsWithOptionsAsync(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取当前用户的工作流列表，支持按名称、工作空间等条件过滤，支持分页查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowsResponse
+        /// </returns>
+        public ListFlowsResponse ListFlowsWithOptions(ListFlowsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowName))
+            {
+                query["flowName"] = request.FlowName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceIds))
+            {
+                query["workspaceIds"] = request.WorkspaceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlows",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlowsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取当前用户的工作流列表，支持按名称、工作空间等条件过滤，支持分页查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowsResponse
+        /// </returns>
+        public async Task<ListFlowsResponse> ListFlowsWithOptionsAsync(ListFlowsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FlowName))
+            {
+                query["flowName"] = request.FlowName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceIds))
+            {
+                query["workspaceIds"] = request.WorkspaceIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListFlows",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListFlowsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取当前用户的工作流列表，支持按名称、工作空间等条件过滤，支持分页查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowsResponse
+        /// </returns>
+        public ListFlowsResponse ListFlows(ListFlowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListFlowsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>获取当前用户的工作流列表，支持按名称、工作空间等条件过滤，支持分页查询。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListFlowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListFlowsResponse
+        /// </returns>
+        public async Task<ListFlowsResponse> ListFlowsAsync(ListFlowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListFlowsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>列出知识库</para>
         /// </summary>
         /// 
@@ -8835,6 +10719,146 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>发布工作流版本</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>为指定工作流发布新版本，用于版本管理和回滚。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishFlowVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishFlowVersionResponse
+        /// </returns>
+        public PublishFlowVersionResponse PublishFlowVersionWithOptions(string flowName, PublishFlowVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PublishFlowVersion",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/versions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PublishFlowVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布工作流版本</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>为指定工作流发布新版本，用于版本管理和回滚。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishFlowVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishFlowVersionResponse
+        /// </returns>
+        public async Task<PublishFlowVersionResponse> PublishFlowVersionWithOptionsAsync(string flowName, PublishFlowVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PublishFlowVersion",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/versions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PublishFlowVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布工作流版本</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>为指定工作流发布新版本，用于版本管理和回滚。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishFlowVersionResponse
+        /// </returns>
+        public PublishFlowVersionResponse PublishFlowVersion(string flowName, PublishFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PublishFlowVersionWithOptions(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>发布工作流版本</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>为指定工作流发布新版本，用于版本管理和回滚。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishFlowVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishFlowVersionResponse
+        /// </returns>
+        public async Task<PublishFlowVersionResponse> PublishFlowVersionAsync(string flowName, PublishFlowVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PublishFlowVersionWithOptionsAsync(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>发布运行时版本</para>
         /// </summary>
         /// 
@@ -9845,6 +11869,426 @@ namespace AlibabaCloud.SDK.AgentRun20250910
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateCustomDomainWithOptionsAsync(domainName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowResponse
+        /// </returns>
+        public UpdateFlowResponse UpdateFlowWithOptions(string flowName, UpdateFlowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFlow",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFlowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowResponse
+        /// </returns>
+        public async Task<UpdateFlowResponse> UpdateFlowWithOptionsAsync(string flowName, UpdateFlowRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFlow",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFlowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowResponse
+        /// </returns>
+        public UpdateFlowResponse UpdateFlow(string flowName, UpdateFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateFlowWithOptions(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowResponse
+        /// </returns>
+        public async Task<UpdateFlowResponse> UpdateFlowAsync(string flowName, UpdateFlowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateFlowWithOptionsAsync(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流草稿</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新指定工作流的草稿版本，草稿更新不影响已发布的工作流版本。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowDraftRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowDraftResponse
+        /// </returns>
+        public UpdateFlowDraftResponse UpdateFlowDraftWithOptions(string flowName, UpdateFlowDraftRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFlowDraft",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/draft",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFlowDraftResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流草稿</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新指定工作流的草稿版本，草稿更新不影响已发布的工作流版本。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowDraftRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowDraftResponse
+        /// </returns>
+        public async Task<UpdateFlowDraftResponse> UpdateFlowDraftWithOptionsAsync(string flowName, UpdateFlowDraftRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFlowDraft",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/draft",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFlowDraftResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流草稿</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新指定工作流的草稿版本，草稿更新不影响已发布的工作流版本。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowDraftRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowDraftResponse
+        /// </returns>
+        public UpdateFlowDraftResponse UpdateFlowDraft(string flowName, UpdateFlowDraftRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateFlowDraftWithOptions(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流草稿</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新指定工作流的草稿版本，草稿更新不影响已发布的工作流版本。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowDraftRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowDraftResponse
+        /// </returns>
+        public async Task<UpdateFlowDraftResponse> UpdateFlowDraftAsync(string flowName, UpdateFlowDraftRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateFlowDraftWithOptionsAsync(flowName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新指定工作流端点的配置信息，包括目标版本、路由配置等。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowEndpointResponse
+        /// </returns>
+        public UpdateFlowEndpointResponse UpdateFlowEndpointWithOptions(string flowName, string flowEndpointName, UpdateFlowEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFlowEndpoint",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowEndpointName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFlowEndpointResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新指定工作流端点的配置信息，包括目标版本、路由配置等。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowEndpointResponse
+        /// </returns>
+        public async Task<UpdateFlowEndpointResponse> UpdateFlowEndpointWithOptionsAsync(string flowName, string flowEndpointName, UpdateFlowEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFlowEndpoint",
+                Version = "2025-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/2025-09-10/flows/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowName) + "/endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(flowEndpointName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFlowEndpointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新指定工作流端点的配置信息，包括目标版本、路由配置等。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowEndpointResponse
+        /// </returns>
+        public UpdateFlowEndpointResponse UpdateFlowEndpoint(string flowName, string flowEndpointName, UpdateFlowEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateFlowEndpointWithOptions(flowName, flowEndpointName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新工作流端点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>更新指定工作流端点的配置信息，包括目标版本、路由配置等。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateFlowEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFlowEndpointResponse
+        /// </returns>
+        public async Task<UpdateFlowEndpointResponse> UpdateFlowEndpointAsync(string flowName, string flowEndpointName, UpdateFlowEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateFlowEndpointWithOptionsAsync(flowName, flowEndpointName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

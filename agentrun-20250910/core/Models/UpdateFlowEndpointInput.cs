@@ -40,16 +40,6 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public List<FlowEndpointRoutingConfig> RoutingConfiguration { get; set; }
 
         /// <summary>
-        /// <para>工作流端点的标签信息</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>production</para>
-        /// </summary>
-        [NameInMap("tags")]
-        [Validation(Required=false)]
-        public List<string> Tags { get; set; }
-
-        /// <summary>
         /// <para>工作流端点指向的目标版本号</para>
         /// 
         /// <b>Example:</b>

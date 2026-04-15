@@ -85,16 +85,6 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>工作流的标签信息，用于资源分类和管理</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>production,automation</para>
-        /// </summary>
-        [NameInMap("tags")]
-        [Validation(Required=false)]
-        public List<string> Tags { get; set; }
-
-        /// <summary>
         /// <para>工作流的链路追踪配置</para>
         /// </summary>
         [NameInMap("tracingConfiguration")]

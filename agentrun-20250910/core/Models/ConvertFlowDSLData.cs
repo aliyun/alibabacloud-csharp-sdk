@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
             /// </summary>
             [NameInMap("spec")]
             [Validation(Required=false)]
-            public Dictionary<string, string> Spec { get; set; }
+            public Dictionary<string, object> Spec { get; set; }
 
         }
 
