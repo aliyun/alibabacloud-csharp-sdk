@@ -1,3 +1,12 @@
+2026-04-15 Version: 1.23.6
+- Update API CreateIdentityProvider: add request parameters SamlConfig.
+- Update API ExecIdentityProviderMetadataUrlResolution: add request parameters SamlMetadataUrl.
+- Update API ExecIdentityProviderMetadataUrlResolution: add response parameters Body.IdentityProviderMetadata.SamlMetadataConfiguration.
+- Update API GetIdentityProvider: add response parameters Body.IdentityProviderDetail.EndpointMetadata.
+- Update API GetIdentityProvider: add response parameters Body.IdentityProviderDetail.SamlConfig.
+- Update API UpdateIdentityProvider: add request parameters SamlConfig.
+
+
 2026-04-09 Version: 1.23.5
 - Update API CreateCredential: add request parameters CredentialSharingScope.
 - Update API CreateCredential: add request parameters ExclusiveUserId.

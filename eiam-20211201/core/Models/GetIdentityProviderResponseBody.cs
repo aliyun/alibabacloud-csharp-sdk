@@ -251,6 +251,36 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             }
 
+            [NameInMap("EndpointMetadata")]
+            [Validation(Required=false)]
+            public GetIdentityProviderResponseBodyIdentityProviderDetailEndpointMetadata EndpointMetadata { get; set; }
+            public class GetIdentityProviderResponseBodyIdentityProviderDetailEndpointMetadata : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="https://9test.aliyunidaas.com/login/saml2/idp_nhlraxfiwsx7w7zp26qzyoxxxx/acs">https://9test.aliyunidaas.com/login/saml2/idp_nhlraxfiwsx7w7zp26qzyoxxxx/acs</a></para>
+                /// </summary>
+                [NameInMap("SamlAcsEndpoint")]
+                [Validation(Required=false)]
+                public string SamlAcsEndpoint { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="https://9test.aliyunidaas.com/login/saml2/idp_nhlraxfiwsx7w7zp26qzyoxxxx/meta">https://9test.aliyunidaas.com/login/saml2/idp_nhlraxfiwsx7w7zp26qzyoxxxx/meta</a></para>
+                /// </summary>
+                [NameInMap("SamlEntityId")]
+                [Validation(Required=false)]
+                public string SamlEntityId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="https://9test.aliyunidaas.com/login/saml2/idp_nhlraxfiwsx7w7zp26qzyoxxxx/meta">https://9test.aliyunidaas.com/login/saml2/idp_nhlraxfiwsx7w7zp26qzyoxxxx/meta</a></para>
+                /// </summary>
+                [NameInMap("SamlMetaEndpoint")]
+                [Validation(Required=false)]
+                public string SamlMetaEndpoint { get; set; }
+
+            }
+
             /// <summary>
             /// <para>Identity provider external ID.</para>
             /// 
@@ -630,6 +660,88 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 [NameInMap("PkceRequired")]
                 [Validation(Required=false)]
                 public bool? PkceRequired { get; set; }
+
+            }
+
+            [NameInMap("SamlConfig")]
+            [Validation(Required=false)]
+            public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig SamlConfig { get; set; }
+            public class GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>HTTP-REDIRECT</para>
+                /// </summary>
+                [NameInMap("BindingMethod")]
+                [Validation(Required=false)]
+                public string BindingMethod { get; set; }
+
+                [NameInMap("Certificates")]
+                [Validation(Required=false)]
+                public List<GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificates> Certificates { get; set; }
+                public class GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificates : TeaModel {
+                    [NameInMap("CertificateMetadata")]
+                    [Validation(Required=false)]
+                    public GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificatesCertificateMetadata CertificateMetadata { get; set; }
+                    public class GetIdentityProviderResponseBodyIdentityProviderDetailSamlConfigCertificatesCertificateMetadata : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>1704067200000</para>
+                        /// </summary>
+                        [NameInMap("NotAfter")]
+                        [Validation(Required=false)]
+                        public long? NotAfter { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>1672531200000</para>
+                        /// </summary>
+                        [NameInMap("NotBefore")]
+                        [Validation(Required=false)]
+                        public long? NotBefore { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX -----END CERTIFICATE-----</para>
+                    /// </summary>
+                    [NameInMap("Content")]
+                    [Validation(Required=false)]
+                    public string Content { get; set; }
+
+                }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></para>
+                /// </summary>
+                [NameInMap("IdPEntityId")]
+                [Validation(Required=false)]
+                public string IdPEntityId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></para>
+                /// </summary>
+                [NameInMap("IdPSsoUrl")]
+                [Validation(Required=false)]
+                public string IdPSsoUrl { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>180</para>
+                /// </summary>
+                [NameInMap("MaxClockSkew")]
+                [Validation(Required=false)]
+                public long? MaxClockSkew { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("RequireRequestSigned")]
+                [Validation(Required=false)]
+                public bool? RequireRequestSigned { get; set; }
 
             }
 

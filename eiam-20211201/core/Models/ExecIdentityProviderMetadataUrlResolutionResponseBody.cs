@@ -72,6 +72,42 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             }
 
+            [NameInMap("SamlMetadataConfiguration")]
+            [Validation(Required=false)]
+            public ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration SamlMetadataConfiguration { get; set; }
+            public class ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfiguration : TeaModel {
+                [NameInMap("Certificates")]
+                [Validation(Required=false)]
+                public List<ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates> Certificates { get; set; }
+                public class ExecIdentityProviderMetadataUrlResolutionResponseBodyIdentityProviderMetadataSamlMetadataConfigurationCertificates : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>-----BEGIN CERTIFICATE----- MIIE+zCCA0egAwIBAgIJAJZY0ZY0ZY0Z -----END CERTIFICATE-----</para>
+                    /// </summary>
+                    [NameInMap("Content")]
+                    [Validation(Required=false)]
+                    public string Content { get; set; }
+
+                }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></para>
+                /// </summary>
+                [NameInMap("IdPEntityId")]
+                [Validation(Required=false)]
+                public string IdPEntityId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></para>
+                /// </summary>
+                [NameInMap("IdPSsoUrl")]
+                [Validation(Required=false)]
+                public string IdPSsoUrl { get; set; }
+
+            }
+
         }
 
         /// <summary>

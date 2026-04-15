@@ -38,7 +38,6 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         /// <summary>
         /// <para>OIDC Issuer地址。</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://login.example.com/.well-known/openid-configuration">https://login.example.com/.well-known/openid-configuration</a></para>
@@ -46,6 +45,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [NameInMap("OidcIssuer")]
         [Validation(Required=false)]
         public string OidcIssuer { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://dc.test.com/FederationMetadata/2007-06/FederationMetadata.xml">https://dc.test.com/FederationMetadata/2007-06/FederationMetadata.xml</a></para>
+        /// </summary>
+        [NameInMap("SamlMetadataUrl")]
+        [Validation(Required=false)]
+        public string SamlMetadataUrl { get; set; }
 
     }
 

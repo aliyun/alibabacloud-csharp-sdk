@@ -6188,6 +6188,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["OidcConfig"] = request.OidcConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamlConfig))
+            {
+                query["SamlConfig"] = request.SamlConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UdPullConfig))
             {
                 query["UdPullConfig"] = request.UdPullConfig;
@@ -6293,6 +6297,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OidcConfig))
             {
                 query["OidcConfig"] = request.OidcConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamlConfig))
+            {
+                query["SamlConfig"] = request.SamlConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UdPullConfig))
             {
@@ -18748,6 +18756,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["OidcIssuer"] = request.OidcIssuer;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamlMetadataUrl))
+            {
+                query["SamlMetadataUrl"] = request.SamlMetadataUrl;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -18801,6 +18813,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OidcIssuer))
             {
                 query["OidcIssuer"] = request.OidcIssuer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamlMetadataUrl))
+            {
+                query["SamlMetadataUrl"] = request.SamlMetadataUrl;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -22903,7 +22919,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get identity provider</para>
+        /// <para>Obtains an identity provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22949,7 +22965,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get identity provider</para>
+        /// <para>Obtains an identity provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22995,7 +23011,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get identity provider</para>
+        /// <para>Obtains an identity provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23013,7 +23029,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get identity provider</para>
+        /// <para>Obtains an identity provider (IdP).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47192,6 +47208,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["OidcConfig"] = request.OidcConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamlConfig))
+            {
+                query["SamlConfig"] = request.SamlConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WeComConfig))
             {
                 query["WeComConfig"] = request.WeComConfig;
@@ -47273,6 +47293,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OidcConfig))
             {
                 query["OidcConfig"] = request.OidcConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SamlConfig))
+            {
+                query["SamlConfig"] = request.SamlConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WeComConfig))
             {

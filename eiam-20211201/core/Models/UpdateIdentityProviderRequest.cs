@@ -360,6 +360,66 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
         }
 
+        [NameInMap("SamlConfig")]
+        [Validation(Required=false)]
+        public UpdateIdentityProviderRequestSamlConfig SamlConfig { get; set; }
+        public class UpdateIdentityProviderRequestSamlConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>HTTP-REDIRECT</para>
+            /// </summary>
+            [NameInMap("BindingMethod")]
+            [Validation(Required=false)]
+            public string BindingMethod { get; set; }
+
+            [NameInMap("Certificates")]
+            [Validation(Required=false)]
+            public List<UpdateIdentityProviderRequestSamlConfigCertificates> Certificates { get; set; }
+            public class UpdateIdentityProviderRequestSamlConfigCertificates : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>-----BEGIN CERTIFICATE----- MIIC0jCCAbqgAwIBAgIQXXXXX-----END CERTIFICATE-----</para>
+                /// </summary>
+                [NameInMap("Content")]
+                [Validation(Required=false)]
+                public string Content { get; set; }
+
+            }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="http://dc.test.com/adfs/services/trust">http://dc.test.com/adfs/services/trust</a></para>
+            /// </summary>
+            [NameInMap("IdPEntityId")]
+            [Validation(Required=false)]
+            public string IdPEntityId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="https://dc.test.com/adfs/ls/">https://dc.test.com/adfs/ls/</a></para>
+            /// </summary>
+            [NameInMap("IdPSsoUrl")]
+            [Validation(Required=false)]
+            public string IdPSsoUrl { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>180</para>
+            /// </summary>
+            [NameInMap("MaxClockSkew")]
+            [Validation(Required=false)]
+            public long? MaxClockSkew { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("RequireRequestSigned")]
+            [Validation(Required=false)]
+            public bool? RequireRequestSigned { get; set; }
+
+        }
+
         /// <summary>
         /// <para>企业微信基本信息</para>
         /// </summary>
