@@ -50,6 +50,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("SearchField")]
+        [Validation(Required=false)]
+        public string SearchField { get; set; }
+
+        [NameInMap("SearchValue")]
+        [Validation(Required=false)]
+        public string SearchValue { get; set; }
+
+        [NameInMap("SortField")]
+        [Validation(Required=false)]
+        public string SortField { get; set; }
+
+        [NameInMap("SortOrder")]
+        [Validation(Required=false)]
+        public string SortOrder { get; set; }
+
     }
 
 }

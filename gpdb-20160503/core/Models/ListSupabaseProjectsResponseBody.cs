@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public List<ListSupabaseProjectsResponseBodyItems> Items { get; set; }
         public class ListSupabaseProjectsResponseBodyItems : TeaModel {
+            [NameInMap("AutoScale")]
+            [Validation(Required=false)]
+            public string AutoScale { get; set; }
+
             /// <summary>
             /// <para>The creation time.</para>
             /// 

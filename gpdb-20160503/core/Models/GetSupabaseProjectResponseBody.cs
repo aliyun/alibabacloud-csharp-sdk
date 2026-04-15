@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetSupabaseProjectResponseBody : TeaModel {
+        [NameInMap("AutoScale")]
+        [Validation(Required=false)]
+        public string AutoScale { get; set; }
+
         /// <summary>
         /// <para>The creation time.</para>
         /// 

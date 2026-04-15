@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string AccountPassword { get; set; }
 
+        [NameInMap("AutoScale")]
+        [Validation(Required=false)]
+        public bool? AutoScale { get; set; }
+
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</para>
         /// 

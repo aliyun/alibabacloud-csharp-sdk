@@ -89,7 +89,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -192,7 +193,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                     TeaRequest request_ = new TeaRequest();
                     Dictionary<string, object> form = AlibabaCloud.TeaUtil.Common.AssertAsMap(data);
                     string boundary = AlibabaCloud.SDK.TeaFileform.Client.GetBoundary();
-                    string host = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string tmp = AlibabaCloud.TeaUtil.Common.AssertAsString(form.Get("host"));
+                    string host = "" + bucketName + "." + tmp;
                     request_.Protocol = "HTTPS";
                     request_.Method = "POST";
                     request_.Pathname = "/";
@@ -7518,6 +7520,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["AccountPassword"] = request.AccountPassword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScale))
+            {
+                query["AutoScale"] = request.AutoScale;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -7616,6 +7622,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountPassword))
             {
                 query["AccountPassword"] = request.AccountPassword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScale))
+            {
+                query["AutoScale"] = request.AutoScale;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
@@ -31238,6 +31248,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchField))
+            {
+                query["SearchField"] = request.SearchField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchValue))
+            {
+                query["SearchValue"] = request.SearchValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
+            {
+                query["SortField"] = request.SortField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -31300,6 +31326,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchField))
+            {
+                query["SearchField"] = request.SearchField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchValue))
+            {
+                query["SearchValue"] = request.SearchValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortField))
+            {
+                query["SortField"] = request.SortField;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -37583,7 +37625,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -37679,7 +37721,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -42163,7 +42205,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -42259,7 +42301,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -43015,7 +43057,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
@@ -43111,7 +43153,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                 };
                 ossHeader = new Dictionary<string, object>
                 {
-                    {"host", "" + authResponseBody.Get("Bucket") + "." + AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
+                    {"host", AlibabaCloud.OpenApiUtil.Client.GetEndpoint(authResponseBody.Get("Endpoint"), useAccelerate, _endpointType)},
                     {"OSSAccessKeyId", authResponseBody.Get("AccessKeyId")},
                     {"policy", authResponseBody.Get("EncodedPolicy")},
                     {"Signature", authResponseBody.Get("Signature")},
