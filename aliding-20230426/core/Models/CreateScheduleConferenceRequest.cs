@@ -19,10 +19,60 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>预约会议设置</para>
+        /// </summary>
         [NameInMap("ScheduleConfSettingModel")]
         [Validation(Required=false)]
         public CreateScheduleConferenceRequestScheduleConfSettingModel ScheduleConfSettingModel { get; set; }
         public class CreateScheduleConferenceRequestScheduleConfSettingModel : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{}</para>
+            /// </summary>
+            [NameInMap("AiAgentSummarySetting")]
+            [Validation(Required=false)]
+            public CreateScheduleConferenceRequestScheduleConfSettingModelAiAgentSummarySetting AiAgentSummarySetting { get; set; }
+            public class CreateScheduleConferenceRequestScheduleConfSettingModelAiAgentSummarySetting : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("AllowAllParticipantsStart")]
+                [Validation(Required=false)]
+                public int? AllowAllParticipantsStart { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("ReceiverType")]
+                [Validation(Required=false)]
+                public int? ReceiverType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("RestrictShareMinutesSummaryOnly")]
+                [Validation(Required=false)]
+                public int? RestrictShareMinutesSummaryOnly { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>disable</para>
+                /// </summary>
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>[&quot;012345&quot;]</para>
+            /// </summary>
             [NameInMap("CohostUserIds")]
             [Validation(Required=false)]
             public List<string> CohostUserIds { get; set; }
@@ -51,10 +101,18 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public int? LockRoom { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{}</para>
+            /// </summary>
             [NameInMap("MoziConfOpenRecordSetting")]
             [Validation(Required=false)]
             public CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfOpenRecordSetting MoziConfOpenRecordSetting { get; set; }
             public class CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfOpenRecordSetting : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("IsFollowHost")]
                 [Validation(Required=false)]
                 public bool? IsFollowHost { get; set; }
@@ -83,8 +141,20 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [Validation(Required=false)]
                 public int? RecordAutoStartType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
+                [NameInMap("RestrictShareMinutesSummaryOnly")]
+                [Validation(Required=false)]
+                public int? RestrictShareMinutesSummaryOnly { get; set; }
+
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{}</para>
+            /// </summary>
             [NameInMap("MoziConfVirtualExtraSetting")]
             [Validation(Required=false)]
             public CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfVirtualExtraSetting MoziConfVirtualExtraSetting { get; set; }
@@ -105,9 +175,21 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [Validation(Required=false)]
                 public int? EnableChat { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("EnableWebAnonymousJoin")]
                 [Validation(Required=false)]
                 public bool? EnableWebAnonymousJoin { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("HiddenOwnerNick")]
+                [Validation(Required=false)]
+                public bool? HiddenOwnerNick { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -133,10 +215,34 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
                 [Validation(Required=false)]
                 public int? LockNick { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("MinutesOwnerUserId")]
                 [Validation(Required=false)]
                 public string MinutesOwnerUserId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("MinutesSummaryDiyTemplateVersion")]
+                [Validation(Required=false)]
+                public string MinutesSummaryDiyTemplateVersion { get; set; }
+
+                [NameInMap("MinutesSummaryTemplateId")]
+                [Validation(Required=false)]
+                public string MinutesSummaryTemplateId { get; set; }
+
+                [NameInMap("MinutesSummaryTemplateType")]
+                [Validation(Required=false)]
+                public string MinutesSummaryTemplateType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>{}</para>
+                /// </summary>
                 [NameInMap("MoziConfExtensionAppSettings")]
                 [Validation(Required=false)]
                 public List<CreateScheduleConferenceRequestScheduleConfSettingModelMoziConfVirtualExtraSettingMoziConfExtensionAppSettings> MoziConfExtensionAppSettings { get; set; }
@@ -151,7 +257,7 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para>xxx</para>
+                    /// <para>xxxx</para>
                     /// </summary>
                     [NameInMap("CoolAppCode")]
                     [Validation(Required=false)]
@@ -167,14 +273,26 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
 
                 }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("PushAllMeetingRecords")]
                 [Validation(Required=false)]
                 public bool? PushAllMeetingRecords { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("PushCloudRecordCard")]
                 [Validation(Required=false)]
                 public bool? PushCloudRecordCard { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("PushMinutesCard")]
                 [Validation(Required=false)]
                 public bool? PushMinutesCard { get; set; }

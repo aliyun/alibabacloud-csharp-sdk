@@ -8,48 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
-    public class CreateScheduleConferenceResponseBody : TeaModel {
+    public class BatchQueryGroupMemberResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>+861234567</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("phones")]
+        [NameInMap("hasMore")]
         [Validation(Required=false)]
-        public List<string> Phones { get; set; }
+        public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>requestId</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>1234567</para>
+        /// <para>[&quot;012345&quot;]</para>
+        /// </summary>
+        [NameInMap("memberUserIds")]
+        [Validation(Required=false)]
+        public List<string> MemberUserIds { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>weqrwereqsadqaadfafa</para>
+        /// </summary>
+        [NameInMap("nextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0FAAEC9C-C6C8-5C87-AF8E-1195889BBXXX</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>83150xxxxxx</para>
-        /// </summary>
-        [NameInMap("roomCode")]
-        [Validation(Required=false)]
-        public string RoomCode { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>5c7c9bb1-b256-4dc5-xxxx-xxxxxxxxxxxx</para>
-        /// </summary>
-        [NameInMap("scheduleConferenceId")]
-        [Validation(Required=false)]
-        public string ScheduleConferenceId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para><a href="https://meeting.dingtalk.com/j/knvMq1ixxxx">https://meeting.dingtalk.com/j/knvMq1ixxxx</a></para>
-        /// </summary>
-        [NameInMap("url")]
-        [Validation(Required=false)]
-        public string Url { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

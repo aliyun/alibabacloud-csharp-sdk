@@ -8,48 +8,46 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aliding20230426.Models
 {
-    public class CreateScheduleConferenceShrinkRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1687928400000L</para>
-        /// </summary>
-        [NameInMap("EndTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
-
+    public class BatchQueryGroupMemberShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>预约会议设置</para>
+        /// <para>COOLAPP_XXXXX</para>
         /// </summary>
-        [NameInMap("ScheduleConfSettingModel")]
+        [NameInMap("CoolAppCode")]
         [Validation(Required=false)]
-        public string ScheduleConfSettingModelShrink { get; set; }
+        public string CoolAppCode { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1687924800000L</para>
+        /// <para>100</para>
         /// </summary>
-        [NameInMap("StartTime")]
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public long? StartTime { get; set; }
+        public long? MaxResults { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>weqrwereqsadqaadfafa</para>
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cidt*****Xa4K10w==</para>
+        /// </summary>
+        [NameInMap("OpenConversationId")]
+        [Validation(Required=false)]
+        public string OpenConversationId { get; set; }
 
         [NameInMap("TenantContext")]
         [Validation(Required=false)]
         public string TenantContextShrink { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>预约会议标题</para>
-        /// </summary>
-        [NameInMap("Title")]
-        [Validation(Required=false)]
-        public string Title { get; set; }
 
     }
 
