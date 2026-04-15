@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
 
             }
 
+            [NameInMap("langDetect")]
+            [Validation(Required=false)]
+            public bool? LangDetect { get; set; }
+
             [NameInMap("paramMap")]
             [Validation(Required=false)]
             public object ParamMap { get; set; }
