@@ -175,6 +175,146 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateLlmAccessProfileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLlmAccessProfileResponse
+        /// </returns>
+        public CreateLlmAccessProfileResponse CreateLlmAccessProfileWithOptions(CreateLlmAccessProfileRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateLlmAccessProfileShrinkRequest request = new CreateLlmAccessProfileShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Profile))
+            {
+                request.ProfileShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Profile, "Profile", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfileShrink))
+            {
+                body["Profile"] = request.ProfileShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLlmAccessProfile",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLlmAccessProfileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateLlmAccessProfileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLlmAccessProfileResponse
+        /// </returns>
+        public async Task<CreateLlmAccessProfileResponse> CreateLlmAccessProfileWithOptionsAsync(CreateLlmAccessProfileRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateLlmAccessProfileShrinkRequest request = new CreateLlmAccessProfileShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Profile))
+            {
+                request.ProfileShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Profile, "Profile", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfileShrink))
+            {
+                body["Profile"] = request.ProfileShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateLlmAccessProfile",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateLlmAccessProfileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLlmAccessProfileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLlmAccessProfileResponse
+        /// </returns>
+        public CreateLlmAccessProfileResponse CreateLlmAccessProfile(CreateLlmAccessProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateLlmAccessProfileWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateLlmAccessProfileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateLlmAccessProfileResponse
+        /// </returns>
+        public async Task<CreateLlmAccessProfileResponse> CreateLlmAccessProfileAsync(CreateLlmAccessProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateLlmAccessProfileWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建实例</para>
         /// </summary>
         /// 
@@ -1119,6 +1259,134 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCloneVoiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLlmAccessProfileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLlmAccessProfileResponse
+        /// </returns>
+        public DeleteLlmAccessProfileResponse DeleteLlmAccessProfileWithOptions(DeleteLlmAccessProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessProfileId))
+            {
+                body["AccessProfileId"] = request.AccessProfileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLlmAccessProfile",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLlmAccessProfileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLlmAccessProfileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLlmAccessProfileResponse
+        /// </returns>
+        public async Task<DeleteLlmAccessProfileResponse> DeleteLlmAccessProfileWithOptionsAsync(DeleteLlmAccessProfileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessProfileId))
+            {
+                body["AccessProfileId"] = request.AccessProfileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteLlmAccessProfile",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteLlmAccessProfileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLlmAccessProfileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLlmAccessProfileResponse
+        /// </returns>
+        public DeleteLlmAccessProfileResponse DeleteLlmAccessProfile(DeleteLlmAccessProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteLlmAccessProfileWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteLlmAccessProfileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteLlmAccessProfileResponse
+        /// </returns>
+        public async Task<DeleteLlmAccessProfileResponse> DeleteLlmAccessProfileAsync(DeleteLlmAccessProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteLlmAccessProfileWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3727,6 +3995,142 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLlmAccessProfilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLlmAccessProfilesResponse
+        /// </returns>
+        public ListLlmAccessProfilesResponse ListLlmAccessProfilesWithOptions(ListLlmAccessProfilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLlmAccessProfiles",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLlmAccessProfilesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLlmAccessProfilesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLlmAccessProfilesResponse
+        /// </returns>
+        public async Task<ListLlmAccessProfilesResponse> ListLlmAccessProfilesWithOptionsAsync(ListLlmAccessProfilesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLlmAccessProfiles",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLlmAccessProfilesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLlmAccessProfilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLlmAccessProfilesResponse
+        /// </returns>
+        public ListLlmAccessProfilesResponse ListLlmAccessProfiles(ListLlmAccessProfilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListLlmAccessProfilesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLlmAccessProfilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLlmAccessProfilesResponse
+        /// </returns>
+        public async Task<ListLlmAccessProfilesResponse> ListLlmAccessProfilesAsync(ListLlmAccessProfilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListLlmAccessProfilesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取对话模型列表</para>
         /// </summary>
         /// 
@@ -5299,6 +5703,154 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateCloneVoiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateLlmAccessProfileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLlmAccessProfileResponse
+        /// </returns>
+        public UpdateLlmAccessProfileResponse UpdateLlmAccessProfileWithOptions(UpdateLlmAccessProfileRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateLlmAccessProfileShrinkRequest request = new UpdateLlmAccessProfileShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Profile))
+            {
+                request.ProfileShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Profile, "Profile", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessProfileId))
+            {
+                body["AccessProfileId"] = request.AccessProfileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfileShrink))
+            {
+                body["Profile"] = request.ProfileShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLlmAccessProfile",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateLlmAccessProfileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateLlmAccessProfileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLlmAccessProfileResponse
+        /// </returns>
+        public async Task<UpdateLlmAccessProfileResponse> UpdateLlmAccessProfileWithOptionsAsync(UpdateLlmAccessProfileRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateLlmAccessProfileShrinkRequest request = new UpdateLlmAccessProfileShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Profile))
+            {
+                request.ProfileShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Profile, "Profile", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessProfileId))
+            {
+                body["AccessProfileId"] = request.AccessProfileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProfileShrink))
+            {
+                body["Profile"] = request.ProfileShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateLlmAccessProfile",
+                Version = "2025-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateLlmAccessProfileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLlmAccessProfileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLlmAccessProfileResponse
+        /// </returns>
+        public UpdateLlmAccessProfileResponse UpdateLlmAccessProfile(UpdateLlmAccessProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateLlmAccessProfileWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新语言模型配置信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateLlmAccessProfileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateLlmAccessProfileResponse
+        /// </returns>
+        public async Task<UpdateLlmAccessProfileResponse> UpdateLlmAccessProfileAsync(UpdateLlmAccessProfileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateLlmAccessProfileWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
