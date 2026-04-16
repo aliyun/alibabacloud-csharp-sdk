@@ -262,6 +262,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public bool? ServiceManaged { get; set; }
 
+            [NameInMap("SmartConfigCapabilities")]
+            [Validation(Required=false)]
+            public List<string> SmartConfigCapabilities { get; set; }
+
             /// <summary>
             /// <para>The type of the single sign-on (SSO) protocol. Valid values:</para>
             /// <list type="bullet">
