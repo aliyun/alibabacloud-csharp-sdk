@@ -158,6 +158,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Category { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>OFF</para>
+        /// </summary>
+        [NameInMap("ColumnTable")]
+        [Validation(Required=false)]
+        public string ColumnTable { get; set; }
+
+        /// <summary>
         /// <para>Whether storage compression is enabled. Values are as follows:</para>
         /// <list type="bullet">
         /// <item><description>ON: Enabled</description></item>
