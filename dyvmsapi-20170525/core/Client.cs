@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the association relationship between a virtual number and real numbers in batches.</para>
+        /// <para>Binds multiple real numbers to a service instance at a time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the association relationship between a virtual number and real numbers in batches.</para>
+        /// <para>Binds multiple real numbers to a service instance at a time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the association relationship between a virtual number and real numbers in batches.</para>
+        /// <para>Binds multiple real numbers to a service instance at a time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the association relationship between a virtual number and real numbers in batches.</para>
+        /// <para>Binds multiple real numbers to a service instance at a time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates an outbound robocall task.</para>
+        /// <para>Initiates outbound robocall tasks in a batch. You can set up to 100 numbers in a task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -350,7 +350,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates an outbound robocall task.</para>
+        /// <para>Initiates outbound robocall tasks in a batch. You can set up to 100 numbers in a task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -461,7 +461,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates an outbound robocall task.</para>
+        /// <para>Initiates outbound robocall tasks in a batch. You can set up to 100 numbers in a task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -496,7 +496,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates an outbound robocall task.</para>
+        /// <para>Initiates outbound robocall tasks in a batch. You can set up to 100 numbers in a task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -529,6 +529,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
             return await BatchRobotSmartCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the two-way call that is initiated by calling the ClickToDial operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelCallRequest
         /// </param>
@@ -578,6 +583,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
             return TeaModel.ToObject<CancelCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the two-way call that is initiated by calling the ClickToDial operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelCallRequest
         /// </param>
@@ -627,6 +637,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
             return TeaModel.ToObject<CancelCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the two-way call that is initiated by calling the ClickToDial operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelCallRequest
         /// </param>
@@ -640,6 +655,11 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
             return CancelCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels the two-way call that is initiated by calling the ClickToDial operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelCallRequest
         /// </param>
@@ -1163,7 +1183,1451 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task for sending voice notifications or voice verification codes.</para>
+        /// <para>新增任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudCreateTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudCreateTaskResponse
+        /// </returns>
+        public CloudCreateTaskResponse CloudCreateTaskWithOptions(CloudCreateTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentGroup))
+            {
+                query["AgentGroup"] = request.AgentGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentTimeout))
+            {
+                query["AgentTimeout"] = request.AgentTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnswerRate))
+            {
+                query["AnswerRate"] = request.AnswerRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoComplete))
+            {
+                query["AutoComplete"] = request.AutoComplete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDelete))
+            {
+                query["AutoDelete"] = request.AutoDelete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStart))
+            {
+                query["AutoStart"] = request.AutoStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartDay))
+            {
+                query["AutoStartDay"] = request.AutoStartDay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartTime))
+            {
+                query["AutoStartTime"] = request.AutoStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStop))
+            {
+                query["AutoStop"] = request.AutoStop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopDay))
+            {
+                query["AutoStopDay"] = request.AutoStopDay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopTime))
+            {
+                query["AutoStopTime"] = request.AutoStopTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoTaskType))
+            {
+                query["AutoTaskType"] = request.AutoTaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoTriggerTimeStrategy))
+            {
+                query["AutoTriggerTimeStrategy"] = request.AutoTriggerTimeStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallGroupType))
+            {
+                query["CallGroupType"] = request.CallGroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallLimitStrategy))
+            {
+                query["CallLimitStrategy"] = request.CallLimitStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallPriorityStrategy))
+            {
+                query["CallPriorityStrategy"] = request.CallPriorityStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRouteStrategy))
+            {
+                query["CallRouteStrategy"] = request.CallRouteStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallStrategy))
+            {
+                query["CallStrategy"] = request.CallStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallVariables))
+            {
+                query["CallVariables"] = request.CallVariables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClidProperty))
+            {
+                query["ClidProperty"] = request.ClidProperty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cnos))
+            {
+                query["Cnos"] = request.Cnos;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Concurrency))
+            {
+                query["Concurrency"] = request.Concurrency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidType))
+            {
+                query["CustomerClidType"] = request.CustomerClidType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidWeight))
+            {
+                query["CustomerClidWeight"] = request.CustomerClidWeight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidWeightFlag))
+            {
+                query["CustomerClidWeightFlag"] = request.CustomerClidWeightFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClids))
+            {
+                query["CustomerClids"] = request.CustomerClids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidsCategory))
+            {
+                query["CustomerClidsCategory"] = request.CustomerClidsCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidsGroup))
+            {
+                query["CustomerClidsGroup"] = request.CustomerClidsGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerMoh))
+            {
+                query["CustomerMoh"] = request.CustomerMoh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerTimeout))
+            {
+                query["CustomerTimeout"] = request.CustomerTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerVoice))
+            {
+                query["CustomerVoice"] = request.CustomerVoice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnterpriseId))
+            {
+                query["EnterpriseId"] = request.EnterpriseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceEndFlag))
+            {
+                query["ForceEndFlag"] = request.ForceEndFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRewarm))
+            {
+                query["IsRewarm"] = request.IsRewarm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IvrId))
+            {
+                query["IvrId"] = request.IvrId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IvrName))
+            {
+                query["IvrName"] = request.IvrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxWaitTime))
+            {
+                query["MaxWaitTime"] = request.MaxWaitTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinAvailableAgentCount))
+            {
+                query["MinAvailableAgentCount"] = request.MinAvailableAgentCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PredictAdjust))
+            {
+                query["PredictAdjust"] = request.PredictAdjust;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quotiety))
+            {
+                query["Quotiety"] = request.Quotiety;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategy))
+            {
+                query["RetryStrategy"] = request.RetryStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategyOnlyToday))
+            {
+                query["RetryStrategyOnlyToday"] = request.RetryStrategyOnlyToday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategyTimeType))
+            {
+                query["RetryStrategyTimeType"] = request.RetryStrategyTimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeStrategy))
+            {
+                query["TimeStrategy"] = request.TimeStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserFields))
+            {
+                query["UserFields"] = request.UserFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarmUpDuration))
+            {
+                query["WarmUpDuration"] = request.WarmUpDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Wrapup))
+            {
+                query["Wrapup"] = request.Wrapup;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloudCreateTask",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloudCreateTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudCreateTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudCreateTaskResponse
+        /// </returns>
+        public async Task<CloudCreateTaskResponse> CloudCreateTaskWithOptionsAsync(CloudCreateTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentGroup))
+            {
+                query["AgentGroup"] = request.AgentGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentTimeout))
+            {
+                query["AgentTimeout"] = request.AgentTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnswerRate))
+            {
+                query["AnswerRate"] = request.AnswerRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoComplete))
+            {
+                query["AutoComplete"] = request.AutoComplete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDelete))
+            {
+                query["AutoDelete"] = request.AutoDelete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStart))
+            {
+                query["AutoStart"] = request.AutoStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartDay))
+            {
+                query["AutoStartDay"] = request.AutoStartDay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartTime))
+            {
+                query["AutoStartTime"] = request.AutoStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStop))
+            {
+                query["AutoStop"] = request.AutoStop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopDay))
+            {
+                query["AutoStopDay"] = request.AutoStopDay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopTime))
+            {
+                query["AutoStopTime"] = request.AutoStopTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoTaskType))
+            {
+                query["AutoTaskType"] = request.AutoTaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoTriggerTimeStrategy))
+            {
+                query["AutoTriggerTimeStrategy"] = request.AutoTriggerTimeStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallGroupType))
+            {
+                query["CallGroupType"] = request.CallGroupType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallLimitStrategy))
+            {
+                query["CallLimitStrategy"] = request.CallLimitStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallPriorityStrategy))
+            {
+                query["CallPriorityStrategy"] = request.CallPriorityStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRouteStrategy))
+            {
+                query["CallRouteStrategy"] = request.CallRouteStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallStrategy))
+            {
+                query["CallStrategy"] = request.CallStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallVariables))
+            {
+                query["CallVariables"] = request.CallVariables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClidProperty))
+            {
+                query["ClidProperty"] = request.ClidProperty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cnos))
+            {
+                query["Cnos"] = request.Cnos;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Concurrency))
+            {
+                query["Concurrency"] = request.Concurrency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidType))
+            {
+                query["CustomerClidType"] = request.CustomerClidType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidWeight))
+            {
+                query["CustomerClidWeight"] = request.CustomerClidWeight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidWeightFlag))
+            {
+                query["CustomerClidWeightFlag"] = request.CustomerClidWeightFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClids))
+            {
+                query["CustomerClids"] = request.CustomerClids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidsCategory))
+            {
+                query["CustomerClidsCategory"] = request.CustomerClidsCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidsGroup))
+            {
+                query["CustomerClidsGroup"] = request.CustomerClidsGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerMoh))
+            {
+                query["CustomerMoh"] = request.CustomerMoh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerTimeout))
+            {
+                query["CustomerTimeout"] = request.CustomerTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerVoice))
+            {
+                query["CustomerVoice"] = request.CustomerVoice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnterpriseId))
+            {
+                query["EnterpriseId"] = request.EnterpriseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceEndFlag))
+            {
+                query["ForceEndFlag"] = request.ForceEndFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRewarm))
+            {
+                query["IsRewarm"] = request.IsRewarm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IvrId))
+            {
+                query["IvrId"] = request.IvrId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IvrName))
+            {
+                query["IvrName"] = request.IvrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxWaitTime))
+            {
+                query["MaxWaitTime"] = request.MaxWaitTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinAvailableAgentCount))
+            {
+                query["MinAvailableAgentCount"] = request.MinAvailableAgentCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PredictAdjust))
+            {
+                query["PredictAdjust"] = request.PredictAdjust;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quotiety))
+            {
+                query["Quotiety"] = request.Quotiety;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategy))
+            {
+                query["RetryStrategy"] = request.RetryStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategyOnlyToday))
+            {
+                query["RetryStrategyOnlyToday"] = request.RetryStrategyOnlyToday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategyTimeType))
+            {
+                query["RetryStrategyTimeType"] = request.RetryStrategyTimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeStrategy))
+            {
+                query["TimeStrategy"] = request.TimeStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserFields))
+            {
+                query["UserFields"] = request.UserFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarmUpDuration))
+            {
+                query["WarmUpDuration"] = request.WarmUpDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Wrapup))
+            {
+                query["Wrapup"] = request.Wrapup;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloudCreateTask",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloudCreateTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudCreateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudCreateTaskResponse
+        /// </returns>
+        public CloudCreateTaskResponse CloudCreateTask(CloudCreateTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CloudCreateTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudCreateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudCreateTaskResponse
+        /// </returns>
+        public async Task<CloudCreateTaskResponse> CloudCreateTaskAsync(CloudCreateTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CloudCreateTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>任务号码导入</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CloudImportTaskTelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudImportTaskTelResponse
+        /// </returns>
+        public CloudImportTaskTelResponse CloudImportTaskTelWithOptions(CloudImportTaskTelRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CloudImportTaskTelShrinkRequest request = new CloudImportTaskTelShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskTelList))
+            {
+                request.TaskTelListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskTelList, "TaskTelList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeVoicePath))
+            {
+                query["BridgeVoicePath"] = request.BridgeVoicePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeVoiceType))
+            {
+                query["BridgeVoiceType"] = request.BridgeVoiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnterpriseId))
+            {
+                query["EnterpriseId"] = request.EnterpriseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImportTelAutoStart))
+            {
+                query["ImportTelAutoStart"] = request.ImportTelAutoStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRepeat))
+            {
+                query["IsRepeat"] = request.IsRepeat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskTelListShrink))
+            {
+                query["TaskTelList"] = request.TaskTelListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloudImportTaskTel",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloudImportTaskTelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>任务号码导入</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CloudImportTaskTelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudImportTaskTelResponse
+        /// </returns>
+        public async Task<CloudImportTaskTelResponse> CloudImportTaskTelWithOptionsAsync(CloudImportTaskTelRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CloudImportTaskTelShrinkRequest request = new CloudImportTaskTelShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskTelList))
+            {
+                request.TaskTelListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskTelList, "TaskTelList", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeVoicePath))
+            {
+                query["BridgeVoicePath"] = request.BridgeVoicePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BridgeVoiceType))
+            {
+                query["BridgeVoiceType"] = request.BridgeVoiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnterpriseId))
+            {
+                query["EnterpriseId"] = request.EnterpriseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                query["FileId"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImportTelAutoStart))
+            {
+                query["ImportTelAutoStart"] = request.ImportTelAutoStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRepeat))
+            {
+                query["IsRepeat"] = request.IsRepeat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskTelListShrink))
+            {
+                query["TaskTelList"] = request.TaskTelListShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloudImportTaskTel",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloudImportTaskTelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>任务号码导入</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudImportTaskTelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudImportTaskTelResponse
+        /// </returns>
+        public CloudImportTaskTelResponse CloudImportTaskTel(CloudImportTaskTelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CloudImportTaskTelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>任务号码导入</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudImportTaskTelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudImportTaskTelResponse
+        /// </returns>
+        public async Task<CloudImportTaskTelResponse> CloudImportTaskTelAsync(CloudImportTaskTelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CloudImportTaskTelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>任务启动</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudStartTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudStartTaskResponse
+        /// </returns>
+        public CloudStartTaskResponse CloudStartTaskWithOptions(CloudStartTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnterpriseId))
+            {
+                query["EnterpriseId"] = request.EnterpriseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloudStartTask",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloudStartTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>任务启动</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudStartTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudStartTaskResponse
+        /// </returns>
+        public async Task<CloudStartTaskResponse> CloudStartTaskWithOptionsAsync(CloudStartTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnterpriseId))
+            {
+                query["EnterpriseId"] = request.EnterpriseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloudStartTask",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloudStartTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>任务启动</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudStartTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudStartTaskResponse
+        /// </returns>
+        public CloudStartTaskResponse CloudStartTask(CloudStartTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CloudStartTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>任务启动</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudStartTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudStartTaskResponse
+        /// </returns>
+        public async Task<CloudStartTaskResponse> CloudStartTaskAsync(CloudStartTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CloudStartTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudUpdateTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudUpdateTaskResponse
+        /// </returns>
+        public CloudUpdateTaskResponse CloudUpdateTaskWithOptions(CloudUpdateTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentGroup))
+            {
+                query["AgentGroup"] = request.AgentGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentTimeout))
+            {
+                query["AgentTimeout"] = request.AgentTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnswerRate))
+            {
+                query["AnswerRate"] = request.AnswerRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoComplete))
+            {
+                query["AutoComplete"] = request.AutoComplete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStart))
+            {
+                query["AutoStart"] = request.AutoStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartDay))
+            {
+                query["AutoStartDay"] = request.AutoStartDay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartTime))
+            {
+                query["AutoStartTime"] = request.AutoStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStop))
+            {
+                query["AutoStop"] = request.AutoStop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopDay))
+            {
+                query["AutoStopDay"] = request.AutoStopDay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopTime))
+            {
+                query["AutoStopTime"] = request.AutoStopTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoTaskType))
+            {
+                query["AutoTaskType"] = request.AutoTaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoTriggerTimeStrategy))
+            {
+                query["AutoTriggerTimeStrategy"] = request.AutoTriggerTimeStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallLimitStrategy))
+            {
+                query["CallLimitStrategy"] = request.CallLimitStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallPriorityStrategy))
+            {
+                query["CallPriorityStrategy"] = request.CallPriorityStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRouteStrategy))
+            {
+                query["CallRouteStrategy"] = request.CallRouteStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallStrategy))
+            {
+                query["CallStrategy"] = request.CallStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallVariables))
+            {
+                query["CallVariables"] = request.CallVariables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClidProperty))
+            {
+                query["ClidProperty"] = request.ClidProperty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cnos))
+            {
+                query["Cnos"] = request.Cnos;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Concurrency))
+            {
+                query["Concurrency"] = request.Concurrency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidType))
+            {
+                query["CustomerClidType"] = request.CustomerClidType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidWeight))
+            {
+                query["CustomerClidWeight"] = request.CustomerClidWeight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidWeightFlag))
+            {
+                query["CustomerClidWeightFlag"] = request.CustomerClidWeightFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClids))
+            {
+                query["CustomerClids"] = request.CustomerClids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidsCategory))
+            {
+                query["CustomerClidsCategory"] = request.CustomerClidsCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidsGroup))
+            {
+                query["CustomerClidsGroup"] = request.CustomerClidsGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerMoh))
+            {
+                query["CustomerMoh"] = request.CustomerMoh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerTimeout))
+            {
+                query["CustomerTimeout"] = request.CustomerTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerVoice))
+            {
+                query["CustomerVoice"] = request.CustomerVoice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnterpriseId))
+            {
+                query["EnterpriseId"] = request.EnterpriseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceEndFlag))
+            {
+                query["ForceEndFlag"] = request.ForceEndFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRewarm))
+            {
+                query["IsRewarm"] = request.IsRewarm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IvrId))
+            {
+                query["IvrId"] = request.IvrId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IvrName))
+            {
+                query["IvrName"] = request.IvrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxWaitTime))
+            {
+                query["MaxWaitTime"] = request.MaxWaitTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinAvailableAgentCount))
+            {
+                query["MinAvailableAgentCount"] = request.MinAvailableAgentCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PredictAdjust))
+            {
+                query["PredictAdjust"] = request.PredictAdjust;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quotiety))
+            {
+                query["Quotiety"] = request.Quotiety;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategy))
+            {
+                query["RetryStrategy"] = request.RetryStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategyOnlyToday))
+            {
+                query["RetryStrategyOnlyToday"] = request.RetryStrategyOnlyToday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategyTimeType))
+            {
+                query["RetryStrategyTimeType"] = request.RetryStrategyTimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeStrategy))
+            {
+                query["TimeStrategy"] = request.TimeStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserFields))
+            {
+                query["UserFields"] = request.UserFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarmUpDuration))
+            {
+                query["WarmUpDuration"] = request.WarmUpDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Wrapup))
+            {
+                query["Wrapup"] = request.Wrapup;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloudUpdateTask",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloudUpdateTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudUpdateTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudUpdateTaskResponse
+        /// </returns>
+        public async Task<CloudUpdateTaskResponse> CloudUpdateTaskWithOptionsAsync(CloudUpdateTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentGroup))
+            {
+                query["AgentGroup"] = request.AgentGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentTimeout))
+            {
+                query["AgentTimeout"] = request.AgentTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnswerRate))
+            {
+                query["AnswerRate"] = request.AnswerRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoComplete))
+            {
+                query["AutoComplete"] = request.AutoComplete;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStart))
+            {
+                query["AutoStart"] = request.AutoStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartDay))
+            {
+                query["AutoStartDay"] = request.AutoStartDay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStartTime))
+            {
+                query["AutoStartTime"] = request.AutoStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStop))
+            {
+                query["AutoStop"] = request.AutoStop;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopDay))
+            {
+                query["AutoStopDay"] = request.AutoStopDay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoStopTime))
+            {
+                query["AutoStopTime"] = request.AutoStopTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoTaskType))
+            {
+                query["AutoTaskType"] = request.AutoTaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoTriggerTimeStrategy))
+            {
+                query["AutoTriggerTimeStrategy"] = request.AutoTriggerTimeStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallLimitStrategy))
+            {
+                query["CallLimitStrategy"] = request.CallLimitStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallPriorityStrategy))
+            {
+                query["CallPriorityStrategy"] = request.CallPriorityStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallRouteStrategy))
+            {
+                query["CallRouteStrategy"] = request.CallRouteStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallStrategy))
+            {
+                query["CallStrategy"] = request.CallStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallVariables))
+            {
+                query["CallVariables"] = request.CallVariables;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClidProperty))
+            {
+                query["ClidProperty"] = request.ClidProperty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cnos))
+            {
+                query["Cnos"] = request.Cnos;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Concurrency))
+            {
+                query["Concurrency"] = request.Concurrency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidType))
+            {
+                query["CustomerClidType"] = request.CustomerClidType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidWeight))
+            {
+                query["CustomerClidWeight"] = request.CustomerClidWeight;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidWeightFlag))
+            {
+                query["CustomerClidWeightFlag"] = request.CustomerClidWeightFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClids))
+            {
+                query["CustomerClids"] = request.CustomerClids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidsCategory))
+            {
+                query["CustomerClidsCategory"] = request.CustomerClidsCategory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerClidsGroup))
+            {
+                query["CustomerClidsGroup"] = request.CustomerClidsGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerMoh))
+            {
+                query["CustomerMoh"] = request.CustomerMoh;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerTimeout))
+            {
+                query["CustomerTimeout"] = request.CustomerTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerVoice))
+            {
+                query["CustomerVoice"] = request.CustomerVoice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnterpriseId))
+            {
+                query["EnterpriseId"] = request.EnterpriseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceEndFlag))
+            {
+                query["ForceEndFlag"] = request.ForceEndFlag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRewarm))
+            {
+                query["IsRewarm"] = request.IsRewarm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IvrId))
+            {
+                query["IvrId"] = request.IvrId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IvrName))
+            {
+                query["IvrName"] = request.IvrName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxWaitTime))
+            {
+                query["MaxWaitTime"] = request.MaxWaitTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MinAvailableAgentCount))
+            {
+                query["MinAvailableAgentCount"] = request.MinAvailableAgentCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PredictAdjust))
+            {
+                query["PredictAdjust"] = request.PredictAdjust;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quotiety))
+            {
+                query["Quotiety"] = request.Quotiety;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategy))
+            {
+                query["RetryStrategy"] = request.RetryStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategyOnlyToday))
+            {
+                query["RetryStrategyOnlyToday"] = request.RetryStrategyOnlyToday;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryStrategyTimeType))
+            {
+                query["RetryStrategyTimeType"] = request.RetryStrategyTimeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeStrategy))
+            {
+                query["TimeStrategy"] = request.TimeStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserFields))
+            {
+                query["UserFields"] = request.UserFields;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarmUpDuration))
+            {
+                query["WarmUpDuration"] = request.WarmUpDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Wrapup))
+            {
+                query["Wrapup"] = request.Wrapup;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloudUpdateTask",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloudUpdateTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudUpdateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudUpdateTaskResponse
+        /// </returns>
+        public CloudUpdateTaskResponse CloudUpdateTask(CloudUpdateTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CloudUpdateTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudUpdateTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudUpdateTaskResponse
+        /// </returns>
+        public async Task<CloudUpdateTaskResponse> CloudUpdateTaskAsync(CloudUpdateTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CloudUpdateTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uses a service instance to create a text-to-speech (TTS) task, a voice notification task, or a voice verification code task for multiple called numbers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1264,7 +2728,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task for sending voice notifications or voice verification codes.</para>
+        /// <para>Uses a service instance to create a text-to-speech (TTS) task, a voice notification task, or a voice verification code task for multiple called numbers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1365,7 +2829,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task for sending voice notifications or voice verification codes.</para>
+        /// <para>Uses a service instance to create a text-to-speech (TTS) task, a voice notification task, or a voice verification code task for multiple called numbers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1390,7 +2854,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a task for sending voice notifications or voice verification codes.</para>
+        /// <para>Uses a service instance to create a text-to-speech (TTS) task, a voice notification task, or a voice verification code task for multiple called numbers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1659,7 +3123,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DegradeVideoFile</para>
+        /// <para>Downgrades from a video call to a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1725,7 +3189,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DegradeVideoFile</para>
+        /// <para>Downgrades from a video call to a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1791,7 +3255,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DegradeVideoFile</para>
+        /// <para>Downgrades from a video call to a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1809,7 +3273,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DegradeVideoFile</para>
+        /// <para>Downgrades from a video call to a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2183,7 +3647,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetCallMediaType</para>
+        /// <para>Obtains the call type during a call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2241,7 +3705,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetCallMediaType</para>
+        /// <para>Obtains the call type during a call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2299,7 +3763,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetCallMediaType</para>
+        /// <para>Obtains the call type during a call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2317,7 +3781,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetCallMediaType</para>
+        /// <para>Obtains the call type during a call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2655,7 +4119,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTemporaryFileUrl</para>
+        /// <para>Obtains a temporary URL of a video or audio file. You can view the video or audio file immediately by using this temporary URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2709,7 +4173,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTemporaryFileUrl</para>
+        /// <para>Obtains a temporary URL of a video or audio file. You can view the video or audio file immediately by using this temporary URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2763,7 +4227,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTemporaryFileUrl</para>
+        /// <para>Obtains a temporary URL of a video or audio file. You can view the video or audio file immediately by using this temporary URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2781,7 +4245,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetTemporaryFileUrl</para>
+        /// <para>Obtains a temporary URL of a video or audio file. You can view the video or audio file immediately by using this temporary URL.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3371,7 +4835,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task information.</para>
+        /// <para>Queries the information about a voice call task after the task is created, including the task ID, task status, and templates used by the task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3455,7 +4919,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task information.</para>
+        /// <para>Queries the information about a voice call task after the task is created, including the task ID, task status, and templates used by the task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3539,7 +5003,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task information.</para>
+        /// <para>Queries the information about a voice call task after the task is created, including the task ID, task status, and templates used by the task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3563,7 +5027,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries task information.</para>
+        /// <para>Queries the information about a voice call task after the task is created, including the task ID, task status, and templates used by the task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3587,7 +5051,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a task based on the task ID.</para>
+        /// <para>Queries the details of call tasks based on task IDs after call tasks are complete.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3663,7 +5127,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a task based on the task ID.</para>
+        /// <para>Queries the details of call tasks based on task IDs after call tasks are complete.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3739,7 +5203,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a task based on the task ID.</para>
+        /// <para>Queries the details of call tasks based on task IDs after call tasks are complete.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3763,7 +5227,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a task based on the task ID.</para>
+        /// <para>Queries the details of call tasks based on task IDs after call tasks are complete.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4167,7 +5631,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PauseVideoFile</para>
+        /// <para>Pauses video playback when a video file is played back during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4225,7 +5689,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PauseVideoFile</para>
+        /// <para>Pauses video playback when a video file is played back during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4283,7 +5747,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PauseVideoFile</para>
+        /// <para>Pauses video playback when a video file is played back during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4301,7 +5765,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PauseVideoFile</para>
+        /// <para>Pauses video playback when a video file is played back during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4319,7 +5783,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PlayVideoFile</para>
+        /// <para>Plays back a video file during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4389,7 +5853,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PlayVideoFile</para>
+        /// <para>Plays back a video file during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4459,7 +5923,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PlayVideoFile</para>
+        /// <para>Plays back a video file during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4477,7 +5941,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>PlayVideoFile</para>
+        /// <para>Plays back a video file during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5211,7 +6675,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of robots.</para>
+        /// <para>Queries a list of robots to obtain their details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5265,7 +6729,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of robots.</para>
+        /// <para>Queries a list of robots to obtain their details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5319,7 +6783,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of robots.</para>
+        /// <para>Queries a list of robots to obtain their details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5337,7 +6801,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of robots.</para>
+        /// <para>Queries a list of robots to obtain their details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5355,7 +6819,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the call details of a called number in a robocall task.</para>
+        /// <para>Queries the call details of a called number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5423,7 +6887,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the call details of a called number in a robocall task.</para>
+        /// <para>Queries the call details of a called number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5491,7 +6955,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the call details of a called number in a robocall task.</para>
+        /// <para>Queries the call details of a called number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5515,7 +6979,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the call details of a called number in a robocall task.</para>
+        /// <para>Queries the call details of a called number.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6307,7 +7771,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>QueryVideoPlayProgress</para>
+        /// <para>Queries the video playback progress after you play a video file during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6365,7 +7829,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>QueryVideoPlayProgress</para>
+        /// <para>Queries the video playback progress after you play a video file during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6423,7 +7887,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>QueryVideoPlayProgress</para>
+        /// <para>Queries the video playback progress after you play a video file during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6441,7 +7905,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>QueryVideoPlayProgress</para>
+        /// <para>Queries the video playback progress after you play a video file during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6459,199 +7923,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of virtual numbers.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// QueryVirtualNumberRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// QueryVirtualNumberResponse
-        /// </returns>
-        public QueryVirtualNumberResponse QueryVirtualNumberWithOptions(QueryVirtualNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
-            {
-                query["PageNo"] = request.PageNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProdCode))
-            {
-                query["ProdCode"] = request.ProdCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteType))
-            {
-                query["RouteType"] = request.RouteType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "QueryVirtualNumber",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<QueryVirtualNumberResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries a list of virtual numbers.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// QueryVirtualNumberRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// QueryVirtualNumberResponse
-        /// </returns>
-        public async Task<QueryVirtualNumberResponse> QueryVirtualNumberWithOptionsAsync(QueryVirtualNumberRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
-            {
-                query["OwnerId"] = request.OwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
-            {
-                query["PageNo"] = request.PageNo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
-            {
-                query["PageSize"] = request.PageSize;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProdCode))
-            {
-                query["ProdCode"] = request.ProdCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
-            {
-                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
-            {
-                query["ResourceOwnerId"] = request.ResourceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RouteType))
-            {
-                query["RouteType"] = request.RouteType;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "QueryVirtualNumber",
-                Version = "2017-05-25",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<QueryVirtualNumberResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries a list of virtual numbers.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// QueryVirtualNumberRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// QueryVirtualNumberResponse
-        /// </returns>
-        public QueryVirtualNumberResponse QueryVirtualNumber(QueryVirtualNumberRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return QueryVirtualNumberWithOptions(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries a list of virtual numbers.</para>
-        /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h3>QPS limits</h3>
-        /// <para>You can call this operation up to 100 times per second per account.</para>
-        /// </description>
-        /// 
-        /// <param name="request">
-        /// QueryVirtualNumberRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// QueryVirtualNumberResponse
-        /// </returns>
-        public async Task<QueryVirtualNumberResponse> QueryVirtualNumberAsync(QueryVirtualNumberRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await QueryVirtualNumberWithOptionsAsync(request, runtime);
-        }
-
-        /// <term><b>Summary:</b></term>
-        /// <summary>
-        /// <para>Queries a list of associations between virtual numbers and real numbers.</para>
+        /// <para>Lists real numbers bound to service instances. The returned data includes the binding time, the number activation time, and the number of real numbers bound to a service instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6743,7 +8015,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of associations between virtual numbers and real numbers.</para>
+        /// <para>Lists real numbers bound to service instances. The returned data includes the binding time, the number activation time, and the number of real numbers bound to a service instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6835,7 +8107,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of associations between virtual numbers and real numbers.</para>
+        /// <para>Lists real numbers bound to service instances. The returned data includes the binding time, the number activation time, and the number of real numbers bound to a service instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6859,7 +8131,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of associations between virtual numbers and real numbers.</para>
+        /// <para>Lists real numbers bound to service instances. The returned data includes the binding time, the number activation time, and the number of real numbers bound to a service instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7531,7 +8803,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResumeVideoFile</para>
+        /// <para>Resumes video playback after you pause video playback during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7589,7 +8861,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResumeVideoFile</para>
+        /// <para>Resumes video playback after you pause video playback during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7647,7 +8919,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResumeVideoFile</para>
+        /// <para>Resumes video playback after you pause video playback during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7665,7 +8937,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ResumeVideoFile</para>
+        /// <para>Resumes video playback after you pause video playback during a voice call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8459,7 +9731,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音视频单呼接口</para>
+        /// <para>Sends voice file notifications or video file notifications to a single called number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8541,7 +9813,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音视频单呼接口</para>
+        /// <para>Sends voice file notifications or video file notifications to a single called number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8623,7 +9895,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音视频单呼接口</para>
+        /// <para>Sends voice file notifications or video file notifications to a single called number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8641,7 +9913,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音视频单呼接口</para>
+        /// <para>Sends voice file notifications or video file notifications to a single called number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8891,7 +10163,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SkipVideoFile</para>
+        /// <para>Fast forwards or rewinds a video when you play the video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8957,7 +10229,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SkipVideoFile</para>
+        /// <para>Fast forwards or rewinds a video when you play the video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9023,7 +10295,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SkipVideoFile</para>
+        /// <para>Fast forwards or rewinds a video when you play the video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9041,7 +10313,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SkipVideoFile</para>
+        /// <para>Fast forwards or rewinds a video when you play the video.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10143,7 +11415,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a China 400 number for registration.</para>
+        /// <para>Submits a 400 number for registration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10239,7 +11511,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a China 400 number for registration.</para>
+        /// <para>Submits a 400 number for registration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10335,7 +11607,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a China 400 number for registration.</para>
+        /// <para>Submits a 400 number for registration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10359,7 +11631,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a China 400 number for registration.</para>
+        /// <para>Submits a 400 number for registration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10383,7 +11655,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpgradeVideoFile</para>
+        /// <para>Upgrades from a voice call to a video call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10449,7 +11721,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpgradeVideoFile</para>
+        /// <para>Upgrades from a voice call to a video call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10515,7 +11787,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpgradeVideoFile</para>
+        /// <para>Upgrades from a voice call to a video call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10533,7 +11805,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpgradeVideoFile</para>
+        /// <para>Upgrades from a voice call to a video call.</para>
         /// </summary>
         /// 
         /// <param name="request">

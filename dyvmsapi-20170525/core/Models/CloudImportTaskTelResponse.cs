@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 {
-    public class QueryVirtualNumberResponse : TeaModel {
+    public class CloudImportTaskTelResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public QueryVirtualNumberResponseBody Body { get; set; }
+        public CloudImportTaskTelResponseBody Body { get; set; }
 
     }
 
