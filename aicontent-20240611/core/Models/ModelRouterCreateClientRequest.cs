@@ -35,6 +35,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1.0</para>
+        /// </summary>
+        [NameInMap("discount")]
+        [Validation(Required=false)]
+        public double? Discount { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>我的客户</para>
         /// </summary>
         [NameInMap("name")]

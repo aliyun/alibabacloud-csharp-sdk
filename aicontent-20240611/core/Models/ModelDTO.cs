@@ -60,6 +60,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("hasBillingRule")]
+        [Validation(Required=false)]
+        public bool? HasBillingRule { get; set; }
+
+        /// <summary>
         /// <para>ID</para>
         /// 
         /// <b>Example:</b>

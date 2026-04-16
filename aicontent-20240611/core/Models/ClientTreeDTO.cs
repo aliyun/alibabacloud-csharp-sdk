@@ -59,6 +59,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1.0</para>
+        /// </summary>
+        [NameInMap("discount")]
+        [Validation(Required=false)]
+        public double? Discount { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>
         /// </summary>
         [NameInMap("gmtCreate")]
