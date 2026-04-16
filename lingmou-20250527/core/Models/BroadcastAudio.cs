@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.LingMou20250527.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        [NameInMap("errorCode")]
+        [Validation(Required=false)]
+        public string ErrorCode { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>M1Ju6XhHog_e-lSeb80Slp9g</para>
