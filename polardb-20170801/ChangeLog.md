@@ -1,3 +1,6 @@
+2026-04-16 Version: 6.12.1
+- Generated csharp 2017-08-01 for polardb.
+
 2026-04-15 Version: 6.12.0
 - Support API DescribeAvailableModels.
 
