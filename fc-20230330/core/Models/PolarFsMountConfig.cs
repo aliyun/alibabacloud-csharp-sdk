@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string MountDir { get; set; }
 
+        [NameInMap("readOnly")]
+        [Validation(Required=false)]
+        public bool? ReadOnly { get; set; }
+
         [NameInMap("remoteDir")]
         [Validation(Required=false)]
         public string RemoteDir { get; set; }

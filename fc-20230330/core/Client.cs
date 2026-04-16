@@ -7993,6 +7993,10 @@ namespace AlibabaCloud.SDK.FC20230330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemOnly))
+            {
+                query["fileSystemOnly"] = request.FileSystemOnly;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
                 query["qualifier"] = request.Qualifier;
@@ -8039,6 +8043,10 @@ namespace AlibabaCloud.SDK.FC20230330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemOnly))
+            {
+                query["fileSystemOnly"] = request.FileSystemOnly;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
                 query["qualifier"] = request.Qualifier;

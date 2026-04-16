@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class ResumeSessionRequest : TeaModel {
+        [NameInMap("fileSystemOnly")]
+        [Validation(Required=false)]
+        public bool? FileSystemOnly { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>aliasName1</para>
