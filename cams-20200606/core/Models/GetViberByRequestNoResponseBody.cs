@@ -159,11 +159,43 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>6944**@gmail.com</para>
+                /// </summary>
+                [NameInMap("ContactEmail")]
+                [Validation(Required=false)]
+                public string ContactEmail { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>示例值示例值</para>
                 /// </summary>
                 [NameInMap("ContactMail")]
                 [Validation(Required=false)]
                 public string ContactMail { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>qwq</para>
+                /// </summary>
+                [NameInMap("ContactName")]
+                [Validation(Required=false)]
+                public string ContactName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>861151515***</para>
+                /// </summary>
+                [NameInMap("ContactPhone")]
+                [Validation(Required=false)]
+                public string ContactPhone { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>职员</para>
+                /// </summary>
+                [NameInMap("ContactPosition")]
+                [Validation(Required=false)]
+                public string ContactPosition { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

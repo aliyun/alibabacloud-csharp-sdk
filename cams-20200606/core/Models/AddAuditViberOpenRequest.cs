@@ -131,11 +131,43 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>7151***<a href="mailto:5@qq.com">5@qq.com</a></para>
+            /// </summary>
+            [NameInMap("ContactEmail")]
+            [Validation(Required=false)]
+            public string ContactEmail { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para><a href="mailto:123@123.com">123@123.com</a></para>
             /// </summary>
             [NameInMap("ContactMail")]
             [Validation(Required=false)]
             public string ContactMail { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>mary</para>
+            /// </summary>
+            [NameInMap("ContactName")]
+            [Validation(Required=false)]
+            public string ContactName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>8615115**777</para>
+            /// </summary>
+            [NameInMap("ContactPhone")]
+            [Validation(Required=false)]
+            public string ContactPhone { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>职员</para>
+            /// </summary>
+            [NameInMap("ContactPosition")]
+            [Validation(Required=false)]
+            public string ContactPosition { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -249,14 +281,26 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1651322271196729</para>
+        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="mailto:testuser@testdomain.co">testuser@testdomain.co</a></para>
+        /// </summary>
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1754580903499898</para>
+        /// </summary>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }

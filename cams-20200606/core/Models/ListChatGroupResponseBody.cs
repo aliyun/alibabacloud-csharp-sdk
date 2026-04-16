@@ -39,11 +39,27 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>示例值</para>
+                /// </summary>
+                [NameInMap("BusinessRole")]
+                [Validation(Required=false)]
+                public string BusinessRole { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>94</para>
+                /// </summary>
+                [NameInMap("GmtModifier")]
+                [Validation(Required=false)]
+                public long? GmtModifier { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -55,11 +71,27 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>示例值示例值</para>
+                /// </summary>
+                [NameInMap("GroupLink")]
+                [Validation(Required=false)]
+                public string GroupLink { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>ACTIVE</para>
                 /// </summary>
                 [NameInMap("GroupStatus")]
                 [Validation(Required=false)]
                 public string GroupStatus { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>示例值示例值示例值</para>
+                /// </summary>
+                [NameInMap("GroupType")]
+                [Validation(Required=false)]
+                public string GroupType { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -84,6 +116,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
                 [NameInMap("Subject")]
                 [Validation(Required=false)]
                 public string Subject { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>35</para>
+                /// </summary>
+                [NameInMap("TotalParticipantCount")]
+                [Validation(Required=false)]
+                public long? TotalParticipantCount { get; set; }
 
             }
 

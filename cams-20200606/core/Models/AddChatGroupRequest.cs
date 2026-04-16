@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="https://t.me/testgroup">https://t.me/testgroup</a></para>
+        /// </summary>
+        [NameInMap("GroupLink")]
+        [Validation(Required=false)]
+        public string GroupLink { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -58,8 +66,6 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>示例值示例值</para>
         /// </summary>

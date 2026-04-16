@@ -142,11 +142,43 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>5**<a href="mailto:8585@gmail.com">8585@gmail.com</a></para>
+            /// </summary>
+            [NameInMap("ContactEmail")]
+            [Validation(Required=false)]
+            public string ContactEmail { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para><a href="mailto:xxxx@gamil.com">xxxx@gamil.com</a></para>
             /// </summary>
             [NameInMap("ContactMail")]
             [Validation(Required=false)]
             public string ContactMail { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>mary</para>
+            /// </summary>
+            [NameInMap("ContactName")]
+            [Validation(Required=false)]
+            public string ContactName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>861515115***</para>
+            /// </summary>
+            [NameInMap("ContactPhone")]
+            [Validation(Required=false)]
+            public string ContactPhone { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>job</para>
+            /// </summary>
+            [NameInMap("ContactPosition")]
+            [Validation(Required=false)]
+            public string ContactPosition { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -279,6 +311,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1500111740532860</para>
+        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -293,10 +329,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string RequestNo { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para><a href="mailto:user1@example.com">user1@example.com</a>&quot;</para>
+        /// </summary>
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1577495724967111</para>
+        /// </summary>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
