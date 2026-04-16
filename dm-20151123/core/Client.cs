@@ -1503,6 +1503,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             {
                 query["IpPoolId"] = request.IpPoolId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsPublicChannelBackoff))
+            {
+                query["IsPublicChannelBackoff"] = request.IsPublicChannelBackoff;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -1552,6 +1556,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpPoolId))
             {
                 query["IpPoolId"] = request.IpPoolId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsPublicChannelBackoff))
+            {
+                query["IsPublicChannelBackoff"] = request.IsPublicChannelBackoff;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -2163,6 +2171,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             {
                 query["IpPoolId"] = request.IpPoolId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsPublicChannelBackoff))
+            {
+                query["IsPublicChannelBackoff"] = request.IsPublicChannelBackoff;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -2216,6 +2228,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpPoolId))
             {
                 query["IpPoolId"] = request.IpPoolId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsPublicChannelBackoff))
+            {
+                query["IsPublicChannelBackoff"] = request.IsPublicChannelBackoff;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {

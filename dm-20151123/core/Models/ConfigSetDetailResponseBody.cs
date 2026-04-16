@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
             }
 
+            [NameInMap("IsPublicChannelBackoff")]
+            [Validation(Required=false)]
+            public bool? IsPublicChannelBackoff { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>xxx</para>

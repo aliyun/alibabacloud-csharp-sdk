@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string IpPoolId { get; set; }
 
+        [NameInMap("IsPublicChannelBackoff")]
+        [Validation(Required=false)]
+        public bool? IsPublicChannelBackoff { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>XXX</para>
