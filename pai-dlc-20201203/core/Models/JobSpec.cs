@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public AutoScalingSpec AutoScalingSpec { get; set; }
 
+        [NameInMap("ConsiderInSuccessPolicy")]
+        [Validation(Required=false)]
+        public bool? ConsiderInSuccessPolicy { get; set; }
+
         /// <summary>
         /// <para>The hardware specifications of the worker. For more information, see <a href="https://help.aliyun.com/document_detail/171758.html">Billing of DLC</a> of PAI.</para>
         /// <remarks>

@@ -1,3 +1,6 @@
+2026-04-16 Version: 1.7.14
+- Generated csharp 2020-12-03 for pai-dlc.
+
 2026-04-09 Version: 1.7.13
 - Update API CreateJob: add request parameters body.Description.
 - Update API GetJob: add response parameters Body.Description.
