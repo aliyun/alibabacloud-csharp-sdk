@@ -563,6 +563,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
 
             }
 
+            [NameInMap("zoneSupportCompactionService")]
+            [Validation(Required=false)]
+            public Dictionary<string, List<DataZoneSupportCompactionServiceValue>> ZoneSupportCompactionService { get; set; }
+
         }
 
         /// <summary>
