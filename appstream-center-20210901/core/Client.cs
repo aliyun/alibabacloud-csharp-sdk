@@ -5242,9 +5242,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>Queries the configurations of the administrator account, such as whether the resource expiration reminder feature is enabled.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListTenantConfigRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5275,9 +5272,6 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         /// <para>Queries the configurations of the administrator account, such as whether the resource expiration reminder feature is enabled.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListTenantConfigRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6156,6 +6150,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 request.PolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Policy, "Policy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StoragePolicy))
+            {
+                request.StoragePolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StoragePolicy, "StoragePolicy", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Timers))
             {
                 request.TimersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Timers, "Timers", "json");
@@ -6182,9 +6180,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["CloudBrowserName"] = request.CloudBrowserName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxAmount))
+            {
+                body["MaxAmount"] = request.MaxAmount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkShrink))
             {
                 body["Network"] = request.NetworkShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePolicyShrink))
+            {
+                body["StoragePolicy"] = request.StoragePolicyShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6243,6 +6249,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 request.PolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Policy, "Policy", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StoragePolicy))
+            {
+                request.StoragePolicyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StoragePolicy, "StoragePolicy", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Timers))
             {
                 request.TimersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Timers, "Timers", "json");
@@ -6269,9 +6279,17 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
             {
                 body["CloudBrowserName"] = request.CloudBrowserName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxAmount))
+            {
+                body["MaxAmount"] = request.MaxAmount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkShrink))
             {
                 body["Network"] = request.NetworkShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePolicyShrink))
+            {
+                body["StoragePolicy"] = request.StoragePolicyShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

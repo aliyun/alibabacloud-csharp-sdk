@@ -68,6 +68,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou/aig_upm/xxx/temp/BrowserBookmarks/浏览器书签模版.csv</para>
+            /// </summary>
+            [NameInMap("BookmarksFilePath")]
+            [Validation(Required=false)]
+            public string BookmarksFilePath { get; set; }
+
+            /// <summary>
             /// <para>The startup parameter.</para>
             /// 
             /// <b>Example:</b>
@@ -76,6 +84,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("BrowserParam")]
             [Validation(Required=false)]
             public string BrowserParam { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("CookiesSync")]
+            [Validation(Required=false)]
+            public string CookiesSync { get; set; }
 
             /// <summary>
             /// <para>The home page.</para>
@@ -116,6 +132,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("CloudBrowserName")]
         [Validation(Required=false)]
         public string CloudBrowserName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
+        [NameInMap("MaxAmount")]
+        [Validation(Required=false)]
+        public int? MaxAmount { get; set; }
 
         /// <summary>
         /// <para>The network configurations.</para>
@@ -173,6 +197,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 public string URL { get; set; }
 
             }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL白名单模版.csv</para>
+            /// </summary>
+            [NameInMap("RestrictedURLsFilePath")]
+            [Validation(Required=false)]
+            public string RestrictedURLsFilePath { get; set; }
 
         }
 
@@ -232,6 +264,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public string ClipboardScope { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>B</para>
+                /// </summary>
                 [NameInMap("ClipboardSizeUnit")]
                 [Validation(Required=false)]
                 public string ClipboardSizeUnit { get; set; }
@@ -280,10 +316,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public string RichTextClipboard { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("RichTextClipboardLimit")]
                 [Validation(Required=false)]
                 public int? RichTextClipboardLimit { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>B</para>
+                /// </summary>
                 [NameInMap("RichTextClipboardSizeUnit")]
                 [Validation(Required=false)]
                 public string RichTextClipboardSizeUnit { get; set; }
@@ -342,10 +386,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string Html5FileTransfer { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>on</para>
+            /// </summary>
             [NameInMap("NoOperationDisconnect")]
             [Validation(Required=false)]
             public string NoOperationDisconnect { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("NoOperationDisconnectTime")]
             [Validation(Required=false)]
             public int? NoOperationDisconnectTime { get; set; }
@@ -421,6 +473,22 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [NameInMap("WatermarkTypes")]
                 [Validation(Required=false)]
                 public List<string> WatermarkTypes { get; set; }
+
+            }
+
+        }
+
+        [NameInMap("StoragePolicy")]
+        [Validation(Required=false)]
+        public ModifyBrowserInstanceGroupRequestStoragePolicy StoragePolicy { get; set; }
+        public class ModifyBrowserInstanceGroupRequestStoragePolicy : TeaModel {
+            [NameInMap("UserProfile")]
+            [Validation(Required=false)]
+            public ModifyBrowserInstanceGroupRequestStoragePolicyUserProfile UserProfile { get; set; }
+            public class ModifyBrowserInstanceGroupRequestStoragePolicyUserProfile : TeaModel {
+                [NameInMap("UserProfileSwitch")]
+                [Validation(Required=false)]
+                public bool? UserProfileSwitch { get; set; }
 
             }
 

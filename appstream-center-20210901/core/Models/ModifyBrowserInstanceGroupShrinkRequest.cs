@@ -38,6 +38,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         public string CloudBrowserName { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
+        [NameInMap("MaxAmount")]
+        [Validation(Required=false)]
+        public int? MaxAmount { get; set; }
+
+        /// <summary>
         /// <para>The network configurations.</para>
         /// </summary>
         [NameInMap("Network")]
@@ -50,6 +58,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public string PolicyShrink { get; set; }
+
+        [NameInMap("StoragePolicy")]
+        [Validation(Required=false)]
+        public string StoragePolicyShrink { get; set; }
 
         /// <summary>
         /// <para>The timer.</para>
