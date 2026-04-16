@@ -253,6 +253,22 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public int? ThinkingBudget { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("ToolChoice")]
+        [Validation(Required=false)]
+        public string ToolChoice { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
+        [NameInMap("Tools")]
+        [Validation(Required=false)]
+        public string Tools { get; set; }
+
+        /// <summary>
         /// <para>Specifies the number of candidate tokens to consider during sampling. Higher values increase randomness, while lower values make the output more deterministic. Set to null or a value greater than 100 to disable.</para>
         /// 
         /// <b>Example:</b>

@@ -3883,6 +3883,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             {
                 query["ThinkingBudget"] = request.ThinkingBudget;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolChoice))
+            {
+                query["ToolChoice"] = request.ToolChoice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tools))
+            {
+                query["Tools"] = request.Tools;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
             {
                 query["TopK"] = request.TopK;
@@ -4061,6 +4069,14 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThinkingBudget))
             {
                 query["ThinkingBudget"] = request.ThinkingBudget;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolChoice))
+            {
+                query["ToolChoice"] = request.ToolChoice;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tools))
+            {
+                query["Tools"] = request.Tools;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopK))
             {
