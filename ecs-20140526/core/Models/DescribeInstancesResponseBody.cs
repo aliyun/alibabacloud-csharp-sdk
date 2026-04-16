@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public bool? EnableHighDensityMode { get; set; }
 
+                    [NameInMap("NodeSerialNumber")]
+                    [Validation(Required=false)]
+                    public string NodeSerialNumber { get; set; }
+
                 }
 
                 [NameInMap("AutoReleaseTime")]
@@ -68,6 +72,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [NameInMap("EnableVRDT")]
                     [Validation(Required=false)]
                     public bool? EnableVRDT { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>enabled</para>
+                    /// </summary>
+                    [NameInMap("NestedVirtualization")]
+                    [Validation(Required=false)]
+                    public string NestedVirtualization { get; set; }
 
                     [NameInMap("Numa")]
                     [Validation(Required=false)]
