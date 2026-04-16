@@ -760,6 +760,10 @@ namespace AlibabaCloud.SDK.Dts20200101.Models
 
             }
 
+            [NameInMap("InsightModule")]
+            [Validation(Required=false)]
+            public bool? InsightModule { get; set; }
+
             /// <summary>
             /// <para>The type of the DTS task. Valid values:</para>
             /// <list type="bullet">
