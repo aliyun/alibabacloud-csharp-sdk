@@ -33,7 +33,6 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         /// <summary>
         /// <para>The URI of the OSS bucket to which the dataset is bound.</para>
         /// <para>Specify the value in the oss://${Bucket} format. <c>${Bucket}</c> specifies the name of the OSS bucket that resides in the same region as the current project.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://examplebucket</para>

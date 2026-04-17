@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>imm</para>
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
         /// <list type="bullet">
         /// <item><description>The pagination token that is used in the next request to retrieve a new page of results if the total number of results exceeds the value of the MaxResults parameter.</description></item>
         /// <item><description>The next call to the operation returns results lexicographically after the NextToken parameter value.</description></item>
