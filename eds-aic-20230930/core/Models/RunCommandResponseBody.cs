@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<RunCommandResponseBodyRunCommandInfos> RunCommandInfos { get; set; }
         public class RunCommandResponseBodyRunCommandInfos : TeaModel {
+            [NameInMap("ChildTaskId")]
+            [Validation(Required=false)]
+            public string ChildTaskId { get; set; }
+
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
@@ -42,6 +46,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string InvokeId { get; set; }
 
         }
+
+        [NameInMap("TaskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 

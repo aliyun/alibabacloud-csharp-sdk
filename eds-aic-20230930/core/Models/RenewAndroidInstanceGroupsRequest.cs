@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> InstanceGroupIds { get; set; }
 
+        [NameInMap("PaidCallBackUrl")]
+        [Validation(Required=false)]
+        public string PaidCallBackUrl { get; set; }
+
         /// <summary>
         /// <para>The duration of the renewal, measured in units defined by PeriodUnit.</para>
         /// 

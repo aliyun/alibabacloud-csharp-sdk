@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<UninstallAppResponseBodyChildTaskInfo> ChildTaskInfo { get; set; }
         public class UninstallAppResponseBodyChildTaskInfo : TeaModel {
+            [NameInMap("AppId")]
+            [Validation(Required=false)]
+            public string AppId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>t-ybde48cevxxxx</para>

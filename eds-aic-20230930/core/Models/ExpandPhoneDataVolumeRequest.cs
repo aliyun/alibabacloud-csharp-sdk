@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
+        [NameInMap("PaidCallBackUrl")]
+        [Validation(Required=false)]
+        public string PaidCallBackUrl { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>10</para>

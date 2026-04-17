@@ -195,6 +195,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string NodeName { get; set; }
 
+        [NameInMap("PaidCallBackUrl")]
+        [Validation(Required=false)]
+        public string PaidCallBackUrl { get; set; }
+
         /// <summary>
         /// <para>The subscription duration. The unit is specified by <c>PeriodUnit</c>. Valid values:</para>
         /// <list type="bullet">

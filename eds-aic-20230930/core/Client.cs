@@ -1043,6 +1043,126 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>取消云手机实例上正在运行的Agent任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelAgentTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelAgentTaskResponse
+        /// </returns>
+        public CancelAgentTaskResponse CancelAgentTaskWithOptions(CancelAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
+            {
+                query["TaskIds"] = request.TaskIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelAgentTask",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelAgentTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消云手机实例上正在运行的Agent任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelAgentTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelAgentTaskResponse
+        /// </returns>
+        public async Task<CancelAgentTaskResponse> CancelAgentTaskWithOptionsAsync(CancelAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
+            {
+                query["TaskIds"] = request.TaskIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelAgentTask",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelAgentTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消云手机实例上正在运行的Agent任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelAgentTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelAgentTaskResponse
+        /// </returns>
+        public CancelAgentTaskResponse CancelAgentTask(CancelAgentTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelAgentTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消云手机实例上正在运行的Agent任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelAgentTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelAgentTaskResponse
+        /// </returns>
+        public async Task<CancelAgentTaskResponse> CancelAgentTaskAsync(CancelAgentTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelAgentTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>修改云手机矩阵的配置</para>
         /// </summary>
         /// 
@@ -2178,6 +2298,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["NodeName"] = request.NodeName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
                 query["Period"] = request.Period;
@@ -2351,6 +2475,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeName))
             {
                 query["NodeName"] = request.NodeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
@@ -8332,6 +8460,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["NodeIds"] = request.NodeIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneDataVolume))
             {
                 query["PhoneDataVolume"] = request.PhoneDataVolume;
@@ -8393,6 +8525,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeIds))
             {
                 query["NodeIds"] = request.NodeIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneDataVolume))
             {
@@ -8492,6 +8628,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["InstanceIds"] = request.InstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneDataVolume))
             {
                 query["PhoneDataVolume"] = request.PhoneDataVolume;
@@ -8549,6 +8689,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
                 query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneDataVolume))
             {
@@ -12592,6 +12736,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["InstanceGroupIds"] = request.InstanceGroupIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
                 query["Period"] = request.Period;
@@ -12649,6 +12797,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupIds))
             {
                 query["InstanceGroupIds"] = request.InstanceGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
             {
@@ -12740,6 +12892,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AutoPay"] = request.AutoPay;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
             {
                 query["PromotionId"] = request.PromotionId;
@@ -12803,6 +12959,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
             {
                 query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
             {
@@ -15669,6 +15829,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["InstanceGroupId"] = request.InstanceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
             {
                 query["PromotionId"] = request.PromotionId;
@@ -15727,6 +15891,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceGroupId))
             {
                 query["InstanceGroupId"] = request.InstanceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallBackUrl))
+            {
+                query["PaidCallBackUrl"] = request.PaidCallBackUrl;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
             {
