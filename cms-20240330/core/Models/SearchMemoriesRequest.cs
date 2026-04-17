@@ -63,6 +63,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>experience</para>
+        /// </summary>
+        [NameInMap("searchType")]
+        [Validation(Required=false)]
+        public string SearchType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>0.3</para>
         /// </summary>
         [NameInMap("threshold")]

@@ -16643,6 +16643,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 body["runId"] = request.RunId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
+            {
+                body["searchType"] = request.SearchType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
             {
                 body["threshold"] = request.Threshold;
@@ -16724,6 +16728,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunId))
             {
                 body["runId"] = request.RunId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
+            {
+                body["searchType"] = request.SearchType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
             {
