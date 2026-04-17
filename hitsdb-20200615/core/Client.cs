@@ -173,6 +173,294 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
             return await ChangeResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lindormv2创建预校验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCreateLindormV2InstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCreateLindormV2InstanceResponse
+        /// </returns>
+        public CheckCreateLindormV2InstanceResponse CheckCreateLindormV2InstanceWithOptions(CheckCreateLindormV2InstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArbiterVSwitchId))
+            {
+                query["ArbiterVSwitchId"] = request.ArbiterVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArbiterZoneId))
+            {
+                query["ArbiterZoneId"] = request.ArbiterZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchVersion))
+            {
+                query["ArchVersion"] = request.ArchVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudStorageSize))
+            {
+                query["CloudStorageSize"] = request.CloudStorageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudStorageType))
+            {
+                query["CloudStorageType"] = request.CloudStorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterPattern))
+            {
+                query["ClusterPattern"] = request.ClusterPattern;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineList))
+            {
+                query["EngineList"] = request.EngineList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceAlias))
+            {
+                query["InstanceAlias"] = request.InstanceAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryVSwitchId))
+            {
+                query["PrimaryVSwitchId"] = request.PrimaryVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryZoneId))
+            {
+                query["PrimaryZoneId"] = request.PrimaryZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyVSwitchId))
+            {
+                query["StandbyVSwitchId"] = request.StandbyVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyZoneId))
+            {
+                query["StandbyZoneId"] = request.StandbyZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
+            {
+                query["VPCId"] = request.VPCId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckCreateLindormV2Instance",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckCreateLindormV2InstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lindormv2创建预校验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCreateLindormV2InstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCreateLindormV2InstanceResponse
+        /// </returns>
+        public async Task<CheckCreateLindormV2InstanceResponse> CheckCreateLindormV2InstanceWithOptionsAsync(CheckCreateLindormV2InstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArbiterVSwitchId))
+            {
+                query["ArbiterVSwitchId"] = request.ArbiterVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArbiterZoneId))
+            {
+                query["ArbiterZoneId"] = request.ArbiterZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ArchVersion))
+            {
+                query["ArchVersion"] = request.ArchVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudStorageSize))
+            {
+                query["CloudStorageSize"] = request.CloudStorageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudStorageType))
+            {
+                query["CloudStorageType"] = request.CloudStorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterPattern))
+            {
+                query["ClusterPattern"] = request.ClusterPattern;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineList))
+            {
+                query["EngineList"] = request.EngineList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceAlias))
+            {
+                query["InstanceAlias"] = request.InstanceAlias;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryVSwitchId))
+            {
+                query["PrimaryVSwitchId"] = request.PrimaryVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryZoneId))
+            {
+                query["PrimaryZoneId"] = request.PrimaryZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyVSwitchId))
+            {
+                query["StandbyVSwitchId"] = request.StandbyVSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StandbyZoneId))
+            {
+                query["StandbyZoneId"] = request.StandbyZoneId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
+            {
+                query["VPCId"] = request.VPCId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckCreateLindormV2Instance",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckCreateLindormV2InstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lindormv2创建预校验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCreateLindormV2InstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCreateLindormV2InstanceResponse
+        /// </returns>
+        public CheckCreateLindormV2InstanceResponse CheckCreateLindormV2Instance(CheckCreateLindormV2InstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckCreateLindormV2InstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lindormv2创建预校验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckCreateLindormV2InstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckCreateLindormV2InstanceResponse
+        /// </returns>
+        public async Task<CheckCreateLindormV2InstanceResponse> CheckCreateLindormV2InstanceAsync(CheckCreateLindormV2InstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckCreateLindormV2InstanceWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// CheckLdpsColumnarIndexStatusRequest
         /// </param>
@@ -311,6 +599,158 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CheckLdpsColumnarIndexStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>vpc打通</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAdditionalVpcLinkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAdditionalVpcLinkResponse
+        /// </returns>
+        public CreateAdditionalVpcLinkResponse CreateAdditionalVpcLinkWithOptions(CreateAdditionalVpcLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalVpcId))
+            {
+                query["AdditionalVpcId"] = request.AdditionalVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalVswitchId))
+            {
+                query["AdditionalVswitchId"] = request.AdditionalVswitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAdditionalVpcLink",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAdditionalVpcLinkResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>vpc打通</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAdditionalVpcLinkRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAdditionalVpcLinkResponse
+        /// </returns>
+        public async Task<CreateAdditionalVpcLinkResponse> CreateAdditionalVpcLinkWithOptionsAsync(CreateAdditionalVpcLinkRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalVpcId))
+            {
+                query["AdditionalVpcId"] = request.AdditionalVpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalVswitchId))
+            {
+                query["AdditionalVswitchId"] = request.AdditionalVswitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAdditionalVpcLink",
+                Version = "2020-06-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAdditionalVpcLinkResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>vpc打通</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAdditionalVpcLinkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAdditionalVpcLinkResponse
+        /// </returns>
+        public CreateAdditionalVpcLinkResponse CreateAdditionalVpcLink(CreateAdditionalVpcLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAdditionalVpcLinkWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>vpc打通</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAdditionalVpcLinkRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAdditionalVpcLinkResponse
+        /// </returns>
+        public async Task<CreateAdditionalVpcLinkResponse> CreateAdditionalVpcLinkAsync(CreateAdditionalVpcLinkRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAdditionalVpcLinkWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10339,7 +10779,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates tags with a single or multiple Lindorm instances.</para>
+        /// <para>Adds tags to one or more Lindorm instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10413,7 +10853,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates tags with a single or multiple Lindorm instances.</para>
+        /// <para>Adds tags to one or more Lindorm instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10487,7 +10927,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates tags with a single or multiple Lindorm instances.</para>
+        /// <para>Adds tags to one or more Lindorm instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10505,7 +10945,7 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates tags with a single or multiple Lindorm instances.</para>
+        /// <para>Adds tags to one or more Lindorm instances.</para>
         /// </summary>
         /// 
         /// <param name="request">

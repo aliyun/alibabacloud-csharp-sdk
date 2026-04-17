@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.Hitsdb20200615.Models
             [Validation(Required=false)]
             public string EnableCDC { get; set; }
 
+            [NameInMap("EnableMaaS")]
+            [Validation(Required=false)]
+            public string EnableMaaS { get; set; }
+
             [NameInMap("Engine")]
             [Validation(Required=false)]
             public string Engine { get; set; }
