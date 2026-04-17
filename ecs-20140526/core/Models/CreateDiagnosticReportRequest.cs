@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDiagnosticReportRequest : TeaModel {
+        [NameInMap("AdditionalOptions")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> AdditionalOptions { get; set; }
+
         /// <summary>
         /// <para>The end time. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</para>
         /// 
