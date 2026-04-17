@@ -28,6 +28,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("TargetMemberIp")]
+        [Validation(Required=false)]
+        public string TargetMemberIp { get; set; }
+
         /// <summary>
         /// <para>The ID of the destination office network.</para>
         /// <para>This parameter is required.</para>
@@ -38,6 +42,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("TargetOfficeSiteId")]
         [Validation(Required=false)]
         public string TargetOfficeSiteId { get; set; }
+
+        /// <summary>
+        /// <remarks>
+        /// <para>This parameter is for internal use only.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
+        [NameInMap("TargetSubnetId")]
+        [Validation(Required=false)]
+        public string TargetSubnetId { get; set; }
 
     }
 

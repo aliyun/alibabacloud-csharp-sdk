@@ -36020,9 +36020,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetMemberIp))
+            {
+                query["TargetMemberIp"] = request.TargetMemberIp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetOfficeSiteId))
             {
                 query["TargetOfficeSiteId"] = request.TargetOfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetSubnetId))
+            {
+                query["TargetSubnetId"] = request.TargetSubnetId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -36070,9 +36078,17 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetMemberIp))
+            {
+                query["TargetMemberIp"] = request.TargetMemberIp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetOfficeSiteId))
             {
                 query["TargetOfficeSiteId"] = request.TargetOfficeSiteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetSubnetId))
+            {
+                query["TargetSubnetId"] = request.TargetSubnetId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
