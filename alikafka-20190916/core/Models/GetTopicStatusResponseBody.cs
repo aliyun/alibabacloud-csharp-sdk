@@ -66,9 +66,6 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public long? LastTimeStamp { get; set; }
 
-            /// <summary>
-            /// <para>The information about offsets in the topic.</para>
-            /// </summary>
             [NameInMap("OffsetTable")]
             [Validation(Required=false)]
             public GetTopicStatusResponseBodyTopicStatusOffsetTable OffsetTable { get; set; }
@@ -77,52 +74,22 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public List<GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable> OffsetTable { get; set; }
                 public class GetTopicStatusResponseBodyTopicStatusOffsetTableOffsetTable : TeaModel {
-                    /// <summary>
-                    /// <para>The last time when the partition was modified.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1566470063547</para>
-                    /// </summary>
                     [NameInMap("LastUpdateTimestamp")]
                     [Validation(Required=false)]
                     public long? LastUpdateTimestamp { get; set; }
 
-                    /// <summary>
-                    /// <para>The latest offset in the partition of the topic.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>76</para>
-                    /// </summary>
                     [NameInMap("MaxOffset")]
                     [Validation(Required=false)]
                     public long? MaxOffset { get; set; }
 
-                    /// <summary>
-                    /// <para>The earliest offset in the partition of the topic.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("MinOffset")]
                     [Validation(Required=false)]
                     public long? MinOffset { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the partition.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("Partition")]
                     [Validation(Required=false)]
                     public int? Partition { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the topic.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>testkafka</para>
-                    /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
                     public string Topic { get; set; }

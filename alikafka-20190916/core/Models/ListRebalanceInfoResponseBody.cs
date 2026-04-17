@@ -25,50 +25,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<ListRebalanceInfoResponseBodyDataRebalanceInfoList> RebalanceInfoList { get; set; }
             public class ListRebalanceInfoResponseBodyDataRebalanceInfoList : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("Generation")]
                 [Validation(Required=false)]
                 public long? Generation { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>kafka-test</para>
-                /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1709199270</para>
-                /// </summary>
                 [NameInMap("LastRebalanceTimestamp")]
                 [Validation(Required=false)]
                 public long? LastRebalanceTimestamp { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>removing member consumer-1-cd14eb9c-379b-4b8e-9bbd-76f147f8536f on LeaveGroup</para>
-                /// </summary>
                 [NameInMap("Reason")]
                 [Validation(Required=false)]
                 public string Reason { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("RebalanceSuccess")]
                 [Validation(Required=false)]
                 public bool? RebalanceSuccess { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>12</para>
-                /// </summary>
                 [NameInMap("RebalanceTimeConsuming")]
                 [Validation(Required=false)]
                 public long? RebalanceTimeConsuming { get; set; }

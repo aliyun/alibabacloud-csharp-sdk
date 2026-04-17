@@ -101,6 +101,32 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public int? KsqlCU { get; set; }
 
+            [NameInMap("KsqlList")]
+            [Validation(Required=false)]
+            public List<CreatePrePayInstanceRequestConfluentConfigKsqlList> KsqlList { get; set; }
+            public class CreatePrePayInstanceRequestConfluentConfigKsqlList : TeaModel {
+                [NameInMap("InternalId")]
+                [Validation(Required=false)]
+                public string InternalId { get; set; }
+
+                [NameInMap("cu")]
+                [Validation(Required=false)]
+                public int? Cu { get; set; }
+
+                [NameInMap("replica")]
+                [Validation(Required=false)]
+                public int? Replica { get; set; }
+
+                [NameInMap("storage")]
+                [Validation(Required=false)]
+                public int? Storage { get; set; }
+
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2</para>

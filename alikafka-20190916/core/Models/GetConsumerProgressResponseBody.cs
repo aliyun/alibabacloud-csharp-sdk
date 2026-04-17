@@ -36,9 +36,6 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public long? LastTimestamp { get; set; }
 
-            /// <summary>
-            /// <para>The details of rebalances in the consumer group.</para>
-            /// </summary>
             [NameInMap("RebalanceInfoList")]
             [Validation(Required=false)]
             public GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoList RebalanceInfoList { get; set; }
@@ -47,62 +44,26 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public List<GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList> RebalanceInfoList { get; set; }
                 public class GetConsumerProgressResponseBodyConsumerProgressRebalanceInfoListRebalanceInfoList : TeaModel {
-                    /// <summary>
-                    /// <para>The number of rebalances.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>100</para>
-                    /// </summary>
                     [NameInMap("Generation")]
                     [Validation(Required=false)]
                     public long? Generation { get; set; }
 
-                    /// <summary>
-                    /// <para>The group ID of the subscriber.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>falcon-uat</para>
-                    /// </summary>
                     [NameInMap("GroupId")]
                     [Validation(Required=false)]
                     public string GroupId { get; set; }
 
-                    /// <summary>
-                    /// <para>The time when the last rebalance occurred. Unit: milliseconds.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1709199270</para>
-                    /// </summary>
                     [NameInMap("LastRebalanceTimestamp")]
                     [Validation(Required=false)]
                     public long? LastRebalanceTimestamp { get; set; }
 
-                    /// <summary>
-                    /// <para>The cause of the rebalance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>removing member consumer-1-cd14eb9c-379b-4b8e-9bbd-76f147f8536f on LeaveGroup</para>
-                    /// </summary>
                     [NameInMap("Reason")]
                     [Validation(Required=false)]
                     public string Reason { get; set; }
 
-                    /// <summary>
-                    /// <para>Indicates whether new members are added to the consumer group in the rebalance.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>true</para>
-                    /// </summary>
                     [NameInMap("RebalanceSuccess")]
                     [Validation(Required=false)]
                     public bool? RebalanceSuccess { get; set; }
 
-                    /// <summary>
-                    /// <para>The duration of the rebalance. Unit: milliseconds.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("RebalanceTimeConsuming")]
                     [Validation(Required=false)]
                     public long? RebalanceTimeConsuming { get; set; }
@@ -111,9 +72,6 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
             }
 
-            /// <summary>
-            /// <para>The consumer progress of each topic to which the consumer group subscribes.</para>
-            /// </summary>
             [NameInMap("TopicList")]
             [Validation(Required=false)]
             public GetConsumerProgressResponseBodyConsumerProgressTopicList TopicList { get; set; }
@@ -122,19 +80,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public List<GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList> TopicList { get; set; }
                 public class GetConsumerProgressResponseBodyConsumerProgressTopicListTopicList : TeaModel {
-                    /// <summary>
-                    /// <para>The time when the last consumed message in the topic was generated.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1566874931649</para>
-                    /// </summary>
                     [NameInMap("LastTimestamp")]
                     [Validation(Required=false)]
                     public long? LastTimestamp { get; set; }
 
-                    /// <summary>
-                    /// <para>The consumer offsets.</para>
-                    /// </summary>
                     [NameInMap("OffsetList")]
                     [Validation(Required=false)]
                     public GetConsumerProgressResponseBodyConsumerProgressTopicListTopicListOffsetList OffsetList { get; set; }
@@ -147,72 +96,30 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                             [Validation(Required=false)]
                             public long? Accumulate { get; set; }
 
-                            /// <summary>
-                            /// <para>The latest offset in the partition of the topic.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>9</para>
-                            /// </summary>
                             [NameInMap("BrokerOffset")]
                             [Validation(Required=false)]
                             public long? BrokerOffset { get; set; }
 
-                            /// <summary>
-                            /// <para>Client ID of the application.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>client-id-KafkaConsumerDemo</para>
-                            /// </summary>
                             [NameInMap("ClientId")]
                             [Validation(Required=false)]
                             public string ClientId { get; set; }
 
-                            /// <summary>
-                            /// <para>The IP address of the client.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>172.16.11.3</para>
-                            /// </summary>
                             [NameInMap("ClientIp")]
                             [Validation(Required=false)]
                             public string ClientIp { get; set; }
 
-                            /// <summary>
-                            /// <para>The consumer offset in the partition of the topic.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>9</para>
-                            /// </summary>
                             [NameInMap("ConsumerOffset")]
                             [Validation(Required=false)]
                             public long? ConsumerOffset { get; set; }
 
-                            /// <summary>
-                            /// <para>The time when the last consumed message in the partition was generated.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>1566874931649</para>
-                            /// </summary>
                             [NameInMap("LastTimestamp")]
                             [Validation(Required=false)]
                             public long? LastTimestamp { get; set; }
 
-                            /// <summary>
-                            /// <para>Member ID.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>client-id-KafkaConsumerDemo-70b64883-a911-4882-8084-598b958848b4</para>
-                            /// </summary>
                             [NameInMap("MemberId")]
                             [Validation(Required=false)]
                             public string MemberId { get; set; }
 
-                            /// <summary>
-                            /// <para>The partition ID.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>0</para>
-                            /// </summary>
                             [NameInMap("Partition")]
                             [Validation(Required=false)]
                             public int? Partition { get; set; }
@@ -221,22 +128,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
                     }
 
-                    /// <summary>
-                    /// <para>The topic name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>kafka-test</para>
-                    /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
                     public string Topic { get; set; }
 
-                    /// <summary>
-                    /// <para>The number of unconsumed messages in the topic to which the consumer group subscribes.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("TotalDiff")]
                     [Validation(Required=false)]
                     public long? TotalDiff { get; set; }

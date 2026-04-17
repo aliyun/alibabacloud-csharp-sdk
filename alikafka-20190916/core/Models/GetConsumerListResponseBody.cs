@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        /// <summary>
-        /// <para>The consumer groups.</para>
-        /// </summary>
         [NameInMap("ConsumerList")]
         [Validation(Required=false)]
         public GetConsumerListResponseBodyConsumerList ConsumerList { get; set; }
@@ -30,69 +27,30 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public List<GetConsumerListResponseBodyConsumerListConsumerVO> ConsumerVO { get; set; }
             public class GetConsumerListResponseBodyConsumerListConsumerVO : TeaModel {
-                /// <summary>
-                /// <para>Indicates that the consumer group was automatically created by the system.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
                 [NameInMap("AutomaticallyCreatedGroup")]
                 [Validation(Required=false)]
                 public bool? AutomaticallyCreatedGroup { get; set; }
 
-                /// <summary>
-                /// <para>The consumer group ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>kafka-test</para>
-                /// </summary>
                 [NameInMap("ConsumerId")]
                 [Validation(Required=false)]
                 public string ConsumerId { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp that indicates when the consumer group was created. Unit: milliseconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1729736584002</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
-                /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>alikafka_post-cn-v0h18sav****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the region where the instance resides.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>The instance description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
-                /// <summary>
-                /// <para>The tags.</para>
-                /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public GetConsumerListResponseBodyConsumerListConsumerVOTags Tags { get; set; }
@@ -101,22 +59,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                     [Validation(Required=false)]
                     public List<GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO> TagVO { get; set; }
                     public class GetConsumerListResponseBodyConsumerListConsumerVOTagsTagVO : TeaModel {
-                        /// <summary>
-                        /// <para>The tag key.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>test</para>
-                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
-                        /// <summary>
-                        /// <para>The tag value.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>test</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
             [Validation(Required=false)]
             public bool? Alert { get; set; }
 
-            /// <summary>
-            /// <para>The data returned.</para>
-            /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public GetKafkaClientIpResponseBodyDataData Data { get; set; }
@@ -50,9 +47,6 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                 [Validation(Required=false)]
                 public List<GetKafkaClientIpResponseBodyDataDataData> Data { get; set; }
                 public class GetKafkaClientIpResponseBodyDataDataData : TeaModel {
-                    /// <summary>
-                    /// <para>The response parameters.</para>
-                    /// </summary>
                     [NameInMap("Data")]
                     [Validation(Required=false)]
                     public GetKafkaClientIpResponseBodyDataDataDataData Data { get; set; }
@@ -61,25 +55,10 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
                         [Validation(Required=false)]
                         public List<GetKafkaClientIpResponseBodyDataDataDataDataData> Data { get; set; }
                         public class GetKafkaClientIpResponseBodyDataDataDataDataData : TeaModel {
-                            /// <summary>
-                            /// <para>The IP address of the client.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>58.210.117.154</para>
-                            /// </summary>
                             [NameInMap("Ip")]
                             [Validation(Required=false)]
                             public string Ip { get; set; }
 
-                            /// <summary>
-                            /// <para>The statistics.</para>
-                            /// <remarks>
-                            /// <para> The value of this parameter indicates the number of connections on different ports of the IP address within the specified period of time.</para>
-                            /// </remarks>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>3</para>
-                            /// </summary>
                             [NameInMap("Num")]
                             [Validation(Required=false)]
                             public long? Num { get; set; }
@@ -88,15 +67,6 @@ namespace AlibabaCloud.SDK.Alikafka20190916.Models
 
                     }
 
-                    /// <summary>
-                    /// <para>The request name.</para>
-                    /// <remarks>
-                    /// <para> The value of this parameter indicates the type of request that the client sends to the broker within the specified period of time.</para>
-                    /// </remarks>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>OFFSET_COMMIT</para>
-                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }

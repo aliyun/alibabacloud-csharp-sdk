@@ -811,7 +811,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建后付费实例。</para>
+        /// <para>Creates a pay-as-you-go instance and returns the instance ID and order ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -903,7 +903,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建后付费实例。</para>
+        /// <para>Creates a pay-as-you-go instance and returns the instance ID and order ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -995,7 +995,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建后付费实例。</para>
+        /// <para>Creates a pay-as-you-go instance and returns the instance ID and order ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1013,7 +1013,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建后付费实例。</para>
+        /// <para>Creates a pay-as-you-go instance and returns the instance ID and order ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1287,7 +1287,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预付费实例</para>
+        /// <para>Creates a subscription instance and returns the instance ID and order ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1383,7 +1383,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预付费实例</para>
+        /// <para>Creates a subscription instance and returns the instance ID and order ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1479,7 +1479,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预付费实例</para>
+        /// <para>Creates a subscription instance and returns the instance ID and order ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1497,7 +1497,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预付费实例</para>
+        /// <para>Creates a subscription instance and returns the instance ID and order ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3471,7 +3471,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询acl资源名</para>
+        /// <para>Queries the name of the resource with which an access control list (ACL) is associated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3525,7 +3525,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询acl资源名</para>
+        /// <para>Queries the name of the resource with which an access control list (ACL) is associated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3579,7 +3579,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询acl资源名</para>
+        /// <para>Queries the name of the resource with which an access control list (ACL) is associated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3597,7 +3597,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询acl资源名</para>
+        /// <para>Queries the name of the resource with which an access control list (ACL) is associated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6575,7 +6575,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Rebalance详情</para>
+        /// <para>Obtains the rebalance details of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6625,7 +6625,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Rebalance详情</para>
+        /// <para>Obtains the rebalance details of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6675,7 +6675,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Rebalance详情</para>
+        /// <para>Obtains the rebalance details of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6693,7 +6693,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Rebalance详情</para>
+        /// <para>Obtains the rebalance details of a consumer group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9987,7 +9987,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</para>
+        /// <para>Upgrade Prepaid Instance</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10084,7 +10084,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</para>
+        /// <para>Upgrade Prepaid Instance</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10181,7 +10181,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</para>
+        /// <para>Upgrade Prepaid Instance</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10204,7 +10204,7 @@ namespace AlibabaCloud.SDK.Alikafka20190916
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrades a Message Queue for Apache Kafka instance that uses the subscription billing method.</para>
+        /// <para>Upgrade Prepaid Instance</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
