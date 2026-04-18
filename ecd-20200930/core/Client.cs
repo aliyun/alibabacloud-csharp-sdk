@@ -45855,6 +45855,270 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询历史活跃用户数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryHistoryActiveUserCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryHistoryActiveUserCountResponse
+        /// </returns>
+        public QueryHistoryActiveUserCountResponse QueryHistoryActiveUserCountWithOptions(QueryHistoryActiveUserCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDate))
+            {
+                query["DataDate"] = request.DataDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryHistoryActiveUserCount",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryHistoryActiveUserCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询历史活跃用户数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryHistoryActiveUserCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryHistoryActiveUserCountResponse
+        /// </returns>
+        public async Task<QueryHistoryActiveUserCountResponse> QueryHistoryActiveUserCountWithOptionsAsync(QueryHistoryActiveUserCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataDate))
+            {
+                query["DataDate"] = request.DataDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryHistoryActiveUserCount",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryHistoryActiveUserCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询历史活跃用户数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryHistoryActiveUserCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryHistoryActiveUserCountResponse
+        /// </returns>
+        public QueryHistoryActiveUserCountResponse QueryHistoryActiveUserCount(QueryHistoryActiveUserCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryHistoryActiveUserCountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询历史活跃用户数量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryHistoryActiveUserCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryHistoryActiveUserCountResponse
+        /// </returns>
+        public async Task<QueryHistoryActiveUserCountResponse> QueryHistoryActiveUserCountAsync(QueryHistoryActiveUserCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryHistoryActiveUserCountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询桌面历史指标分布</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryHistoryMetricDistributionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryHistoryMetricDistributionResponse
+        /// </returns>
+        public QueryHistoryMetricDistributionResponse QueryHistoryMetricDistributionWithOptions(QueryHistoryMetricDistributionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricName))
+            {
+                query["MetricName"] = request.MetricName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ranges))
+            {
+                query["Ranges"] = request.Ranges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryHistoryMetricDistribution",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryHistoryMetricDistributionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询桌面历史指标分布</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryHistoryMetricDistributionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryHistoryMetricDistributionResponse
+        /// </returns>
+        public async Task<QueryHistoryMetricDistributionResponse> QueryHistoryMetricDistributionWithOptionsAsync(QueryHistoryMetricDistributionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricName))
+            {
+                query["MetricName"] = request.MetricName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ranges))
+            {
+                query["Ranges"] = request.Ranges;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryHistoryMetricDistribution",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryHistoryMetricDistributionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询桌面历史指标分布</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryHistoryMetricDistributionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryHistoryMetricDistributionResponse
+        /// </returns>
+        public QueryHistoryMetricDistributionResponse QueryHistoryMetricDistribution(QueryHistoryMetricDistributionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryHistoryMetricDistributionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询桌面历史指标分布</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryHistoryMetricDistributionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryHistoryMetricDistributionResponse
+        /// </returns>
+        public async Task<QueryHistoryMetricDistributionResponse> QueryHistoryMetricDistributionAsync(QueryHistoryMetricDistributionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryHistoryMetricDistributionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Restart cloud computers.</para>
         /// </summary>
         /// 
