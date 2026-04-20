@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RebootDesktopsRequest : TeaModel {
+        [NameInMap("CreateSnapshot")]
+        [Validation(Required=false)]
+        public bool? CreateSnapshot { get; set; }
+
         /// <summary>
         /// <para>The IDs of the cloud computers. You can specify 1 to 100 IDs.</para>
         /// <para>This parameter is required.</para>
@@ -23,6 +27,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("OsUpdate")]
         [Validation(Required=false)]
         public bool? OsUpdate { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>KB5082063</para>
+        /// </summary>
+        [NameInMap("PatchId")]
+        [Validation(Required=false)]
+        public string PatchId { get; set; }
 
         /// <summary>
         /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>

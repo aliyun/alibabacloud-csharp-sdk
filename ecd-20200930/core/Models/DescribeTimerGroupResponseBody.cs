@@ -134,6 +134,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     [Validation(Required=false)]
                     public long? AppointmentTimer { get; set; }
 
+                    [NameInMap("CreateSnapshot")]
+                    [Validation(Required=false)]
+                    public bool? CreateSnapshot { get; set; }
+
                     [NameInMap("EndCronExpression")]
                     [Validation(Required=false)]
                     public string EndCronExpression { get; set; }
@@ -169,6 +173,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     [NameInMap("OperationType")]
                     [Validation(Required=false)]
                     public string OperationType { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>KB5082063</para>
+                    /// </summary>
+                    [NameInMap("PatchId")]
+                    [Validation(Required=false)]
+                    public string PatchId { get; set; }
 
                     [NameInMap("ProcessWhitelist")]
                     [Validation(Required=false)]

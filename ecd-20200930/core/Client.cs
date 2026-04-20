@@ -46141,6 +46141,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateSnapshot))
+            {
+                query["CreateSnapshot"] = request.CreateSnapshot;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
@@ -46148,6 +46152,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsUpdate))
             {
                 query["OsUpdate"] = request.OsUpdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -46196,6 +46204,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateSnapshot))
+            {
+                query["CreateSnapshot"] = request.CreateSnapshot;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
@@ -46203,6 +46215,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsUpdate))
             {
                 query["OsUpdate"] = request.OsUpdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -50185,6 +50201,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateSnapshot))
+            {
+                query["CreateSnapshot"] = request.CreateSnapshot;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
@@ -50192,6 +50212,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsUpdate))
             {
                 query["OsUpdate"] = request.OsUpdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -50244,6 +50268,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateSnapshot))
+            {
+                query["CreateSnapshot"] = request.CreateSnapshot;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
@@ -50251,6 +50279,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OsUpdate))
             {
                 query["OsUpdate"] = request.OsUpdate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PatchId))
+            {
+                query["PatchId"] = request.PatchId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {

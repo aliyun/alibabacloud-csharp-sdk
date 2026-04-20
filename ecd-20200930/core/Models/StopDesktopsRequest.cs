@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class StopDesktopsRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("CreateSnapshot")]
+        [Validation(Required=false)]
+        public string CreateSnapshot { get; set; }
+
+        /// <summary>
         /// <para>The cloud computer IDs. You can specify the IDs of 1 to 100 cloud computers.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,6 +37,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("OsUpdate")]
         [Validation(Required=false)]
         public bool? OsUpdate { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>KB5082063</para>
+        /// </summary>
+        [NameInMap("PatchId")]
+        [Validation(Required=false)]
+        public string PatchId { get; set; }
 
         /// <summary>
         /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
