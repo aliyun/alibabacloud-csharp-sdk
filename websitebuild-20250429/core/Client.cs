@@ -3602,9 +3602,6 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// <para>查询万小智灵感值服务</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetAppTokenServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -3635,9 +3632,6 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// <para>查询万小智灵感值服务</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetAppTokenServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4611,14 +4605,15 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             return await ListAppAssistantAgentsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>获取商品配置信息</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListAppCommoditySpecificationsForPartnerRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4626,6 +4621,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// <returns>
         /// ListAppCommoditySpecificationsForPartnerResponse
         /// </returns>
+        [Obsolete("OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.")]
+        // Deprecated
         public ListAppCommoditySpecificationsForPartnerResponse ListAppCommoditySpecificationsForPartnerWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -4644,14 +4641,15 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             return TeaModel.ToObject<ListAppCommoditySpecificationsForPartnerResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>获取商品配置信息</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListAppCommoditySpecificationsForPartnerRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4659,6 +4657,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// <returns>
         /// ListAppCommoditySpecificationsForPartnerResponse
         /// </returns>
+        [Obsolete("OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.")]
+        // Deprecated
         public async Task<ListAppCommoditySpecificationsForPartnerResponse> ListAppCommoditySpecificationsForPartnerWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
@@ -4677,6 +4677,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             return TeaModel.ToObject<ListAppCommoditySpecificationsForPartnerResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>获取商品配置信息</para>
@@ -4685,12 +4689,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// <returns>
         /// ListAppCommoditySpecificationsForPartnerResponse
         /// </returns>
+        [Obsolete("OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.")]
+        // Deprecated
         public ListAppCommoditySpecificationsForPartnerResponse ListAppCommoditySpecificationsForPartner()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return ListAppCommoditySpecificationsForPartnerWithOptions(runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>获取商品配置信息</para>
@@ -4699,6 +4709,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// <returns>
         /// ListAppCommoditySpecificationsForPartnerResponse
         /// </returns>
+        [Obsolete("OpenAPI ListAppCommoditySpecificationsForPartner is deprecated, please use WebsiteBuild::2025-04-29::ListAppCommoditySpecificationsV2ForPartner instead.")]
+        // Deprecated
         public async Task<ListAppCommoditySpecificationsForPartnerResponse> ListAppCommoditySpecificationsForPartnerAsync()
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -7066,9 +7078,6 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// <para>查询灵感值余额总览</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// QueryInspirationBalanceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7099,9 +7108,6 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// <para>查询灵感值余额总览</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// QueryInspirationBalanceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>

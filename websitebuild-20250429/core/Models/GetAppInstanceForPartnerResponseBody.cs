@@ -859,6 +859,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     [Validation(Required=false)]
                     public string ServiceSpecText { get; set; }
 
+                    [NameInMap("UpgradeStatus")]
+                    [Validation(Required=false)]
+                    public string UpgradeStatus { get; set; }
+
                 }
 
                 /// <summary>
@@ -1408,6 +1412,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string Thumbnail { get; set; }
 
+                [NameInMap("UpgradeStatus")]
+                [Validation(Required=false)]
+                public string UpgradeStatus { get; set; }
+
             }
 
             [NameInMap("RelatedInstanceList")]
@@ -1811,6 +1819,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     [NameInMap("Thumbnail")]
                     [Validation(Required=false)]
                     public string Thumbnail { get; set; }
+
+                    [NameInMap("UpgradeStatus")]
+                    [Validation(Required=false)]
+                    public string UpgradeStatus { get; set; }
 
                 }
 
