@@ -1,0 +1,38 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
+{
+    public class GenerateFileUploadParamsRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CloneVoice</para>
+        /// </summary>
+        [NameInMap("BusinessType")]
+        [Validation(Required=false)]
+        public string BusinessType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>llm-c11iig67g863rih8</para>
+        /// </summary>
+        [NameInMap("BusinessUnitId")]
+        [Validation(Required=false)]
+        public string BusinessUnitId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test.wav</para>
+        /// </summary>
+        [NameInMap("FileName")]
+        [Validation(Required=false)]
+        public string FileName { get; set; }
+
+    }
+
+}

@@ -1243,6 +1243,142 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取文件上传信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateFileUploadParamsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateFileUploadParamsResponse
+        /// </returns>
+        public GenerateFileUploadParamsResponse GenerateFileUploadParamsWithOptions(GenerateFileUploadParamsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                body["BusinessType"] = request.BusinessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessUnitId))
+            {
+                body["BusinessUnitId"] = request.BusinessUnitId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["FileName"] = request.FileName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateFileUploadParams",
+                Version = "2025-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateFileUploadParamsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文件上传信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateFileUploadParamsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateFileUploadParamsResponse
+        /// </returns>
+        public async Task<GenerateFileUploadParamsResponse> GenerateFileUploadParamsWithOptionsAsync(GenerateFileUploadParamsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
+            {
+                body["BusinessType"] = request.BusinessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessUnitId))
+            {
+                body["BusinessUnitId"] = request.BusinessUnitId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                body["FileName"] = request.FileName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateFileUploadParams",
+                Version = "2025-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateFileUploadParamsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文件上传信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateFileUploadParamsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateFileUploadParamsResponse
+        /// </returns>
+        public GenerateFileUploadParamsResponse GenerateFileUploadParams(GenerateFileUploadParamsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateFileUploadParamsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取文件上传信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateFileUploadParamsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateFileUploadParamsResponse
+        /// </returns>
+        public async Task<GenerateFileUploadParamsResponse> GenerateFileUploadParamsAsync(GenerateFileUploadParamsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateFileUploadParamsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Get应用</para>
         /// </summary>
         /// 
