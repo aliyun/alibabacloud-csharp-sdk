@@ -79,6 +79,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Obsolete]
         public bool? AuthAdminUser { get; set; }
 
+        [NameInMap("CopilotModules")]
+        [Validation(Required=false)]
+        public string CopilotModules { get; set; }
+
         /// <summary>
         /// <para>Aliyun account nickname.</para>
         /// <list type="bullet">

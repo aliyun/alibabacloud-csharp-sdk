@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public bool? AuthAdminUser { get; set; }
 
+        [NameInMap("CopilotModules")]
+        [Validation(Required=false)]
+        public string CopilotModules { get; set; }
+
         /// <summary>
         /// <para>User status: </para>
         /// <list type="bullet">

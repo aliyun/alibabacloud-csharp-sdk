@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>43342<em><b>435,1553a</b></em>*41231</para>
+        /// <para>Modifies the whitelist of the row and column permissions for a specified dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>43342<em><b>435,1553a</b></em>*41231</para>
+        /// <para>Modifies the whitelist of the row and column permissions for a specified dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>43342<em><b>435,1553a</b></em>*41231</para>
+        /// <para>Modifies the whitelist of the row and column permissions for a specified dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>43342<em><b>435,1553a</b></em>*41231</para>
+        /// <para>Modifies the whitelist of the row and column permissions for a specified dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -664,6 +664,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             {
                 query["AuthAdminUser"] = request.AuthAdminUser;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopilotModules))
+            {
+                query["CopilotModules"] = request.CopilotModules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NickName))
             {
                 query["NickName"] = request.NickName;
@@ -731,6 +735,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthAdminUser))
             {
                 query["AuthAdminUser"] = request.AuthAdminUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopilotModules))
+            {
+                query["CopilotModules"] = request.CopilotModules;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NickName))
             {
@@ -1319,6 +1327,166 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await AddUserToWorkspaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增作品的协同授权记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddWorksAuthorizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddWorksAuthorizationResponse
+        /// </returns>
+        public AddWorksAuthorizationResponse AddWorksAuthorizationWithOptions(AddWorksAuthorizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthPoints))
+            {
+                query["AuthPoints"] = request.AuthPoints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizeScope))
+            {
+                query["AuthorizeScope"] = request.AuthorizeScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizedId))
+            {
+                query["AuthorizedId"] = request.AuthorizedId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireDay))
+            {
+                query["ExpireDay"] = request.ExpireDay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddWorksAuthorization",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddWorksAuthorizationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增作品的协同授权记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddWorksAuthorizationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddWorksAuthorizationResponse
+        /// </returns>
+        public async Task<AddWorksAuthorizationResponse> AddWorksAuthorizationWithOptionsAsync(AddWorksAuthorizationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthPoints))
+            {
+                query["AuthPoints"] = request.AuthPoints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizeScope))
+            {
+                query["AuthorizeScope"] = request.AuthorizeScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizedId))
+            {
+                query["AuthorizedId"] = request.AuthorizedId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireDay))
+            {
+                query["ExpireDay"] = request.ExpireDay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceType))
+            {
+                query["ResourceType"] = request.ResourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddWorksAuthorization",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddWorksAuthorizationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增作品的协同授权记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddWorksAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddWorksAuthorizationResponse
+        /// </returns>
+        public AddWorksAuthorizationResponse AddWorksAuthorization(AddWorksAuthorizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddWorksAuthorizationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增作品的协同授权记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddWorksAuthorizationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddWorksAuthorizationResponse
+        /// </returns>
+        public async Task<AddWorksAuthorizationResponse> AddWorksAuthorizationAsync(AddWorksAuthorizationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddWorksAuthorizationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4351,7 +4519,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>{ &quot;ruleId&quot;: &quot;a5bb24da- ***-a891683e14da&quot;, // The ID of the row-column permission rule. &quot;cubeId&quot;: &quot;7c7223ae- ***-3c744528014b&quot;, // The ID of the dataset. &quot;delModel&quot;: { &quot;userGroups&quot;: [ &quot;0d5fb19b- <em><b>-1248 fc27ca51&quot;, // Delete the user group ID of the user group. &quot;3d2c23d4-</b></em>-f6390f325c2d&quot; ], &quot;users&quot;: [ &quot;4334 <em><b>358&quot;, // Delete the UserID of the user group. &quot;Huang</b></em>3fa822&quot; ] } }</para>
+        /// <para>Deletes a selected group of people for a single row and column permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4398,7 +4566,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>{ &quot;ruleId&quot;: &quot;a5bb24da- ***-a891683e14da&quot;, // The ID of the row-column permission rule. &quot;cubeId&quot;: &quot;7c7223ae- ***-3c744528014b&quot;, // The ID of the dataset. &quot;delModel&quot;: { &quot;userGroups&quot;: [ &quot;0d5fb19b- <em><b>-1248 fc27ca51&quot;, // Delete the user group ID of the user group. &quot;3d2c23d4-</b></em>-f6390f325c2d&quot; ], &quot;users&quot;: [ &quot;4334 <em><b>358&quot;, // Delete the UserID of the user group. &quot;Huang</b></em>3fa822&quot; ] } }</para>
+        /// <para>Deletes a selected group of people for a single row and column permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4445,7 +4613,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>{ &quot;ruleId&quot;: &quot;a5bb24da- ***-a891683e14da&quot;, // The ID of the row-column permission rule. &quot;cubeId&quot;: &quot;7c7223ae- ***-3c744528014b&quot;, // The ID of the dataset. &quot;delModel&quot;: { &quot;userGroups&quot;: [ &quot;0d5fb19b- <em><b>-1248 fc27ca51&quot;, // Delete the user group ID of the user group. &quot;3d2c23d4-</b></em>-f6390f325c2d&quot; ], &quot;users&quot;: [ &quot;4334 <em><b>358&quot;, // Delete the UserID of the user group. &quot;Huang</b></em>3fa822&quot; ] } }</para>
+        /// <para>Deletes a selected group of people for a single row and column permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4468,7 +4636,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>{ &quot;ruleId&quot;: &quot;a5bb24da- ***-a891683e14da&quot;, // The ID of the row-column permission rule. &quot;cubeId&quot;: &quot;7c7223ae- ***-3c744528014b&quot;, // The ID of the dataset. &quot;delModel&quot;: { &quot;userGroups&quot;: [ &quot;0d5fb19b- <em><b>-1248 fc27ca51&quot;, // Delete the user group ID of the user group. &quot;3d2c23d4-</b></em>-f6390f325c2d&quot; ], &quot;users&quot;: [ &quot;4334 <em><b>358&quot;, // Delete the UserID of the user group. &quot;Huang</b></em>3fa822&quot; ] } }</para>
+        /// <para>Deletes a selected group of people for a single row and column permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4491,7 +4659,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Deletes a single row or column permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4542,7 +4710,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Deletes a single row or column permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4593,7 +4761,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Deletes a single row or column permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4616,7 +4784,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Deletes a single row or column permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7462,9 +7630,6 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <para>Retrieve the list of custom roles at the organization level.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListOrganizationRolesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7495,9 +7660,6 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <para>Retrieve the list of custom roles at the organization level.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListOrganizationRolesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -11274,8 +11436,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Indicates whether the table is a custom SQL table. Valid values:
-        /// \*   true: custom SQL table
-        /// \*   false: non-custom SQL table</para>
+        /// \\*   true: custom SQL table
+        /// \\*   false: non-custom SQL table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11318,8 +11480,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Indicates whether the table is a custom SQL table. Valid values:
-        /// \*   true: custom SQL table
-        /// \*   false: non-custom SQL table</para>
+        /// \\*   true: custom SQL table
+        /// \\*   false: non-custom SQL table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11362,8 +11524,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Indicates whether the table is a custom SQL table. Valid values:
-        /// \*   true: custom SQL table
-        /// \*   false: non-custom SQL table</para>
+        /// \\*   true: custom SQL table
+        /// \\*   false: non-custom SQL table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11382,8 +11544,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Indicates whether the table is a custom SQL table. Valid values:
-        /// \*   true: custom SQL table
-        /// \*   false: non-custom SQL table</para>
+        /// \\*   true: custom SQL table
+        /// \\*   false: non-custom SQL table</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11401,7 +11563,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The name of the training dataset.</para>
+        /// <para>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11463,7 +11625,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The name of the training dataset.</para>
+        /// <para>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11525,7 +11687,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The name of the training dataset.</para>
+        /// <para>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11543,7 +11705,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The name of the training dataset.</para>
+        /// <para>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11832,9 +11994,6 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <para>Obtain the embedding configuration in the organization, including the maximum number of embeddings and the number of embeddings.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// QueryEmbeddedInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -11865,9 +12024,6 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <para>Obtain the embedding configuration in the organization, including the maximum number of embeddings and the number of embeddings.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// QueryEmbeddedInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -14350,9 +14506,6 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <para>Queries the metadata list of member tags in an organization.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// QueryUserTagMetaListRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -14383,9 +14536,6 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
         /// <para>Queries the metadata list of member tags in an organization.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// QueryUserTagMetaListRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -16221,7 +16371,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Management of Smart Q\\\&amp;A Authorizations</para>
+        /// <para>Batch Management of Smart Q\\\\\\&amp;A Authorizations</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16288,7 +16438,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Management of Smart Q\\\&amp;A Authorizations</para>
+        /// <para>Batch Management of Smart Q\\\\\\&amp;A Authorizations</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16355,7 +16505,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Management of Smart Q\\\&amp;A Authorizations</para>
+        /// <para>Batch Management of Smart Q\\\\\\&amp;A Authorizations</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16378,7 +16528,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Management of Smart Q\\\&amp;A Authorizations</para>
+        /// <para>Batch Management of Smart Q\\\\\\&amp;A Authorizations</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16717,11 +16867,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
-        /// </list>
+        /// <para>Updates the status of the row and column permission switch for a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16780,11 +16926,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
-        /// </list>
+        /// <para>Updates the status of the row and column permission switch for a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16843,11 +16985,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
-        /// </list>
+        /// <para>Updates the status of the row and column permission switch for a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16874,11 +17012,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
-        /// </list>
+        /// <para>Updates the status of the row and column permission switch for a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17306,6 +17440,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             {
                 query["AuthAdminUser"] = request.AuthAdminUser;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopilotModules))
+            {
+                query["CopilotModules"] = request.CopilotModules;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDeleted))
             {
                 query["IsDeleted"] = request.IsDeleted;
@@ -17371,6 +17509,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthAdminUser))
             {
                 query["AuthAdminUser"] = request.AuthAdminUser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CopilotModules))
+            {
+                query["CopilotModules"] = request.CopilotModules;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsDeleted))
             {
