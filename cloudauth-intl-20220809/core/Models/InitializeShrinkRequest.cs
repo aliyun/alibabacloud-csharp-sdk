@@ -639,6 +639,18 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string TargetFacePictureUrl { get; set; }
 
+        [NameInMap("TemplateConfig")]
+        [Validation(Required=false)]
+        public string TemplateConfig { get; set; }
+
+        [NameInMap("TemplateRanCount")]
+        [Validation(Required=false)]
+        public string TemplateRanCount { get; set; }
+
+        [NameInMap("TemplateType")]
+        [Validation(Required=false)]
+        public string TemplateType { get; set; }
+
         /// <summary>
         /// <para>Optional to enable NFC verification when <b>DocType</b>=01000000 (global passport).</para>
         /// <list type="bullet">

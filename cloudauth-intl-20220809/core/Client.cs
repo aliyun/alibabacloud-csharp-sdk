@@ -7481,6 +7481,18 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["TargetFacePictureUrl"] = request.TargetFacePictureUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateConfig))
+            {
+                query["TemplateConfig"] = request.TemplateConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateRanCount))
+            {
+                query["TemplateRanCount"] = request.TemplateRanCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseNFC))
             {
                 query["UseNFC"] = request.UseNFC;
@@ -7734,6 +7746,18 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetFacePictureUrl))
             {
                 query["TargetFacePictureUrl"] = request.TargetFacePictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateConfig))
+            {
+                query["TemplateConfig"] = request.TemplateConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateRanCount))
+            {
+                query["TemplateRanCount"] = request.TemplateRanCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
+            {
+                query["TemplateType"] = request.TemplateType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseNFC))
             {
