@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string CategoryType { get; set; }
 
+        [NameInMap("ConnectorId")]
+        [Validation(Required=false)]
+        public string ConnectorId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cate_cdd11b1b79a74e8bbd675c356a91ee3XXXXXXXX</para>

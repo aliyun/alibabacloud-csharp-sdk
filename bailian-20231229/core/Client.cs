@@ -78,6 +78,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             {
                 body["CategoryType"] = request.CategoryType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectorId))
+            {
+                body["ConnectorId"] = request.ConnectorId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentCategoryId))
             {
                 body["ParentCategoryId"] = request.ParentCategoryId;
@@ -142,6 +146,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CategoryType))
             {
                 body["CategoryType"] = request.CategoryType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConnectorId))
+            {
+                body["ConnectorId"] = request.ConnectorId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentCategoryId))
             {
