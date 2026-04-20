@@ -8553,9 +8553,6 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return await DescribeCloudGtmSummaryWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
-        /// DescribeCloudGtmSystemLinesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8581,9 +8578,6 @@ namespace AlibabaCloud.SDK.Alidns20150109
             return TeaModel.ToObject<DescribeCloudGtmSystemLinesResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <param name="request">
-        /// DescribeCloudGtmSystemLinesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>

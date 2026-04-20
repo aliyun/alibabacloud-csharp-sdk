@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public string NoticeType { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
+                [NameInMap("QpsThreshold")]
+                [Validation(Required=false)]
+                public long? QpsThreshold { get; set; }
+
                 [NameInMap("SmsNotice")]
                 [Validation(Required=false)]
                 public bool? SmsNotice { get; set; }

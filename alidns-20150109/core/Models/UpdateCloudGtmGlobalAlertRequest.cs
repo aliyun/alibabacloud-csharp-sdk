@@ -75,6 +75,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string NoticeType { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("QpsThreshold")]
+            [Validation(Required=false)]
+            public long? QpsThreshold { get; set; }
+
+            /// <summary>
             /// <para>Specifies whether to configure text message notifications. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: configures text message notifications. Text messages are sent when alerts are triggered.</description></item>
