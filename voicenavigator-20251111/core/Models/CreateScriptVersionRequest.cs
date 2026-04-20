@@ -357,6 +357,20 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
         [Validation(Required=false)]
         public CreateScriptVersionRequestTranscriberConfig TranscriberConfig { get; set; }
         public class CreateScriptVersionRequestTranscriberConfig : TeaModel {
+            [NameInMap("CorrectionRules")]
+            [Validation(Required=false)]
+            public List<CreateScriptVersionRequestTranscriberConfigCorrectionRules> CorrectionRules { get; set; }
+            public class CreateScriptVersionRequestTranscriberConfigCorrectionRules : TeaModel {
+                [NameInMap("Pattern")]
+                [Validation(Required=false)]
+                public string Pattern { get; set; }
+
+                [NameInMap("Replacement")]
+                [Validation(Required=false)]
+                public string Replacement { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>cd97223f-42f2-4cd9-95af-e734e2fe1fe4</para>

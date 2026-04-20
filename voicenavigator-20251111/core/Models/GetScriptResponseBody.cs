@@ -381,6 +381,20 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
                 [Validation(Required=false)]
                 public GetScriptResponseBodyDataDraftVersionTranscriberConfig TranscriberConfig { get; set; }
                 public class GetScriptResponseBodyDataDraftVersionTranscriberConfig : TeaModel {
+                    [NameInMap("CorrectionRules")]
+                    [Validation(Required=false)]
+                    public List<GetScriptResponseBodyDataDraftVersionTranscriberConfigCorrectionRules> CorrectionRules { get; set; }
+                    public class GetScriptResponseBodyDataDraftVersionTranscriberConfigCorrectionRules : TeaModel {
+                        [NameInMap("Pattern")]
+                        [Validation(Required=false)]
+                        public string Pattern { get; set; }
+
+                        [NameInMap("Replacement")]
+                        [Validation(Required=false)]
+                        public string Replacement { get; set; }
+
+                    }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>0c4f978a-73bb-4841-bd84-75c0398edd6f</para>
@@ -823,6 +837,20 @@ namespace AlibabaCloud.SDK.VoiceNavigator20251111.Models
                 [Validation(Required=false)]
                 public GetScriptResponseBodyDataPublishedVersionTranscriberConfig TranscriberConfig { get; set; }
                 public class GetScriptResponseBodyDataPublishedVersionTranscriberConfig : TeaModel {
+                    [NameInMap("CorrectionRules")]
+                    [Validation(Required=false)]
+                    public List<GetScriptResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules> CorrectionRules { get; set; }
+                    public class GetScriptResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules : TeaModel {
+                        [NameInMap("Pattern")]
+                        [Validation(Required=false)]
+                        public string Pattern { get; set; }
+
+                        [NameInMap("Replacement")]
+                        [Validation(Required=false)]
+                        public string Replacement { get; set; }
+
+                    }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>cd97223f-42f2-4cd9-95af-e734e2fe1fe4</para>
