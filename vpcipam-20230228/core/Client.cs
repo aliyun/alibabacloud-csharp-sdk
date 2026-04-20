@@ -3771,6 +3771,182 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询VPC或VSwitch下已使用IP信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIpamDiscoveredIpAddressesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIpamDiscoveredIpAddressesResponse
+        /// </returns>
+        public ListIpamDiscoveredIpAddressesResponse ListIpamDiscoveredIpAddressesWithOptions(ListIpamDiscoveredIpAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cidr))
+            {
+                query["Cidr"] = request.Cidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryId))
+            {
+                query["IpamResourceDiscoveryId"] = request.IpamResourceDiscoveryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIpamDiscoveredIpAddresses",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIpamDiscoveredIpAddressesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC或VSwitch下已使用IP信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIpamDiscoveredIpAddressesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIpamDiscoveredIpAddressesResponse
+        /// </returns>
+        public async Task<ListIpamDiscoveredIpAddressesResponse> ListIpamDiscoveredIpAddressesWithOptionsAsync(ListIpamDiscoveredIpAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cidr))
+            {
+                query["Cidr"] = request.Cidr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersion))
+            {
+                query["IpVersion"] = request.IpVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpamResourceDiscoveryId))
+            {
+                query["IpamResourceDiscoveryId"] = request.IpamResourceDiscoveryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListIpamDiscoveredIpAddresses",
+                Version = "2023-02-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListIpamDiscoveredIpAddressesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC或VSwitch下已使用IP信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIpamDiscoveredIpAddressesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIpamDiscoveredIpAddressesResponse
+        /// </returns>
+        public ListIpamDiscoveredIpAddressesResponse ListIpamDiscoveredIpAddresses(ListIpamDiscoveredIpAddressesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListIpamDiscoveredIpAddressesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询VPC或VSwitch下已使用IP信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListIpamDiscoveredIpAddressesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListIpamDiscoveredIpAddressesResponse
+        /// </returns>
+        public async Task<ListIpamDiscoveredIpAddressesResponse> ListIpamDiscoveredIpAddressesAsync(ListIpamDiscoveredIpAddressesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListIpamDiscoveredIpAddressesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries discovered resources.</para>
         /// </summary>
         /// 
@@ -6651,7 +6827,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an IP Address Manager (IPAM).</para>
+        /// <para>Modifies an IPAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6737,7 +6913,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an IP Address Manager (IPAM).</para>
+        /// <para>Modifies an IPAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6823,7 +6999,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an IP Address Manager (IPAM).</para>
+        /// <para>Modifies an IPAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6841,7 +7017,7 @@ namespace AlibabaCloud.SDK.VpcIpam20230228
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an IP Address Manager (IPAM).</para>
+        /// <para>Modifies an IPAM instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
