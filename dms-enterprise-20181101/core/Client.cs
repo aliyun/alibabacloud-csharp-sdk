@@ -1415,6 +1415,150 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>工作空间添加用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddWorkspaceUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddWorkspaceUserResponse
+        /// </returns>
+        public AddWorkspaceUserResponse AddWorkspaceUserWithOptions(AddWorkspaceUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUserIds))
+            {
+                query["DmsUserIds"] = request.DmsUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                query["RoleId"] = request.RoleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleSource))
+            {
+                query["RoleSource"] = request.RoleSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddWorkspaceUser",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddWorkspaceUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间添加用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddWorkspaceUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddWorkspaceUserResponse
+        /// </returns>
+        public async Task<AddWorkspaceUserResponse> AddWorkspaceUserWithOptionsAsync(AddWorkspaceUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUserIds))
+            {
+                query["DmsUserIds"] = request.DmsUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleId))
+            {
+                query["RoleId"] = request.RoleId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleSource))
+            {
+                query["RoleSource"] = request.RoleSource;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddWorkspaceUser",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddWorkspaceUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间添加用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddWorkspaceUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddWorkspaceUserResponse
+        /// </returns>
+        public AddWorkspaceUserResponse AddWorkspaceUser(AddWorkspaceUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddWorkspaceUserWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间添加用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddWorkspaceUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddWorkspaceUserResponse
+        /// </returns>
+        public async Task<AddWorkspaceUserResponse> AddWorkspaceUserAsync(AddWorkspaceUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddWorkspaceUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Analyzes the lineage (dependencies and influence) between tables and between fields in SQL statements.</para>
         /// </summary>
         /// 
@@ -38371,6 +38515,150 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>列出工作空间内的用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceUsersResponse
+        /// </returns>
+        public ListWorkspaceUsersResponse ListWorkspaceUsersWithOptions(ListWorkspaceUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkspaceUsers",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkspaceUsersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作空间内的用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceUsersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceUsersResponse
+        /// </returns>
+        public async Task<ListWorkspaceUsersResponse> ListWorkspaceUsersWithOptionsAsync(ListWorkspaceUsersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkspaceUsers",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkspaceUsersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作空间内的用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceUsersResponse
+        /// </returns>
+        public ListWorkspaceUsersResponse ListWorkspaceUsers(ListWorkspaceUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListWorkspaceUsersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作空间内的用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceUsersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceUsersResponse
+        /// </returns>
+        public async Task<ListWorkspaceUsersResponse> ListWorkspaceUsersAsync(ListWorkspaceUsersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListWorkspaceUsersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of workspaces of the tenant.</para>
         /// </summary>
         /// 
@@ -41923,6 +42211,134 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>工作空间添加用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveWorkspaceUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveWorkspaceUserResponse
+        /// </returns>
+        public RemoveWorkspaceUserResponse RemoveWorkspaceUserWithOptions(RemoveWorkspaceUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUserIds))
+            {
+                query["DmsUserIds"] = request.DmsUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveWorkspaceUser",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveWorkspaceUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间添加用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveWorkspaceUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveWorkspaceUserResponse
+        /// </returns>
+        public async Task<RemoveWorkspaceUserResponse> RemoveWorkspaceUserWithOptionsAsync(RemoveWorkspaceUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUserIds))
+            {
+                query["DmsUserIds"] = request.DmsUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveWorkspaceUser",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveWorkspaceUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间添加用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveWorkspaceUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveWorkspaceUserResponse
+        /// </returns>
+        public RemoveWorkspaceUserResponse RemoveWorkspaceUser(RemoveWorkspaceUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveWorkspaceUserWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间添加用户</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveWorkspaceUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveWorkspaceUserResponse
+        /// </returns>
+        public async Task<RemoveWorkspaceUserResponse> RemoveWorkspaceUserAsync(RemoveWorkspaceUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveWorkspaceUserWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Reruns a failed SQL task for data change.</para>
         /// </summary>
         /// 
@@ -43595,6 +44011,162 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchTableKnowledgeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索工作空间内的角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchWorkspaceRolesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchWorkspaceRolesResponse
+        /// </returns>
+        public SearchWorkspaceRolesResponse SearchWorkspaceRolesWithOptions(SearchWorkspaceRolesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchWorkspaceRoles",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchWorkspaceRolesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索工作空间内的角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchWorkspaceRolesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchWorkspaceRolesResponse
+        /// </returns>
+        public async Task<SearchWorkspaceRolesResponse> SearchWorkspaceRolesWithOptionsAsync(SearchWorkspaceRolesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchWorkspaceRoles",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchWorkspaceRolesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索工作空间内的角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchWorkspaceRolesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchWorkspaceRolesResponse
+        /// </returns>
+        public SearchWorkspaceRolesResponse SearchWorkspaceRoles(SearchWorkspaceRolesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SearchWorkspaceRolesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索工作空间内的角色</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchWorkspaceRolesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchWorkspaceRolesResponse
+        /// </returns>
+        public async Task<SearchWorkspaceRolesResponse> SearchWorkspaceRolesAsync(SearchWorkspaceRolesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SearchWorkspaceRolesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -50051,6 +50623,142 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateWorkspaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改工作空间的用户权限等信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceUserResponse
+        /// </returns>
+        public UpdateWorkspaceUserResponse UpdateWorkspaceUserWithOptions(UpdateWorkspaceUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUserId))
+            {
+                query["DmsUserId"] = request.DmsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleIds))
+            {
+                query["RoleIds"] = request.RoleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkspaceUser",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkspaceUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改工作空间的用户权限等信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceUserResponse
+        /// </returns>
+        public async Task<UpdateWorkspaceUserResponse> UpdateWorkspaceUserWithOptionsAsync(UpdateWorkspaceUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUserId))
+            {
+                query["DmsUserId"] = request.DmsUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleIds))
+            {
+                query["RoleIds"] = request.RoleIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkspaceUser",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkspaceUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改工作空间的用户权限等信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceUserResponse
+        /// </returns>
+        public UpdateWorkspaceUserResponse UpdateWorkspaceUser(UpdateWorkspaceUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateWorkspaceUserWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改工作空间的用户权限等信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceUserResponse
+        /// </returns>
+        public async Task<UpdateWorkspaceUserResponse> UpdateWorkspaceUserAsync(UpdateWorkspaceUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateWorkspaceUserWithOptionsAsync(request, runtime);
         }
 
     }
