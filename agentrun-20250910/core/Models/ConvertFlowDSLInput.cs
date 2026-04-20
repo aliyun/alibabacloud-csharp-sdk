@@ -68,6 +68,18 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
             [Validation(Required=false)]
             public bool? CompatibilityCheck { get; set; }
 
+            [NameInMap("credentialName")]
+            [Validation(Required=false)]
+            public string CredentialName { get; set; }
+
+            [NameInMap("flowName")]
+            [Validation(Required=false)]
+            public string FlowName { get; set; }
+
+            [NameInMap("vpcEndpointName")]
+            [Validation(Required=false)]
+            public string VpcEndpointName { get; set; }
+
         }
 
     }
