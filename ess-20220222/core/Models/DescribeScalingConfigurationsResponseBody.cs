@@ -74,6 +74,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public int? Cpu { get; set; }
 
+            [NameInMap("CpuOptions")]
+            [Validation(Required=false)]
+            public DescribeScalingConfigurationsResponseBodyScalingConfigurationsCpuOptions CpuOptions { get; set; }
+            public class DescribeScalingConfigurationsResponseBodyScalingConfigurationsCpuOptions : TeaModel {
+                [NameInMap("NestedVirtualization")]
+                [Validation(Required=false)]
+                public string NestedVirtualization { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The time at which the scaling configuration was created.</para>
             /// 
