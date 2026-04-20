@@ -300,6 +300,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string StatusReason { get; set; }
 
         /// <summary>
+        /// <para>智能体运行时的系统标签信息，用于系统级别的资源分类和管理</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>system-tag-1,system-tag-2</para>
+        /// </summary>
+        [NameInMap("systemTags")]
+        [Validation(Required=false)]
+        public List<string> SystemTags { get; set; }
+
+        /// <summary>
         /// <para>智能体运行时所属的工作空间标识符，用于资源隔离和权限管理</para>
         /// 
         /// <b>Example:</b>
