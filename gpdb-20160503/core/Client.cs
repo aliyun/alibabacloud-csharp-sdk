@@ -36130,6 +36130,142 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>修改Supabase自动启停策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySupabaseAutoScalePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySupabaseAutoScalePolicyResponse
+        /// </returns>
+        public ModifySupabaseAutoScalePolicyResponse ModifySupabaseAutoScalePolicyWithOptions(ModifySupabaseAutoScalePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScale))
+            {
+                query["AutoScale"] = request.AutoScale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySupabaseAutoScalePolicy",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySupabaseAutoScalePolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Supabase自动启停策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySupabaseAutoScalePolicyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySupabaseAutoScalePolicyResponse
+        /// </returns>
+        public async Task<ModifySupabaseAutoScalePolicyResponse> ModifySupabaseAutoScalePolicyWithOptionsAsync(ModifySupabaseAutoScalePolicyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScale))
+            {
+                query["AutoScale"] = request.AutoScale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySupabaseAutoScalePolicy",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySupabaseAutoScalePolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Supabase自动启停策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySupabaseAutoScalePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySupabaseAutoScalePolicyResponse
+        /// </returns>
+        public ModifySupabaseAutoScalePolicyResponse ModifySupabaseAutoScalePolicy(ModifySupabaseAutoScalePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifySupabaseAutoScalePolicyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Supabase自动启停策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySupabaseAutoScalePolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySupabaseAutoScalePolicyResponse
+        /// </returns>
+        public async Task<ModifySupabaseAutoScalePolicyResponse> ModifySupabaseAutoScalePolicyAsync(ModifySupabaseAutoScalePolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifySupabaseAutoScalePolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Sets or replaces the IP address whitelist for a specified Supabase project.</para>
         /// </summary>
         /// 
