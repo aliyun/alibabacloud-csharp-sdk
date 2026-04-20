@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("ConsoleDryRun")]
+        [Validation(Required=false)]
+        public bool? ConsoleDryRun { get; set; }
+
         /// <summary>
         /// <para>Specifies whether only to precheck the API request. Valid values:</para>
         /// <list type="bullet">

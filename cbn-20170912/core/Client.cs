@@ -2760,6 +2760,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsoleDryRun))
+            {
+                query["ConsoleDryRun"] = request.ConsoleDryRun;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
@@ -2865,6 +2869,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsoleDryRun))
+            {
+                query["ConsoleDryRun"] = request.ConsoleDryRun;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
