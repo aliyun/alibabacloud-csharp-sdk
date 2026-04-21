@@ -224,6 +224,24 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [Validation(Required=false)]
                 public string CompressionType { get; set; }
 
+                [NameInMap("DynamicTopic")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkApacheKafkaParametersDynamicTopic DynamicTopic { get; set; }
+                public class CreateEventStreamingRequestSinkSinkApacheKafkaParametersDynamicTopic : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
                 [NameInMap("Headers")]
                 [Validation(Required=false)]
                 public CreateEventStreamingRequestSinkSinkApacheKafkaParametersHeaders Headers { get; set; }
@@ -311,6 +329,28 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [NameInMap("SecurityProtocol")]
                 [Validation(Required=false)]
                 public string SecurityProtocol { get; set; }
+
+                [NameInMap("SslKeyPassword")]
+                [Validation(Required=false)]
+                public string SslKeyPassword { get; set; }
+
+                [NameInMap("SslKeystoreCertificateChain")]
+                [Validation(Required=false)]
+                public string SslKeystoreCertificateChain { get; set; }
+
+                [NameInMap("SslKeystoreKey")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkApacheKafkaParametersSslKeystoreKey SslKeystoreKey { get; set; }
+                public class CreateEventStreamingRequestSinkSinkApacheKafkaParametersSslKeystoreKey : TeaModel {
+                    [NameInMap("KmsArn")]
+                    [Validation(Required=false)]
+                    public string KmsArn { get; set; }
+
+                    [NameInMap("KmsSecretValueKey")]
+                    [Validation(Required=false)]
+                    public string KmsSecretValueKey { get; set; }
+
+                }
 
                 [NameInMap("SslTruststoreCertificates")]
                 [Validation(Required=false)]
@@ -1785,6 +1825,24 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [NameInMap("CompressionType")]
                 [Validation(Required=false)]
                 public string CompressionType { get; set; }
+
+                [NameInMap("DynamicTopic")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSinkSinkKafkaParametersDynamicTopic DynamicTopic { get; set; }
+                public class CreateEventStreamingRequestSinkSinkKafkaParametersDynamicTopic : TeaModel {
+                    [NameInMap("Form")]
+                    [Validation(Required=false)]
+                    public string Form { get; set; }
+
+                    [NameInMap("Template")]
+                    [Validation(Required=false)]
+                    public string Template { get; set; }
+
+                    [NameInMap("Value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
 
                 [NameInMap("Headers")]
                 [Validation(Required=false)]
@@ -3908,6 +3966,28 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 [NameInMap("SecurityProtocol")]
                 [Validation(Required=false)]
                 public string SecurityProtocol { get; set; }
+
+                [NameInMap("SslKeyPassword")]
+                [Validation(Required=false)]
+                public string SslKeyPassword { get; set; }
+
+                [NameInMap("SslKeystoreCertificateChain")]
+                [Validation(Required=false)]
+                public string SslKeystoreCertificateChain { get; set; }
+
+                [NameInMap("SslKeystoreKey")]
+                [Validation(Required=false)]
+                public CreateEventStreamingRequestSourceSourceApacheKafkaParametersSslKeystoreKey SslKeystoreKey { get; set; }
+                public class CreateEventStreamingRequestSourceSourceApacheKafkaParametersSslKeystoreKey : TeaModel {
+                    [NameInMap("KmsArn")]
+                    [Validation(Required=false)]
+                    public string KmsArn { get; set; }
+
+                    [NameInMap("KmsSecretValueKey")]
+                    [Validation(Required=false)]
+                    public string KmsSecretValueKey { get; set; }
+
+                }
 
                 [NameInMap("SslTruststoreCertificates")]
                 [Validation(Required=false)]

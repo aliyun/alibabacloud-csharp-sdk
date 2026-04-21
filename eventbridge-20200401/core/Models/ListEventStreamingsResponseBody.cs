@@ -1584,6 +1584,24 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         [Validation(Required=false)]
                         public string CompressionType { get; set; }
 
+                        [NameInMap("DynamicTopic")]
+                        [Validation(Required=false)]
+                        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic DynamicTopic { get; set; }
+                        public class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkKafkaParametersDynamicTopic : TeaModel {
+                            [NameInMap("Form")]
+                            [Validation(Required=false)]
+                            public string Form { get; set; }
+
+                            [NameInMap("Template")]
+                            [Validation(Required=false)]
+                            public string Template { get; set; }
+
+                            [NameInMap("Value")]
+                            [Validation(Required=false)]
+                            public string Value { get; set; }
+
+                        }
+
                         /// <summary>
                         /// <para>The ID of the ApsaraMQ for Kafka instance.</para>
                         /// </summary>
