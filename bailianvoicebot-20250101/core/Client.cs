@@ -2067,6 +2067,158 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取音色列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVoicesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVoicesResponse
+        /// </returns>
+        public ListVoicesResponse ListVoicesWithOptions(ListVoicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessUnitId))
+            {
+                body["BusinessUnitId"] = request.BusinessUnitId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NlsAccessType))
+            {
+                body["NlsAccessType"] = request.NlsAccessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NlsEngine))
+            {
+                body["NlsEngine"] = request.NlsEngine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVoices",
+                Version = "2025-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVoicesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取音色列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVoicesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVoicesResponse
+        /// </returns>
+        public async Task<ListVoicesResponse> ListVoicesWithOptionsAsync(ListVoicesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessUnitId))
+            {
+                body["BusinessUnitId"] = request.BusinessUnitId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NlsAccessType))
+            {
+                body["NlsAccessType"] = request.NlsAccessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NlsEngine))
+            {
+                body["NlsEngine"] = request.NlsEngine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVoices",
+                Version = "2025-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVoicesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取音色列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVoicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVoicesResponse
+        /// </returns>
+        public ListVoicesResponse ListVoices(ListVoicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVoicesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取音色列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVoicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVoicesResponse
+        /// </returns>
+        public async Task<ListVoicesResponse> ListVoicesAsync(ListVoicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVoicesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>发布版本</para>
         /// </summary>
         /// 
