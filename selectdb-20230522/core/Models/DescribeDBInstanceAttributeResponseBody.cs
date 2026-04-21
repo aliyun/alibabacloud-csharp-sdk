@@ -356,6 +356,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         [Validation(Required=false)]
         public string GmtModified { get; set; }
 
+        [NameInMap("LangfuseInstanceIds")]
+        [Validation(Required=false)]
+        public List<string> LangfuseInstanceIds { get; set; }
+
         /// <summary>
         /// <para>The lock mode of the instance. Set the value to <b>lock</b>, which specifies that the instance is locked when it automatically expires or has an overdue payment.</para>
         /// 
