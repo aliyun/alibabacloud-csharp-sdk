@@ -183,6 +183,142 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建用户自动处置配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAutoDisposeConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAutoDisposeConfigResponse
+        /// </returns>
+        public CreateAutoDisposeConfigResponse CreateAutoDisposeConfigWithOptions(CreateAutoDisposeConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDecisionStatus))
+            {
+                body["AutoDecisionStatus"] = request.AutoDecisionStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAutoDisposeConfig",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAutoDisposeConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建用户自动处置配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAutoDisposeConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAutoDisposeConfigResponse
+        /// </returns>
+        public async Task<CreateAutoDisposeConfigResponse> CreateAutoDisposeConfigWithOptionsAsync(CreateAutoDisposeConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDecisionStatus))
+            {
+                body["AutoDecisionStatus"] = request.AutoDecisionStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAutoDisposeConfig",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAutoDisposeConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建用户自动处置配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAutoDisposeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAutoDisposeConfigResponse
+        /// </returns>
+        public CreateAutoDisposeConfigResponse CreateAutoDisposeConfig(CreateAutoDisposeConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAutoDisposeConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建用户自动处置配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAutoDisposeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAutoDisposeConfigResponse
+        /// </returns>
+        public async Task<CreateAutoDisposeConfigResponse> CreateAutoDisposeConfigAsync(CreateAutoDisposeConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAutoDisposeConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建数据源</para>
         /// </summary>
         /// 
@@ -4503,6 +4639,154 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>手动处置告警</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAutoDisposeRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAutoDisposeRecordsResponse
+        /// </returns>
+        public ExecuteAutoDisposeRecordsResponse ExecuteAutoDisposeRecordsWithOptions(ExecuteAutoDisposeRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedEntityList))
+            {
+                bodyFlat["SelectedEntityList"] = request.SelectedEntityList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnSelectedEntityList))
+            {
+                bodyFlat["UnSelectedEntityList"] = request.UnSelectedEntityList;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAutoDisposeRecords",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAutoDisposeRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动处置告警</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAutoDisposeRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAutoDisposeRecordsResponse
+        /// </returns>
+        public async Task<ExecuteAutoDisposeRecordsResponse> ExecuteAutoDisposeRecordsWithOptionsAsync(ExecuteAutoDisposeRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectedEntityList))
+            {
+                bodyFlat["SelectedEntityList"] = request.SelectedEntityList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UnSelectedEntityList))
+            {
+                bodyFlat["UnSelectedEntityList"] = request.UnSelectedEntityList;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ExecuteAutoDisposeRecords",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ExecuteAutoDisposeRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动处置告警</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAutoDisposeRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAutoDisposeRecordsResponse
+        /// </returns>
+        public ExecuteAutoDisposeRecordsResponse ExecuteAutoDisposeRecords(ExecuteAutoDisposeRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ExecuteAutoDisposeRecordsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>手动处置告警</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ExecuteAutoDisposeRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ExecuteAutoDisposeRecordsResponse
+        /// </returns>
+        public async Task<ExecuteAutoDisposeRecordsResponse> ExecuteAutoDisposeRecordsAsync(ExecuteAutoDisposeRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ExecuteAutoDisposeRecordsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查看LogStore</para>
         /// </summary>
         /// 
@@ -4843,6 +5127,134 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExecuteUpgradeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户自动处置配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutoDisposeConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoDisposeConfigResponse
+        /// </returns>
+        public GetAutoDisposeConfigResponse GetAutoDisposeConfigWithOptions(GetAutoDisposeConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAutoDisposeConfig",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAutoDisposeConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户自动处置配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutoDisposeConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoDisposeConfigResponse
+        /// </returns>
+        public async Task<GetAutoDisposeConfigResponse> GetAutoDisposeConfigWithOptionsAsync(GetAutoDisposeConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAutoDisposeConfig",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAutoDisposeConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户自动处置配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutoDisposeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoDisposeConfigResponse
+        /// </returns>
+        public GetAutoDisposeConfigResponse GetAutoDisposeConfig(GetAutoDisposeConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAutoDisposeConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户自动处置配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAutoDisposeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAutoDisposeConfigResponse
+        /// </returns>
+        public async Task<GetAutoDisposeConfigResponse> GetAutoDisposeConfigAsync(GetAutoDisposeConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAutoDisposeConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6267,6 +6679,194 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetUserConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取AI研判实体列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAutoDisposeEntitiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAutoDisposeEntitiesResponse
+        /// </returns>
+        public ListAutoDisposeEntitiesResponse ListAutoDisposeEntitiesWithOptions(ListAutoDisposeEntitiesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAutoDisposeEntitiesShrinkRequest request = new ListAutoDisposeEntitiesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoDisposeRecordIds))
+            {
+                request.AutoDisposeRecordIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoDisposeRecordIds, "AutoDisposeRecordIds", "simple");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDisposeRecordIdsShrink))
+            {
+                body["AutoDisposeRecordIds"] = request.AutoDisposeRecordIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceType))
+            {
+                body["DataSourceType"] = request.DataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                body["Uuid"] = request.Uuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAutoDisposeEntities",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAutoDisposeEntitiesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取AI研判实体列表</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAutoDisposeEntitiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAutoDisposeEntitiesResponse
+        /// </returns>
+        public async Task<ListAutoDisposeEntitiesResponse> ListAutoDisposeEntitiesWithOptionsAsync(ListAutoDisposeEntitiesRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAutoDisposeEntitiesShrinkRequest request = new ListAutoDisposeEntitiesShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoDisposeRecordIds))
+            {
+                request.AutoDisposeRecordIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoDisposeRecordIds, "AutoDisposeRecordIds", "simple");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDisposeRecordIdsShrink))
+            {
+                body["AutoDisposeRecordIds"] = request.AutoDisposeRecordIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourceType))
+            {
+                body["DataSourceType"] = request.DataSourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                body["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
+            {
+                body["Uuid"] = request.Uuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAutoDisposeEntities",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAutoDisposeEntitiesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取AI研判实体列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAutoDisposeEntitiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAutoDisposeEntitiesResponse
+        /// </returns>
+        public ListAutoDisposeEntitiesResponse ListAutoDisposeEntities(ListAutoDisposeEntitiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListAutoDisposeEntitiesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取AI研判实体列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAutoDisposeEntitiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAutoDisposeEntitiesResponse
+        /// </returns>
+        public async Task<ListAutoDisposeEntitiesResponse> ListAutoDisposeEntitiesAsync(ListAutoDisposeEntitiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListAutoDisposeEntitiesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11067,6 +11667,294 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetDefaultNormalizationRuleVersionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新用户自动处置配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAutoDisposeConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAutoDisposeConfigResponse
+        /// </returns>
+        public UpdateAutoDisposeConfigResponse UpdateAutoDisposeConfigWithOptions(UpdateAutoDisposeConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDecisionStatus))
+            {
+                body["AutoDecisionStatus"] = request.AutoDecisionStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAutoDisposeConfig",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAutoDisposeConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新用户自动处置配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAutoDisposeConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAutoDisposeConfigResponse
+        /// </returns>
+        public async Task<UpdateAutoDisposeConfigResponse> UpdateAutoDisposeConfigWithOptionsAsync(UpdateAutoDisposeConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDecisionStatus))
+            {
+                body["AutoDecisionStatus"] = request.AutoDecisionStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                body["ProductCode"] = request.ProductCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAutoDisposeConfig",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAutoDisposeConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新用户自动处置配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAutoDisposeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAutoDisposeConfigResponse
+        /// </returns>
+        public UpdateAutoDisposeConfigResponse UpdateAutoDisposeConfig(UpdateAutoDisposeConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAutoDisposeConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新用户自动处置配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAutoDisposeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAutoDisposeConfigResponse
+        /// </returns>
+        public async Task<UpdateAutoDisposeConfigResponse> UpdateAutoDisposeConfigAsync(UpdateAutoDisposeConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAutoDisposeConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步研判结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAutoDisposeRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAutoDisposeRecordResponse
+        /// </returns>
+        public UpdateAutoDisposeRecordResponse UpdateAutoDisposeRecordWithOptions(UpdateAutoDisposeRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDecisionConclusion))
+            {
+                body["AutoDecisionConclusion"] = request.AutoDecisionConclusion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDecisionEntityList))
+            {
+                body["AutoDecisionEntityList"] = request.AutoDecisionEntityList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDecisionResult))
+            {
+                body["AutoDecisionResult"] = request.AutoDecisionResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDisposeRecordId))
+            {
+                body["AutoDisposeRecordId"] = request.AutoDisposeRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAutoDisposeRecord",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAutoDisposeRecordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步研判结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAutoDisposeRecordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAutoDisposeRecordResponse
+        /// </returns>
+        public async Task<UpdateAutoDisposeRecordResponse> UpdateAutoDisposeRecordWithOptionsAsync(UpdateAutoDisposeRecordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDecisionConclusion))
+            {
+                body["AutoDecisionConclusion"] = request.AutoDecisionConclusion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDecisionEntityList))
+            {
+                body["AutoDecisionEntityList"] = request.AutoDecisionEntityList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDecisionResult))
+            {
+                body["AutoDecisionResult"] = request.AutoDecisionResult;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDisposeRecordId))
+            {
+                body["AutoDisposeRecordId"] = request.AutoDisposeRecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                body["Lang"] = request.Lang;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAutoDisposeRecord",
+                Version = "2024-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAutoDisposeRecordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步研判结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAutoDisposeRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAutoDisposeRecordResponse
+        /// </returns>
+        public UpdateAutoDisposeRecordResponse UpdateAutoDisposeRecord(UpdateAutoDisposeRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAutoDisposeRecordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>同步研判结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAutoDisposeRecordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAutoDisposeRecordResponse
+        /// </returns>
+        public async Task<UpdateAutoDisposeRecordResponse> UpdateAutoDisposeRecordAsync(UpdateAutoDisposeRecordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAutoDisposeRecordWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
