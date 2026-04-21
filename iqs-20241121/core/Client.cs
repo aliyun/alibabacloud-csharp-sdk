@@ -987,6 +987,124 @@ namespace AlibabaCloud.SDK.IQS20241121
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询转正用户调用量信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNormalServiceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNormalServiceConfigResponse
+        /// </returns>
+        public GetNormalServiceConfigResponse GetNormalServiceConfigWithOptions(GetNormalServiceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNormalServiceConfig",
+                Version = "2024-11-21",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-admin/console/v1/services/commands/normalServiceConfig",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNormalServiceConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询转正用户调用量信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNormalServiceConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNormalServiceConfigResponse
+        /// </returns>
+        public async Task<GetNormalServiceConfigResponse> GetNormalServiceConfigWithOptionsAsync(GetNormalServiceConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetNormalServiceConfig",
+                Version = "2024-11-21",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-admin/console/v1/services/commands/normalServiceConfig",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetNormalServiceConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询转正用户调用量信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNormalServiceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNormalServiceConfigResponse
+        /// </returns>
+        public GetNormalServiceConfigResponse GetNormalServiceConfig(GetNormalServiceConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetNormalServiceConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询转正用户调用量信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetNormalServiceConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetNormalServiceConfigResponse
+        /// </returns>
+        public async Task<GetNormalServiceConfigResponse> GetNormalServiceConfigAsync(GetNormalServiceConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetNormalServiceConfigWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询服务额度信息</para>
         /// </summary>
         /// 
@@ -1259,6 +1377,124 @@ namespace AlibabaCloud.SDK.IQS20241121
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>api基础信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApiInfosRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiInfosResponse
+        /// </returns>
+        public ListApiInfosResponse ListApiInfosWithOptions(ListApiInfosRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApiInfos",
+                Version = "2024-11-21",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-admin/console/v1/monitors/commands/apiInfos",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApiInfosResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>api基础信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApiInfosRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiInfosResponse
+        /// </returns>
+        public async Task<ListApiInfosResponse> ListApiInfosWithOptionsAsync(ListApiInfosRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListApiInfos",
+                Version = "2024-11-21",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-admin/console/v1/monitors/commands/apiInfos",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListApiInfosResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>api基础信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApiInfosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiInfosResponse
+        /// </returns>
+        public ListApiInfosResponse ListApiInfos(ListApiInfosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListApiInfosWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>api基础信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListApiInfosRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListApiInfosResponse
+        /// </returns>
+        public async Task<ListApiInfosResponse> ListApiInfosAsync(ListApiInfosRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListApiInfosWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Api名称列表</para>
         /// </summary>
         /// 
@@ -1357,6 +1593,124 @@ namespace AlibabaCloud.SDK.IQS20241121
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListApiNamesWithOptionsAsync(headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>api基础信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLimitationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLimitationsResponse
+        /// </returns>
+        public ListLimitationsResponse ListLimitationsWithOptions(ListLimitationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLimitations",
+                Version = "2024-11-21",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-admin/openService/v1/console/limitation/commands/list/account",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLimitationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>api基础信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLimitationsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLimitationsResponse
+        /// </returns>
+        public async Task<ListLimitationsResponse> ListLimitationsWithOptionsAsync(ListLimitationsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListLimitations",
+                Version = "2024-11-21",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-admin/openService/v1/console/limitation/commands/list/account",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListLimitationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>api基础信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLimitationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLimitationsResponse
+        /// </returns>
+        public ListLimitationsResponse ListLimitations(ListLimitationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListLimitationsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>api基础信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListLimitationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListLimitationsResponse
+        /// </returns>
+        public async Task<ListLimitationsResponse> ListLimitationsAsync(ListLimitationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListLimitationsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1757,6 +2111,242 @@ namespace AlibabaCloud.SDK.IQS20241121
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ManageSearchAccountInfoWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止自动转正</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenAutoNormalReviewRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenAutoNormalReviewResponse
+        /// </returns>
+        public OpenAutoNormalReviewResponse OpenAutoNormalReviewWithOptions(OpenAutoNormalReviewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenAutoNormalReview",
+                Version = "2024-11-21",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-admin/openService/v1/account/commands/openAutoNormalReview",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenAutoNormalReviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止自动转正</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenAutoNormalReviewRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenAutoNormalReviewResponse
+        /// </returns>
+        public async Task<OpenAutoNormalReviewResponse> OpenAutoNormalReviewWithOptionsAsync(OpenAutoNormalReviewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenAutoNormalReview",
+                Version = "2024-11-21",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-admin/openService/v1/account/commands/openAutoNormalReview",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenAutoNormalReviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止自动转正</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenAutoNormalReviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenAutoNormalReviewResponse
+        /// </returns>
+        public OpenAutoNormalReviewResponse OpenAutoNormalReview(OpenAutoNormalReviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return OpenAutoNormalReviewWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止自动转正</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenAutoNormalReviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenAutoNormalReviewResponse
+        /// </returns>
+        public async Task<OpenAutoNormalReviewResponse> OpenAutoNormalReviewAsync(OpenAutoNormalReviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await OpenAutoNormalReviewWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止自动转正</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopAutoNormalReviewRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopAutoNormalReviewResponse
+        /// </returns>
+        public StopAutoNormalReviewResponse StopAutoNormalReviewWithOptions(StopAutoNormalReviewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopAutoNormalReview",
+                Version = "2024-11-21",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-admin/openService/v1/account/commands/stopAutoNormalReview",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopAutoNormalReviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止自动转正</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopAutoNormalReviewRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopAutoNormalReviewResponse
+        /// </returns>
+        public async Task<StopAutoNormalReviewResponse> StopAutoNormalReviewWithOptionsAsync(StopAutoNormalReviewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopAutoNormalReview",
+                Version = "2024-11-21",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-admin/openService/v1/account/commands/stopAutoNormalReview",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopAutoNormalReviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止自动转正</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopAutoNormalReviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopAutoNormalReviewResponse
+        /// </returns>
+        public StopAutoNormalReviewResponse StopAutoNormalReview(StopAutoNormalReviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StopAutoNormalReviewWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止自动转正</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopAutoNormalReviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopAutoNormalReviewResponse
+        /// </returns>
+        public async Task<StopAutoNormalReviewResponse> StopAutoNormalReviewAsync(StopAutoNormalReviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StopAutoNormalReviewWithOptionsAsync(request, headers, runtime);
         }
 
     }

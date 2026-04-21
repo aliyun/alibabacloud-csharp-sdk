@@ -8,14 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IQS20241121.Models
 {
-    public class OperationResult : TeaModel {
+    public class ListApiInfosResponseBody : TeaModel {
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>86CD53FA-81A5-56A0-AE6F-CA1C56F48574</para>
         /// </summary>
-        [NameInMap("success")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
-        public bool? Success { get; set; }
+        public string RequestId { get; set; }
 
     }
 
