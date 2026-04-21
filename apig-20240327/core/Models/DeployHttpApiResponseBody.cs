@@ -19,6 +19,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("data")]
+        [Validation(Required=false)]
+        public DeployHttpApiResponseBodyData Data { get; set; }
+        public class DeployHttpApiResponseBodyData : TeaModel {
+            [NameInMap("httpApiId")]
+            [Validation(Required=false)]
+            public string HttpApiId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Response message.</para>
         /// 
