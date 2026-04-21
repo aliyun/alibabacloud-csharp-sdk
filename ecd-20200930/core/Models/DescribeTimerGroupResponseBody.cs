@@ -206,6 +206,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     [Validation(Required=false)]
                     public string TriggerType { get; set; }
 
+                    [NameInMap("VerificationNotificationTime")]
+                    [Validation(Required=false)]
+                    public int? VerificationNotificationTime { get; set; }
+
+                    [NameInMap("VerificationTime")]
+                    [Validation(Required=false)]
+                    public int? VerificationTime { get; set; }
+
                 }
 
                 /// <summary>
