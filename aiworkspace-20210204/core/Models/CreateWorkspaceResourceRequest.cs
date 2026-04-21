@@ -136,7 +136,6 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
             public class CreateWorkspaceResourceRequestResourcesQuotas : TeaModel {
                 /// <summary>
                 /// <para>The quota ID. You can call <a href="https://help.aliyun.com/document_detail/449144.html">ListQuotas</a> to obtain the quota ID.</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>232892******92912</para>
