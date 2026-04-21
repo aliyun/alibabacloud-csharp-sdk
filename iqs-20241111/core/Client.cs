@@ -877,6 +877,246 @@ namespace AlibabaCloud.SDK.IQS20241111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>医疗问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MedicalAnswerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MedicalAnswerResponse
+        /// </returns>
+        public MedicalAnswerResponse MedicalAnswerWithOptions(MedicalAnswerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MedicalAnswer",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/domain/medical/answer",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MedicalAnswerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MedicalAnswerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MedicalAnswerResponse
+        /// </returns>
+        public async Task<MedicalAnswerResponse> MedicalAnswerWithOptionsAsync(MedicalAnswerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MedicalAnswer",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/domain/medical/answer",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MedicalAnswerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MedicalAnswerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MedicalAnswerResponse
+        /// </returns>
+        public MedicalAnswerResponse MedicalAnswer(MedicalAnswerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return MedicalAnswerWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MedicalAnswerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MedicalAnswerResponse
+        /// </returns>
+        public async Task<MedicalAnswerResponse> MedicalAnswerAsync(MedicalAnswerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await MedicalAnswerWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗图谱</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MedicalKnowledgeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MedicalKnowledgeResponse
+        /// </returns>
+        public MedicalKnowledgeResponse MedicalKnowledgeWithOptions(MedicalKnowledgeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MedicalKnowledge",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/domain/medical/know",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MedicalKnowledgeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗图谱</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MedicalKnowledgeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MedicalKnowledgeResponse
+        /// </returns>
+        public async Task<MedicalKnowledgeResponse> MedicalKnowledgeWithOptionsAsync(MedicalKnowledgeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MedicalKnowledge",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/domain/medical/know",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MedicalKnowledgeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗图谱</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MedicalKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MedicalKnowledgeResponse
+        /// </returns>
+        public MedicalKnowledgeResponse MedicalKnowledge(MedicalKnowledgeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return MedicalKnowledgeWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>医疗图谱</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MedicalKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MedicalKnowledgeResponse
+        /// </returns>
+        public async Task<MedicalKnowledgeResponse> MedicalKnowledgeAsync(MedicalKnowledgeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await MedicalKnowledgeWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>多模态搜索</para>
         /// </summary>
         /// 
@@ -993,6 +1233,126 @@ namespace AlibabaCloud.SDK.IQS20241111
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await MultimodalSearchWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OmniAnswerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OmniAnswerResponse
+        /// </returns>
+        public OmniAnswerResponse OmniAnswerWithOptions(OmniAnswerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OmniAnswer",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/answer/omni/search",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<OmniAnswerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OmniAnswerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OmniAnswerResponse
+        /// </returns>
+        public async Task<OmniAnswerResponse> OmniAnswerWithOptionsAsync(OmniAnswerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(request.Body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OmniAnswer",
+                Version = "2024-11-11",
+                Protocol = "HTTPS",
+                Pathname = "/linked-retrieval/linked-retrieval-entry/v1/iqs/answer/omni/search",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "string",
+            };
+            return TeaModel.ToObject<OmniAnswerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OmniAnswerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OmniAnswerResponse
+        /// </returns>
+        public OmniAnswerResponse OmniAnswer(OmniAnswerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return OmniAnswerWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>通用问答</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OmniAnswerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OmniAnswerResponse
+        /// </returns>
+        public async Task<OmniAnswerResponse> OmniAnswerAsync(OmniAnswerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await OmniAnswerWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
             [Validation(Required=false)]
             public int? SuccessCalls { get; set; }
 
+            [NameInMap("totalBillStatCalls")]
+            [Validation(Required=false)]
+            public int? TotalBillStatCalls { get; set; }
+
             [NameInMap("totalCalls")]
             [Validation(Required=false)]
             public int? TotalCalls { get; set; }
