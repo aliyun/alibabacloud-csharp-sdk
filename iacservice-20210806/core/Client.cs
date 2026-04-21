@@ -1736,7 +1736,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板版本</para>
+        /// <para>Publish a template version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1790,7 +1790,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板版本</para>
+        /// <para>Publish a template version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1844,7 +1844,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板版本</para>
+        /// <para>Publish a template version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1863,7 +1863,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模板版本</para>
+        /// <para>Publish a template version.</para>
         /// </summary>
         /// 
         /// <param name="request">

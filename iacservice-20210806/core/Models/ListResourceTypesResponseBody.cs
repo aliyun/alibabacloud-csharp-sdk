@@ -69,6 +69,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string ResourceListPageUrl { get; set; }
 
+            [NameInMap("resourceType")]
+            [Validation(Required=false)]
+            public string ResourceType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Available</para>
