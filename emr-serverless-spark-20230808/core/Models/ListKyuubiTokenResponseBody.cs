@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("sparkRole")]
+                [Validation(Required=false)]
+                public List<string> SparkRole { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>f14c1347-dcfd-4082-b101-77aa96b5de36</para>

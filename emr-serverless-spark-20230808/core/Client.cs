@@ -834,6 +834,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparkRole))
+            {
+                body["sparkRole"] = request.SparkRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
             {
                 body["token"] = request.Token;
@@ -897,6 +901,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparkRole))
+            {
+                body["sparkRole"] = request.SparkRole;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
             {
@@ -10324,6 +10332,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             {
                 body["name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparkRole))
+            {
+                body["sparkRole"] = request.SparkRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
             {
                 body["token"] = request.Token;
@@ -10387,6 +10399,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SparkRole))
+            {
+                body["sparkRole"] = request.SparkRole;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
             {
