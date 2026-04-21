@@ -569,6 +569,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 request.SendSmsPlanShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SendSmsPlan, "SendSmsPlan", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WeekTag))
+            {
+                request.WeekTagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WeekTag, "WeekTag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeListShrink))
             {
@@ -661,6 +665,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
                 query["TemplateType"] = request.TemplateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WeekTagShrink))
+            {
+                query["WeekTag"] = request.WeekTagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -721,6 +729,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 request.SendSmsPlanShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SendSmsPlan, "SendSmsPlan", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WeekTag))
+            {
+                request.WeekTagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WeekTag, "WeekTag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeListShrink))
             {
@@ -813,6 +825,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
                 query["TemplateType"] = request.TemplateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WeekTagShrink))
+            {
+                query["WeekTag"] = request.WeekTagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2417,6 +2433,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 request.SendSmsPlanShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SendSmsPlan, "SendSmsPlan", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WeekTag))
+            {
+                request.WeekTagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WeekTag, "WeekTag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeListShrink))
             {
@@ -2509,6 +2529,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
                 query["TemplateType"] = request.TemplateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WeekTagShrink))
+            {
+                query["WeekTag"] = request.WeekTagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2569,6 +2593,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             {
                 request.SendSmsPlanShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SendSmsPlan, "SendSmsPlan", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WeekTag))
+            {
+                request.WeekTagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WeekTag, "WeekTag", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallTimeListShrink))
             {
@@ -2661,6 +2689,10 @@ namespace AlibabaCloud.SDK.Aiccs20230516
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateType))
             {
                 query["TemplateType"] = request.TemplateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WeekTagShrink))
+            {
+                query["WeekTag"] = request.WeekTagShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -18,9 +18,6 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// <para>外呼时间:精确到分钟.如果两个字段都存在值，以该字段为准。建议用该字段，精确到分钟, 08:31-12:05 13:33-19:00 则传[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]；默认为[[&quot;08:00&quot;,&quot;20:00&quot;]]</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>[[&quot;08:31&quot;,&quot;12:05&quot;][&quot;13:33&quot;,&quot;19:00&quot;]]</para>
         /// </summary>
         [NameInMap("CallTimeStrList")]
         [Validation(Required=false)]
@@ -79,7 +76,7 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1234567890</para>
+        /// <para>无需填写</para>
         /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -161,7 +158,7 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para><a href="mailto:example@aliyun.com">example@aliyun.com</a></para>
+        /// <para>无需填写</para>
         /// </summary>
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -169,7 +166,7 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1885017412614451</para>
+        /// <para>无需填写</para>
         /// </summary>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
@@ -222,6 +219,13 @@ namespace AlibabaCloud.SDK.Aiccs20230516.Models
         [NameInMap("TemplateType")]
         [Validation(Required=false)]
         public long? TemplateType { get; set; }
+
+        /// <summary>
+        /// <para>外呼时间需要的按星期几进行外呼，例：“1,2,3,4,5,6,7”，代表周一到周日都外呼</para>
+        /// </summary>
+        [NameInMap("WeekTag")]
+        [Validation(Required=false)]
+        public string WeekTagShrink { get; set; }
 
     }
 
