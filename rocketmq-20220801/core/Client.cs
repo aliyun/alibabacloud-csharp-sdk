@@ -1021,6 +1021,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["password"] = request.Password;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["remark"] = request.Remark;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
             {
                 body["username"] = request.Username;
@@ -1070,6 +1074,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
                 body["password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["remark"] = request.Remark;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
             {
@@ -9231,6 +9239,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 query["password"] = request.Password;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["remark"] = request.Remark;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -9280,6 +9292,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
             {
                 query["password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                query["remark"] = request.Remark;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

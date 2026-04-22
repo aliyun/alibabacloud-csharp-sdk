@@ -34,6 +34,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
+        [NameInMap("remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
+
     }
 
 }
