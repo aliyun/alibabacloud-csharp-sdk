@@ -14307,6 +14307,182 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>初始化PPT创建操作V2</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitiatePptCreationV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitiatePptCreationV2Response
+        /// </returns>
+        public InitiatePptCreationV2Response InitiatePptCreationV2WithOptions(InitiatePptCreationV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["ExternalUserId"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsMobile))
+            {
+                body["IsMobile"] = request.IsMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Outline))
+            {
+                body["Outline"] = request.Outline;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PptTemplateId))
+            {
+                body["PptTemplateId"] = request.PptTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PptTemplateType))
+            {
+                body["PptTemplateType"] = request.PptTemplateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessType))
+            {
+                body["ProcessType"] = request.ProcessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InitiatePptCreationV2",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InitiatePptCreationV2Response>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>初始化PPT创建操作V2</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitiatePptCreationV2Request
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitiatePptCreationV2Response
+        /// </returns>
+        public async Task<InitiatePptCreationV2Response> InitiatePptCreationV2WithOptionsAsync(InitiatePptCreationV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["ExternalUserId"] = request.ExternalUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsMobile))
+            {
+                body["IsMobile"] = request.IsMobile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Outline))
+            {
+                body["Outline"] = request.Outline;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PptTemplateId))
+            {
+                body["PptTemplateId"] = request.PptTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PptTemplateType))
+            {
+                body["PptTemplateType"] = request.PptTemplateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessType))
+            {
+                body["ProcessType"] = request.ProcessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InitiatePptCreationV2",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InitiatePptCreationV2Response>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>初始化PPT创建操作V2</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitiatePptCreationV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitiatePptCreationV2Response
+        /// </returns>
+        public InitiatePptCreationV2Response InitiatePptCreationV2(InitiatePptCreationV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return InitiatePptCreationV2WithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>初始化PPT创建操作V2</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InitiatePptCreationV2Request
+        /// </param>
+        /// 
+        /// <returns>
+        /// InitiatePptCreationV2Response
+        /// </returns>
+        public async Task<InitiatePptCreationV2Response> InitiatePptCreationV2Async(InitiatePptCreationV2Request request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await InitiatePptCreationV2WithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>设置干预全局回复</para>
         /// </summary>
         /// 
@@ -17439,6 +17615,154 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDocumentRetrieveWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询PPT模板列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterprisePptTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterprisePptTemplatesResponse
+        /// </returns>
+        public ListEnterprisePptTemplatesResponse ListEnterprisePptTemplatesWithOptions(ListEnterprisePptTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
+            {
+                query["Skip"] = request.Skip;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEnterprisePptTemplates",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEnterprisePptTemplatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询PPT模板列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterprisePptTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterprisePptTemplatesResponse
+        /// </returns>
+        public async Task<ListEnterprisePptTemplatesResponse> ListEnterprisePptTemplatesWithOptionsAsync(ListEnterprisePptTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
+            {
+                query["Skip"] = request.Skip;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEnterprisePptTemplates",
+                Version = "2023-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEnterprisePptTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询PPT模板列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterprisePptTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterprisePptTemplatesResponse
+        /// </returns>
+        public ListEnterprisePptTemplatesResponse ListEnterprisePptTemplates(ListEnterprisePptTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEnterprisePptTemplatesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询PPT模板列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEnterprisePptTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEnterprisePptTemplatesResponse
+        /// </returns>
+        public async Task<ListEnterprisePptTemplatesResponse> ListEnterprisePptTemplatesAsync(ListEnterprisePptTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEnterprisePptTemplatesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
