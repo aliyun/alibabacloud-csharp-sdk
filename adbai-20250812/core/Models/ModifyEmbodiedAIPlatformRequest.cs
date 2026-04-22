@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("DeviceCount")]
+        [Validation(Required=false)]
+        public string DeviceCount { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,9 +33,6 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [Validation(Required=false)]
         public string PlatformName { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("RayConfig")]
         [Validation(Required=false)]
         public ModifyEmbodiedAIPlatformRequestRayConfig RayConfig { get; set; }
@@ -127,8 +128,6 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>large</para>
         /// </summary>

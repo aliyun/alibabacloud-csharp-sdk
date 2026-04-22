@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
-    public class CreateEmbodiedAIPlatformShrinkRequest : TeaModel {
+    public class DescribeEapDeviceResourceAllocationRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -19,23 +19,13 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("DeviceCount")]
         [Validation(Required=false)]
         public int? DeviceCount { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>platform1</para>
-        /// </summary>
-        [NameInMap("PlatformName")]
-        [Validation(Required=false)]
-        public string PlatformName { get; set; }
-
-        [NameInMap("RayConfig")]
-        [Validation(Required=false)]
-        public string RayConfigShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -46,14 +36,6 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>large</para>
-        /// </summary>
-        [NameInMap("WebserverSpecName")]
-        [Validation(Required=false)]
-        public string WebserverSpecName { get; set; }
 
     }
 

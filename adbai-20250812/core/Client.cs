@@ -222,6 +222,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceCount))
+            {
+                query["DeviceCount"] = request.DeviceCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
             {
                 query["PlatformName"] = request.PlatformName;
@@ -285,6 +289,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceCount))
+            {
+                query["DeviceCount"] = request.DeviceCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
             {
@@ -771,6 +779,142 @@ namespace AlibabaCloud.SDK.ADBAI20250812
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeChatMessageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询具身智能平台设备资源分配方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEapDeviceResourceAllocationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEapDeviceResourceAllocationResponse
+        /// </returns>
+        public DescribeEapDeviceResourceAllocationResponse DescribeEapDeviceResourceAllocationWithOptions(DescribeEapDeviceResourceAllocationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceCount))
+            {
+                query["DeviceCount"] = request.DeviceCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEapDeviceResourceAllocation",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEapDeviceResourceAllocationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询具身智能平台设备资源分配方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEapDeviceResourceAllocationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEapDeviceResourceAllocationResponse
+        /// </returns>
+        public async Task<DescribeEapDeviceResourceAllocationResponse> DescribeEapDeviceResourceAllocationWithOptionsAsync(DescribeEapDeviceResourceAllocationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceCount))
+            {
+                query["DeviceCount"] = request.DeviceCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeEapDeviceResourceAllocation",
+                Version = "2025-08-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeEapDeviceResourceAllocationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询具身智能平台设备资源分配方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEapDeviceResourceAllocationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEapDeviceResourceAllocationResponse
+        /// </returns>
+        public DescribeEapDeviceResourceAllocationResponse DescribeEapDeviceResourceAllocation(DescribeEapDeviceResourceAllocationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeEapDeviceResourceAllocationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询具身智能平台设备资源分配方案</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeEapDeviceResourceAllocationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeEapDeviceResourceAllocationResponse
+        /// </returns>
+        public async Task<DescribeEapDeviceResourceAllocationResponse> DescribeEapDeviceResourceAllocationAsync(DescribeEapDeviceResourceAllocationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeEapDeviceResourceAllocationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1438,6 +1582,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceCount))
+            {
+                query["DeviceCount"] = request.DeviceCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
             {
                 query["PlatformName"] = request.PlatformName;
@@ -1501,6 +1649,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceCount))
+            {
+                query["DeviceCount"] = request.DeviceCount;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformName))
             {

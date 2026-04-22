@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        [NameInMap("DeviceCount")]
+        [Validation(Required=false)]
+        public int? DeviceCount { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

@@ -9,6 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class GetEmbodiedAIPlatformResourceUsageInfoResponseBody : TeaModel {
+        [NameInMap("AcuDetails")]
+        [Validation(Required=false)]
+        public GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails AcuDetails { get; set; }
+        public class GetEmbodiedAIPlatformResourceUsageInfoResponseBodyAcuDetails : TeaModel {
+            [NameInMap("EapWebserverACUCount")]
+            [Validation(Required=false)]
+            public double? EapWebserverACUCount { get; set; }
+
+            [NameInMap("RayHeadACUCount")]
+            [Validation(Required=false)]
+            public double? RayHeadACUCount { get; set; }
+
+            [NameInMap("RayWorkerACUCount")]
+            [Validation(Required=false)]
+            public double? RayWorkerACUCount { get; set; }
+
+            [NameInMap("TotalACUCount")]
+            [Validation(Required=false)]
+            public double? TotalACUCount { get; set; }
+
+        }
+
         [NameInMap("GpuDetails")]
         [Validation(Required=false)]
         public List<GetEmbodiedAIPlatformResourceUsageInfoResponseBodyGpuDetails> GpuDetails { get; set; }
