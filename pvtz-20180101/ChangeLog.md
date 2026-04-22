@@ -1,3 +1,11 @@
+2026-04-22 Version: 1.7.0
+- Support API DescribeIntranetUserCanAnalysisVpcs.
+- Support API DescribePvtzStatisticsGlobalOverview.
+- Support API DescribePvtzStatisticsHistory.
+- Support API DescribePvtzStatisticsSummary.
+- Support API DescribePvtzStatisticsZoneOverview.
+
+
 2026-04-09 Version: 1.6.4
 - Generated csharp 2018-01-01 for pvtz.
 

@@ -3027,6 +3027,886 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取用户可以分析的VPC列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIntranetUserCanAnalysisVpcsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIntranetUserCanAnalysisVpcsResponse
+        /// </returns>
+        public DescribeIntranetUserCanAnalysisVpcsResponse DescribeIntranetUserCanAnalysisVpcsWithOptions(DescribeIntranetUserCanAnalysisVpcsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryTreeLevel))
+            {
+                query["QueryTreeLevel"] = request.QueryTreeLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcOwner))
+            {
+                query["VpcOwner"] = request.VpcOwner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcType))
+            {
+                query["VpcType"] = request.VpcType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeIntranetUserCanAnalysisVpcs",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeIntranetUserCanAnalysisVpcsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户可以分析的VPC列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIntranetUserCanAnalysisVpcsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIntranetUserCanAnalysisVpcsResponse
+        /// </returns>
+        public async Task<DescribeIntranetUserCanAnalysisVpcsResponse> DescribeIntranetUserCanAnalysisVpcsWithOptionsAsync(DescribeIntranetUserCanAnalysisVpcsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryTreeLevel))
+            {
+                query["QueryTreeLevel"] = request.QueryTreeLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcOwner))
+            {
+                query["VpcOwner"] = request.VpcOwner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcType))
+            {
+                query["VpcType"] = request.VpcType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeIntranetUserCanAnalysisVpcs",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeIntranetUserCanAnalysisVpcsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户可以分析的VPC列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIntranetUserCanAnalysisVpcsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIntranetUserCanAnalysisVpcsResponse
+        /// </returns>
+        public DescribeIntranetUserCanAnalysisVpcsResponse DescribeIntranetUserCanAnalysisVpcs(DescribeIntranetUserCanAnalysisVpcsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeIntranetUserCanAnalysisVpcsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户可以分析的VPC列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeIntranetUserCanAnalysisVpcsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeIntranetUserCanAnalysisVpcsResponse
+        /// </returns>
+        public async Task<DescribeIntranetUserCanAnalysisVpcsResponse> DescribeIntranetUserCanAnalysisVpcsAsync(DescribeIntranetUserCanAnalysisVpcsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeIntranetUserCanAnalysisVpcsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息全局总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsGlobalOverviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsGlobalOverviewResponse
+        /// </returns>
+        public DescribePvtzStatisticsGlobalOverviewResponse DescribePvtzStatisticsGlobalOverviewWithOptions(DescribePvtzStatisticsGlobalOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkParams))
+            {
+                query["NetworkParams"] = request.NetworkParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverviewPeriod))
+            {
+                query["OverviewPeriod"] = request.OverviewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePvtzStatisticsGlobalOverview",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePvtzStatisticsGlobalOverviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息全局总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsGlobalOverviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsGlobalOverviewResponse
+        /// </returns>
+        public async Task<DescribePvtzStatisticsGlobalOverviewResponse> DescribePvtzStatisticsGlobalOverviewWithOptionsAsync(DescribePvtzStatisticsGlobalOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkParams))
+            {
+                query["NetworkParams"] = request.NetworkParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverviewPeriod))
+            {
+                query["OverviewPeriod"] = request.OverviewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePvtzStatisticsGlobalOverview",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePvtzStatisticsGlobalOverviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息全局总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsGlobalOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsGlobalOverviewResponse
+        /// </returns>
+        public DescribePvtzStatisticsGlobalOverviewResponse DescribePvtzStatisticsGlobalOverview(DescribePvtzStatisticsGlobalOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePvtzStatisticsGlobalOverviewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息全局总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsGlobalOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsGlobalOverviewResponse
+        /// </returns>
+        public async Task<DescribePvtzStatisticsGlobalOverviewResponse> DescribePvtzStatisticsGlobalOverviewAsync(DescribePvtzStatisticsGlobalOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePvtzStatisticsGlobalOverviewWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsHistoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsHistoryResponse
+        /// </returns>
+        public DescribePvtzStatisticsHistoryResponse DescribePvtzStatisticsHistoryWithOptions(DescribePvtzStatisticsHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Module))
+            {
+                query["Module"] = request.Module;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkParams))
+            {
+                query["NetworkParams"] = request.NetworkParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rcode))
+            {
+                query["Rcode"] = request.Rcode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticalType))
+            {
+                query["StatisticalType"] = request.StatisticalType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneName))
+            {
+                query["ZoneName"] = request.ZoneName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePvtzStatisticsHistory",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePvtzStatisticsHistoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsHistoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsHistoryResponse
+        /// </returns>
+        public async Task<DescribePvtzStatisticsHistoryResponse> DescribePvtzStatisticsHistoryWithOptionsAsync(DescribePvtzStatisticsHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Module))
+            {
+                query["Module"] = request.Module;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkParams))
+            {
+                query["NetworkParams"] = request.NetworkParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rcode))
+            {
+                query["Rcode"] = request.Rcode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticalType))
+            {
+                query["StatisticalType"] = request.StatisticalType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneName))
+            {
+                query["ZoneName"] = request.ZoneName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePvtzStatisticsHistory",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePvtzStatisticsHistoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsHistoryResponse
+        /// </returns>
+        public DescribePvtzStatisticsHistoryResponse DescribePvtzStatisticsHistory(DescribePvtzStatisticsHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePvtzStatisticsHistoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsHistoryResponse
+        /// </returns>
+        public async Task<DescribePvtzStatisticsHistoryResponse> DescribePvtzStatisticsHistoryAsync(DescribePvtzStatisticsHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePvtzStatisticsHistoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息摘要列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsSummaryResponse
+        /// </returns>
+        public DescribePvtzStatisticsSummaryResponse DescribePvtzStatisticsSummaryWithOptions(DescribePvtzStatisticsSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrowType))
+            {
+                query["GrowType"] = request.GrowType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Module))
+            {
+                query["Module"] = request.Module;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkParams))
+            {
+                query["NetworkParams"] = request.NetworkParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rcode))
+            {
+                query["Rcode"] = request.Rcode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticalType))
+            {
+                query["StatisticalType"] = request.StatisticalType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneName))
+            {
+                query["ZoneName"] = request.ZoneName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePvtzStatisticsSummary",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePvtzStatisticsSummaryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息摘要列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsSummaryResponse
+        /// </returns>
+        public async Task<DescribePvtzStatisticsSummaryResponse> DescribePvtzStatisticsSummaryWithOptionsAsync(DescribePvtzStatisticsSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrowType))
+            {
+                query["GrowType"] = request.GrowType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Module))
+            {
+                query["Module"] = request.Module;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkParams))
+            {
+                query["NetworkParams"] = request.NetworkParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rcode))
+            {
+                query["Rcode"] = request.Rcode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticalType))
+            {
+                query["StatisticalType"] = request.StatisticalType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneName))
+            {
+                query["ZoneName"] = request.ZoneName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePvtzStatisticsSummary",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePvtzStatisticsSummaryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息摘要列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsSummaryResponse
+        /// </returns>
+        public DescribePvtzStatisticsSummaryResponse DescribePvtzStatisticsSummary(DescribePvtzStatisticsSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePvtzStatisticsSummaryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息摘要列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsSummaryResponse
+        /// </returns>
+        public async Task<DescribePvtzStatisticsSummaryResponse> DescribePvtzStatisticsSummaryAsync(DescribePvtzStatisticsSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePvtzStatisticsSummaryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息Zone维度总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsZoneOverviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsZoneOverviewResponse
+        /// </returns>
+        public DescribePvtzStatisticsZoneOverviewResponse DescribePvtzStatisticsZoneOverviewWithOptions(DescribePvtzStatisticsZoneOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Module))
+            {
+                query["Module"] = request.Module;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkParams))
+            {
+                query["NetworkParams"] = request.NetworkParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverviewPeriod))
+            {
+                query["OverviewPeriod"] = request.OverviewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePvtzStatisticsZoneOverview",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePvtzStatisticsZoneOverviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息Zone维度总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsZoneOverviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsZoneOverviewResponse
+        /// </returns>
+        public async Task<DescribePvtzStatisticsZoneOverviewResponse> DescribePvtzStatisticsZoneOverviewWithOptionsAsync(DescribePvtzStatisticsZoneOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Module))
+            {
+                query["Module"] = request.Module;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkParams))
+            {
+                query["NetworkParams"] = request.NetworkParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverviewPeriod))
+            {
+                query["OverviewPeriod"] = request.OverviewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePvtzStatisticsZoneOverview",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePvtzStatisticsZoneOverviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息Zone维度总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsZoneOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsZoneOverviewResponse
+        /// </returns>
+        public DescribePvtzStatisticsZoneOverviewResponse DescribePvtzStatisticsZoneOverview(DescribePvtzStatisticsZoneOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePvtzStatisticsZoneOverviewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pvtz解析统计信息Zone维度总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePvtzStatisticsZoneOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePvtzStatisticsZoneOverviewResponse
+        /// </returns>
+        public async Task<DescribePvtzStatisticsZoneOverviewResponse> DescribePvtzStatisticsZoneOverviewAsync(DescribePvtzStatisticsZoneOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePvtzStatisticsZoneOverviewWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of regions for selection based on the scenario and virtual private cloud (VPC) type.</para>
         /// </summary>
         /// 
