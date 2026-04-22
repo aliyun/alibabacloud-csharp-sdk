@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public long? Level { get; set; }
 
+        [NameInMap("timestamp")]
+        [Validation(Required=false)]
+        public string Timestamp { get; set; }
+
     }
 
 }
