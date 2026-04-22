@@ -16695,6 +16695,678 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>公网权威解析统计信息全局总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsGlobalOverviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsGlobalOverviewResponse
+        /// </returns>
+        public DescribeInterAuthStatisticsGlobalOverviewResponse DescribeInterAuthStatisticsGlobalOverviewWithOptions(DescribeInterAuthStatisticsGlobalOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverviewPeriod))
+            {
+                query["OverviewPeriod"] = request.OverviewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInterAuthStatisticsGlobalOverview",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInterAuthStatisticsGlobalOverviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息全局总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsGlobalOverviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsGlobalOverviewResponse
+        /// </returns>
+        public async Task<DescribeInterAuthStatisticsGlobalOverviewResponse> DescribeInterAuthStatisticsGlobalOverviewWithOptionsAsync(DescribeInterAuthStatisticsGlobalOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceptLanguage))
+            {
+                query["AcceptLanguage"] = request.AcceptLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverviewPeriod))
+            {
+                query["OverviewPeriod"] = request.OverviewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInterAuthStatisticsGlobalOverview",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInterAuthStatisticsGlobalOverviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息全局总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsGlobalOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsGlobalOverviewResponse
+        /// </returns>
+        public DescribeInterAuthStatisticsGlobalOverviewResponse DescribeInterAuthStatisticsGlobalOverview(DescribeInterAuthStatisticsGlobalOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInterAuthStatisticsGlobalOverviewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息全局总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsGlobalOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsGlobalOverviewResponse
+        /// </returns>
+        public async Task<DescribeInterAuthStatisticsGlobalOverviewResponse> DescribeInterAuthStatisticsGlobalOverviewAsync(DescribeInterAuthStatisticsGlobalOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInterAuthStatisticsGlobalOverviewWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsHistoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsHistoryResponse
+        /// </returns>
+        public DescribeInterAuthStatisticsHistoryResponse DescribeInterAuthStatisticsHistoryWithOptions(DescribeInterAuthStatisticsHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rcode))
+            {
+                query["Rcode"] = request.Rcode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticalType))
+            {
+                query["StatisticalType"] = request.StatisticalType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneName))
+            {
+                query["ZoneName"] = request.ZoneName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInterAuthStatisticsHistory",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInterAuthStatisticsHistoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsHistoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsHistoryResponse
+        /// </returns>
+        public async Task<DescribeInterAuthStatisticsHistoryResponse> DescribeInterAuthStatisticsHistoryWithOptionsAsync(DescribeInterAuthStatisticsHistoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rcode))
+            {
+                query["Rcode"] = request.Rcode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticalType))
+            {
+                query["StatisticalType"] = request.StatisticalType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneName))
+            {
+                query["ZoneName"] = request.ZoneName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInterAuthStatisticsHistory",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInterAuthStatisticsHistoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsHistoryResponse
+        /// </returns>
+        public DescribeInterAuthStatisticsHistoryResponse DescribeInterAuthStatisticsHistory(DescribeInterAuthStatisticsHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInterAuthStatisticsHistoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsHistoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsHistoryResponse
+        /// </returns>
+        public async Task<DescribeInterAuthStatisticsHistoryResponse> DescribeInterAuthStatisticsHistoryAsync(DescribeInterAuthStatisticsHistoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInterAuthStatisticsHistoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息摘要列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsSummaryResponse
+        /// </returns>
+        public DescribeInterAuthStatisticsSummaryResponse DescribeInterAuthStatisticsSummaryWithOptions(DescribeInterAuthStatisticsSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrowType))
+            {
+                query["GrowType"] = request.GrowType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rcode))
+            {
+                query["Rcode"] = request.Rcode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticalType))
+            {
+                query["StatisticalType"] = request.StatisticalType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneName))
+            {
+                query["ZoneName"] = request.ZoneName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInterAuthStatisticsSummary",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInterAuthStatisticsSummaryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息摘要列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsSummaryResponse
+        /// </returns>
+        public async Task<DescribeInterAuthStatisticsSummaryResponse> DescribeInterAuthStatisticsSummaryWithOptionsAsync(DescribeInterAuthStatisticsSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
+            {
+                query["Direction"] = request.Direction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
+            {
+                query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                query["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrowType))
+            {
+                query["GrowType"] = request.GrowType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["OrderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rcode))
+            {
+                query["Rcode"] = request.Rcode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
+            {
+                query["StartTimestamp"] = request.StartTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatisticalType))
+            {
+                query["StatisticalType"] = request.StatisticalType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneName))
+            {
+                query["ZoneName"] = request.ZoneName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInterAuthStatisticsSummary",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInterAuthStatisticsSummaryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息摘要列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsSummaryResponse
+        /// </returns>
+        public DescribeInterAuthStatisticsSummaryResponse DescribeInterAuthStatisticsSummary(DescribeInterAuthStatisticsSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInterAuthStatisticsSummaryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息摘要列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsSummaryResponse
+        /// </returns>
+        public async Task<DescribeInterAuthStatisticsSummaryResponse> DescribeInterAuthStatisticsSummaryAsync(DescribeInterAuthStatisticsSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInterAuthStatisticsSummaryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息Zone维度总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsZoneOverviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsZoneOverviewResponse
+        /// </returns>
+        public DescribeInterAuthStatisticsZoneOverviewResponse DescribeInterAuthStatisticsZoneOverviewWithOptions(DescribeInterAuthStatisticsZoneOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverviewPeriod))
+            {
+                query["OverviewPeriod"] = request.OverviewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneName))
+            {
+                query["ZoneName"] = request.ZoneName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInterAuthStatisticsZoneOverview",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInterAuthStatisticsZoneOverviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息Zone维度总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsZoneOverviewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsZoneOverviewResponse
+        /// </returns>
+        public async Task<DescribeInterAuthStatisticsZoneOverviewResponse> DescribeInterAuthStatisticsZoneOverviewWithOptionsAsync(DescribeInterAuthStatisticsZoneOverviewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OverviewPeriod))
+            {
+                query["OverviewPeriod"] = request.OverviewPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerRegion))
+            {
+                query["ServerRegion"] = request.ServerRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneName))
+            {
+                query["ZoneName"] = request.ZoneName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeInterAuthStatisticsZoneOverview",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeInterAuthStatisticsZoneOverviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息Zone维度总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsZoneOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsZoneOverviewResponse
+        /// </returns>
+        public DescribeInterAuthStatisticsZoneOverviewResponse DescribeInterAuthStatisticsZoneOverview(DescribeInterAuthStatisticsZoneOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeInterAuthStatisticsZoneOverviewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>公网权威解析统计信息Zone维度总览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeInterAuthStatisticsZoneOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeInterAuthStatisticsZoneOverviewResponse
+        /// </returns>
+        public async Task<DescribeInterAuthStatisticsZoneOverviewResponse> DescribeInterAuthStatisticsZoneOverviewAsync(DescribeInterAuthStatisticsZoneOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeInterAuthStatisticsZoneOverviewWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询解析日志</para>
         /// </summary>
         /// 
