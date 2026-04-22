@@ -1,3 +1,8 @@
+2026-04-22 Version: 1.7.0
+- Support API DescribeOssV2Result.
+- Support API MarkOssV2Result.
+
+
 2026-03-27 Version: 1.6.1
 - Update API ListServiceConfigs: add response parameters Body.Data.$.SceneType.
 
