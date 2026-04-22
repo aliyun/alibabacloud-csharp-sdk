@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         [Validation(Required=false)]
         public List<DescribeAlertSourceResponseBodyData> Data { get; set; }
         public class DescribeAlertSourceResponseBodyData : TeaModel {
+            [NameInMap("Modules")]
+            [Validation(Required=false)]
+            public List<string> Modules { get; set; }
+
             /// <summary>
             /// <para>The internal code of the alert data source.</para>
             /// 
