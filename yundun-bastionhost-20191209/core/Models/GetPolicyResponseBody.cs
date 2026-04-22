@@ -253,6 +253,22 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     public string DiskRedirection { get; set; }
 
                     /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Enable</para>
+                    /// </summary>
+                    [NameInMap("DiskRedirectionDownload")]
+                    [Validation(Required=false)]
+                    public string DiskRedirectionDownload { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Enable</para>
+                    /// </summary>
+                    [NameInMap("DiskRedirectionUpload")]
+                    [Validation(Required=false)]
+                    public string DiskRedirectionUpload { get; set; }
+
+                    /// <summary>
                     /// <para>Indicates whether keyboard recording is enabled. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>Enable</description></item>
@@ -275,6 +291,22 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 [Validation(Required=false)]
                 public GetPolicyResponseBodyPolicyProtocolConfigSSH SSH { get; set; }
                 public class GetPolicyResponseBodyPolicyProtocolConfigSSH : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Enable</para>
+                    /// </summary>
+                    [NameInMap("AllowDirectTcp")]
+                    [Validation(Required=false)]
+                    public string AllowDirectTcp { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Enable</para>
+                    /// </summary>
+                    [NameInMap("AllowTcpForwarding")]
+                    [Validation(Required=false)]
+                    public string AllowTcpForwarding { get; set; }
+
                     /// <summary>
                     /// <para>Indicates whether remote command execution is enabled. Valid values:</para>
                     /// <list type="bullet">
@@ -400,6 +432,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                     [NameInMap("SSHChannel")]
                     [Validation(Required=false)]
                     public string SSHChannel { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Enable</para>
+                    /// </summary>
+                    [NameInMap("TcpForwarding")]
+                    [Validation(Required=false)]
+                    public string TcpForwarding { get; set; }
 
                     /// <summary>
                     /// <para>Indicates whether X11 forwarding is enabled. Valid values:</para>

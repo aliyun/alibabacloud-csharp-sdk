@@ -329,6 +329,14 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
                 public string SSHChannel { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>Enable</para>
+                /// </summary>
+                [NameInMap("TcpForwarding")]
+                [Validation(Required=false)]
+                public string TcpForwarding { get; set; }
+
+                /// <summary>
                 /// <para>Specifies whether to enable X11 forwarding. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>Enable</description></item>

@@ -68,8 +68,6 @@ namespace AlibabaCloud.SDK.Yundun_bastionhost20191209.Models
         public string IsSSL { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
