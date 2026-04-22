@@ -285,6 +285,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string RecallType { get; set; }
 
+            [NameInMap("SortFields")]
+            [Validation(Required=false)]
+            public string SortFields { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>user_embedding</para>
