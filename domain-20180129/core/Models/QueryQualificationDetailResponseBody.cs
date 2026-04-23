@@ -25,18 +25,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public List<QueryQualificationDetailResponseBodyCredentialsQualificationCredential> QualificationCredential { get; set; }
             public class QueryQualificationDetailResponseBodyCredentialsQualificationCredential : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>92610725MA7G2E****</para>
-                /// </summary>
                 [NameInMap("CredentialNo")]
                 [Validation(Required=false)]
                 public string CredentialNo { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>SHSQB</para>
-                /// </summary>
                 [NameInMap("CredentialType")]
                 [Validation(Required=false)]
                 public string CredentialType { get; set; }

@@ -25,18 +25,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public List<BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResult> SensitiveWordMatchResult { get; set; }
             public class BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResult : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("Exist")]
                 [Validation(Required=false)]
                 public bool? Exist { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>example.com,aliyundoc.com</para>
-                /// </summary>
                 [NameInMap("Keyword")]
                 [Validation(Required=false)]
                 public string Keyword { get; set; }
@@ -49,10 +41,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                     [Validation(Required=false)]
                     public List<BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResultMatchedSentiveWordsMatchedSensitiveWord> MatchedSensitiveWord { get; set; }
                     public class BatchFuzzyMatchDomainSensitiveWordResponseBodySensitiveWordMatchResultListSensitiveWordMatchResultMatchedSentiveWordsMatchedSensitiveWord : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>xxx</para>
-                        /// </summary>
                         [NameInMap("Word")]
                         [Validation(Required=false)]
                         public string Word { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainByDomainNameResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The Domain Name System (DNS) servers of the domain name.</para>
-        /// </summary>
         [NameInMap("DnsList")]
         [Validation(Required=false)]
         public QueryDomainByDomainNameResponseBodyDnsList DnsList { get; set; }
@@ -267,6 +264,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string RegistrantUpdatingStatus { get; set; }
 
+        [NameInMap("Registrar")]
+        [Validation(Required=false)]
+        public string Registrar { get; set; }
+
         /// <summary>
         /// <para>The time when the domain name was registered.</para>
         /// 
@@ -314,9 +315,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
-        /// <summary>
-        /// <para>The tags.</para>
-        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public QueryDomainByDomainNameResponseBodyTag Tag { get; set; }
@@ -325,16 +323,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public List<QueryDomainByDomainNameResponseBodyTagTag> Tag { get; set; }
             public class QueryDomainByDomainNameResponseBodyTagTag : TeaModel {
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
-                /// <summary>
-                /// <para>The tag value.</para>
-                /// </summary>
                 [NameInMap("Vaue")]
                 [Validation(Required=false)]
                 public string Vaue { get; set; }

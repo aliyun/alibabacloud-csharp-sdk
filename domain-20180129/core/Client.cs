@@ -823,7 +823,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例所在资源组</para>
+        /// <para>ChangeResourceGroup</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -881,7 +881,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例所在资源组</para>
+        /// <para>ChangeResourceGroup</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -939,7 +939,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例所在资源组</para>
+        /// <para>ChangeResourceGroup</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -957,7 +957,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例所在资源组</para>
+        /// <para>ChangeResourceGroup</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -973,6 +973,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await ChangeResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a domain name can be registered.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckDomainRequest
         /// </param>
@@ -1026,6 +1031,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CheckDomainResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a domain name can be registered.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckDomainRequest
         /// </param>
@@ -1079,6 +1089,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<CheckDomainResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a domain name can be registered.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckDomainRequest
         /// </param>
@@ -1092,6 +1107,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return CheckDomainWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a domain name can be registered.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckDomainRequest
         /// </param>
@@ -1223,7 +1243,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验在售国际一口价域名状态和询价</para>
+        /// <para>Checks the domain name status and price inquiries of a fixed-price order at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1265,7 +1285,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验在售国际一口价域名状态和询价</para>
+        /// <para>Checks the domain name status and price inquiries of a fixed-price order at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1307,7 +1327,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验在售国际一口价域名状态和询价</para>
+        /// <para>Checks the domain name status and price inquiries of a fixed-price order at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1325,7 +1345,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>校验在售国际一口价域名状态和询价</para>
+        /// <para>Checks the domain name status and price inquiries of a fixed-price order at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1839,7 +1859,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建国际一口价订单</para>
+        /// <para>Creates a fixed-price order at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1893,7 +1913,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建国际一口价订单</para>
+        /// <para>Creates a fixed-price order at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1947,7 +1967,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建国际一口价订单</para>
+        /// <para>Creates a fixed-price order at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1965,7 +1985,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建国际一口价订单</para>
+        /// <para>Creates a fixed-price order at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3903,7 +3923,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索域名列表</para>
+        /// <para>Searches for domain names by using the advanced search feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4057,7 +4077,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索域名列表</para>
+        /// <para>Searches for domain names by using the advanced search feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4211,7 +4231,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索域名列表</para>
+        /// <para>Searches for domain names by using the advanced search feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4229,7 +4249,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索域名列表</para>
+        /// <para>Searches for domain names by using the advanced search feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4363,7 +4383,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询操作记录</para>
+        /// <para>Queries the operations logs of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4429,7 +4449,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询操作记录</para>
+        /// <para>Queries the operations logs of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4495,7 +4515,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询操作记录</para>
+        /// <para>Queries the operations logs of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4513,7 +4533,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询操作记录</para>
+        /// <para>Queries the operations logs of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5267,7 +5287,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名分组信息</para>
+        /// <para>Queries a list of domain name groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5329,7 +5349,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名分组信息</para>
+        /// <para>Queries a list of domain name groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5391,7 +5411,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名分组信息</para>
+        /// <para>Queries a list of domain name groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5409,7 +5429,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询域名分组信息</para>
+        /// <para>Queries a list of domain name groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5444,6 +5464,10 @@ namespace AlibabaCloud.SDK.Domain20180129
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewEnabled))
+            {
+                query["AutoRenewEnabled"] = request.AutoRenewEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ccompany))
             {
                 query["Ccompany"] = request.Ccompany;
@@ -5558,6 +5582,10 @@ namespace AlibabaCloud.SDK.Domain20180129
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenewEnabled))
+            {
+                query["AutoRenewEnabled"] = request.AutoRenewEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ccompany))
             {
                 query["Ccompany"] = request.Ccompany;
@@ -6959,7 +6987,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询国际一口价订单列表</para>
+        /// <para>Queries the list of fixed-price orders at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7013,7 +7041,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询国际一口价订单列表</para>
+        /// <para>Queries the list of fixed-price orders at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7067,7 +7095,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询国际一口价订单列表</para>
+        /// <para>Queries the list of fixed-price orders at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7085,7 +7113,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询国际一口价订单列表</para>
+        /// <para>Queries the list of fixed-price orders at the international site (alibabacloud.com).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8563,7 +8591,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Queries the domain name tasks under your account by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8625,7 +8653,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Queries the domain name tasks under your account by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8687,7 +8715,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Queries the domain name tasks under your account by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8705,7 +8733,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Queries the domain name tasks under your account by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8837,6 +8865,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return await QueryTransferInByInstanceIdWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the domain names that are transferred to Alibaba Cloud.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTransferInListRequest
         /// </param>
@@ -8902,6 +8935,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTransferInListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the domain names that are transferred to Alibaba Cloud.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTransferInListRequest
         /// </param>
@@ -8967,6 +9005,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return TeaModel.ToObject<QueryTransferInListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the domain names that are transferred to Alibaba Cloud.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTransferInListRequest
         /// </param>
@@ -8980,6 +9023,11 @@ namespace AlibabaCloud.SDK.Domain20180129
             return QueryTransferInListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the domain names that are transferred to Alibaba Cloud.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTransferInListRequest
         /// </param>
@@ -9827,7 +9875,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-注册订单</para>
+        /// <para>Submits a task to register multiple domain names at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9893,7 +9941,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-注册订单</para>
+        /// <para>Submits a task to register multiple domain names at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9959,7 +10007,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-注册订单</para>
+        /// <para>Submits a task to register multiple domain names at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9977,7 +10025,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存批量任务-注册订单</para>
+        /// <para>Submits a task to register multiple domain names at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10903,7 +10951,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交批量预定删除抢注域名任务</para>
+        /// <para>Submits a task to reserve multiple domain names that are provided by HiChina.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10949,7 +10997,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交批量预定删除抢注域名任务</para>
+        /// <para>Submits a task to reserve multiple domain names that are provided by HiChina.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10995,7 +11043,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交批量预定删除抢注域名任务</para>
+        /// <para>Submits a task to reserve multiple domain names that are provided by HiChina.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11013,7 +11061,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交批量预定删除抢注域名任务</para>
+        /// <para>Submits a task to reserve multiple domain names that are provided by HiChina.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11031,7 +11079,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于转移码的批量转出任务提交</para>
+        /// <para>Submits multiple transfer-out tasks based on the transfer keys of domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11073,7 +11121,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于转移码的批量转出任务提交</para>
+        /// <para>Submits multiple transfer-out tasks based on the transfer keys of domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11115,7 +11163,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于转移码的批量转出任务提交</para>
+        /// <para>Submits multiple transfer-out tasks based on the transfer keys of domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11133,7 +11181,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于转移码的批量转出任务提交</para>
+        /// <para>Submits multiple transfer-out tasks based on the transfer keys of domain names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16223,7 +16271,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit a single transfer-out task based on the transfer key of domain names.</para>
+        /// <para>Submits a single transfer-out task based on the transfer key of a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16274,7 +16322,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit a single transfer-out task based on the transfer key of domain names.</para>
+        /// <para>Submits a single transfer-out task based on the transfer key of a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16325,7 +16373,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit a single transfer-out task based on the transfer key of domain names.</para>
+        /// <para>Submits a single transfer-out task based on the transfer key of a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16348,7 +16396,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit a single transfer-out task based on the transfer key of domain names.</para>
+        /// <para>Submits a single transfer-out task based on the transfer key of a domain name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

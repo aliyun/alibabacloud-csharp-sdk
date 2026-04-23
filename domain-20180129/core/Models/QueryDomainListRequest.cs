@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainListRequest : TeaModel {
+        [NameInMap("AutoRenewEnabled")]
+        [Validation(Required=false)]
+        public bool? AutoRenewEnabled { get; set; }
+
         /// <summary>
         /// <para>The name of the domain name registrant.</para>
         /// 

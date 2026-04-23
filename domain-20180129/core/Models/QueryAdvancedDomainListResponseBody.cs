@@ -35,18 +35,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>SUCCEED</para>
-                /// </summary>
                 [NameInMap("DomainAuditStatus")]
                 [Validation(Required=false)]
                 public string DomainAuditStatus { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>-1</para>
-                /// </summary>
                 [NameInMap("DomainGroupId")]
                 [Validation(Required=false)]
                 public string DomainGroupId { get; set; }
@@ -55,122 +47,62 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 [Validation(Required=false)]
                 public string DomainGroupName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>example.com</para>
-                /// </summary>
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>5</para>
-                /// </summary>
                 [NameInMap("DomainStatus")]
                 [Validation(Required=false)]
                 public string DomainStatus { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>gTLD</para>
-                /// </summary>
                 [NameInMap("DomainType")]
                 [Validation(Required=false)]
                 public string DomainType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para><a href="mailto:username@example.com">username@example.com</a></para>
-                /// </summary>
                 [NameInMap("Email")]
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>356</para>
-                /// </summary>
                 [NameInMap("ExpirationCurrDateDiff")]
                 [Validation(Required=false)]
                 public int? ExpirationCurrDateDiff { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2019-04-09 17:07:03</para>
-                /// </summary>
                 [NameInMap("ExpirationDate")]
                 [Validation(Required=false)]
                 public string ExpirationDate { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1554800823000</para>
-                /// </summary>
                 [NameInMap("ExpirationDateLong")]
                 [Validation(Required=false)]
                 public long? ExpirationDateLong { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("ExpirationDateStatus")]
                 [Validation(Required=false)]
                 public string ExpirationDateStatus { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>S20182000000000</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
                 [NameInMap("Premium")]
                 [Validation(Required=false)]
                 public bool? Premium { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2a</para>
-                /// </summary>
                 [NameInMap("ProductId")]
                 [Validation(Required=false)]
                 public string ProductId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>Tom</para>
-                /// </summary>
                 [NameInMap("RegistrantOrganization")]
                 [Validation(Required=false)]
                 public string RegistrantOrganization { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("RegistrantType")]
                 [Validation(Required=false)]
                 public string RegistrantType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2018-04-09 17:07:03</para>
-                /// </summary>
                 [NameInMap("RegistrationDate")]
                 [Validation(Required=false)]
                 public string RegistrationDate { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1523264823000</para>
-                /// </summary>
                 [NameInMap("RegistrationDateLong")]
                 [Validation(Required=false)]
                 public long? RegistrationDateLong { get; set; }
@@ -179,10 +111,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 [Validation(Required=false)]
                 public string Remark { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>rg-aek2yyciz557g3q</para>
-                /// </summary>
                 [NameInMap("ResourceGroupId")]
                 [Validation(Required=false)]
                 public string ResourceGroupId { get; set; }
@@ -207,10 +135,6 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>Tom</para>
-                /// </summary>
                 [NameInMap("ZhRegistrantOrganization")]
                 [Validation(Required=false)]
                 public string ZhRegistrantOrganization { get; set; }

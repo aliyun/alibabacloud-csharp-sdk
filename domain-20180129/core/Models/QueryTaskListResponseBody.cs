@@ -25,18 +25,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public List<QueryTaskListResponseBodyDataTaskInfo> TaskInfo { get; set; }
             public class QueryTaskListResponseBodyDataTaskInfo : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>127.0.0.1</para>
-                /// </summary>
                 [NameInMap("Clientip")]
                 [Validation(Required=false)]
                 public string Clientip { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>Dec 26,2017 11:00:54</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
@@ -45,34 +37,18 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 [Validation(Required=false)]
                 public string TaskBizType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>INIT</para>
-                /// </summary>
                 [NameInMap("TaskCancelStatus")]
                 [Validation(Required=false)]
                 public string TaskCancelStatus { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("TaskCancelStatusCode")]
                 [Validation(Required=false)]
                 public int? TaskCancelStatusCode { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>8b1cd755-4928-4b02-adee-e5d41d7b1939</para>
-                /// </summary>
                 [NameInMap("TaskNo")]
                 [Validation(Required=false)]
                 public string TaskNo { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("TaskNum")]
                 [Validation(Required=false)]
                 public int? TaskNum { get; set; }
@@ -81,26 +57,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
                 [Validation(Required=false)]
                 public string TaskResult { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>COMPLETE</para>
-                /// </summary>
                 [NameInMap("TaskStatus")]
                 [Validation(Required=false)]
                 public string TaskStatus { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("TaskStatusCode")]
                 [Validation(Required=false)]
                 public int? TaskStatusCode { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>CREATE_DNSHOST</para>
-                /// </summary>
                 [NameInMap("TaskType")]
                 [Validation(Required=false)]
                 public string TaskType { get; set; }
