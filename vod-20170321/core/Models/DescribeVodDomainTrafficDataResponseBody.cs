@@ -69,9 +69,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string TotalTraffic { get; set; }
 
-        /// <summary>
-        /// <para>The amount of network traffic at each time interval.</para>
-        /// </summary>
         [NameInMap("TrafficDataPerInterval")]
         [Validation(Required=false)]
         public DescribeVodDomainTrafficDataResponseBodyTrafficDataPerInterval TrafficDataPerInterval { get; set; }
@@ -80,72 +77,30 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVodDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The amount of network traffic in the Chinese mainland. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("DomesticValue")]
                 [Validation(Required=false)]
                 public string DomesticValue { get; set; }
 
-                /// <summary>
-                /// <para>The amount of HTTPS network traffic on points of presence (POPs) in the Chinese mainland. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("HttpsDomesticValue")]
                 [Validation(Required=false)]
                 public string HttpsDomesticValue { get; set; }
 
-                /// <summary>
-                /// <para>The amount of HTTPS network traffic on POPs outside the Chinese mainland. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("HttpsOverseasValue")]
                 [Validation(Required=false)]
                 public string HttpsOverseasValue { get; set; }
 
-                /// <summary>
-                /// <para>The total amount of HTTPS network traffic on POPs. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("HttpsValue")]
                 [Validation(Required=false)]
                 public string HttpsValue { get; set; }
 
-                /// <summary>
-                /// <para>The amount of network traffic outside the Chinese mainland. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("OverseasValue")]
                 [Validation(Required=false)]
                 public string OverseasValue { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-01-15T19:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The total traffic. Unit: bytes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

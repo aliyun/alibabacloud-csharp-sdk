@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The statistics on average playback each day.</para>
-        /// </summary>
         [NameInMap("UserPlayStatisAvgs")]
         [Validation(Required=false)]
         public DescribePlayUserAvgResponseBodyUserPlayStatisAvgs UserPlayStatisAvgs { get; set; }
@@ -30,32 +27,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg> UserPlayStatisAvg { get; set; }
             public class DescribePlayUserAvgResponseBodyUserPlayStatisAvgsUserPlayStatisAvg : TeaModel {
-                /// <summary>
-                /// <para>The average number of video views.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>170</para>
-                /// </summary>
                 [NameInMap("AvgPlayCount")]
                 [Validation(Required=false)]
                 public string AvgPlayCount { get; set; }
 
-                /// <summary>
-                /// <para>The average playback duration. Unit: milliseconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1035902.8</para>
-                /// </summary>
                 [NameInMap("AvgPlayDuration")]
                 [Validation(Required=false)]
                 public string AvgPlayDuration { get; set; }
 
-                /// <summary>
-                /// <para>The date when the statistics were generated. The date follows the <em>yyyy-MM-dd</em> format.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>20170120</para>
-                /// </summary>
                 [NameInMap("Date")]
                 [Validation(Required=false)]
                 public string Date { get; set; }

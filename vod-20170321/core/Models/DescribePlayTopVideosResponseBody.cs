@@ -39,9 +39,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The daily playback statistics on each top video.</para>
-        /// </summary>
         [NameInMap("TopPlayVideos")]
         [Validation(Required=false)]
         public DescribePlayTopVideosResponseBodyTopPlayVideos TopPlayVideos { get; set; }
@@ -50,52 +47,22 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis> TopPlayVideoStatis { get; set; }
             public class DescribePlayTopVideosResponseBodyTopPlayVideosTopPlayVideoStatis : TeaModel {
-                /// <summary>
-                /// <para>The total playback duration. Unit: milliseconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>4640369</para>
-                /// </summary>
                 [NameInMap("PlayDuration")]
                 [Validation(Required=false)]
                 public string PlayDuration { get; set; }
 
-                /// <summary>
-                /// <para>The title of the video.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Four streams (two streams encrypted): LD-HLS-encrypted + SD-MP4 + HD-H</para>
-                /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }
 
-                /// <summary>
-                /// <para>The number of unique visitors.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("UV")]
                 [Validation(Required=false)]
                 public string UV { get; set; }
 
-                /// <summary>
-                /// <para>The number of video views.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>107</para>
-                /// </summary>
                 [NameInMap("VV")]
                 [Validation(Required=false)]
                 public string VV { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the video.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2a8d4cb9ecbb487681473a15****8fda</para>
-                /// </summary>
                 [NameInMap("VideoId")]
                 [Validation(Required=false)]
                 public string VideoId { get; set; }

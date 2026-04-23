@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public DescribeVodSSLCertificateListResponseBodyCertificateListModel CertificateListModel { get; set; }
         public class DescribeVodSSLCertificateListResponseBodyCertificateListModel : TeaModel {
-            /// <summary>
-            /// <para>The list of certificates.</para>
-            /// </summary>
             [NameInMap("CertList")]
             [Validation(Required=false)]
             public DescribeVodSSLCertificateListResponseBodyCertificateListModelCertList CertList { get; set; }
@@ -27,72 +24,30 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public List<DescribeVodSSLCertificateListResponseBodyCertificateListModelCertListCert> Cert { get; set; }
                 public class DescribeVodSSLCertificateListResponseBodyCertificateListModelCertListCert : TeaModel {
-                    /// <summary>
-                    /// <para>The ID of the certificate.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>235437</para>
-                    /// </summary>
                     [NameInMap("CertId")]
                     [Validation(Required=false)]
                     public long? CertId { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the certificate.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>video-ssl</para>
-                    /// </summary>
                     [NameInMap("CertName")]
                     [Validation(Required=false)]
                     public string CertName { get; set; }
 
-                    /// <summary>
-                    /// <para>The region of the certificate. Valid values: <b>cn-hangzhou</b> and <b>ap-southeast-1</b>. Default value: <b>cn-hangzhou</b>.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>cn-hangzhou</para>
-                    /// </summary>
                     [NameInMap("CertRegion")]
                     [Validation(Required=false)]
                     public string CertRegion { get; set; }
 
-                    /// <summary>
-                    /// <para>The Common Name (CN) attribute of the certificate. In most cases, the CN is a domain name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>test</para>
-                    /// </summary>
                     [NameInMap("Common")]
                     [Validation(Required=false)]
                     public string Common { get; set; }
 
-                    /// <summary>
-                    /// <para>The fingerprint of the certificate.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <hr>
-                    /// </summary>
                     [NameInMap("Fingerprint")]
                     [Validation(Required=false)]
                     public string Fingerprint { get; set; }
 
-                    /// <summary>
-                    /// <para>The certificate authority (CA) that issued the certificate.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <hr>
-                    /// </summary>
                     [NameInMap("Issuer")]
                     [Validation(Required=false)]
                     public string Issuer { get; set; }
 
-                    /// <summary>
-                    /// <para>The time when the certificate was last modified. Unit: milliseconds.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1512388610</para>
-                    /// </summary>
                     [NameInMap("LastTime")]
                     [Validation(Required=false)]
                     public long? LastTime { get; set; }

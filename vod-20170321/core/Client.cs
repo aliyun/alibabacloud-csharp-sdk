@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a video category. You can call this operation to categorize media assets including audio or video files, images, and short video materials in ApsaraVideo VOD. This simplifies the query and management of media assets.</para>
+        /// <para>Creates a category to classify media assets that are stored in ApsaraVideo VOD. This helps you query and manage resources in a more efficient and convenient way.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a video category. You can call this operation to categorize media assets including audio or video files, images, and short video materials in ApsaraVideo VOD. This simplifies the query and management of media assets.</para>
+        /// <para>Creates a category to classify media assets that are stored in ApsaraVideo VOD. This helps you query and manage resources in a more efficient and convenient way.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a video category. You can call this operation to categorize media assets including audio or video files, images, and short video materials in ApsaraVideo VOD. This simplifies the query and management of media assets.</para>
+        /// <para>Creates a category to classify media assets that are stored in ApsaraVideo VOD. This helps you query and manage resources in a more efficient and convenient way.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -396,7 +396,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a video category. You can call this operation to categorize media assets including audio or video files, images, and short video materials in ApsaraVideo VOD. This simplifies the query and management of media assets.</para>
+        /// <para>Creates a category to classify media assets that are stored in ApsaraVideo VOD. This helps you query and manage resources in a more efficient and convenient way.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1554,7 +1554,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image or text watermark. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the progress of creating watermark tasks.</para>
+        /// <para>Creates an image or text watermark template. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the processing of watermark tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1621,7 +1621,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image or text watermark. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the progress of creating watermark tasks.</para>
+        /// <para>Creates an image or text watermark template. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the processing of watermark tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1688,7 +1688,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image or text watermark. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the progress of creating watermark tasks.</para>
+        /// <para>Creates an image or text watermark template. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the processing of watermark tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1715,7 +1715,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an image or text watermark. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the progress of creating watermark tasks.</para>
+        /// <para>Creates an image or text watermark template. ApsaraVideo VOD allows you to create watermark templates to reuse your parameter configurations such as watermark position, size, font, and color. Each watermark template is assigned a unique ID. This simplifies the processing of watermark tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3182,7 +3182,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains an upload URL and an upload credential for an auxiliary media asset such as a watermark image, subtitle file, or material and generates the media ID. ApsaraVideo VOD issues upload URLs and credentials to perform authorization and ensure security. This prevents unauthorized users from uploading media files. ApsaraVideo VOD generates media IDs together with upload URLs and credentials. Media IDs are used in lifecycle management and media processing.</para>
+        /// <para>Obtain an upload credential and create auxiliary media assets, such as watermarks and subtitles. The upload URL and credential are provided by ApsaraVideo VOD to resolve authorization and security issues, prevent malicious uploads, and automatically create media IDs (Mediaid) for management and processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3275,7 +3275,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains an upload URL and an upload credential for an auxiliary media asset such as a watermark image, subtitle file, or material and generates the media ID. ApsaraVideo VOD issues upload URLs and credentials to perform authorization and ensure security. This prevents unauthorized users from uploading media files. ApsaraVideo VOD generates media IDs together with upload URLs and credentials. Media IDs are used in lifecycle management and media processing.</para>
+        /// <para>Obtain an upload credential and create auxiliary media assets, such as watermarks and subtitles. The upload URL and credential are provided by ApsaraVideo VOD to resolve authorization and security issues, prevent malicious uploads, and automatically create media IDs (Mediaid) for management and processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3368,7 +3368,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains an upload URL and an upload credential for an auxiliary media asset such as a watermark image, subtitle file, or material and generates the media ID. ApsaraVideo VOD issues upload URLs and credentials to perform authorization and ensure security. This prevents unauthorized users from uploading media files. ApsaraVideo VOD generates media IDs together with upload URLs and credentials. Media IDs are used in lifecycle management and media processing.</para>
+        /// <para>Obtain an upload credential and create auxiliary media assets, such as watermarks and subtitles. The upload URL and credential are provided by ApsaraVideo VOD to resolve authorization and security issues, prevent malicious uploads, and automatically create media IDs (Mediaid) for management and processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3397,7 +3397,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains an upload URL and an upload credential for an auxiliary media asset such as a watermark image, subtitle file, or material and generates the media ID. ApsaraVideo VOD issues upload URLs and credentials to perform authorization and ensure security. This prevents unauthorized users from uploading media files. ApsaraVideo VOD generates media IDs together with upload URLs and credentials. Media IDs are used in lifecycle management and media processing.</para>
+        /// <para>Obtain an upload credential and create auxiliary media assets, such as watermarks and subtitles. The upload URL and credential are provided by ApsaraVideo VOD to resolve authorization and security issues, prevent malicious uploads, and automatically create media IDs (Mediaid) for management and processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3426,7 +3426,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a URL and a credential for uploading an image.</para>
+        /// <para>ApsaraVideo VOD returns the upload URL and credential to ensure authorization and security, prevent malicious uploads, and automatically create an image ID for management. Obtains an upload URL and an upload credential for uploading an audio or video file and generates the audio or video ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3515,7 +3515,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a URL and a credential for uploading an image.</para>
+        /// <para>ApsaraVideo VOD returns the upload URL and credential to ensure authorization and security, prevent malicious uploads, and automatically create an image ID for management. Obtains an upload URL and an upload credential for uploading an audio or video file and generates the audio or video ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3604,7 +3604,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a URL and a credential for uploading an image.</para>
+        /// <para>ApsaraVideo VOD returns the upload URL and credential to ensure authorization and security, prevent malicious uploads, and automatically create an image ID for management. Obtains an upload URL and an upload credential for uploading an audio or video file and generates the audio or video ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3633,7 +3633,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a URL and a credential for uploading an image.</para>
+        /// <para>ApsaraVideo VOD returns the upload URL and credential to ensure authorization and security, prevent malicious uploads, and automatically create an image ID for management. Obtains an upload URL and an upload credential for uploading an audio or video file and generates the audio or video ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4386,7 +4386,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application.</para>
+        /// <para>Deletes the information about applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4433,7 +4433,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application.</para>
+        /// <para>Deletes the information about applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4480,7 +4480,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application.</para>
+        /// <para>Deletes the information about applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4503,7 +4503,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an application.</para>
+        /// <para>Deletes the information about applications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4526,7 +4526,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete multiple auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</para>
+        /// <para>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete one or more auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4576,7 +4576,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete multiple auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</para>
+        /// <para>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete one or more auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4626,7 +4626,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete multiple auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</para>
+        /// <para>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete one or more auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4652,7 +4652,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete multiple auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</para>
+        /// <para>Deletes auxiliary media assets from ApsaraVideo VOD. You can delete one or more auxiliary media assets such as watermark images, subtitle files, and materials in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5158,7 +5158,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除剪辑资源</para>
+        /// <para>Deletes the materials to be edited for an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5224,7 +5224,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除剪辑资源</para>
+        /// <para>Deletes the materials to be edited for an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5290,7 +5290,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除剪辑资源</para>
+        /// <para>Deletes the materials to be edited for an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5308,7 +5308,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除剪辑资源</para>
+        /// <para>Deletes the materials to be edited for an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5998,7 +5998,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more video or audio streams and their storage files at a time.</para>
+        /// <para>Deletes media streams such as video or audio streams and their storage files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6048,7 +6048,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more video or audio streams and their storage files at a time.</para>
+        /// <para>Deletes media streams such as video or audio streams and their storage files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6098,7 +6098,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more video or audio streams and their storage files at a time.</para>
+        /// <para>Deletes media streams such as video or audio streams and their storage files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6116,7 +6116,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more video or audio streams and their storage files at a time.</para>
+        /// <para>Deletes media streams such as video or audio streams and their storage files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8574,7 +8574,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bandwidth data by protocol.</para>
+        /// <para>Queries the bandwidth data for one or more accelerated domain names by the protocol type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8678,7 +8678,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bandwidth data by protocol.</para>
+        /// <para>Queries the bandwidth data for one or more accelerated domain names by the protocol type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8782,7 +8782,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bandwidth data by protocol.</para>
+        /// <para>Queries the bandwidth data for one or more accelerated domain names by the protocol type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8834,7 +8834,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the bandwidth data by protocol.</para>
+        /// <para>Queries the bandwidth data for one or more accelerated domain names by the protocol type.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8912,6 +8912,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             {
                 query["DomainName"] = request.DomainName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HeraApiAutoVersion))
+            {
+                query["HeraApiAutoVersion"] = request.HeraApiAutoVersion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
@@ -8962,6 +8966,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {
                 query["DomainName"] = request.DomainName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HeraApiAutoVersion))
+            {
+                query["HeraApiAutoVersion"] = request.HeraApiAutoVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -13614,7 +13622,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>点播云剪辑用量查询</para>
+        /// <para>Queries the online editing usage in ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13676,7 +13684,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>点播云剪辑用量查询</para>
+        /// <para>Queries the online editing usage in ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13738,7 +13746,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>点播云剪辑用量查询</para>
+        /// <para>Queries the online editing usage in ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13756,7 +13764,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>点播云剪辑用量查询</para>
+        /// <para>Queries the online editing usage in ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17518,7 +17526,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an AI template.</para>
+        /// <para>Queries AI templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17568,7 +17576,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an AI template.</para>
+        /// <para>Queries AI templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17618,7 +17626,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an AI template.</para>
+        /// <para>Queries AI templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17644,7 +17652,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an AI template.</para>
+        /// <para>Queries AI templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18590,7 +18598,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>支持区域化媒资ID级别播放数据查询</para>
+        /// <para>Obtains all media traffic data of a specific date and region. The data is generated based on Alibaba Cloud CDN traffic logs and reflects the traffic consumption of videos. The data is exported as a CSV file, including the date, video ID, domain name, traffic, application ID, and category ID. You can download the file to your local storage for operational data analysis and billing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18636,7 +18644,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>支持区域化媒资ID级别播放数据查询</para>
+        /// <para>Obtains all media traffic data of a specific date and region. The data is generated based on Alibaba Cloud CDN traffic logs and reflects the traffic consumption of videos. The data is exported as a CSV file, including the date, video ID, domain name, traffic, application ID, and category ID. You can download the file to your local storage for operational data analysis and billing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18682,7 +18690,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>支持区域化媒资ID级别播放数据查询</para>
+        /// <para>Obtains all media traffic data of a specific date and region. The data is generated based on Alibaba Cloud CDN traffic logs and reflects the traffic consumption of videos. The data is exported as a CSV file, including the date, video ID, domain name, traffic, application ID, and category ID. You can download the file to your local storage for operational data analysis and billing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18700,7 +18708,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>支持区域化媒资ID级别播放数据查询</para>
+        /// <para>Obtains all media traffic data of a specific date and region. The data is generated based on Alibaba Cloud CDN traffic logs and reflects the traffic consumption of videos. The data is exported as a CSV file, including the date, video ID, domain name, traffic, application ID, and category ID. You can download the file to your local storage for operational data analysis and billing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18718,7 +18726,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the default AI template.</para>
+        /// <para>Queries the default AI template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18768,7 +18776,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the default AI template.</para>
+        /// <para>Queries the default AI template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18818,7 +18826,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the default AI template.</para>
+        /// <para>Queries the default AI template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -18844,7 +18852,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about the default AI template.</para>
+        /// <para>Queries the default AI template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19074,7 +19082,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取剪辑工程</para>
+        /// <para>Queries the details of an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19132,7 +19140,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取剪辑工程</para>
+        /// <para>Queries the details of an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19190,7 +19198,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取剪辑工程</para>
+        /// <para>Queries the details of an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19208,7 +19216,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取剪辑工程</para>
+        /// <para>Queries the details of an online editing project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19226,7 +19234,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries materials to be edited for an online editing project.</para>
+        /// <para>Queries materials that are waiting to be edited in an online editing project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19297,7 +19305,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries materials to be edited for an online editing project.</para>
+        /// <para>Queries materials that are waiting to be edited in an online editing project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19368,7 +19376,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries materials to be edited for an online editing project.</para>
+        /// <para>Queries materials that are waiting to be edited in an online editing project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19391,7 +19399,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries materials to be edited for an online editing project.</para>
+        /// <para>Queries materials that are waiting to be edited in an online editing project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19414,7 +19422,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information and access URL of an image based on the image ID.</para>
+        /// <para>Queries the basic information and URL of an image based on the image ID after you upload the image to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19464,7 +19472,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information and access URL of an image based on the image ID.</para>
+        /// <para>Queries the basic information and URL of an image based on the image ID after you upload the image to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19514,7 +19522,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information and access URL of an image based on the image ID.</para>
+        /// <para>Queries the basic information and URL of an image based on the image ID after you upload the image to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19532,7 +19540,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information and access URL of an image based on the image ID.</para>
+        /// <para>Queries the basic information and URL of an image based on the image ID after you upload the image to ApsaraVideo VOD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20498,7 +20506,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a media fingerprinting result. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</para>
+        /// <para>Queries the results of video fingerprinting jobs. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20561,7 +20569,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a media fingerprinting result. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</para>
+        /// <para>Queries the results of video fingerprinting jobs. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20624,7 +20632,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a media fingerprinting result. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</para>
+        /// <para>Queries the results of video fingerprinting jobs. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20647,7 +20655,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a media fingerprinting result. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</para>
+        /// <para>Queries the results of video fingerprinting jobs. After a media fingerprinting job is complete, you can call this operation to query the media fingerprinting result.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20810,7 +20818,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the callback method, callback URL, and event type for event notifications.</para>
+        /// <para>Queries the callback method, callback URL, and event type of an event notification.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20863,7 +20871,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the callback method, callback URL, and event type for event notifications.</para>
+        /// <para>Queries the callback method, callback URL, and event type of an event notification.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20916,7 +20924,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the callback method, callback URL, and event type for event notifications.</para>
+        /// <para>Queries the callback method, callback URL, and event type of an event notification.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20941,7 +20949,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the callback method, callback URL, and event type for event notifications.</para>
+        /// <para>Queries the callback method, callback URL, and event type of an event notification.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22882,7 +22890,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single snapshot template.</para>
+        /// <para>Queries details of a snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22924,7 +22932,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single snapshot template.</para>
+        /// <para>Queries details of a snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22966,7 +22974,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single snapshot template.</para>
+        /// <para>Queries details of a snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22984,7 +22992,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a single snapshot template.</para>
+        /// <para>Queries details of a snapshot template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23002,7 +23010,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an image or text watermark based on the watermark template ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</para>
+        /// <para>Queries the configurations of an image or text watermark template based on tits ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23044,7 +23052,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an image or text watermark based on the watermark template ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</para>
+        /// <para>Queries the configurations of an image or text watermark template based on tits ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23086,7 +23094,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an image or text watermark based on the watermark template ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</para>
+        /// <para>Queries the configurations of an image or text watermark template based on tits ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23104,7 +23112,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an image or text watermark based on the watermark template ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</para>
+        /// <para>Queries the configurations of an image or text watermark template based on tits ID. You can call this operation to obtain information such as the position, size, and display time of an image watermark or the content, position, font, and font color of a text watermark.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23274,7 +23282,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AI jobs. After a job is submitted, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</para>
+        /// <para>Queries a smart tagging or video fingerprinting job. After you submit a smart tagging or video fingerprinting job, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23340,7 +23348,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AI jobs. After a job is submitted, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</para>
+        /// <para>Queries a smart tagging or video fingerprinting job. After you submit a smart tagging or video fingerprinting job, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23406,7 +23414,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AI jobs. After a job is submitted, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</para>
+        /// <para>Queries a smart tagging or video fingerprinting job. After you submit a smart tagging or video fingerprinting job, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23432,7 +23440,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries AI jobs. After a job is submitted, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</para>
+        /// <para>Queries a smart tagging or video fingerprinting job. After you submit a smart tagging or video fingerprinting job, ApsaraVideo VOD asynchronously processes the job. You can call this operation to query the job information in real time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -23950,7 +23958,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP addresses in a review security group.</para>
+        /// <para>Queries the IP addresses in a security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23992,7 +24000,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP addresses in a review security group.</para>
+        /// <para>Queries the IP addresses in a security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24034,7 +24042,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP addresses in a review security group.</para>
+        /// <para>Queries the IP addresses in a security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24052,7 +24060,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the IP addresses in a review security group.</para>
+        /// <para>Queries the IP addresses in a security group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24070,7 +24078,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about animated stickers of a video based on the video ID.</para>
+        /// <para>Queries the information about animated images of a video based on the video ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24112,7 +24120,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about animated stickers of a video based on the video ID.</para>
+        /// <para>Queries the information about animated images of a video based on the video ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24154,7 +24162,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about animated stickers of a video based on the video ID.</para>
+        /// <para>Queries the information about animated images of a video based on the video ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24172,7 +24180,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about animated stickers of a video based on the video ID.</para>
+        /// <para>Queries the information about animated images of a video based on the video ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24558,7 +24566,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the snapshots that are captured by submitting snapshot jobs or snapshots that are generated by the system when you upload the video.</para>
+        /// <para>Queries snapshots that were captured by submitting snapshot jobs or the thumbnail that was generated by the system when you uploaded a video.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24621,7 +24629,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the snapshots that are captured by submitting snapshot jobs or snapshots that are generated by the system when you upload the video.</para>
+        /// <para>Queries snapshots that were captured by submitting snapshot jobs or the thumbnail that was generated by the system when you uploaded a video.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24684,7 +24692,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the snapshots that are captured by submitting snapshot jobs or snapshots that are generated by the system when you upload the video.</para>
+        /// <para>Queries snapshots that were captured by submitting snapshot jobs or the thumbnail that was generated by the system when you uploaded a video.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -24707,7 +24715,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the snapshots that are captured by submitting snapshot jobs or snapshots that are generated by the system when you upload the video.</para>
+        /// <para>Queries snapshots that were captured by submitting snapshot jobs or the thumbnail that was generated by the system when you uploaded a video.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27482,7 +27490,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages the IP addresses in review security groups.</para>
+        /// <para>Sets IP addresses in review security groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27537,7 +27545,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages the IP addresses in review security groups.</para>
+        /// <para>Sets IP addresses in review security groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27592,7 +27600,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages the IP addresses in review security groups.</para>
+        /// <para>Sets IP addresses in review security groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -27615,7 +27623,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages the IP addresses in review security groups.</para>
+        /// <para>Sets IP addresses in review security groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31478,7 +31486,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about multiple auxiliary media assets such as watermark images, subtitle files, and materials in a batch based on IDs. You can modify information such as the title, description, tags, and category.</para>
+        /// <para>Modifies the information about multiple auxiliary media assets at a time. After you upload auxiliary media assets, such as images that contain watermarks, subtitle files, or other materials, to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the unique identifiers (IDs) of the auxiliary media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31525,7 +31533,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about multiple auxiliary media assets such as watermark images, subtitle files, and materials in a batch based on IDs. You can modify information such as the title, description, tags, and category.</para>
+        /// <para>Modifies the information about multiple auxiliary media assets at a time. After you upload auxiliary media assets, such as images that contain watermarks, subtitle files, or other materials, to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the unique identifiers (IDs) of the auxiliary media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31572,7 +31580,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about multiple auxiliary media assets such as watermark images, subtitle files, and materials in a batch based on IDs. You can modify information such as the title, description, tags, and category.</para>
+        /// <para>Modifies the information about multiple auxiliary media assets at a time. After you upload auxiliary media assets, such as images that contain watermarks, subtitle files, or other materials, to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the unique identifiers (IDs) of the auxiliary media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31595,7 +31603,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about multiple auxiliary media assets such as watermark images, subtitle files, and materials in a batch based on IDs. You can modify information such as the title, description, tags, and category.</para>
+        /// <para>Modifies the information about multiple auxiliary media assets at a time. After you upload auxiliary media assets, such as images that contain watermarks, subtitle files, or other materials, to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the unique identifiers (IDs) of the auxiliary media assets.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31618,7 +31626,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a video category.</para>
+        /// <para>Updates the category name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31669,7 +31677,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a video category.</para>
+        /// <para>Updates the category name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31720,7 +31728,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a video category.</para>
+        /// <para>Updates the category name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31743,7 +31751,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a video category.</para>
+        /// <para>Updates the category name.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -31950,7 +31958,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about one or more images at a time.</para>
+        /// <para>Modifies the information about multiple images at a time. After you upload images to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the IDs of the images.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32000,7 +32008,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about one or more images at a time.</para>
+        /// <para>Modifies the information about multiple images at a time. After you upload images to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the IDs of the images.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32050,7 +32058,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about one or more images at a time.</para>
+        /// <para>Modifies the information about multiple images at a time. After you upload images to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the IDs of the images.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32076,7 +32084,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about one or more images at a time.</para>
+        /// <para>Modifies the information about multiple images at a time. After you upload images to ApsaraVideo VOD, you can call this operation to update their titles, descriptions, tags, and categories at a time based on the IDs of the images.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32666,7 +32674,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about multiple videos at a time.</para>
+        /// <para>Modifies information about multiple audio or video files at a time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32713,7 +32721,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about multiple videos at a time.</para>
+        /// <para>Modifies information about multiple audio or video files at a time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32760,7 +32768,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about multiple videos at a time.</para>
+        /// <para>Modifies information about multiple audio or video files at a time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32783,7 +32791,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about multiple videos at a time.</para>
+        /// <para>Modifies information about multiple audio or video files at a time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

@@ -133,9 +133,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public string Scope { get; set; }
 
-            /// <summary>
-            /// <para>The information about the origin server.</para>
-            /// </summary>
             [NameInMap("Sources")]
             [Validation(Required=false)]
             public DescribeVodDomainDetailResponseBodyDomainDetailSources Sources { get; set; }
@@ -144,71 +141,26 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public List<DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource> Source { get; set; }
                 public class DescribeVodDomainDetailResponseBodyDomainDetailSourcesSource : TeaModel {
-                    /// <summary>
-                    /// <para>The address of the origin server.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>****.oss-cn-hangzhou.aliyuncs.com</para>
-                    /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
                     public string Content { get; set; }
 
-                    /// <summary>
-                    /// <para>The status of the origin server. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>online</b>: indicates that the origin server is enabled.</description></item>
-                    /// <item><description><b>offline</b>: indicates that the origin server is disabled.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>online</para>
-                    /// </summary>
                     [NameInMap("Enabled")]
                     [Validation(Required=false)]
                     public string Enabled { get; set; }
 
-                    /// <summary>
-                    /// <para>The port number. Valid values: 443 and 80.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>80</para>
-                    /// </summary>
                     [NameInMap("Port")]
                     [Validation(Required=false)]
                     public int? Port { get; set; }
 
-                    /// <summary>
-                    /// <para>The priority of the origin server.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>50</para>
-                    /// </summary>
                     [NameInMap("Priority")]
                     [Validation(Required=false)]
                     public string Priority { get; set; }
 
-                    /// <summary>
-                    /// <para>The type of the origin server. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>ipaddr</b>: a server that you can access by using an IP address.</description></item>
-                    /// <item><description><b>domain</b>: a server that you can access by using a domain name.</description></item>
-                    /// <item><description><b>oss</b>: the URL of an Object Storage Service (OSS) bucket.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>oss</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
-                    /// <summary>
-                    /// <para>The weight of the origin server if multiple origin servers have been specified.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>10</para>
-                    /// </summary>
                     [NameInMap("Weight")]
                     [Validation(Required=false)]
                     public string Weight { get; set; }

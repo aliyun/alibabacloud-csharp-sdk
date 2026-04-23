@@ -46,9 +46,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public string Regular { get; set; }
 
-            /// <summary>
-            /// <para>The details of the snapshot.</para>
-            /// </summary>
             [NameInMap("Snapshots")]
             [Validation(Required=false)]
             public ListSnapshotsResponseBodyMediaSnapshotSnapshots Snapshots { get; set; }
@@ -57,22 +54,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 [Validation(Required=false)]
                 public List<ListSnapshotsResponseBodyMediaSnapshotSnapshotsSnapshot> Snapshot { get; set; }
                 public class ListSnapshotsResponseBodyMediaSnapshotSnapshotsSnapshot : TeaModel {
-                    /// <summary>
-                    /// <para>The index of the snapshot.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("Index")]
                     [Validation(Required=false)]
                     public long? Index { get; set; }
 
-                    /// <summary>
-                    /// <para>The URL of the snapshot.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para><a href="http://example.aliyundoc.com/snapshot/sample00001****.jpg">http://example.aliyundoc.com/snapshot/sample00001****.jpg</a></para>
-                    /// </summary>
                     [NameInMap("Url")]
                     [Validation(Required=false)]
                     public string Url { get; set; }

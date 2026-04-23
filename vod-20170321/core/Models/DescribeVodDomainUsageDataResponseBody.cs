@@ -83,9 +83,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string Type { get; set; }
 
-        /// <summary>
-        /// <para>The traffic or bandwidth data returned at each interval.</para>
-        /// </summary>
         [NameInMap("UsageDataPerInterval")]
         [Validation(Required=false)]
         public DescribeVodDomainUsageDataResponseBodyUsageDataPerInterval UsageDataPerInterval { get; set; }
@@ -94,22 +91,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodDomainUsageDataResponseBodyUsageDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVodDomainUsageDataResponseBodyUsageDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <para>The timestamp of the returned data. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2015-12-10T10:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The traffic or bandwidth data. Unit: bit/s.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2592.3920000000003</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

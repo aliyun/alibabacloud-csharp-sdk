@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainRealTimeByteHitRateDataResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The returned data.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeVodDomainRealTimeByteHitRateDataResponseBodyData Data { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodDomainRealTimeByteHitRateDataResponseBodyDataByteHitRateDataModel> ByteHitRateDataModel { get; set; }
             public class DescribeVodDomainRealTimeByteHitRateDataResponseBodyDataByteHitRateDataModel : TeaModel {
-                /// <summary>
-                /// <para>The byte hit ratio in percentage.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0.8956940476262277</para>
-                /// </summary>
                 [NameInMap("ByteHitRate")]
                 [Validation(Required=false)]
                 public float? ByteHitRate { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2020-05-15T09:13:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }

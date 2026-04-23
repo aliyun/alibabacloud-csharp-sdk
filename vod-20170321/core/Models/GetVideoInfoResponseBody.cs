@@ -197,9 +197,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public long? Size { get; set; }
 
-            /// <summary>
-            /// <para>The video snapshot URLs.</para>
-            /// </summary>
             [NameInMap("Snapshots")]
             [Validation(Required=false)]
             public GetVideoInfoResponseBodyVideoSnapshots Snapshots { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodDomainReqHitRateDataResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The request hit rate data at each time interval.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeVodDomainReqHitRateDataResponseBodyData Data { get; set; }
@@ -20,32 +17,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodDomainReqHitRateDataResponseBodyDataDataModule> DataModule { get; set; }
             public class DescribeVodDomainReqHitRateDataResponseBodyDataDataModule : TeaModel {
-                /// <summary>
-                /// <para>The HTTPS request hit rate.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>50</para>
-                /// </summary>
                 [NameInMap("HttpsValue")]
                 [Validation(Required=false)]
                 public string HttpsValue { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2023-12-21T08:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The total request hit rate.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }

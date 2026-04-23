@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class DescribeVodAIDataResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The statistics on video AI.</para>
-        /// </summary>
         [NameInMap("AIData")]
         [Validation(Required=false)]
         public DescribeVodAIDataResponseBodyAIData AIData { get; set; }
@@ -20,9 +17,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodAIDataResponseBodyAIDataAIDataItem> AIDataItem { get; set; }
             public class DescribeVodAIDataResponseBodyAIDataAIDataItem : TeaModel {
-                /// <summary>
-                /// <para>The statistics on video AI of each type.</para>
-                /// </summary>
                 [NameInMap("Data")]
                 [Validation(Required=false)]
                 public DescribeVodAIDataResponseBodyAIDataAIDataItemData Data { get; set; }
@@ -31,27 +25,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     [Validation(Required=false)]
                     public List<DescribeVodAIDataResponseBodyAIDataAIDataItemDataDataItem> DataItem { get; set; }
                     public class DescribeVodAIDataResponseBodyAIDataAIDataItemDataDataItem : TeaModel {
-                        /// <summary>
-                        /// <para>The type of video AI. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description><b>AIVideoCensor</b>: automated review</description></item>
-                        /// <item><description><b>AIVideoFPShot</b>: media fingerprinting</description></item>
-                        /// <item><description><b>AIVideoTag</b>: smart tagging</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>AIVideoCensor</para>
-                        /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
-                        /// <summary>
-                        /// <para>The processing duration. Unit: seconds.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>111</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }
@@ -60,12 +37,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 
                 }
 
-                /// <summary>
-                /// <para>The timestamp of the returned data. The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-02-01T13:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }

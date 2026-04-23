@@ -40,9 +40,6 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
-        /// <summary>
-        /// <para>The proportion of each HTTP status code in each time interval.</para>
-        /// </summary>
         [NameInMap("RealTimeHttpCodeData")]
         [Validation(Required=false)]
         public DescribeVodDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeData RealTimeHttpCodeData { get; set; }
@@ -51,19 +48,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             [Validation(Required=false)]
             public List<DescribeVodDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData> UsageData { get; set; }
             public class DescribeVodDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageData : TeaModel {
-                /// <summary>
-                /// <para>The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2019-11-30T05:39:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <para>The proportion of each HTTP status code is displayed in a data list.</para>
-                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public DescribeVodDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValue Value { get; set; }
@@ -72,32 +60,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     [Validation(Required=false)]
                     public List<DescribeVodDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData> RealTimeCodeProportionData { get; set; }
                     public class DescribeVodDomainRealTimeHttpCodeDataResponseBodyRealTimeHttpCodeDataUsageDataValueRealTimeCodeProportionData : TeaModel {
-                        /// <summary>
-                        /// <para>The HTTP status code.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>500</para>
-                        /// </summary>
                         [NameInMap("Code")]
                         [Validation(Required=false)]
                         public string Code { get; set; }
 
-                        /// <summary>
-                        /// <para>The number of the HTTP status codes.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>100</para>
-                        /// </summary>
                         [NameInMap("Count")]
                         [Validation(Required=false)]
                         public string Count { get; set; }
 
-                        /// <summary>
-                        /// <para>The proportion of the HTTP status code in percentage.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>28.4496124031008</para>
-                        /// </summary>
                         [NameInMap("Proportion")]
                         [Validation(Required=false)]
                         public string Proportion { get; set; }

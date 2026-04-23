@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("HeraApiAutoVersion")]
+        [Validation(Required=false)]
+        public string HeraApiAutoVersion { get; set; }
+
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
