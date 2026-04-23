@@ -841,7 +841,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建StarRocks集群</para>
+        /// <para>Restarts an E-MapReduce (EMR) Serverless StarRocks instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1011,7 +1011,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建StarRocks集群</para>
+        /// <para>Restarts an E-MapReduce (EMR) Serverless StarRocks instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1181,7 +1181,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建StarRocks集群</para>
+        /// <para>Restarts an E-MapReduce (EMR) Serverless StarRocks instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1200,7 +1200,7 @@ namespace AlibabaCloud.SDK.Starrocks20221019
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建StarRocks集群</para>
+        /// <para>Restarts an E-MapReduce (EMR) Serverless StarRocks instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5863,6 +5863,136 @@ namespace AlibabaCloud.SDK.Starrocks20221019
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListOperationHistoryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群SSL详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSSLDetailsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSSLDetailsResponse
+        /// </returns>
+        public ListSSLDetailsResponse ListSSLDetailsWithOptions(ListSSLDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSSLDetails",
+                Version = "2022-10-19",
+                Protocol = "HTTPS",
+                Pathname = "/webapi/starrocks/listSSLDetails",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSSLDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群SSL详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSSLDetailsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSSLDetailsResponse
+        /// </returns>
+        public async Task<ListSSLDetailsResponse> ListSSLDetailsWithOptionsAsync(ListSSLDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSSLDetails",
+                Version = "2022-10-19",
+                Protocol = "HTTPS",
+                Pathname = "/webapi/starrocks/listSSLDetails",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSSLDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群SSL详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSSLDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSSLDetailsResponse
+        /// </returns>
+        public ListSSLDetailsResponse ListSSLDetails(ListSSLDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSSLDetailsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取集群SSL详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSSLDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSSLDetailsResponse
+        /// </returns>
+        public async Task<ListSSLDetailsResponse> ListSSLDetailsAsync(ListSSLDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSSLDetailsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
