@@ -209,6 +209,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string SccMode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vpc-2zehr7ghqovftils0****</para>
+        /// </summary>
+        [NameInMap("VPCId")]
+        [Validation(Required=false)]
+        public string VPCId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vsw-2ze775gnf7jn33ua****</para>
+        /// </summary>
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
+
     }
 
 }
