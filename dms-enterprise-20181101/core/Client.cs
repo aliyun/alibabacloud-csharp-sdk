@@ -4499,6 +4499,146 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询资产盘点任务的执行状态与进度信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询资产盘点任务的执行状态与进度信息，包含子任务列表、进度百分比、知识统计等</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckInventoryJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckInventoryJobResponse
+        /// </returns>
+        public CheckInventoryJobResponse CheckInventoryJobWithOptions(CheckInventoryJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckInventoryJob",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckInventoryJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资产盘点任务的执行状态与进度信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询资产盘点任务的执行状态与进度信息，包含子任务列表、进度百分比、知识统计等</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckInventoryJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckInventoryJobResponse
+        /// </returns>
+        public async Task<CheckInventoryJobResponse> CheckInventoryJobWithOptionsAsync(CheckInventoryJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckInventoryJob",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckInventoryJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资产盘点任务的执行状态与进度信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询资产盘点任务的执行状态与进度信息，包含子任务列表、进度百分比、知识统计等</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckInventoryJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckInventoryJobResponse
+        /// </returns>
+        public CheckInventoryJobResponse CheckInventoryJob(CheckInventoryJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckInventoryJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资产盘点任务的执行状态与进度信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询资产盘点任务的执行状态与进度信息，包含子任务列表、进度百分比、知识统计等</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckInventoryJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckInventoryJobResponse
+        /// </returns>
+        public async Task<CheckInventoryJobResponse> CheckInventoryJobAsync(CheckInventoryJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckInventoryJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Closes a ticket.</para>
         /// </summary>
         /// 
@@ -4631,6 +4771,162 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CloseOrderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>确认盘点任务中的单条知识，将其标记为已认证</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>确认盘点任务中的单条知识，将其标记为已认证状态（解锁级别）</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfirmInventoryKnowledgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfirmInventoryKnowledgeResponse
+        /// </returns>
+        public ConfirmInventoryKnowledgeResponse ConfirmInventoryKnowledgeWithOptions(ConfirmInventoryKnowledgeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
+            {
+                query["EntityId"] = request.EntityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeType))
+            {
+                query["KnowledgeType"] = request.KnowledgeType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfirmInventoryKnowledge",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfirmInventoryKnowledgeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>确认盘点任务中的单条知识，将其标记为已认证</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>确认盘点任务中的单条知识，将其标记为已认证状态（解锁级别）</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfirmInventoryKnowledgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfirmInventoryKnowledgeResponse
+        /// </returns>
+        public async Task<ConfirmInventoryKnowledgeResponse> ConfirmInventoryKnowledgeWithOptionsAsync(ConfirmInventoryKnowledgeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
+            {
+                query["EntityId"] = request.EntityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeType))
+            {
+                query["KnowledgeType"] = request.KnowledgeType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ConfirmInventoryKnowledge",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ConfirmInventoryKnowledgeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>确认盘点任务中的单条知识，将其标记为已认证</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>确认盘点任务中的单条知识，将其标记为已认证状态（解锁级别）</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfirmInventoryKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfirmInventoryKnowledgeResponse
+        /// </returns>
+        public ConfirmInventoryKnowledgeResponse ConfirmInventoryKnowledge(ConfirmInventoryKnowledgeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ConfirmInventoryKnowledgeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>确认盘点任务中的单条知识，将其标记为已认证</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>确认盘点任务中的单条知识，将其标记为已认证状态（解锁级别）</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ConfirmInventoryKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ConfirmInventoryKnowledgeResponse
+        /// </returns>
+        public async Task<ConfirmInventoryKnowledgeResponse> ConfirmInventoryKnowledgeAsync(ConfirmInventoryKnowledgeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ConfirmInventoryKnowledgeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8059,6 +8355,146 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateFreeLockCorrectOrderWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建资产盘点任务，对指定实例/数据库/表进行知识盘点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建资产盘点任务，支持选择实例、数据库、表维度进行知识盘点，返回任务ID</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInventoryJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInventoryJobResponse
+        /// </returns>
+        public CreateInventoryJobResponse CreateInventoryJobWithOptions(CreateInventoryJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Param))
+            {
+                query["Param"] = request.Param;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInventoryJob",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInventoryJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建资产盘点任务，对指定实例/数据库/表进行知识盘点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建资产盘点任务，支持选择实例、数据库、表维度进行知识盘点，返回任务ID</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInventoryJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInventoryJobResponse
+        /// </returns>
+        public async Task<CreateInventoryJobResponse> CreateInventoryJobWithOptionsAsync(CreateInventoryJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Param))
+            {
+                query["Param"] = request.Param;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateInventoryJob",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateInventoryJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建资产盘点任务，对指定实例/数据库/表进行知识盘点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建资产盘点任务，支持选择实例、数据库、表维度进行知识盘点，返回任务ID</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInventoryJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInventoryJobResponse
+        /// </returns>
+        public CreateInventoryJobResponse CreateInventoryJob(CreateInventoryJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateInventoryJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建资产盘点任务，对指定实例/数据库/表进行知识盘点</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建资产盘点任务，支持选择实例、数据库、表维度进行知识盘点，返回任务ID</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateInventoryJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateInventoryJobResponse
+        /// </returns>
+        public async Task<CreateInventoryJobResponse> CreateInventoryJobAsync(CreateInventoryJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateInventoryJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -43651,6 +44087,194 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SearchDatabaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询盘点任务产出的知识列表，支持按关键词、知识类型等条件筛选</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>分页查询盘点任务产出的知识列表，支持按关键词、知识类型、排序方式等条件筛选</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SearchInventoryKnowledgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchInventoryKnowledgeResponse
+        /// </returns>
+        public SearchInventoryKnowledgeResponse SearchInventoryKnowledgeWithOptions(SearchInventoryKnowledgeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["Offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowType))
+            {
+                query["ShowType"] = request.ShowType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["Size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchInventoryKnowledge",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchInventoryKnowledgeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询盘点任务产出的知识列表，支持按关键词、知识类型等条件筛选</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>分页查询盘点任务产出的知识列表，支持按关键词、知识类型、排序方式等条件筛选</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SearchInventoryKnowledgeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchInventoryKnowledgeResponse
+        /// </returns>
+        public async Task<SearchInventoryKnowledgeResponse> SearchInventoryKnowledgeWithOptionsAsync(SearchInventoryKnowledgeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
+            {
+                query["Offset"] = request.Offset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowType))
+            {
+                query["ShowType"] = request.ShowType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["Size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["SortOrder"] = request.SortOrder;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchInventoryKnowledge",
+                Version = "2018-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchInventoryKnowledgeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询盘点任务产出的知识列表，支持按关键词、知识类型等条件筛选</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>分页查询盘点任务产出的知识列表，支持按关键词、知识类型、排序方式等条件筛选</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SearchInventoryKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchInventoryKnowledgeResponse
+        /// </returns>
+        public SearchInventoryKnowledgeResponse SearchInventoryKnowledge(SearchInventoryKnowledgeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SearchInventoryKnowledgeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询盘点任务产出的知识列表，支持按关键词、知识类型等条件筛选</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>分页查询盘点任务产出的知识列表，支持按关键词、知识类型、排序方式等条件筛选</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SearchInventoryKnowledgeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchInventoryKnowledgeResponse
+        /// </returns>
+        public async Task<SearchInventoryKnowledgeResponse> SearchInventoryKnowledgeAsync(SearchInventoryKnowledgeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SearchInventoryKnowledgeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
