@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Domain")]
+        [Validation(Required=false)]
+        public string Domain { get; set; }
+
+        [NameInMap("ExtraInfo")]
+        [Validation(Required=false)]
+        public string ExtraInfo { get; set; }
+
         [NameInMap("GmtCreate")]
         [Validation(Required=false)]
         public string GmtCreate { get; set; }
