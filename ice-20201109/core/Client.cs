@@ -18714,6 +18714,126 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取智能体当前通话并发数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIAgentConcurrencyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIAgentConcurrencyResponse
+        /// </returns>
+        public GetAIAgentConcurrencyResponse GetAIAgentConcurrencyWithOptions(GetAIAgentConcurrencyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
+            {
+                query["AIAgentId"] = request.AIAgentId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAIAgentConcurrency",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAIAgentConcurrencyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取智能体当前通话并发数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIAgentConcurrencyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIAgentConcurrencyResponse
+        /// </returns>
+        public async Task<GetAIAgentConcurrencyResponse> GetAIAgentConcurrencyWithOptionsAsync(GetAIAgentConcurrencyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AIAgentId))
+            {
+                query["AIAgentId"] = request.AIAgentId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAIAgentConcurrency",
+                Version = "2020-11-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAIAgentConcurrencyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取智能体当前通话并发数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIAgentConcurrencyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIAgentConcurrencyResponse
+        /// </returns>
+        public GetAIAgentConcurrencyResponse GetAIAgentConcurrency(GetAIAgentConcurrencyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAIAgentConcurrencyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取智能体当前通话并发数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAIAgentConcurrencyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAIAgentConcurrencyResponse
+        /// </returns>
+        public async Task<GetAIAgentConcurrencyResponse> GetAIAgentConcurrencyAsync(GetAIAgentConcurrencyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAIAgentConcurrencyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of a workflow task.</para>
         /// </summary>
         /// 
