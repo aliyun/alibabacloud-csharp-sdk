@@ -8,22 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
-    public class TrendPointDTO : TeaModel {
+    public class ModelRouterQueryClientDiscountLogsRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1700000000</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("timestamp")]
+        [NameInMap("maxResults")]
         [Validation(Required=false)]
-        public long? Timestamp { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>nextToken</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>&quot;{\&quot;total_calls\&quot;:0,\&quot;video_duration\&quot;:0,\&quot;total_amount\&quot;:0,\&quot;model_count\&quot;:0,\&quot;image_count\&quot;:0}&quot;</para>
+        /// <para>xxxx-xxx-xxxxx</para>
         /// </summary>
-        [NameInMap("values")]
+        [NameInMap("nextToken")]
         [Validation(Required=false)]
-        public string Values { get; set; }
+        public string NextToken { get; set; }
 
     }
 

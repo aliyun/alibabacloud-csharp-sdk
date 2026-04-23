@@ -5763,6 +5763,144 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>计费管理/获取成本监控Tab配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterBillingCostTabsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterBillingCostTabsResponse
+        /// </returns>
+        public ModelRouterBillingCostTabsResponse ModelRouterBillingCostTabsWithOptions(ModelRouterBillingCostTabsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterBillingCostTabs",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/cost/tabs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterBillingCostTabsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取成本监控Tab配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterBillingCostTabsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterBillingCostTabsResponse
+        /// </returns>
+        public async Task<ModelRouterBillingCostTabsResponse> ModelRouterBillingCostTabsWithOptionsAsync(ModelRouterBillingCostTabsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterBillingCostTabs",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/cost/tabs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterBillingCostTabsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取成本监控Tab配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterBillingCostTabsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterBillingCostTabsResponse
+        /// </returns>
+        public ModelRouterBillingCostTabsResponse ModelRouterBillingCostTabs(ModelRouterBillingCostTabsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterBillingCostTabsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取成本监控Tab配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterBillingCostTabsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterBillingCostTabsResponse
+        /// </returns>
+        public async Task<ModelRouterBillingCostTabsResponse> ModelRouterBillingCostTabsAsync(ModelRouterBillingCostTabsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterBillingCostTabsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>聊天/聊天接口</para>
         /// </summary>
         /// 
@@ -6111,6 +6249,176 @@ namespace AlibabaCloud.SDK.AiContent20240611
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ModelRouterCreateApiKeyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/创建计费规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterCreateBillingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterCreateBillingRuleResponse
+        /// </returns>
+        public ModelRouterCreateBillingRuleResponse ModelRouterCreateBillingRuleWithOptions(ModelRouterCreateBillingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingType))
+            {
+                body["billingType"] = request.BillingType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                body["effectiveTime"] = request.EffectiveTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                body["expireTime"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingConfig))
+            {
+                body["pricingConfig"] = request.PricingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterCreateBillingRule",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/rules",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterCreateBillingRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/创建计费规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterCreateBillingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterCreateBillingRuleResponse
+        /// </returns>
+        public async Task<ModelRouterCreateBillingRuleResponse> ModelRouterCreateBillingRuleWithOptionsAsync(ModelRouterCreateBillingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingType))
+            {
+                body["billingType"] = request.BillingType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                body["effectiveTime"] = request.EffectiveTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                body["expireTime"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingConfig))
+            {
+                body["pricingConfig"] = request.PricingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterCreateBillingRule",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/rules",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterCreateBillingRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/创建计费规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterCreateBillingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterCreateBillingRuleResponse
+        /// </returns>
+        public ModelRouterCreateBillingRuleResponse ModelRouterCreateBillingRule(ModelRouterCreateBillingRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterCreateBillingRuleWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/创建计费规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterCreateBillingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterCreateBillingRuleResponse
+        /// </returns>
+        public async Task<ModelRouterCreateBillingRuleResponse> ModelRouterCreateBillingRuleAsync(ModelRouterCreateBillingRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterCreateBillingRuleWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7377,6 +7685,338 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>计费管理/查询计费规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryBillingRuleListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryBillingRuleListResponse
+        /// </returns>
+        public ModelRouterQueryBillingRuleListResponse ModelRouterQueryBillingRuleListWithOptions(ModelRouterQueryBillingRuleListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActiveOnly))
+            {
+                query["activeOnly"] = request.ActiveOnly;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCode))
+            {
+                query["modelCode"] = request.ModelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelType))
+            {
+                query["modelType"] = request.ModelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryBillingRuleList",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryBillingRuleListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/查询计费规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryBillingRuleListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryBillingRuleListResponse
+        /// </returns>
+        public async Task<ModelRouterQueryBillingRuleListResponse> ModelRouterQueryBillingRuleListWithOptionsAsync(ModelRouterQueryBillingRuleListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActiveOnly))
+            {
+                query["activeOnly"] = request.ActiveOnly;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCode))
+            {
+                query["modelCode"] = request.ModelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelType))
+            {
+                query["modelType"] = request.ModelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryBillingRuleList",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryBillingRuleListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/查询计费规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryBillingRuleListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryBillingRuleListResponse
+        /// </returns>
+        public ModelRouterQueryBillingRuleListResponse ModelRouterQueryBillingRuleList(ModelRouterQueryBillingRuleListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterQueryBillingRuleListWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/查询计费规则列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryBillingRuleListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryBillingRuleListResponse
+        /// </returns>
+        public async Task<ModelRouterQueryBillingRuleListResponse> ModelRouterQueryBillingRuleListAsync(ModelRouterQueryBillingRuleListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterQueryBillingRuleListWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取部门折扣修改历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryClientDiscountLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryClientDiscountLogsResponse
+        /// </returns>
+        public ModelRouterQueryClientDiscountLogsResponse ModelRouterQueryClientDiscountLogsWithOptions(string id, ModelRouterQueryClientDiscountLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryClientDiscountLogs",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/discount-logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryClientDiscountLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取部门折扣修改历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryClientDiscountLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryClientDiscountLogsResponse
+        /// </returns>
+        public async Task<ModelRouterQueryClientDiscountLogsResponse> ModelRouterQueryClientDiscountLogsWithOptionsAsync(string id, ModelRouterQueryClientDiscountLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryClientDiscountLogs",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/discount-logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryClientDiscountLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取部门折扣修改历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryClientDiscountLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryClientDiscountLogsResponse
+        /// </returns>
+        public ModelRouterQueryClientDiscountLogsResponse ModelRouterQueryClientDiscountLogs(string id, ModelRouterQueryClientDiscountLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterQueryClientDiscountLogsWithOptions(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取部门折扣修改历史</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryClientDiscountLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryClientDiscountLogsResponse
+        /// </returns>
+        public async Task<ModelRouterQueryClientDiscountLogsResponse> ModelRouterQueryClientDiscountLogsAsync(string id, ModelRouterQueryClientDiscountLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterQueryClientDiscountLogsWithOptionsAsync(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>客户管理/获取客户列表</para>
         /// </summary>
         /// 
@@ -7575,6 +8215,144 @@ namespace AlibabaCloud.SDK.AiContent20240611
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ModelRouterQueryClientListWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取客户树</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryClientTreeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryClientTreeResponse
+        /// </returns>
+        public ModelRouterQueryClientTreeResponse ModelRouterQueryClientTreeWithOptions(ModelRouterQueryClientTreeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryClientTree",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/tree",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryClientTreeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取客户树</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryClientTreeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryClientTreeResponse
+        /// </returns>
+        public async Task<ModelRouterQueryClientTreeResponse> ModelRouterQueryClientTreeWithOptionsAsync(ModelRouterQueryClientTreeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryClientTree",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/tree",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryClientTreeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取客户树</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryClientTreeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryClientTreeResponse
+        /// </returns>
+        public ModelRouterQueryClientTreeResponse ModelRouterQueryClientTree(ModelRouterQueryClientTreeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterQueryClientTreeWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取客户树</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryClientTreeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryClientTreeResponse
+        /// </returns>
+        public async Task<ModelRouterQueryClientTreeResponse> ModelRouterQueryClientTreeAsync(ModelRouterQueryClientTreeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterQueryClientTreeWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7879,6 +8657,742 @@ namespace AlibabaCloud.SDK.AiContent20240611
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ModelRouterQueryConversationListWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取模型明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostModelDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostModelDetailResponse
+        /// </returns>
+        public ModelRouterQueryCostModelDetailResponse ModelRouterQueryCostModelDetailWithOptions(ModelRouterQueryCostModelDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryCostModelDetail",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/cost/model-detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryCostModelDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取模型明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostModelDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostModelDetailResponse
+        /// </returns>
+        public async Task<ModelRouterQueryCostModelDetailResponse> ModelRouterQueryCostModelDetailWithOptionsAsync(ModelRouterQueryCostModelDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["pageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryCostModelDetail",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/cost/model-detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryCostModelDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取模型明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostModelDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostModelDetailResponse
+        /// </returns>
+        public ModelRouterQueryCostModelDetailResponse ModelRouterQueryCostModelDetail(ModelRouterQueryCostModelDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterQueryCostModelDetailWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取模型明细</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostModelDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostModelDetailResponse
+        /// </returns>
+        public async Task<ModelRouterQueryCostModelDetailResponse> ModelRouterQueryCostModelDetailAsync(ModelRouterQueryCostModelDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterQueryCostModelDetailWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取调用模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostModelListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostModelListResponse
+        /// </returns>
+        public ModelRouterQueryCostModelListResponse ModelRouterQueryCostModelListWithOptions(ModelRouterQueryCostModelListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["granularity"] = request.Granularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
+            {
+                query["modelTypes"] = request.ModelTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["search"] = request.Search;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryCostModelList",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/cost/models",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryCostModelListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取调用模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostModelListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostModelListResponse
+        /// </returns>
+        public async Task<ModelRouterQueryCostModelListResponse> ModelRouterQueryCostModelListWithOptionsAsync(ModelRouterQueryCostModelListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["granularity"] = request.Granularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
+            {
+                query["modelTypes"] = request.ModelTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["search"] = request.Search;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryCostModelList",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/cost/models",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryCostModelListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取调用模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostModelListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostModelListResponse
+        /// </returns>
+        public ModelRouterQueryCostModelListResponse ModelRouterQueryCostModelList(ModelRouterQueryCostModelListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterQueryCostModelListWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取调用模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostModelListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostModelListResponse
+        /// </returns>
+        public async Task<ModelRouterQueryCostModelListResponse> ModelRouterQueryCostModelListAsync(ModelRouterQueryCostModelListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterQueryCostModelListWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取成本概览指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostOverviewMetricsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostOverviewMetricsResponse
+        /// </returns>
+        public ModelRouterQueryCostOverviewMetricsResponse ModelRouterQueryCostOverviewMetricsWithOptions(ModelRouterQueryCostOverviewMetricsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["granularity"] = request.Granularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
+            {
+                query["modelTypes"] = request.ModelTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryCostOverviewMetrics",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/cost/overview",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryCostOverviewMetricsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取成本概览指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostOverviewMetricsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostOverviewMetricsResponse
+        /// </returns>
+        public async Task<ModelRouterQueryCostOverviewMetricsResponse> ModelRouterQueryCostOverviewMetricsWithOptionsAsync(ModelRouterQueryCostOverviewMetricsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["granularity"] = request.Granularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
+            {
+                query["modelTypes"] = request.ModelTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryCostOverviewMetrics",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/cost/overview",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryCostOverviewMetricsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取成本概览指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostOverviewMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostOverviewMetricsResponse
+        /// </returns>
+        public ModelRouterQueryCostOverviewMetricsResponse ModelRouterQueryCostOverviewMetrics(ModelRouterQueryCostOverviewMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterQueryCostOverviewMetricsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取成本概览指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostOverviewMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostOverviewMetricsResponse
+        /// </returns>
+        public async Task<ModelRouterQueryCostOverviewMetricsResponse> ModelRouterQueryCostOverviewMetricsAsync(ModelRouterQueryCostOverviewMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterQueryCostOverviewMetricsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取费用趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostTrendMetricsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostTrendMetricsResponse
+        /// </returns>
+        public ModelRouterQueryCostTrendMetricsResponse ModelRouterQueryCostTrendMetricsWithOptions(ModelRouterQueryCostTrendMetricsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["granularity"] = request.Granularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
+            {
+                query["modelTypes"] = request.ModelTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryCostTrendMetrics",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/cost/trend",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryCostTrendMetricsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取费用趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostTrendMetricsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostTrendMetricsResponse
+        /// </returns>
+        public async Task<ModelRouterQueryCostTrendMetricsResponse> ModelRouterQueryCostTrendMetricsWithOptionsAsync(ModelRouterQueryCostTrendMetricsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["endTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["granularity"] = request.Granularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
+            {
+                query["modelTypes"] = request.ModelTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["startTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterQueryCostTrendMetrics",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/cost/trend",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterQueryCostTrendMetricsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取费用趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostTrendMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostTrendMetricsResponse
+        /// </returns>
+        public ModelRouterQueryCostTrendMetricsResponse ModelRouterQueryCostTrendMetrics(ModelRouterQueryCostTrendMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterQueryCostTrendMetricsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/获取费用趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterQueryCostTrendMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterQueryCostTrendMetricsResponse
+        /// </returns>
+        public async Task<ModelRouterQueryCostTrendMetricsResponse> ModelRouterQueryCostTrendMetricsAsync(ModelRouterQueryCostTrendMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterQueryCostTrendMetricsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9209,6 +10723,176 @@ namespace AlibabaCloud.SDK.AiContent20240611
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ModelRouterQueryObservationMetricsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/更新计费规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterUpdateBillingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterUpdateBillingRuleResponse
+        /// </returns>
+        public ModelRouterUpdateBillingRuleResponse ModelRouterUpdateBillingRuleWithOptions(string id, ModelRouterUpdateBillingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingType))
+            {
+                body["billingType"] = request.BillingType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                body["effectiveTime"] = request.EffectiveTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                body["expireTime"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingConfig))
+            {
+                body["pricingConfig"] = request.PricingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterUpdateBillingRule",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterUpdateBillingRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/更新计费规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterUpdateBillingRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterUpdateBillingRuleResponse
+        /// </returns>
+        public async Task<ModelRouterUpdateBillingRuleResponse> ModelRouterUpdateBillingRuleWithOptionsAsync(string id, ModelRouterUpdateBillingRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingType))
+            {
+                body["billingType"] = request.BillingType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveTime))
+            {
+                body["effectiveTime"] = request.EffectiveTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireTime))
+            {
+                body["expireTime"] = request.ExpireTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PricingConfig))
+            {
+                body["pricingConfig"] = request.PricingConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterUpdateBillingRule",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/billing/rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterUpdateBillingRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/更新计费规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterUpdateBillingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterUpdateBillingRuleResponse
+        /// </returns>
+        public ModelRouterUpdateBillingRuleResponse ModelRouterUpdateBillingRule(string id, ModelRouterUpdateBillingRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterUpdateBillingRuleWithOptions(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>计费管理/更新计费规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterUpdateBillingRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterUpdateBillingRuleResponse
+        /// </returns>
+        public async Task<ModelRouterUpdateBillingRuleResponse> ModelRouterUpdateBillingRuleAsync(string id, ModelRouterUpdateBillingRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterUpdateBillingRuleWithOptionsAsync(id, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
