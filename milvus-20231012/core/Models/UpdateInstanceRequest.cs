@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Milvus20231012.Models
             [Validation(Required=false)]
             public int? CuNum { get; set; }
 
+            [NameInMap("cuType")]
+            [Validation(Required=false)]
+            public string CuType { get; set; }
+
             [NameInMap("payType")]
             [Validation(Required=false)]
             public string PayType { get; set; }
