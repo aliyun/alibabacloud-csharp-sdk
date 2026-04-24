@@ -62,6 +62,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceQuality { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
+        [NameInMap("FaceQualityCheck")]
+        [Validation(Required=false)]
+        public string FaceQualityCheck { get; set; }
+
+        /// <summary>
         /// <para>A custom unique business identifier. You can use this identifier to track and troubleshoot issues. The identifier can be up to 32 characters in length and can contain letters and digits. Make sure the identifier is unique.</para>
         /// <remarks>
         /// <para>Alibaba Cloud servers do not check the uniqueness of this value. For better tracking, ensure this value is unique.</para>

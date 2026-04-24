@@ -34,6 +34,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceGroupCodes { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
+        [NameInMap("FaceQualityCheck")]
+        [Validation(Required=false)]
+        public string FaceQualityCheck { get; set; }
+
+        /// <summary>
         /// <para>Face registration library.</para>
         /// 
         /// <b>Example:</b>

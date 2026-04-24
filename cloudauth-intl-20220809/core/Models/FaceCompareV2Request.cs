@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
+        [NameInMap("FaceQualityCheck")]
+        [Validation(Required=false)]
+        public string FaceQualityCheck { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
         /// </summary>
         [NameInMap("MerchantBizId")]

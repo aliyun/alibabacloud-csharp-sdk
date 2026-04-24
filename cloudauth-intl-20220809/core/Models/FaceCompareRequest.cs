@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FacePictureQualityCheck { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
+        [NameInMap("FaceQualityCheck")]
+        [Validation(Required=false)]
+        public string FaceQualityCheck { get; set; }
+
+        /// <summary>
         /// <para>A custom unique business ID used for troubleshooting. It can be a combination of up to 32 letters and digits. Make sure that the ID is unique.</para>
         /// 
         /// <b>Example:</b>

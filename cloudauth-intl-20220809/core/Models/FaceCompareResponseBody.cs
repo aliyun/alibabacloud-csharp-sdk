@@ -46,6 +46,52 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public FaceCompareResponseBodyResult Result { get; set; }
         public class FaceCompareResponseBodyResult : TeaModel {
+            [NameInMap("ExtFaceInfo")]
+            [Validation(Required=false)]
+            public FaceCompareResponseBodyResultExtFaceInfo ExtFaceInfo { get; set; }
+            public class FaceCompareResponseBodyResultExtFaceInfo : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>39.04</para>
+                /// </summary>
+                [NameInMap("FaceQualityScore")]
+                [Validation(Required=false)]
+                public double? FaceQualityScore { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.02</para>
+                /// </summary>
+                [NameInMap("IlluminationScore")]
+                [Validation(Required=false)]
+                public double? IlluminationScore { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
+                [NameInMap("KaOcclusionScore")]
+                [Validation(Required=false)]
+                public double? KaOcclusionScore { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>50.26</para>
+                /// </summary>
+                [NameInMap("OcclusionScore")]
+                [Validation(Required=false)]
+                public double? OcclusionScore { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>86.47</para>
+                /// </summary>
+                [NameInMap("SharpnessScore")]
+                [Validation(Required=false)]
+                public double? SharpnessScore { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The face comparison score. The value ranges from 0 to 100.</para>
             /// 

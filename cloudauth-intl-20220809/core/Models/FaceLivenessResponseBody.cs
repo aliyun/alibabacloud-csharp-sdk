@@ -100,6 +100,22 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? FaceQualityScore { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>0.02</para>
+                /// </summary>
+                [NameInMap("IlluminationScore")]
+                [Validation(Required=false)]
+                public double? IlluminationScore { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
+                [NameInMap("KaOcclusionScore")]
+                [Validation(Required=false)]
+                public double? KaOcclusionScore { get; set; }
+
+                /// <summary>
                 /// <para>Optional. Indicates whether the face is occluded. Y means the face is occluded. N means the face is not occluded.</para>
                 /// 
                 /// <b>Example:</b>
@@ -108,6 +124,22 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 [NameInMap("OcclusionResult")]
                 [Validation(Required=false)]
                 public string OcclusionResult { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>50.26</para>
+                /// </summary>
+                [NameInMap("OcclusionScore")]
+                [Validation(Required=false)]
+                public double? OcclusionScore { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>86.47</para>
+                /// </summary>
+                [NameInMap("SharpnessScore")]
+                [Validation(Required=false)]
+                public double? SharpnessScore { get; set; }
 
             }
 

@@ -5419,6 +5419,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["FacePictureQualityCheck"] = request.FacePictureQualityCheck;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceQualityCheck))
+            {
+                query["FaceQualityCheck"] = request.FaceQualityCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
                 query["MerchantBizId"] = request.MerchantBizId;
@@ -5482,6 +5486,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureQualityCheck))
             {
                 query["FacePictureQualityCheck"] = request.FacePictureQualityCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceQualityCheck))
+            {
+                query["FaceQualityCheck"] = request.FaceQualityCheck;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
@@ -5583,6 +5591,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["FacePictureQualityCheck"] = request.FacePictureQualityCheck;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceQualityCheck))
+            {
+                query["FaceQualityCheck"] = request.FaceQualityCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
                 query["MerchantBizId"] = request.MerchantBizId;
@@ -5654,6 +5666,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePictureQualityCheck))
             {
                 query["FacePictureQualityCheck"] = request.FacePictureQualityCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceQualityCheck))
+            {
+                query["FaceQualityCheck"] = request.FaceQualityCheck;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
@@ -6220,6 +6236,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 body["FaceGroupCodes"] = request.FaceGroupCodes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceQualityCheck))
+            {
+                body["FaceQualityCheck"] = request.FaceQualityCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceRegisterGroupCode))
             {
                 body["FaceRegisterGroupCode"] = request.FaceRegisterGroupCode;
@@ -6323,6 +6343,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceGroupCodes))
             {
                 body["FaceGroupCodes"] = request.FaceGroupCodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceQualityCheck))
+            {
+                body["FaceQualityCheck"] = request.FaceQualityCheck;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceRegisterGroupCode))
             {
@@ -6615,6 +6639,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["FaceQuality"] = request.FaceQuality;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceQualityCheck))
+            {
+                query["FaceQualityCheck"] = request.FaceQualityCheck;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
                 query["MerchantBizId"] = request.MerchantBizId;
@@ -6686,6 +6714,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceQuality))
             {
                 query["FaceQuality"] = request.FaceQuality;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceQualityCheck))
+            {
+                query["FaceQualityCheck"] = request.FaceQualityCheck;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
