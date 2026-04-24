@@ -2351,6 +2351,134 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>配置一刻事件回调</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetYikeCallbackConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetYikeCallbackConfigResponse
+        /// </returns>
+        public SetYikeCallbackConfigResponse SetYikeCallbackConfigWithOptions(SetYikeCallbackConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfig))
+            {
+                query["CallbackConfig"] = request.CallbackConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
+            {
+                query["CallbackUrl"] = request.CallbackUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetYikeCallbackConfig",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetYikeCallbackConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置一刻事件回调</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetYikeCallbackConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetYikeCallbackConfigResponse
+        /// </returns>
+        public async Task<SetYikeCallbackConfigResponse> SetYikeCallbackConfigWithOptionsAsync(SetYikeCallbackConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfig))
+            {
+                query["CallbackConfig"] = request.CallbackConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
+            {
+                query["CallbackUrl"] = request.CallbackUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetYikeCallbackConfig",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetYikeCallbackConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置一刻事件回调</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetYikeCallbackConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetYikeCallbackConfigResponse
+        /// </returns>
+        public SetYikeCallbackConfigResponse SetYikeCallbackConfig(SetYikeCallbackConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetYikeCallbackConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置一刻事件回调</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetYikeCallbackConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetYikeCallbackConfigResponse
+        /// </returns>
+        public async Task<SetYikeCallbackConfigResponse> SetYikeCallbackConfigAsync(SetYikeCallbackConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetYikeCallbackConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>设置用户角色</para>
         /// </summary>
         /// 
