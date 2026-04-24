@@ -109,6 +109,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         [Validation(Required=false)]
                         public string Data { get; set; }
 
+                        [NameInMap("RefTableName")]
+                        [Validation(Required=false)]
+                        public string RefTableName { get; set; }
+
                     }
 
                     /// <summary>
@@ -279,6 +283,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                         [NameInMap("Data")]
                         [Validation(Required=false)]
                         public string Data { get; set; }
+
+                        [NameInMap("RefTableName")]
+                        [Validation(Required=false)]
+                        public string RefTableName { get; set; }
 
                     }
 
