@@ -441,6 +441,14 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
             public string VpcId { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>active</para>
+            /// </summary>
+            [NameInMap("WebUISnatStatus")]
+            [Validation(Required=false)]
+            public string WebUISnatStatus { get; set; }
+
+            /// <summary>
             /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
