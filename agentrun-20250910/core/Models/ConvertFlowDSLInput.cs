@@ -76,9 +76,22 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
             [Validation(Required=false)]
             public string FlowName { get; set; }
 
+            /// <summary>
+            /// <para>全局VPC端点名称，对所有节点统一生效。如果指定了vpcEndpoints映射，则映射中的节点优先使用映射值</para>
+            /// </summary>
             [NameInMap("vpcEndpointName")]
             [Validation(Required=false)]
             public string VpcEndpointName { get; set; }
+
+            /// <summary>
+            /// <para>按节点名称指定VPC端点，key为节点名称(stateName)，value为该节点使用的VPC端点名称。优先级高于vpcEndpointName</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;LLM节点&quot;:&quot;vpc-endpoint-1&quot;,&quot;Agent节点&quot;:&quot;vpc-endpoint-2&quot;}</para>
+            /// </summary>
+            [NameInMap("vpcEndpoints")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> VpcEndpoints { get; set; }
 
         }
 

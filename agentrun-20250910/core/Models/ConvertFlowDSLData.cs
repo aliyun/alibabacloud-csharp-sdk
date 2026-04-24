@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
                 /// </summary>
                 [NameInMap("details")]
                 [Validation(Required=false)]
-                public Dictionary<string, string> Details { get; set; }
+                public Dictionary<string, object> Details { get; set; }
 
                 /// <summary>
                 /// <para>问题类型：needs_config, needs_conversion, unsupported</para>
