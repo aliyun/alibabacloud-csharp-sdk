@@ -36,6 +36,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string Frequency { get; set; }
 
+        [NameInMap("InspectionItems")]
+        [Validation(Required=false)]
+        public string InspectionItems { get; set; }
+
         /// <summary>
         /// <para>The IDs of the related instances. Separate multiple IDs with commas (,).</para>
         /// 

@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
-    public class UpdateEdgeFunctionResponse : TeaModel {
+    public class RenameApiKeyResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public UpdateEdgeFunctionResponseBody Body { get; set; }
+        public RenameApiKeyResponseBody Body { get; set; }
 
     }
 

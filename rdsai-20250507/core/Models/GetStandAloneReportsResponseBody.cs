@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            [NameInMap("InspectionItems")]
+            [Validation(Required=false)]
+            public string InspectionItems { get; set; }
+
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }

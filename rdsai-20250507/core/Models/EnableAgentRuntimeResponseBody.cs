@@ -8,22 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
-    public class DeleteEdgeFunctionResponseBody : TeaModel {
+    public class EnableAgentRuntimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>fc-xxxx</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>ef-****</para>
-        /// </summary>
-        [NameInMap("EdgeFunctionName")]
-        [Validation(Required=false)]
-        public string EdgeFunctionName { get; set; }
-
-        /// <summary>
-        /// <para>The ID of the RDS Supabase instance.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ra-supabase-8moov5lxba***</para>
+        /// <para>ra-supabase-8moov5lxba****</para>
         /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
@@ -33,7 +21,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FE9C65D7-930F-57A5-A207-8C396329241C</para>
+        /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

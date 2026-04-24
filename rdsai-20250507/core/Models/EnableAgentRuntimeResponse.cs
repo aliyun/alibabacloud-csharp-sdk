@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
-    public class CreateEdgeFunctionResponse : TeaModel {
+    public class EnableAgentRuntimeResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public CreateEdgeFunctionResponseBody Body { get; set; }
+        public EnableAgentRuntimeResponseBody Body { get; set; }
 
     }
 
