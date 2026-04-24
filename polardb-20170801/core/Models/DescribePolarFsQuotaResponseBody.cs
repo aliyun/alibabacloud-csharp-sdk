@@ -35,6 +35,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>/data</para>
+        /// </summary>
+        [NameInMap("Path")]
+        [Validation(Required=false)]
+        public string Path { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>pfs-2ze0i74ka607*****</para>
         /// </summary>
         [NameInMap("PolarFsInstanceId")]
@@ -132,6 +140,52 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [NameInMap("SizeLimit")]
             [Validation(Required=false)]
             public long? SizeLimit { get; set; }
+
+        }
+
+        [NameInMap("QuotaItems")]
+        [Validation(Required=false)]
+        public List<DescribePolarFsQuotaResponseBodyQuotaItems> QuotaItems { get; set; }
+        public class DescribePolarFsQuotaResponseBodyQuotaItems : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1073741824</para>
+            /// </summary>
+            [NameInMap("Capacity")]
+            [Validation(Required=false)]
+            public long? Capacity { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("Inodes")]
+            [Validation(Required=false)]
+            public long? Inodes { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>/data</para>
+            /// </summary>
+            [NameInMap("Path")]
+            [Validation(Required=false)]
+            public string Path { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>104857600</para>
+            /// </summary>
+            [NameInMap("UsedCapacity")]
+            [Validation(Required=false)]
+            public long? UsedCapacity { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
+            [NameInMap("UsedInodes")]
+            [Validation(Required=false)]
+            public long? UsedInodes { get; set; }
 
         }
 

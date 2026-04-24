@@ -18,6 +18,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>/data</para>
+        /// </summary>
+        [NameInMap("Path")]
+        [Validation(Required=false)]
+        public string Path { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -26,6 +34,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("PolarFsInstanceId")]
         [Validation(Required=false)]
         public string PolarFsInstanceId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>quotaPolicy</para>
+        /// </summary>
+        [NameInMap("QuotaType")]
+        [Validation(Required=false)]
+        public string QuotaType { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

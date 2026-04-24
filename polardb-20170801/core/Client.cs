@@ -573,6 +573,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>新增polarfs bucket路径</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddPolarFsPathMappingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddPolarFsPathMappingResponse
+        /// </returns>
+        public AddPolarFsPathMappingResponse AddPolarFsPathMappingWithOptions(AddPolarFsPathMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomBucketPathList))
+            {
+                query["CustomBucketPathList"] = request.CustomBucketPathList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddPolarFsPathMapping",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddPolarFsPathMappingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增polarfs bucket路径</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddPolarFsPathMappingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddPolarFsPathMappingResponse
+        /// </returns>
+        public async Task<AddPolarFsPathMappingResponse> AddPolarFsPathMappingWithOptionsAsync(AddPolarFsPathMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomBucketPathList))
+            {
+                query["CustomBucketPathList"] = request.CustomBucketPathList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddPolarFsPathMapping",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddPolarFsPathMappingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增polarfs bucket路径</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddPolarFsPathMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddPolarFsPathMappingResponse
+        /// </returns>
+        public AddPolarFsPathMappingResponse AddPolarFsPathMapping(AddPolarFsPathMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddPolarFsPathMappingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增polarfs bucket路径</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddPolarFsPathMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddPolarFsPathMappingResponse
+        /// </returns>
+        public async Task<AddPolarFsPathMappingResponse> AddPolarFsPathMappingAsync(AddPolarFsPathMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddPolarFsPathMappingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>新增PolarFs Quota规则</para>
         /// </summary>
         /// 
@@ -14993,6 +15129,142 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeletePolarFsObjectsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除polar fs bucket路径</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsPathMappingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsPathMappingResponse
+        /// </returns>
+        public DeletePolarFsPathMappingResponse DeletePolarFsPathMappingWithOptions(DeletePolarFsPathMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomBucketPathList))
+            {
+                query["CustomBucketPathList"] = request.CustomBucketPathList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePolarFsPathMapping",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePolarFsPathMappingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除polar fs bucket路径</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsPathMappingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsPathMappingResponse
+        /// </returns>
+        public async Task<DeletePolarFsPathMappingResponse> DeletePolarFsPathMappingWithOptionsAsync(DeletePolarFsPathMappingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomBucketPathList))
+            {
+                query["CustomBucketPathList"] = request.CustomBucketPathList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
+            {
+                query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeletePolarFsPathMapping",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeletePolarFsPathMappingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除polar fs bucket路径</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsPathMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsPathMappingResponse
+        /// </returns>
+        public DeletePolarFsPathMappingResponse DeletePolarFsPathMapping(DeletePolarFsPathMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeletePolarFsPathMappingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除polar fs bucket路径</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeletePolarFsPathMappingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeletePolarFsPathMappingResponse
+        /// </returns>
+        public async Task<DeletePolarFsPathMappingResponse> DeletePolarFsPathMappingAsync(DeletePolarFsPathMappingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeletePolarFsPathMappingWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -32954,9 +33226,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
             {
                 query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaType))
+            {
+                query["QuotaType"] = request.QuotaType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -33004,9 +33284,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
             {
                 query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaType))
+            {
+                query["QuotaType"] = request.QuotaType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -53749,7 +54037,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为目录应用配额规则</para>
+        /// <para>为目录配置配额或应用配额规则</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53799,7 +54087,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为目录应用配额规则</para>
+        /// <para>为目录配置配额或应用配额规则</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53849,7 +54137,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为目录应用配额规则</para>
+        /// <para>为目录配置配额或应用配额规则</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53867,7 +54155,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为目录应用配额规则</para>
+        /// <para>为目录配置配额或应用配额规则</para>
         /// </summary>
         /// 
         /// <param name="request">

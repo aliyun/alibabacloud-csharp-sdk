@@ -26,11 +26,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public class SetPolarFsFileQuotaRequestFilePathQuotas : TeaModel {
             /// <summary>
             /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("Capacity")]
+            [Validation(Required=false)]
+            public long? Capacity { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>/a/project</para>
             /// </summary>
             [NameInMap("FilePathId")]
             [Validation(Required=false)]
             public string FilePathId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>100</para>
+            /// </summary>
+            [NameInMap("Inodes")]
+            [Validation(Required=false)]
+            public long? Inodes { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
