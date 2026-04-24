@@ -34,9 +34,6 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public bool? EnableSLB { get; set; }
 
-        /// <summary>
-        /// <para>The network information about the cluster.</para>
-        /// </summary>
         [NameInMap("NetInfoItems")]
         [Validation(Required=false)]
         public DescribeDBClusterNetInfoItemsResponseBodyNetInfoItems NetInfoItems { get; set; }
@@ -45,102 +42,38 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public List<DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem> NetInfoItem { get; set; }
             public class DescribeDBClusterNetInfoItemsResponseBodyNetInfoItemsNetInfoItem : TeaModel {
-                /// <summary>
-                /// <para>The endpoint that is used to connect to the database.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cc-bp1554t789i8e****.clickhouse.ads.aliyuncs.com</para>
-                /// </summary>
                 [NameInMap("ConnectionString")]
                 [Validation(Required=false)]
                 public string ConnectionString { get; set; }
 
-                /// <summary>
-                /// <para>The HTTP port number.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>8123</para>
-                /// </summary>
                 [NameInMap("HttpPort")]
                 [Validation(Required=false)]
                 public string HttpPort { get; set; }
 
-                /// <summary>
-                /// <para>The HTTPS port number.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>8443</para>
-                /// </summary>
                 [NameInMap("HttpsPort")]
                 [Validation(Required=false)]
                 public string HttpsPort { get; set; }
 
-                /// <summary>
-                /// <para>The IP address.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>10.255.234.251</para>
-                /// </summary>
                 [NameInMap("IPAddress")]
                 [Validation(Required=false)]
                 public string IPAddress { get; set; }
 
-                /// <summary>
-                /// <para>The port number that is used in Java Database Connectivity (JDBC).</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3306</para>
-                /// </summary>
                 [NameInMap("JdbcPort")]
                 [Validation(Required=false)]
                 public string JdbcPort { get; set; }
 
-                /// <summary>
-                /// <para>The port of the MySQL instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>9004</para>
-                /// </summary>
                 [NameInMap("MySQLPort")]
                 [Validation(Required=false)]
                 public string MySQLPort { get; set; }
 
-                /// <summary>
-                /// <para>The network type of the endpoint. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Public: public endpoint</description></item>
-                /// <item><description>VPC: VPC</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>VPC</para>
-                /// </summary>
                 [NameInMap("NetType")]
                 [Validation(Required=false)]
                 public string NetType { get; set; }
 
-                /// <summary>
-                /// <para>The vSwitch ID.</para>
-                /// <remarks>
-                /// <para> If the value of the NetType parameter is set to Public, an empty string is returned.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vsw-bp1gzt31twhlo0sa5****</para>
-                /// </summary>
                 [NameInMap("VSwitchId")]
                 [Validation(Required=false)]
                 public string VSwitchId { get; set; }
 
-                /// <summary>
-                /// <para>The virtual private cloud (VPC) ID.</para>
-                /// <remarks>
-                /// <para> If the value of the NetType parameter is set to Public, an empty string is returned.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>vpc-bp175iuvg8nxqraf2****</para>
-                /// </summary>
                 [NameInMap("VpcId")]
                 [Validation(Required=false)]
                 public string VpcId { get; set; }

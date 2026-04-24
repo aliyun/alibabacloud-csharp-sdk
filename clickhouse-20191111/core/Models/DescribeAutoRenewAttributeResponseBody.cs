@@ -21,42 +21,22 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [Validation(Required=false)]
                 public bool? AutoRenewEnabled { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>cc-2ze57pg09*****</para>
-                /// </summary>
                 [NameInMap("DBClusterId")]
                 [Validation(Required=false)]
                 public string DBClusterId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public int? Duration { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>Year</para>
-                /// </summary>
                 [NameInMap("PeriodUnit")]
                 [Validation(Required=false)]
                 public string PeriodUnit { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>cn-beijing</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>AutoRenewal</para>
-                /// </summary>
                 [NameInMap("RenewalStatus")]
                 [Validation(Required=false)]
                 public string RenewalStatus { get; set; }

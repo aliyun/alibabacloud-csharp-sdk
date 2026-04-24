@@ -58,9 +58,6 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The error information returned for a check failure.</para>
-        /// </summary>
         [NameInMap("TableDetails")]
         [Validation(Required=false)]
         public CheckScaleOutBalancedResponseBodyTableDetails TableDetails { get; set; }
@@ -69,46 +66,18 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public List<CheckScaleOutBalancedResponseBodyTableDetailsTableDetail> TableDetail { get; set; }
             public class CheckScaleOutBalancedResponseBodyTableDetailsTableDetail : TeaModel {
-                /// <summary>
-                /// <para>The cluster. The value is fixed as <b>default</b>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>default</para>
-                /// </summary>
                 [NameInMap("Cluster")]
                 [Validation(Required=false)]
                 public string Cluster { get; set; }
 
-                /// <summary>
-                /// <para>The database name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>db_name</para>
-                /// </summary>
                 [NameInMap("Database")]
                 [Validation(Required=false)]
                 public string Database { get; set; }
 
-                /// <summary>
-                /// <para>The error details. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>1</b>: The unique distributed table is missing.</description></item>
-                /// <item><description><b>2</b>: More than one distributed table exists for the local table.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
                 public int? Detail { get; set; }
 
-                /// <summary>
-                /// <para>The name of the local table.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("TableName")]
                 [Validation(Required=false)]
                 public string TableName { get; set; }

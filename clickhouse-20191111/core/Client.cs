@@ -758,7 +758,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消预约重启</para>
+        /// <para>Cancels the scheduled restart time of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -832,7 +832,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消预约重启</para>
+        /// <para>Cancels the scheduled restart time of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -906,7 +906,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消预约重启</para>
+        /// <para>Cancels the scheduled restart time of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -924,7 +924,7 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消预约重启</para>
+        /// <para>Cancels the scheduled restart time of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9808,6 +9808,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return await DescribeSlowLogRecordsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trend of slow query logs for an ApsaraDB for ClickHouse cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlowLogTrendRequest
         /// </param>
@@ -9877,6 +9882,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeSlowLogTrendResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trend of slow query logs for an ApsaraDB for ClickHouse cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlowLogTrendRequest
         /// </param>
@@ -9946,6 +9956,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return TeaModel.ToObject<DescribeSlowLogTrendResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trend of slow query logs for an ApsaraDB for ClickHouse cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlowLogTrendRequest
         /// </param>
@@ -9959,6 +9974,11 @@ namespace AlibabaCloud.SDK.Clickhouse20191111
             return DescribeSlowLogTrendWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the trend of slow query logs for an ApsaraDB for ClickHouse cluster.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSlowLogTrendRequest
         /// </param>

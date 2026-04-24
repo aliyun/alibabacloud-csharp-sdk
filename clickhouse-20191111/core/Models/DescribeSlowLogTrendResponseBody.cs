@@ -29,42 +29,22 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [Validation(Required=false)]
                 public List<DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet> ResultSet { get; set; }
                 public class DescribeSlowLogTrendResponseBodySlowLogTrendDataResultSet : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2000</para>
-                    /// </summary>
                     [NameInMap("AvgQueryDurationMs")]
                     [Validation(Required=false)]
                     public string AvgQueryDurationMs { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>4000</para>
-                    /// </summary>
                     [NameInMap("Count")]
                     [Validation(Required=false)]
                     public string Count { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>3000</para>
-                    /// </summary>
                     [NameInMap("MaxQueryDurationMs")]
                     [Validation(Required=false)]
                     public string MaxQueryDurationMs { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1000</para>
-                    /// </summary>
                     [NameInMap("MinQueryDurationMs")]
                     [Validation(Required=false)]
                     public string MinQueryDurationMs { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2022-05-22 20:00:01</para>
-                    /// </summary>
                     [NameInMap("QueryStartTime")]
                     [Validation(Required=false)]
                     public string QueryStartTime { get; set; }
@@ -127,18 +107,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [Validation(Required=false)]
                 public List<DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet> ResultSet { get; set; }
                 public class DescribeSlowLogTrendResponseBodySlowLogTrendTableSchemaResultSet : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>query_start_time</para>
-                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>UInt64</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }

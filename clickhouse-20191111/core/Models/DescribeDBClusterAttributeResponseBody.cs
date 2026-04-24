@@ -612,9 +612,6 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public int? SupportOss { get; set; }
 
-            /// <summary>
-            /// <para>The tags.</para>
-            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public DescribeDBClusterAttributeResponseBodyDBClusterTags Tags { get; set; }
@@ -623,22 +620,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [Validation(Required=false)]
                 public List<DescribeDBClusterAttributeResponseBodyDBClusterTagsTag> Tag { get; set; }
                 public class DescribeDBClusterAttributeResponseBodyDBClusterTagsTag : TeaModel {
-                    /// <summary>
-                    /// <para>The tag name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>department</para>
-                    /// </summary>
                     [NameInMap("Key")]
                     [Validation(Required=false)]
                     public string Key { get; set; }
 
-                    /// <summary>
-                    /// <para>The tag value.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>it</para>
-                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }
@@ -686,6 +671,22 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [NameInMap("VpcIpAddr")]
             [Validation(Required=false)]
             public string VpcIpAddr { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>active</para>
+            /// </summary>
+            [NameInMap("WebUISnatStatus")]
+            [Validation(Required=false)]
+            public string WebUISnatStatus { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>active</para>
+            /// </summary>
+            [NameInMap("WebUIStatus")]
+            [Validation(Required=false)]
+            public string WebUIStatus { get; set; }
 
             /// <summary>
             /// <para>The zone ID.</para>

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 {
     public class DescribeAccountsResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The database accounts.</para>
-        /// </summary>
         [NameInMap("Accounts")]
         [Validation(Required=false)]
         public DescribeAccountsResponseBodyAccounts Accounts { get; set; }
@@ -20,65 +17,22 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
             [Validation(Required=false)]
             public List<DescribeAccountsResponseBodyAccountsAccount> Account { get; set; }
             public class DescribeAccountsResponseBodyAccountsAccount : TeaModel {
-                /// <summary>
-                /// <para>The description of the database account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("AccountDescription")]
                 [Validation(Required=false)]
                 public string AccountDescription { get; set; }
 
-                /// <summary>
-                /// <para>The name of the database account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>test</para>
-                /// </summary>
                 [NameInMap("AccountName")]
                 [Validation(Required=false)]
                 public string AccountName { get; set; }
 
-                /// <summary>
-                /// <para>The state of the database account. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Creating</b></description></item>
-                /// <item><description><b>Available</b></description></item>
-                /// <item><description><b>AuthorityModifying</b></description></item>
-                /// <item><description><b>Deleting</b></description></item>
-                /// </list>
-                /// <remarks>
-                /// <para> Only XML-configured database accounts can be in the <b>AuthorityModifying</b> state.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Creating</para>
-                /// </summary>
                 [NameInMap("AccountStatus")]
                 [Validation(Required=false)]
                 public string AccountStatus { get; set; }
 
-                /// <summary>
-                /// <para>The type of the database account. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><b>Super</b>: privileged account</description></item>
-                /// <item><description><b>Normal</b>: standard account</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Super</para>
-                /// </summary>
                 [NameInMap("AccountType")]
                 [Validation(Required=false)]
                 public string AccountType { get; set; }
 
-                /// <summary>
-                /// <para>The configuration mode of the database account.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>SQL</para>
-                /// </summary>
                 [NameInMap("ConfigType")]
                 [Validation(Required=false)]
                 public string ConfigType { get; set; }

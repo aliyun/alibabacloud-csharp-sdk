@@ -16,9 +16,6 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
         [Validation(Required=false)]
         public DescribeProcessListResponseBodyProcessList ProcessList { get; set; }
         public class DescribeProcessListResponseBodyProcessList : TeaModel {
-            /// <summary>
-            /// <para>The details of the query.</para>
-            /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public DescribeProcessListResponseBodyProcessListData Data { get; set; }
@@ -27,62 +24,26 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [Validation(Required=false)]
                 public List<DescribeProcessListResponseBodyProcessListDataResultSet> ResultSet { get; set; }
                 public class DescribeProcessListResponseBodyProcessListDataResultSet : TeaModel {
-                    /// <summary>
-                    /// <para>The IP address of the client that initiates the query.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>::ffff:10.1.XX.XX</para>
-                    /// </summary>
                     [NameInMap("InitialAddress")]
                     [Validation(Required=false)]
                     public string InitialAddress { get; set; }
 
-                    /// <summary>
-                    /// <para>The query ID.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>2dd144fd-4230-4249-b15c-e63f964fbb5a</para>
-                    /// </summary>
                     [NameInMap("InitialQueryId")]
                     [Validation(Required=false)]
                     public string InitialQueryId { get; set; }
 
-                    /// <summary>
-                    /// <para>The database account.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>test</para>
-                    /// </summary>
                     [NameInMap("InitialUser")]
                     [Validation(Required=false)]
                     public string InitialUser { get; set; }
 
-                    /// <summary>
-                    /// <para>The SQL statement that is executed in the query.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>select * from test order by score limit 1;</para>
-                    /// </summary>
                     [NameInMap("Query")]
                     [Validation(Required=false)]
                     public string Query { get; set; }
 
-                    /// <summary>
-                    /// <para>The execution duration of the query. Unit: milliseconds.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>2000</para>
-                    /// </summary>
                     [NameInMap("QueryDurationMs")]
                     [Validation(Required=false)]
                     public string QueryDurationMs { get; set; }
 
-                    /// <summary>
-                    /// <para>The beginning of the time range to query. The value is in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>2021-02-02T09:14:48Z</para>
-                    /// </summary>
                     [NameInMap("QueryStartTime")]
                     [Validation(Required=false)]
                     public string QueryStartTime { get; set; }
@@ -150,9 +111,6 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
 
             }
 
-            /// <summary>
-            /// <para>Details of the columns.</para>
-            /// </summary>
             [NameInMap("TableSchema")]
             [Validation(Required=false)]
             public DescribeProcessListResponseBodyProcessListTableSchema TableSchema { get; set; }
@@ -161,22 +119,10 @@ namespace AlibabaCloud.SDK.Clickhouse20191111.Models
                 [Validation(Required=false)]
                 public List<DescribeProcessListResponseBodyProcessListTableSchemaResultSet> ResultSet { get; set; }
                 public class DescribeProcessListResponseBodyProcessListTableSchemaResultSet : TeaModel {
-                    /// <summary>
-                    /// <para>The column name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>InitialUser</para>
-                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
-                    /// <summary>
-                    /// <para>The column type.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>String</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
