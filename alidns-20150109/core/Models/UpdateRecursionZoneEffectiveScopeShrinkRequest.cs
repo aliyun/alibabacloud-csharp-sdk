@@ -22,6 +22,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EffectiveScopesShrink { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>173671468000011</para>
         /// </summary>

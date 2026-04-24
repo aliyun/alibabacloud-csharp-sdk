@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class DescribeRecursionZoneRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>169783221000012</para>
         /// </summary>

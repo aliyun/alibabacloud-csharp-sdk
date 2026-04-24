@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string EnableStatus { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1781234321</para>
         /// </summary>

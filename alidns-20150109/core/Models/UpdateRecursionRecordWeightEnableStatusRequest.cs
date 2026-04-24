@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>176432424234</para>
         /// </summary>

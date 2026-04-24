@@ -19,6 +19,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 
         /// <summary>
         /// <para>record id</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>173671468000010</para>

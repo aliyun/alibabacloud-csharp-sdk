@@ -26,6 +26,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? Priority { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9*******</para>
         /// </summary>
