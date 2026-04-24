@@ -1671,6 +1671,126 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询一刻口播视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeVoiceNarratorJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeVoiceNarratorJobResponse
+        /// </returns>
+        public GetYikeVoiceNarratorJobResponse GetYikeVoiceNarratorJobWithOptions(GetYikeVoiceNarratorJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeVoiceNarratorJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeVoiceNarratorJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询一刻口播视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeVoiceNarratorJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeVoiceNarratorJobResponse
+        /// </returns>
+        public async Task<GetYikeVoiceNarratorJobResponse> GetYikeVoiceNarratorJobWithOptionsAsync(GetYikeVoiceNarratorJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikeVoiceNarratorJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikeVoiceNarratorJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询一刻口播视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeVoiceNarratorJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeVoiceNarratorJobResponse
+        /// </returns>
+        public GetYikeVoiceNarratorJobResponse GetYikeVoiceNarratorJob(GetYikeVoiceNarratorJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetYikeVoiceNarratorJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询一刻口播视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikeVoiceNarratorJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikeVoiceNarratorJobResponse
+        /// </returns>
+        public async Task<GetYikeVoiceNarratorJobResponse> GetYikeVoiceNarratorJobAsync(GetYikeVoiceNarratorJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetYikeVoiceNarratorJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取一刻文件夹列表</para>
         /// </summary>
         /// 
@@ -3103,6 +3223,134 @@ namespace AlibabaCloud.SDK.Yike20260319
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitYikeStoryboardJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻口播视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeVoiceNarratorJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeVoiceNarratorJobResponse
+        /// </returns>
+        public SubmitYikeVoiceNarratorJobResponse SubmitYikeVoiceNarratorJobWithOptions(SubmitYikeVoiceNarratorJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParams))
+            {
+                body["JobParams"] = request.JobParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                body["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitYikeVoiceNarratorJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitYikeVoiceNarratorJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻口播视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeVoiceNarratorJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeVoiceNarratorJobResponse
+        /// </returns>
+        public async Task<SubmitYikeVoiceNarratorJobResponse> SubmitYikeVoiceNarratorJobWithOptionsAsync(SubmitYikeVoiceNarratorJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParams))
+            {
+                body["JobParams"] = request.JobParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                body["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitYikeVoiceNarratorJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitYikeVoiceNarratorJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻口播视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeVoiceNarratorJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeVoiceNarratorJobResponse
+        /// </returns>
+        public SubmitYikeVoiceNarratorJobResponse SubmitYikeVoiceNarratorJob(SubmitYikeVoiceNarratorJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitYikeVoiceNarratorJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻口播视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikeVoiceNarratorJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikeVoiceNarratorJobResponse
+        /// </returns>
+        public async Task<SubmitYikeVoiceNarratorJobResponse> SubmitYikeVoiceNarratorJobAsync(SubmitYikeVoiceNarratorJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitYikeVoiceNarratorJobWithOptionsAsync(request, runtime);
         }
 
     }
