@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
 
+                [NameInMap("ErrorCode")]
+                [Validation(Required=false)]
+                public string ErrorCode { get; set; }
+
+                [NameInMap("ErrorInfo")]
+                [Validation(Required=false)]
+                public string ErrorInfo { get; set; }
+
                 [NameInMap("ExecutionId")]
                 [Validation(Required=false)]
                 public string ExecutionId { get; set; }
