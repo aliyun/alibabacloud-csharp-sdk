@@ -1183,6 +1183,318 @@ namespace AlibabaCloud.SDK.Dyvmsapi20170525
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>座席新增</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudCreateAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudCreateAgentResponse
+        /// </returns>
+        public CloudCreateAgentResponse CloudCreateAgentWithOptions(CloudCreateAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Active))
+            {
+                query["Active"] = request.Active;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AreaCode))
+            {
+                query["AreaCode"] = request.AreaCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallPower))
+            {
+                query["CallPower"] = request.CallPower;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cno))
+            {
+                query["Cno"] = request.Cno;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnterpriseId))
+            {
+                query["EnterpriseId"] = request.EnterpriseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IbRecord))
+            {
+                query["IbRecord"] = request.IbRecord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAsr))
+            {
+                query["IsAsr"] = request.IsAsr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsOb))
+            {
+                query["IsOb"] = request.IsOb;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsObRemember))
+            {
+                query["IsObRemember"] = request.IsObRemember;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsQualityCheck))
+            {
+                query["IsQualityCheck"] = request.IsQualityCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObClid))
+            {
+                query["ObClid"] = request.ObClid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObClidProperty))
+            {
+                query["ObClidProperty"] = request.ObClidProperty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObClidType))
+            {
+                query["ObClidType"] = request.ObClidType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObRecord))
+            {
+                query["ObRecord"] = request.ObRecord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermitObPreviewTime))
+            {
+                query["PermitObPreviewTime"] = request.PermitObPreviewTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Power))
+            {
+                query["Power"] = request.Power;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillIds))
+            {
+                query["SkillIds"] = request.SkillIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillLevels))
+            {
+                query["SkillLevels"] = request.SkillLevels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebrtcUrlType))
+            {
+                query["WebrtcUrlType"] = request.WebrtcUrlType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Wrapup))
+            {
+                query["Wrapup"] = request.Wrapup;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloudCreateAgent",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloudCreateAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>座席新增</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudCreateAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudCreateAgentResponse
+        /// </returns>
+        public async Task<CloudCreateAgentResponse> CloudCreateAgentWithOptionsAsync(CloudCreateAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Active))
+            {
+                query["Active"] = request.Active;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AreaCode))
+            {
+                query["AreaCode"] = request.AreaCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallPower))
+            {
+                query["CallPower"] = request.CallPower;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cno))
+            {
+                query["Cno"] = request.Cno;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnterpriseId))
+            {
+                query["EnterpriseId"] = request.EnterpriseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IbRecord))
+            {
+                query["IbRecord"] = request.IbRecord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAsr))
+            {
+                query["IsAsr"] = request.IsAsr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsOb))
+            {
+                query["IsOb"] = request.IsOb;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsObRemember))
+            {
+                query["IsObRemember"] = request.IsObRemember;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsQualityCheck))
+            {
+                query["IsQualityCheck"] = request.IsQualityCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObClid))
+            {
+                query["ObClid"] = request.ObClid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObClidProperty))
+            {
+                query["ObClidProperty"] = request.ObClidProperty;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObClidType))
+            {
+                query["ObClidType"] = request.ObClidType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObRecord))
+            {
+                query["ObRecord"] = request.ObRecord;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermitObPreviewTime))
+            {
+                query["PermitObPreviewTime"] = request.PermitObPreviewTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Power))
+            {
+                query["Power"] = request.Power;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillIds))
+            {
+                query["SkillIds"] = request.SkillIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillLevels))
+            {
+                query["SkillLevels"] = request.SkillLevels;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebrtcUrlType))
+            {
+                query["WebrtcUrlType"] = request.WebrtcUrlType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Wrapup))
+            {
+                query["Wrapup"] = request.Wrapup;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CloudCreateAgent",
+                Version = "2017-05-25",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CloudCreateAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>座席新增</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudCreateAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudCreateAgentResponse
+        /// </returns>
+        public CloudCreateAgentResponse CloudCreateAgent(CloudCreateAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CloudCreateAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>座席新增</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CloudCreateAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CloudCreateAgentResponse
+        /// </returns>
+        public async Task<CloudCreateAgentResponse> CloudCreateAgentAsync(CloudCreateAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CloudCreateAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>新增任务</para>
         /// </summary>
         /// 
