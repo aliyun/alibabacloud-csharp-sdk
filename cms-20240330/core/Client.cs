@@ -5909,6 +5909,188 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询元数据meta</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeMetricMetaListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMetricMetaListResponse
+        /// </returns>
+        public DescribeMetricMetaListResponse DescribeMetricMetaListWithOptions(DescribeMetricMetaListRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeMetricMetaListShrinkRequest request = new DescribeMetricMetaListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
+            {
+                request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "labels", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
+            {
+                query["labels"] = request.LabelsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaFormat))
+            {
+                query["metaFormat"] = request.MetaFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricName))
+            {
+                query["metricName"] = request.MetricName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMetricMetaList",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/describe-metric-meta-list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMetricMetaListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询元数据meta</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DescribeMetricMetaListRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMetricMetaListResponse
+        /// </returns>
+        public async Task<DescribeMetricMetaListResponse> DescribeMetricMetaListWithOptionsAsync(DescribeMetricMetaListRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribeMetricMetaListShrinkRequest request = new DescribeMetricMetaListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Labels))
+            {
+                request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "labels", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
+            {
+                query["labels"] = request.LabelsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetaFormat))
+            {
+                query["metaFormat"] = request.MetaFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricName))
+            {
+                query["metricName"] = request.MetricName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMetricMetaList",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/describe-metric-meta-list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMetricMetaListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询元数据meta</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMetricMetaListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMetricMetaListResponse
+        /// </returns>
+        public DescribeMetricMetaListResponse DescribeMetricMetaList(DescribeMetricMetaListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeMetricMetaListWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询元数据meta</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMetricMetaListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMetricMetaListResponse
+        /// </returns>
+        public async Task<DescribeMetricMetaListResponse> DescribeMetricMetaListAsync(DescribeMetricMetaListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeMetricMetaListWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询地域信息列表</para>
         /// </summary>
         /// 
