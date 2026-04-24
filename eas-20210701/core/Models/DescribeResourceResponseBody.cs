@@ -209,6 +209,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        [NameInMap("ServiceCount")]
+        [Validation(Required=false)]
+        public string ServiceCount { get; set; }
+
         /// <summary>
         /// <para>The state of the resource group.</para>
         /// 
