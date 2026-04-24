@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public AlertRuleTimeSpan NotifyTime { get; set; }
 
+        [NameInMap("qwencloudContacts")]
+        [Validation(Required=false)]
+        public Dictionary<string, Dictionary<string, object>> QwencloudContacts { get; set; }
+
         /// <summary>
         /// <para>Notification silence duration, in seconds.</para>
         /// 

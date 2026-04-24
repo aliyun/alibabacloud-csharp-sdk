@@ -360,6 +360,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string Expr { get; set; }
 
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("promQl")]
+            [Validation(Required=false)]
+            public string PromQl { get; set; }
+
             /// <summary>
             /// <para>Applicable query type: SLS_MULTI_QUERY.
             /// SLS query time offset start time (relative).

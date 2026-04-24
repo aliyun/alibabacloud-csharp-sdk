@@ -115,6 +115,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string HttpApiInterUrl { get; set; }
 
+            [NameInMap("httpApiInternalUrl")]
+            [Validation(Required=false)]
+            public string HttpApiInternalUrl { get; set; }
+
             /// <summary>
             /// <para>Private HTTP address.</para>
             /// 
@@ -233,6 +237,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [NameInMap("remoteReadInterUrl")]
             [Validation(Required=false)]
             public string RemoteReadInterUrl { get; set; }
+
+            [NameInMap("remoteReadInternalUrl")]
+            [Validation(Required=false)]
+            public string RemoteReadInternalUrl { get; set; }
 
             /// <summary>
             /// <para>Remote read intranet URL.</para>

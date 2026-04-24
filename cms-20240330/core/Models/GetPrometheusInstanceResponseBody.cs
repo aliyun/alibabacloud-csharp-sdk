@@ -172,6 +172,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string HttpApiInterUrl { get; set; }
 
+            [NameInMap("httpApiInternalUrl")]
+            [Validation(Required=false)]
+            public string HttpApiInternalUrl { get; set; }
+
             /// <summary>
             /// <para>HTTP intranet address.</para>
             /// 
@@ -254,6 +258,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string PushGatewayInterUrl { get; set; }
 
+            [NameInMap("pushGatewayInternalUrl")]
+            [Validation(Required=false)]
+            public string PushGatewayInternalUrl { get; set; }
+
             /// <summary>
             /// <para>Intranet address of PushGateway.</para>
             /// 
@@ -284,6 +292,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string RemoteReadInterUrl { get; set; }
 
+            [NameInMap("remoteReadInternalUrl")]
+            [Validation(Required=false)]
+            public string RemoteReadInternalUrl { get; set; }
+
             /// <summary>
             /// <para>Intranet read address.</para>
             /// 
@@ -303,6 +315,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [NameInMap("remoteWriteInterUrl")]
             [Validation(Required=false)]
             public string RemoteWriteInterUrl { get; set; }
+
+            [NameInMap("remoteWriteInternalUrl")]
+            [Validation(Required=false)]
+            public string RemoteWriteInternalUrl { get; set; }
 
             /// <summary>
             /// <para>Intranet write address.</para>

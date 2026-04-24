@@ -80,6 +80,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         }
 
+        [NameInMap("maxResults")]
+        [Validation(Required=false)]
+        public string MaxResults { get; set; }
+
+        [NameInMap("nextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>ID of the request</para>
         /// 
@@ -89,6 +97,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("totalCount")]
+        [Validation(Required=false)]
+        public string TotalCount { get; set; }
 
     }
 

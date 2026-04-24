@@ -326,6 +326,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         }
 
+        [NameInMap("enableSeveritySuppression")]
+        [Validation(Required=false)]
+        public bool? EnableSeveritySuppression { get; set; }
+
         /// <summary>
         /// <para>Applicable condition type: CMS_BASIC_CONDITION.
         /// Valid values:</para>
@@ -562,6 +566,56 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [NameInMap("period")]
             [Validation(Required=false)]
             public long? Period { get; set; }
+
+        }
+
+        [NameInMap("triggers")]
+        [Validation(Required=false)]
+        public List<AlertRuleConditionTriggers> Triggers { get; set; }
+        public class AlertRuleConditionTriggers : TeaModel {
+            [NameInMap("durationSecs")]
+            [Validation(Required=false)]
+            public int? DurationSecs { get; set; }
+
+            [NameInMap("expression")]
+            [Validation(Required=false)]
+            public AlertRuleConditionTriggersExpression Expression { get; set; }
+            public class AlertRuleConditionTriggersExpression : TeaModel {
+                [NameInMap("conditions")]
+                [Validation(Required=false)]
+                public List<AlertRuleConditionTriggersExpressionConditions> Conditions { get; set; }
+                public class AlertRuleConditionTriggersExpressionConditions : TeaModel {
+                    [NameInMap("expressionType")]
+                    [Validation(Required=false)]
+                    public string ExpressionType { get; set; }
+
+                    [NameInMap("operator")]
+                    [Validation(Required=false)]
+                    public string Operator { get; set; }
+
+                    [NameInMap("queryName")]
+                    [Validation(Required=false)]
+                    public string QueryName { get; set; }
+
+                    [NameInMap("threshold")]
+                    [Validation(Required=false)]
+                    public double? Threshold { get; set; }
+
+                }
+
+                [NameInMap("expressionType")]
+                [Validation(Required=false)]
+                public string ExpressionType { get; set; }
+
+                [NameInMap("logicOperator")]
+                [Validation(Required=false)]
+                public string LogicOperator { get; set; }
+
+            }
+
+            [NameInMap("severity")]
+            [Validation(Required=false)]
+            public string Severity { get; set; }
 
         }
 

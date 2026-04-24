@@ -110,6 +110,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("tenantId")]
+        [Validation(Required=false)]
+        public string TenantId { get; set; }
+
         /// <summary>
         /// <para>Data source type.
         /// Valid values:</para>

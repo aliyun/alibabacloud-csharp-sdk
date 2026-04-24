@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusVirtualInstancesRequest : TeaModel {
+        [NameInMap("maxResults")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
         /// <summary>
         /// <para>Optional cloud product</para>
         /// 
@@ -18,6 +22,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("namespace")]
         [Validation(Required=false)]
         public string Namespace { get; set; }
+
+        [NameInMap("nextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         [NameInMap("tenantId")]
         [Validation(Required=false)]

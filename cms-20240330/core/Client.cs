@@ -13886,9 +13886,17 @@ namespace AlibabaCloud.SDK.Cms20240330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -13941,9 +13949,17 @@ namespace AlibabaCloud.SDK.Cms20240330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
             {
                 query["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
