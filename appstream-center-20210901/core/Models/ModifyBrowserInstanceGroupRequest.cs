@@ -85,13 +85,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string BrowserParam { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
             [NameInMap("CookiesSync")]
             [Validation(Required=false)]
-            public string CookiesSync { get; set; }
+            public bool? CookiesSync { get; set; }
 
             /// <summary>
             /// <para>The home page.</para>
