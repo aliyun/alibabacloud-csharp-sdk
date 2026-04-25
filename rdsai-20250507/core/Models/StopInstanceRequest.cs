@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class StopInstanceRequest : TeaModel {
+        [NameInMap("Force")]
+        [Validation(Required=false)]
+        public bool? Force { get; set; }
+
         /// <summary>
         /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
