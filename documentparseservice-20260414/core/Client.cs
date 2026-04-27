@@ -43,6 +43,134 @@ namespace AlibabaCloud.SDK.DocumentParseService20260414
         /// </summary>
         /// 
         /// <param name="request">
+        /// DocumentParseOnlineApiRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DocumentParseOnlineApiResponse
+        /// </returns>
+        public DocumentParseOnlineApiResponse DocumentParseOnlineApiWithOptions(DocumentParseOnlineApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DocumentParseOnlineApi",
+                Version = "2026-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DocumentParseOnlineApiResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档解析测试接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DocumentParseOnlineApiRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DocumentParseOnlineApiResponse
+        /// </returns>
+        public async Task<DocumentParseOnlineApiResponse> DocumentParseOnlineApiWithOptionsAsync(DocumentParseOnlineApiRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUrl))
+            {
+                query["ImageUrl"] = request.ImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DocumentParseOnlineApi",
+                Version = "2026-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DocumentParseOnlineApiResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档解析测试接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DocumentParseOnlineApiRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DocumentParseOnlineApiResponse
+        /// </returns>
+        public DocumentParseOnlineApiResponse DocumentParseOnlineApi(DocumentParseOnlineApiRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DocumentParseOnlineApiWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档解析测试接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DocumentParseOnlineApiRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DocumentParseOnlineApiResponse
+        /// </returns>
+        public async Task<DocumentParseOnlineApiResponse> DocumentParseOnlineApiAsync(DocumentParseOnlineApiRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DocumentParseOnlineApiWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文档解析测试接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
         /// DocumentParseTestApiRequest
         /// </param>
         /// <param name="runtime">
