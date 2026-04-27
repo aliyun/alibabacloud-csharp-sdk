@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>挂载业务策略至指定审批流程</para>
+        /// <para>Mount a business policy to a specified approval flow</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>挂载业务策略至指定审批流程</para>
+        /// <para>Mount a business policy to a specified approval flow</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>挂载业务策略至指定审批流程</para>
+        /// <para>Mount a business policy to a specified approval flow</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>挂载业务策略至指定审批流程</para>
+        /// <para>Mount a business policy to a specified approval flow</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -315,7 +315,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建审批流程</para>
+        /// <para>Create an approval flow under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建审批流程</para>
+        /// <para>Create an approval flow under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -447,7 +447,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建审批流程</para>
+        /// <para>Create an approval flow under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -465,7 +465,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建审批流程</para>
+        /// <para>Create an approval flow under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -855,7 +855,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建加速策略</para>
+        /// <para>Create an enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -929,7 +929,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建加速策略</para>
+        /// <para>Create an enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1003,7 +1003,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建加速策略</para>
+        /// <para>Create an enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1021,7 +1021,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建加速策略</para>
+        /// <para>Create an enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1039,7 +1039,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建加速对象</para>
+        /// <para>Create an enterprise acceleration address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1091,7 +1091,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建加速对象</para>
+        /// <para>Create an enterprise acceleration address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1143,7 +1143,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建加速对象</para>
+        /// <para>Create an enterprise acceleration address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1161,7 +1161,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建加速对象</para>
+        /// <para>Create an enterprise acceleration address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1307,7 +1307,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网访问诊断任务</para>
+        /// <para>Create an internal network access diagnostic task</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1391,7 +1391,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网访问诊断任务</para>
+        /// <para>Create an internal network access diagnostic task</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1475,7 +1475,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网访问诊断任务</para>
+        /// <para>Create an internal network access diagnostic task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1493,7 +1493,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建内网访问诊断任务</para>
+        /// <para>Create an internal network access diagnostic task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3427,7 +3427,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除审批流程</para>
+        /// <para>Batch delete approval flows under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3475,7 +3475,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除审批流程</para>
+        /// <para>Batch delete approval flows under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3523,7 +3523,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除审批流程</para>
+        /// <para>Batch delete approval flows under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3541,7 +3541,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除审批流程</para>
+        /// <para>Batch delete approval flows under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3799,7 +3799,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除加速策略</para>
+        /// <para>Delete an enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3841,7 +3841,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除加速策略</para>
+        /// <para>Delete an enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3883,7 +3883,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除加速策略</para>
+        /// <para>Delete an enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3901,7 +3901,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除加速策略</para>
+        /// <para>Delete an enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3919,7 +3919,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除加速对象</para>
+        /// <para>Delete an enterprise acceleration address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3971,7 +3971,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除加速对象</para>
+        /// <para>Delete an enterprise acceleration address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4023,7 +4023,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除加速对象</para>
+        /// <para>Delete an enterprise acceleration address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4041,7 +4041,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除加速对象</para>
+        /// <para>Delete an enterprise acceleration address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4187,7 +4187,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteOtpConfig</para>
+        /// <para>Delete the employee OTP configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4229,7 +4229,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteOtpConfig</para>
+        /// <para>Delete the employee OTP configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4271,7 +4271,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteOtpConfig</para>
+        /// <para>Delete the employee OTP configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4289,7 +4289,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteOtpConfig</para>
+        /// <para>Delete the employee OTP configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5215,7 +5215,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑业务策略与审批流程</para>
+        /// <para>Detach business policies from approval flows</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5265,7 +5265,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑业务策略与审批流程</para>
+        /// <para>Detach business policies from approval flows</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5315,7 +5315,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑业务策略与审批流程</para>
+        /// <para>Detach business policies from approval flows</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5333,7 +5333,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑业务策略与审批流程</para>
+        /// <para>Detach business policies from approval flows</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5351,7 +5351,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用加速策略</para>
+        /// <para>Disable enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5393,7 +5393,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用加速策略</para>
+        /// <para>Disable enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5435,7 +5435,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用加速策略</para>
+        /// <para>Disable enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5453,7 +5453,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用加速策略</para>
+        /// <para>Disable enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5471,7 +5471,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用加速策略</para>
+        /// <para>Enable enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5513,7 +5513,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用加速策略</para>
+        /// <para>Enable enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5555,7 +5555,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用加速策略</para>
+        /// <para>Enable enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5573,7 +5573,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用加速策略</para>
+        /// <para>Enable enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5838,9 +5838,6 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <para>查询已启用的身份源配置</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetActiveIdpConfigRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5871,9 +5868,6 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <para>查询已启用的身份源配置</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetActiveIdpConfigRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5929,7 +5923,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批</para>
+        /// <para>Queries the details of an approval instance within your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5967,7 +5961,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批</para>
+        /// <para>Queries the details of an approval instance within your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6005,7 +5999,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批</para>
+        /// <para>Queries the details of an approval instance within your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6023,7 +6017,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批</para>
+        /// <para>Queries the details of an approval instance within your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6041,7 +6035,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批流程</para>
+        /// <para>Queries the details of an approval flow under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6079,7 +6073,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批流程</para>
+        /// <para>Queries the details of an approval flow under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6117,7 +6111,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批流程</para>
+        /// <para>Queries the details of an approval flow under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6135,7 +6129,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批流程</para>
+        /// <para>Queries the details of an approval flow under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6153,7 +6147,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批动态模板</para>
+        /// <para>Queries the details of an approval template within your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6191,7 +6185,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批动态模板</para>
+        /// <para>Queries the details of an approval template within your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6229,7 +6223,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批动态模板</para>
+        /// <para>Queries the details of an approval template within your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6247,7 +6241,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批动态模板</para>
+        /// <para>Queries the details of an approval template within your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6265,12 +6259,9 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自启动与防卸载策略配置</para>
+        /// <para>Queries the details of the Startup and anti-uninstall policy under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetBootAndAntiUninstallPolicyRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6298,12 +6289,9 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自启动与防卸载策略配置</para>
+        /// <para>Queries the details of the Startup and anti-uninstall policy under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetBootAndAntiUninstallPolicyRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6331,7 +6319,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自启动与防卸载策略配置</para>
+        /// <para>Queries the details of the Startup and anti-uninstall policy under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6345,7 +6333,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自启动与防卸载策略配置</para>
+        /// <para>Queries the details of the Startup and anti-uninstall policy under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6695,7 +6683,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网访问诊断任务详情</para>
+        /// <para>Query the details of an internal network access diagnostic task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6733,7 +6721,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网访问诊断任务详情</para>
+        /// <para>Query the details of an internal network access diagnostic task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6771,7 +6759,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网访问诊断任务详情</para>
+        /// <para>Query the details of an internal network access diagnostic task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6789,7 +6777,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询内网访问诊断任务详情</para>
+        /// <para>Query the details of an internal network access diagnostic task</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7591,7 +7579,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入加速对象异步任务</para>
+        /// <para>Batch import accelerated address List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7637,7 +7625,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入加速对象异步任务</para>
+        /// <para>Batch import accelerated address List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7683,7 +7671,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入加速对象异步任务</para>
+        /// <para>Batch import accelerated address List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7701,7 +7689,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入加速对象异步任务</para>
+        /// <para>Batch import accelerated address List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7719,7 +7707,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询内网访问策略的应用</para>
+        /// <para>Batch queries the applications of internal network access policies under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7757,7 +7745,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询内网访问策略的应用</para>
+        /// <para>Batch queries the applications of internal network access policies under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7795,7 +7783,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询内网访问策略的应用</para>
+        /// <para>Batch queries the applications of internal network access policies under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7813,7 +7801,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询内网访问策略的应用</para>
+        /// <para>Batch queries the applications of internal network access policies under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7943,7 +7931,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询审批流程</para>
+        /// <para>Queries the approval flow list under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7981,7 +7969,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询审批流程</para>
+        /// <para>Queries the approval flow list under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8019,7 +8007,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询审批流程</para>
+        /// <para>Queries the approval flow list under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8037,7 +8025,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询审批流程</para>
+        /// <para>Queries the approval flow list under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8055,7 +8043,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批渲染模板关联的流程</para>
+        /// <para>Query flows associated with an approval rendering template</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8093,7 +8081,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批渲染模板关联的流程</para>
+        /// <para>Query flows associated with an approval rendering template</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8131,7 +8119,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批渲染模板关联的流程</para>
+        /// <para>Query flows associated with an approval rendering template</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8149,7 +8137,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批渲染模板关联的流程</para>
+        /// <para>Query flows associated with an approval rendering template</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8167,7 +8155,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询审批动态模板</para>
+        /// <para>Queries the list of approval templates under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8205,7 +8193,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询审批动态模板</para>
+        /// <para>Queries the list of approval templates under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8243,7 +8231,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询审批动态模板</para>
+        /// <para>Queries the list of approval templates under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8261,7 +8249,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询审批动态模板</para>
+        /// <para>Queries the list of approval templates under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8279,7 +8267,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批流程关联的渲染模板</para>
+        /// <para>Query rendering templates associated with an approval flow</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8317,7 +8305,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批流程关联的渲染模板</para>
+        /// <para>Query rendering templates associated with an approval flow</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8355,7 +8343,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批流程关联的渲染模板</para>
+        /// <para>Query rendering templates associated with an approval flow</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8373,7 +8361,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询审批流程关联的渲染模板</para>
+        /// <para>Query rendering templates associated with an approval flow</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8391,7 +8379,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询审批</para>
+        /// <para>Queries the approval instance list under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8429,7 +8417,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询审批</para>
+        /// <para>Queries the approval instance list under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8467,7 +8455,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询审批</para>
+        /// <para>Queries the approval instance list under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8485,7 +8473,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询审批</para>
+        /// <para>Queries the approval instance list under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8727,7 +8715,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Query Dynamic Policy Disposal Processes</para>
+        /// <para>Batch query Dynamic policy handling flows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8765,7 +8753,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Query Dynamic Policy Disposal Processes</para>
+        /// <para>Batch query Dynamic policy handling flows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8803,7 +8791,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Query Dynamic Policy Disposal Processes</para>
+        /// <para>Batch query Dynamic policy handling flows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8821,7 +8809,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Query Dynamic Policy Disposal Processes</para>
+        /// <para>Batch query Dynamic policy handling flows.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8842,9 +8830,6 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <para>批量查询动态路由的地域</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListDynamicRouteRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8875,9 +8860,6 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// <para>批量查询动态路由的地域</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListDynamicRouteRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -9045,7 +9027,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询加速策略日志列表</para>
+        /// <para>Queries enterprise acceleration Audit logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9083,7 +9065,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询加速策略日志列表</para>
+        /// <para>Queries enterprise acceleration Audit logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9121,7 +9103,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询加速策略日志列表</para>
+        /// <para>Queries enterprise acceleration Audit logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9139,7 +9121,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询加速策略日志列表</para>
+        /// <para>Queries enterprise acceleration Audit logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9157,7 +9139,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询加速策略列表</para>
+        /// <para>Query acceleration policy list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9195,7 +9177,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询加速策略列表</para>
+        /// <para>Query acceleration policy list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9233,7 +9215,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询加速策略列表</para>
+        /// <para>Query acceleration policy list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9251,7 +9233,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询加速策略列表</para>
+        /// <para>Query acceleration policy list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9269,7 +9251,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询加速对象列表</para>
+        /// <para>Query the enterprise acceleration address list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9307,7 +9289,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询加速对象列表</para>
+        /// <para>Query the enterprise acceleration address list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9345,7 +9327,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询加速对象列表</para>
+        /// <para>Query the enterprise acceleration address list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9363,7 +9345,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询加速对象列表</para>
+        /// <para>Query the enterprise acceleration address list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9489,6 +9471,230 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListExcessiveDeviceRegistrationApplicationsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询转发策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListForwardStrategiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListForwardStrategiesResponse
+        /// </returns>
+        public ListForwardStrategiesResponse ListForwardStrategiesWithOptions(ListForwardStrategiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListForwardStrategies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListForwardStrategiesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询转发策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListForwardStrategiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListForwardStrategiesResponse
+        /// </returns>
+        public async Task<ListForwardStrategiesResponse> ListForwardStrategiesWithOptionsAsync(ListForwardStrategiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListForwardStrategies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListForwardStrategiesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询转发策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListForwardStrategiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListForwardStrategiesResponse
+        /// </returns>
+        public ListForwardStrategiesResponse ListForwardStrategies(ListForwardStrategiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListForwardStrategiesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询转发策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListForwardStrategiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListForwardStrategiesResponse
+        /// </returns>
+        public async Task<ListForwardStrategiesResponse> ListForwardStrategiesAsync(ListForwardStrategiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListForwardStrategiesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询转发策略绑定项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListForwardStrategyBindingItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListForwardStrategyBindingItemsResponse
+        /// </returns>
+        public ListForwardStrategyBindingItemsResponse ListForwardStrategyBindingItemsWithOptions(ListForwardStrategyBindingItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListForwardStrategyBindingItems",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListForwardStrategyBindingItemsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询转发策略绑定项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListForwardStrategyBindingItemsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListForwardStrategyBindingItemsResponse
+        /// </returns>
+        public async Task<ListForwardStrategyBindingItemsResponse> ListForwardStrategyBindingItemsWithOptionsAsync(ListForwardStrategyBindingItemsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListForwardStrategyBindingItems",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListForwardStrategyBindingItemsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询转发策略绑定项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListForwardStrategyBindingItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListForwardStrategyBindingItemsResponse
+        /// </returns>
+        public ListForwardStrategyBindingItemsResponse ListForwardStrategyBindingItems(ListForwardStrategyBindingItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListForwardStrategyBindingItemsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询转发策略绑定项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListForwardStrategyBindingItemsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListForwardStrategyBindingItemsResponse
+        /// </returns>
+        public async Task<ListForwardStrategyBindingItemsResponse> ListForwardStrategyBindingItemsAsync(ListForwardStrategyBindingItemsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListForwardStrategyBindingItemsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9717,7 +9923,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>入网用户列表</para>
+        /// <para>Network User List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9787,7 +9993,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>入网用户列表</para>
+        /// <para>Network User List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9857,7 +10063,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>入网用户列表</para>
+        /// <para>Network User List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9875,7 +10081,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>入网用户列表</para>
+        /// <para>Network User List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11541,7 +11747,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询卸载申请列表</para>
+        /// <para>Batch queries the uninstall request list under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11579,7 +11785,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询卸载申请列表</para>
+        /// <para>Batch queries the uninstall request list under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11617,7 +11823,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询卸载申请列表</para>
+        /// <para>Batch queries the uninstall request list under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11635,7 +11841,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询卸载申请列表</para>
+        /// <para>Batch queries the uninstall request list under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11653,7 +11859,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询用户应用权限</para>
+        /// <para>Queries the application permissions of a logon user under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11691,7 +11897,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询用户应用权限</para>
+        /// <para>Queries the application permissions of a logon user under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11729,7 +11935,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询用户应用权限</para>
+        /// <para>Queries the application permissions of a logon user under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11747,7 +11953,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列表查询用户应用权限</para>
+        /// <para>Queries the application permissions of a logon user under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12213,7 +12419,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List query of user zero trust policies</para>
+        /// <para>Query the zero trust policies of a User in a List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12251,7 +12457,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List query of user zero trust policies</para>
+        /// <para>Query the zero trust policies of a User in a List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12289,7 +12495,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List query of user zero trust policies</para>
+        /// <para>Query the zero trust policies of a User in a List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12307,7 +12513,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List query of user zero trust policies</para>
+        /// <para>Query the zero trust policies of a User in a List.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12549,7 +12755,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改加速策略</para>
+        /// <para>Modify enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12631,7 +12837,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改加速策略</para>
+        /// <para>Modify enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12713,7 +12919,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改加速策略</para>
+        /// <para>Modify enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12731,7 +12937,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改加速策略</para>
+        /// <para>Modify enterprise acceleration policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12753,7 +12959,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销用户登录会话</para>
+        /// <para>Revoke a User logon session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12805,7 +13011,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销用户登录会话</para>
+        /// <para>Revoke a User logon session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12857,7 +13063,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销用户登录会话</para>
+        /// <para>Revoke a User logon session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12881,7 +13087,7 @@ namespace AlibabaCloud.SDK.Csas20230120
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销用户登录会话</para>
+        /// <para>Revoke a User logon session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12901,7 +13107,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新审批流程</para>
+        /// <para>Update an approval flow under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12993,7 +13199,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新审批流程</para>
+        /// <para>Update an approval flow under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13085,7 +13291,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新审批流程</para>
+        /// <para>Update an approval flow under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13103,7 +13309,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新审批流程</para>
+        /// <para>Update an approval flow under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13121,7 +13327,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改审批状态</para>
+        /// <para>Update the approval instance status under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13167,7 +13373,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改审批状态</para>
+        /// <para>Update the approval instance status under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13213,7 +13419,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改审批状态</para>
+        /// <para>Update the approval instance status under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13231,7 +13437,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改审批状态</para>
+        /// <para>Update the approval instance status under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13249,7 +13455,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自启动与防卸载策略配置</para>
+        /// <para>Update the Startup and anti-uninstall policy under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13323,7 +13529,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自启动与防卸载策略配置</para>
+        /// <para>Update the Startup and anti-uninstall policy under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13397,7 +13603,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自启动与防卸载策略配置</para>
+        /// <para>Update the Startup and anti-uninstall policy under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13415,7 +13621,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自启动与防卸载策略配置</para>
+        /// <para>Update the Startup and anti-uninstall policy under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14345,7 +14551,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新NAC User 状态</para>
+        /// <para>Batch modifies the Status of network access certificates for Users under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14397,7 +14603,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新NAC User 状态</para>
+        /// <para>Batch modifies the Status of network access certificates for Users under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14449,7 +14655,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新NAC User 状态</para>
+        /// <para>Batch modifies the Status of network access certificates for Users under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14467,7 +14673,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新NAC User 状态</para>
+        /// <para>Batch modifies the Status of network access certificates for Users under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15281,7 +15487,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改卸载申请状态</para>
+        /// <para>Batch updates the uninstall request status under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15333,7 +15539,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改卸载申请状态</para>
+        /// <para>Batch updates the uninstall request status under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15385,7 +15591,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改卸载申请状态</para>
+        /// <para>Batch updates the uninstall request status under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15403,7 +15609,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量修改卸载申请状态</para>
+        /// <para>Batch updates the uninstall request status under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
