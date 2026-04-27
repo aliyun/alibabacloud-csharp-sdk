@@ -1,3 +1,7 @@
+2026-04-27 Version: 3.4.0
+- Support API ModifySupabaseProjectResource.
+
+
 2026-04-20 Version: 3.3.0
 - Support API ModifySupabaseAutoScalePolicy.
 

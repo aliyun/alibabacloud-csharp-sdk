@@ -26422,7 +26422,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API keys for a Supabase project.</para>
+        /// <para>Queries the API keys and JWT secrets of a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26473,7 +26473,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API keys for a Supabase project.</para>
+        /// <para>Queries the API keys and JWT secrets of a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26524,7 +26524,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API keys for a Supabase project.</para>
+        /// <para>Queries the API keys and JWT secrets of a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -26547,7 +26547,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of API keys for a Supabase project.</para>
+        /// <para>Queries the API keys and JWT secrets of a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -36130,7 +36130,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Supabase自动启停策略</para>
+        /// <para>Modify the auto pause/resume policy of Supabase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36180,7 +36180,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Supabase自动启停策略</para>
+        /// <para>Modify the auto pause/resume policy of Supabase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36230,7 +36230,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Supabase自动启停策略</para>
+        /// <para>Modify the auto pause/resume policy of Supabase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36248,7 +36248,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改Supabase自动启停策略</para>
+        /// <para>Modify the auto pause/resume policy of Supabase.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36262,6 +36262,158 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifySupabaseAutoScalePolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the resources of a Supabase instance. You can upgrade or decrease the quota of compute resources and scale out storage resources (disk size).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySupabaseProjectResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySupabaseProjectResourceResponse
+        /// </returns>
+        public ModifySupabaseProjectResourceResponse ModifySupabaseProjectResourceWithOptions(ModifySupabaseProjectResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
+            {
+                query["ModifyType"] = request.ModifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectSpec))
+            {
+                query["ProjectSpec"] = request.ProjectSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
+            {
+                query["StorageSize"] = request.StorageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySupabaseProjectResource",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySupabaseProjectResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the resources of a Supabase instance. You can upgrade or decrease the quota of compute resources and scale out storage resources (disk size).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySupabaseProjectResourceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySupabaseProjectResourceResponse
+        /// </returns>
+        public async Task<ModifySupabaseProjectResourceResponse> ModifySupabaseProjectResourceWithOptionsAsync(ModifySupabaseProjectResourceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyType))
+            {
+                query["ModifyType"] = request.ModifyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectSpec))
+            {
+                query["ProjectSpec"] = request.ProjectSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
+            {
+                query["StorageSize"] = request.StorageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifySupabaseProjectResource",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifySupabaseProjectResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the resources of a Supabase instance. You can upgrade or decrease the quota of compute resources and scale out storage resources (disk size).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySupabaseProjectResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySupabaseProjectResourceResponse
+        /// </returns>
+        public ModifySupabaseProjectResourceResponse ModifySupabaseProjectResource(ModifySupabaseProjectResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifySupabaseProjectResourceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the resources of a Supabase instance. You can upgrade or decrease the quota of compute resources and scale out storage resources (disk size).</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifySupabaseProjectResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifySupabaseProjectResourceResponse
+        /// </returns>
+        public async Task<ModifySupabaseProjectResourceResponse> ModifySupabaseProjectResourceAsync(ModifySupabaseProjectResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifySupabaseProjectResourceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
