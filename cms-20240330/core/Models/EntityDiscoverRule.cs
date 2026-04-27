@@ -71,20 +71,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         [NameInMap("ipMatchRule")]
         [Validation(Required=false)]
-        public List<EntityDiscoverRuleIpMatchRule> IpMatchRule { get; set; }
+        public EntityDiscoverRuleIpMatchRule IpMatchRule { get; set; }
         public class EntityDiscoverRuleIpMatchRule : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>192.168.0.1/10</para>
-            /// </summary>
             [NameInMap("ipCIDR")]
             [Validation(Required=false)]
             public string IpCIDR { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>hostIp</para>
-            /// </summary>
             [NameInMap("ipFieldKey")]
             [Validation(Required=false)]
             public string IpFieldKey { get; set; }

@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>L1</para>
+        /// <para>reranker,llm_rank</para>
         /// </summary>
-        [NameInMap("retrieveLevel")]
+        [NameInMap("retrievalOption")]
         [Validation(Required=false)]
-        public string RetrieveLevel { get; set; }
+        public string RetrievalOption { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
