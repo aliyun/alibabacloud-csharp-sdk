@@ -198,9 +198,6 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <para>查询物流地址</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeDeliveryAddressRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -231,9 +228,6 @@ namespace AlibabaCloud.SDK.Wss20211221
         /// <para>查询物流地址</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeDeliveryAddressRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>

@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Wss20211221.Models
 
             }
 
+            [NameInMap("Data")]
+            [Validation(Required=false)]
+            public string Data { get; set; }
+
             [NameInMap("InstanceIds")]
             [Validation(Required=false)]
             public List<string> InstanceIds { get; set; }
