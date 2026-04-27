@@ -8,50 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Clickhouse20230522.Models
 {
-    public class ModifyDBInstanceClassRequest : TeaModel {
+    public class ModifyDBInstanceClassShrinkRequest : TeaModel {
         /// <summary>
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>
         [NameInMap("AutoScaleConfig")]
         [Validation(Required=false)]
-        public ModifyDBInstanceClassRequestAutoScaleConfig AutoScaleConfig { get; set; }
-        public class ModifyDBInstanceClassRequestAutoScaleConfig : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>2</para>
-            /// </summary>
-            [NameInMap("BurstNum")]
-            [Validation(Required=false)]
-            public int? BurstNum { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>enable</para>
-            /// </summary>
-            [NameInMap("Status")]
-            [Validation(Required=false)]
-            public string Status { get; set; }
-
-            [NameInMap("VSwitchInfos")]
-            [Validation(Required=false)]
-            public List<ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos> VSwitchInfos { get; set; }
-            public class ModifyDBInstanceClassRequestAutoScaleConfigVSwitchInfos : TeaModel {
-                [NameInMap("VSwitchIds")]
-                [Validation(Required=false)]
-                public List<string> VSwitchIds { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>cn-beijing-XXX</para>
-                /// </summary>
-                [NameInMap("ZoneId")]
-                [Validation(Required=false)]
-                public string ZoneId { get; set; }
-
-            }
-
-        }
+        public string AutoScaleConfigShrink { get; set; }
 
         [NameInMap("ComputingGroupId")]
         [Validation(Required=false)]

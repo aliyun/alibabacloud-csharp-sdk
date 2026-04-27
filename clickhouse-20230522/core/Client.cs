@@ -5841,7 +5841,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
         /// <para>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyDBInstanceClassRequest
         /// </param>
         /// <param name="runtime">
@@ -5851,10 +5851,20 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
         /// <returns>
         /// ModifyDBInstanceClassResponse
         /// </returns>
-        public ModifyDBInstanceClassResponse ModifyDBInstanceClassWithOptions(ModifyDBInstanceClassRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyDBInstanceClassResponse ModifyDBInstanceClassWithOptions(ModifyDBInstanceClassRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyDBInstanceClassShrinkRequest request = new ModifyDBInstanceClassShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoScaleConfig))
+            {
+                request.AutoScaleConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoScaleConfig, "AutoScaleConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaleConfigShrink))
+            {
+                query["AutoScaleConfig"] = request.AutoScaleConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputingGroupId))
             {
                 query["ComputingGroupId"] = request.ComputingGroupId;
@@ -5919,7 +5929,7 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
         /// <para>Modifies the elastic scaling settings of an ApsaraDB for ClickHouse cluster.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyDBInstanceClassRequest
         /// </param>
         /// <param name="runtime">
@@ -5929,10 +5939,20 @@ namespace AlibabaCloud.SDK.Clickhouse20230522
         /// <returns>
         /// ModifyDBInstanceClassResponse
         /// </returns>
-        public async Task<ModifyDBInstanceClassResponse> ModifyDBInstanceClassWithOptionsAsync(ModifyDBInstanceClassRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyDBInstanceClassResponse> ModifyDBInstanceClassWithOptionsAsync(ModifyDBInstanceClassRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyDBInstanceClassShrinkRequest request = new ModifyDBInstanceClassShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.AutoScaleConfig))
+            {
+                request.AutoScaleConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.AutoScaleConfig, "AutoScaleConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScaleConfigShrink))
+            {
+                query["AutoScaleConfig"] = request.AutoScaleConfigShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputingGroupId))
             {
                 query["ComputingGroupId"] = request.ComputingGroupId;
