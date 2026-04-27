@@ -235,6 +235,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public string WorkflowName { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>{&quot;sessionId&quot;:&quot;ac21f9f6-5a88-4f97-abd1-b51989166035&quot;}</para>
+                /// </summary>
+                [NameInMap("XAttrs")]
+                [Validation(Required=false)]
+                public string XAttrs { get; set; }
+
             }
 
             /// <summary>

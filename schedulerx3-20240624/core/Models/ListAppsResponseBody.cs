@@ -117,6 +117,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public int? JobNum { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("LabelRouteStrategy")]
                 [Validation(Required=false)]
                 public int? LabelRouteStrategy { get; set; }
@@ -163,11 +167,25 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>k8s_service</para>
+                /// <para>1</para>
                 /// </summary>
+                [NameInMap("WorkerId")]
+                [Validation(Required=false)]
+                public int? WorkerId { get; set; }
+
+                /// <term><b>Obsolete</b></term>
                 [NameInMap("WorkerRegistry")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public string WorkerRegistry { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>openclaw</para>
+                /// </summary>
+                [NameInMap("WorkerType")]
+                [Validation(Required=false)]
+                public string WorkerType { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

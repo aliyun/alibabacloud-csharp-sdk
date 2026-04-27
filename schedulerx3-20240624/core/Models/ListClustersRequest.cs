@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("ClusterType")]
+        [Validation(Required=false)]
+        public int? ClusterType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
         [NameInMap("PageNum")]

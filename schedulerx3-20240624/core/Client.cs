@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用</para>
+        /// <para>Creates an application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -367,7 +367,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群</para>
+        /// <para>Creates a cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -406,6 +406,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
             {
                 body["ClusterSpec"] = request.ClusterSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
+            {
+                body["ClusterType"] = request.ClusterType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
@@ -449,7 +453,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群</para>
+        /// <para>Creates a cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -488,6 +492,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
             {
                 body["ClusterSpec"] = request.ClusterSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterType))
+            {
+                body["ClusterType"] = request.ClusterType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
@@ -531,7 +539,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群</para>
+        /// <para>Creates a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -549,7 +557,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建集群</para>
+        /// <para>Creates a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -727,6 +735,190 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>添加执行器组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateExecutorGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExecutorGroupResponse
+        /// </returns>
+        public CreateExecutorGroupResponse CreateExecutorGroupWithOptions(CreateExecutorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                body["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["Network"] = request.Network;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                body["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerType))
+            {
+                body["WorkerType"] = request.WorkerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workers))
+            {
+                body["Workers"] = request.Workers;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExecutorGroup",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExecutorGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加执行器组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateExecutorGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExecutorGroupResponse
+        /// </returns>
+        public async Task<CreateExecutorGroupResponse> CreateExecutorGroupWithOptionsAsync(CreateExecutorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                body["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["Network"] = request.Network;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                body["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerType))
+            {
+                body["WorkerType"] = request.WorkerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workers))
+            {
+                body["Workers"] = request.Workers;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExecutorGroup",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExecutorGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加执行器组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateExecutorGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExecutorGroupResponse
+        /// </returns>
+        public CreateExecutorGroupResponse CreateExecutorGroup(CreateExecutorGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateExecutorGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加执行器组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateExecutorGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExecutorGroupResponse
+        /// </returns>
+        public async Task<CreateExecutorGroupResponse> CreateExecutorGroupAsync(CreateExecutorGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateExecutorGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>添加执行器</para>
         /// </summary>
         /// 
@@ -871,7 +1063,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务</para>
+        /// <para>Creates a job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1010,6 +1202,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["Weight"] = request.Weight;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XAttrs))
+            {
+                body["XAttrs"] = request.XAttrs;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1031,7 +1227,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务</para>
+        /// <para>Creates a job.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1170,6 +1366,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["Weight"] = request.Weight;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XAttrs))
+            {
+                body["XAttrs"] = request.XAttrs;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -1191,7 +1391,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务</para>
+        /// <para>Creates a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1209,7 +1409,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务</para>
+        /// <para>Creates a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1427,7 +1627,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用分组</para>
+        /// <para>Deletes an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1473,7 +1673,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用分组</para>
+        /// <para>Deletes an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1519,7 +1719,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用分组</para>
+        /// <para>Deletes an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1537,7 +1737,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除应用分组</para>
+        /// <para>Deletes an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1691,7 +1891,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放删除集群</para>
+        /// <para>Deletes a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1733,7 +1933,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放删除集群</para>
+        /// <para>Deletes a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1775,7 +1975,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放删除集群</para>
+        /// <para>Deletes a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1793,7 +1993,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放删除集群</para>
+        /// <para>Deletes a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1939,7 +2139,135 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除任务</para>
+        /// <para>添加执行器组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteExecutorGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExecutorGroupResponse
+        /// </returns>
+        public DeleteExecutorGroupResponse DeleteExecutorGroupWithOptions(DeleteExecutorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExecutorGroup",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExecutorGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加执行器组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteExecutorGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExecutorGroupResponse
+        /// </returns>
+        public async Task<DeleteExecutorGroupResponse> DeleteExecutorGroupWithOptionsAsync(DeleteExecutorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExecutorGroup",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExecutorGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加执行器组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteExecutorGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExecutorGroupResponse
+        /// </returns>
+        public DeleteExecutorGroupResponse DeleteExecutorGroup(DeleteExecutorGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteExecutorGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加执行器组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteExecutorGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExecutorGroupResponse
+        /// </returns>
+        public async Task<DeleteExecutorGroupResponse> DeleteExecutorGroupAsync(DeleteExecutorGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteExecutorGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes multiple jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1995,7 +2323,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除任务</para>
+        /// <para>Deletes multiple jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2051,7 +2379,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除任务</para>
+        /// <para>Deletes multiple jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2069,7 +2397,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除任务</para>
+        /// <para>Deletes multiple jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2387,7 +2715,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导出任务信息</para>
+        /// <para>Exports the information about jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2447,7 +2775,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导出任务信息</para>
+        /// <para>Exports the information about jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2507,7 +2835,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导出任务信息</para>
+        /// <para>Exports the information about jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2525,7 +2853,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导出任务信息</para>
+        /// <para>Exports the information about jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2955,7 +3283,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群详细信息</para>
+        /// <para>Queries the details of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2993,7 +3321,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群详细信息</para>
+        /// <para>Queries the details of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3031,7 +3359,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群详细信息</para>
+        /// <para>Queries the details of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3049,7 +3377,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群详细信息</para>
+        /// <para>Queries the details of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3067,7 +3395,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定机器信息</para>
+        /// <para>Queries a specified machine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3105,7 +3433,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定机器信息</para>
+        /// <para>Queries a specified machine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3143,7 +3471,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定机器信息</para>
+        /// <para>Queries a specified machine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3161,7 +3489,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定机器信息</para>
+        /// <para>Queries a specified machine.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3451,7 +3779,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务执行的详情</para>
+        /// <para>Obtains the execution details of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3489,7 +3817,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务执行的详情</para>
+        /// <para>Obtains the execution details of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3527,7 +3855,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务执行的详情</para>
+        /// <para>Obtains the execution details of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3545,7 +3873,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务执行的详情</para>
+        /// <para>Obtains the execution details of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3675,7 +4003,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询日志</para>
+        /// <para>Queries logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3713,7 +4041,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询日志</para>
+        /// <para>Queries logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3751,7 +4079,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询日志</para>
+        /// <para>Queries logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3769,7 +4097,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询日志</para>
+        /// <para>Queries logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3895,6 +4223,206 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetLogEventWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分页日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPageLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPageLogResponse
+        /// </returns>
+        public GetPageLogResponse GetPageLogWithOptions(GetPageLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                query["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reverse))
+            {
+                query["Reverse"] = request.Reverse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerAddr))
+            {
+                query["WorkerAddr"] = request.WorkerAddr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPageLog",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPageLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分页日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPageLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPageLogResponse
+        /// </returns>
+        public async Task<GetPageLogResponse> GetPageLogWithOptionsAsync(GetPageLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppName))
+            {
+                query["AppName"] = request.AppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobExecutionId))
+            {
+                query["JobExecutionId"] = request.JobExecutionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobName))
+            {
+                query["JobName"] = request.JobName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reverse))
+            {
+                query["Reverse"] = request.Reverse;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerAddr))
+            {
+                query["WorkerAddr"] = request.WorkerAddr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPageLog",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPageLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分页日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPageLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPageLogResponse
+        /// </returns>
+        public GetPageLogResponse GetPageLog(GetPageLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetPageLogWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取分页日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPageLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPageLogResponse
+        /// </returns>
+        public async Task<GetPageLogResponse> GetPageLogAsync(GetPageLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetPageLogWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4451,7 +4979,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入日历</para>
+        /// <para>Imports a calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4505,7 +5033,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入日历</para>
+        /// <para>Imports a calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4559,7 +5087,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入日历</para>
+        /// <para>Imports a calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4577,7 +5105,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入日历</para>
+        /// <para>Imports a calendar.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4595,7 +5123,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入任务</para>
+        /// <para>Imports jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4649,7 +5177,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入任务</para>
+        /// <para>Imports jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4703,7 +5231,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入任务</para>
+        /// <para>Imports jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4721,7 +5249,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量导入任务</para>
+        /// <para>Imports jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4883,7 +5411,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取报警事件</para>
+        /// <para>Obtains a list of alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4921,7 +5449,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取报警事件</para>
+        /// <para>Obtains a list of alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4959,7 +5487,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取报警事件</para>
+        /// <para>Obtains a list of alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4977,7 +5505,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取报警事件</para>
+        /// <para>Obtains a list of alert events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4995,7 +5523,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用名字列表</para>
+        /// <para>Obtains a list of application names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5033,7 +5561,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用名字列表</para>
+        /// <para>Obtains a list of application names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5071,7 +5599,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用名字列表</para>
+        /// <para>Obtains a list of application names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5089,7 +5617,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用名字列表</para>
+        /// <para>Obtains a list of application names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5107,7 +5635,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用列表</para>
+        /// <para>Queries a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5145,7 +5673,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用列表</para>
+        /// <para>Queries a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5183,7 +5711,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用列表</para>
+        /// <para>Queries a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5201,7 +5729,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取应用列表</para>
+        /// <para>Queries a list of applications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5219,7 +5747,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日历名字列表</para>
+        /// <para>Obtains a list of calendar names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5257,7 +5785,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日历名字列表</para>
+        /// <para>Obtains a list of calendar names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5295,7 +5823,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日历名字列表</para>
+        /// <para>Obtains a list of calendar names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5313,7 +5841,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取日历名字列表</para>
+        /// <para>Obtains a list of calendar names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5491,7 +6019,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5529,7 +6057,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5567,7 +6095,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5585,7 +6113,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5771,7 +6299,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Executor列表</para>
+        /// <para>Queries a list of executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5809,7 +6337,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Executor列表</para>
+        /// <para>Queries a list of executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5847,7 +6375,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Executor列表</para>
+        /// <para>Queries a list of executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5865,7 +6393,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Executor列表</para>
+        /// <para>Queries a list of executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5883,7 +6411,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务实例列表</para>
+        /// <para>Obtains a list of job instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5965,7 +6493,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务实例列表</para>
+        /// <para>Obtains a list of job instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6047,7 +6575,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务实例列表</para>
+        /// <para>Obtains a list of job instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6065,7 +6593,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务实例列表</para>
+        /// <para>Obtains a list of job instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6235,7 +6763,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务列表</para>
+        /// <para>Queries a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6313,7 +6841,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务列表</para>
+        /// <para>Queries a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6391,7 +6919,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务列表</para>
+        /// <para>Queries a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6409,7 +6937,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务列表</para>
+        /// <para>Queries a list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6579,7 +7107,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取executor的label列表</para>
+        /// <para>Obtains a list of tags of an executor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6617,7 +7145,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取executor的label列表</para>
+        /// <para>Obtains a list of tags of an executor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6655,7 +7183,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取executor的label列表</para>
+        /// <para>Obtains a list of tags of an executor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6673,7 +7201,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取executor的label列表</para>
+        /// <para>Obtains a list of tags of an executor.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6691,12 +7219,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用区列表</para>
+        /// <para>Obtains a list of zones.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListRegionZoneRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6724,12 +7249,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用区列表</para>
+        /// <para>Obtains a list of zones.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListRegionZoneRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6757,7 +7279,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用区列表</para>
+        /// <para>Obtains a list of zones.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6771,7 +7293,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用区列表</para>
+        /// <para>Obtains a list of zones.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6785,12 +7307,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取所有region列表</para>
+        /// <para>Obtains a list of all regions.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6818,12 +7337,9 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取所有region列表</para>
+        /// <para>Obtains a list of all regions.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6851,7 +7367,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取所有region列表</para>
+        /// <para>Obtains a list of all regions.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6865,7 +7381,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取所有region列表</para>
+        /// <para>Obtains a list of all regions.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6879,7 +7395,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调度事件</para>
+        /// <para>Queries scheduling events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6917,7 +7433,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调度事件</para>
+        /// <para>Queries scheduling events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6955,7 +7471,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调度事件</para>
+        /// <para>Queries scheduling events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6973,7 +7489,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调度事件</para>
+        /// <para>Queries scheduling events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6991,7 +7507,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定时间类型和表达式未来5次调度时间</para>
+        /// <para>Obtains the scheduling time points of the next five jobs. The scheduling time points are specified by time types or expressions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7029,7 +7545,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定时间类型和表达式未来5次调度时间</para>
+        /// <para>Obtains the scheduling time points of the next five jobs. The scheduling time points are specified by time types or expressions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7067,7 +7583,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定时间类型和表达式未来5次调度时间</para>
+        /// <para>Obtains the scheduling time points of the next five jobs. The scheduling time points are specified by time types or expressions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7085,7 +7601,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定时间类型和表达式未来5次调度时间</para>
+        /// <para>Obtains the scheduling time points of the next five jobs. The scheduling time points are specified by time types or expressions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7951,7 +8467,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>指定执行器</para>
+        /// <para>Designates executors.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8019,7 +8535,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>指定执行器</para>
+        /// <para>Designates executors.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8087,7 +8603,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>指定执行器</para>
+        /// <para>Designates executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8105,7 +8621,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>指定执行器</para>
+        /// <para>Designates executors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8123,7 +8639,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量禁用任务</para>
+        /// <para>Disables multiple jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8179,7 +8695,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量禁用任务</para>
+        /// <para>Disables multiple jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8235,7 +8751,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量禁用任务</para>
+        /// <para>Disables multiple jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8253,7 +8769,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量禁用任务</para>
+        /// <para>Disables multiple jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8419,7 +8935,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量启用任务</para>
+        /// <para>Enables multiple jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8475,7 +8991,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量启用任务</para>
+        /// <para>Enables multiple jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8531,7 +9047,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量启用任务</para>
+        /// <para>Enables multiple jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8549,7 +9065,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量启用任务</para>
+        /// <para>Enables multiple jobs at a time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8715,7 +9231,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行一次任务</para>
+        /// <para>Runs a job once.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8777,7 +9293,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行一次任务</para>
+        /// <para>Runs a job once.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8839,7 +9355,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行一次任务</para>
+        /// <para>Runs a job once.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8857,7 +9373,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>运行一次任务</para>
+        /// <para>Runs a job once.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9555,7 +10071,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重刷任务历史数据</para>
+        /// <para>Reprocesses the historical data of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9617,7 +10133,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重刷任务历史数据</para>
+        /// <para>Reprocesses the historical data of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9679,7 +10195,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重刷任务历史数据</para>
+        /// <para>Reprocesses the historical data of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9697,7 +10213,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重刷任务历史数据</para>
+        /// <para>Reprocesses the historical data of a job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9715,7 +10231,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑失败的任务实例</para>
+        /// <para>Reruns failed job instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9779,7 +10295,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑失败的任务实例</para>
+        /// <para>Reruns failed job instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9843,7 +10359,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑失败的任务实例</para>
+        /// <para>Reruns failed job instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9861,7 +10377,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重跑失败的任务实例</para>
+        /// <para>Reruns failed job instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10159,7 +10675,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止运行中的任务实例</para>
+        /// <para>Stops running instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10219,7 +10735,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止运行中的任务实例</para>
+        /// <para>Stops running instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -10279,7 +10795,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止运行中的任务实例</para>
+        /// <para>Stops running instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10297,7 +10813,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止运行中的任务实例</para>
+        /// <para>Stops running instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11023,7 +11539,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用分组</para>
+        /// <para>Updates an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11068,6 +11584,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["Title"] = request.Title;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerId))
+            {
+                body["WorkerId"] = request.WorkerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -11089,7 +11609,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用分组</para>
+        /// <para>Updates an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11134,6 +11654,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["Title"] = request.Title;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerId))
+            {
+                body["WorkerId"] = request.WorkerId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -11155,7 +11679,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用分组</para>
+        /// <para>Updates an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11173,7 +11697,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新应用分组</para>
+        /// <para>Updates an application group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11351,7 +11875,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群</para>
+        /// <para>Updates a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11401,7 +11925,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群</para>
+        /// <para>Updates a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11451,7 +11975,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群</para>
+        /// <para>Updates a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11469,7 +11993,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群</para>
+        /// <para>Updates a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11647,6 +12171,190 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新执行器组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateExecutorGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExecutorGroupResponse
+        /// </returns>
+        public UpdateExecutorGroupResponse UpdateExecutorGroupWithOptions(UpdateExecutorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                body["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["Network"] = request.Network;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                body["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerType))
+            {
+                body["WorkerType"] = request.WorkerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workers))
+            {
+                body["Workers"] = request.Workers;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateExecutorGroup",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateExecutorGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新执行器组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateExecutorGroupRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExecutorGroupResponse
+        /// </returns>
+        public async Task<UpdateExecutorGroupResponse> UpdateExecutorGroupWithOptionsAsync(UpdateExecutorGroupRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                body["ApiKey"] = request.ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthType))
+            {
+                body["AuthType"] = request.AuthType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["Network"] = request.Network;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Protocol))
+            {
+                body["Protocol"] = request.Protocol;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkerType))
+            {
+                body["WorkerType"] = request.WorkerType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workers))
+            {
+                body["Workers"] = request.Workers;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateExecutorGroup",
+                Version = "2024-06-24",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateExecutorGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新执行器组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateExecutorGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExecutorGroupResponse
+        /// </returns>
+        public UpdateExecutorGroupResponse UpdateExecutorGroup(UpdateExecutorGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateExecutorGroupWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新执行器组</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateExecutorGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExecutorGroupResponse
+        /// </returns>
+        public async Task<UpdateExecutorGroupResponse> UpdateExecutorGroupAsync(UpdateExecutorGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateExecutorGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>更新执行器</para>
         /// </summary>
         /// 
@@ -11791,7 +12499,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务信息</para>
+        /// <para>Updates the job information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11918,6 +12626,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["Weight"] = request.Weight;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XAttrs))
+            {
+                body["XAttrs"] = request.XAttrs;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -11939,7 +12651,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务信息</para>
+        /// <para>Updates the job information.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12066,6 +12778,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["Weight"] = request.Weight;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XAttrs))
+            {
+                body["XAttrs"] = request.XAttrs;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -12087,7 +12803,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务信息</para>
+        /// <para>Updates the job information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12105,7 +12821,7 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务信息</para>
+        /// <para>Updates the job information.</para>
         /// </summary>
         /// 
         /// <param name="request">

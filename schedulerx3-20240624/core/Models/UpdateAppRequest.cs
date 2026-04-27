@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public bool? EnableLog { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("LabelRouteStrategy")]
         [Validation(Required=false)]
         public int? LabelRouteStrategy { get; set; }
@@ -63,6 +67,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [NameInMap("Title")]
         [Validation(Required=false)]
         public string Title { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("WorkerId")]
+        [Validation(Required=false)]
+        public int? WorkerId { get; set; }
 
     }
 

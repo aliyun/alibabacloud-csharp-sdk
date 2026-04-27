@@ -223,6 +223,14 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public int? Weight { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;responseMode&quot;:&quot;streaming&quot;}</para>
+        /// </summary>
+        [NameInMap("XAttrs")]
+        [Validation(Required=false)]
+        public string XAttrs { get; set; }
+
     }
 
 }
