@@ -935,6 +935,10 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
 
             }
 
+            [NameInMap("TenantId")]
+            [Validation(Required=false)]
+            public string TenantId { get; set; }
+
             /// <summary>
             /// <para>The terminal URL.</para>
             /// 
