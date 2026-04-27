@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
+        [NameInMap("balance")]
+        [Validation(Required=false)]
+        public ClientBalanceDTO Balance { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
         [NameInMap("children")]

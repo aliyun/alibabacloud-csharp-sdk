@@ -11083,6 +11083,160 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>流控管理/写入流控配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterSaveFlowConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterSaveFlowConfigResponse
+        /// </returns>
+        public ModelRouterSaveFlowConfigResponse ModelRouterSaveFlowConfigWithOptions(ModelRouterSaveFlowConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rpm))
+            {
+                body["rpm"] = request.Rpm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmoothFlowEnabled))
+            {
+                body["smoothFlowEnabled"] = request.SmoothFlowEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tpm))
+            {
+                body["tpm"] = request.Tpm;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterSaveFlowConfig",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/flow-config",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterSaveFlowConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>流控管理/写入流控配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterSaveFlowConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterSaveFlowConfigResponse
+        /// </returns>
+        public async Task<ModelRouterSaveFlowConfigResponse> ModelRouterSaveFlowConfigWithOptionsAsync(ModelRouterSaveFlowConfigRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                body["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rpm))
+            {
+                body["rpm"] = request.Rpm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmoothFlowEnabled))
+            {
+                body["smoothFlowEnabled"] = request.SmoothFlowEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tpm))
+            {
+                body["tpm"] = request.Tpm;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterSaveFlowConfig",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/flow-config",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterSaveFlowConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>流控管理/写入流控配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterSaveFlowConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterSaveFlowConfigResponse
+        /// </returns>
+        public ModelRouterSaveFlowConfigResponse ModelRouterSaveFlowConfig(ModelRouterSaveFlowConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterSaveFlowConfigWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>流控管理/写入流控配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterSaveFlowConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterSaveFlowConfigResponse
+        /// </returns>
+        public async Task<ModelRouterSaveFlowConfigResponse> ModelRouterSaveFlowConfigAsync(ModelRouterSaveFlowConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterSaveFlowConfigWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>计费管理/更新计费规则</para>
         /// </summary>
         /// 
