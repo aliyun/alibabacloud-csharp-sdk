@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class CreateWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>global</para>
+        /// </summary>
+        [NameInMap("serviceSite")]
+        [Validation(Required=false)]
+        public string ServiceSite { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

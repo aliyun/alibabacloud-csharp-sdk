@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>ws-32klhjk2312334jkh</para>
+        /// </summary>
+        [NameInMap("workspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>ws_test</para>
         /// </summary>
         [NameInMap("workspaceName")]

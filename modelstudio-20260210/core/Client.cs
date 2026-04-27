@@ -197,6 +197,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceSite))
+            {
+                query["serviceSite"] = request.ServiceSite;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
             {
                 query["workspaceName"] = request.WorkspaceName;
@@ -243,6 +247,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceSite))
+            {
+                query["serviceSite"] = request.ServiceSite;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
             {
                 query["workspaceName"] = request.WorkspaceName;
@@ -701,6 +709,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
             {
                 query["nextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
             {
                 query["workspaceName"] = request.WorkspaceName;
@@ -754,6 +766,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["workspaceId"] = request.WorkspaceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
             {
