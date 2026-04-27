@@ -225,6 +225,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         }
 
+        [NameInMap("ShowExtras")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> ShowExtras { get; set; }
+
         /// <summary>
         /// <para>The status.</para>
         /// 

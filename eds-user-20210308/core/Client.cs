@@ -2387,6 +2387,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             {
                 query["BusinessChannel"] = request.BusinessChannel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeOrgIds))
+            {
+                query["IncludeOrgIds"] = request.IncludeOrgIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -2459,6 +2463,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
             {
                 query["BusinessChannel"] = request.BusinessChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeOrgIds))
+            {
+                query["IncludeOrgIds"] = request.IncludeOrgIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -2719,6 +2727,142 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeResourceGroupsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query basic user information</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserResponse
+        /// </returns>
+        public DescribeUserResponse DescribeUserWithOptions(DescribeUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequireExtraAttributes))
+            {
+                query["RequireExtraAttributes"] = request.RequireExtraAttributes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUser",
+                Version = "2021-03-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query basic user information</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserResponse
+        /// </returns>
+        public async Task<DescribeUserResponse> DescribeUserWithOptionsAsync(DescribeUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequireExtraAttributes))
+            {
+                query["RequireExtraAttributes"] = request.RequireExtraAttributes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUser",
+                Version = "2021-03-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query basic user information</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserResponse
+        /// </returns>
+        public DescribeUserResponse DescribeUser(DescribeUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query basic user information</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserResponse
+        /// </returns>
+        public async Task<DescribeUserResponse> DescribeUserAsync(DescribeUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3106,6 +3250,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             {
                 query["PropertyKeyValueFilterParam"] = request.PropertyKeyValueFilterParam;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowExtras))
+            {
+                query["ShowExtras"] = request.ShowExtras;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
@@ -3225,6 +3373,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PropertyKeyValueFilterParam))
             {
                 query["PropertyKeyValueFilterParam"] = request.PropertyKeyValueFilterParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowExtras))
+            {
+                query["ShowExtras"] = request.ShowExtras;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -5858,9 +6010,6 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         /// <para>Synchronizes all education information.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// SyncAllEduInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5891,9 +6040,6 @@ namespace AlibabaCloud.SDK.Eds_user20210308
         /// <para>Synchronizes all education information.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// SyncAllEduInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>

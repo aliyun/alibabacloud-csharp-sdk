@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
 
+        [NameInMap("IncludeOrgIds")]
+        [Validation(Required=false)]
+        public List<string> IncludeOrgIds { get; set; }
+
         /// <summary>
         /// <para>The maximum number of entries to return. Valid values: 1 to 100.\
         /// Default value: 100.</para>

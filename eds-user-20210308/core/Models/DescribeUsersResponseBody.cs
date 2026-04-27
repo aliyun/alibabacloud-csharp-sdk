@@ -95,6 +95,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 [Validation(Required=false)]
                 public Dictionary<string, object> AssignedResourceCount { get; set; }
 
+                [NameInMap("ResourcePolicyList")]
+                [Validation(Required=false)]
+                public List<DescribeUsersResponseBodyUsersExtrasResourcePolicyList> ResourcePolicyList { get; set; }
+                public class DescribeUsersResponseBodyUsersExtrasResourcePolicyList : TeaModel {
+                    [NameInMap("PolicyId")]
+                    [Validation(Required=false)]
+                    public string PolicyId { get; set; }
+
+                    [NameInMap("PolicyName")]
+                    [Validation(Required=false)]
+                    public string PolicyName { get; set; }
+
+                }
+
             }
 
             /// <summary>

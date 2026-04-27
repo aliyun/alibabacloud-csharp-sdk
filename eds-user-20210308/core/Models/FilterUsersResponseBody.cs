@@ -289,6 +289,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public string Remark { get; set; }
 
+            [NameInMap("ResourcePolicyList")]
+            [Validation(Required=false)]
+            public List<FilterUsersResponseBodyUsersResourcePolicyList> ResourcePolicyList { get; set; }
+            public class FilterUsersResponseBodyUsersResourcePolicyList : TeaModel {
+                [NameInMap("PolicyId")]
+                [Validation(Required=false)]
+                public string PolicyId { get; set; }
+
+                [NameInMap("PolicyName")]
+                [Validation(Required=false)]
+                public string PolicyName { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The remarks on the convenience account.</para>
             /// <para>Valid values:</para>

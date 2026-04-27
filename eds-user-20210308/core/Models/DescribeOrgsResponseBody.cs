@@ -60,6 +60,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public string ParentOrgId { get; set; }
 
+            [NameInMap("ResourcePolicyList")]
+            [Validation(Required=false)]
+            public List<DescribeOrgsResponseBodyOrgsResourcePolicyList> ResourcePolicyList { get; set; }
+            public class DescribeOrgsResponseBodyOrgsResourcePolicyList : TeaModel {
+                [NameInMap("PolicyId")]
+                [Validation(Required=false)]
+                public string PolicyId { get; set; }
+
+                [NameInMap("PolicyName")]
+                [Validation(Required=false)]
+                public string PolicyName { get; set; }
+
+            }
+
         }
 
         /// <summary>
