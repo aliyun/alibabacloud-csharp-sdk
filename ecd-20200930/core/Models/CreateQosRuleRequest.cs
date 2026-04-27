@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> AuthAndroidId { get; set; }
 
+        [NameInMap("AuthDesktopGroupId")]
+        [Validation(Required=false)]
+        public List<string> AuthDesktopGroupId { get; set; }
+
         [NameInMap("AuthDesktopId")]
         [Validation(Required=false)]
         public List<string> AuthDesktopId { get; set; }

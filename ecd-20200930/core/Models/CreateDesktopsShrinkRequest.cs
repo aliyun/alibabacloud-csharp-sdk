@@ -542,6 +542,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
+        [NameInMap("PurchaseOptions")]
+        [Validation(Required=false)]
+        public string PurchaseOptionsShrink { get; set; }
+
         [NameInMap("QosRuleId")]
         [Validation(Required=false)]
         public string QosRuleId { get; set; }

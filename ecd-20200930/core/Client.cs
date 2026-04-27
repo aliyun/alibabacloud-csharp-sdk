@@ -9116,6 +9116,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 request.DesktopAttachmentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DesktopAttachment, "DesktopAttachment", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PurchaseOptions))
+            {
+                request.PurchaseOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PurchaseOptions, "PurchaseOptions", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
             {
@@ -9212,6 +9216,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
             {
                 query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PurchaseOptionsShrink))
+            {
+                query["PurchaseOptions"] = request.PurchaseOptionsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
             {
@@ -9331,6 +9339,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 request.DesktopAttachmentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DesktopAttachment, "DesktopAttachment", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PurchaseOptions))
+            {
+                request.PurchaseOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PurchaseOptions, "PurchaseOptions", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
             {
@@ -9427,6 +9439,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
             {
                 query["PromotionId"] = request.PromotionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PurchaseOptionsShrink))
+            {
+                query["PurchaseOptions"] = request.PurchaseOptionsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
             {
@@ -11764,6 +11780,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AuthAndroidId"] = request.AuthAndroidId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthDesktopGroupId))
+            {
+                query["AuthDesktopGroupId"] = request.AuthDesktopGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthDesktopId))
             {
                 query["AuthDesktopId"] = request.AuthDesktopId;
@@ -11825,6 +11845,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthAndroidId))
             {
                 query["AuthAndroidId"] = request.AuthAndroidId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthDesktopGroupId))
+            {
+                query["AuthDesktopGroupId"] = request.AuthDesktopGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthDesktopId))
             {
@@ -20392,6 +20416,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["ProtocolType"] = request.ProtocolType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
+            {
+                query["QosRuleId"] = request.QosRuleId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -20509,6 +20537,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
             {
                 query["ProtocolType"] = request.ProtocolType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
+            {
+                query["QosRuleId"] = request.QosRuleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -44156,6 +44188,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AuthAndroidId"] = request.AuthAndroidId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthDesktopGroupId))
+            {
+                query["AuthDesktopGroupId"] = request.AuthDesktopGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthDesktopId))
             {
                 query["AuthDesktopId"] = request.AuthDesktopId;
@@ -44167,6 +44203,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeAndroidId))
             {
                 query["RevokeAndroidId"] = request.RevokeAndroidId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeDesktopGroupId))
+            {
+                query["RevokeDesktopGroupId"] = request.RevokeDesktopGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeDesktopId))
             {
@@ -44214,6 +44254,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["AuthAndroidId"] = request.AuthAndroidId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthDesktopGroupId))
+            {
+                query["AuthDesktopGroupId"] = request.AuthDesktopGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthDesktopId))
             {
                 query["AuthDesktopId"] = request.AuthDesktopId;
@@ -44225,6 +44269,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeAndroidId))
             {
                 query["RevokeAndroidId"] = request.RevokeAndroidId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeDesktopGroupId))
+            {
+                query["RevokeDesktopGroupId"] = request.RevokeDesktopGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RevokeDesktopId))
             {

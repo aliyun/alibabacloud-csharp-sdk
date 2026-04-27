@@ -562,6 +562,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
 
+            [NameInMap("QosRuleId")]
+            [Validation(Required=false)]
+            public string QosRuleId { get; set; }
+
             /// <summary>
             /// <para>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</para>
             /// <para><c>Ratio of connected sessions = Number of connected sessions/(Total number of cloud computers × Maximum number of sessions allowed for each cloud computer) × 100%</c></para>

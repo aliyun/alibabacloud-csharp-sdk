@@ -656,6 +656,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
+        [NameInMap("PurchaseOptions")]
+        [Validation(Required=false)]
+        public CreateDesktopsRequestPurchaseOptions PurchaseOptions { get; set; }
+        public class CreateDesktopsRequestPurchaseOptions : TeaModel {
+            [NameInMap("MonthlyCredits")]
+            [Validation(Required=false)]
+            public int? MonthlyCredits { get; set; }
+
+        }
+
         [NameInMap("QosRuleId")]
         [Validation(Required=false)]
         public string QosRuleId { get; set; }
