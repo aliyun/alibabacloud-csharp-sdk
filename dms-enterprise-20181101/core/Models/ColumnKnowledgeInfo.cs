@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Level")]
+        [Validation(Required=false)]
+        public int? Level { get; set; }
+
         /// <summary>
         /// <para>The field order in the CREATE TABLE statement.</para>
         /// </summary>

@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Level")]
+        [Validation(Required=false)]
+        public int? Level { get; set; }
+
         /// <summary>
         /// <para>Table business description, which can be edited via EditMetaKnowledgeAsset.</para>
         /// </summary>
