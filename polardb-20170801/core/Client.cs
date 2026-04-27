@@ -2921,6 +2921,202 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>用于检查PolarFS实例中配额设置的一致性状态。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API允许用户验证指定PolarFS实例内的配额配置是否一致，包括但不限于目录路径上的存储容量和inode限制。如果存在不一致的情况，将返回具体的不一致路径列表及可能的错误信息。</para>
+        /// <h3>注意事项</h3>
+        /// <list type="bullet">
+        /// <item><description>确保<c>PolarFsInstanceId</c>参数正确无误地指向了目标PolarFS实例。</description></item>
+        /// <item><description>当系统检测到配额不一致时，除了返回<c>IsConsistent=false</c>外，还会提供<c>InconsistentPaths</c>数组来指示具体哪些路径存在问题。</description></item>
+        /// <item><description>如果请求成功但没有发现任何不一致，则<c>InconsistentPaths</c>为空数组，并且<c>IsConsistent=true</c>。</description></item>
+        /// <item><description>错误处理：若请求过程中遇到权限不足、资源不存在等问题，请参考提供的错误码定义部分以获取更详细的错误信息。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckPolarFsQuotaConsistencyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckPolarFsQuotaConsistencyResponse
+        /// </returns>
+        public CheckPolarFsQuotaConsistencyResponse CheckPolarFsQuotaConsistencyWithOptions(CheckPolarFsQuotaConsistencyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableRepair))
+            {
+                query["EnableRepair"] = request.EnableRepair;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableStrictCalculate))
+            {
+                query["EnableStrictCalculate"] = request.EnableStrictCalculate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckPolarFsQuotaConsistency",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckPolarFsQuotaConsistencyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于检查PolarFS实例中配额设置的一致性状态。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API允许用户验证指定PolarFS实例内的配额配置是否一致，包括但不限于目录路径上的存储容量和inode限制。如果存在不一致的情况，将返回具体的不一致路径列表及可能的错误信息。</para>
+        /// <h3>注意事项</h3>
+        /// <list type="bullet">
+        /// <item><description>确保<c>PolarFsInstanceId</c>参数正确无误地指向了目标PolarFS实例。</description></item>
+        /// <item><description>当系统检测到配额不一致时，除了返回<c>IsConsistent=false</c>外，还会提供<c>InconsistentPaths</c>数组来指示具体哪些路径存在问题。</description></item>
+        /// <item><description>如果请求成功但没有发现任何不一致，则<c>InconsistentPaths</c>为空数组，并且<c>IsConsistent=true</c>。</description></item>
+        /// <item><description>错误处理：若请求过程中遇到权限不足、资源不存在等问题，请参考提供的错误码定义部分以获取更详细的错误信息。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckPolarFsQuotaConsistencyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckPolarFsQuotaConsistencyResponse
+        /// </returns>
+        public async Task<CheckPolarFsQuotaConsistencyResponse> CheckPolarFsQuotaConsistencyWithOptionsAsync(CheckPolarFsQuotaConsistencyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableRepair))
+            {
+                query["EnableRepair"] = request.EnableRepair;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableStrictCalculate))
+            {
+                query["EnableStrictCalculate"] = request.EnableStrictCalculate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckPolarFsQuotaConsistency",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckPolarFsQuotaConsistencyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于检查PolarFS实例中配额设置的一致性状态。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API允许用户验证指定PolarFS实例内的配额配置是否一致，包括但不限于目录路径上的存储容量和inode限制。如果存在不一致的情况，将返回具体的不一致路径列表及可能的错误信息。</para>
+        /// <h3>注意事项</h3>
+        /// <list type="bullet">
+        /// <item><description>确保<c>PolarFsInstanceId</c>参数正确无误地指向了目标PolarFS实例。</description></item>
+        /// <item><description>当系统检测到配额不一致时，除了返回<c>IsConsistent=false</c>外，还会提供<c>InconsistentPaths</c>数组来指示具体哪些路径存在问题。</description></item>
+        /// <item><description>如果请求成功但没有发现任何不一致，则<c>InconsistentPaths</c>为空数组，并且<c>IsConsistent=true</c>。</description></item>
+        /// <item><description>错误处理：若请求过程中遇到权限不足、资源不存在等问题，请参考提供的错误码定义部分以获取更详细的错误信息。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckPolarFsQuotaConsistencyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckPolarFsQuotaConsistencyResponse
+        /// </returns>
+        public CheckPolarFsQuotaConsistencyResponse CheckPolarFsQuotaConsistency(CheckPolarFsQuotaConsistencyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckPolarFsQuotaConsistencyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于检查PolarFS实例中配额设置的一致性状态。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <para>该API允许用户验证指定PolarFS实例内的配额配置是否一致，包括但不限于目录路径上的存储容量和inode限制。如果存在不一致的情况，将返回具体的不一致路径列表及可能的错误信息。</para>
+        /// <h3>注意事项</h3>
+        /// <list type="bullet">
+        /// <item><description>确保<c>PolarFsInstanceId</c>参数正确无误地指向了目标PolarFS实例。</description></item>
+        /// <item><description>当系统检测到配额不一致时，除了返回<c>IsConsistent=false</c>外，还会提供<c>InconsistentPaths</c>数组来指示具体哪些路径存在问题。</description></item>
+        /// <item><description>如果请求成功但没有发现任何不一致，则<c>InconsistentPaths</c>为空数组，并且<c>IsConsistent=true</c>。</description></item>
+        /// <item><description>错误处理：若请求过程中遇到权限不足、资源不存在等问题，请参考提供的错误码定义部分以获取更详细的错误信息。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckPolarFsQuotaConsistencyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckPolarFsQuotaConsistencyResponse
+        /// </returns>
+        public async Task<CheckPolarFsQuotaConsistencyResponse> CheckPolarFsQuotaConsistencyAsync(CheckPolarFsQuotaConsistencyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckPolarFsQuotaConsistencyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Checks whether a service-linked role (SLR) is created.</para>
         /// </summary>
         /// 
@@ -10105,6 +10301,182 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateParameterGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于在指定PolarFS实例中创建新的目录。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Path</b>：需要创建的目录绝对路径。</description></item>
+        /// <item><description><b>Recursive</b>：是否递归创建父目录，默认为 <c>false</c>。</description></item>
+        /// <item><description>该接口支持在指定的PolarFS实例中创建单个或多个层级的目录结构。</description></item>
+        /// <item><description>如果设置 <c>Recursive</c> 为 <c>true</c>，则会自动创建所有不存在的父目录。</description></item>
+        /// <item><description>创建目录时，请确保具有足够的权限。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePolarFsObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolarFsObjectResponse
+        /// </returns>
+        public CreatePolarFsObjectResponse CreatePolarFsObjectWithOptions(CreatePolarFsObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePolarFsObject",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePolarFsObjectResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于在指定PolarFS实例中创建新的目录。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Path</b>：需要创建的目录绝对路径。</description></item>
+        /// <item><description><b>Recursive</b>：是否递归创建父目录，默认为 <c>false</c>。</description></item>
+        /// <item><description>该接口支持在指定的PolarFS实例中创建单个或多个层级的目录结构。</description></item>
+        /// <item><description>如果设置 <c>Recursive</c> 为 <c>true</c>，则会自动创建所有不存在的父目录。</description></item>
+        /// <item><description>创建目录时，请确保具有足够的权限。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePolarFsObjectRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolarFsObjectResponse
+        /// </returns>
+        public async Task<CreatePolarFsObjectResponse> CreatePolarFsObjectWithOptionsAsync(CreatePolarFsObjectRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePolarFsObject",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePolarFsObjectResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于在指定PolarFS实例中创建新的目录。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Path</b>：需要创建的目录绝对路径。</description></item>
+        /// <item><description><b>Recursive</b>：是否递归创建父目录，默认为 <c>false</c>。</description></item>
+        /// <item><description>该接口支持在指定的PolarFS实例中创建单个或多个层级的目录结构。</description></item>
+        /// <item><description>如果设置 <c>Recursive</c> 为 <c>true</c>，则会自动创建所有不存在的父目录。</description></item>
+        /// <item><description>创建目录时，请确保具有足够的权限。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePolarFsObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolarFsObjectResponse
+        /// </returns>
+        public CreatePolarFsObjectResponse CreatePolarFsObject(CreatePolarFsObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreatePolarFsObjectWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用于在指定PolarFS实例中创建新的目录。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Path</b>：需要创建的目录绝对路径。</description></item>
+        /// <item><description><b>Recursive</b>：是否递归创建父目录，默认为 <c>false</c>。</description></item>
+        /// <item><description>该接口支持在指定的PolarFS实例中创建单个或多个层级的目录结构。</description></item>
+        /// <item><description>如果设置 <c>Recursive</c> 为 <c>true</c>，则会自动创建所有不存在的父目录。</description></item>
+        /// <item><description>创建目录时，请确保具有足够的权限。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePolarFsObjectRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePolarFsObjectResponse
+        /// </returns>
+        public async Task<CreatePolarFsObjectResponse> CreatePolarFsObjectAsync(CreatePolarFsObjectRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreatePolarFsObjectWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -33205,6 +33577,178 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>列出指定路径下的文件和子目录信息。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Path</b> 参数必须提供一个绝对路径。</description></item>
+        /// <item><description><b>Recursive</b> 参数默认为 <c>false</c>，如果设置为 <c>true</c>，则会递归列出所有子目录的内容。</description></item>
+        /// <item><description><b>Depth</b> 参数用于限制递归深度，默认值为 <c>1</c>。</description></item>
+        /// <item><description><b>Filter</b> 参数支持通配符或正则表达式过滤结果。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsObjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsObjectsResponse
+        /// </returns>
+        public DescribePolarFsObjectsResponse DescribePolarFsObjectsWithOptions(DescribePolarFsObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarFsObjects",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarFsObjectsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出指定路径下的文件和子目录信息。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Path</b> 参数必须提供一个绝对路径。</description></item>
+        /// <item><description><b>Recursive</b> 参数默认为 <c>false</c>，如果设置为 <c>true</c>，则会递归列出所有子目录的内容。</description></item>
+        /// <item><description><b>Depth</b> 参数用于限制递归深度，默认值为 <c>1</c>。</description></item>
+        /// <item><description><b>Filter</b> 参数支持通配符或正则表达式过滤结果。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsObjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsObjectsResponse
+        /// </returns>
+        public async Task<DescribePolarFsObjectsResponse> DescribePolarFsObjectsWithOptionsAsync(DescribePolarFsObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarFsObjects",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarFsObjectsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出指定路径下的文件和子目录信息。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Path</b> 参数必须提供一个绝对路径。</description></item>
+        /// <item><description><b>Recursive</b> 参数默认为 <c>false</c>，如果设置为 <c>true</c>，则会递归列出所有子目录的内容。</description></item>
+        /// <item><description><b>Depth</b> 参数用于限制递归深度，默认值为 <c>1</c>。</description></item>
+        /// <item><description><b>Filter</b> 参数支持通配符或正则表达式过滤结果。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsObjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsObjectsResponse
+        /// </returns>
+        public DescribePolarFsObjectsResponse DescribePolarFsObjects(DescribePolarFsObjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePolarFsObjectsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出指定路径下的文件和子目录信息。</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>Path</b> 参数必须提供一个绝对路径。</description></item>
+        /// <item><description><b>Recursive</b> 参数默认为 <c>false</c>，如果设置为 <c>true</c>，则会递归列出所有子目录的内容。</description></item>
+        /// <item><description><b>Depth</b> 参数用于限制递归深度，默认值为 <c>1</c>。</description></item>
+        /// <item><description><b>Filter</b> 参数支持通配符或正则表达式过滤结果。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePolarFsObjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarFsObjectsResponse
+        /// </returns>
+        public async Task<DescribePolarFsObjectsResponse> DescribePolarFsObjectsAsync(DescribePolarFsObjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePolarFsObjectsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询配额规则</para>
         /// </summary>
         /// 
@@ -51441,6 +51985,134 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyScheduleTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重命名或移动文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MovePolarFsObjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MovePolarFsObjectsResponse
+        /// </returns>
+        public MovePolarFsObjectsResponse MovePolarFsObjectsWithOptions(MovePolarFsObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectsToMove))
+            {
+                query["ObjectsToMove"] = request.ObjectsToMove;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MovePolarFsObjects",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MovePolarFsObjectsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重命名或移动文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MovePolarFsObjectsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MovePolarFsObjectsResponse
+        /// </returns>
+        public async Task<MovePolarFsObjectsResponse> MovePolarFsObjectsWithOptionsAsync(MovePolarFsObjectsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectsToMove))
+            {
+                query["ObjectsToMove"] = request.ObjectsToMove;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
+            {
+                query["PolarFsInstanceId"] = request.PolarFsInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MovePolarFsObjects",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MovePolarFsObjectsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重命名或移动文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MovePolarFsObjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MovePolarFsObjectsResponse
+        /// </returns>
+        public MovePolarFsObjectsResponse MovePolarFsObjects(MovePolarFsObjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MovePolarFsObjectsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重命名或移动文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// MovePolarFsObjectsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MovePolarFsObjectsResponse
+        /// </returns>
+        public async Task<MovePolarFsObjectsResponse> MovePolarFsObjectsAsync(MovePolarFsObjectsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MovePolarFsObjectsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -1,3 +1,10 @@
+2026-04-27 Version: 6.16.0
+- Support API CheckPolarFsQuotaConsistency.
+- Support API CreatePolarFsObject.
+- Support API DescribePolarFsObjects.
+- Support API MovePolarFsObjects.
+
+
 2026-04-24 Version: 6.15.0
 - Support API AddPolarFsPathMapping.
 - Support API DeletePolarFsPathMapping.
