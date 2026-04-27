@@ -942,6 +942,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string AutoProvisioningGroupType { get; set; }
 
+        [NameInMap("CandidateOptions")]
+        [Validation(Required=false)]
+        public CreateAutoProvisioningGroupRequestCandidateOptions CandidateOptions { get; set; }
+        public class CreateAutoProvisioningGroupRequestCandidateOptions : TeaModel {
+            [NameInMap("Evaluate")]
+            [Validation(Required=false)]
+            public bool? Evaluate { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>60</para>
+            /// </summary>
+            [NameInMap("TimeoutMinutes")]
+            [Validation(Required=false)]
+            public int? TimeoutMinutes { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 

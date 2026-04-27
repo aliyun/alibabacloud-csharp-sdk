@@ -29,6 +29,58 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string AutoProvisioningGroupType { get; set; }
 
+                [NameInMap("CandidateOptions")]
+                [Validation(Required=false)]
+                public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupCandidateOptions CandidateOptions { get; set; }
+                public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupCandidateOptions : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>60</para>
+                    /// </summary>
+                    [NameInMap("TimeoutMinutes")]
+                    [Validation(Required=false)]
+                    public int? TimeoutMinutes { get; set; }
+
+                }
+
+                [NameInMap("CapacitySpecification")]
+                [Validation(Required=false)]
+                public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupCapacitySpecification CapacitySpecification { get; set; }
+                public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupCapacitySpecification : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>2</para>
+                    /// </summary>
+                    [NameInMap("PayAsYouGoCapacity")]
+                    [Validation(Required=false)]
+                    public float? PayAsYouGoCapacity { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>0</para>
+                    /// </summary>
+                    [NameInMap("PrePaidCapacity")]
+                    [Validation(Required=false)]
+                    public float? PrePaidCapacity { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>3</para>
+                    /// </summary>
+                    [NameInMap("SpotCapacity")]
+                    [Validation(Required=false)]
+                    public float? SpotCapacity { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>5</para>
+                    /// </summary>
+                    [NameInMap("TotalCapacity")]
+                    [Validation(Required=false)]
+                    public float? TotalCapacity { get; set; }
+
+                }
+
                 [NameInMap("CreationTime")]
                 [Validation(Required=false)]
                 public string CreationTime { get; set; }
@@ -124,6 +176,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
+
+                [NameInMap("SuspendedProcesses")]
+                [Validation(Required=false)]
+                public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSuspendedProcesses SuspendedProcesses { get; set; }
+                public class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSuspendedProcesses : TeaModel {
+                    [NameInMap("SuspendedProcess")]
+                    [Validation(Required=false)]
+                    public List<string> SuspendedProcess { get; set; }
+
+                }
 
                 [NameInMap("Tags")]
                 [Validation(Required=false)]

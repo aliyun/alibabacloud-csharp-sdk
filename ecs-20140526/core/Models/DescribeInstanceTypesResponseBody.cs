@@ -75,6 +75,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public bool? HyperThreadingAdjustable { get; set; }
 
+                    [NameInMap("NestedVirtualizationSupport")]
+                    [Validation(Required=false)]
+                    public string NestedVirtualizationSupport { get; set; }
+
                     [NameInMap("SupportedTopologyTypes")]
                     [Validation(Required=false)]
                     public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes SupportedTopologyTypes { get; set; }

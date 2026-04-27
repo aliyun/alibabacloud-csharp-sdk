@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> AutoProvisioningGroupStatus { get; set; }
 
+        [NameInMap("AutoProvisioningGroupTypes")]
+        [Validation(Required=false)]
+        public List<string> AutoProvisioningGroupTypes { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

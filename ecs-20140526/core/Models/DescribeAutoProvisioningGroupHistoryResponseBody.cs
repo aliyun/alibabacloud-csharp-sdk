@@ -25,9 +25,67 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail> ActivityDetail { get; set; }
                     public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetail : TeaModel {
+                        [NameInMap("CreatedInstanceIds")]
+                        [Validation(Required=false)]
+                        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailCreatedInstanceIds CreatedInstanceIds { get; set; }
+                        public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailCreatedInstanceIds : TeaModel {
+                            [NameInMap("CreatedInstanceId")]
+                            [Validation(Required=false)]
+                            public List<string> CreatedInstanceId { get; set; }
+
+                        }
+
+                        [NameInMap("DestroyedInstanceIds")]
+                        [Validation(Required=false)]
+                        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailDestroyedInstanceIds DestroyedInstanceIds { get; set; }
+                        public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailDestroyedInstanceIds : TeaModel {
+                            [NameInMap("DestroyedInstanceId")]
+                            [Validation(Required=false)]
+                            public List<string> DestroyedInstanceId { get; set; }
+
+                        }
+
                         [NameInMap("Detail")]
                         [Validation(Required=false)]
                         public string Detail { get; set; }
+
+                        [NameInMap("ErrorMessages")]
+                        [Validation(Required=false)]
+                        public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessages ErrorMessages { get; set; }
+                        public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessages : TeaModel {
+                            [NameInMap("ErrorMessage")]
+                            [Validation(Required=false)]
+                            public List<DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessage> ErrorMessage { get; set; }
+                            public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessage : TeaModel {
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>InvalidSecurityGroupId.NotFound</para>
+                                /// </summary>
+                                [NameInMap("Code")]
+                                [Validation(Required=false)]
+                                public string Code { get; set; }
+
+                                [NameInMap("FailedInstanceIds")]
+                                [Validation(Required=false)]
+                                public DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessageFailedInstanceIds FailedInstanceIds { get; set; }
+                                public class DescribeAutoProvisioningGroupHistoryResponseBodyAutoProvisioningGroupHistoriesAutoProvisioningGroupHistoryActivityDetailsActivityDetailErrorMessagesErrorMessageFailedInstanceIds : TeaModel {
+                                    [NameInMap("FailedInstanceId")]
+                                    [Validation(Required=false)]
+                                    public List<string> FailedInstanceId { get; set; }
+
+                                }
+
+                                /// <summary>
+                                /// <b>Example:</b>
+                                /// <para>The specified SecurityGroupId &quot;sg-bp1d8modxxxxx&quot; is not found.</para>
+                                /// </summary>
+                                [NameInMap("Message")]
+                                [Validation(Required=false)]
+                                public string Message { get; set; }
+
+                            }
+
+                        }
 
                         [NameInMap("Status")]
                         [Validation(Required=false)]

@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public int? Amount { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>Low</para>
+                /// </summary>
+                [NameInMap("CandidateEvaluateLevel")]
+                [Validation(Required=false)]
+                public string CandidateEvaluateLevel { get; set; }
+
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
                 public string ErrorCode { get; set; }
