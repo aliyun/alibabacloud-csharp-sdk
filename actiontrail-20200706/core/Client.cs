@@ -1489,9 +1489,6 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// <para>查询高级查询历史记录</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeAdvancedQueryHistoryRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -1522,9 +1519,6 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// <para>查询高级查询历史记录</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeAdvancedQueryHistoryRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -2240,6 +2234,118 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取投递监控指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrailDeliveryMetricDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrailDeliveryMetricDataResponse
+        /// </returns>
+        public DescribeTrailDeliveryMetricDataResponse DescribeTrailDeliveryMetricDataWithOptions(DescribeTrailDeliveryMetricDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrailDeliveryMetricData",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrailDeliveryMetricDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取投递监控指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrailDeliveryMetricDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrailDeliveryMetricDataResponse
+        /// </returns>
+        public async Task<DescribeTrailDeliveryMetricDataResponse> DescribeTrailDeliveryMetricDataWithOptionsAsync(DescribeTrailDeliveryMetricDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTrailDeliveryMetricData",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTrailDeliveryMetricDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取投递监控指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrailDeliveryMetricDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrailDeliveryMetricDataResponse
+        /// </returns>
+        public DescribeTrailDeliveryMetricDataResponse DescribeTrailDeliveryMetricData(DescribeTrailDeliveryMetricDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTrailDeliveryMetricDataWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取投递监控指标</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTrailDeliveryMetricDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTrailDeliveryMetricDataResponse
+        /// </returns>
+        public async Task<DescribeTrailDeliveryMetricDataResponse> DescribeTrailDeliveryMetricDataAsync(DescribeTrailDeliveryMetricDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTrailDeliveryMetricDataWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries created trails.</para>
         /// </summary>
         /// 
@@ -2648,6 +2754,110 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeUserLogCountWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户跟踪量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserTrailCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserTrailCountResponse
+        /// </returns>
+        public DescribeUserTrailCountResponse DescribeUserTrailCountWithOptions(DescribeUserTrailCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserTrailCount",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserTrailCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户跟踪量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserTrailCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserTrailCountResponse
+        /// </returns>
+        public async Task<DescribeUserTrailCountResponse> DescribeUserTrailCountWithOptionsAsync(DescribeUserTrailCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUserTrailCount",
+                Version = "2020-07-06",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUserTrailCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户跟踪量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserTrailCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserTrailCountResponse
+        /// </returns>
+        public DescribeUserTrailCountResponse DescribeUserTrailCount(DescribeUserTrailCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUserTrailCountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询用户跟踪量</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUserTrailCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUserTrailCountResponse
+        /// </returns>
+        public async Task<DescribeUserTrailCountResponse> DescribeUserTrailCountAsync(DescribeUserTrailCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUserTrailCountWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4053,9 +4263,6 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// To obtain the permissions to call the API operation, you must submit a ticket.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// GetGlobalEventsStorageRegionRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4092,9 +4299,6 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// To obtain the permissions to call the API operation, you must submit a ticket.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// GetGlobalEventsStorageRegionRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4165,9 +4369,6 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// <para>操作审计成熟度查询接口</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetGovernanceMetricsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4198,9 +4399,6 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// <para>操作审计成熟度查询接口</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetGovernanceMetricsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4379,9 +4577,6 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// <para>获取查询账号开启insight的类型</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetInsightTypesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4412,9 +4607,6 @@ namespace AlibabaCloud.SDK.Actiontrail20200706
         /// <para>获取查询账号开启insight的类型</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetInsightTypesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
