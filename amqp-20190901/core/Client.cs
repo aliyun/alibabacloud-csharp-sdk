@@ -2601,6 +2601,11 @@ namespace AlibabaCloud.SDK.Amqp20190901
             return await DeleteVhostWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取region列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -2638,6 +2643,11 @@ namespace AlibabaCloud.SDK.Amqp20190901
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取region列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -2675,6 +2685,11 @@ namespace AlibabaCloud.SDK.Amqp20190901
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取region列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -2688,6 +2703,11 @@ namespace AlibabaCloud.SDK.Amqp20190901
             return DescribeRegionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取region列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRegionsRequest
         /// </param>
@@ -3717,6 +3737,11 @@ namespace AlibabaCloud.SDK.Amqp20190901
             return await GetBindingErrorByTaskIdWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取购买页地址</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCommonBuyUrlRequest
         /// </param>
@@ -3762,6 +3787,11 @@ namespace AlibabaCloud.SDK.Amqp20190901
             return TeaModel.ToObject<GetCommonBuyUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取购买页地址</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCommonBuyUrlRequest
         /// </param>
@@ -3807,6 +3837,11 @@ namespace AlibabaCloud.SDK.Amqp20190901
             return TeaModel.ToObject<GetCommonBuyUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取购买页地址</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCommonBuyUrlRequest
         /// </param>
@@ -3820,6 +3855,11 @@ namespace AlibabaCloud.SDK.Amqp20190901
             return GetCommonBuyUrlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取购买页地址</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCommonBuyUrlRequest
         /// </param>
@@ -6564,6 +6604,10 @@ namespace AlibabaCloud.SDK.Amqp20190901
             {
                 query["ConsoleSessionId"] = request.ConsoleSessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 query["Tags"] = request.Tags;
@@ -6609,6 +6653,10 @@ namespace AlibabaCloud.SDK.Amqp20190901
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsoleSessionId))
             {
                 query["ConsoleSessionId"] = request.ConsoleSessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {

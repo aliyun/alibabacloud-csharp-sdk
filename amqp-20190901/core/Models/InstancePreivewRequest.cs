@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Amqp20190901.Models
         [Validation(Required=false)]
         public string ConsoleSessionId { get; set; }
 
+        [NameInMap("ResourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string Tags { get; set; }
