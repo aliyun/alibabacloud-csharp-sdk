@@ -54,6 +54,22 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 public int? Bandwidth { get; set; }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
+                [NameInMap("BandwidthPackageBandwidth")]
+                [Validation(Required=false)]
+                public int? BandwidthPackageBandwidth { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cbwp-5***</para>
+                /// </summary>
+                [NameInMap("BandwidthPackageId")]
+                [Validation(Required=false)]
+                public string BandwidthPackageId { get; set; }
+
+                /// <summary>
                 /// <para>EIP的计费模式。</para>
                 /// <list type="bullet">
                 /// <item><description><para><b>PrePaid</b>：包年包月。</para>
@@ -185,6 +201,26 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("OperationLocks")]
+                [Validation(Required=false)]
+                public DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocks OperationLocks { get; set; }
+                public class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocks : TeaModel {
+                    [NameInMap("Lock")]
+                    [Validation(Required=false)]
+                    public List<DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLock> Lock { get; set; }
+                    public class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressOperationLocksLock : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>financial</para>
+                        /// </summary>
+                        [NameInMap("LockReason")]
+                        [Validation(Required=false)]
+                        public string LockReason { get; set; }
+
+                    }
+
+                }
 
                 /// <summary>
                 /// <para>该EIP是否是备用。</para>

@@ -19096,6 +19096,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["IcmpReplyEnabled"] = request.IcmpReplyEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LockReason))
+            {
+                query["LockReason"] = request.LockReason;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -19107,6 +19111,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Standby))
             {
                 query["Standby"] = request.Standby;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -19178,6 +19186,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["IcmpReplyEnabled"] = request.IcmpReplyEnabled;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LockReason))
+            {
+                query["LockReason"] = request.LockReason;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -19189,6 +19201,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Standby))
             {
                 query["Standby"] = request.Standby;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

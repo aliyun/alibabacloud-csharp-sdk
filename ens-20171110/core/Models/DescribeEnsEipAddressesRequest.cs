@@ -85,6 +85,14 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         public bool? IcmpReplyEnabled { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>financial</para>
+        /// </summary>
+        [NameInMap("LockReason")]
+        [Validation(Required=false)]
+        public string LockReason { get; set; }
+
+        /// <summary>
         /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -117,6 +125,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [NameInMap("Standby")]
         [Validation(Required=false)]
         public string Standby { get; set; }
+
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 
