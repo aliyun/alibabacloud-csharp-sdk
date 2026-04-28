@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public long? DmsInstanceId { get; set; }
 
+            [NameInMap("DownloadLink")]
+            [Validation(Required=false)]
+            public string DownloadLink { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2025-12-11T14:04:32.000+00:00</para>
@@ -89,6 +93,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
+            [NameInMap("IntranetDownloadLink")]
+            [Validation(Required=false)]
+            public string IntranetDownloadLink { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>N</para>
@@ -97,6 +105,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string IsInternal { get; set; }
 
+            [NameInMap("OssBucket")]
+            [Validation(Required=false)]
+            public string OssBucket { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>999</para>
@@ -104,6 +116,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
+
+            [NameInMap("UseUserOssBucket")]
+            [Validation(Required=false)]
+            public bool? UseUserOssBucket { get; set; }
 
         }
 
