@@ -89,6 +89,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 [Validation(Required=false)]
                 public int? LogStoreTtl { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10.333</para>
+                /// </summary>
+                [NameInMap("UsedCapacity")]
+                [Validation(Required=false)]
+                public double? UsedCapacity { get; set; }
+
             }
 
             [NameInMap("NormalizationLogViews")]
@@ -240,6 +248,44 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
                 [NameInMap("LogStoreTtl")]
                 [Validation(Required=false)]
                 public int? LogStoreTtl { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10.333</para>
+                /// </summary>
+                [NameInMap("UsedCapacity")]
+                [Validation(Required=false)]
+                public double? UsedCapacity { get; set; }
+
+            }
+
+            [NameInMap("UnusedLogStores")]
+            [Validation(Required=false)]
+            public List<GetDataStorageResponseBodyDataUnusedLogStores> UnusedLogStores { get; set; }
+            public class GetDataStorageResponseBodyDataUnusedLogStores : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cloud-siem</para>
+                /// </summary>
+                [NameInMap("LogStoreName")]
+                [Validation(Required=false)]
+                public string LogStoreName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>180</para>
+                /// </summary>
+                [NameInMap("LogStoreTtl")]
+                [Validation(Required=false)]
+                public int? LogStoreTtl { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10.333</para>
+                /// </summary>
+                [NameInMap("UsedCapacity")]
+                [Validation(Required=false)]
+                public double? UsedCapacity { get; set; }
 
             }
 
