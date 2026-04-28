@@ -152,6 +152,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("task_type")]
+        [Validation(Required=false)]
+        public string TaskType { get; set; }
+
         /// <summary>
         /// <para>The total amount of work to be done in the asynchronous task, such as the number of files to be packaged for package download on the server.</para>
         /// 

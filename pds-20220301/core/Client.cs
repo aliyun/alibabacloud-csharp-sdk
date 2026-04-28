@@ -1952,7 +1952,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>test_domain</para>
+        /// <para>Creates a domain.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2001,6 +2001,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["size_quota"] = request.SizeQuota;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreRedundancyType))
+            {
+                body["store_redundancy_type"] = request.StoreRedundancyType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCountQuota))
             {
                 body["user_count_quota"] = request.UserCountQuota;
@@ -2027,7 +2031,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>test_domain</para>
+        /// <para>Creates a domain.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2076,6 +2080,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["size_quota"] = request.SizeQuota;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreRedundancyType))
+            {
+                body["store_redundancy_type"] = request.StoreRedundancyType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserCountQuota))
             {
                 body["user_count_quota"] = request.UserCountQuota;
@@ -2102,7 +2110,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>test_domain</para>
+        /// <para>Creates a domain.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2126,7 +2134,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>test_domain</para>
+        /// <para>Creates a domain.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2388,10 +2396,6 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["hidden"] = request.Hidden;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageMediaMetadata))
-            {
-                body["image_media_metadata"] = request.ImageMediaMetadata;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalCreatedAt))
             {
                 body["local_created_at"] = request.LocalCreatedAt;
@@ -2435,10 +2439,6 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserTags))
             {
                 body["user_tags"] = request.UserTags;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoMediaMetadata))
-            {
-                body["video_media_metadata"] = request.VideoMediaMetadata;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2514,10 +2514,6 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["hidden"] = request.Hidden;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageMediaMetadata))
-            {
-                body["image_media_metadata"] = request.ImageMediaMetadata;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LocalCreatedAt))
             {
                 body["local_created_at"] = request.LocalCreatedAt;
@@ -2561,10 +2557,6 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserTags))
             {
                 body["user_tags"] = request.UserTags;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoMediaMetadata))
-            {
-                body["video_media_metadata"] = request.VideoMediaMetadata;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6686,7 +6678,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URL of a file. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175889.html">https://help.aliyun.com/document_detail/175889.html</a>.</para>
+        /// <para>Obtains the download URL of the file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6752,7 +6744,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URL of a file. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175889.html">https://help.aliyun.com/document_detail/175889.html</a>.</para>
+        /// <para>Obtains the download URL of the file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6818,7 +6810,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URL of a file. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175889.html">https://help.aliyun.com/document_detail/175889.html</a>.</para>
+        /// <para>Obtains the download URL of the file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6837,7 +6829,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download URL of a file. For more information about best practices, visit <a href="https://help.aliyun.com/document_detail/175889.html">https://help.aliyun.com/document_detail/175889.html</a>.</para>
+        /// <para>Obtains the download URL of the file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13262,6 +13254,160 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Penalizes files.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PunishFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PunishFileResponse
+        /// </returns>
+        public PunishFileResponse PunishFileWithOptions(PunishFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionCode))
+            {
+                body["action_code"] = request.ActionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveId))
+            {
+                body["drive_id"] = request.DriveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                body["file_id"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PunishReason))
+            {
+                body["punish_reason"] = request.PunishReason;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PunishFile",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/csi/business/punish_file",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PunishFileResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Penalizes files.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PunishFileRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PunishFileResponse
+        /// </returns>
+        public async Task<PunishFileResponse> PunishFileWithOptionsAsync(PunishFileRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionCode))
+            {
+                body["action_code"] = request.ActionCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveId))
+            {
+                body["drive_id"] = request.DriveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileId))
+            {
+                body["file_id"] = request.FileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PunishReason))
+            {
+                body["punish_reason"] = request.PunishReason;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PunishFile",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/csi/business/punish_file",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PunishFileResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Penalizes files.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PunishFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PunishFileResponse
+        /// </returns>
+        public PunishFileResponse PunishFile(PunishFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PunishFileWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Penalizes files.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PunishFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PunishFileResponse
+        /// </returns>
+        public async Task<PunishFileResponse> PunishFileAsync(PunishFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PunishFileWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询凌霄订单价格</para>
         /// </summary>
         /// 
@@ -14502,7 +14648,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search domain with specified attributes</para>
+        /// <para>Searches for domains</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14560,7 +14706,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search domain with specified attributes</para>
+        /// <para>Searches for domains</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14618,7 +14764,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search domain with specified attributes</para>
+        /// <para>Searches for domains</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14637,7 +14783,7 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Search domain with specified attributes</para>
+        /// <para>Searches for domains</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class VideoMediaAudioStream : TeaModel {
         /// <summary>
+        /// <para>The bitrate of the audio stream. Unit: bit/s.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>129280</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string BitRate { get; set; }
 
         /// <summary>
+        /// <para>The audio encoding mode.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aac</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string CodeName { get; set; }
 
         /// <summary>
+        /// <para>The duration of the audio stream. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7704.573000</para>
         /// </summary>

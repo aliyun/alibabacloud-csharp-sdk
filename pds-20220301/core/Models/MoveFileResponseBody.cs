@@ -61,6 +61,18 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string FileId { get; set; }
 
+        [NameInMap("file_name")]
+        [Validation(Required=false)]
+        public string FileName { get; set; }
+
+        [NameInMap("revision_id")]
+        [Validation(Required=false)]
+        public string RevisionId { get; set; }
+
+        [NameInMap("updated_at")]
+        [Validation(Required=false)]
+        public string UpdatedAt { get; set; }
+
     }
 
 }

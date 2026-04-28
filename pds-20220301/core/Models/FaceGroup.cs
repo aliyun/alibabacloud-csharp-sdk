@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class FaceGroup : TeaModel {
         /// <summary>
+        /// <para>The time when the face-based group was generated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-01-14T10:10:52.83948013+08:00</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
 
+        /// <summary>
+        /// <para>The border of the image used as the cover the face-based group.</para>
+        /// </summary>
         [NameInMap("group_cover_face_boundary")]
         [Validation(Required=false)]
         public FaceGroupGroupCoverFaceBoundary GroupCoverFaceBoundary { get; set; }
         public class FaceGroupGroupCoverFaceBoundary : TeaModel {
             /// <summary>
+            /// <para>The height of the border. Unit: pixel.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>300</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             public int? Height { get; set; }
 
             /// <summary>
+            /// <para>The distance from the left side of the photo to the border. Unit: pixel.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             public int? Left { get; set; }
 
             /// <summary>
+            /// <para>The distance from the top of the photo to the border. Unit: pixel.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             public int? Top { get; set; }
 
             /// <summary>
+            /// <para>The width of the border. Unit: pixel.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>200</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         }
 
         /// <summary>
+        /// <para>The ID of the file used as the cover of the face-based group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6549c959640fbd517c9b4d93b3b36aecc45xxxxx</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string GroupCoverFileId { get; set; }
 
         /// <summary>
+        /// <para>The height of the image used as the cover of the face-based group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1080</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public long? GroupCoverHeight { get; set; }
 
         /// <summary>
+        /// <para>The URL of the image used as the cover of the face-based group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxx">https://xxx</a></para>
         /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string GroupCoverUrl { get; set; }
 
         /// <summary>
+        /// <para>The width of the image used as the cover of the face-based group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1920</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public long? GroupCoverWidth { get; set; }
 
         /// <summary>
+        /// <para>The ID of the face-based group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Cluster-ae6e3472-999e-410b-b54e-cd5dba****</para>
         /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The name of the face-based group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name</para>
         /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string GroupName { get; set; }
 
         /// <summary>
+        /// <para>The number of photos in the face-based group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -111,11 +138,16 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public long? ImageCount { get; set; }
 
+        /// <summary>
+        /// <para>The remarks.</para>
+        /// </summary>
         [NameInMap("remarks")]
         [Validation(Required=false)]
         public string Remarks { get; set; }
 
         /// <summary>
+        /// <para>The time when the face-based group was modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-01-14T10:10:52.83948013+08:00</para>
         /// </summary>

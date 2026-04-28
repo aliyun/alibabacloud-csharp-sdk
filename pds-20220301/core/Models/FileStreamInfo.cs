@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 
         [NameInMap("part_info_list")]
         [Validation(Required=false)]
-        public UploadPartInfo PartInfoList { get; set; }
+        public List<UploadPartInfo> PartInfoList { get; set; }
 
         [NameInMap("pre_hash")]
         [Validation(Required=false)]

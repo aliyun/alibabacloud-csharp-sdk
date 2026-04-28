@@ -115,13 +115,6 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public bool? Hidden { get; set; }
 
         /// <summary>
-        /// <para>The information about the image specified by the client.</para>
-        /// </summary>
-        [NameInMap("image_media_metadata")]
-        [Validation(Required=false)]
-        public ImageMediaMetadata ImageMediaMetadata { get; set; }
-
-        /// <summary>
         /// <para>The time when the local file was created. By default, this parameter is left empty. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format based on the UTC+0 time zone.</para>
         /// 
         /// <b>Example:</b>
@@ -198,6 +191,14 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
             [NameInMap("content_md5")]
             [Validation(Required=false)]
             public string ContentMd5 { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>application/json</para>
+            /// </summary>
+            [NameInMap("content_type")]
+            [Validation(Required=false)]
+            public string ContentType { get; set; }
 
             /// <summary>
             /// <para>The SHA-1 hash value of the file content before the file part. This parameter takes effect only if the parallel upload feature is enabled.</para>
@@ -297,13 +298,6 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [NameInMap("user_tags")]
         [Validation(Required=false)]
         public List<UserTag> UserTags { get; set; }
-
-        /// <summary>
-        /// <para>The information about the video specified by the client.</para>
-        /// </summary>
-        [NameInMap("video_media_metadata")]
-        [Validation(Required=false)]
-        public VideoMediaMetadata VideoMediaMetadata { get; set; }
 
     }
 

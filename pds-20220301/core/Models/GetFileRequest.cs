@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         /// <ol>
         /// <item><description>If this parameter is set to \*, all fields of the file except the fields that must be specified are returned.</description></item>
         /// <item><description>If only specific fields are required, you can specify the following fields: url, thumbnail, exif, cropping_suggestion, characteristic_hash, video_metadata, and video_preview_metadata. If multiple fields are required, separate them with commas (,). Example: url,thumbnail.</description></item>
-        /// <item><description>The investigation_info field is returned only if you specify this field.</description></item>
+        /// <item><description>The investigation_info field is returned only if it is specified.</description></item>
         /// </ol>
         /// <para>By default, all fields except the fields that must be specified are returned.</para>
         /// 
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The share ID. If you want to manage a file by using a share link, carry the <c>x-share-token</c> header for authentication in the request and specify share_id. In this case, <c>drive_id</c> is invalid. Otherwise, use an <c>AccessKey pair</c> or <c>access token</c> for authentication and specify <c>drive_id</c>. You must specify one of <c>share_id</c> and <c>drive_id</c>.</para>
+        /// <para>The share ID. If you want to share a file, carry the <c>x-share-token</c> header for authentication in the request and specify share_id. In this case, <c>drive_id</c> is invalid. Otherwise, use an <c>AccessKey pair</c> or <c>access token</c> for authentication and specify <c>drive_id</c>. You must specify one of <c>share_id</c> and <c>drive_id</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7JQX1FswpQ8</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string ShareId { get; set; }
 
         /// <summary>
-        /// <para>缩略图配置，可一次性返回最多5个缩略图，map的key可以自定义，返回时按key返回对应的缩略图链接</para>
+        /// <para>The thumbnail configurations. Up to five thumbnails can be returned at a time. The value contains key-value pairs. You can customize the keys. The URL of a thumbnail is returned based on the key.</para>
         /// </summary>
         [NameInMap("thumbnail_processes")]
         [Validation(Required=false)]

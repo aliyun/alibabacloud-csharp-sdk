@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
 {
     public class CreateDomainRequest : TeaModel {
         /// <summary>
-        /// <para>domain 描述</para>
+        /// <para>The description of the domain.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>你好企业网盘开发环境</para>
+        /// <para>cloud drive dev</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>If you want to perform secondary operations based on Drive and Photo Service and perform fine-grained control on your tenants, you can use the parent-child domain feature of Drive and Photo Service. For more information, join the DingTalk group whose ID is 23146118.</para>
+        /// <para>The name of the domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>你好企业网盘</para>
+        /// <para>cloud drive</para>
         /// </summary>
         [NameInMap("domain_name")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>https</para>
+        /// <para>Specifies whether to enable the default drive feature. A value of true specifies that all users are assigned a drive by default on the first logon. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public bool? InitDriveEnable { get; set; }
 
         /// <summary>
-        /// <para>http</para>
+        /// <para>This parameter is required when the init_drive_enable is set to true. The size of the default drive. Unit: bytes. The default is 0, meaning the created drive size is 0, and files cannot be uploaded. If you need to initialize the drive, set this value. A value of -1 indicates that the size is unlimited.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1073741824</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public long? InitDriveSize { get; set; }
 
         /// <summary>
-        /// <para>Create domain.</para>
+        /// <para>The ID of the parent domain. If you want to create a child domain, specify parent_domain_id. In most cases, you do not need to create a child domain. If you want to perform secondary operations based on Drive and Photo Service, contact the customer service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>bj1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string ParentDomainId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent domain. If you want to create a child domain, specify parent_domain_id. In most cases, you do not need to create a child domain. If you want to perform secondary operations based on Drive and Photo Service, contact the customer service.</para>
+        /// <para>The total storage quota for all drives in the domain. A value of 0 indicates that the quota is unlimited.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1099511627776</para>
@@ -71,7 +71,21 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public long? SizeQuota { get; set; }
 
         /// <summary>
-        /// <para>The information about the domain.</para>
+        /// <para>Specifies the storage redundancy type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>LRS: locally redundant storage</description></item>
+        /// <item><description>ZRS: zone-redundant storage</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LRS</para>
+        /// </summary>
+        [NameInMap("store_redundancy_type")]
+        [Validation(Required=false)]
+        public string StoreRedundancyType { get; set; }
+
+        /// <summary>
+        /// <para>The largest number of users that can be created in the domain. A value of 0 specifies that the number is unlimited.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
