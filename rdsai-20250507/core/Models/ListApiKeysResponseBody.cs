@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 [Validation(Required=false)]
                 public string LimitType { get; set; }
 
+                [NameInMap("ThresholdPercent")]
+                [Validation(Required=false)]
+                public int? ThresholdPercent { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -100,6 +104,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [NameInMap("SystemApiKey")]
             [Validation(Required=false)]
             public string SystemApiKey { get; set; }
+
+            [NameInMap("ThresholdPercent")]
+            [Validation(Required=false)]
+            public int? ThresholdPercent { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

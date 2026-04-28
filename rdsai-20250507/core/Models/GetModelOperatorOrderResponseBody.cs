@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetModelOperatorOrderResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The query result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetModelOperatorOrderResponseBodyData Data { get; set; }
         public class GetModelOperatorOrderResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Indicates whether a valid order exists.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -21,11 +26,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public bool? HasValidOrder { get; set; }
 
+            /// <summary>
+            /// <para>The instance list.</para>
+            /// </summary>
             [NameInMap("InstanceList")]
             [Validation(Required=false)]
             public List<GetModelOperatorOrderResponseBodyDataInstanceList> InstanceList { get; set; }
             public class GetModelOperatorOrderResponseBodyDataInstanceList : TeaModel {
                 /// <summary>
+                /// <para>The instance end time (format: Timestamp).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1775145600000</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
+                /// <para>instance type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xlarge</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string InstanceClass { get; set; }
 
                 /// <summary>
+                /// <para>The instance name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>rds_copilot***_public_cn-*********6</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The instance start time (format: Timestamp).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1772439028000</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public long? StartTime { get; set; }
 
                 /// <summary>
+                /// <para>The instance status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>active/creating</para>
                 /// </summary>
@@ -70,6 +88,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -88,6 +108,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Request result.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

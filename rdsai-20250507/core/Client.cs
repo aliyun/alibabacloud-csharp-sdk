@@ -4379,6 +4379,142 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>关闭Supabase的沙箱和边缘函数能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableAgentRuntimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableAgentRuntimeResponse
+        /// </returns>
+        public DisableAgentRuntimeResponse DisableAgentRuntimeWithOptions(DisableAgentRuntimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableAgentRuntime",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableAgentRuntimeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭Supabase的沙箱和边缘函数能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableAgentRuntimeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableAgentRuntimeResponse
+        /// </returns>
+        public async Task<DisableAgentRuntimeResponse> DisableAgentRuntimeWithOptionsAsync(DisableAgentRuntimeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableAgentRuntime",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableAgentRuntimeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭Supabase的沙箱和边缘函数能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableAgentRuntimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableAgentRuntimeResponse
+        /// </returns>
+        public DisableAgentRuntimeResponse DisableAgentRuntime(DisableAgentRuntimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisableAgentRuntimeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>关闭Supabase的沙箱和边缘函数能力</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableAgentRuntimeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableAgentRuntimeResponse
+        /// </returns>
+        public async Task<DisableAgentRuntimeResponse> DisableAgentRuntimeAsync(DisableAgentRuntimeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisableAgentRuntimeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>启用Supabase的沙箱和边缘函数能力</para>
         /// </summary>
         /// 
@@ -5075,7 +5211,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询MO订单信息</para>
+        /// <para>Obtain RDS AI Assistant Ultimate order information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5109,7 +5245,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询MO订单信息</para>
+        /// <para>Obtain RDS AI Assistant Ultimate order information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5143,7 +5279,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询MO订单信息</para>
+        /// <para>Obtain RDS AI Assistant Ultimate order information</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5161,7 +5297,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询MO订单信息</para>
+        /// <para>Obtain RDS AI Assistant Ultimate order information</para>
         /// </summary>
         /// 
         /// <param name="request">
