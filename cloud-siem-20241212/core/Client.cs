@@ -1056,6 +1056,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 body["AlertAttCk"] = request.AlertAttCk;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertAttCkMapping))
+            {
+                body["AlertAttCkMapping"] = request.AlertAttCkMapping;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertDescription))
             {
                 body["AlertDescription"] = request.AlertDescription;
@@ -1063,6 +1067,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertLevel))
             {
                 body["AlertLevel"] = request.AlertLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertLevelMapping))
+            {
+                body["AlertLevelMapping"] = request.AlertLevelMapping;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertName))
             {
@@ -1091,6 +1099,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertType))
             {
                 body["AlertType"] = request.AlertType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertTypeMapping))
+            {
+                body["AlertTypeMapping"] = request.AlertTypeMapping;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionExpressionContent))
             {
@@ -1230,6 +1242,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 body["AlertAttCk"] = request.AlertAttCk;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertAttCkMapping))
+            {
+                body["AlertAttCkMapping"] = request.AlertAttCkMapping;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertDescription))
             {
                 body["AlertDescription"] = request.AlertDescription;
@@ -1237,6 +1253,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertLevel))
             {
                 body["AlertLevel"] = request.AlertLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertLevelMapping))
+            {
+                body["AlertLevelMapping"] = request.AlertLevelMapping;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertName))
             {
@@ -1265,6 +1285,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertType))
             {
                 body["AlertType"] = request.AlertType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertTypeMapping))
+            {
+                body["AlertTypeMapping"] = request.AlertTypeMapping;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionExpressionContent))
             {
@@ -7272,6 +7296,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 body["DataSetId"] = request.DataSetId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                body["Filter"] = request.Filter;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 body["Lang"] = request.Lang;
@@ -7283,6 +7311,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                body["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderField))
+            {
+                body["OrderField"] = request.OrderField;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -7342,6 +7378,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 body["DataSetId"] = request.DataSetId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                body["Filter"] = request.Filter;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 body["Lang"] = request.Lang;
@@ -7353,6 +7393,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 body["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                body["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderField))
+            {
+                body["OrderField"] = request.OrderField;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -13784,6 +13832,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 body["AlertAttCk"] = request.AlertAttCk;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertAttCkMapping))
+            {
+                body["AlertAttCkMapping"] = request.AlertAttCkMapping;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertDescription))
             {
                 body["AlertDescription"] = request.AlertDescription;
@@ -13791,6 +13843,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertLevel))
             {
                 body["AlertLevel"] = request.AlertLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertLevelMapping))
+            {
+                body["AlertLevelMapping"] = request.AlertLevelMapping;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertName))
             {
@@ -13819,6 +13875,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertType))
             {
                 body["AlertType"] = request.AlertType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertTypeMapping))
+            {
+                body["AlertTypeMapping"] = request.AlertTypeMapping;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionExpressionContent))
             {
@@ -13950,6 +14010,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             {
                 body["AlertAttCk"] = request.AlertAttCk;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertAttCkMapping))
+            {
+                body["AlertAttCkMapping"] = request.AlertAttCkMapping;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertDescription))
             {
                 body["AlertDescription"] = request.AlertDescription;
@@ -13957,6 +14021,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertLevel))
             {
                 body["AlertLevel"] = request.AlertLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertLevelMapping))
+            {
+                body["AlertLevelMapping"] = request.AlertLevelMapping;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertName))
             {
@@ -13985,6 +14053,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertType))
             {
                 body["AlertType"] = request.AlertType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertTypeMapping))
+            {
+                body["AlertTypeMapping"] = request.AlertTypeMapping;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetectionExpressionContent))
             {

@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>{&quot;field1&quot;:&quot;value1&quot;,&quot;field2&quot;:&quot;value2&quot;}</para>
+        /// </summary>
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public string Filter { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
@@ -42,6 +50,22 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>desc</para>
+        /// </summary>
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>updatetime</para>
+        /// </summary>
+        [NameInMap("OrderField")]
+        [Validation(Required=false)]
+        public string OrderField { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
