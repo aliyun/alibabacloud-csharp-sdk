@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public Lifecycle Lifecycle { get; set; }
 
+        [NameInMap("MainContainerSecurityContext")]
+        [Validation(Required=false)]
+        public SecurityContext MainContainerSecurityContext { get; set; }
+
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
