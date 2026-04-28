@@ -111,6 +111,14 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>N</para>
+            /// </summary>
+            [NameInMap("IsOnBizApp")]
+            [Validation(Required=false)]
+            public string IsOnBizApp { get; set; }
+
+            /// <summary>
             /// <para>The Marketing Messaging Lite status.</para>
             /// 
             /// <b>Example:</b>
