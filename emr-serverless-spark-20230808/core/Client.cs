@@ -11607,5 +11607,195 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808
             return await UpdateRayClusterWithOptionsAsync(workspaceId, clusterId, request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新workspace属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceResponse
+        /// </returns>
+        public UpdateWorkspaceResponse UpdateWorkspaceWithOptions(UpdateWorkspaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cu))
+            {
+                body["cu"] = request.Cu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gpu))
+            {
+                body["gpu"] = request.Gpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuSpec))
+            {
+                body["gpuSpec"] = request.GpuSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subscription))
+            {
+                body["subscription"] = request.Subscription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                body["workspaceName"] = request.WorkspaceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkspace",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新workspace属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceResponse
+        /// </returns>
+        public async Task<UpdateWorkspaceResponse> UpdateWorkspaceWithOptionsAsync(UpdateWorkspaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cu))
+            {
+                body["cu"] = request.Cu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Gpu))
+            {
+                body["gpu"] = request.Gpu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GpuSpec))
+            {
+                body["gpuSpec"] = request.GpuSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                body["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Subscription))
+            {
+                body["subscription"] = request.Subscription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                body["workspaceName"] = request.WorkspaceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateWorkspace",
+                Version = "2023-08-08",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/workspaces/update",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新workspace属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceResponse
+        /// </returns>
+        public UpdateWorkspaceResponse UpdateWorkspace(UpdateWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateWorkspaceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新workspace属性</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateWorkspaceResponse
+        /// </returns>
+        public async Task<UpdateWorkspaceResponse> UpdateWorkspaceAsync(UpdateWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateWorkspaceWithOptionsAsync(request, headers, runtime);
+        }
+
     }
 }
