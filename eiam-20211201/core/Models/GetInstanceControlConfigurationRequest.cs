@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceControlConfigurationRequest : TeaModel {
+        [NameInMap("ElementName")]
+        [Validation(Required=false)]
+        public string ElementName { get; set; }
+
         /// <summary>
         /// <para>IDaaS EIAM实例的ID。</para>
         /// <para>This parameter is required.</para>
