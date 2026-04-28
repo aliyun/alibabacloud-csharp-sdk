@@ -37,46 +37,22 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
                 [Validation(Required=false)]
                 public List<DescribeAdvisorResourcesResponseBodyDataResultResource> Resource { get; set; }
                 public class DescribeAdvisorResourcesResponseBodyDataResultResource : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>{
-                    ///     &quot;resourceId&quot;: &quot;xxxxx&quot;,
-                    ///     &quot;deviceAvailable&quot;: true,
-                    ///     ...
-                    /// }</para>
-                    /// </summary>
                     [NameInMap("Data")]
                     [Validation(Required=false)]
                     public string Data { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>ecs</para>
-                    /// </summary>
                     [NameInMap("Product")]
                     [Validation(Required=false)]
                     public string Product { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>cn-hangzhou</para>
-                    /// </summary>
                     [NameInMap("RegionId")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>i-bp67acfmxazb4p****</para>
-                    /// </summary>
                     [NameInMap("ResourceId")]
                     [Validation(Required=false)]
                     public string ResourceId { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>ecs-20230701</para>
-                    /// </summary>
                     [NameInMap("ResourceName")]
                     [Validation(Required=false)]
                     public string ResourceName { get; set; }

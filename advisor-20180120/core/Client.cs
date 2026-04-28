@@ -549,6 +549,11 @@ namespace AlibabaCloud.SDK.Advisor20180120
             return await DescribeAdvicesPageWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>巡检</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAdvisorChecksRequest
         /// </param>
@@ -590,6 +595,11 @@ namespace AlibabaCloud.SDK.Advisor20180120
             return TeaModel.ToObject<DescribeAdvisorChecksResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>巡检</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAdvisorChecksRequest
         /// </param>
@@ -631,6 +641,11 @@ namespace AlibabaCloud.SDK.Advisor20180120
             return TeaModel.ToObject<DescribeAdvisorChecksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>巡检</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAdvisorChecksRequest
         /// </param>
@@ -644,6 +659,11 @@ namespace AlibabaCloud.SDK.Advisor20180120
             return DescribeAdvisorChecksWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>巡检</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAdvisorChecksRequest
         /// </param>
@@ -697,6 +717,10 @@ namespace AlibabaCloud.SDK.Advisor20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckTypesShrink))
             {
                 query["CheckTypes"] = request.CheckTypesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -786,6 +810,10 @@ namespace AlibabaCloud.SDK.Advisor20180120
             {
                 query["CheckTypes"] = request.CheckTypesShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
@@ -869,6 +897,11 @@ namespace AlibabaCloud.SDK.Advisor20180120
             return await DescribeAdvisorChecksFoPagesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAdvisorResourcesRequest
         /// </param>
@@ -926,6 +959,11 @@ namespace AlibabaCloud.SDK.Advisor20180120
             return TeaModel.ToObject<DescribeAdvisorResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAdvisorResourcesRequest
         /// </param>
@@ -983,6 +1021,11 @@ namespace AlibabaCloud.SDK.Advisor20180120
             return TeaModel.ToObject<DescribeAdvisorResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAdvisorResourcesRequest
         /// </param>
@@ -996,6 +1039,11 @@ namespace AlibabaCloud.SDK.Advisor20180120
             return DescribeAdvisorResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询资源</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAdvisorResourcesRequest
         /// </param>
@@ -1370,6 +1418,10 @@ namespace AlibabaCloud.SDK.Advisor20180120
             {
                 query["GroupBy"] = request.GroupBy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
             {
                 query["Product"] = request.Product;
@@ -1497,6 +1549,10 @@ namespace AlibabaCloud.SDK.Advisor20180120
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupBy))
             {
                 query["GroupBy"] = request.GroupBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Product))
             {
@@ -1749,6 +1805,11 @@ namespace AlibabaCloud.SDK.Advisor20180120
             return await DescribeCostOptimizationOverviewWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>历史</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHistoryAdvicesRequest
         /// </param>
@@ -1814,6 +1875,11 @@ namespace AlibabaCloud.SDK.Advisor20180120
             return TeaModel.ToObject<GetHistoryAdvicesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>历史</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHistoryAdvicesRequest
         /// </param>
@@ -1879,6 +1945,11 @@ namespace AlibabaCloud.SDK.Advisor20180120
             return TeaModel.ToObject<GetHistoryAdvicesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>历史</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHistoryAdvicesRequest
         /// </param>
@@ -1892,6 +1963,11 @@ namespace AlibabaCloud.SDK.Advisor20180120
             return GetHistoryAdvicesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>历史</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHistoryAdvicesRequest
         /// </param>
@@ -2060,6 +2136,10 @@ namespace AlibabaCloud.SDK.Advisor20180120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
             {
                 query["Token"] = request.Token;
@@ -2102,6 +2182,10 @@ namespace AlibabaCloud.SDK.Advisor20180120
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
             {
                 query["Token"] = request.Token;

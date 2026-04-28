@@ -25,18 +25,10 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
             [Validation(Required=false)]
             public List<DescribeAdvisorChecksResponseBodyDataAdvisorCheck> AdvisorCheck { get; set; }
             public class DescribeAdvisorChecksResponseBodyDataAdvisorCheck : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>EcsHighCpuUtilization</para>
-                /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
@@ -45,18 +37,10 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2023-07-01 00:00:00</para>
-                /// </summary>
                 [NameInMap("GmtCreated")]
                 [Validation(Required=false)]
                 public string GmtCreated { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2023-07-01 00:00:00</para>
-                /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
@@ -69,18 +53,10 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
                 [Validation(Required=false)]
                 public string OperateColumn { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>ecs</para>
-                /// </summary>
                 [NameInMap("Product")]
                 [Validation(Required=false)]
                 public string Product { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>enabled</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
@@ -89,23 +65,6 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
                 [Validation(Required=false)]
                 public string Tips { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>[
-                ///     {
-                ///         &quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;,
-                ///         &quot;type&quot;:&quot;DEFAULT&quot;
-                ///     },
-                ///     {
-                ///         &quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;,
-                ///         &quot;type&quot;:&quot;DEFAULT&quot;
-                ///     },
-                ///     {
-                ///         &quot;key&quot;:&quot;EcsHighCpuUtilization_xxxx&quot;,
-                ///         &quot;type&quot;:&quot;DEFAULT&quot;
-                ///     },
-                /// ]</para>
-                /// </summary>
                 [NameInMap("ViewColumn")]
                 [Validation(Required=false)]
                 public string ViewColumn { get; set; }

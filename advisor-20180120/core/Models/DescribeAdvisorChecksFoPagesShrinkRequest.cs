@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Advisor20180120.Models
         [Validation(Required=false)]
         public string CheckTypesShrink { get; set; }
 
+        [NameInMap("Language")]
+        [Validation(Required=false)]
+        public string Language { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <hr>
