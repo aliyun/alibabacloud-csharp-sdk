@@ -12953,6 +12953,134 @@ namespace AlibabaCloud.SDK.Csas20230120
             return await ModifyEnterpriseAcceleratePolicyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>吊销用户设备会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeUserDeviceSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeUserDeviceSessionResponse
+        /// </returns>
+        public RevokeUserDeviceSessionResponse RevokeUserDeviceSessionWithOptions(RevokeUserDeviceSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevTag))
+            {
+                body["DevTag"] = request.DevTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaseUserId))
+            {
+                body["SaseUserId"] = request.SaseUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeUserDeviceSession",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeUserDeviceSessionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>吊销用户设备会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeUserDeviceSessionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeUserDeviceSessionResponse
+        /// </returns>
+        public async Task<RevokeUserDeviceSessionResponse> RevokeUserDeviceSessionWithOptionsAsync(RevokeUserDeviceSessionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevTag))
+            {
+                body["DevTag"] = request.DevTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaseUserId))
+            {
+                body["SaseUserId"] = request.SaseUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RevokeUserDeviceSession",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RevokeUserDeviceSessionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>吊销用户设备会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeUserDeviceSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeUserDeviceSessionResponse
+        /// </returns>
+        public RevokeUserDeviceSessionResponse RevokeUserDeviceSession(RevokeUserDeviceSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RevokeUserDeviceSessionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>吊销用户设备会话</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RevokeUserDeviceSessionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RevokeUserDeviceSessionResponse
+        /// </returns>
+        public async Task<RevokeUserDeviceSessionResponse> RevokeUserDeviceSessionAsync(RevokeUserDeviceSessionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RevokeUserDeviceSessionWithOptionsAsync(request, runtime);
+        }
+
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI RevokeUserSession is deprecated
