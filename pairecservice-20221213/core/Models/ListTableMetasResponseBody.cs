@@ -129,6 +129,22 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>Maxcompute</para>
+            /// </summary>
+            [NameInMap("ResourceType")]
+            [Validation(Required=false)]
+            public string ResourceType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
+            [NameInMap("ResourceUri")]
+            [Validation(Required=false)]
+            public string ResourceUri { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
             [NameInMap("TableMetaId")]

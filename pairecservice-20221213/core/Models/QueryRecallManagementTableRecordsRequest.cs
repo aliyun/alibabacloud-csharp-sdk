@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
-    public class ChangeRecallManagementServiceVersionRequest : TeaModel {
+    public class QueryRecallManagementTableRecordsRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>pairec-cn-test123</para>
@@ -19,11 +19,19 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>[&quot;1001&quot;,&quot;1002&quot;]</para>
+        /// </summary>
+        [NameInMap("PrimaryKeys")]
+        [Validation(Required=false)]
+        public byte[] PrimaryKeys { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
-        [NameInMap("RecallManagementServiceVersionId")]
+        [NameInMap("RecallManagementTableVersionId")]
         [Validation(Required=false)]
-        public string RecallManagementServiceVersionId { get; set; }
+        public string RecallManagementTableVersionId { get; set; }
 
     }
 

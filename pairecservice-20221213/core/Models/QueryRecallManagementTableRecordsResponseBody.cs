@@ -8,10 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
-    public class OnlineRecallManagementServiceResponseBody : TeaModel {
+    public class QueryRecallManagementTableRecordsResponseBody : TeaModel {
+        [NameInMap("Records")]
+        [Validation(Required=false)]
+        public List<Dictionary<string, object>> Records { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
-        /// <para>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</para>
+        /// <para>7D59453C-48AA-5FC5-8848-2D373BD1A17F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

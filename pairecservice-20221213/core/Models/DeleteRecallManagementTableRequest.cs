@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
     public class DeleteRecallManagementTableRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pairec-cn-test123</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

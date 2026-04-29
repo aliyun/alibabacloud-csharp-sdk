@@ -8,7 +8,15 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
-    public class OnlineRecallManagementServiceResponseBody : TeaModel {
+    public class ExportRecallManagementTableResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("RecallManagementJobId")]
+        [Validation(Required=false)]
+        public string RecallManagementJobId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</para>

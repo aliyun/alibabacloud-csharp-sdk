@@ -235,6 +235,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>4</para>
+            /// </summary>
+            [NameInMap("RecallManagementServiceVersionConfigId")]
+            [Validation(Required=false)]
+            public string RecallManagementServiceVersionConfigId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
             [NameInMap("RecallManagementTableId")]

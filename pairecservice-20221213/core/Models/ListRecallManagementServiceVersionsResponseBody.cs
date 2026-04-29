@@ -29,13 +29,9 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
             [Validation(Required=false)]
             public string GmtModifiedTime { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>false</para>
-            /// </summary>
-            [NameInMap("IsDefault")]
+            [NameInMap("IsEffective")]
             [Validation(Required=false)]
-            public string IsDefault { get; set; }
+            public bool? IsEffective { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

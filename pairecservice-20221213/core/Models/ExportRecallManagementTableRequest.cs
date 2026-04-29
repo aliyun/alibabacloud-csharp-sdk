@@ -8,12 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
-    public class ListRecallManagementTableVersionsRequest : TeaModel {
+    public class ExportRecallManagementTableRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>pairec-1324***</para>
+        /// <para>pairec-test1</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
@@ -21,35 +19,33 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>ASC</para>
+        /// <para>test</para>
         /// </summary>
-        [NameInMap("Order")]
+        [NameInMap("MaxcomputeProjectName")]
         [Validation(Required=false)]
-        public string Order { get; set; }
+        public string MaxcomputeProjectName { get; set; }
+
+        /// <summary>
+        /// <para>maxcompute schema。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>default</para>
+        /// </summary>
+        [NameInMap("MaxcomputeSchema")]
+        [Validation(Required=false)]
+        public string MaxcomputeSchema { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>table-1</para>
         /// </summary>
-        [NameInMap("PageNumber")]
+        [NameInMap("MaxcomputeTableName")]
         [Validation(Required=false)]
-        public int? PageNumber { get; set; }
+        public string MaxcomputeTableName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>10</para>
-        /// </summary>
-        [NameInMap("PageSize")]
+        [NameInMap("Partitions")]
         [Validation(Required=false)]
-        public int? PageSize { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>GmtCreateTime</para>
-        /// </summary>
-        [NameInMap("SortBy")]
-        [Validation(Required=false)]
-        public string SortBy { get; set; }
+        public Dictionary<string, string> Partitions { get; set; }
 
     }
 

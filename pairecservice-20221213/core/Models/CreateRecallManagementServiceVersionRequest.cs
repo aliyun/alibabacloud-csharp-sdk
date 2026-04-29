@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                         /// </summary>
                         [NameInMap("FieldQuantityLimit")]
                         [Validation(Required=false)]
-                        public string FieldQuantityLimit { get; set; }
+                        public int? FieldQuantityLimit { get; set; }
 
                         /// <summary>
                         /// <b>Example:</b>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
                         /// </summary>
                         [NameInMap("IsRandSort")]
                         [Validation(Required=false)]
-                        public string IsRandSort { get; set; }
+                        public bool? IsRandSort { get; set; }
 
                         /// <summary>
                         /// <b>Example:</b>
