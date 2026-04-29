@@ -1673,9 +1673,6 @@ namespace AlibabaCloud.SDK.Domain20180208
             return await FinishDemandWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
-        /// GetIntlDomainDownloadUrlRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -1701,9 +1698,6 @@ namespace AlibabaCloud.SDK.Domain20180208
             return TeaModel.ToObject<GetIntlDomainDownloadUrlResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <param name="request">
-        /// GetIntlDomainDownloadUrlRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -1747,9 +1741,6 @@ namespace AlibabaCloud.SDK.Domain20180208
             return await GetIntlDomainDownloadUrlWithOptionsAsync(runtime);
         }
 
-        /// <param name="request">
-        /// GetReserveDomainUrlRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -1775,9 +1766,6 @@ namespace AlibabaCloud.SDK.Domain20180208
             return TeaModel.ToObject<GetReserveDomainUrlResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <param name="request">
-        /// GetReserveDomainUrlRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -2563,7 +2551,7 @@ namespace AlibabaCloud.SDK.Domain20180208
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询回购订单列表</para>
+        /// <para>Queries the details of requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2617,7 +2605,7 @@ namespace AlibabaCloud.SDK.Domain20180208
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询回购订单列表</para>
+        /// <para>Queries the details of requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2671,7 +2659,7 @@ namespace AlibabaCloud.SDK.Domain20180208
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询回购订单列表</para>
+        /// <para>Queries the details of requests.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2689,7 +2677,7 @@ namespace AlibabaCloud.SDK.Domain20180208
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询回购订单列表</para>
+        /// <para>Queries the details of requests.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -25,18 +25,10 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
             [Validation(Required=false)]
             public List<QueryBrokerDemandRecordResponseBodyDataBrokerDemandRecord> BrokerDemandRecord { get; set; }
             public class QueryBrokerDemandRecordResponseBodyDataBrokerDemandRecord : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>SE20183A0Q7C5556</para>
-                /// </summary>
                 [NameInMap("BizId")]
                 [Validation(Required=false)]
                 public string BizId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1525249317000</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
