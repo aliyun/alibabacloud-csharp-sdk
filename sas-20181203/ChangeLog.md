@@ -1,3 +1,7 @@
+2026-04-29 Version: 9.3.0
+- Support API HandleObjectScanEvent.
+
+
 2026-04-27 Version: 9.2.0
 - Support API AddUnknownThreatDetectProcess.
 - Support API CreateUnknownThreatDetectStrategy.
