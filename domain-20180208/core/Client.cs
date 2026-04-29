@@ -4683,6 +4683,142 @@ namespace AlibabaCloud.SDK.Domain20180208
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新代理价</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProxyPriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProxyPriceResponse
+        /// </returns>
+        public UpdateProxyPriceResponse UpdateProxyPriceWithOptions(UpdateProxyPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuctionId))
+            {
+                body["AuctionId"] = request.AuctionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Currency))
+            {
+                body["Currency"] = request.Currency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Price))
+            {
+                body["Price"] = request.Price;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProxyPrice",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProxyPriceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新代理价</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProxyPriceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProxyPriceResponse
+        /// </returns>
+        public async Task<UpdateProxyPriceResponse> UpdateProxyPriceWithOptionsAsync(UpdateProxyPriceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuctionId))
+            {
+                body["AuctionId"] = request.AuctionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Currency))
+            {
+                body["Currency"] = request.Currency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Price))
+            {
+                body["Price"] = request.Price;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateProxyPrice",
+                Version = "2018-02-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateProxyPriceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新代理价</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProxyPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProxyPriceResponse
+        /// </returns>
+        public UpdateProxyPriceResponse UpdateProxyPrice(UpdateProxyPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateProxyPriceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新代理价</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateProxyPriceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateProxyPriceResponse
+        /// </returns>
+        public async Task<UpdateProxyPriceResponse> UpdateProxyPriceAsync(UpdateProxyPriceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateProxyPriceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>域名建站添加DNS记录</para>
         /// </summary>
         /// 
