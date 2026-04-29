@@ -22435,6 +22435,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             {
                 query["ScalingRuleTimer"] = request.ScalingRuleTimer;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleType))
+            {
+                query["ScalingRuleType"] = request.ScalingRuleType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -22510,6 +22514,10 @@ namespace AlibabaCloud.SDK.Sae20190506
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleTimer))
             {
                 query["ScalingRuleTimer"] = request.ScalingRuleTimer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScalingRuleType))
+            {
+                query["ScalingRuleType"] = request.ScalingRuleType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

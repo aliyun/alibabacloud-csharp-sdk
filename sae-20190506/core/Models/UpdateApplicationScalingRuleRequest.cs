@@ -178,6 +178,10 @@ namespace AlibabaCloud.SDK.Sae20190506.Models
         [Validation(Required=false)]
         public string ScalingRuleTimer { get; set; }
 
+        [NameInMap("ScalingRuleType")]
+        [Validation(Required=false)]
+        public string ScalingRuleType { get; set; }
+
     }
 
 }
