@@ -169,6 +169,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
             }
 
+            [NameInMap("PrefixCacheEnabled")]
+            [Validation(Required=false)]
+            public bool? PrefixCacheEnabled { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1772439028000</para>

@@ -9499,6 +9499,146 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新 API key 的告警百分比阈值</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMOQuotaAlertThresholdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMOQuotaAlertThresholdResponse
+        /// </returns>
+        public UpdateMOQuotaAlertThresholdResponse UpdateMOQuotaAlertThresholdWithOptions(UpdateMOQuotaAlertThresholdRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMOQuotaAlertThresholdShrinkRequest request = new UpdateMOQuotaAlertThresholdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Apikey))
+            {
+                request.ApikeyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Apikey, "Apikey", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApikeyShrink))
+            {
+                query["Apikey"] = request.ApikeyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMOQuotaAlertThreshold",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMOQuotaAlertThresholdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 API key 的告警百分比阈值</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMOQuotaAlertThresholdRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMOQuotaAlertThresholdResponse
+        /// </returns>
+        public async Task<UpdateMOQuotaAlertThresholdResponse> UpdateMOQuotaAlertThresholdWithOptionsAsync(UpdateMOQuotaAlertThresholdRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMOQuotaAlertThresholdShrinkRequest request = new UpdateMOQuotaAlertThresholdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Apikey))
+            {
+                request.ApikeyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Apikey, "Apikey", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApikeyShrink))
+            {
+                query["Apikey"] = request.ApikeyShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMOQuotaAlertThreshold",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMOQuotaAlertThresholdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 API key 的告警百分比阈值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMOQuotaAlertThresholdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMOQuotaAlertThresholdResponse
+        /// </returns>
+        public UpdateMOQuotaAlertThresholdResponse UpdateMOQuotaAlertThreshold(UpdateMOQuotaAlertThresholdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateMOQuotaAlertThresholdWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 API key 的告警百分比阈值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMOQuotaAlertThresholdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMOQuotaAlertThresholdResponse
+        /// </returns>
+        public async Task<UpdateMOQuotaAlertThresholdResponse> UpdateMOQuotaAlertThresholdAsync(UpdateMOQuotaAlertThresholdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateMOQuotaAlertThresholdWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates the information about a specified skill.</para>
         /// </summary>
         /// 
