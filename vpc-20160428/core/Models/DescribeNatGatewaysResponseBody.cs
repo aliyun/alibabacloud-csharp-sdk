@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
                 [Validation(Required=false)]
                 public bool? AutoPay { get; set; }
 
+                [NameInMap("AvailabilityMode")]
+                [Validation(Required=false)]
+                public string AvailabilityMode { get; set; }
+
                 [NameInMap("BusinessStatus")]
                 [Validation(Required=false)]
                 public string BusinessStatus { get; set; }

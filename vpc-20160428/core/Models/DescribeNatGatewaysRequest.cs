@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeNatGatewaysRequest : TeaModel {
+        [NameInMap("AvailabilityMode")]
+        [Validation(Required=false)]
+        public string AvailabilityMode { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">

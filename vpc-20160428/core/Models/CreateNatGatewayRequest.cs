@@ -66,6 +66,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        [NameInMap("AvailabilityMode")]
+        [Validation(Required=false)]
+        public string AvailabilityMode { get; set; }
+
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>

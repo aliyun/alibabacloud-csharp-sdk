@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         }
 
+        [NameInMap("AvailabilityMode")]
+        [Validation(Required=false)]
+        public string AvailabilityMode { get; set; }
+
         /// <summary>
         /// <para>The billing information.</para>
         /// </summary>
