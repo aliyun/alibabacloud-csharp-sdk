@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据源。</para>
+        /// <para>Register a datasource under a FeatureStore Instance. A datasource provides offline storage (<b>MaxCompute</b>) or online storage (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>) for projects in the Instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -349,7 +349,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据源。</para>
+        /// <para>Register a datasource under a FeatureStore Instance. A datasource provides offline storage (<b>MaxCompute</b>) or online storage (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>) for projects in the Instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据源。</para>
+        /// <para>Register a datasource under a FeatureStore Instance. A datasource provides offline storage (<b>MaxCompute</b>) or online storage (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>) for projects in the Instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -430,7 +430,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据源。</para>
+        /// <para>Register a datasource under a FeatureStore Instance. A datasource provides offline storage (<b>MaxCompute</b>) or online storage (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>) for projects in the Instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -995,6 +995,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             {
                 body["EmbeddingDimension"] = request.EmbeddingDimension;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableFusion))
+            {
+                body["EnableFusion"] = request.EnableFusion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTokens))
             {
                 body["MaxTokens"] = request.MaxTokens;
@@ -1002,6 +1006,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
             {
                 body["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelType))
+            {
+                body["ModelType"] = request.ModelType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -1073,6 +1081,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             {
                 body["EmbeddingDimension"] = request.EmbeddingDimension;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableFusion))
+            {
+                body["EnableFusion"] = request.EnableFusion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTokens))
             {
                 body["MaxTokens"] = request.MaxTokens;
@@ -1080,6 +1092,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
             {
                 body["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelType))
+            {
+                body["ModelType"] = request.ModelType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -1477,7 +1493,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建FeatureStore项目</para>
+        /// <para>Create a FeatureStore project under a PAI workspace. A project groups FeatureEntities, FeatureViews, and ModelFeatures sharing one <b>MaxCompute</b> offline datasource and one online datasource (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1543,7 +1559,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建FeatureStore项目</para>
+        /// <para>Create a FeatureStore project under a PAI workspace. A project groups FeatureEntities, FeatureViews, and ModelFeatures sharing one <b>MaxCompute</b> offline datasource and one online datasource (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1609,7 +1625,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建FeatureStore项目</para>
+        /// <para>Create a FeatureStore project under a PAI workspace. A project groups FeatureEntities, FeatureViews, and ModelFeatures sharing one <b>MaxCompute</b> offline datasource and one online datasource (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1628,7 +1644,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建FeatureStore项目</para>
+        /// <para>Create a FeatureStore project under a PAI workspace. A project groups FeatureEntities, FeatureViews, and ModelFeatures sharing one <b>MaxCompute</b> offline datasource and one online datasource (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1777,7 +1793,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定数据源。</para>
+        /// <para>Delete a datasource from a FeatureStore Instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1813,7 +1829,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定数据源。</para>
+        /// <para>Delete a datasource from a FeatureStore Instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1849,7 +1865,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定数据源。</para>
+        /// <para>Delete a datasource from a FeatureStore Instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1864,7 +1880,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定数据源。</para>
+        /// <para>Delete a datasource from a FeatureStore Instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2653,7 +2669,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源详细信息。</para>
+        /// <para>Get the details of a datasource, including its type, connection info, and Config.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2689,7 +2705,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源详细信息。</para>
+        /// <para>Get the details of a datasource, including its type, connection info, and Config.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2725,7 +2741,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源详细信息。</para>
+        /// <para>Get the details of a datasource, including its type, connection info, and Config.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2740,7 +2756,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源详细信息。</para>
+        /// <para>Get the details of a datasource, including its type, connection info, and Config.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4445,7 +4461,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源列表。</para>
+        /// <para>List datasources under a FeatureStore Instance, filtered by workspace, type, or name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4515,7 +4531,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源列表。</para>
+        /// <para>List datasources under a FeatureStore Instance, filtered by workspace, type, or name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4585,7 +4601,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源列表。</para>
+        /// <para>List datasources under a FeatureStore Instance, filtered by workspace, type, or name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4604,7 +4620,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源列表。</para>
+        /// <para>List datasources under a FeatureStore Instance, filtered by workspace, type, or name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7349,7 +7365,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据源信息。</para>
+        /// <para>Update a datasource\&quot;s info. The datasource type and workspace cannot be changed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7403,7 +7419,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据源信息。</para>
+        /// <para>Update a datasource\&quot;s info. The datasource type and workspace cannot be changed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7457,7 +7473,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据源信息。</para>
+        /// <para>Update a datasource\&quot;s info. The datasource type and workspace cannot be changed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7476,7 +7492,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据源信息。</para>
+        /// <para>Update a datasource\&quot;s info. The datasource type and workspace cannot be changed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7491,6 +7507,136 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateDatasourceWithOptionsAsync(InstanceId, DatasourceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新特征视图。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFeatureViewRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFeatureViewResponse
+        /// </returns>
+        public UpdateFeatureViewResponse UpdateFeatureViewWithOptions(string InstanceId, string FeatureViewId, UpdateFeatureViewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["Fields"] = request.Fields;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFeatureView",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/featureviews/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(FeatureViewId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFeatureViewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新特征视图。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFeatureViewRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFeatureViewResponse
+        /// </returns>
+        public async Task<UpdateFeatureViewResponse> UpdateFeatureViewWithOptionsAsync(string InstanceId, string FeatureViewId, UpdateFeatureViewRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Fields))
+            {
+                body["Fields"] = request.Fields;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateFeatureView",
+                Version = "2023-06-21",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/instances/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(InstanceId) + "/featureviews/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(FeatureViewId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateFeatureViewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新特征视图。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFeatureViewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFeatureViewResponse
+        /// </returns>
+        public UpdateFeatureViewResponse UpdateFeatureView(string InstanceId, string FeatureViewId, UpdateFeatureViewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateFeatureViewWithOptions(InstanceId, FeatureViewId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新特征视图。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateFeatureViewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateFeatureViewResponse
+        /// </returns>
+        public async Task<UpdateFeatureViewResponse> UpdateFeatureViewAsync(string InstanceId, string FeatureViewId, UpdateFeatureViewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateFeatureViewWithOptionsAsync(InstanceId, FeatureViewId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7531,6 +7677,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             {
                 body["EmbeddingDimension"] = request.EmbeddingDimension;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableFusion))
+            {
+                body["EnableFusion"] = request.EnableFusion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTokens))
             {
                 body["MaxTokens"] = request.MaxTokens;
@@ -7538,6 +7688,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
             {
                 body["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelType))
+            {
+                body["ModelType"] = request.ModelType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -7605,6 +7759,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             {
                 body["EmbeddingDimension"] = request.EmbeddingDimension;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableFusion))
+            {
+                body["EnableFusion"] = request.EnableFusion;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxTokens))
             {
                 body["MaxTokens"] = request.MaxTokens;
@@ -7612,6 +7770,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
             {
                 body["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelType))
+            {
+                body["ModelType"] = request.ModelType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {

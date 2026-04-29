@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public int? EmbeddingDimension { get; set; }
 
+        [NameInMap("EnableFusion")]
+        [Validation(Required=false)]
+        public bool? EnableFusion { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,6 +68,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [NameInMap("Model")]
         [Validation(Required=false)]
         public string Model { get; set; }
+
+        [NameInMap("ModelType")]
+        [Validation(Required=false)]
+        public string ModelType { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 [Validation(Required=false)]
                 public List<CreateFeatureViewRequestFieldsTransformInput> Input { get; set; }
                 public class CreateFeatureViewRequestFieldsTransformInput : TeaModel {
+                    [NameInMap("Modality")]
+                    [Validation(Required=false)]
+                    public string Modality { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>f1</para>
