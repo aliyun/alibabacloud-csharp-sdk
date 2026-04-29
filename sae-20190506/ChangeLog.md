@@ -2,6 +2,10 @@
 - Update API UpdateApplicationScalingRule: add request parameters ScalingRuleType.
 
 
+2026-04-29 Version: 2.9.3
+- Update API UpdateApplicationScalingRule: add request parameters ScalingRuleType.
+
+
 2026-04-02 Version: 2.9.2
 - Update API DescribeApplicationConfig: add response parameters Body.Data.SidecarContainersConfig.$.PostStart.
 - Update API DescribeApplicationConfig: add response parameters Body.Data.SidecarContainersConfig.$.PreStop.
