@@ -320,6 +320,160 @@ namespace AlibabaCloud.SDK.Pds20220301
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>文件打包下载</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ArchiveFilesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ArchiveFilesResponse
+        /// </returns>
+        public ArchiveFilesResponse ArchiveFilesWithOptions(ArchiveFilesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveId))
+            {
+                body["drive_id"] = request.DriveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileIds))
+            {
+                body["file_ids"] = request.FileIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
+            {
+                body["share_id"] = request.ShareId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ArchiveFiles",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/file/archive_files",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ArchiveFilesResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文件打包下载</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ArchiveFilesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ArchiveFilesResponse
+        /// </returns>
+        public async Task<ArchiveFilesResponse> ArchiveFilesWithOptionsAsync(ArchiveFilesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DriveId))
+            {
+                body["drive_id"] = request.DriveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileIds))
+            {
+                body["file_ids"] = request.FileIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShareId))
+            {
+                body["share_id"] = request.ShareId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ArchiveFiles",
+                Version = "2022-03-01",
+                Protocol = "HTTPS",
+                Pathname = "/v2/file/archive_files",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ArchiveFilesResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文件打包下载</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ArchiveFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ArchiveFilesResponse
+        /// </returns>
+        public ArchiveFilesResponse ArchiveFiles(ArchiveFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ArchiveFilesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>文件打包下载</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ArchiveFilesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ArchiveFilesResponse
+        /// </returns>
+        public async Task<ArchiveFilesResponse> ArchiveFilesAsync(ArchiveFilesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ArchiveFilesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Assigns a group administrator role to a user.</para>
         /// </summary>
         /// 
