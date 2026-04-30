@@ -322,11 +322,43 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("RichTextClipboardReadLimit")]
+                [Validation(Required=false)]
+                public int? RichTextClipboardReadLimit { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>KB</para>
+                /// </summary>
+                [NameInMap("RichTextClipboardReadSizeUnit")]
+                [Validation(Required=false)]
+                public string RichTextClipboardReadSizeUnit { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>B</para>
                 /// </summary>
                 [NameInMap("RichTextClipboardSizeUnit")]
                 [Validation(Required=false)]
                 public string RichTextClipboardSizeUnit { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("RichTextClipboardWriteLimit")]
+                [Validation(Required=false)]
+                public int? RichTextClipboardWriteLimit { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>KB</para>
+                /// </summary>
+                [NameInMap("RichTextClipboardWriteSizeUnit")]
+                [Validation(Required=false)]
+                public string RichTextClipboardWriteSizeUnit { get; set; }
 
                 /// <summary>
                 /// <para>The text clipboard policy.</para>
@@ -344,6 +376,38 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [NameInMap("TextClipboard")]
                 [Validation(Required=false)]
                 public string TextClipboard { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("TextClipboardReadLimit")]
+                [Validation(Required=false)]
+                public int? TextClipboardReadLimit { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>KB</para>
+                /// </summary>
+                [NameInMap("TextClipboardReadSizeUnit")]
+                [Validation(Required=false)]
+                public string TextClipboardReadSizeUnit { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("TextClipboardWriteLimit")]
+                [Validation(Required=false)]
+                public int? TextClipboardWriteLimit { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>KB</para>
+                /// </summary>
+                [NameInMap("TextClipboardWriteSizeUnit")]
+                [Validation(Required=false)]
+                public string TextClipboardWriteSizeUnit { get; set; }
 
             }
 
@@ -371,6 +435,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("DisconnectKeepSessionTime")]
             [Validation(Required=false)]
             public int? DisconnectKeepSessionTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>off</para>
+            /// </summary>
+            [NameInMap("FileManager")]
+            [Validation(Required=false)]
+            public string FileManager { get; set; }
 
             /// <summary>
             /// <para>The file transfer policy on the web client.</para>
