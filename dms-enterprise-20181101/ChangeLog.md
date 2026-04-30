@@ -1,3 +1,9 @@
+2026-04-30 Version: 2.7.0
+- Support API GetTableColumnList.
+- Support API GetTableInstructions.
+- Support API SearchTableAssetKnowledge.
+
+
 2026-04-27 Version: 2.6.1
 - Generated csharp 2018-11-01 for dms-enterprise.
 
