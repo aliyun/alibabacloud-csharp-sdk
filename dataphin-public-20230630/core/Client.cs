@@ -13991,6 +13991,150 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询数据目录资产详情。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetCatalogAssetDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCatalogAssetDetailsResponse
+        /// </returns>
+        public GetCatalogAssetDetailsResponse GetCatalogAssetDetailsWithOptions(GetCatalogAssetDetailsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetCatalogAssetDetailsShrinkRequest request = new GetCatalogAssetDetailsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GetCatalogAssetDetailsQuery))
+            {
+                request.GetCatalogAssetDetailsQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GetCatalogAssetDetailsQuery, "GetCatalogAssetDetailsQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GetCatalogAssetDetailsQueryShrink))
+            {
+                body["GetCatalogAssetDetailsQuery"] = request.GetCatalogAssetDetailsQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCatalogAssetDetails",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCatalogAssetDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据目录资产详情。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetCatalogAssetDetailsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCatalogAssetDetailsResponse
+        /// </returns>
+        public async Task<GetCatalogAssetDetailsResponse> GetCatalogAssetDetailsWithOptionsAsync(GetCatalogAssetDetailsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetCatalogAssetDetailsShrinkRequest request = new GetCatalogAssetDetailsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GetCatalogAssetDetailsQuery))
+            {
+                request.GetCatalogAssetDetailsQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GetCatalogAssetDetailsQuery, "GetCatalogAssetDetailsQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GetCatalogAssetDetailsQueryShrink))
+            {
+                body["GetCatalogAssetDetailsQuery"] = request.GetCatalogAssetDetailsQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCatalogAssetDetails",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCatalogAssetDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据目录资产详情。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCatalogAssetDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCatalogAssetDetailsResponse
+        /// </returns>
+        public GetCatalogAssetDetailsResponse GetCatalogAssetDetails(GetCatalogAssetDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCatalogAssetDetailsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据目录资产详情。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCatalogAssetDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCatalogAssetDetailsResponse
+        /// </returns>
+        public async Task<GetCatalogAssetDetailsResponse> GetCatalogAssetDetailsAsync(GetCatalogAssetDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCatalogAssetDetailsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询数据源连通性检查任务。</para>
         /// </summary>
         /// 
@@ -26507,6 +26651,150 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListBizUnitsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据目录资产列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListCatalogAssetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCatalogAssetsResponse
+        /// </returns>
+        public ListCatalogAssetsResponse ListCatalogAssetsWithOptions(ListCatalogAssetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListCatalogAssetsShrinkRequest request = new ListCatalogAssetsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListCatalogAssetsQuery))
+            {
+                request.ListCatalogAssetsQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListCatalogAssetsQuery, "ListCatalogAssetsQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListCatalogAssetsQueryShrink))
+            {
+                body["ListCatalogAssetsQuery"] = request.ListCatalogAssetsQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCatalogAssets",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCatalogAssetsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据目录资产列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListCatalogAssetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCatalogAssetsResponse
+        /// </returns>
+        public async Task<ListCatalogAssetsResponse> ListCatalogAssetsWithOptionsAsync(ListCatalogAssetsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListCatalogAssetsShrinkRequest request = new ListCatalogAssetsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ListCatalogAssetsQuery))
+            {
+                request.ListCatalogAssetsQueryShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ListCatalogAssetsQuery, "ListCatalogAssetsQuery", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpTenantId))
+            {
+                query["OpTenantId"] = request.OpTenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListCatalogAssetsQueryShrink))
+            {
+                body["ListCatalogAssetsQuery"] = request.ListCatalogAssetsQueryShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListCatalogAssets",
+                Version = "2023-06-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListCatalogAssetsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据目录资产列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCatalogAssetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCatalogAssetsResponse
+        /// </returns>
+        public ListCatalogAssetsResponse ListCatalogAssets(ListCatalogAssetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListCatalogAssetsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数据目录资产列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListCatalogAssetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListCatalogAssetsResponse
+        /// </returns>
+        public async Task<ListCatalogAssetsResponse> ListCatalogAssetsAsync(ListCatalogAssetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListCatalogAssetsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
