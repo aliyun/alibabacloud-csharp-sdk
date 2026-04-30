@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
             [Validation(Required=false)]
             public string OfficeSiteId { get; set; }
 
+            [NameInMap("PreferVpcAccess")]
+            [Validation(Required=false)]
+            public bool? PreferVpcAccess { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>26842</para>
@@ -110,6 +114,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
             [NameInMap("SsoServiceUrl")]
             [Validation(Required=false)]
             public string SsoServiceUrl { get; set; }
+
+            [NameInMap("VpcAccessAddress")]
+            [Validation(Required=false)]
+            public string VpcAccessAddress { get; set; }
 
         }
 
@@ -145,6 +153,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
             [Validation(Required=false)]
             public string AccessType { get; set; }
 
+            [NameInMap("PreferVpcAccess")]
+            [Validation(Required=false)]
+            public bool? PreferVpcAccess { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>Or09****</para>
@@ -152,6 +164,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
             [NameInMap("TenantAlias")]
             [Validation(Required=false)]
             public string TenantAlias { get; set; }
+
+            [NameInMap("VpcAccessAddress")]
+            [Validation(Required=false)]
+            public string VpcAccessAddress { get; set; }
 
         }
 
