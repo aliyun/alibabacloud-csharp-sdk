@@ -58,6 +58,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// <para>ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

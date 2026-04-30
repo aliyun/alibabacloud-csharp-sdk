@@ -6021,6 +6021,152 @@ namespace AlibabaCloud.SDK.AiContent20240611
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>客户管理/启用部门余额限流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterConfigureClientBalanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterConfigureClientBalanceResponse
+        /// </returns>
+        public ModelRouterConfigureClientBalanceResponse ModelRouterConfigureClientBalanceWithOptions(string id, ModelRouterConfigureClientBalanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BalanceType))
+            {
+                body["balanceType"] = request.BalanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableBalance))
+            {
+                body["enableBalance"] = request.EnableBalance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitialBalance))
+            {
+                body["initialBalance"] = request.InitialBalance;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterConfigureClientBalance",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/balance",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterConfigureClientBalanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/启用部门余额限流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterConfigureClientBalanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterConfigureClientBalanceResponse
+        /// </returns>
+        public async Task<ModelRouterConfigureClientBalanceResponse> ModelRouterConfigureClientBalanceWithOptionsAsync(string id, ModelRouterConfigureClientBalanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BalanceType))
+            {
+                body["balanceType"] = request.BalanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableBalance))
+            {
+                body["enableBalance"] = request.EnableBalance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitialBalance))
+            {
+                body["initialBalance"] = request.InitialBalance;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterConfigureClientBalance",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/balance",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterConfigureClientBalanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/启用部门余额限流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterConfigureClientBalanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterConfigureClientBalanceResponse
+        /// </returns>
+        public ModelRouterConfigureClientBalanceResponse ModelRouterConfigureClientBalance(string id, ModelRouterConfigureClientBalanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterConfigureClientBalanceWithOptions(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/启用部门余额限流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterConfigureClientBalanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterConfigureClientBalanceResponse
+        /// </returns>
+        public async Task<ModelRouterConfigureClientBalanceResponse> ModelRouterConfigureClientBalanceAsync(string id, ModelRouterConfigureClientBalanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterConfigureClientBalanceWithOptionsAsync(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>API密钥管理/复制API密钥</para>
         /// </summary>
         /// 
@@ -6249,6 +6395,152 @@ namespace AlibabaCloud.SDK.AiContent20240611
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ModelRouterCreateApiKeyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/创建余额交易</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterCreateBalanceTransactionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterCreateBalanceTransactionResponse
+        /// </returns>
+        public ModelRouterCreateBalanceTransactionResponse ModelRouterCreateBalanceTransactionWithOptions(string id, ModelRouterCreateBalanceTransactionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                body["amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterCreateBalanceTransaction",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/balance/transactions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterCreateBalanceTransactionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/创建余额交易</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterCreateBalanceTransactionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterCreateBalanceTransactionResponse
+        /// </returns>
+        public async Task<ModelRouterCreateBalanceTransactionResponse> ModelRouterCreateBalanceTransactionWithOptionsAsync(string id, ModelRouterCreateBalanceTransactionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                body["amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
+            {
+                body["remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                body["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterCreateBalanceTransaction",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/balance/transactions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterCreateBalanceTransactionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/创建余额交易</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterCreateBalanceTransactionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterCreateBalanceTransactionResponse
+        /// </returns>
+        public ModelRouterCreateBalanceTransactionResponse ModelRouterCreateBalanceTransaction(string id, ModelRouterCreateBalanceTransactionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterCreateBalanceTransactionWithOptions(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/创建余额交易</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterCreateBalanceTransactionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterCreateBalanceTransactionResponse
+        /// </returns>
+        public async Task<ModelRouterCreateBalanceTransactionResponse> ModelRouterCreateBalanceTransactionAsync(string id, ModelRouterCreateBalanceTransactionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterCreateBalanceTransactionWithOptionsAsync(id, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7369,6 +7661,286 @@ namespace AlibabaCloud.SDK.AiContent20240611
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ModelRouterDeleteModelWithOptionsAsync(id, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取部门余额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterGetClientBalanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterGetClientBalanceResponse
+        /// </returns>
+        public ModelRouterGetClientBalanceResponse ModelRouterGetClientBalanceWithOptions(string id, ModelRouterGetClientBalanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterGetClientBalance",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/balance",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterGetClientBalanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取部门余额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterGetClientBalanceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterGetClientBalanceResponse
+        /// </returns>
+        public async Task<ModelRouterGetClientBalanceResponse> ModelRouterGetClientBalanceWithOptionsAsync(string id, ModelRouterGetClientBalanceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterGetClientBalance",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/balance",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterGetClientBalanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取部门余额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterGetClientBalanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterGetClientBalanceResponse
+        /// </returns>
+        public ModelRouterGetClientBalanceResponse ModelRouterGetClientBalance(string id, ModelRouterGetClientBalanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterGetClientBalanceWithOptions(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取部门余额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterGetClientBalanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterGetClientBalanceResponse
+        /// </returns>
+        public async Task<ModelRouterGetClientBalanceResponse> ModelRouterGetClientBalanceAsync(string id, ModelRouterGetClientBalanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterGetClientBalanceWithOptionsAsync(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取部门余额变更日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterGetClientBalanceLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterGetClientBalanceLogsResponse
+        /// </returns>
+        public ModelRouterGetClientBalanceLogsResponse ModelRouterGetClientBalanceLogsWithOptions(string id, ModelRouterGetClientBalanceLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeType))
+            {
+                query["changeType"] = request.ChangeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterGetClientBalanceLogs",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/balance/logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterGetClientBalanceLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取部门余额变更日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterGetClientBalanceLogsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterGetClientBalanceLogsResponse
+        /// </returns>
+        public async Task<ModelRouterGetClientBalanceLogsResponse> ModelRouterGetClientBalanceLogsWithOptionsAsync(string id, ModelRouterGetClientBalanceLogsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChangeType))
+            {
+                query["changeType"] = request.ChangeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterGetClientBalanceLogs",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/clients/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/balance/logs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterGetClientBalanceLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取部门余额变更日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterGetClientBalanceLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterGetClientBalanceLogsResponse
+        /// </returns>
+        public ModelRouterGetClientBalanceLogsResponse ModelRouterGetClientBalanceLogs(string id, ModelRouterGetClientBalanceLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterGetClientBalanceLogsWithOptions(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>客户管理/获取部门余额变更日志</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterGetClientBalanceLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterGetClientBalanceLogsResponse
+        /// </returns>
+        public async Task<ModelRouterGetClientBalanceLogsResponse> ModelRouterGetClientBalanceLogsAsync(string id, ModelRouterGetClientBalanceLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterGetClientBalanceLogsWithOptionsAsync(id, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

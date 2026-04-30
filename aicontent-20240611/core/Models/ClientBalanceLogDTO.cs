@@ -65,10 +65,6 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>充值</para>
-        /// </summary>
         [NameInMap("remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }
