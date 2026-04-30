@@ -41,82 +41,42 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public List<QueryPushRecordsResponseBodyPushInfosPushInfo> PushInfo { get; set; }
             public class QueryPushRecordsResponseBodyPushInfosPushInfo : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>333526247</para>
-                /// </summary>
                 [NameInMap("AppKey")]
                 [Validation(Required=false)]
                 public long? AppKey { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>abcd</para>
-                /// </summary>
                 [NameInMap("Body")]
                 [Validation(Required=false)]
                 public string Body { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>ANDROID</para>
-                /// </summary>
                 [NameInMap("DeviceType")]
                 [Validation(Required=false)]
                 public string DeviceType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>510431</para>
-                /// </summary>
                 [NameInMap("MessageId")]
                 [Validation(Required=false)]
                 public string MessageId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2021-09-15T02:05:24Z</para>
-                /// </summary>
                 [NameInMap("PushTime")]
                 [Validation(Required=false)]
                 public string PushTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>NOTICE</para>
-                /// </summary>
                 [NameInMap("PushType")]
                 [Validation(Required=false)]
                 public string PushType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>DEVICE</para>
-                /// </summary>
                 [NameInMap("Source")]
                 [Validation(Required=false)]
                 public string Source { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>SENT</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>DEVICE</para>
-                /// </summary>
                 [NameInMap("Target")]
                 [Validation(Required=false)]
                 public string Target { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>sssss</para>
-                /// </summary>
                 [NameInMap("Title")]
                 [Validation(Required=false)]
                 public string Title { get; set; }

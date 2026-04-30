@@ -308,6 +308,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Validation(Required=false)]
         public int? AndroidTargetUserType { get; set; }
 
+        [NameInMap("AndroidVivoLiveMessage")]
+        [Validation(Required=false)]
+        public string AndroidVivoLiveMessage { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>0</para>

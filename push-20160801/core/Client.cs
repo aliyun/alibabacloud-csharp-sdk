@@ -1299,9 +1299,6 @@ namespace AlibabaCloud.SDK.Push20160801
         /// <para>【废弃】查询用户已创建的app列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListSummaryAppsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -1338,9 +1335,6 @@ namespace AlibabaCloud.SDK.Push20160801
         /// <para>【废弃】查询用户已创建的app列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListSummaryAppsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -2033,6 +2027,10 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidTargetUserType"] = request.AndroidTargetUserType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoLiveMessage))
+            {
+                query["AndroidVivoLiveMessage"] = request.AndroidVivoLiveMessage;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoPushMode))
             {
                 query["AndroidVivoPushMode"] = request.AndroidVivoPushMode;
@@ -2544,6 +2542,10 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidTargetUserType))
             {
                 query["AndroidTargetUserType"] = request.AndroidTargetUserType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoLiveMessage))
+            {
+                query["AndroidVivoLiveMessage"] = request.AndroidVivoLiveMessage;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidVivoPushMode))
             {

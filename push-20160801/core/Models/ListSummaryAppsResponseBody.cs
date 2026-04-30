@@ -25,18 +25,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
             [Validation(Required=false)]
             public List<ListSummaryAppsResponseBodySummaryAppInfosSummaryAppInfo> SummaryAppInfo { get; set; }
             public class ListSummaryAppsResponseBodySummaryAppInfosSummaryAppInfo : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>23****07</para>
-                /// </summary>
                 [NameInMap("AppKey")]
                 [Validation(Required=false)]
                 public long? AppKey { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>abc</para>
-                /// </summary>
                 [NameInMap("AppName")]
                 [Validation(Required=false)]
                 public string AppName { get; set; }
