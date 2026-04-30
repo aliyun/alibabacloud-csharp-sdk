@@ -44,6 +44,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string EntityType { get; set; }
 
+        [NameInMap("expr")]
+        [Validation(Required=false)]
+        public string Expr { get; set; }
+
         /// <summary>
         /// <para>APM 过滤条件列表</para>
         /// </summary>
