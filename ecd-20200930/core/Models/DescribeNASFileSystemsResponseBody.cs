@@ -261,6 +261,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             }
 
+            [NameInMap("ProductType")]
+            [Validation(Required=false)]
+            public string ProductType { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the User Profile Management (UPM) feature is supported.</para>
             /// 
@@ -295,6 +299,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("Scene")]
             [Validation(Required=false)]
             public string Scene { get; set; }
+
+            [NameInMap("SizeQuota")]
+            [Validation(Required=false)]
+            public long? SizeQuota { get; set; }
 
             /// <summary>
             /// <para>The storage type of the NAS file system. Valid values:</para>

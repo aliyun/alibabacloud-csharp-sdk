@@ -4791,6 +4791,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessAttribute))
+            {
+                query["AccessAttribute"] = request.AccessAttribute;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdHostname))
             {
                 query["AdHostname"] = request.AdHostname;
@@ -4936,6 +4940,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessAttribute))
+            {
+                query["AccessAttribute"] = request.AccessAttribute;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdHostname))
             {
                 query["AdHostname"] = request.AdHostname;
@@ -12460,6 +12468,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessAttribute))
+            {
+                query["AccessAttribute"] = request.AccessAttribute;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountType))
             {
                 query["AccountType"] = request.AccountType;
@@ -12582,6 +12594,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessAttribute))
+            {
+                query["AccessAttribute"] = request.AccessAttribute;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountType))
             {
                 query["AccountType"] = request.AccountType;

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateADConnectorOfficeSiteRequest : TeaModel {
+        [NameInMap("AccessAttribute")]
+        [Validation(Required=false)]
+        public string AccessAttribute { get; set; }
+
         /// <summary>
         /// <para>The hostname of the domain controller. The hostname must comply with the naming conventions for Windows hosts.</para>
         /// 

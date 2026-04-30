@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateSimpleOfficeSiteRequest : TeaModel {
+        [NameInMap("AccessAttribute")]
+        [Validation(Required=false)]
+        public string AccessAttribute { get; set; }
+
         [NameInMap("AccountType")]
         [Validation(Required=false)]
         public string AccountType { get; set; }

@@ -656,6 +656,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string EndUserApplyAdminCoordinate { get; set; }
 
+            [NameInMap("EndUserCount")]
+            [Validation(Required=false)]
+            public string EndUserCount { get; set; }
+
             /// <summary>
             /// <para>Indicates whether the User Stream Collaboration switch is turned on.</para>
             /// <para>Valid values:</para>
@@ -1032,6 +1036,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string RuleType { get; set; }
 
             }
+
+            [NameInMap("NetworkPrinter")]
+            [Validation(Required=false)]
+            public string NetworkPrinter { get; set; }
+
+            [NameInMap("OrganizationCount")]
+            [Validation(Required=false)]
+            public string OrganizationCount { get; set; }
 
             /// <summary>
             /// <para>The ID of the cloud computer policy.</para>
