@@ -136,6 +136,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
             {
                 body["ProductType"] = request.ProductType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequireUuidValidation))
+            {
+                body["RequireUuidValidation"] = request.RequireUuidValidation;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {
                 body["ResourceId"] = request.ResourceId;
@@ -273,6 +277,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210903
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductType))
             {
                 body["ProductType"] = request.ProductType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequireUuidValidation))
+            {
+                body["RequireUuidValidation"] = request.RequireUuidValidation;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
             {

@@ -150,6 +150,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210903.Models
         [Validation(Required=false)]
         public string ProductType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("RequireUuidValidation")]
+        [Validation(Required=false)]
+        public bool? RequireUuidValidation { get; set; }
+
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public string ResourceId { get; set; }
