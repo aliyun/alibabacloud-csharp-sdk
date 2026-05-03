@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
+            [NameInMap("NickName")]
+            [Validation(Required=false)]
+            public string NickName { get; set; }
+
             [NameInMap("OrgIds")]
             [Validation(Required=false)]
             public List<string> OrgIds { get; set; }
