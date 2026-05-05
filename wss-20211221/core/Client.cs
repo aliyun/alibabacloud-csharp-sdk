@@ -195,6 +195,446 @@ namespace AlibabaCloud.SDK.Wss20211221
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询积分包Agent列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCreditPackageAgentsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCreditPackageAgentsResponse
+        /// </returns>
+        public DescribeCreditPackageAgentsResponse DescribeCreditPackageAgentsWithOptions(DescribeCreditPackageAgentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentIds))
+            {
+                query["AgentIds"] = request.AgentIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCreditPackageAgents",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCreditPackageAgentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询积分包Agent列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCreditPackageAgentsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCreditPackageAgentsResponse
+        /// </returns>
+        public async Task<DescribeCreditPackageAgentsResponse> DescribeCreditPackageAgentsWithOptionsAsync(DescribeCreditPackageAgentsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentIds))
+            {
+                query["AgentIds"] = request.AgentIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCreditPackageAgents",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCreditPackageAgentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询积分包Agent列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCreditPackageAgentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCreditPackageAgentsResponse
+        /// </returns>
+        public DescribeCreditPackageAgentsResponse DescribeCreditPackageAgents(DescribeCreditPackageAgentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCreditPackageAgentsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询积分包Agent列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCreditPackageAgentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCreditPackageAgentsResponse
+        /// </returns>
+        public async Task<DescribeCreditPackageAgentsResponse> DescribeCreditPackageAgentsAsync(DescribeCreditPackageAgentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCreditPackageAgentsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询积分包用量信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCreditUsageInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCreditUsageInfoResponse
+        /// </returns>
+        public DescribeCreditUsageInfoResponse DescribeCreditUsageInfoWithOptions(DescribeCreditUsageInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageType))
+            {
+                query["UsageType"] = request.UsageType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCreditUsageInfo",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCreditUsageInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询积分包用量信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCreditUsageInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCreditUsageInfoResponse
+        /// </returns>
+        public async Task<DescribeCreditUsageInfoResponse> DescribeCreditUsageInfoWithOptionsAsync(DescribeCreditUsageInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsageType))
+            {
+                query["UsageType"] = request.UsageType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeCreditUsageInfo",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeCreditUsageInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询积分包用量信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCreditUsageInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCreditUsageInfoResponse
+        /// </returns>
+        public DescribeCreditUsageInfoResponse DescribeCreditUsageInfo(DescribeCreditUsageInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeCreditUsageInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询积分包用量信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeCreditUsageInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeCreditUsageInfoResponse
+        /// </returns>
+        public async Task<DescribeCreditUsageInfoResponse> DescribeCreditUsageInfoAsync(DescribeCreditUsageInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeCreditUsageInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询计量消耗信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDeductionStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeductionStatisticResponse
+        /// </returns>
+        public DescribeDeductionStatisticResponse DescribeDeductionStatisticWithOptions(DescribeDeductionStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Periods))
+            {
+                query["Periods"] = request.Periods;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypes))
+            {
+                query["ResourceTypes"] = request.ResourceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDeductionStatistic",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDeductionStatisticResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询计量消耗信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDeductionStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeductionStatisticResponse
+        /// </returns>
+        public async Task<DescribeDeductionStatisticResponse> DescribeDeductionStatisticWithOptionsAsync(DescribeDeductionStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Periods))
+            {
+                query["Periods"] = request.Periods;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypes))
+            {
+                query["ResourceTypes"] = request.ResourceTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDeductionStatistic",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDeductionStatisticResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询计量消耗信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDeductionStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeductionStatisticResponse
+        /// </returns>
+        public DescribeDeductionStatisticResponse DescribeDeductionStatistic(DescribeDeductionStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDeductionStatisticWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询计量消耗信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDeductionStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDeductionStatisticResponse
+        /// </returns>
+        public async Task<DescribeDeductionStatisticResponse> DescribeDeductionStatisticAsync(DescribeDeductionStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDeductionStatisticWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询物流地址</para>
         /// </summary>
         /// 
@@ -751,6 +1191,150 @@ namespace AlibabaCloud.SDK.Wss20211221
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyInstancePropertiesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量设置Agent积分配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAgentCreditQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAgentCreditQuotaResponse
+        /// </returns>
+        public SetAgentCreditQuotaResponse SetAgentCreditQuotaWithOptions(SetAgentCreditQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentIds))
+            {
+                query["AgentIds"] = request.AgentIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditQuota))
+            {
+                query["CreditQuota"] = request.CreditQuota;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAgentCreditQuota",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAgentCreditQuotaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量设置Agent积分配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAgentCreditQuotaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAgentCreditQuotaResponse
+        /// </returns>
+        public async Task<SetAgentCreditQuotaResponse> SetAgentCreditQuotaWithOptionsAsync(SetAgentCreditQuotaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentIds))
+            {
+                query["AgentIds"] = request.AgentIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentType))
+            {
+                query["AgentType"] = request.AgentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditQuota))
+            {
+                query["CreditQuota"] = request.CreditQuota;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetAgentCreditQuota",
+                Version = "2021-12-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetAgentCreditQuotaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量设置Agent积分配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAgentCreditQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAgentCreditQuotaResponse
+        /// </returns>
+        public SetAgentCreditQuotaResponse SetAgentCreditQuota(SetAgentCreditQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetAgentCreditQuotaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量设置Agent积分配额</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetAgentCreditQuotaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetAgentCreditQuotaResponse
+        /// </returns>
+        public async Task<SetAgentCreditQuotaResponse> SetAgentCreditQuotaAsync(SetAgentCreditQuotaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetAgentCreditQuotaWithOptionsAsync(request, runtime);
         }
 
     }
