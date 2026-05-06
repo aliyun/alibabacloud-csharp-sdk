@@ -8,24 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
-    public class DescribeListPocRequest : TeaModel {
+    public class ListTaskGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
         [NameInMap("CurrentPage")]
         [Validation(Required=false)]
-        public long? CurrentPage { get; set; }
+        public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, with a default value of <b>zh</b>. Values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -34,18 +26,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>30</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public long? PageSize { get; set; }
+        public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
-        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -54,32 +42,22 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Task name.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>Task_001</para>
+        /// <para>TEst</para>
         /// </summary>
-        [NameInMap("TaskName")]
+        [NameInMap("SampleName")]
         [Validation(Required=false)]
-        public string TaskName { get; set; }
+        public string SampleName { get; set; }
 
         /// <summary>
-        /// <para>The status of the import task. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>DOING</description></item>
-        /// <item><description>FINISH</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
-        /// <para>FINISH</para>
+        /// <para>TeskGroupTest</para>
         /// </summary>
-        [NameInMap("TaskStatus")]
+        [NameInMap("TaskGroupName")]
         [Validation(Required=false)]
-        public string TaskStatus { get; set; }
+        public string TaskGroupName { get; set; }
 
         /// <summary>
-        /// <para>Type</para>
-        /// 
         /// <b>Example:</b>
         /// <para>SAF_CONSOLE</para>
         /// </summary>
