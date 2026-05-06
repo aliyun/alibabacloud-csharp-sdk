@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string InteractionConfigShrink { get; set; }
 
+        [NameInMap("RagConfig")]
+        [Validation(Required=false)]
+        public string RagConfigShrink { get; set; }
+
         [NameInMap("ScriptProfile")]
         [Validation(Required=false)]
         public string ScriptProfileShrink { get; set; }

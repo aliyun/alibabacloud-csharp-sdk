@@ -73,6 +73,32 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 
                 }
 
+                [NameInMap("RagConfig")]
+                [Validation(Required=false)]
+                public GetApplicationResponseBodyDataDraftVersionRagConfig RagConfig { get; set; }
+                public class GetApplicationResponseBodyDataDraftVersionRagConfig : TeaModel {
+                    [NameInMap("Enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                    [NameInMap("KnowledgeBaseIds")]
+                    [Validation(Required=false)]
+                    public List<string> KnowledgeBaseIds { get; set; }
+
+                    [NameInMap("MaxContentLength")]
+                    [Validation(Required=false)]
+                    public int? MaxContentLength { get; set; }
+
+                    [NameInMap("RagEngine")]
+                    [Validation(Required=false)]
+                    public string RagEngine { get; set; }
+
+                    [NameInMap("TopN")]
+                    [Validation(Required=false)]
+                    public int? TopN { get; set; }
+
+                }
+
                 [NameInMap("ScriptProfile")]
                 [Validation(Required=false)]
                 public GetApplicationResponseBodyDataDraftVersionScriptProfile ScriptProfile { get; set; }
@@ -260,6 +286,32 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                         public int? Timeout { get; set; }
 
                     }
+
+                }
+
+                [NameInMap("RagConfig")]
+                [Validation(Required=false)]
+                public GetApplicationResponseBodyDataPublishedVersionRagConfig RagConfig { get; set; }
+                public class GetApplicationResponseBodyDataPublishedVersionRagConfig : TeaModel {
+                    [NameInMap("Enabled")]
+                    [Validation(Required=false)]
+                    public bool? Enabled { get; set; }
+
+                    [NameInMap("KnowledgeBaseIds")]
+                    [Validation(Required=false)]
+                    public List<string> KnowledgeBaseIds { get; set; }
+
+                    [NameInMap("MaxContentLength")]
+                    [Validation(Required=false)]
+                    public int? MaxContentLength { get; set; }
+
+                    [NameInMap("RagEngine")]
+                    [Validation(Required=false)]
+                    public string RagEngine { get; set; }
+
+                    [NameInMap("TopN")]
+                    [Validation(Required=false)]
+                    public int? TopN { get; set; }
 
                 }
 

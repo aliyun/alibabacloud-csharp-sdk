@@ -49,6 +49,32 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 
         }
 
+        [NameInMap("RagConfig")]
+        [Validation(Required=false)]
+        public CreateApplicationVersionRequestRagConfig RagConfig { get; set; }
+        public class CreateApplicationVersionRequestRagConfig : TeaModel {
+            [NameInMap("Enabled")]
+            [Validation(Required=false)]
+            public bool? Enabled { get; set; }
+
+            [NameInMap("KnowledgeBaseIds")]
+            [Validation(Required=false)]
+            public List<string> KnowledgeBaseIds { get; set; }
+
+            [NameInMap("MaxContentLength")]
+            [Validation(Required=false)]
+            public int? MaxContentLength { get; set; }
+
+            [NameInMap("RagEngine")]
+            [Validation(Required=false)]
+            public string RagEngine { get; set; }
+
+            [NameInMap("TopN")]
+            [Validation(Required=false)]
+            public int? TopN { get; set; }
+
+        }
+
         [NameInMap("ScriptProfile")]
         [Validation(Required=false)]
         public CreateApplicationVersionRequestScriptProfile ScriptProfile { get; set; }
