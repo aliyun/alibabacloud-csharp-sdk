@@ -11,6 +11,40 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
     public class SubmitEssayCorrectionTaskRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>[{&quot;name&quot;: &quot;内容完整度&quot;, &quot;rubric&quot;: &quot;文章内容是否完整，是否涵盖了题目的核心要求&quot;, &quot;maxScore&quot;: 30}]</para>
+        /// </summary>
+        [NameInMap("dimensions")]
+        [Validation(Required=false)]
+        public List<SubmitEssayCorrectionTaskRequestDimensions> Dimensions { get; set; }
+        public class SubmitEssayCorrectionTaskRequestDimensions : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
+            [NameInMap("maxScore")]
+            [Validation(Required=false)]
+            public int? MaxScore { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>内容完整度</para>
+            /// </summary>
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>文章内容是否完整，是否涵盖了题目的核心要求</para>
+            /// </summary>
+            [NameInMap("rubric")]
+            [Validation(Required=false)]
+            public string Rubric { get; set; }
+
+        }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>高中二年级</para>
         /// </summary>
         [NameInMap("grade")]
@@ -49,6 +83,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         [Validation(Required=false)]
         public string Subject { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[{&quot;grade&quot;: &quot;高中二年级&quot;, &quot;subject&quot;: &quot;语文&quot;, &quot;totalScore&quot;: 60, &quot;question&quot;: &quot;请以我的梦想为主题写一篇作文&quot;, &quot;answer&quot;: &quot;我的梦想是成为一名科学家...&quot;, &quot;customId&quot;: &quot;task-001&quot;}]</para>
+        /// </summary>
         [NameInMap("tasks")]
         [Validation(Required=false)]
         public List<SubmitEssayCorrectionTaskRequestTasks> Tasks { get; set; }
@@ -61,6 +99,10 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
             [Validation(Required=false)]
             public string Answer { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>task-001</para>
+            /// </summary>
             [NameInMap("customId")]
             [Validation(Required=false)]
             public string CustomId { get; set; }

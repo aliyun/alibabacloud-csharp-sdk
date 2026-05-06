@@ -2286,7 +2286,7 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
         /// <para>作业批改</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// RunEssayCorrectionRequest
         /// </param>
         /// <param name="headers">
@@ -2299,13 +2299,23 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
         /// <returns>
         /// RunEssayCorrectionResponse
         /// </returns>
-        public RunEssayCorrectionResponse RunEssayCorrectionWithOptions(string workspaceId, RunEssayCorrectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RunEssayCorrectionResponse RunEssayCorrectionWithOptions(string workspaceId, RunEssayCorrectionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunEssayCorrectionShrinkRequest request = new RunEssayCorrectionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Dimensions))
+            {
+                request.DimensionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Dimensions, "dimensions", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Answer))
             {
                 body["answer"] = request.Answer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DimensionsShrink))
+            {
+                body["dimensions"] = request.DimensionsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Grade))
             {
@@ -2356,7 +2366,7 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
         /// <para>作业批改</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// RunEssayCorrectionRequest
         /// </param>
         /// <param name="headers">
@@ -2369,13 +2379,23 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
         /// <returns>
         /// RunEssayCorrectionResponse
         /// </returns>
-        public async Task<RunEssayCorrectionResponse> RunEssayCorrectionWithOptionsAsync(string workspaceId, RunEssayCorrectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RunEssayCorrectionResponse> RunEssayCorrectionWithOptionsAsync(string workspaceId, RunEssayCorrectionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunEssayCorrectionShrinkRequest request = new RunEssayCorrectionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Dimensions))
+            {
+                request.DimensionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Dimensions, "dimensions", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Answer))
             {
                 body["answer"] = request.Answer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DimensionsShrink))
+            {
+                body["dimensions"] = request.DimensionsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Grade))
             {
@@ -5536,11 +5556,19 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SubmitEssayCorrectionTaskShrinkRequest request = new SubmitEssayCorrectionTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Dimensions))
+            {
+                request.DimensionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Dimensions, "dimensions", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tasks))
             {
                 request.TasksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tasks, "tasks", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DimensionsShrink))
+            {
+                body["dimensions"] = request.DimensionsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Grade))
             {
                 body["grade"] = request.Grade;
@@ -5612,11 +5640,19 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             SubmitEssayCorrectionTaskShrinkRequest request = new SubmitEssayCorrectionTaskShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Dimensions))
+            {
+                request.DimensionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Dimensions, "dimensions", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tasks))
             {
                 request.TasksShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tasks, "tasks", "json");
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DimensionsShrink))
+            {
+                body["dimensions"] = request.DimensionsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Grade))
             {
                 body["grade"] = request.Grade;

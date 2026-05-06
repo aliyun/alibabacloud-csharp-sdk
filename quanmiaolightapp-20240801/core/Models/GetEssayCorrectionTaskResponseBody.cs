@@ -39,6 +39,72 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
                 [Validation(Required=false)]
                 public string CustomId { get; set; }
 
+                [NameInMap("dimensionResults")]
+                [Validation(Required=false)]
+                public List<GetEssayCorrectionTaskResponseBodyDataResultsDimensionResults> DimensionResults { get; set; }
+                public class GetEssayCorrectionTaskResponseBodyDataResultsDimensionResults : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>文章内容较为完整，涵盖了题目的核心要求，但部分论述略显简略。</para>
+                    /// </summary>
+                    [NameInMap("analysis")]
+                    [Validation(Required=false)]
+                    public string Analysis { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>30</para>
+                    /// </summary>
+                    [NameInMap("maxScore")]
+                    [Validation(Required=false)]
+                    public double? MaxScore { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>内容完整度</para>
+                    /// </summary>
+                    [NameInMap("name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>25.5</para>
+                    /// </summary>
+                    [NameInMap("score")]
+                    [Validation(Required=false)]
+                    public double? Score { get; set; }
+
+                }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>RateLimit</para>
+                /// </summary>
+                [NameInMap("errorCode")]
+                [Validation(Required=false)]
+                public string ErrorCode { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>触发模型限流</para>
+                /// </summary>
+                [NameInMap("errorMessage")]
+                [Validation(Required=false)]
+                public string ErrorMessage { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>整体表现良好，建议在论述深度上进一步加强。</para>
+                /// </summary>
+                [NameInMap("overallComment")]
+                [Validation(Required=false)]
+                public string OverallComment { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>本文整体结构清晰，语言流畅...</para>
+                /// </summary>
                 [NameInMap("result")]
                 [Validation(Required=false)]
                 public string Result { get; set; }

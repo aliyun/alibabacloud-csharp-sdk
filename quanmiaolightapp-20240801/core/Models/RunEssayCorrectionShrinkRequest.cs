@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
 {
-    public class RunEssayCorrectionRequest : TeaModel {
+    public class RunEssayCorrectionShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -23,33 +23,7 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801.Models
         /// </summary>
         [NameInMap("dimensions")]
         [Validation(Required=false)]
-        public List<RunEssayCorrectionRequestDimensions> Dimensions { get; set; }
-        public class RunEssayCorrectionRequestDimensions : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>30</para>
-            /// </summary>
-            [NameInMap("maxScore")]
-            [Validation(Required=false)]
-            public int? MaxScore { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>内容完整度</para>
-            /// </summary>
-            [NameInMap("name")]
-            [Validation(Required=false)]
-            public string Name { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>文章内容是否完整，是否涵盖了题目的核心要求</para>
-            /// </summary>
-            [NameInMap("rubric")]
-            [Validation(Required=false)]
-            public string Rubric { get; set; }
-
-        }
+        public string DimensionsShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
