@@ -82,6 +82,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        [NameInMap("SiteIds")]
+        [Validation(Required=false)]
+        public List<long?> SiteIds { get; set; }
+
         /// <summary>
         /// <para>The time when the custom error page was last modified.</para>
         /// 

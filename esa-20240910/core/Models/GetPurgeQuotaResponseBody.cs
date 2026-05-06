@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Quota { get; set; }
 
+        [NameInMap("Quota30Day")]
+        [Validation(Required=false)]
+        public string Quota30Day { get; set; }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 
@@ -38,6 +42,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [NameInMap("Usage")]
         [Validation(Required=false)]
         public string Usage { get; set; }
+
+        [NameInMap("Usage30Day")]
+        [Validation(Required=false)]
+        public string Usage30Day { get; set; }
 
     }
 

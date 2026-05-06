@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Ipv6 { get; set; }
 
+        [NameInMap("KeepAliveProtection")]
+        [Validation(Required=false)]
+        public string KeepAliveProtection { get; set; }
+
         /// <summary>
         /// <para>Query Transport Layer Acceleration Application</para>
         /// 

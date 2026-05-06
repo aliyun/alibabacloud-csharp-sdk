@@ -136,6 +136,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public int? SiteVersion { get; set; }
 
+            [NameInMap("Timeout")]
+            [Validation(Required=false)]
+            public string Timeout { get; set; }
+
         }
 
         /// <summary>

@@ -150,6 +150,20 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
             }
 
+            [NameInMap("SliderCaptchaPage")]
+            [Validation(Required=false)]
+            public GetWafQuotaResponseBodyQuotaSliderCaptchaPage SliderCaptchaPage { get; set; }
+            public class GetWafQuotaResponseBodyQuotaSliderCaptchaPage : TeaModel {
+                [NameInMap("Enable")]
+                [Validation(Required=false)]
+                public bool? Enable { get; set; }
+
+                [NameInMap("NumberTotal")]
+                [Validation(Required=false)]
+                public WafQuotaInteger NumberTotal { get; set; }
+
+            }
+
         }
 
         /// <summary>

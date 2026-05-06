@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public ListPagesRequestQueryArgs QueryArgs { get; set; }
         public class ListPagesRequestQueryArgs : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>application/json</para>
+            /// </summary>
+            [NameInMap("ContentType")]
+            [Validation(Required=false)]
+            public string ContentType { get; set; }
+
             [NameInMap("NameDescriptionLike")]
             [Validation(Required=false)]
             public string NameDescriptionLike { get; set; }

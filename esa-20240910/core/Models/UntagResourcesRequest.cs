@@ -24,10 +24,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public bool? All { get; set; }
 
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         /// <summary>
         /// <para>The ID of the region where the resources reside. Set the value to <b>cn-hangzhou</b>.</para>
         /// <para>This parameter is required.</para>

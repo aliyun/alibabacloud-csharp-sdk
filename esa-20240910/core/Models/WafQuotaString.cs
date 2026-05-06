@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class WafQuotaString : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>^\d+$</para>
+        /// </summary>
         [NameInMap("Regexp")]
         [Validation(Required=false)]
         public string Regexp { get; set; }

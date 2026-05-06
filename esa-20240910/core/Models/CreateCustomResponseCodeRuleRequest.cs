@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
     public class CreateCustomResponseCodeRuleRequest : TeaModel {
         /// <summary>
         /// <para>Response page.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -21,6 +22,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>Response code.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>400</para>

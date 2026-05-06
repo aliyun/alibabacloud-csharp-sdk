@@ -18,16 +18,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<string> Content { get; set; }
 
         /// <summary>
-        /// <para>The blocking period that you can extend. Set the value to 2year.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2year</para>
-        /// </summary>
-        [NameInMap("Extension")]
-        [Validation(Required=false)]
-        public string Extension { get; set; }
-
-        /// <summary>
         /// <para>The period of time during which the URL is blocked. Unit: seconds. Specify this parameter if Type is set to block.</para>
         /// 
         /// <b>Example:</b>

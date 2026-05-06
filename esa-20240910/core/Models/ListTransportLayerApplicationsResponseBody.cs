@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string Ipv6 { get; set; }
 
+            [NameInMap("KeepAliveProtection")]
+            [Validation(Required=false)]
+            public string KeepAliveProtection { get; set; }
+
             /// <summary>
             /// <para>Domain name of the Layer 4 application.</para>
             /// 

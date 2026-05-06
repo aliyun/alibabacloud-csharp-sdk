@@ -157,9 +157,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string PublishingVersion { get; set; }
 
-            /// <summary>
-            /// <para>The regions to which the version is released.</para>
-            /// </summary>
             [NameInMap("Regions")]
             [Validation(Required=false)]
             public GetEdgeContainerAppStatusResponseBodyAppStatusRegions Regions { get; set; }

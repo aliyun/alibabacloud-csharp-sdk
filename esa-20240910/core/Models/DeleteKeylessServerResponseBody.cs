@@ -1,0 +1,48 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.ESA20240910.Models
+{
+    public class DeleteKeylessServerResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Keyless server ID。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>baba39055622c008b90285a8838e****</para>
+        /// </summary>
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123456****</para>
+        /// </summary>
+        [NameInMap("SiteId")]
+        [Validation(Required=false)]
+        public long? SiteId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
+        [NameInMap("SiteName")]
+        [Validation(Required=false)]
+        public string SiteName { get; set; }
+
+    }
+
+}

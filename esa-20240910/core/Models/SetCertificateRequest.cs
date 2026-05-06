@@ -53,10 +53,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        [NameInMap("OwnerId")]
-        [Validation(Required=false)]
-        public long? OwnerId { get; set; }
-
         /// <summary>
         /// <para>The private key of the certificate.</para>
         /// 
