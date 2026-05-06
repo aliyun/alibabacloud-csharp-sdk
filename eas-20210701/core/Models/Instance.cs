@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eas20210701.Models
 {
     public class Instance : TeaModel {
+        [NameInMap("CreateTime")]
+        [Validation(Required=false)]
+        public string CreateTime { get; set; }
+
         /// <summary>
         /// <para>The current hourly price of the spot instance.</para>
         /// 
