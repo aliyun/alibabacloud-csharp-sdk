@@ -3579,9 +3579,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DeleteCdnSubTaskRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -3619,9 +3616,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DeleteCdnSubTaskRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -9018,9 +9012,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </list>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeCdnSubListRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -9059,9 +9050,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </list>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeCdnSubListRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -23775,9 +23763,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeStagingIpRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -23815,9 +23800,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeStagingIpRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -24369,9 +24351,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeUserCertificateExpireCountRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -24409,9 +24388,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeUserCertificateExpireCountRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -24891,9 +24867,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeUserTagsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -24931,9 +24904,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeUserTagsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -25859,6 +25829,126 @@ namespace AlibabaCloud.SDK.Cdn20180510
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Generates a link to the detection tool based on the access URL.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateCdnDiagnoseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateCdnDiagnoseResponse
+        /// </returns>
+        public GenerateCdnDiagnoseResponse GenerateCdnDiagnoseWithOptions(GenerateCdnDiagnoseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateCdnDiagnose",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateCdnDiagnoseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a link to the detection tool based on the access URL.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateCdnDiagnoseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateCdnDiagnoseResponse
+        /// </returns>
+        public async Task<GenerateCdnDiagnoseResponse> GenerateCdnDiagnoseWithOptionsAsync(GenerateCdnDiagnoseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                query["Url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateCdnDiagnose",
+                Version = "2018-05-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateCdnDiagnoseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a link to the detection tool based on the access URL.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateCdnDiagnoseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateCdnDiagnoseResponse
+        /// </returns>
+        public GenerateCdnDiagnoseResponse GenerateCdnDiagnose(GenerateCdnDiagnoseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateCdnDiagnoseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates a link to the detection tool based on the access URL.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateCdnDiagnoseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateCdnDiagnoseResponse
+        /// </returns>
+        public async Task<GenerateCdnDiagnoseResponse> GenerateCdnDiagnoseAsync(GenerateCdnDiagnoseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateCdnDiagnoseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the canary release configurations, such as canary release status and progress, by domain name and function name.</para>
         /// </summary>
         /// 
@@ -26270,9 +26360,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <para>Queries all real-time log delivery tasks within your Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListRealtimeLogDeliveryRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -26303,9 +26390,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// <para>Queries all real-time log delivery tasks within your Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListRealtimeLogDeliveryRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -26511,9 +26595,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// ListRealtimeLogDeliveryInfosRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -26551,9 +26632,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// ListRealtimeLogDeliveryInfosRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -26793,9 +26871,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// ListUserCustomLogConfigRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -26833,9 +26908,6 @@ namespace AlibabaCloud.SDK.Cdn20180510
         /// </remarks>
         /// </description>
         /// 
-        /// <param name="request">
-        /// ListUserCustomLogConfigRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
