@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [Validation(Required=false)]
         public long? ExpireStartDate { get; set; }
 
+        [NameInMap("IncludeShare")]
+        [Validation(Required=false)]
+        public bool? IncludeShare { get; set; }
+
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
@@ -124,6 +128,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
+
+        [NameInMap("ProductCode")]
+        [Validation(Required=false)]
+        public string ProductCode { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

@@ -1524,7 +1524,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a bill report subscription.</para>
+        /// <para>Creates a billing report subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1616,7 +1616,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a bill report subscription.</para>
+        /// <para>Creates a billing report subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1708,7 +1708,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a bill report subscription.</para>
+        /// <para>Creates a billing report subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1726,7 +1726,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a bill report subscription.</para>
+        /// <para>Creates a billing report subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2324,7 +2324,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优惠券列表</para>
+        /// <para>Queries the list of coupons.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2391,6 +2391,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             {
                 query["ExpireStartDate"] = request.ExpireStartDate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeShare))
+            {
+                query["IncludeShare"] = request.IncludeShare;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -2406,6 +2410,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -2432,7 +2440,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优惠券列表</para>
+        /// <para>Queries the list of coupons.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2499,6 +2507,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             {
                 query["ExpireStartDate"] = request.ExpireStartDate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeShare))
+            {
+                query["IncludeShare"] = request.IncludeShare;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -2514,6 +2526,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -2540,7 +2556,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优惠券列表</para>
+        /// <para>Queries the list of coupons.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2558,7 +2574,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优惠券列表</para>
+        /// <para>Queries the list of coupons.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2576,7 +2592,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优惠券可用商品列表</para>
+        /// <para>Query the list of products for which a coupon is applicable.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2644,7 +2660,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优惠券可用商品列表</para>
+        /// <para>Query the list of products for which a coupon is applicable.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2712,7 +2728,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优惠券可用商品列表</para>
+        /// <para>Query the list of products for which a coupon is applicable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2730,7 +2746,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询优惠券可用商品列表</para>
+        /// <para>Query the list of products for which a coupon is applicable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5359,9 +5375,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// <para>发票抬头查询服务</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListInvoiceTitleRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5392,9 +5405,6 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         /// <para>发票抬头查询服务</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListInvoiceTitleRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
