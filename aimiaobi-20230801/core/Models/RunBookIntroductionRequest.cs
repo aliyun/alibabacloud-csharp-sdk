@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunBookIntroductionRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("CleanCache")]
+        [Validation(Required=false)]
+        public bool? CleanCache { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +27,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string DocId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>用英文输出</para>
+        /// </summary>
         [NameInMap("KeyPointPrompt")]
         [Validation(Required=false)]
         public string KeyPointPrompt { get; set; }
@@ -33,6 +45,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>用英文输出</para>
+        /// </summary>
         [NameInMap("SummaryPrompt")]
         [Validation(Required=false)]
         public string SummaryPrompt { get; set; }

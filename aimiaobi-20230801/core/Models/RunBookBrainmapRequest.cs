@@ -35,9 +35,21 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public int? NodeNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>按英文输出</para>
+        /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("ResponseFormat")]
+        [Validation(Required=false)]
+        public int? ResponseFormat { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
     public class RunDocBrainmapRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("CleanCache")]
         [Validation(Required=false)]
         public bool? CleanCache { get; set; }
@@ -23,17 +27,37 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string DocId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>quanmiao-max、quanmiao-plus</para>
+        /// </summary>
         [NameInMap("ModelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("NodeNumber")]
         [Validation(Required=false)]
         public int? NodeNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>请按英文输出</para>
+        /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("ResponseFormat")]
+        [Validation(Required=false)]
+        public int? ResponseFormat { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -45,13 +69,15 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("WordNumber")]
         [Validation(Required=false)]
         public int? WordNumber { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>llm-xxx</para>
         /// </summary>
@@ -59,6 +85,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>要生成脑图的内容</para>
+        /// </summary>
         [NameInMap("referenceContent")]
         [Validation(Required=false)]
         public string ReferenceContent { get; set; }

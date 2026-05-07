@@ -83,6 +83,68 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
                 [Validation(Required=false)]
                 public List<RunBookIntroductionResponseBodyPayloadOutputIntroductions> Introductions { get; set; }
                 public class RunBookIntroductionResponseBodyPayloadOutputIntroductions : TeaModel {
+                    [NameInMap("Blocks")]
+                    [Validation(Required=false)]
+                    public List<RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks> Blocks { get; set; }
+                    public class RunBookIntroductionResponseBodyPayloadOutputIntroductionsBlocks : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>0</para>
+                        /// </summary>
+                        [NameInMap("BeginTime")]
+                        [Validation(Required=false)]
+                        public long? BeginTime { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>1200</para>
+                        /// </summary>
+                        [NameInMap("EndTime")]
+                        [Validation(Required=false)]
+                        public long? EndTime { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>600</para>
+                        /// </summary>
+                        [NameInMap("Height")]
+                        [Validation(Required=false)]
+                        public int? Height { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>10</para>
+                        /// </summary>
+                        [NameInMap("PageId")]
+                        [Validation(Required=false)]
+                        public int? PageId { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>600</para>
+                        /// </summary>
+                        [NameInMap("Width")]
+                        [Validation(Required=false)]
+                        public int? Width { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>10</para>
+                        /// </summary>
+                        [NameInMap("X")]
+                        [Validation(Required=false)]
+                        public int? X { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>10</para>
+                        /// </summary>
+                        [NameInMap("Y")]
+                        [Validation(Required=false)]
+                        public int? Y { get; set; }
+
+                    }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>本段摘要内容</para>

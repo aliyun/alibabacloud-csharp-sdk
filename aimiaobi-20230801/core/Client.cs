@@ -22592,6 +22592,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["Prompt"] = request.Prompt;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseFormat))
+            {
+                body["ResponseFormat"] = request.ResponseFormat;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["SessionId"] = request.SessionId;
@@ -22657,6 +22661,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
             {
                 body["Prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseFormat))
+            {
+                body["ResponseFormat"] = request.ResponseFormat;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
@@ -22744,6 +22752,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanCache))
+            {
+                body["CleanCache"] = request.CleanCache;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
             {
                 body["DocId"] = request.DocId;
@@ -22802,6 +22814,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CleanCache))
+            {
+                body["CleanCache"] = request.CleanCache;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocId))
             {
                 body["DocId"] = request.DocId;
@@ -23912,6 +23928,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["Prompt"] = request.Prompt;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseFormat))
+            {
+                body["ResponseFormat"] = request.ResponseFormat;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 body["SessionId"] = request.SessionId;
@@ -23985,6 +24005,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Prompt))
             {
                 body["Prompt"] = request.Prompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseFormat))
+            {
+                body["ResponseFormat"] = request.ResponseFormat;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
