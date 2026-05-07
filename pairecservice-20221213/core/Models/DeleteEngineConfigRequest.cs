@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 {
     public class DeleteEngineConfigRequest : TeaModel {
+        [NameInMap("DeleteAll")]
+        [Validation(Required=false)]
+        public bool? DeleteAll { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>pairec-cn-***test1</para>

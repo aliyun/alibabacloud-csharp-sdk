@@ -23,11 +23,27 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>&quot;&quot;</para>
+            /// </summary>
+            [NameInMap("PublicEndpoint")]
+            [Validation(Required=false)]
+            public string PublicEndpoint { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>Connecting</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>&quot;&quot;</para>
+            /// </summary>
+            [NameInMap("Token")]
+            [Validation(Required=false)]
+            public string Token { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

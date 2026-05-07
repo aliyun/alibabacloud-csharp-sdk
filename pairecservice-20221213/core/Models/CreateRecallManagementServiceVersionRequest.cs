@@ -303,6 +303,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>learn-pairec-xxx</para>
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
         [NameInMap("SourceRecallManagementServiceVersionId")]

@@ -5169,6 +5169,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Configs"] = request.Configs;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRecallManagementServiceVersionId))
             {
                 body["SourceRecallManagementServiceVersionId"] = request.SourceRecallManagementServiceVersionId;
@@ -5218,6 +5222,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Configs))
             {
                 body["Configs"] = request.Configs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                body["InstanceId"] = request.InstanceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceRecallManagementServiceVersionId))
             {
@@ -8041,6 +8049,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteAll))
+            {
+                query["DeleteAll"] = request.DeleteAll;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -8087,6 +8099,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteAll))
+            {
+                query["DeleteAll"] = request.DeleteAll;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
