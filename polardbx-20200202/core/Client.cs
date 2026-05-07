@@ -10633,9 +10633,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeRdsVswitchesWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
-        /// DescribeRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -10661,9 +10658,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <param name="request">
-        /// DescribeRegionsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -17101,6 +17095,386 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RestartDataImportTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>克隆PolarDB-X实例</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestoreDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestoreDBInstanceResponse
+        /// </returns>
+        public RestoreDBInstanceResponse RestoreDBInstanceWithOptions(RestoreDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetId))
+            {
+                query["BackupSetId"] = request.BackupSetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetRegion))
+            {
+                query["BackupSetRegion"] = request.BackupSetRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CNNodeCount))
+            {
+                query["CNNodeCount"] = request.CNNodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloneInstanceName))
+            {
+                query["CloneInstanceName"] = request.CloneInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CnClass))
+            {
+                query["CnClass"] = request.CnClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeClass))
+            {
+                query["DBNodeClass"] = request.DBNodeClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeCount))
+            {
+                query["DBNodeCount"] = request.DBNodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNNodeCount))
+            {
+                query["DNNodeCount"] = request.DNNodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnClass))
+            {
+                query["DnClass"] = request.DnClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GdnRole))
+            {
+                query["GdnRole"] = request.GdnRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryZone))
+            {
+                query["PrimaryZone"] = request.PrimaryZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecoveryTypeCode))
+            {
+                query["RecoveryTypeCode"] = request.RecoveryTypeCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
+            {
+                query["RestoreTime"] = request.RestoreTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryZone))
+            {
+                query["SecondaryZone"] = request.SecondaryZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Series))
+            {
+                query["Series"] = request.Series;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceInstanceRegion))
+            {
+                query["SourceInstanceRegion"] = request.SourceInstanceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TertiaryZone))
+            {
+                query["TertiaryZone"] = request.TertiaryZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopologyType))
+            {
+                query["TopologyType"] = request.TopologyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
+            {
+                query["VPCId"] = request.VPCId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RestoreDBInstance",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RestoreDBInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>克隆PolarDB-X实例</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestoreDBInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestoreDBInstanceResponse
+        /// </returns>
+        public async Task<RestoreDBInstanceResponse> RestoreDBInstanceWithOptionsAsync(RestoreDBInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetId))
+            {
+                query["BackupSetId"] = request.BackupSetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupSetRegion))
+            {
+                query["BackupSetRegion"] = request.BackupSetRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CNNodeCount))
+            {
+                query["CNNodeCount"] = request.CNNodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloneInstanceName))
+            {
+                query["CloneInstanceName"] = request.CloneInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CnClass))
+            {
+                query["CnClass"] = request.CnClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeClass))
+            {
+                query["DBNodeClass"] = request.DBNodeClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBNodeCount))
+            {
+                query["DBNodeCount"] = request.DBNodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DNNodeCount))
+            {
+                query["DNNodeCount"] = request.DNNodeCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnClass))
+            {
+                query["DnClass"] = request.DnClass;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GdnRole))
+            {
+                query["GdnRole"] = request.GdnRole;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["NetworkType"] = request.NetworkType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryZone))
+            {
+                query["PrimaryZone"] = request.PrimaryZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecoveryTypeCode))
+            {
+                query["RecoveryTypeCode"] = request.RecoveryTypeCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RestoreTime))
+            {
+                query["RestoreTime"] = request.RestoreTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryZone))
+            {
+                query["SecondaryZone"] = request.SecondaryZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Series))
+            {
+                query["Series"] = request.Series;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceInstanceRegion))
+            {
+                query["SourceInstanceRegion"] = request.SourceInstanceRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TertiaryZone))
+            {
+                query["TertiaryZone"] = request.TertiaryZone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopologyType))
+            {
+                query["TopologyType"] = request.TopologyType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VPCId))
+            {
+                query["VPCId"] = request.VPCId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RestoreDBInstance",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RestoreDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>克隆PolarDB-X实例</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestoreDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestoreDBInstanceResponse
+        /// </returns>
+        public RestoreDBInstanceResponse RestoreDBInstance(RestoreDBInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RestoreDBInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>克隆PolarDB-X实例</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RestoreDBInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RestoreDBInstanceResponse
+        /// </returns>
+        public async Task<RestoreDBInstanceResponse> RestoreDBInstanceAsync(RestoreDBInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RestoreDBInstanceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
