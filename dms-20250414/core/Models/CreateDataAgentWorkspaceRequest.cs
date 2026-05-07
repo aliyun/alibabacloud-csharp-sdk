@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string DMSUnit { get; set; }
 
+        [NameInMap("IsSessionShareEnabled")]
+        [Validation(Required=false)]
+        public bool? IsSessionShareEnabled { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Space for test</para>

@@ -1516,6 +1516,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["DMSUnit"] = request.DMSUnit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSessionShareEnabled))
+            {
+                query["IsSessionShareEnabled"] = request.IsSessionShareEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceDesc))
             {
                 query["WorkspaceDesc"] = request.WorkspaceDesc;
@@ -1565,6 +1569,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
             {
                 query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSessionShareEnabled))
+            {
+                query["IsSessionShareEnabled"] = request.IsSessionShareEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceDesc))
             {
@@ -9688,6 +9696,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["DMSUnit"] = request.DMSUnit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSessionShareEnabled))
+            {
+                query["IsSessionShareEnabled"] = request.IsSessionShareEnabled;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceDesc))
             {
                 query["WorkspaceDesc"] = request.WorkspaceDesc;
@@ -9741,6 +9753,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
             {
                 query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSessionShareEnabled))
+            {
+                query["IsSessionShareEnabled"] = request.IsSessionShareEnabled;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceDesc))
             {
