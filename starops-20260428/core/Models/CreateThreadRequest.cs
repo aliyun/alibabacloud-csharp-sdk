@@ -1,0 +1,48 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.STAROps20260428.Models
+{
+    public class CreateThreadRequest : TeaModel {
+        [NameInMap("attributes")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Attributes { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
+        [NameInMap("title")]
+        [Validation(Required=false)]
+        public string Title { get; set; }
+
+        [NameInMap("variables")]
+        [Validation(Required=false)]
+        public CreateThreadRequestVariables Variables { get; set; }
+        public class CreateThreadRequestVariables : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>project</para>
+            /// </summary>
+            [NameInMap("project")]
+            [Validation(Required=false)]
+            public string Project { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>workspace</para>
+            /// </summary>
+            [NameInMap("workspace")]
+            [Validation(Required=false)]
+            public string Workspace { get; set; }
+
+        }
+
+    }
+
+}
