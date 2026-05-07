@@ -1,3 +1,12 @@
+2026-05-07 Version: 1.8.0
+- Support API CreateJobTemplate.
+- Support API DeleteJobTemplate.
+- Support API GetJobTemplate.
+- Support API ListJobTemplates.
+- Support API SetJobTemplateDefaultVersion.
+- Support API UpdateJobTemplate.
+
+
 2026-04-28 Version: 1.7.15
 - Generated csharp 2020-12-03 for pai-dlc.
 

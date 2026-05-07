@@ -427,6 +427,176 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateJobTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateJobTemplateResponse
+        /// </returns>
+        public CreateJobTemplateResponse CreateJobTemplateWithOptions(CreateJobTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Constraints))
+            {
+                body["Constraints"] = request.Constraints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["Metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                body["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateJobTemplate",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobtemplates",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateJobTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateJobTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateJobTemplateResponse
+        /// </returns>
+        public async Task<CreateJobTemplateResponse> CreateJobTemplateWithOptionsAsync(CreateJobTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Constraints))
+            {
+                body["Constraints"] = request.Constraints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["Metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                body["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateJobTemplate",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobtemplates",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateJobTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateJobTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateJobTemplateResponse
+        /// </returns>
+        public CreateJobTemplateResponse CreateJobTemplate(CreateJobTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateJobTemplateWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateJobTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateJobTemplateResponse
+        /// </returns>
+        public async Task<CreateJobTemplateResponse> CreateJobTemplateAsync(CreateJobTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateJobTemplateWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a TensorBoard by using a job or specifying a data source configuration.</para>
         /// </summary>
         /// 
@@ -823,6 +993,124 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteJobWithOptionsAsync(JobId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteJobTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteJobTemplateResponse
+        /// </returns>
+        public DeleteJobTemplateResponse DeleteJobTemplateWithOptions(string TemplateId, DeleteJobTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteJobTemplate",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobtemplates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteJobTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteJobTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteJobTemplateResponse
+        /// </returns>
+        public async Task<DeleteJobTemplateResponse> DeleteJobTemplateWithOptionsAsync(string TemplateId, DeleteJobTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteJobTemplate",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobtemplates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteJobTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteJobTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteJobTemplateResponse
+        /// </returns>
+        public DeleteJobTemplateResponse DeleteJobTemplate(string TemplateId, DeleteJobTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteJobTemplateWithOptions(TemplateId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteJobTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteJobTemplateResponse
+        /// </returns>
+        public async Task<DeleteJobTemplateResponse> DeleteJobTemplateAsync(string TemplateId, DeleteJobTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteJobTemplateWithOptionsAsync(TemplateId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1695,6 +1983,136 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetJobSanityCheckResultWithOptionsAsync(JobId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobTemplateResponse
+        /// </returns>
+        public GetJobTemplateResponse GetJobTemplateWithOptions(string TemplateId, GetJobTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobTemplate",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobtemplates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobTemplateResponse
+        /// </returns>
+        public async Task<GetJobTemplateResponse> GetJobTemplateWithOptionsAsync(string TemplateId, GetJobTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobTemplate",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobtemplates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobTemplateResponse
+        /// </returns>
+        public GetJobTemplateResponse GetJobTemplate(string TemplateId, GetJobTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetJobTemplateWithOptions(TemplateId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取任务模板详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobTemplateResponse
+        /// </returns>
+        public async Task<GetJobTemplateResponse> GetJobTemplateAsync(string TemplateId, GetJobTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetJobTemplateWithOptionsAsync(TemplateId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3041,6 +3459,192 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>列出任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobTemplatesResponse
+        /// </returns>
+        public ListJobTemplatesResponse ListJobTemplatesWithOptions(ListJobTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJobTemplates",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobtemplates",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJobTemplatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobTemplatesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobTemplatesResponse
+        /// </returns>
+        public async Task<ListJobTemplatesResponse> ListJobTemplatesWithOptionsAsync(ListJobTemplatesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
+            {
+                query["TemplateId"] = request.TemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                query["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
+            {
+                query["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListJobTemplates",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobtemplates",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListJobTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobTemplatesResponse
+        /// </returns>
+        public ListJobTemplatesResponse ListJobTemplates(ListJobTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListJobTemplatesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListJobTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListJobTemplatesResponse
+        /// </returns>
+        public async Task<ListJobTemplatesResponse> ListJobTemplatesAsync(ListJobTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListJobTemplatesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of jobs and supports pagination, sorting, and filtering by conditions.</para>
         /// </summary>
         /// 
@@ -3745,6 +4349,136 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>设置任务模板默认版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetJobTemplateDefaultVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetJobTemplateDefaultVersionResponse
+        /// </returns>
+        public SetJobTemplateDefaultVersionResponse SetJobTemplateDefaultVersionWithOptions(string TemplateId, SetJobTemplateDefaultVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["Version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetJobTemplateDefaultVersion",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobtemplates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId) + "/defaultversion",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetJobTemplateDefaultVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置任务模板默认版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetJobTemplateDefaultVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetJobTemplateDefaultVersionResponse
+        /// </returns>
+        public async Task<SetJobTemplateDefaultVersionResponse> SetJobTemplateDefaultVersionWithOptionsAsync(string TemplateId, SetJobTemplateDefaultVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["Version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetJobTemplateDefaultVersion",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobtemplates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId) + "/defaultversion",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetJobTemplateDefaultVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置任务模板默认版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetJobTemplateDefaultVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetJobTemplateDefaultVersionResponse
+        /// </returns>
+        public SetJobTemplateDefaultVersionResponse SetJobTemplateDefaultVersion(string TemplateId, SetJobTemplateDefaultVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SetJobTemplateDefaultVersionWithOptions(TemplateId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置任务模板默认版本</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetJobTemplateDefaultVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetJobTemplateDefaultVersionResponse
+        /// </returns>
+        public async Task<SetJobTemplateDefaultVersionResponse> SetJobTemplateDefaultVersionAsync(string TemplateId, SetJobTemplateDefaultVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SetJobTemplateDefaultVersionWithOptionsAsync(TemplateId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Starts a TensorBoard instance.</para>
         /// </summary>
         /// 
@@ -4273,6 +5007,184 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateJobWithOptionsAsync(JobId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJobTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJobTemplateResponse
+        /// </returns>
+        public UpdateJobTemplateResponse UpdateJobTemplateWithOptions(string TemplateId, UpdateJobTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Constraints))
+            {
+                body["Constraints"] = request.Constraints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["Metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SetAsDefault))
+            {
+                body["SetAsDefault"] = request.SetAsDefault;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                body["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateJobTemplate",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobtemplates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateJobTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJobTemplateRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJobTemplateResponse
+        /// </returns>
+        public async Task<UpdateJobTemplateResponse> UpdateJobTemplateWithOptionsAsync(string TemplateId, UpdateJobTemplateRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Constraints))
+            {
+                body["Constraints"] = request.Constraints;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["Metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SetAsDefault))
+            {
+                body["SetAsDefault"] = request.SetAsDefault;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
+            {
+                body["TemplateName"] = request.TemplateName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                body["version"] = request.Version;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateJobTemplate",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/jobtemplates/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(TemplateId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateJobTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJobTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJobTemplateResponse
+        /// </returns>
+        public UpdateJobTemplateResponse UpdateJobTemplate(string TemplateId, UpdateJobTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateJobTemplateWithOptions(TemplateId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新任务模板</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJobTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJobTemplateResponse
+        /// </returns>
+        public async Task<UpdateJobTemplateResponse> UpdateJobTemplateAsync(string TemplateId, UpdateJobTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateJobTemplateWithOptionsAsync(TemplateId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
