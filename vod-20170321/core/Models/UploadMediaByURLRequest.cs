@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        [NameInMap("EnableFirstFrameCover")]
+        [Validation(Required=false)]
+        public bool? EnableFirstFrameCover { get; set; }
+
+        [NameInMap("GenerateThumbnail")]
+        [Validation(Required=false)]
+        public bool? GenerateThumbnail { get; set; }
+
         /// <summary>
         /// <para>The custom identifier for deduplication. If you specify this parameter and send a request, an error is returned if a request with the same identifier was sent in the last 10 minutes. A custom identifier can be up to 50 characters in length and can contain letters, digits, hyphens (-), and underscores (_). If you do not specify this parameter or leave this parameter empty, duplicate requests are not filtered.</para>
         /// 

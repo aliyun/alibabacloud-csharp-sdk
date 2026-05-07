@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class RegisterMediaRequest : TeaModel {
+        [NameInMap("EnableFirstFrameCover")]
+        [Validation(Required=false)]
+        public bool? EnableFirstFrameCover { get; set; }
+
+        [NameInMap("GenerateThumbnail")]
+        [Validation(Required=false)]
+        public bool? GenerateThumbnail { get; set; }
+
         /// <summary>
         /// <para>The metadata of the media files. The value must be a JSON string. You can specify the metadata for up to 10 media files at a time. For more information about the metadata of media files, see the <b>RegisterMetadata</b> section of this topic.</para>
         /// <para>This parameter is required.</para>

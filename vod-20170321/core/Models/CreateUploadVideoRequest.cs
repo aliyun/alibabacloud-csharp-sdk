@@ -58,6 +58,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("EnableFirstFrameCover")]
+        [Validation(Required=false)]
+        public bool? EnableFirstFrameCover { get; set; }
+
         /// <summary>
         /// <para>The name of the source file.</para>
         /// <list type="bullet">
@@ -82,6 +86,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("FileSize")]
         [Validation(Required=false)]
         public long? FileSize { get; set; }
+
+        [NameInMap("GenerateThumbnail")]
+        [Validation(Required=false)]
+        public bool? GenerateThumbnail { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

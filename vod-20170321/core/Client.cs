@@ -3708,6 +3708,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableFirstFrameCover))
+            {
+                query["EnableFirstFrameCover"] = request.EnableFirstFrameCover;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 query["FileName"] = request.FileName;
@@ -3715,6 +3719,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSize))
             {
                 query["FileSize"] = request.FileSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateThumbnail))
+            {
+                query["GenerateThumbnail"] = request.GenerateThumbnail;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceId))
             {
@@ -3811,6 +3819,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableFirstFrameCover))
+            {
+                query["EnableFirstFrameCover"] = request.EnableFirstFrameCover;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
             {
                 query["FileName"] = request.FileName;
@@ -3818,6 +3830,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSize))
             {
                 query["FileSize"] = request.FileSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateThumbnail))
+            {
+                query["GenerateThumbnail"] = request.GenerateThumbnail;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReferenceId))
             {
@@ -26582,6 +26598,14 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableFirstFrameCover))
+            {
+                query["EnableFirstFrameCover"] = request.EnableFirstFrameCover;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateThumbnail))
+            {
+                query["GenerateThumbnail"] = request.GenerateThumbnail;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegisterMetadatas))
             {
                 query["RegisterMetadatas"] = request.RegisterMetadatas;
@@ -26647,6 +26671,14 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableFirstFrameCover))
+            {
+                query["EnableFirstFrameCover"] = request.EnableFirstFrameCover;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateThumbnail))
+            {
+                query["GenerateThumbnail"] = request.GenerateThumbnail;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegisterMetadatas))
             {
                 query["RegisterMetadatas"] = request.RegisterMetadatas;
@@ -33323,6 +33355,14 @@ namespace AlibabaCloud.SDK.Vod20170321
             {
                 query["AppId"] = request.AppId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableFirstFrameCover))
+            {
+                query["EnableFirstFrameCover"] = request.EnableFirstFrameCover;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateThumbnail))
+            {
+                query["GenerateThumbnail"] = request.GenerateThumbnail;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
                 query["SessionId"] = request.SessionId;
@@ -33404,6 +33444,14 @@ namespace AlibabaCloud.SDK.Vod20170321
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
                 query["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableFirstFrameCover))
+            {
+                query["EnableFirstFrameCover"] = request.EnableFirstFrameCover;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateThumbnail))
+            {
+                query["GenerateThumbnail"] = request.GenerateThumbnail;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
             {
