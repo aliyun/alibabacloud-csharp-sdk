@@ -2,6 +2,10 @@
 - Update API DescribeSQLPatterns: add request parameters SqlPatternHash.
 
 
+2026-05-08 Version: 5.0.11
+- Update API DescribeSQLPatterns: add request parameters SqlPatternHash.
+
+
 2025-11-04 Version: 5.0.10
 - Generated csharp 2019-03-15 for adb.
 
