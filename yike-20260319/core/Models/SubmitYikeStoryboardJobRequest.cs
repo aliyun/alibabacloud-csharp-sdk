@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         [Validation(Required=false)]
         public string FileURL { get; set; }
 
+        [NameInMap("KeepOriginDialogue")]
+        [Validation(Required=false)]
+        public bool? KeepOriginDialogue { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>{

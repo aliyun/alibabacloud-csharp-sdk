@@ -3255,7 +3255,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻故事板任务</para>
+        /// <para>提交一刻故事板全链路编排任务</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3279,6 +3279,10 @@ namespace AlibabaCloud.SDK.Yike20260319
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecMode))
             {
                 query["ExecMode"] = request.ExecMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepOriginDialogue))
+            {
+                query["KeepOriginDialogue"] = request.KeepOriginDialogue;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelParams))
             {
@@ -3351,7 +3355,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻故事板任务</para>
+        /// <para>提交一刻故事板全链路编排任务</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3375,6 +3379,10 @@ namespace AlibabaCloud.SDK.Yike20260319
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecMode))
             {
                 query["ExecMode"] = request.ExecMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KeepOriginDialogue))
+            {
+                query["KeepOriginDialogue"] = request.KeepOriginDialogue;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelParams))
             {
@@ -3447,7 +3455,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻故事板任务</para>
+        /// <para>提交一刻故事板全链路编排任务</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3465,7 +3473,7 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻故事板任务</para>
+        /// <para>提交一刻故事板全链路编排任务</para>
         /// </summary>
         /// 
         /// <param name="request">
