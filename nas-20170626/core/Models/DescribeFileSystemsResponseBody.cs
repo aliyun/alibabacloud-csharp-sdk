@@ -191,6 +191,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                     [Validation(Required=false)]
                     public bool? EnableOplock { get; set; }
 
+                    [NameInMap("VscAccessPointAccessOnly")]
+                    [Validation(Required=false)]
+                    public bool? VscAccessPointAccessOnly { get; set; }
+
                 }
 
                 [NameInMap("Packages")]

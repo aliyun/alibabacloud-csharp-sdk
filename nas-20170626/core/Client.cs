@@ -12134,7 +12134,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询生命周期策略日志</para>
+        /// <para>Queries the operational logs of a lifecycle policy. You can query up to 1000 log entries in the last 90 days. Only CPFS for Lingjun supports this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12188,7 +12188,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询生命周期策略日志</para>
+        /// <para>Queries the operational logs of a lifecycle policy. You can query up to 1000 log entries in the last 90 days. Only CPFS for Lingjun supports this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12242,7 +12242,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询生命周期策略日志</para>
+        /// <para>Queries the operational logs of a lifecycle policy. You can query up to 1000 log entries in the last 90 days. Only CPFS for Lingjun supports this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12260,7 +12260,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询生命周期策略日志</para>
+        /// <para>Queries the operational logs of a lifecycle policy. You can query up to 1000 log entries in the last 90 days. Only CPFS for Lingjun supports this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18283,6 +18283,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             {
                 query["AccessGroupName"] = request.AccessGroupName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessPointAccessOnly))
+            {
+                query["AccessPointAccessOnly"] = request.AccessPointAccessOnly;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DualStackMountTargetDomain))
             {
                 query["DualStackMountTargetDomain"] = request.DualStackMountTargetDomain;
@@ -18340,6 +18344,10 @@ namespace AlibabaCloud.SDK.NAS20170626
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessGroupName))
             {
                 query["AccessGroupName"] = request.AccessGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessPointAccessOnly))
+            {
+                query["AccessPointAccessOnly"] = request.AccessPointAccessOnly;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DualStackMountTargetDomain))
             {
@@ -18945,9 +18953,6 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <para>Activates File Storage NAS.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// OpenNASServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -18978,9 +18983,6 @@ namespace AlibabaCloud.SDK.NAS20170626
         /// <para>Activates File Storage NAS.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// OpenNASServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -20116,7 +20118,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动生命周期策略运行</para>
+        /// <para>Starts the execution of lifecycle policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20162,7 +20164,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动生命周期策略运行</para>
+        /// <para>Starts the execution of lifecycle policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20208,7 +20210,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动生命周期策略运行</para>
+        /// <para>Starts the execution of lifecycle policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20226,7 +20228,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动生命周期策略运行</para>
+        /// <para>Starts the execution of lifecycle policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20436,7 +20438,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止生命周期策略运行</para>
+        /// <para>Stops the execution of lifecycle policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20482,7 +20484,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止生命周期策略运行</para>
+        /// <para>Stops the execution of lifecycle policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20528,7 +20530,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止生命周期策略运行</para>
+        /// <para>Stops the execution of lifecycle policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20546,7 +20548,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止生命周期策略运行</para>
+        /// <para>Stops the execution of lifecycle policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20844,7 +20846,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新生命周期策略</para>
+        /// <para>Updates a rule of a lifecycle management policy. Only CPFS for Lingjun supports this operation. The UpdateLifecyclePolicy specifies the overwriting semantics. If you do not specify an optional parameter, the corresponding field is deleted. If you want to configure a new lifecycle rule for a bucket, call the DescribeLifecyclePolicies operation to query the configurations of the existing lifecycle rule, add new lifecycle rules, and then call the UpdateLifecyclePolicy operation to update the configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20910,7 +20912,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新生命周期策略</para>
+        /// <para>Updates a rule of a lifecycle management policy. Only CPFS for Lingjun supports this operation. The UpdateLifecyclePolicy specifies the overwriting semantics. If you do not specify an optional parameter, the corresponding field is deleted. If you want to configure a new lifecycle rule for a bucket, call the DescribeLifecyclePolicies operation to query the configurations of the existing lifecycle rule, add new lifecycle rules, and then call the UpdateLifecyclePolicy operation to update the configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20976,7 +20978,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新生命周期策略</para>
+        /// <para>Updates a rule of a lifecycle management policy. Only CPFS for Lingjun supports this operation. The UpdateLifecyclePolicy specifies the overwriting semantics. If you do not specify an optional parameter, the corresponding field is deleted. If you want to configure a new lifecycle rule for a bucket, call the DescribeLifecyclePolicies operation to query the configurations of the existing lifecycle rule, add new lifecycle rules, and then call the UpdateLifecyclePolicy operation to update the configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20994,7 +20996,7 @@ namespace AlibabaCloud.SDK.NAS20170626
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新生命周期策略</para>
+        /// <para>Updates a rule of a lifecycle management policy. Only CPFS for Lingjun supports this operation. The UpdateLifecyclePolicy specifies the overwriting semantics. If you do not specify an optional parameter, the corresponding field is deleted. If you want to configure a new lifecycle rule for a bucket, call the DescribeLifecyclePolicies operation to query the configurations of the existing lifecycle rule, add new lifecycle rules, and then call the UpdateLifecyclePolicy operation to update the configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">

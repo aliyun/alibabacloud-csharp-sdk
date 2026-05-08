@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         [Validation(Required=false)]
         public string AccessGroupName { get; set; }
 
+        [NameInMap("AccessPointAccessOnly")]
+        [Validation(Required=false)]
+        public bool? AccessPointAccessOnly { get; set; }
+
         /// <summary>
         /// <para>The dual-stack (IPv4 and IPv6) domain name of the mount target.</para>
         /// <remarks>

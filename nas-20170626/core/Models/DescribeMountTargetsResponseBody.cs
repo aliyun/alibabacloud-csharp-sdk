@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 [Validation(Required=false)]
                 public string AccessGroup { get; set; }
 
+                [NameInMap("AccessPointAccessOnly")]
+                [Validation(Required=false)]
+                public bool? AccessPointAccessOnly { get; set; }
+
                 [NameInMap("ClientMasterNodes")]
                 [Validation(Required=false)]
                 public DescribeMountTargetsResponseBodyMountTargetsMountTargetClientMasterNodes ClientMasterNodes { get; set; }
