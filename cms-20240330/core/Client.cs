@@ -39,6 +39,152 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>写入上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddContextsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddContextsResponse
+        /// </returns>
+        public AddContextsResponse AddContextsWithOptions(string workspace, string contextStoreName, AddContextsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextType))
+            {
+                body["contextType"] = request.ContextType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Items))
+            {
+                body["items"] = request.Items;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryType))
+            {
+                body["memoryType"] = request.MemoryType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddContexts",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/context",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddContextsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>写入上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddContextsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddContextsResponse
+        /// </returns>
+        public async Task<AddContextsResponse> AddContextsWithOptionsAsync(string workspace, string contextStoreName, AddContextsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextType))
+            {
+                body["contextType"] = request.ContextType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Items))
+            {
+                body["items"] = request.Items;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemoryType))
+            {
+                body["memoryType"] = request.MemoryType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddContexts",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/context",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddContextsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>写入上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddContextsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddContextsResponse
+        /// </returns>
+        public AddContextsResponse AddContexts(string workspace, string contextStoreName, AddContextsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AddContextsWithOptions(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>写入上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddContextsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddContextsResponse
+        /// </returns>
+        public async Task<AddContextsResponse> AddContextsAsync(string workspace, string contextStoreName, AddContextsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AddContextsWithOptionsAsync(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>添加记忆</para>
         /// </summary>
         /// 
@@ -1317,6 +1463,298 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateCloudResourceWithOptionsAsync(headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateContextStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextStoreResponse
+        /// </returns>
+        public CreateContextStoreResponse CreateContextStoreWithOptions(string workspace, CreateContextStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextStoreName))
+            {
+                body["contextStoreName"] = request.ContextStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextType))
+            {
+                body["contextType"] = request.ContextType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dataset))
+            {
+                body["dataset"] = request.Dataset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextStoreResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateContextStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextStoreResponse
+        /// </returns>
+        public async Task<CreateContextStoreResponse> CreateContextStoreWithOptionsAsync(string workspace, CreateContextStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextStoreName))
+            {
+                body["contextStoreName"] = request.ContextStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextType))
+            {
+                body["contextType"] = request.ContextType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dataset))
+            {
+                body["dataset"] = request.Dataset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextStoreResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateContextStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextStoreResponse
+        /// </returns>
+        public CreateContextStoreResponse CreateContextStore(string workspace, CreateContextStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateContextStoreWithOptions(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建上下文库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateContextStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextStoreResponse
+        /// </returns>
+        public async Task<CreateContextStoreResponse> CreateContextStoreAsync(string workspace, CreateContextStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateContextStoreWithOptionsAsync(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 API Key</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateContextStoreAPIKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextStoreAPIKeyResponse
+        /// </returns>
+        public CreateContextStoreAPIKeyResponse CreateContextStoreAPIKeyWithOptions(string workspace, string contextStoreName, CreateContextStoreAPIKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextStoreAPIKey",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/apikey",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextStoreAPIKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 API Key</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateContextStoreAPIKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextStoreAPIKeyResponse
+        /// </returns>
+        public async Task<CreateContextStoreAPIKeyResponse> CreateContextStoreAPIKeyWithOptionsAsync(string workspace, string contextStoreName, CreateContextStoreAPIKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateContextStoreAPIKey",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/apikey",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateContextStoreAPIKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 API Key</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateContextStoreAPIKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextStoreAPIKeyResponse
+        /// </returns>
+        public CreateContextStoreAPIKeyResponse CreateContextStoreAPIKey(string workspace, string contextStoreName, CreateContextStoreAPIKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateContextStoreAPIKeyWithOptions(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 API Key</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateContextStoreAPIKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateContextStoreAPIKeyResponse
+        /// </returns>
+        public async Task<CreateContextStoreAPIKeyResponse> CreateContextStoreAPIKeyAsync(string workspace, string contextStoreName, CreateContextStoreAPIKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateContextStoreAPIKeyWithOptionsAsync(workspace, contextStoreName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4137,6 +4575,498 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteCloudResourceWithOptionsAsync(headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextResponse
+        /// </returns>
+        public DeleteContextResponse DeleteContextWithOptions(string workspace, string contextStoreName, string contextId, DeleteContextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContext",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/context/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextResponse
+        /// </returns>
+        public async Task<DeleteContextResponse> DeleteContextWithOptionsAsync(string workspace, string contextStoreName, string contextId, DeleteContextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContext",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/context/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextResponse
+        /// </returns>
+        public DeleteContextResponse DeleteContext(string workspace, string contextStoreName, string contextId, DeleteContextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteContextWithOptions(workspace, contextStoreName, contextId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextResponse
+        /// </returns>
+        public async Task<DeleteContextResponse> DeleteContextAsync(string workspace, string contextStoreName, string contextId, DeleteContextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteContextWithOptionsAsync(workspace, contextStoreName, contextId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextStoreResponse
+        /// </returns>
+        public DeleteContextStoreResponse DeleteContextStoreWithOptions(string workspace, string contextStoreName, DeleteContextStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextStoreResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextStoreResponse
+        /// </returns>
+        public async Task<DeleteContextStoreResponse> DeleteContextStoreWithOptionsAsync(string workspace, string contextStoreName, DeleteContextStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextStoreResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextStoreResponse
+        /// </returns>
+        public DeleteContextStoreResponse DeleteContextStore(string workspace, string contextStoreName, DeleteContextStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteContextStoreWithOptions(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除上下文库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextStoreResponse
+        /// </returns>
+        public async Task<DeleteContextStoreResponse> DeleteContextStoreAsync(string workspace, string contextStoreName, DeleteContextStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteContextStoreWithOptionsAsync(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 API Key</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextStoreAPIKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextStoreAPIKeyResponse
+        /// </returns>
+        public DeleteContextStoreAPIKeyResponse DeleteContextStoreAPIKeyWithOptions(string workspace, string contextStoreName, string name, DeleteContextStoreAPIKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextStoreAPIKey",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/apikey/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextStoreAPIKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 API Key</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextStoreAPIKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextStoreAPIKeyResponse
+        /// </returns>
+        public async Task<DeleteContextStoreAPIKeyResponse> DeleteContextStoreAPIKeyWithOptionsAsync(string workspace, string contextStoreName, string name, DeleteContextStoreAPIKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContextStoreAPIKey",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/apikey/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextStoreAPIKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 API Key</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextStoreAPIKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextStoreAPIKeyResponse
+        /// </returns>
+        public DeleteContextStoreAPIKeyResponse DeleteContextStoreAPIKey(string workspace, string contextStoreName, string name, DeleteContextStoreAPIKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteContextStoreAPIKeyWithOptions(workspace, contextStoreName, name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 API Key</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextStoreAPIKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextStoreAPIKeyResponse
+        /// </returns>
+        public async Task<DeleteContextStoreAPIKeyResponse> DeleteContextStoreAPIKeyAsync(string workspace, string contextStoreName, string name, DeleteContextStoreAPIKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteContextStoreAPIKeyWithOptionsAsync(workspace, contextStoreName, name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextsResponse
+        /// </returns>
+        public DeleteContextsResponse DeleteContextsWithOptions(string workspace, string contextStoreName, DeleteContextsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextIds))
+            {
+                query["contextIds"] = request.ContextIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["filter"] = request.Filter;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContexts",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/context",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextsResponse
+        /// </returns>
+        public async Task<DeleteContextsResponse> DeleteContextsWithOptionsAsync(string workspace, string contextStoreName, DeleteContextsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextIds))
+            {
+                query["contextIds"] = request.ContextIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                query["filter"] = request.Filter;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteContexts",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/context",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteContextsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextsResponse
+        /// </returns>
+        public DeleteContextsResponse DeleteContexts(string workspace, string contextStoreName, DeleteContextsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteContextsWithOptions(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量删除上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteContextsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteContextsResponse
+        /// </returns>
+        public async Task<DeleteContextsResponse> DeleteContextsAsync(string workspace, string contextStoreName, DeleteContextsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteContextsWithOptionsAsync(workspace, contextStoreName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7813,6 +8743,254 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetCmsServiceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单条上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextResponse
+        /// </returns>
+        public GetContextResponse GetContextWithOptions(string workspace, string contextStoreName, string contextId, GetContextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Formatted))
+            {
+                query["formatted"] = request.Formatted;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContext",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/context/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单条上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextResponse
+        /// </returns>
+        public async Task<GetContextResponse> GetContextWithOptionsAsync(string workspace, string contextStoreName, string contextId, GetContextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Formatted))
+            {
+                query["formatted"] = request.Formatted;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContext",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/context/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单条上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextResponse
+        /// </returns>
+        public GetContextResponse GetContext(string workspace, string contextStoreName, string contextId, GetContextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetContextWithOptions(workspace, contextStoreName, contextId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单条上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextResponse
+        /// </returns>
+        public async Task<GetContextResponse> GetContextAsync(string workspace, string contextStoreName, string contextId, GetContextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetContextWithOptionsAsync(workspace, contextStoreName, contextId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询上下文库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContextStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextStoreResponse
+        /// </returns>
+        public GetContextStoreResponse GetContextStoreWithOptions(string workspace, string contextStoreName, GetContextStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextStoreResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询上下文库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContextStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextStoreResponse
+        /// </returns>
+        public async Task<GetContextStoreResponse> GetContextStoreWithOptionsAsync(string workspace, string contextStoreName, GetContextStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetContextStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetContextStoreResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询上下文库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContextStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextStoreResponse
+        /// </returns>
+        public GetContextStoreResponse GetContextStore(string workspace, string contextStoreName, GetContextStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetContextStoreWithOptions(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询上下文库</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetContextStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetContextStoreResponse
+        /// </returns>
+        public async Task<GetContextStoreResponse> GetContextStoreAsync(string workspace, string contextStoreName, GetContextStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetContextStoreWithOptionsAsync(workspace, contextStoreName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12033,6 +13211,298 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取 API Key 列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListContextStoreAPIKeysRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextStoreAPIKeysResponse
+        /// </returns>
+        public ListContextStoreAPIKeysResponse ListContextStoreAPIKeysWithOptions(string workspace, string contextStoreName, ListContextStoreAPIKeysRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextStoreAPIKeys",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/apikey",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextStoreAPIKeysResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取 API Key 列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListContextStoreAPIKeysRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextStoreAPIKeysResponse
+        /// </returns>
+        public async Task<ListContextStoreAPIKeysResponse> ListContextStoreAPIKeysWithOptionsAsync(string workspace, string contextStoreName, ListContextStoreAPIKeysRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextStoreAPIKeys",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/apikey",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextStoreAPIKeysResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取 API Key 列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListContextStoreAPIKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextStoreAPIKeysResponse
+        /// </returns>
+        public ListContextStoreAPIKeysResponse ListContextStoreAPIKeys(string workspace, string contextStoreName, ListContextStoreAPIKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListContextStoreAPIKeysWithOptions(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取 API Key 列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListContextStoreAPIKeysRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextStoreAPIKeysResponse
+        /// </returns>
+        public async Task<ListContextStoreAPIKeysResponse> ListContextStoreAPIKeysAsync(string workspace, string contextStoreName, ListContextStoreAPIKeysRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListContextStoreAPIKeysWithOptionsAsync(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询上下文库列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListContextStoresRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextStoresResponse
+        /// </returns>
+        public ListContextStoresResponse ListContextStoresWithOptions(string workspace, ListContextStoresRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextStoreName))
+            {
+                query["contextStoreName"] = request.ContextStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextType))
+            {
+                query["contextType"] = request.ContextType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextStores",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextStoresResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询上下文库列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListContextStoresRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextStoresResponse
+        /// </returns>
+        public async Task<ListContextStoresResponse> ListContextStoresWithOptionsAsync(string workspace, ListContextStoresRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextStoreName))
+            {
+                query["contextStoreName"] = request.ContextStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextType))
+            {
+                query["contextType"] = request.ContextType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListContextStores",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListContextStoresResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询上下文库列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListContextStoresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextStoresResponse
+        /// </returns>
+        public ListContextStoresResponse ListContextStores(string workspace, ListContextStoresRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListContextStoresWithOptions(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询上下文库列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListContextStoresRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListContextStoresResponse
+        /// </returns>
+        public async Task<ListContextStoresResponse> ListContextStoresAsync(string workspace, ListContextStoresRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListContextStoresWithOptionsAsync(workspace, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询数据集列表</para>
         /// </summary>
         /// 
@@ -15765,6 +17235,176 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>搜索上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchContextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchContextResponse
+        /// </returns>
+        public SearchContextResponse SearchContextWithOptions(string workspace, string contextStoreName, SearchContextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                body["filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Formatted))
+            {
+                body["formatted"] = request.Formatted;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetrievalOption))
+            {
+                body["retrievalOption"] = request.RetrievalOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            {
+                body["threshold"] = request.Threshold;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchContext",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/context/search",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchContextResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchContextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchContextResponse
+        /// </returns>
+        public async Task<SearchContextResponse> SearchContextWithOptionsAsync(string workspace, string contextStoreName, SearchContextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
+            {
+                body["filter"] = request.Filter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Formatted))
+            {
+                body["formatted"] = request.Formatted;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                body["limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                body["query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetrievalOption))
+            {
+                body["retrievalOption"] = request.RetrievalOption;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Threshold))
+            {
+                body["threshold"] = request.Threshold;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SearchContext",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/context/search",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SearchContextResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchContextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchContextResponse
+        /// </returns>
+        public SearchContextResponse SearchContext(string workspace, string contextStoreName, SearchContextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SearchContextWithOptions(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>搜索上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SearchContextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SearchContextResponse
+        /// </returns>
+        public async Task<SearchContextResponse> SearchContextAsync(string workspace, string contextStoreName, SearchContextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SearchContextWithOptionsAsync(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>搜索记忆</para>
         /// </summary>
         /// 
@@ -17149,6 +18789,322 @@ namespace AlibabaCloud.SDK.Cms20240330
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateBizTraceWithOptionsAsync(bizTraceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextResponse
+        /// </returns>
+        public UpdateContextResponse UpdateContextWithOptions(string workspace, string contextStoreName, string contextId, UpdateContextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Experience))
+            {
+                body["experience"] = request.Experience;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Payload))
+            {
+                body["payload"] = request.Payload;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerCondition))
+            {
+                body["triggerCondition"] = request.TriggerCondition;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContext",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/context/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContextRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextResponse
+        /// </returns>
+        public async Task<UpdateContextResponse> UpdateContextWithOptionsAsync(string workspace, string contextStoreName, string contextId, UpdateContextRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Experience))
+            {
+                body["experience"] = request.Experience;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metadata))
+            {
+                body["metadata"] = request.Metadata;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Payload))
+            {
+                body["payload"] = request.Payload;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerCondition))
+            {
+                body["triggerCondition"] = request.TriggerCondition;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContext",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName) + "/context/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextResponse
+        /// </returns>
+        public UpdateContextResponse UpdateContext(string workspace, string contextStoreName, string contextId, UpdateContextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateContextWithOptions(workspace, contextStoreName, contextId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改上下文</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContextRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextResponse
+        /// </returns>
+        public async Task<UpdateContextResponse> UpdateContextAsync(string workspace, string contextStoreName, string contextId, UpdateContextRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateContextWithOptionsAsync(workspace, contextStoreName, contextId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改上下文库配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContextStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextStoreResponse
+        /// </returns>
+        public UpdateContextStoreResponse UpdateContextStoreWithOptions(string workspace, string contextStoreName, UpdateContextStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextType))
+            {
+                body["contextType"] = request.ContextType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dataset))
+            {
+                body["dataset"] = request.Dataset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextStoreResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改上下文库配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContextStoreRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextStoreResponse
+        /// </returns>
+        public async Task<UpdateContextStoreResponse> UpdateContextStoreWithOptionsAsync(string workspace, string contextStoreName, UpdateContextStoreRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["config"] = request.Config;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContextType))
+            {
+                body["contextType"] = request.ContextType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dataset))
+            {
+                body["dataset"] = request.Dataset;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateContextStore",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/workspace/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspace) + "/contextstore/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(contextStoreName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateContextStoreResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改上下文库配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContextStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextStoreResponse
+        /// </returns>
+        public UpdateContextStoreResponse UpdateContextStore(string workspace, string contextStoreName, UpdateContextStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateContextStoreWithOptions(workspace, contextStoreName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改上下文库配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateContextStoreRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateContextStoreResponse
+        /// </returns>
+        public async Task<UpdateContextStoreResponse> UpdateContextStoreAsync(string workspace, string contextStoreName, UpdateContextStoreRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateContextStoreWithOptionsAsync(workspace, contextStoreName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
