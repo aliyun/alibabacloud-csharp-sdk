@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("scriptRecordId")]
         [Validation(Required=false)]
         public string ScriptRecordId { get; set; }

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 {
     public class CreateAnchorRequest : TeaModel {
+        /// <summary>
+        /// <para>类型</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>VIDEO_ANCHOR</para>
+        /// </summary>
         [NameInMap("anchorCategory")]
         [Validation(Required=false)]
         public string AnchorCategory { get; set; }
@@ -19,7 +25,7 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para><a href="https://yic-pre.oss-cn-hangzhou.aliyuncs.com/common/image/anchor/1733474220549-1733474198960image.png?Expires=3311144948&OSSAccessKeyId=LTAI5tPHLyFPhh4UoRias4Zg&Signature=qldDufvRDj9IUTmOtb9r2451RIU%3D">https://yic-pre.oss-cn-hangzhou.aliyuncs.com/common/image/anchor/1733474220549-1733474198960image.png?Expires=3311144948&amp;OSSAccessKeyId=LTAI5tPHLyFPhh4UoRias4Zg&amp;Signature=qldDufvRDj9IUTmOtb9r2451RIU%3D</a></para>
+        /// <para><a href="https://xxx">https://xxx</a></para>
         /// </summary>
         [NameInMap("coverUrl")]
         [Validation(Required=false)]
@@ -45,6 +51,12 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string UseScene { get; set; }
 
+        /// <summary>
+        /// <para>视频文件osskey</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>path/key.mp4</para>
+        /// </summary>
         [NameInMap("videoOssKey")]
         [Validation(Required=false)]
         public string VideoOssKey { get; set; }

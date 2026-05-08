@@ -1909,6 +1909,152 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建离线评测任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAICoachTaskReportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAICoachTaskReportResponse
+        /// </returns>
+        public CreateAICoachTaskReportResponse CreateAICoachTaskReportWithOptions(CreateAICoachTaskReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueList))
+            {
+                body["dialogueList"] = request.DialogueList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdempotentId))
+            {
+                body["idempotentId"] = request.IdempotentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAICoachTaskReport",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/startSessionReport",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAICoachTaskReportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建离线评测任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAICoachTaskReportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAICoachTaskReportResponse
+        /// </returns>
+        public async Task<CreateAICoachTaskReportResponse> CreateAICoachTaskReportWithOptionsAsync(CreateAICoachTaskReportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DialogueList))
+            {
+                body["dialogueList"] = request.DialogueList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdempotentId))
+            {
+                body["idempotentId"] = request.IdempotentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["taskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAICoachTaskReport",
+                Version = "2024-03-13",
+                Protocol = "HTTPS",
+                Pathname = "/yic/yic-console/openService/v1/aicoach/startSessionReport",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAICoachTaskReportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建离线评测任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAICoachTaskReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAICoachTaskReportResponse
+        /// </returns>
+        public CreateAICoachTaskReportResponse CreateAICoachTaskReport(CreateAICoachTaskReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAICoachTaskReportWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建离线评测任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAICoachTaskReportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAICoachTaskReportResponse
+        /// </returns>
+        public async Task<CreateAICoachTaskReportResponse> CreateAICoachTaskReportAsync(CreateAICoachTaskReportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAICoachTaskReportWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>学员开启对练会话</para>
         /// </summary>
         /// 

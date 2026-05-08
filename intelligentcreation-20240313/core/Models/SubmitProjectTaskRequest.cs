@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para><a href="https://meeting.dingtalk.com/j/1COFppy0POR">https://meeting.dingtalk.com/j/1COFppy0POR</a></para>
+                    /// <para><a href="https://xxx">https://xxx</a></para>
                     /// </summary>
                     [NameInMap("url")]
                     [Validation(Required=false)]
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             public class SubmitProjectTaskRequestFramesVideoScript : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para><a href="https://meeting.dingtalk.com/j/1COFppy0POR">https://meeting.dingtalk.com/j/1COFppy0POR</a></para>
+                /// <para><a href="https://xxx">https://xxx</a></para>
                 /// </summary>
                 [NameInMap("audioUrl")]
                 [Validation(Required=false)]

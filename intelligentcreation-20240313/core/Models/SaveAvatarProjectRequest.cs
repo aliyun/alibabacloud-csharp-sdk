@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
 
                     /// <summary>
                     /// <b>Example:</b>
-                    /// <para><a href="https://alidocs.dingtalk.com/i/nodes/vy20BglGWOxjGpq0C5G4DlN0VA7depqY">https://alidocs.dingtalk.com/i/nodes/vy20BglGWOxjGpq0C5G4DlN0VA7depqY</a></para>
+                    /// <para><a href="https://xxx">https://xxx</a></para>
                     /// </summary>
                     [NameInMap("url")]
                     [Validation(Required=false)]
