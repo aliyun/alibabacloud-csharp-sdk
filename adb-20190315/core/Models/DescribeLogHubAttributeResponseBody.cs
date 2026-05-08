@@ -86,9 +86,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public bool? FilterDirtyData { get; set; }
 
-            /// <summary>
-            /// <para>The names of the Logstores.</para>
-            /// </summary>
             [NameInMap("LogHubStores")]
             [Validation(Required=false)]
             public DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStores LogHubStores { get; set; }
@@ -97,22 +94,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
                 [Validation(Required=false)]
                 public List<DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStoresLogHubStore> LogHubStore { get; set; }
                 public class DescribeLogHubAttributeResponseBodyLoghubInfoLogHubStoresLogHubStore : TeaModel {
-                    /// <summary>
-                    /// <para>The value of the log keyword.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>255311</para>
-                    /// </summary>
                     [NameInMap("FieldKey")]
                     [Validation(Required=false)]
                     public string FieldKey { get; set; }
 
-                    /// <summary>
-                    /// <para>The log keyword.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>taskid</para>
-                    /// </summary>
                     [NameInMap("LogKey")]
                     [Validation(Required=false)]
                     public string LogKey { get; set; }

@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeLogStoreKeysResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The queried log keywords.</para>
-        /// </summary>
         [NameInMap("LogStoreKeys")]
         [Validation(Required=false)]
         public DescribeLogStoreKeysResponseBodyLogStoreKeys LogStoreKeys { get; set; }

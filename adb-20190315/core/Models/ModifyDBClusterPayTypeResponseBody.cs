@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing method of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>Prepaid</b>: subscription.</description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
+        /// <item><description><b>Prepaid</b>: subscription</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Prepaid</para>
+        /// <para>Postpaid</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]

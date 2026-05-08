@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeKmsKeysResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The queried KMS keys.</para>
-        /// </summary>
         [NameInMap("KmsKeys")]
         [Validation(Required=false)]
         public DescribeKmsKeysResponseBodyKmsKeys KmsKeys { get; set; }
@@ -20,22 +17,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<DescribeKmsKeysResponseBodyKmsKeysKmsKey> KmsKey { get; set; }
             public class DescribeKmsKeysResponseBodyKmsKeysKmsKey : TeaModel {
-                /// <summary>
-                /// <para>The alias of the key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>mykey</para>
-                /// </summary>
                 [NameInMap("KeyAlias")]
                 [Validation(Required=false)]
                 public string KeyAlias { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2e81355b-f8e7-4090-8082-a8f8124a621c</para>
-                /// </summary>
                 [NameInMap("KeyId")]
                 [Validation(Required=false)]
                 public string KeyId { get; set; }

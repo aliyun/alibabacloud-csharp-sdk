@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The tags that are added to clusters.</para>
-        /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyTagResources TagResources { get; set; }
@@ -40,42 +37,18 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
             [Validation(Required=false)]
             public List<ListTagResourcesResponseBodyTagResourcesTagResource> TagResource { get; set; }
             public class ListTagResourcesResponseBodyTagResourcesTagResource : TeaModel {
-                /// <summary>
-                /// <para>The cluster ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>am-bp1l20nxxxxxxxxxx</para>
-                /// </summary>
                 [NameInMap("ResourceId")]
                 [Validation(Required=false)]
                 public string ResourceId { get; set; }
 
-                /// <summary>
-                /// <para>The type of the resource. A value of cluster indicates an AnalyticDB for MySQL cluster.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cluster</para>
-                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
-                /// <summary>
-                /// <para>The key of the tag.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testkey1</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The value of the tag.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testvalue1</para>
-                /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }

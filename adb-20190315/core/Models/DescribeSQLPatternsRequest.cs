@@ -142,6 +142,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("SqlPatternHash")]
+        [Validation(Required=false)]
+        public long? SqlPatternHash { get; set; }
+
         /// <summary>
         /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time must be in UTC.</para>
         /// <remarks>

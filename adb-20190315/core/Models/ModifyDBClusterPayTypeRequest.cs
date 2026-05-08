@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string DbClusterId { get; set; }
 
         /// <summary>
-        /// <para>The billing method. Valid values:</para>
+        /// <para>The billing method of the cluster. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
         /// <item><description><b>Prepaid</b>: subscription.</description></item>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Prepaid</para>
+        /// <para>Postpaid</para>
         /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         /// <item><description><b>Month</b>: subscription on a monthly basis.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter must be specified when PayType is set to Prepaid.</para>
+        /// <para> This parameter must be specified when PayType is set to Prepaid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,10 +53,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
-        /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</para>
-        /// </remarks>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -66,19 +63,17 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the subscription cluster.</para>
+        /// <para>The subscription period of the subscription cluster.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when Period is set to Year: 1, 2, 3, and 5 (integer).</description></item>
-        /// <item><description>Valid values when Period is set to Month: 1 to 11 (integer).</description></item>
+        /// <item><description>Valid values when Period is set to Year: 1, 2, and 3 (integer)</description></item>
+        /// <item><description>Valid values when Period is set to Month: 1 to 9 (integer)</description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter must be specified when PayType is set to Prepaid.</para>
-        /// </description></item>
-        /// <item><description><para>Longer subscription durations offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</para>
-        /// </description></item>
+        /// <item><description>This parameter is required if the PayType parameter is set to Prepaid.</description></item>
+        /// <item><description>Longer subscription periods offer more savings. Purchasing a cluster for one year is more cost-effective than purchasing the cluster for 10 or 11 months.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

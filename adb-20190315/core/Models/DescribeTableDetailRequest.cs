@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
 {
     public class DescribeTableDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,15 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID of the cluster.</para>
+        /// <remarks>
+        /// <para> You can call the DescribeRegions operation to query the available region list.<a href="~~612393~~"></a></para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -41,7 +53,7 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
