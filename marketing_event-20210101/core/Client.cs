@@ -1101,6 +1101,246 @@ namespace AlibabaCloud.SDK.Marketing_event20210101
             return await QueryOrderSessionListPopWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询新加坡千问大会票证信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryQwenConferenceSgTicketPopRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryQwenConferenceSgTicketPopResponse
+        /// </returns>
+        public QueryQwenConferenceSgTicketPopResponse QueryQwenConferenceSgTicketPopWithOptions(QueryQwenConferenceSgTicketPopRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketToken))
+            {
+                query["TicketToken"] = request.TicketToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryQwenConferenceSgTicketPop",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryQwenConferenceSgTicketPopResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询新加坡千问大会票证信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryQwenConferenceSgTicketPopRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryQwenConferenceSgTicketPopResponse
+        /// </returns>
+        public async Task<QueryQwenConferenceSgTicketPopResponse> QueryQwenConferenceSgTicketPopWithOptionsAsync(QueryQwenConferenceSgTicketPopRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TicketToken))
+            {
+                query["TicketToken"] = request.TicketToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryQwenConferenceSgTicketPop",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryQwenConferenceSgTicketPopResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询新加坡千问大会票证信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryQwenConferenceSgTicketPopRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryQwenConferenceSgTicketPopResponse
+        /// </returns>
+        public QueryQwenConferenceSgTicketPopResponse QueryQwenConferenceSgTicketPop(QueryQwenConferenceSgTicketPopRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryQwenConferenceSgTicketPopWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询新加坡千问大会票证信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryQwenConferenceSgTicketPopRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryQwenConferenceSgTicketPopResponse
+        /// </returns>
+        public async Task<QueryQwenConferenceSgTicketPopResponse> QueryQwenConferenceSgTicketPopAsync(QueryQwenConferenceSgTicketPopRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryQwenConferenceSgTicketPopWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>千问大会搜索票据信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryQwenConferenceSgTicketSearchPopRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryQwenConferenceSgTicketSearchPopResponse
+        /// </returns>
+        public QueryQwenConferenceSgTicketSearchPopResponse QueryQwenConferenceSgTicketSearchPopWithOptions(QueryQwenConferenceSgTicketSearchPopRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryQwenConferenceSgTicketSearchPop",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryQwenConferenceSgTicketSearchPopResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>千问大会搜索票据信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryQwenConferenceSgTicketSearchPopRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryQwenConferenceSgTicketSearchPopResponse
+        /// </returns>
+        public async Task<QueryQwenConferenceSgTicketSearchPopResponse> QueryQwenConferenceSgTicketSearchPopWithOptionsAsync(QueryQwenConferenceSgTicketSearchPopRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryQwenConferenceSgTicketSearchPop",
+                Version = "2021-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryQwenConferenceSgTicketSearchPopResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>千问大会搜索票据信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryQwenConferenceSgTicketSearchPopRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryQwenConferenceSgTicketSearchPopResponse
+        /// </returns>
+        public QueryQwenConferenceSgTicketSearchPopResponse QueryQwenConferenceSgTicketSearchPop(QueryQwenConferenceSgTicketSearchPopRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryQwenConferenceSgTicketSearchPopWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>千问大会搜索票据信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryQwenConferenceSgTicketSearchPopRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryQwenConferenceSgTicketSearchPopResponse
+        /// </returns>
+        public async Task<QueryQwenConferenceSgTicketSearchPopResponse> QueryQwenConferenceSgTicketSearchPopAsync(QueryQwenConferenceSgTicketSearchPopRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryQwenConferenceSgTicketSearchPopWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// QuerySessionByActivityIdPopRequest
         /// </param>
