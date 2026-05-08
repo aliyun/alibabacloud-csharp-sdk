@@ -295,6 +295,150 @@ namespace AlibabaCloud.SDK.DAS20200116
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>DAS大模型能力异步逻辑接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatResponse
+        /// </returns>
+        public ChatResponse ChatWithOptions(ChatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Summary))
+            {
+                query["Summary"] = request.Summary;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Chat",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChatResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DAS大模型能力异步逻辑接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatResponse
+        /// </returns>
+        public async Task<ChatResponse> ChatWithOptionsAsync(ChatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Message))
+            {
+                query["Message"] = request.Message;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Summary))
+            {
+                query["Summary"] = request.Summary;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "Chat",
+                Version = "2020-01-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DAS大模型能力异步逻辑接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatResponse
+        /// </returns>
+        public ChatResponse Chat(ChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChatWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DAS大模型能力异步逻辑接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChatResponse
+        /// </returns>
+        public async Task<ChatResponse> ChatAsync(ChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChatWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a cache analysis task.</para>
         /// </summary>
         /// 
@@ -11969,162 +12113,6 @@ namespace AlibabaCloud.SDK.DAS20200116
             return await GetDeadlockHistogramWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
-        /// GetEndpointSwitchTaskRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetEndpointSwitchTaskResponse
-        /// </returns>
-        public GetEndpointSwitchTaskResponse GetEndpointSwitchTaskWithOptions(GetEndpointSwitchTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
-            {
-                query["TaskId"] = request.TaskId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
-            {
-                query["Uid"] = request.Uid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                query["UserId"] = request.UserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
-            {
-                query["__context"] = request.Context;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKey))
-            {
-                query["accessKey"] = request.AccessKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
-            {
-                query["signature"] = request.Signature;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipAuth))
-            {
-                query["skipAuth"] = request.SkipAuth;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timestamp))
-            {
-                query["timestamp"] = request.Timestamp;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetEndpointSwitchTask",
-                Version = "2020-01-16",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetEndpointSwitchTaskResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// GetEndpointSwitchTaskRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetEndpointSwitchTaskResponse
-        /// </returns>
-        public async Task<GetEndpointSwitchTaskResponse> GetEndpointSwitchTaskWithOptionsAsync(GetEndpointSwitchTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
-            {
-                query["TaskId"] = request.TaskId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
-            {
-                query["Uid"] = request.Uid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                query["UserId"] = request.UserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
-            {
-                query["__context"] = request.Context;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKey))
-            {
-                query["accessKey"] = request.AccessKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
-            {
-                query["signature"] = request.Signature;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipAuth))
-            {
-                query["skipAuth"] = request.SkipAuth;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timestamp))
-            {
-                query["timestamp"] = request.Timestamp;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetEndpointSwitchTask",
-                Version = "2020-01-16",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetEndpointSwitchTaskResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// GetEndpointSwitchTaskRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetEndpointSwitchTaskResponse
-        /// </returns>
-        public GetEndpointSwitchTaskResponse GetEndpointSwitchTask(GetEndpointSwitchTaskRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetEndpointSwitchTaskWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// GetEndpointSwitchTaskRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetEndpointSwitchTaskResponse
-        /// </returns>
-        public async Task<GetEndpointSwitchTaskResponse> GetEndpointSwitchTaskAsync(GetEndpointSwitchTaskRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetEndpointSwitchTaskWithOptionsAsync(request, runtime);
-        }
-
         /// <term><b>Summary:</b></term>
         /// <summary>
         /// <para>Asynchronously queries information about failed SQL queries in SQL Explorer data. You can query up to 20 failed SQL queries within the specific time range.</para>
@@ -13207,310 +13195,6 @@ namespace AlibabaCloud.SDK.DAS20200116
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetFullRequestStatResultByInstanceIdWithOptionsAsync(request, runtime);
-        }
-
-        /// <param name="request">
-        /// GetHDMAliyunResourceSyncResultRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetHDMAliyunResourceSyncResultResponse
-        /// </returns>
-        public GetHDMAliyunResourceSyncResultResponse GetHDMAliyunResourceSyncResultWithOptions(GetHDMAliyunResourceSyncResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
-            {
-                query["TaskId"] = request.TaskId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
-            {
-                query["Uid"] = request.Uid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                query["UserId"] = request.UserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
-            {
-                query["__context"] = request.Context;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKey))
-            {
-                query["accessKey"] = request.AccessKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
-            {
-                query["signature"] = request.Signature;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipAuth))
-            {
-                query["skipAuth"] = request.SkipAuth;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timestamp))
-            {
-                query["timestamp"] = request.Timestamp;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetHDMAliyunResourceSyncResult",
-                Version = "2020-01-16",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetHDMAliyunResourceSyncResultResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// GetHDMAliyunResourceSyncResultRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetHDMAliyunResourceSyncResultResponse
-        /// </returns>
-        public async Task<GetHDMAliyunResourceSyncResultResponse> GetHDMAliyunResourceSyncResultWithOptionsAsync(GetHDMAliyunResourceSyncResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
-            {
-                query["TaskId"] = request.TaskId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
-            {
-                query["Uid"] = request.Uid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                query["UserId"] = request.UserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
-            {
-                query["__context"] = request.Context;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKey))
-            {
-                query["accessKey"] = request.AccessKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
-            {
-                query["signature"] = request.Signature;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipAuth))
-            {
-                query["skipAuth"] = request.SkipAuth;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timestamp))
-            {
-                query["timestamp"] = request.Timestamp;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetHDMAliyunResourceSyncResult",
-                Version = "2020-01-16",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetHDMAliyunResourceSyncResultResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// GetHDMAliyunResourceSyncResultRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetHDMAliyunResourceSyncResultResponse
-        /// </returns>
-        public GetHDMAliyunResourceSyncResultResponse GetHDMAliyunResourceSyncResult(GetHDMAliyunResourceSyncResultRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetHDMAliyunResourceSyncResultWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// GetHDMAliyunResourceSyncResultRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetHDMAliyunResourceSyncResultResponse
-        /// </returns>
-        public async Task<GetHDMAliyunResourceSyncResultResponse> GetHDMAliyunResourceSyncResultAsync(GetHDMAliyunResourceSyncResultRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetHDMAliyunResourceSyncResultWithOptionsAsync(request, runtime);
-        }
-
-        /// <param name="request">
-        /// GetHDMLastAliyunResourceSyncResultRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetHDMLastAliyunResourceSyncResultResponse
-        /// </returns>
-        public GetHDMLastAliyunResourceSyncResultResponse GetHDMLastAliyunResourceSyncResultWithOptions(GetHDMLastAliyunResourceSyncResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
-            {
-                query["Uid"] = request.Uid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                query["UserId"] = request.UserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
-            {
-                query["__context"] = request.Context;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKey))
-            {
-                query["accessKey"] = request.AccessKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
-            {
-                query["signature"] = request.Signature;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipAuth))
-            {
-                query["skipAuth"] = request.SkipAuth;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timestamp))
-            {
-                query["timestamp"] = request.Timestamp;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetHDMLastAliyunResourceSyncResult",
-                Version = "2020-01-16",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetHDMLastAliyunResourceSyncResultResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// GetHDMLastAliyunResourceSyncResultRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetHDMLastAliyunResourceSyncResultResponse
-        /// </returns>
-        public async Task<GetHDMLastAliyunResourceSyncResultResponse> GetHDMLastAliyunResourceSyncResultWithOptionsAsync(GetHDMLastAliyunResourceSyncResultRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uid))
-            {
-                query["Uid"] = request.Uid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                query["UserId"] = request.UserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Context))
-            {
-                query["__context"] = request.Context;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccessKey))
-            {
-                query["accessKey"] = request.AccessKey;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
-            {
-                query["signature"] = request.Signature;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkipAuth))
-            {
-                query["skipAuth"] = request.SkipAuth;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timestamp))
-            {
-                query["timestamp"] = request.Timestamp;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GetHDMLastAliyunResourceSyncResult",
-                Version = "2020-01-16",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GetHDMLastAliyunResourceSyncResultResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// GetHDMLastAliyunResourceSyncResultRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetHDMLastAliyunResourceSyncResultResponse
-        /// </returns>
-        public GetHDMLastAliyunResourceSyncResultResponse GetHDMLastAliyunResourceSyncResult(GetHDMLastAliyunResourceSyncResultRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetHDMLastAliyunResourceSyncResultWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// GetHDMLastAliyunResourceSyncResultRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GetHDMLastAliyunResourceSyncResultResponse
-        /// </returns>
-        public async Task<GetHDMLastAliyunResourceSyncResultResponse> GetHDMLastAliyunResourceSyncResultAsync(GetHDMLastAliyunResourceSyncResultRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetHDMLastAliyunResourceSyncResultWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

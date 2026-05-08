@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DAS20200116.Models
 {
-    public class GetHDMLastAliyunResourceSyncResultResponse : TeaModel {
+    public class ChatResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public GetHDMLastAliyunResourceSyncResultResponseBody Body { get; set; }
+        public ChatResponseBody Body { get; set; }
 
     }
 
