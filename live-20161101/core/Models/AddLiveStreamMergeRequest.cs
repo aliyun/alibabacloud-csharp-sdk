@@ -120,6 +120,14 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("SelectAppName")]
+        [Validation(Required=false)]
+        public string SelectAppName { get; set; }
+
+        [NameInMap("SelectStreamName")]
+        [Validation(Required=false)]
+        public string SelectStreamName { get; set; }
+
         /// <summary>
         /// <para>The start time of the stream mixing.</para>
         /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
@@ -142,6 +150,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("StreamName")]
         [Validation(Required=false)]
         public string StreamName { get; set; }
+
+        [NameInMap("SwitchMode")]
+        [Validation(Required=false)]
+        public string SwitchMode { get; set; }
 
     }
 

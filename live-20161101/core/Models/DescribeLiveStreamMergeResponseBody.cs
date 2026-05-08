@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 [Validation(Required=false)]
                 public string StreamUsing { get; set; }
 
+                [NameInMap("SwitchMode")]
+                [Validation(Required=false)]
+                public string SwitchMode { get; set; }
+
             }
 
         }

@@ -6073,6 +6073,14 @@ namespace AlibabaCloud.SDK.Live20161101
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectAppName))
+            {
+                query["SelectAppName"] = request.SelectAppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectStreamName))
+            {
+                query["SelectStreamName"] = request.SelectStreamName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -6080,6 +6088,10 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamName))
             {
                 query["StreamName"] = request.StreamName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
+            {
+                query["SwitchMode"] = request.SwitchMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6172,6 +6184,14 @@ namespace AlibabaCloud.SDK.Live20161101
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectAppName))
+            {
+                query["SelectAppName"] = request.SelectAppName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectStreamName))
+            {
+                query["SelectStreamName"] = request.SelectStreamName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -6179,6 +6199,10 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamName))
             {
                 query["StreamName"] = request.StreamName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwitchMode))
+            {
+                query["SwitchMode"] = request.SwitchMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
