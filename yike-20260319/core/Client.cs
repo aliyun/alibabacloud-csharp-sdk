@@ -39,6 +39,134 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>增加一刻项目成员</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddYikeProductionMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddYikeProductionMembersResponse
+        /// </returns>
+        public AddYikeProductionMembersResponse AddYikeProductionMembersWithOptions(AddYikeProductionMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YikeUserIds))
+            {
+                query["YikeUserIds"] = request.YikeUserIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddYikeProductionMembers",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddYikeProductionMembersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加一刻项目成员</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddYikeProductionMembersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddYikeProductionMembersResponse
+        /// </returns>
+        public async Task<AddYikeProductionMembersResponse> AddYikeProductionMembersWithOptionsAsync(AddYikeProductionMembersRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YikeUserIds))
+            {
+                query["YikeUserIds"] = request.YikeUserIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddYikeProductionMembers",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddYikeProductionMembersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加一刻项目成员</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddYikeProductionMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddYikeProductionMembersResponse
+        /// </returns>
+        public AddYikeProductionMembersResponse AddYikeProductionMembers(AddYikeProductionMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddYikeProductionMembersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加一刻项目成员</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddYikeProductionMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddYikeProductionMembersResponse
+        /// </returns>
+        public async Task<AddYikeProductionMembersResponse> AddYikeProductionMembersAsync(AddYikeProductionMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddYikeProductionMembersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>增加用户积分</para>
         /// </summary>
         /// 
@@ -2079,6 +2207,134 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取一刻工作室列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListYikeWorkspacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListYikeWorkspacesResponse
+        /// </returns>
+        public ListYikeWorkspacesResponse ListYikeWorkspacesWithOptions(ListYikeWorkspacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListYikeWorkspaces",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListYikeWorkspacesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻工作室列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListYikeWorkspacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListYikeWorkspacesResponse
+        /// </returns>
+        public async Task<ListYikeWorkspacesResponse> ListYikeWorkspacesWithOptionsAsync(ListYikeWorkspacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListYikeWorkspaces",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListYikeWorkspacesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻工作室列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListYikeWorkspacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListYikeWorkspacesResponse
+        /// </returns>
+        public ListYikeWorkspacesResponse ListYikeWorkspaces(ListYikeWorkspacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListYikeWorkspacesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取一刻工作室列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListYikeWorkspacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListYikeWorkspacesResponse
+        /// </returns>
+        public async Task<ListYikeWorkspacesResponse> ListYikeWorkspacesAsync(ListYikeWorkspacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListYikeWorkspacesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>检查应用参数是否合法</para>
         /// </summary>
         /// 
@@ -3351,6 +3607,270 @@ namespace AlibabaCloud.SDK.Yike20260319
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitYikeVoiceNarratorJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新一刻项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateYikeProductionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateYikeProductionResponse
+        /// </returns>
+        public UpdateYikeProductionResponse UpdateYikeProductionWithOptions(UpdateYikeProductionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateYikeProduction",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateYikeProductionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新一刻项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateYikeProductionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateYikeProductionResponse
+        /// </returns>
+        public async Task<UpdateYikeProductionResponse> UpdateYikeProductionWithOptionsAsync(UpdateYikeProductionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateYikeProduction",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateYikeProductionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新一刻项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateYikeProductionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateYikeProductionResponse
+        /// </returns>
+        public UpdateYikeProductionResponse UpdateYikeProduction(UpdateYikeProductionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateYikeProductionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新一刻项目</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateYikeProductionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateYikeProductionResponse
+        /// </returns>
+        public async Task<UpdateYikeProductionResponse> UpdateYikeProductionAsync(UpdateYikeProductionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateYikeProductionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改一刻项目成员权限</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateYikeProductionMemberAuthRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateYikeProductionMemberAuthResponse
+        /// </returns>
+        public UpdateYikeProductionMemberAuthResponse UpdateYikeProductionMemberAuthWithOptions(UpdateYikeProductionMemberAuthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Auth))
+            {
+                query["Auth"] = request.Auth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YikeUserId))
+            {
+                query["YikeUserId"] = request.YikeUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateYikeProductionMemberAuth",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateYikeProductionMemberAuthResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改一刻项目成员权限</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateYikeProductionMemberAuthRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateYikeProductionMemberAuthResponse
+        /// </returns>
+        public async Task<UpdateYikeProductionMemberAuthResponse> UpdateYikeProductionMemberAuthWithOptionsAsync(UpdateYikeProductionMemberAuthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Auth))
+            {
+                query["Auth"] = request.Auth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.YikeUserId))
+            {
+                query["YikeUserId"] = request.YikeUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateYikeProductionMemberAuth",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateYikeProductionMemberAuthResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改一刻项目成员权限</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateYikeProductionMemberAuthRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateYikeProductionMemberAuthResponse
+        /// </returns>
+        public UpdateYikeProductionMemberAuthResponse UpdateYikeProductionMemberAuth(UpdateYikeProductionMemberAuthRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateYikeProductionMemberAuthWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改一刻项目成员权限</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateYikeProductionMemberAuthRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateYikeProductionMemberAuthResponse
+        /// </returns>
+        public async Task<UpdateYikeProductionMemberAuthResponse> UpdateYikeProductionMemberAuthAsync(UpdateYikeProductionMemberAuthRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateYikeProductionMemberAuthWithOptionsAsync(request, runtime);
         }
 
     }
