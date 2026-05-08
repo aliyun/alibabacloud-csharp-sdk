@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
         }
 
+        [NameInMap("Timeout")]
+        [Validation(Required=false)]
+        public int? Timeout { get; set; }
+
     }
 
 }
