@@ -1508,7 +1508,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>Creates an auto-repair policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1566,7 +1566,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>Creates an auto-repair policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1624,7 +1624,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>Creates an auto-repair policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1643,7 +1643,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>Creates an auto-repair policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7050,6 +7050,14 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["max_results"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["next_token"] = request.NextToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["page_number"] = request.PageNumber;
@@ -7104,6 +7112,14 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["max_results"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["next_token"] = request.NextToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["page_number"] = request.PageNumber;
@@ -7822,6 +7838,14 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["max_results"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["next_token"] = request.NextToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["page_number"] = request.PageNumber;
@@ -7872,6 +7896,14 @@ namespace AlibabaCloud.SDK.CS20151215
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["max_results"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["next_token"] = request.NextToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["page_number"] = request.PageNumber;
@@ -8378,7 +8410,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the clusters that belong to the current Alibaba Cloud account, including Kubernetes clusters and Swarm clusters.</para>
+        /// <para>Queries all existing clusters in ACK, including Kubernetes clusters and Swarm clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8438,7 +8470,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the clusters that belong to the current Alibaba Cloud account, including Kubernetes clusters and Swarm clusters.</para>
+        /// <para>Queries all existing clusters in ACK, including Kubernetes clusters and Swarm clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8498,7 +8530,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the clusters that belong to the current Alibaba Cloud account, including Kubernetes clusters and Swarm clusters.</para>
+        /// <para>Queries all existing clusters in ACK, including Kubernetes clusters and Swarm clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8523,7 +8555,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all the clusters that belong to the current Alibaba Cloud account, including Kubernetes clusters and Swarm clusters.</para>
+        /// <para>Queries all existing clusters in ACK, including Kubernetes clusters and Swarm clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8932,6 +8964,14 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 query["cluster_id"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["max_results"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["next_token"] = request.NextToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["page_number"] = request.PageNumber;
@@ -8989,6 +9029,14 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["cluster_id"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["max_results"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["next_token"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -9086,6 +9134,14 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 query["cluster_id"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["max_results"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["next_token"] = request.NextToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["page_number"] = request.PageNumber;
@@ -9139,6 +9195,14 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["cluster_id"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["max_results"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["next_token"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -10244,7 +10308,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域列表</para>
+        /// <para>Queries the list of available regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10298,7 +10362,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域列表</para>
+        /// <para>Queries the list of available regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10352,7 +10416,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域列表</para>
+        /// <para>Queries the list of available regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10371,7 +10435,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域列表</para>
+        /// <para>Queries the list of available regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13172,7 +13236,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为ACK集群节点池安装节点组件</para>
+        /// <para>Installs components onto the nodes within a specified node pool. This API supports custom configurations and allows you to target specific nodes for the installation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13226,7 +13290,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为ACK集群节点池安装节点组件</para>
+        /// <para>Installs components onto the nodes within a specified node pool. This API supports custom configurations and allows you to target specific nodes for the installation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13280,7 +13344,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为ACK集群节点池安装节点组件</para>
+        /// <para>Installs components onto the nodes within a specified node pool. This API supports custom configurations and allows you to target specific nodes for the installation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13299,7 +13363,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为ACK集群节点池安装节点组件</para>
+        /// <para>Installs components onto the nodes within a specified node pool. This API supports custom configurations and allows you to target specific nodes for the installation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13488,7 +13552,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>List auto-repair policies.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -13524,7 +13588,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>List auto-repair policies.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -13560,7 +13624,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>List auto-repair policies.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -13575,7 +13639,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>List auto-repair policies.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -13590,7 +13654,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群组件实例的资源列表</para>
+        /// <para>Queries the list of resources associated with installed cluster add-ons, including Kubernetes resources and Helm release information.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -13626,7 +13690,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群组件实例的资源列表</para>
+        /// <para>Queries the list of resources associated with installed cluster add-ons, including Kubernetes resources and Helm release information.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -13662,7 +13726,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群组件实例的资源列表</para>
+        /// <para>Queries the list of resources associated with installed cluster add-ons, including Kubernetes resources and Helm release information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -13677,7 +13741,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群组件实例的资源列表</para>
+        /// <para>Queries the list of resources associated with installed cluster add-ons, including Kubernetes resources and Helm release information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -19020,7 +19084,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the TagResources operation to add labels to a cluster.</para>
+        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the TagResources operation to add labels to a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19078,7 +19142,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the TagResources operation to add labels to a cluster.</para>
+        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the TagResources operation to add labels to a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19136,7 +19200,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the TagResources operation to add labels to a cluster.</para>
+        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the TagResources operation to add labels to a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19155,7 +19219,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the TagResources operation to add labels to a cluster.</para>
+        /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the TagResources operation to add labels to a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20258,7 +20322,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Secret 落盘加密配置</para>
+        /// <para>Updates the Secret encryption at rest configuration for a specified cluster by cluster ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20308,7 +20372,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Secret 落盘加密配置</para>
+        /// <para>Updates the Secret encryption at rest configuration for a specified cluster by cluster ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20358,7 +20422,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Secret 落盘加密配置</para>
+        /// <para>Updates the Secret encryption at rest configuration for a specified cluster by cluster ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20377,7 +20441,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 Secret 落盘加密配置</para>
+        /// <para>Updates the Secret encryption at rest configuration for a specified cluster by cluster ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20396,7 +20460,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节点组件</para>
+        /// <para>Updates a specific component within a node pool, such as the kubelet.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20462,7 +20526,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节点组件</para>
+        /// <para>Updates a specific component within a node pool, such as the kubelet.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20528,7 +20592,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节点组件</para>
+        /// <para>Updates a specific component within a node pool, such as the kubelet.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20547,7 +20611,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新节点组件</para>
+        /// <para>Updates a specific component within a node pool, such as the kubelet.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21252,7 +21316,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates cluster add-ons to newer versions for enhanced functionality.</para>
+        /// <para>Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21293,7 +21357,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates cluster add-ons to newer versions for enhanced functionality.</para>
+        /// <para>Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21334,7 +21398,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates cluster add-ons to newer versions for enhanced functionality.</para>
+        /// <para>Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21353,7 +21417,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates cluster add-ons to newer versions for enhanced functionality.</para>
+        /// <para>Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.</para>
         /// </summary>
         /// 
         /// <param name="request">

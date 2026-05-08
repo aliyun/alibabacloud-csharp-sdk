@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>E368C761-F8F6-4A36-9B58-BD53D5CD0CEB</para>
+        /// <para>E368C761-F8F6-4A36-9B58-BD53D5******</para>
         /// </summary>
         [NameInMap("request_id")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <para>The ID of the resource.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>i-xxx</para>
+                /// <para>c2e39566adf23481fa1164ed510****</para>
                 /// </summary>
                 [NameInMap("resource_id")]
                 [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <para>The type of the resource. For more information, see <a href="https://help.aliyun.com/document_detail/110425.html">Labels</a>.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>CLUSTER</para>
+                /// <para>ALIYUN::CS::CLUSTER</para>
                 /// </summary>
                 [NameInMap("resource_type")]
                 [Validation(Required=false)]

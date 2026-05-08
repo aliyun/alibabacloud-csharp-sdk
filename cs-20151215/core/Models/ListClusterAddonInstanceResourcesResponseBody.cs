@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListClusterAddonInstanceResourcesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Information about the Helm release instance corresponding to the add-on.</para>
+        /// </summary>
         [NameInMap("helm_release")]
         [Validation(Required=false)]
         public ListClusterAddonInstanceResourcesResponseBodyHelmRelease HelmRelease { get; set; }
         public class ListClusterAddonInstanceResourcesResponseBodyHelmRelease : TeaModel {
             /// <summary>
+            /// <para>The name of the Helm chart.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ack-node-problem-detector</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ChartName { get; set; }
 
             /// <summary>
+            /// <para>The version of the Helm chart.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.2.28</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ChartVersion { get; set; }
 
             /// <summary>
+            /// <para>The namespace where the Helm release is located.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>kube-system</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Namespace { get; set; }
 
             /// <summary>
+            /// <para>The name of the Helm release instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ack-node-problem-detector</para>
             /// </summary>
@@ -47,11 +58,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// <para>A list of Kubernetes objects associated with the add-on.</para>
+        /// </summary>
         [NameInMap("kubernetes_objects")]
         [Validation(Required=false)]
         public List<ListClusterAddonInstanceResourcesResponseBodyKubernetesObjects> KubernetesObjects { get; set; }
         public class ListClusterAddonInstanceResourcesResponseBodyKubernetesObjects : TeaModel {
             /// <summary>
+            /// <para>The Kubernetes API group to which the object belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rbac.authorization.k8s.io</para>
             /// </summary>
@@ -60,6 +76,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Group { get; set; }
 
             /// <summary>
+            /// <para>The Kubernetes API type to which the object belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ClusterRole</para>
             /// </summary>
@@ -68,6 +86,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Kind { get; set; }
 
             /// <summary>
+            /// <para>The name of the Kubernetes object.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>terway-pod-reader</para>
             /// </summary>
@@ -76,6 +96,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The namespace to which the object belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>kube-system</para>
             /// </summary>
@@ -84,6 +106,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Namespace { get; set; }
 
             /// <summary>
+            /// <para>The Kubernetes API version to which the object belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>v1</para>
             /// </summary>

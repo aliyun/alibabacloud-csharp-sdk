@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterTasksResponseBody : TeaModel {
+        [NameInMap("next_token")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The pagination information.</para>
         /// </summary>

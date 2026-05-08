@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The ID of the cluster.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cluster-id</para>
+            /// <para>cf62854ac2130470897be7a27ed1f****</para>
             /// </summary>
             [NameInMap("cluster_id")]
             [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The event ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A234-1234-1234</para>
+            /// <para>e-dba703c8-953b-40d8-82e8-cb713590****</para>
             /// </summary>
             [NameInMap("event_id")]
             [Validation(Required=false)]
@@ -82,6 +82,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>The source of the event.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>task</para>
             /// </summary>
             [NameInMap("source")]
             [Validation(Required=false)]
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The subject of the event.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>nodePool-id</para>
+            /// <para>np6a5c86f4ecae436f8f4a3dc034a7****</para>
             /// </summary>
             [NameInMap("subject")]
             [Validation(Required=false)]
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The time when the event started.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2022-11-23T20:48:01+08:00</para>
+            /// <para>2025-04-23T20:48:01+08:00</para>
             /// </summary>
             [NameInMap("time")]
             [Validation(Required=false)]
@@ -136,6 +139,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Type { get; set; }
 
         }
+
+        [NameInMap("next_token")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
 
         /// <summary>
         /// <para>The pagination information.</para>

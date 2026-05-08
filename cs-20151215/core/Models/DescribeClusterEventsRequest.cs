@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeClusterEventsRequest : TeaModel {
+        [NameInMap("max_results")]
+        [Validation(Required=false)]
+        public int? MaxResults { get; set; }
+
+        [NameInMap("next_token")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
         /// <summary>
         /// <para>The number of the page to return.</para>
         /// 
