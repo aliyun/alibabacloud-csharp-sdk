@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        [NameInMap("CurrentVersion")]
+        [Validation(Required=false)]
+        public string CurrentVersion { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -119,6 +123,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string GwDescription { get; set; }
 
+        [NameInMap("LatestVersion")]
+        [Validation(Required=false)]
+        public string LatestVersion { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2025-10-07T02:19:55Z</para>
@@ -152,6 +160,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("RunningVersion")]
+        [Validation(Required=false)]
+        public string RunningVersion { get; set; }
 
         [NameInMap("SecurityIPArrays")]
         [Validation(Required=false)]

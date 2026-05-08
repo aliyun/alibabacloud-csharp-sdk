@@ -4254,6 +4254,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["AutoUseCoupon"] = request.AutoUseCoupon;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterDescription))
             {
                 query["DBClusterDescription"] = request.DBClusterDescription;
@@ -4419,6 +4423,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoUseCoupon))
             {
                 query["AutoUseCoupon"] = request.AutoUseCoupon;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterDescription))
             {
