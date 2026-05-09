@@ -7284,6 +7284,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["BizRegionId"] = request.BizRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatrixSpec))
             {
                 query["MatrixSpec"] = request.MatrixSpec;
@@ -7353,6 +7357,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
             {
                 query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeType))
+            {
+                query["ChargeType"] = request.ChargeType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatrixSpec))
             {

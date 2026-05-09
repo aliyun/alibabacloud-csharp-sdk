@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        [NameInMap("ChargeType")]
+        [Validation(Required=false)]
+        public string ChargeType { get; set; }
+
         /// <summary>
         /// <para>The matrix specification.</para>
         /// <para>Valid values:</para>
