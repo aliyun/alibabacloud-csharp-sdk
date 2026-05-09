@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string FunctionName { get; set; }
 
+        [NameInMap("juiceFsConfig")]
+        [Validation(Required=false)]
+        public JuiceFsConfig JuiceFsConfig { get; set; }
+
         /// <summary>
         /// <para>The time when the session was last updated.</para>
         /// 

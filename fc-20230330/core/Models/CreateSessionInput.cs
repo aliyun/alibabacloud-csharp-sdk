@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? DisableSessionIdReuse { get; set; }
 
+        [NameInMap("juiceFsConfig")]
+        [Validation(Required=false)]
+        public JuiceFsConfig JuiceFsConfig { get; set; }
+
         [NameInMap("nasConfig")]
         [Validation(Required=false)]
         public NASConfig NasConfig { get; set; }

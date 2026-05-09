@@ -1,3 +1,6 @@
+2026-05-09 Version: 4.6.12
+- Generated csharp 2023-03-30 for FC.
+
 2026-04-16 Version: 4.6.11
 - Update API ResumeSession: add request parameters fileSystemOnly.
 

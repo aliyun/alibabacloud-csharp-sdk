@@ -203,6 +203,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public FunctionRestriction InvocationRestriction { get; set; }
 
+        [NameInMap("juiceFsConfig")]
+        [Validation(Required=false)]
+        public JuiceFsConfig JuiceFsConfig { get; set; }
+
         /// <summary>
         /// <para>The last time the function was updated.</para>
         /// 

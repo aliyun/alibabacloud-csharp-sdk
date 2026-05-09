@@ -158,6 +158,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public bool? InternetAccess { get; set; }
 
+        [NameInMap("juiceFsConfig")]
+        [Validation(Required=false)]
+        public JuiceFsConfig JuiceFsConfig { get; set; }
+
         /// <summary>
         /// <para>The layers. Multiple layers are merged based on the order of array subscripts. If two layers have the same file name, the content of the layer with the smaller subscript will overwrite the content of the layer with the larger subscript.</para>
         /// </summary>
