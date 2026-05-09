@@ -39,6 +39,126 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询当前任务的并发数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTaskConcurrencyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTaskConcurrencyResponse
+        /// </returns>
+        public QueryTaskConcurrencyResponse QueryTaskConcurrencyWithOptions(QueryTaskConcurrencyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTaskConcurrency",
+                Version = "2025-11-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTaskConcurrencyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前任务的并发数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTaskConcurrencyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTaskConcurrencyResponse
+        /// </returns>
+        public async Task<QueryTaskConcurrencyResponse> QueryTaskConcurrencyWithOptionsAsync(QueryTaskConcurrencyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                body["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryTaskConcurrency",
+                Version = "2025-11-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryTaskConcurrencyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前任务的并发数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTaskConcurrencyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTaskConcurrencyResponse
+        /// </returns>
+        public QueryTaskConcurrencyResponse QueryTaskConcurrency(QueryTaskConcurrencyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryTaskConcurrencyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询当前任务的并发数</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryTaskConcurrencyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryTaskConcurrencyResponse
+        /// </returns>
+        public async Task<QueryTaskConcurrencyResponse> QueryTaskConcurrencyAsync(QueryTaskConcurrencyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryTaskConcurrencyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>外呼任务通话列表查询</para>
         /// </summary>
         /// 
