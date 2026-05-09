@@ -95,6 +95,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("Replicas")]
+            [Validation(Required=false)]
+            public long? Replicas { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>code-interpreter-asdxxxx</para>
