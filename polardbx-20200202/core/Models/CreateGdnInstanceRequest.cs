@@ -27,6 +27,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>gdn_mode_master_slave, gdn_mode_bidirectional</para>
+        /// </summary>
         [NameInMap("GdnMode")]
         [Validation(Required=false)]
         public string GdnMode { get; set; }
@@ -41,10 +45,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>DIRECT_OVERWRITE, OVERWRITE, IGNORE, INTERRUPT</para>
+        /// </summary>
         [NameInMap("RplConflictStrategy")]
         [Validation(Required=false)]
         public string RplConflictStrategy { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>MERGE,  SERIAL, TRANSACTION, SPLIT</para>
+        /// </summary>
         [NameInMap("RplDmlStrategy")]
         [Validation(Required=false)]
         public string RplDmlStrategy { get; set; }

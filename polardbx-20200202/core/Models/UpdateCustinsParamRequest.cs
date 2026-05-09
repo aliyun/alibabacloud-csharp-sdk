@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class ModifyDBInstanceVipRequest : TeaModel {
+    public class UpdateCustinsParamRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -19,15 +19,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
-        [NameInMap("InstanceClusterName")]
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("Name")]
         [Validation(Required=false)]
-        public string InstanceClusterName { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>cn-zhangjiakou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -37,21 +40,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-*********</para>
+        /// <para>load_test_4009266</para>
         /// </summary>
-        [NameInMap("VSwitchId")]
+        [NameInMap("Value")]
         [Validation(Required=false)]
-        public string VSwitchId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>vpc-********</para>
-        /// </summary>
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
+        public string Value { get; set; }
 
     }
 

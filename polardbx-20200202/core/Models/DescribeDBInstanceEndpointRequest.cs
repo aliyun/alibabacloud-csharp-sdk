@@ -8,50 +8,40 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class ModifyDBInstanceVipRequest : TeaModel {
+    public class DescribeDBInstanceEndpointRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pxc-********</para>
+        /// <para>pxc-hzjasd****</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
-        [NameInMap("InstanceClusterName")]
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1000</para>
+        /// </summary>
+        [NameInMap("MaxResults")]
         [Validation(Required=false)]
-        public string InstanceClusterName { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
+        /// <b>Example:</b>
+        /// <para>xxdds</para>
+        /// </summary>
+        [NameInMap("NextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>vsw-*********</para>
-        /// </summary>
-        [NameInMap("VSwitchId")]
-        [Validation(Required=false)]
-        public string VSwitchId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>vpc-********</para>
-        /// </summary>
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
 
     }
 

@@ -8,20 +8,28 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
-    public class ModifyDBInstanceVipRequest : TeaModel {
+    public class CreateSubCNInstanceRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pxc-********</para>
+        /// <para>pxc-hzravgpt8q****</para>
         /// </summary>
         [NameInMap("DBInstanceName")]
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
-        [NameInMap("InstanceClusterName")]
+        [NameInMap("IsAutoCreate")]
         [Validation(Required=false)]
-        public string InstanceClusterName { get; set; }
+        public bool? IsAutoCreate { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ReadWrite</para>
+        /// </summary>
+        [NameInMap("ReadType")]
+        [Validation(Required=false)]
+        public string ReadType { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -32,26 +40,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>vsw-*********</para>
-        /// </summary>
-        [NameInMap("VSwitchId")]
-        [Validation(Required=false)]
-        public string VSwitchId { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>vpc-********</para>
-        /// </summary>
-        [NameInMap("VpcId")]
-        [Validation(Required=false)]
-        public string VpcId { get; set; }
 
     }
 

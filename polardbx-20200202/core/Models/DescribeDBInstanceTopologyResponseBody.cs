@@ -279,6 +279,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [Validation(Required=false)]
                     public string EngineVersion { get; set; }
 
+                    [NameInMap("InstanceClusterName")]
+                    [Validation(Required=false)]
+                    public string InstanceClusterName { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -326,6 +330,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [NameInMap("PhyInstanceName")]
                     [Validation(Required=false)]
                     public string PhyInstanceName { get; set; }
+
+                    [NameInMap("ReadType")]
+                    [Validation(Required=false)]
+                    public string ReadType { get; set; }
 
                     /// <summary>
                     /// <b>Example:</b>
