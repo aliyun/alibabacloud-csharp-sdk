@@ -717,6 +717,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public Dictionary<string, Dictionary<string, object>> RoleSystemEnvs { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>Auto</para>
+        /// </summary>
+        [NameInMap("SchedulingStrategy")]
+        [Validation(Required=false)]
+        public string SchedulingStrategy { get; set; }
+
+        /// <summary>
         /// <para>The additional parameter configurations of the job.</para>
         /// </summary>
         [NameInMap("Settings")]

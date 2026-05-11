@@ -458,6 +458,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string RestartTimes { get; set; }
 
+        [NameInMap("SchedulingStrategy")]
+        [Validation(Required=false)]
+        public string SchedulingStrategy { get; set; }
+
         /// <summary>
         /// <para>The extra parameters of the job.</para>
         /// </summary>

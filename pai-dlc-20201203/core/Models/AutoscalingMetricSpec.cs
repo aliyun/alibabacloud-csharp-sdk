@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string MetricName { get; set; }
 
+        [NameInMap("StabilizationWindowSeconds")]
+        [Validation(Required=false)]
+        public int? StabilizationWindowSeconds { get; set; }
+
         [NameInMap("TargetValue")]
         [Validation(Required=false)]
         public int? TargetValue { get; set; }

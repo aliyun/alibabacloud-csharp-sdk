@@ -174,6 +174,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["ResourceId"] = request.ResourceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulingStrategy))
+            {
+                body["SchedulingStrategy"] = request.SchedulingStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Settings))
             {
                 body["Settings"] = request.Settings;
@@ -321,6 +325,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             {
                 body["ResourceId"] = request.ResourceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulingStrategy))
+            {
+                body["SchedulingStrategy"] = request.SchedulingStrategy;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Settings))
             {
                 body["Settings"] = request.Settings;
@@ -427,7 +435,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务模板</para>
+        /// <para>Create a Job Template</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -493,7 +501,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务模板</para>
+        /// <para>Create a Job Template</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -559,7 +567,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务模板</para>
+        /// <para>Create a Job Template</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -578,7 +586,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务模板</para>
+        /// <para>Create a Job Template</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -997,7 +1005,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除任务模板</para>
+        /// <para>Delete an unused job template. If the template is already used by a job, you cannot delete it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1037,7 +1045,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除任务模板</para>
+        /// <para>Delete an unused job template. If the template is already used by a job, you cannot delete it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1077,7 +1085,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除任务模板</para>
+        /// <para>Delete an unused job template. If the template is already used by a job, you cannot delete it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1096,7 +1104,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除任务模板</para>
+        /// <para>Delete an unused job template. If the template is already used by a job, you cannot delete it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1987,7 +1995,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务模板详情</para>
+        /// <para>Obtains the details of a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2033,7 +2041,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务模板详情</para>
+        /// <para>Obtains the details of a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2079,7 +2087,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务模板详情</para>
+        /// <para>Obtains the details of a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2098,7 +2106,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务模板详情</para>
+        /// <para>Obtains the details of a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3459,7 +3467,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出任务模板</para>
+        /// <para>List job templates by workspace. Support paging and sorting. Filter by creator, TemplateId, or TemplateName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3533,7 +3541,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出任务模板</para>
+        /// <para>List job templates by workspace. Support paging and sorting. Filter by creator, TemplateId, or TemplateName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3607,7 +3615,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出任务模板</para>
+        /// <para>List job templates by workspace. Support paging and sorting. Filter by creator, TemplateId, or TemplateName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3626,7 +3634,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出任务模板</para>
+        /// <para>List job templates by workspace. Support paging and sorting. Filter by creator, TemplateId, or TemplateName.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4349,7 +4357,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置任务模板默认版本</para>
+        /// <para>Sets the default version of the template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4395,7 +4403,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置任务模板默认版本</para>
+        /// <para>Sets the default version of the template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4441,7 +4449,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置任务模板默认版本</para>
+        /// <para>Sets the default version of the template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4460,7 +4468,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置任务模板默认版本</para>
+        /// <para>Sets the default version of the template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5011,7 +5019,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务模板</para>
+        /// <para>Update a Job template</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5081,7 +5089,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务模板</para>
+        /// <para>Update a Job template</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5151,7 +5159,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务模板</para>
+        /// <para>Update a Job template</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5170,7 +5178,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新任务模板</para>
+        /// <para>Update a Job template</para>
         /// </summary>
         /// 
         /// <param name="request">
