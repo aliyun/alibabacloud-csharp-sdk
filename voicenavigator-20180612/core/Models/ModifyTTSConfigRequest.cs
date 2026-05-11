@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string NlsServiceType { get; set; }
 
+        [NameInMap("PitchRate")]
+        [Validation(Required=false)]
+        public string PitchRate { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>100</para>
@@ -46,6 +50,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [NameInMap("SpeechRate")]
         [Validation(Required=false)]
         public string SpeechRate { get; set; }
+
+        [NameInMap("TtsOverrides")]
+        [Validation(Required=false)]
+        public string TtsOverrides { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

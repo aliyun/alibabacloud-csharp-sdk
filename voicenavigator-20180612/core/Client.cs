@@ -177,6 +177,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await AssociateChatbotInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AuditTTSVoice</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AuditTTSVoiceRequest
         /// </param>
@@ -250,6 +255,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<AuditTTSVoiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AuditTTSVoice</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AuditTTSVoiceRequest
         /// </param>
@@ -323,6 +333,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<AuditTTSVoiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AuditTTSVoice</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AuditTTSVoiceRequest
         /// </param>
@@ -336,6 +351,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return AuditTTSVoiceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AuditTTSVoice</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AuditTTSVoiceRequest
         /// </param>
@@ -349,6 +369,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await AuditTTSVoiceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启会话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BeginDialogueRequest
         /// </param>
@@ -406,6 +431,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<BeginDialogueResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启会话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BeginDialogueRequest
         /// </param>
@@ -463,6 +493,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<BeginDialogueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启会话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BeginDialogueRequest
         /// </param>
@@ -476,6 +511,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return BeginDialogueWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>开启会话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// BeginDialogueRequest
         /// </param>
@@ -621,6 +661,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await CollectedNumberWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateDownloadUrl</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDownloadUrlRequest
         /// </param>
@@ -654,6 +699,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<CreateDownloadUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateDownloadUrl</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDownloadUrlRequest
         /// </param>
@@ -687,6 +737,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<CreateDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateDownloadUrl</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDownloadUrlRequest
         /// </param>
@@ -700,6 +755,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return CreateDownloadUrlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CreateDownloadUrl</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDownloadUrlRequest
         /// </param>
@@ -985,6 +1045,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DebugBeginDialogueWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DebugCollectedNumber</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DebugCollectedNumberRequest
         /// </param>
@@ -1030,6 +1095,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DebugCollectedNumberResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DebugCollectedNumber</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DebugCollectedNumberRequest
         /// </param>
@@ -1075,6 +1145,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DebugCollectedNumberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DebugCollectedNumber</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DebugCollectedNumberRequest
         /// </param>
@@ -1088,6 +1163,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DebugCollectedNumberWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DebugCollectedNumber</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DebugCollectedNumberRequest
         /// </param>
@@ -1417,6 +1497,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DescribeConversationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeConversationContext</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConversationContextRequest
         /// </param>
@@ -1450,6 +1535,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeConversationContextResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeConversationContext</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConversationContextRequest
         /// </param>
@@ -1483,6 +1573,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeConversationContextResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeConversationContext</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConversationContextRequest
         /// </param>
@@ -1496,6 +1591,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DescribeConversationContextWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeConversationContext</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeConversationContextRequest
         /// </param>
@@ -1509,6 +1609,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DescribeConversationContextWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeExportProgress</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeExportProgressRequest
         /// </param>
@@ -1542,6 +1647,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeExportProgressResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeExportProgress</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeExportProgressRequest
         /// </param>
@@ -1575,6 +1685,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeExportProgressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeExportProgress</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeExportProgressRequest
         /// </param>
@@ -1588,6 +1703,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DescribeExportProgressWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>DescribeExportProgress</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeExportProgressRequest
         /// </param>
@@ -1969,6 +2089,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await DescribeStatisticalDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取TTS配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTTSConfigRequest
         /// </param>
@@ -2002,6 +2127,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeTTSConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取TTS配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTTSConfigRequest
         /// </param>
@@ -2035,6 +2165,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DescribeTTSConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取TTS配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTTSConfigRequest
         /// </param>
@@ -2048,6 +2183,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DescribeTTSConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取TTS配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTTSConfigRequest
         /// </param>
@@ -2541,6 +2681,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await EndDialogueWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ExportConversationDetails</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportConversationDetailsRequest
         /// </param>
@@ -2566,6 +2711,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallingNumber))
             {
                 query["CallingNumber"] = request.CallingNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DebugConversation))
+            {
+                query["DebugConversation"] = request.DebugConversation;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -2606,6 +2755,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ExportConversationDetailsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ExportConversationDetails</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportConversationDetailsRequest
         /// </param>
@@ -2631,6 +2785,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallingNumber))
             {
                 query["CallingNumber"] = request.CallingNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DebugConversation))
+            {
+                query["DebugConversation"] = request.DebugConversation;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -2671,6 +2829,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ExportConversationDetailsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ExportConversationDetails</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportConversationDetailsRequest
         /// </param>
@@ -2684,6 +2847,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return ExportConversationDetailsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ExportConversationDetails</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportConversationDetailsRequest
         /// </param>
@@ -2829,290 +2997,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await ExportStatisticalDataWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
-        /// GenerateUploadUrlRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Asr配置</para>
+        /// </summary>
         /// 
-        /// <returns>
-        /// GenerateUploadUrlResponse
-        /// </returns>
-        public GenerateUploadUrlResponse GenerateUploadUrlWithOptions(GenerateUploadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerBid))
-            {
-                body["CallerBid"] = request.CallerBid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerIp))
-            {
-                body["CallerIp"] = request.CallerIp;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerParentId))
-            {
-                body["CallerParentId"] = request.CallerParentId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerType))
-            {
-                body["CallerType"] = request.CallerType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUid))
-            {
-                body["CallerUid"] = request.CallerUid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIp))
-            {
-                body["ClientIp"] = request.ClientIp;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
-            {
-                body["Environment"] = request.Environment;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
-            {
-                body["FileName"] = request.FileName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                body["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceOwnerId))
-            {
-                body["InstanceOwnerId"] = request.InstanceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
-            {
-                body["Key"] = request.Key;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MfaPresent))
-            {
-                body["MfaPresent"] = request.MfaPresent;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyOriginalSecurityTransport))
-            {
-                body["ProxyOriginalSecurityTransport"] = request.ProxyOriginalSecurityTransport;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyOriginalSourceIp))
-            {
-                body["ProxyOriginalSourceIp"] = request.ProxyOriginalSourceIp;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyTrustTransportInfo))
-            {
-                body["ProxyTrustTransportInfo"] = request.ProxyTrustTransportInfo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                body["RequestId"] = request.RequestId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
-            {
-                body["SecurityToken"] = request.SecurityToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityTransport))
-            {
-                body["SecurityTransport"] = request.SecurityTransport;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
-            {
-                body["TenantId"] = request.TenantId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantName))
-            {
-                body["TenantName"] = request.TenantName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                body["UserId"] = request.UserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
-            {
-                body["UserName"] = request.UserName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XspaceServicerId))
-            {
-                body["XspaceServicerId"] = request.XspaceServicerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XspaceTenantBuId))
-            {
-                body["XspaceTenantBuId"] = request.XspaceTenantBuId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GenerateUploadUrl",
-                Version = "2018-06-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GenerateUploadUrlResponse>(CallApi(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// GenerateUploadUrlRequest
-        /// </param>
-        /// <param name="runtime">
-        /// runtime options for this request RuntimeOptions
-        /// </param>
-        /// 
-        /// <returns>
-        /// GenerateUploadUrlResponse
-        /// </returns>
-        public async Task<GenerateUploadUrlResponse> GenerateUploadUrlWithOptionsAsync(GenerateUploadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
-        {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> body = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerBid))
-            {
-                body["CallerBid"] = request.CallerBid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerIp))
-            {
-                body["CallerIp"] = request.CallerIp;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerParentId))
-            {
-                body["CallerParentId"] = request.CallerParentId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerType))
-            {
-                body["CallerType"] = request.CallerType;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUid))
-            {
-                body["CallerUid"] = request.CallerUid;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientIp))
-            {
-                body["ClientIp"] = request.ClientIp;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Environment))
-            {
-                body["Environment"] = request.Environment;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
-            {
-                body["FileName"] = request.FileName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
-            {
-                body["InstanceId"] = request.InstanceId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceOwnerId))
-            {
-                body["InstanceOwnerId"] = request.InstanceOwnerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
-            {
-                body["Key"] = request.Key;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MfaPresent))
-            {
-                body["MfaPresent"] = request.MfaPresent;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyOriginalSecurityTransport))
-            {
-                body["ProxyOriginalSecurityTransport"] = request.ProxyOriginalSecurityTransport;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyOriginalSourceIp))
-            {
-                body["ProxyOriginalSourceIp"] = request.ProxyOriginalSourceIp;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProxyTrustTransportInfo))
-            {
-                body["ProxyTrustTransportInfo"] = request.ProxyTrustTransportInfo;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequestId))
-            {
-                body["RequestId"] = request.RequestId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
-            {
-                body["SecurityToken"] = request.SecurityToken;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityTransport))
-            {
-                body["SecurityTransport"] = request.SecurityTransport;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
-            {
-                body["TenantId"] = request.TenantId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantName))
-            {
-                body["TenantName"] = request.TenantName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
-            {
-                body["UserId"] = request.UserId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
-            {
-                body["UserName"] = request.UserName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XspaceServicerId))
-            {
-                body["XspaceServicerId"] = request.XspaceServicerId;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XspaceTenantBuId))
-            {
-                body["XspaceTenantBuId"] = request.XspaceTenantBuId;
-            }
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
-            {
-                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
-            };
-            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
-            {
-                Action = "GenerateUploadUrl",
-                Version = "2018-06-12",
-                Protocol = "HTTPS",
-                Pathname = "/",
-                Method = "POST",
-                AuthType = "AK",
-                Style = "RPC",
-                ReqBodyType = "formData",
-                BodyType = "json",
-            };
-            return TeaModel.ToObject<GenerateUploadUrlResponse>(await CallApiAsync(params_, req, runtime));
-        }
-
-        /// <param name="request">
-        /// GenerateUploadUrlRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GenerateUploadUrlResponse
-        /// </returns>
-        public GenerateUploadUrlResponse GenerateUploadUrl(GenerateUploadUrlRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GenerateUploadUrlWithOptions(request, runtime);
-        }
-
-        /// <param name="request">
-        /// GenerateUploadUrlRequest
-        /// </param>
-        /// 
-        /// <returns>
-        /// GenerateUploadUrlResponse
-        /// </returns>
-        public async Task<GenerateUploadUrlResponse> GenerateUploadUrlAsync(GenerateUploadUrlRequest request)
-        {
-            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GenerateUploadUrlWithOptionsAsync(request, runtime);
-        }
-
         /// <param name="request">
         /// GetAsrConfigRequest
         /// </param>
@@ -3154,6 +3043,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<GetAsrConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Asr配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAsrConfigRequest
         /// </param>
@@ -3195,6 +3089,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<GetAsrConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Asr配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAsrConfigRequest
         /// </param>
@@ -3208,6 +3107,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return GetAsrConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Asr配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAsrConfigRequest
         /// </param>
@@ -3221,6 +3125,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await GetAsrConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetRealTimeConcurrency</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRealTimeConcurrencyRequest
         /// </param>
@@ -3254,6 +3163,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<GetRealTimeConcurrencyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetRealTimeConcurrency</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRealTimeConcurrencyRequest
         /// </param>
@@ -3287,6 +3201,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<GetRealTimeConcurrencyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetRealTimeConcurrency</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRealTimeConcurrencyRequest
         /// </param>
@@ -3300,6 +3219,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return GetRealTimeConcurrencyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>GetRealTimeConcurrency</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRealTimeConcurrencyRequest
         /// </param>
@@ -3497,6 +3421,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await ListConversationDetailsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询会话列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListConversationsRequest
         /// </param>
@@ -3530,6 +3459,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ListConversationsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询会话列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListConversationsRequest
         /// </param>
@@ -3563,6 +3497,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ListConversationsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询会话列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListConversationsRequest
         /// </param>
@@ -3576,6 +3515,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return ListConversationsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询会话列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListConversationsRequest
         /// </param>
@@ -3589,6 +3533,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await ListConversationsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下载列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDownloadTasksRequest
         /// </param>
@@ -3602,7 +3551,15 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
         public ListDownloadTasksResponse ListDownloadTasksWithOptions(ListDownloadTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3613,7 +3570,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
                 Version = "2018-06-12",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -3622,6 +3579,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ListDownloadTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下载列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDownloadTasksRequest
         /// </param>
@@ -3635,7 +3597,15 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
         public async Task<ListDownloadTasksResponse> ListDownloadTasksWithOptionsAsync(ListDownloadTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -3646,7 +3616,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
                 Version = "2018-06-12",
                 Protocol = "HTTPS",
                 Pathname = "/",
-                Method = "GET",
+                Method = "POST",
                 AuthType = "AK",
                 Style = "RPC",
                 ReqBodyType = "formData",
@@ -3655,6 +3625,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ListDownloadTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下载列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDownloadTasksRequest
         /// </param>
@@ -3668,6 +3643,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return ListDownloadTasksWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下载列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDownloadTasksRequest
         /// </param>
@@ -3773,6 +3753,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await ListInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Asr配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAsrConfigRequest
         /// </param>
@@ -3787,6 +3772,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
+            {
+                query["AppKey"] = request.AppKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrAcousticModelId))
             {
                 query["AsrAcousticModelId"] = request.AsrAcousticModelId;
@@ -3798,6 +3787,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrCustomizationId))
             {
                 query["AsrCustomizationId"] = request.AsrCustomizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrOverrides))
+            {
+                query["AsrOverrides"] = request.AsrOverrides;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrVocabularyId))
             {
@@ -3814,6 +3807,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntryId))
             {
                 query["EntryId"] = request.EntryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NlsServiceType))
+            {
+                query["NlsServiceType"] = request.NlsServiceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3834,6 +3831,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ModifyAsrConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Asr配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAsrConfigRequest
         /// </param>
@@ -3848,6 +3850,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
+            {
+                query["AppKey"] = request.AppKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrAcousticModelId))
             {
                 query["AsrAcousticModelId"] = request.AsrAcousticModelId;
@@ -3859,6 +3865,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrCustomizationId))
             {
                 query["AsrCustomizationId"] = request.AsrCustomizationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrOverrides))
+            {
+                query["AsrOverrides"] = request.AsrOverrides;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrVocabularyId))
             {
@@ -3875,6 +3885,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntryId))
             {
                 query["EntryId"] = request.EntryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NlsServiceType))
+            {
+                query["NlsServiceType"] = request.NlsServiceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3895,6 +3909,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ModifyAsrConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Asr配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAsrConfigRequest
         /// </param>
@@ -3908,6 +3927,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return ModifyAsrConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改Asr配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAsrConfigRequest
         /// </param>
@@ -4333,6 +4357,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await ModifySilenceTimeoutConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改TTS配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTTSConfigRequest
         /// </param>
@@ -4371,9 +4400,17 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             {
                 query["NlsServiceType"] = request.NlsServiceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PitchRate))
+            {
+                query["PitchRate"] = request.PitchRate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
             {
                 query["SpeechRate"] = request.SpeechRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsOverrides))
+            {
+                query["TtsOverrides"] = request.TtsOverrides;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
             {
@@ -4402,6 +4439,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ModifyTTSConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改TTS配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTTSConfigRequest
         /// </param>
@@ -4440,9 +4482,17 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             {
                 query["NlsServiceType"] = request.NlsServiceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PitchRate))
+            {
+                query["PitchRate"] = request.PitchRate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpeechRate))
             {
                 query["SpeechRate"] = request.SpeechRate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsOverrides))
+            {
+                query["TtsOverrides"] = request.TtsOverrides;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
             {
@@ -4471,6 +4521,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<ModifyTTSConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改TTS配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTTSConfigRequest
         /// </param>
@@ -4484,6 +4539,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return ModifyTTSConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改TTS配置</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTTSConfigRequest
         /// </param>

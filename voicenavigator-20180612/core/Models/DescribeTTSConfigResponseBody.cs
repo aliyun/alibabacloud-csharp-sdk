@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public int? SpeechRate { get; set; }
 
+        [NameInMap("TtsOverrides")]
+        [Validation(Required=false)]
+        public string TtsOverrides { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>aixia</para>

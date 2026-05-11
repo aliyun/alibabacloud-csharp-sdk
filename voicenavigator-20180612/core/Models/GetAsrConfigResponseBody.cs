@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public class GetAsrConfigResponseBodyData : TeaModel {
             /// <summary>
             /// <b>Example:</b>
+            /// <para>your-app-key</para>
+            /// </summary>
+            [NameInMap("AppKey")]
+            [Validation(Required=false)]
+            public string AppKey { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>3b1d3031-8b6e-460a-8640-d330f2ca50b8</para>
             /// </summary>
             [NameInMap("AsrAcousticModelId")]
@@ -45,6 +53,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             [Validation(Required=false)]
             public string AsrCustomizationId { get; set; }
 
+            [NameInMap("AsrOverrides")]
+            [Validation(Required=false)]
+            public string AsrOverrides { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>3b1d3031-8b6e-460a-8640-d330f2ca50b8</para>
@@ -53,13 +65,29 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             [Validation(Required=false)]
             public string AsrVocabularyId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ali</para>
+            /// </summary>
             [NameInMap("Engine")]
             [Validation(Required=false)]
             public string Engine { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>EngineXufei</para>
+            /// </summary>
             [NameInMap("EngineXufei")]
             [Validation(Required=false)]
             public string EngineXufei { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Authorized</para>
+            /// </summary>
+            [NameInMap("NlsServiceType")]
+            [Validation(Required=false)]
+            public string NlsServiceType { get; set; }
 
         }
 

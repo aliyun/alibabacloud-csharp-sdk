@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string CallingNumber { get; set; }
 
+        [NameInMap("DebugConversation")]
+        [Validation(Required=false)]
+        public int? DebugConversation { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
