@@ -33,74 +33,38 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListUsersResponseBodyDataUser> User { get; set; }
             public class ListUsersResponseBodyDataUser : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2951869706989****</para>
-                /// </summary>
                 [NameInMap("AliUid")]
                 [Validation(Required=false)]
                 public string AliUid { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2020-03-11T16:54Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>XXX</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>xxx</para>
-                /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("LoginUserType")]
                 [Validation(Required=false)]
                 public int? LoginUserType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>AGENT</para>
-                /// </summary>
                 [NameInMap("RoleName")]
                 [Validation(Required=false)]
                 public string RoleName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2020-03-11T16:54Z</para>
-                /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public string UpdateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>xxx</para>
-                /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]
                 public string UserName { get; set; }

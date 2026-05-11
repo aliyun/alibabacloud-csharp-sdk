@@ -25,18 +25,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<GetRuleCategoryResponseBodyDataRuleCountInfo> RuleCountInfo { get; set; }
             public class GetRuleCategoryResponseBodyDataRuleCountInfo : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
                 [NameInMap("Select")]
                 [Validation(Required=false)]
                 public bool? Select { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>22</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public int? Type { get; set; }

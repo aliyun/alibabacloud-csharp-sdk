@@ -45,18 +45,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public List<GetNextResultToVerifyResponseBodyDataDialoguesDialogue> Dialogue { get; set; }
                 public class GetNextResultToVerifyResponseBodyDataDialoguesDialogue : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>980</para>
-                    /// </summary>
                     [NameInMap("Begin")]
                     [Validation(Required=false)]
                     public long? Begin { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>XXX</para>
-                    /// </summary>
                     [NameInMap("BeginTime")]
                     [Validation(Required=false)]
                     public string BeginTime { get; set; }
@@ -83,10 +75,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                                 }
 
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>5</para>
-                                /// </summary>
                                 [NameInMap("Position")]
                                 [Validation(Required=false)]
                                 public int? Position { get; set; }
@@ -107,20 +95,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                                 }
 
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>5</para>
-                                /// </summary>
                                 [NameInMap("Position")]
                                 [Validation(Required=false)]
                                 public int? Position { get; set; }
 
                             }
 
-                            /// <summary>
-                            /// <b>Example:</b>
-                            /// <para>CHANGE</para>
-                            /// </summary>
                             [NameInMap("Type")]
                             [Validation(Required=false)]
                             public string Type { get; set; }
@@ -129,26 +109,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                     }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>6</para>
-                    /// </summary>
                     [NameInMap("EmotionValue")]
                     [Validation(Required=false)]
                     public int? EmotionValue { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>3422</para>
-                    /// </summary>
                     [NameInMap("End")]
                     [Validation(Required=false)]
                     public long? End { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>00:00:07</para>
-                    /// </summary>
                     [NameInMap("HourMinSec")]
                     [Validation(Required=false)]
                     public string HourMinSec { get; set; }
@@ -157,10 +125,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public string Identity { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2</para>
-                    /// </summary>
                     [NameInMap("IncorrectWords")]
                     [Validation(Required=false)]
                     public int? IncorrectWords { get; set; }
@@ -169,10 +133,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public string Role { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("SilenceDuration")]
                     [Validation(Required=false)]
                     public int? SilenceDuration { get; set; }
@@ -185,10 +145,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public string SourceWords { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>332</para>
-                    /// </summary>
                     [NameInMap("SpeechRate")]
                     [Validation(Required=false)]
                     public int? SpeechRate { get; set; }

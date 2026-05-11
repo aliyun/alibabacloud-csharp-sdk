@@ -25,10 +25,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<GetScoreInfoResponseBodyDataScorePo> ScorePo { get; set; }
             public class GetScoreInfoResponseBodyDataScorePo : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>34</para>
-                /// </summary>
                 [NameInMap("ScoreId")]
                 [Validation(Required=false)]
                 public int? ScoreId { get; set; }
@@ -41,18 +37,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public List<GetScoreInfoResponseBodyDataScorePoScoreInfosScoreParam> ScoreParam { get; set; }
                     public class GetScoreInfoResponseBodyDataScorePoScoreInfosScoreParam : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>32</para>
-                        /// </summary>
                         [NameInMap("ScoreNum")]
                         [Validation(Required=false)]
                         public int? ScoreNum { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>3422</para>
-                        /// </summary>
                         [NameInMap("ScoreSubId")]
                         [Validation(Required=false)]
                         public int? ScoreSubId { get; set; }
@@ -61,10 +49,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public string ScoreSubName { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>1</para>
-                        /// </summary>
                         [NameInMap("ScoreType")]
                         [Validation(Required=false)]
                         public int? ScoreType { get; set; }

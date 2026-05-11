@@ -77,6 +77,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public int? DelayTime { get; set; }
 
+            /// <summary>
+            /// <para>different_role</para>
+            /// </summary>
             [NameInMap("Different_role")]
             [Validation(Required=false)]
             public bool? DifferentRole { get; set; }
@@ -115,6 +118,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public int? From { get; set; }
 
+            /// <summary>
+            /// <para>from_end</para>
+            /// </summary>
             [NameInMap("From_end")]
             [Validation(Required=false)]
             public bool? FromEnd { get; set; }
@@ -251,10 +257,16 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public Dictionary<string, List<string>> Synonyms { get; set; }
 
+            /// <summary>
+            /// <para>target</para>
+            /// </summary>
             [NameInMap("Target")]
             [Validation(Required=false)]
             public int? Target { get; set; }
 
+            /// <summary>
+            /// <para>target_role</para>
+            /// </summary>
             [NameInMap("Target_role")]
             [Validation(Required=false)]
             public string TargetRole { get; set; }
@@ -271,6 +283,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public double? Velocity { get; set; }
 
+            /// <summary>
+            /// <para>velocityInMint</para>
+            /// </summary>
             [NameInMap("VelocityInMint")]
             [Validation(Required=false)]
             public int? VelocityInMint { get; set; }

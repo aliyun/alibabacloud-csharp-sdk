@@ -29,18 +29,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public int? AsrVersion { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2019-04-15T14:57Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>18</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
@@ -53,18 +45,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2019-04-15T14:57Z</para>
-                /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public string UpdateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>a01daaaxxxxxxxxx</para>
-                /// </summary>
                 [NameInMap("VocabularyId")]
                 [Validation(Required=false)]
                 public string VocabularyId { get; set; }

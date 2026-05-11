@@ -61,10 +61,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public List<GetPrecisionTaskResponseBodyDataPrecisionsPrecision> Precision { get; set; }
                 public class GetPrecisionTaskResponseBodyDataPrecisionsPrecision : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>2311</para>
-                    /// </summary>
                     [NameInMap("ModelId")]
                     [Validation(Required=false)]
                     public long? ModelId { get; set; }
@@ -73,26 +69,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public string ModelName { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0.98</para>
-                    /// </summary>
                     [NameInMap("Precision")]
                     [Validation(Required=false)]
                     public float? Precision { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("Status")]
                     [Validation(Required=false)]
                     public int? Status { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>593A04C0-E6E9-4CDC-8C99-B120C******</para>
-                    /// </summary>
                     [NameInMap("TaskId")]
                     [Validation(Required=false)]
                     public string TaskId { get; set; }

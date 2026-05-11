@@ -33,18 +33,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListPrecisionTaskResponseBodyDataPrecisionTask> PrecisionTask { get; set; }
             public class ListPrecisionTaskResponseBodyDataPrecisionTask : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2020-03-10 20:26:29</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1212</para>
-                /// </summary>
                 [NameInMap("DataSetId")]
                 [Validation(Required=false)]
                 public long? DataSetId { get; set; }
@@ -53,18 +45,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public string DataSetName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>331311</para>
-                /// </summary>
                 [NameInMap("Duration")]
                 [Validation(Required=false)]
                 public int? Duration { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>32</para>
-                /// </summary>
                 [NameInMap("IncorrectWords")]
                 [Validation(Required=false)]
                 public int? IncorrectWords { get; set; }
@@ -81,18 +65,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public List<ListPrecisionTaskResponseBodyDataPrecisionTaskPrecisionsPrecision> Precision { get; set; }
                     public class ListPrecisionTaskResponseBodyDataPrecisionTaskPrecisionsPrecision : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>2020-03-10 20:26:29</para>
-                        /// </summary>
                         [NameInMap("CreateTime")]
                         [Validation(Required=false)]
                         public string CreateTime { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>2321</para>
-                        /// </summary>
                         [NameInMap("ModelId")]
                         [Validation(Required=false)]
                         public long? ModelId { get; set; }
@@ -101,26 +77,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public string ModelName { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>0.98</para>
-                        /// </summary>
                         [NameInMap("Precision")]
                         [Validation(Required=false)]
                         public float? Precision { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>1</para>
-                        /// </summary>
                         [NameInMap("Status")]
                         [Validation(Required=false)]
                         public int? Status { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>7C1DEF5F-2C18-4D36-99C6-8C276F781796</para>
-                        /// </summary>
                         [NameInMap("TaskId")]
                         [Validation(Required=false)]
                         public string TaskId { get; set; }
@@ -129,50 +93,26 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("Source")]
                 [Validation(Required=false)]
                 public int? Source { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>7C1DEF5F-2C18-4D36-99C6-8C276F781796</para>
-                /// </summary>
                 [NameInMap("TaskId")]
                 [Validation(Required=false)]
                 public string TaskId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>21</para>
-                /// </summary>
                 [NameInMap("TotalCount")]
                 [Validation(Required=false)]
                 public int? TotalCount { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2020-03-10 20:26:29</para>
-                /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public string UpdateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("VerifiedCount")]
                 [Validation(Required=false)]
                 public int? VerifiedCount { get; set; }

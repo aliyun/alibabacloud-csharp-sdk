@@ -45,18 +45,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public List<GetSkillGroupConfigResponseBodyDataAllRuleListRuleNameInfo> RuleNameInfo { get; set; }
                 public class GetSkillGroupConfigResponseBodyDataAllRuleListRuleNameInfo : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>12</para>
-                    /// </summary>
                     [NameInMap("Rid")]
                     [Validation(Required=false)]
                     public long? Rid { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>test</para>
-                    /// </summary>
                     [NameInMap("RuleName")]
                     [Validation(Required=false)]
                     public string RuleName { get; set; }
@@ -137,18 +129,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public List<GetSkillGroupConfigResponseBodyDataRuleListRuleNameInfo> RuleNameInfo { get; set; }
                 public class GetSkillGroupConfigResponseBodyDataRuleListRuleNameInfo : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>222</para>
-                    /// </summary>
                     [NameInMap("Rid")]
                     [Validation(Required=false)]
                     public long? Rid { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>test</para>
-                    /// </summary>
                     [NameInMap("RuleName")]
                     [Validation(Required=false)]
                     public string RuleName { get; set; }

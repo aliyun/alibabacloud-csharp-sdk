@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListSchemeTaskConfigResponseBodyDataData> Data { get; set; }
             public class ListSchemeTaskConfigResponseBodyDataData : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("AsrTaskPriority")]
                 [Validation(Required=false)]
                 public int? AsrTaskPriority { get; set; }
@@ -53,26 +49,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public int? AsrVersion { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("AssignType")]
                 [Validation(Required=false)]
                 public int? AssignType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1650418039000</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("CreateUser")]
                 [Validation(Required=false)]
                 public long? CreateUser { get; set; }
@@ -97,10 +81,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                 [Validation(Required=false)]
                                 public List<ListSchemeTaskConfigResponseBodyDataDataDataConfigAssignConfigsAssignConfigAssignConfigContestsAssignConfigContest> AssignConfigContest { get; set; }
                                 public class ListSchemeTaskConfigResponseBodyDataDataDataConfigAssignConfigsAssignConfigAssignConfigContestsAssignConfigContest : TeaModel {
-                                    /// <summary>
-                                    /// <b>Example:</b>
-                                    /// <para>3</para>
-                                    /// </summary>
                                     [NameInMap("DataType")]
                                     [Validation(Required=false)]
                                     public int? DataType { get; set; }
@@ -115,26 +95,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                                     }
 
-                                    /// <summary>
-                                    /// <b>Example:</b>
-                                    /// <para>callStartTime</para>
-                                    /// </summary>
                                     [NameInMap("Name")]
                                     [Validation(Required=false)]
                                     public string Name { get; set; }
 
-                                    /// <summary>
-                                    /// <b>Example:</b>
-                                    /// <para>4</para>
-                                    /// </summary>
                                     [NameInMap("Symbol")]
                                     [Validation(Required=false)]
                                     public int? Symbol { get; set; }
 
-                                    /// <summary>
-                                    /// <b>Example:</b>
-                                    /// <para>{\&quot;start\&quot;:\&quot;2022-09-01 00:00:00\&quot;,\&quot;end\&quot;:\&quot;2022-09-30 00:00:00\&quot;}</para>
-                                    /// </summary>
                                     [NameInMap("Value")]
                                     [Validation(Required=false)]
                                     public string Value { get; set; }
@@ -147,60 +115,32 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                     }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>[]</para>
-                    /// </summary>
                     [NameInMap("DataSets")]
                     [Validation(Required=false)]
                     public string DataSets { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("Index")]
                     [Validation(Required=false)]
                     public int? Index { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>{}</para>
-                    /// </summary>
                     [NameInMap("ResultParam")]
                     [Validation(Required=false)]
                     public string ResultParam { get; set; }
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("FinishRate")]
                 [Validation(Required=false)]
                 public double? FinishRate { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>123</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("ManualReview")]
                 [Validation(Required=false)]
                 public int? ManualReview { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>cdae396590b*****ec40f3476e274fc</para>
-                /// </summary>
                 [NameInMap("ModeCustomizationId")]
                 [Validation(Required=false)]
                 public string ModeCustomizationId { get; set; }
@@ -213,34 +153,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("NumberExecuting")]
                 [Validation(Required=false)]
                 public int? NumberExecuting { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("NumberFail")]
                 [Validation(Required=false)]
                 public int? NumberFail { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1000</para>
-                /// </summary>
                 [NameInMap("NumberSuccess")]
                 [Validation(Required=false)]
                 public int? NumberSuccess { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1000</para>
-                /// </summary>
                 [NameInMap("NumberSum")]
                 [Validation(Required=false)]
                 public int? NumberSum { get; set; }
@@ -267,10 +191,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>158</para>
-                        /// </summary>
                         [NameInMap("SchemeId")]
                         [Validation(Required=false)]
                         public long? SchemeId { get; set; }
@@ -279,66 +199,34 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>123</para>
-                /// </summary>
                 [NameInMap("SchemeTaskConfigId")]
                 [Validation(Required=false)]
                 public long? SchemeTaskConfigId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("SourceDataType")]
                 [Validation(Required=false)]
                 public int? SourceDataType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public int? Type { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1650418039000</para>
-                /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public string UpdateTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("UpdateUser")]
                 [Validation(Required=false)]
                 public long? UpdateUser { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("UserGroup")]
                 [Validation(Required=false)]
                 public string UserGroup { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>9f90b3efa2****0a49acec226eafc17</para>
-                /// </summary>
                 [NameInMap("VocabId")]
                 [Validation(Required=false)]
                 public string VocabId { get; set; }

@@ -39,10 +39,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                     }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("Position")]
                     [Validation(Required=false)]
                     public int? Position { get; set; }
@@ -63,20 +59,12 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                     }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("Position")]
                     [Validation(Required=false)]
                     public int? Position { get; set; }
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>CHANGE</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }

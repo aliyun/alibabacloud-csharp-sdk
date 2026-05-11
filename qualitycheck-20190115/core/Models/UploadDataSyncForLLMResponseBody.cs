@@ -71,9 +71,17 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                                     [Validation(Required=false)]
                                     public List<UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWordsHitKeyWord> HitKeyWord { get; set; }
                                     public class UploadDataSyncForLLMResponseBodyDataResultInfoRulesRuleHitInfoHitConditionHitInfoHitKeyWordsHitKeyWord : TeaModel {
+                                        [NameInMap("CustomizeCode")]
+                                        [Validation(Required=false)]
+                                        public string CustomizeCode { get; set; }
+
                                         [NameInMap("From")]
                                         [Validation(Required=false)]
                                         public int? From { get; set; }
+
+                                        [NameInMap("IsMatch")]
+                                        [Validation(Required=false)]
+                                        public bool? IsMatch { get; set; }
 
                                         [NameInMap("Pid")]
                                         [Validation(Required=false)]
@@ -128,6 +136,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                             }
 
                         }
+
+                        [NameInMap("LlmResponse")]
+                        [Validation(Required=false)]
+                        public string LlmResponse { get; set; }
 
                         [NameInMap("Rid")]
                         [Validation(Required=false)]

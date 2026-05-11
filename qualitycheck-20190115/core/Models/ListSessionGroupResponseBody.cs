@@ -41,18 +41,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<ListSessionGroupResponseBodyDataData> Data { get; set; }
             public class ListSessionGroupResponseBodyDataData : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("AssignStatus")]
                 [Validation(Required=false)]
                 public int? AssignStatus { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2022-09-26 10:09:14</para>
-                /// </summary>
                 [NameInMap("CallStartTime")]
                 [Validation(Required=false)]
                 public string CallStartTime { get; set; }
@@ -107,26 +99,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("HitSessionCount")]
                 [Validation(Required=false)]
                 public int? HitSessionCount { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>4498420@a_z@93EAADF1-01D3-44BD-8AC9-F57F447EFCE8_1614*****</para>
-                /// </summary>
                 [NameInMap("LastDataId")]
                 [Validation(Required=false)]
                 public string LastDataId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("ReviewStatus")]
                 [Validation(Required=false)]
                 public int? ReviewStatus { get; set; }
@@ -141,10 +121,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>123</para>
-                /// </summary>
                 [NameInMap("SchemeTaskConfigId")]
                 [Validation(Required=false)]
                 public long? SchemeTaskConfigId { get; set; }
@@ -153,34 +129,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public string SchemeTaskConfigName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("Score")]
                 [Validation(Required=false)]
                 public long? Score { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("SessionCount")]
                 [Validation(Required=false)]
                 public int? SessionCount { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>SessionGroupA</para>
-                /// </summary>
                 [NameInMap("SessionGroupId")]
                 [Validation(Required=false)]
                 public string SessionGroupId { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("SessionGroupReviewedOrComplained")]
                 [Validation(Required=false)]
                 public bool? SessionGroupReviewedOrComplained { get; set; }

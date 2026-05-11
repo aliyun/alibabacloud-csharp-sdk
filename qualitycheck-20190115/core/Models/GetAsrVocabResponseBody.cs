@@ -45,10 +45,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public List<GetAsrVocabResponseBodyDataWordsWord> Word { get; set; }
                 public class GetAsrVocabResponseBodyDataWordsWord : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>0</para>
-                    /// </summary>
                     [NameInMap("Weight")]
                     [Validation(Required=false)]
                     public int? Weight { get; set; }

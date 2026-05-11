@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>originalId</para>
+        /// </summary>
         [NameInMap("OriginalId")]
         [Validation(Required=false)]
         public long? OriginalId { get; set; }

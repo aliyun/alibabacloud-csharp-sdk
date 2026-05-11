@@ -33,18 +33,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public List<ListWarningConfigResponseBodyDataWarningConfigInfoChannelsChannel> Channel { get; set; }
                     public class ListWarningConfigResponseBodyDataWarningConfigInfoChannelsChannel : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
                         [NameInMap("Type")]
                         [Validation(Required=false)]
                         public int? Type { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>oapi.dingtalk.com/robot/send?access_token=c55628f700eb9ad2a3ca</para>
-                        /// </summary>
                         [NameInMap("Url")]
                         [Validation(Required=false)]
                         public string Url { get; set; }
@@ -53,10 +45,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>32</para>
-                /// </summary>
                 [NameInMap("ConfigId")]
                 [Validation(Required=false)]
                 public long? ConfigId { get; set; }
@@ -65,10 +53,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public string ConfigName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2019-10-29T15:30Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
@@ -91,10 +75,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public List<ListWarningConfigResponseBodyDataWarningConfigInfoRuleListWarningRule> WarningRule { get; set; }
                     public class ListWarningConfigResponseBodyDataWarningConfigInfoRuleListWarningRule : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>33452</para>
-                        /// </summary>
                         [NameInMap("Rid")]
                         [Validation(Required=false)]
                         public long? Rid { get; set; }
@@ -107,18 +87,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2019-10-29T17:24Z</para>
-                /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public string UpdateTime { get; set; }

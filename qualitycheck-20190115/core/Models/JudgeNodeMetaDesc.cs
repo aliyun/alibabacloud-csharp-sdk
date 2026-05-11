@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class JudgeNodeMetaDesc : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xx</para>
+        /// </summary>
         [NameInMap("ActualValue")]
         [Validation(Required=false)]
         public string ActualValue { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("DataType")]
         [Validation(Required=false)]
         public int? DataType { get; set; }
@@ -47,18 +55,34 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>remark1</para>
+        /// </summary>
         [NameInMap("Field")]
         [Validation(Required=false)]
         public string Field { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("FieldType")]
         [Validation(Required=false)]
         public int? FieldType { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Symbol")]
         [Validation(Required=false)]
         public int? Symbol { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>xxx</para>
+        /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]
         public string Value { get; set; }
