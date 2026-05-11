@@ -175,6 +175,16 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public bool? SupportCompactionService { get; set; }
 
+            /// <summary>
+            /// <para>是否支持Compaction Service白名单功能</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("supportCompactionServiceWhiteList")]
+            [Validation(Required=false)]
+            public bool? SupportCompactionServiceWhiteList { get; set; }
+
         }
 
         /// <summary>

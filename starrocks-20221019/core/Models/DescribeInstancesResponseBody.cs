@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Starrocks20221019.Models
             [Validation(Required=false)]
             public string AclId { get; set; }
 
+            [NameInMap("AiFunctionInstanceId")]
+            [Validation(Required=false)]
+            public string AiFunctionInstanceId { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>onECS</para>
