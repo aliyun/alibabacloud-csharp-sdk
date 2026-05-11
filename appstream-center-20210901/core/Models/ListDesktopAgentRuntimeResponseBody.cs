@@ -149,6 +149,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public bool? ModelConfigure { get; set; }
 
+            [NameInMap("OsType")]
+            [Validation(Required=false)]
+            public string OsType { get; set; }
+
+            [NameInMap("QrCodeConfiguringList")]
+            [Validation(Required=false)]
+            public List<string> QrCodeConfiguringList { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>

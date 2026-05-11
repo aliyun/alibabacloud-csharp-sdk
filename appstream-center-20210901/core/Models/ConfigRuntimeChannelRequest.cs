@@ -50,6 +50,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string Config { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Simple</para>
+        /// </summary>
+        [NameInMap("ConfigMode")]
+        [Validation(Required=false)]
+        public string ConfigMode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>钉钉</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }

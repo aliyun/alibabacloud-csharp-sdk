@@ -139,6 +139,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("ResourceIds")]
+        [Validation(Required=false)]
+        public List<string> ResourceIds { get; set; }
+
     }
 
 }

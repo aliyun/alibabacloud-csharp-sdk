@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public List<GetRuntimeChannelResponseBodyData> Data { get; set; }
         public class GetRuntimeChannelResponseBodyData : TeaModel {
+            [NameInMap("AvatarUrl")]
+            [Validation(Required=false)]
+            public string AvatarUrl { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>dingtalk-connector</para>
@@ -31,6 +35,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("Config")]
             [Validation(Required=false)]
             public string Config { get; set; }
+
+            [NameInMap("ConfigMode")]
+            [Validation(Required=false)]
+            public string ConfigMode { get; set; }
+
+            [NameInMap("QrCodeNotifyUrl")]
+            [Validation(Required=false)]
+            public string QrCodeNotifyUrl { get; set; }
+
+            [NameInMap("QrCodeStatus")]
+            [Validation(Required=false)]
+            public string QrCodeStatus { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
