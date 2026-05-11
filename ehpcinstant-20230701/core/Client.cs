@@ -698,6 +698,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             {
                 query["ResourceLimits"] = request.ResourceLimitsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulingPolicyId))
+            {
+                query["SchedulingPolicyId"] = request.SchedulingPolicyId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -753,6 +757,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceLimitsShrink))
             {
                 query["ResourceLimits"] = request.ResourceLimitsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulingPolicyId))
+            {
+                query["SchedulingPolicyId"] = request.SchedulingPolicyId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2371,6 +2379,110 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询作业保留时长</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobRecordDurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobRecordDurationResponse
+        /// </returns>
+        public GetJobRecordDurationResponse GetJobRecordDurationWithOptions(GetJobRecordDurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobRecordDuration",
+                Version = "2023-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobRecordDurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询作业保留时长</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobRecordDurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobRecordDurationResponse
+        /// </returns>
+        public async Task<GetJobRecordDurationResponse> GetJobRecordDurationWithOptionsAsync(GetJobRecordDurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJobRecordDuration",
+                Version = "2023-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJobRecordDurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询作业保留时长</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobRecordDurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobRecordDurationResponse
+        /// </returns>
+        public GetJobRecordDurationResponse GetJobRecordDuration(GetJobRecordDurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetJobRecordDurationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询作业保留时长</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJobRecordDurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJobRecordDurationResponse
+        /// </returns>
+        public async Task<GetJobRecordDurationResponse> GetJobRecordDurationAsync(GetJobRecordDurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetJobRecordDurationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4603,6 +4715,126 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新作业保留时长</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJobRecordDurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJobRecordDurationResponse
+        /// </returns>
+        public UpdateJobRecordDurationResponse UpdateJobRecordDurationWithOptions(UpdateJobRecordDurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobRecordDuration))
+            {
+                query["JobRecordDuration"] = request.JobRecordDuration;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateJobRecordDuration",
+                Version = "2023-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateJobRecordDurationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新作业保留时长</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJobRecordDurationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJobRecordDurationResponse
+        /// </returns>
+        public async Task<UpdateJobRecordDurationResponse> UpdateJobRecordDurationWithOptionsAsync(UpdateJobRecordDurationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobRecordDuration))
+            {
+                query["JobRecordDuration"] = request.JobRecordDuration;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateJobRecordDuration",
+                Version = "2023-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateJobRecordDurationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新作业保留时长</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJobRecordDurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJobRecordDurationResponse
+        /// </returns>
+        public UpdateJobRecordDurationResponse UpdateJobRecordDuration(UpdateJobRecordDurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateJobRecordDurationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新作业保留时长</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateJobRecordDurationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateJobRecordDurationResponse
+        /// </returns>
+        public async Task<UpdateJobRecordDurationResponse> UpdateJobRecordDurationAsync(UpdateJobRecordDurationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateJobRecordDurationWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Update the resource pool configuration.</para>
         /// </summary>
         /// 
@@ -4637,6 +4869,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceLimitsShrink))
             {
                 query["ResourceLimits"] = request.ResourceLimitsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulingPolicyId))
+            {
+                query["SchedulingPolicyId"] = request.SchedulingPolicyId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4693,6 +4929,10 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceLimitsShrink))
             {
                 query["ResourceLimits"] = request.ResourceLimitsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SchedulingPolicyId))
+            {
+                query["SchedulingPolicyId"] = request.SchedulingPolicyId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

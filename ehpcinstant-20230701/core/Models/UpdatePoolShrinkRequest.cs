@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public string ResourceLimitsShrink { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>policy-xxxx</para>
+        /// </summary>
+        [NameInMap("SchedulingPolicyId")]
+        [Validation(Required=false)]
+        public string SchedulingPolicyId { get; set; }
+
     }
 
 }

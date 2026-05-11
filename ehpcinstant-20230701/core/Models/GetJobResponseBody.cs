@@ -134,6 +134,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
                 }
 
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>testpool</para>
+                /// </summary>
+                [NameInMap("Pool")]
+                [Validation(Required=false)]
+                public string Pool { get; set; }
+
+                /// <summary>
                 /// <para>The list of job tags.</para>
                 /// </summary>
                 [NameInMap("Tags")]

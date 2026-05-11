@@ -45,17 +45,19 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         [Validation(Required=false)]
         public CreatePoolRequestResourceLimits ResourceLimits { get; set; }
         public class CreatePoolRequestResourceLimits : TeaModel {
-            /// <summary>
-            /// <para>The maximum number of concurrent execution nodes in a resource pool.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2000</para>
-            /// </summary>
-            [NameInMap("MaxExectorNum")]
+            [NameInMap("MaxExecutorNum")]
             [Validation(Required=false)]
-            public int? MaxExectorNum { get; set; }
+            public int? MaxExecutorNum { get; set; }
 
         }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>policy-xxx</para>
+        /// </summary>
+        [NameInMap("SchedulingPolicyId")]
+        [Validation(Required=false)]
+        public string SchedulingPolicyId { get; set; }
 
     }
 

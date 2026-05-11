@@ -26,15 +26,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
-            /// <summary>
-            /// <para>The usage of execution nodes that are running in a resource pool.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1</para>
-            /// </summary>
-            [NameInMap("ExectorUsage")]
+            [NameInMap("ExecutorUsage")]
             [Validation(Required=false)]
-            public int? ExectorUsage { get; set; }
+            public int? ExecutorUsage { get; set; }
 
             /// <summary>
             /// <para>Indices whether the resource pool is the default resource pool. Valid values:</para>
@@ -50,15 +44,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }
 
-            /// <summary>
-            /// <para>The maximum number of execution nodes that can run concurrently in a resource pool.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2000</para>
-            /// </summary>
-            [NameInMap("MaxExectorNum")]
+            [NameInMap("MaxExecutorNum")]
             [Validation(Required=false)]
-            public int? MaxExectorNum { get; set; }
+            public int? MaxExecutorNum { get; set; }
 
             /// <summary>
             /// <para>The name of the resource group.</para>
@@ -97,6 +85,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [NameInMap("Reason")]
             [Validation(Required=false)]
             public string Reason { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>policy-xxx</para>
+            /// </summary>
+            [NameInMap("SchedulingPolicyId")]
+            [Validation(Required=false)]
+            public string SchedulingPolicyId { get; set; }
 
             /// <summary>
             /// <para>The status of the resource pool. Valid values:</para>

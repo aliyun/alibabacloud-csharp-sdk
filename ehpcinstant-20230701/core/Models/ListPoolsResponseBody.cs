@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
         public List<ListPoolsResponseBodyPoolList> PoolList { get; set; }
         public class ListPoolsResponseBodyPoolList : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>2026-04-20 11:09:59</para>
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            /// <summary>
             /// <para>Indices whether the resource pool is the default resource pool. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b></description></item>
@@ -50,15 +58,9 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [Validation(Required=false)]
             public bool? IsDefault { get; set; }
 
-            /// <summary>
-            /// <para>The maximum number of execution nodes that can run concurrently in a resource pool.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>2000</para>
-            /// </summary>
-            [NameInMap("MaxExectorNum")]
+            [NameInMap("MaxExecutorNum")]
             [Validation(Required=false)]
-            public int? MaxExectorNum { get; set; }
+            public int? MaxExecutorNum { get; set; }
 
             /// <summary>
             /// <para>The name of the resource pool.</para>
@@ -89,6 +91,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             public int? Priority { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>policy-xxx</para>
+            /// </summary>
+            [NameInMap("SchedulingPolicyId")]
+            [Validation(Required=false)]
+            public string SchedulingPolicyId { get; set; }
+
+            /// <summary>
             /// <para>The status of the resource pool. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Creating: The resource pool is being created.</description></item>
@@ -104,6 +114,14 @@ namespace AlibabaCloud.SDK.EhpcInstant20230701.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2026-04-20 11:09:59</para>
+            /// </summary>
+            [NameInMap("UpdateTime")]
+            [Validation(Required=false)]
+            public string UpdateTime { get; set; }
 
         }
 
