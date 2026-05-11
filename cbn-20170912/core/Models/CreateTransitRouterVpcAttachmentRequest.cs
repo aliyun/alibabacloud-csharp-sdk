@@ -71,6 +71,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("Options")]
+        [Validation(Required=false)]
+        public CreateTransitRouterVpcAttachmentRequestOptions Options { get; set; }
+        public class CreateTransitRouterVpcAttachmentRequestOptions : TeaModel {
+            [NameInMap("ApplianceModeSupport")]
+            [Validation(Required=false)]
+            public string ApplianceModeSupport { get; set; }
+
+            [NameInMap("Ipv6Support")]
+            [Validation(Required=false)]
+            public string Ipv6Support { get; set; }
+
+        }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }

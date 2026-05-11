@@ -110,6 +110,20 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
             [Validation(Required=false)]
             public string ManagedService { get; set; }
 
+            [NameInMap("Options")]
+            [Validation(Required=false)]
+            public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions Options { get; set; }
+            public class ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachmentsOptions : TeaModel {
+                [NameInMap("ApplianceModeSupport")]
+                [Validation(Required=false)]
+                public string ApplianceModeSupport { get; set; }
+
+                [NameInMap("Ipv6Support")]
+                [Validation(Required=false)]
+                public string Ipv6Support { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The entity that pays the fees of the network instance. Valid values:</para>
             /// <list type="bullet">

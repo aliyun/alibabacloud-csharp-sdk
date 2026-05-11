@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Cbn20170912.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("Options")]
+        [Validation(Required=false)]
+        public string OptionsShrink { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>PayByCenOwner</para>

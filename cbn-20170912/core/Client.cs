@@ -7107,6 +7107,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateTransitRouterVpcAttachmentShrinkRequest request = new CreateTransitRouterVpcAttachmentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
+            {
+                request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransitRouterVPCAttachmentOptions))
             {
                 request.TransitRouterVPCAttachmentOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
@@ -7131,6 +7135,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptionsShrink))
+            {
+                query["Options"] = request.OptionsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -7245,6 +7253,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             CreateTransitRouterVpcAttachmentShrinkRequest request = new CreateTransitRouterVpcAttachmentShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
+            {
+                request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransitRouterVPCAttachmentOptions))
             {
                 request.TransitRouterVPCAttachmentOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
@@ -7269,6 +7281,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptionsShrink))
+            {
+                query["Options"] = request.OptionsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
             {
@@ -33546,6 +33562,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateTransitRouterVpcAttachmentAttributeShrinkRequest request = new UpdateTransitRouterVpcAttachmentAttributeShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
+            {
+                request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransitRouterVPCAttachmentOptions))
             {
                 request.TransitRouterVPCAttachmentOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
@@ -33562,6 +33582,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptionsShrink))
+            {
+                query["Options"] = request.OptionsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
             {
@@ -33647,6 +33671,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             UpdateTransitRouterVpcAttachmentAttributeShrinkRequest request = new UpdateTransitRouterVpcAttachmentAttributeShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Options))
+            {
+                request.OptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Options, "Options", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TransitRouterVPCAttachmentOptions))
             {
                 request.TransitRouterVPCAttachmentOptionsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TransitRouterVPCAttachmentOptions, "TransitRouterVPCAttachmentOptions", "json");
@@ -33663,6 +33691,10 @@ namespace AlibabaCloud.SDK.Cbn20170912
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OptionsShrink))
+            {
+                query["Options"] = request.OptionsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderType))
             {
