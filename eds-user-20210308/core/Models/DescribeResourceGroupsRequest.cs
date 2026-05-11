@@ -68,6 +68,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string Platform { get; set; }
 
+        [NameInMap("ResourceClassification")]
+        [Validation(Required=false)]
+        public string ResourceClassification { get; set; }
+
         /// <summary>
         /// <para>The IDs of the resource groups that you want to query.</para>
         /// </summary>

@@ -1080,6 +1080,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             {
                 query["Platform"] = request.Platform;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceClassification))
+            {
+                query["ResourceClassification"] = request.ResourceClassification;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
             {
                 query["ResourceGroupName"] = request.ResourceGroupName;
@@ -1137,6 +1141,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
             {
                 query["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceClassification))
+            {
+                query["ResourceClassification"] = request.ResourceClassification;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
             {
@@ -2596,6 +2604,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             {
                 query["Platform"] = request.Platform;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceClassification))
+            {
+                query["ResourceClassification"] = request.ResourceClassification;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIds))
             {
                 query["ResourceGroupIds"] = request.ResourceGroupIds;
@@ -2665,6 +2677,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
             {
                 query["Platform"] = request.Platform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceClassification))
+            {
+                query["ResourceClassification"] = request.ResourceClassification;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIds))
             {
