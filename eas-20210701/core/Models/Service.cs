@@ -544,6 +544,10 @@ namespace AlibabaCloud.SDK.Eas20210701.Models
         [Validation(Required=false)]
         public int? Weight { get; set; }
 
+        [NameInMap("WorkloadType")]
+        [Validation(Required=false)]
+        public string WorkloadType { get; set; }
+
         /// <summary>
         /// <para>The ID of the workspace to which the service belongs.</para>
         /// 

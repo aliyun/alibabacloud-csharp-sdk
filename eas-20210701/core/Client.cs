@@ -2863,6 +2863,204 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建服务更新计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>策略互斥</b>：<c>Partition</c>（分区发布）和<c>Batch</c>（批量发布）两种策略只能选择其中一种，不能同时使用。</description></item>
+        /// <item><description><b>请求速率限制</b>：每秒最多100次请求。</description></item>
+        /// <item><description><b>授权信息</b>：需要具备<c>eas:CreateServiceRollout</c>权限才能调用此接口。</description></item>
+        /// <item><description><b>资源ARN</b>：<c>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</c>。</description></item>
+        /// <item><description><b>暂停发布</b>：通过设置<c>Paused</c>参数为<c>true</c>可以暂停发布流程，之后可通过<c>UpdateServiceRollout</c>接口恢复或取消发布。</description></item>
+        /// <item><description><b>监控与回滚</b>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<c>Partition</c>值或删除发布策略来实现。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceRolloutRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceRolloutResponse
+        /// </returns>
+        public CreateServiceRolloutResponse CreateServiceRolloutWithOptions(string ClusterId, string ServiceName, CreateServiceRolloutRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Batch))
+            {
+                body["Batch"] = request.Batch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Partition))
+            {
+                body["Partition"] = request.Partition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Paused))
+            {
+                body["Paused"] = request.Paused;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceRollout",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/rollout",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceRolloutResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建服务更新计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>策略互斥</b>：<c>Partition</c>（分区发布）和<c>Batch</c>（批量发布）两种策略只能选择其中一种，不能同时使用。</description></item>
+        /// <item><description><b>请求速率限制</b>：每秒最多100次请求。</description></item>
+        /// <item><description><b>授权信息</b>：需要具备<c>eas:CreateServiceRollout</c>权限才能调用此接口。</description></item>
+        /// <item><description><b>资源ARN</b>：<c>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</c>。</description></item>
+        /// <item><description><b>暂停发布</b>：通过设置<c>Paused</c>参数为<c>true</c>可以暂停发布流程，之后可通过<c>UpdateServiceRollout</c>接口恢复或取消发布。</description></item>
+        /// <item><description><b>监控与回滚</b>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<c>Partition</c>值或删除发布策略来实现。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceRolloutRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceRolloutResponse
+        /// </returns>
+        public async Task<CreateServiceRolloutResponse> CreateServiceRolloutWithOptionsAsync(string ClusterId, string ServiceName, CreateServiceRolloutRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Batch))
+            {
+                body["Batch"] = request.Batch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Partition))
+            {
+                body["Partition"] = request.Partition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Paused))
+            {
+                body["Paused"] = request.Paused;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateServiceRollout",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/rollout",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateServiceRolloutResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建服务更新计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>策略互斥</b>：<c>Partition</c>（分区发布）和<c>Batch</c>（批量发布）两种策略只能选择其中一种，不能同时使用。</description></item>
+        /// <item><description><b>请求速率限制</b>：每秒最多100次请求。</description></item>
+        /// <item><description><b>授权信息</b>：需要具备<c>eas:CreateServiceRollout</c>权限才能调用此接口。</description></item>
+        /// <item><description><b>资源ARN</b>：<c>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</c>。</description></item>
+        /// <item><description><b>暂停发布</b>：通过设置<c>Paused</c>参数为<c>true</c>可以暂停发布流程，之后可通过<c>UpdateServiceRollout</c>接口恢复或取消发布。</description></item>
+        /// <item><description><b>监控与回滚</b>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<c>Partition</c>值或删除发布策略来实现。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceRolloutRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceRolloutResponse
+        /// </returns>
+        public CreateServiceRolloutResponse CreateServiceRollout(string ClusterId, string ServiceName, CreateServiceRolloutRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateServiceRolloutWithOptions(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建服务更新计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>策略互斥</b>：<c>Partition</c>（分区发布）和<c>Batch</c>（批量发布）两种策略只能选择其中一种，不能同时使用。</description></item>
+        /// <item><description><b>请求速率限制</b>：每秒最多100次请求。</description></item>
+        /// <item><description><b>授权信息</b>：需要具备<c>eas:CreateServiceRollout</c>权限才能调用此接口。</description></item>
+        /// <item><description><b>资源ARN</b>：<c>acs:eas:{#regionId}:{#accountId}:service/{#ServiceName}</c>。</description></item>
+        /// <item><description><b>暂停发布</b>：通过设置<c>Paused</c>参数为<c>true</c>可以暂停发布流程，之后可通过<c>UpdateServiceRollout</c>接口恢复或取消发布。</description></item>
+        /// <item><description><b>监控与回滚</b>：在发布过程中建议持续监控服务指标，以便及时发现并处理问题；如需回滚，可以通过调整<c>Partition</c>值或删除发布策略来实现。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateServiceRolloutRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateServiceRolloutResponse
+        /// </returns>
+        public async Task<CreateServiceRolloutResponse> CreateServiceRolloutAsync(string ClusterId, string ServiceName, CreateServiceRolloutRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateServiceRolloutWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a virtual resource group.</para>
         /// </summary>
         /// 
@@ -5401,6 +5599,180 @@ namespace AlibabaCloud.SDK.Eas20210701
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除服务更新计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>不可恢复</b>：删除操作不可撤销，请谨慎操作。</description></item>
+        /// <item><description><b>不自动回退</b>：删除策略不会回退已更新的副本。</description></item>
+        /// <item><description><b>停止发布</b>：正在进行的发布会立即停止。</description></item>
+        /// <item><description><b>状态保留</b>：已更新的副本保持新版本，未更新的保持旧版本。</description></item>
+        /// <item><description>删除后，后续服务更新将采用默认的滚动更新方式。</description></item>
+        /// <item><description>在删除前，请确认要删除的服务名称和地域，并了解当前发布状态（可以通过调用<c>DescribeServiceRollout</c>接口获取）。</description></item>
+        /// <item><description>如果需要回退版本，请在删除策略后通过重新创建策略或直接更新服务镜像来实现。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceRolloutRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceRolloutResponse
+        /// </returns>
+        public DeleteServiceRolloutResponse DeleteServiceRolloutWithOptions(string ClusterId, string ServiceName, DeleteServiceRolloutRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceRollout",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/rollout",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceRolloutResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务更新计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>不可恢复</b>：删除操作不可撤销，请谨慎操作。</description></item>
+        /// <item><description><b>不自动回退</b>：删除策略不会回退已更新的副本。</description></item>
+        /// <item><description><b>停止发布</b>：正在进行的发布会立即停止。</description></item>
+        /// <item><description><b>状态保留</b>：已更新的副本保持新版本，未更新的保持旧版本。</description></item>
+        /// <item><description>删除后，后续服务更新将采用默认的滚动更新方式。</description></item>
+        /// <item><description>在删除前，请确认要删除的服务名称和地域，并了解当前发布状态（可以通过调用<c>DescribeServiceRollout</c>接口获取）。</description></item>
+        /// <item><description>如果需要回退版本，请在删除策略后通过重新创建策略或直接更新服务镜像来实现。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceRolloutRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceRolloutResponse
+        /// </returns>
+        public async Task<DeleteServiceRolloutResponse> DeleteServiceRolloutWithOptionsAsync(string ClusterId, string ServiceName, DeleteServiceRolloutRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteServiceRollout",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/rollout",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteServiceRolloutResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务更新计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>不可恢复</b>：删除操作不可撤销，请谨慎操作。</description></item>
+        /// <item><description><b>不自动回退</b>：删除策略不会回退已更新的副本。</description></item>
+        /// <item><description><b>停止发布</b>：正在进行的发布会立即停止。</description></item>
+        /// <item><description><b>状态保留</b>：已更新的副本保持新版本，未更新的保持旧版本。</description></item>
+        /// <item><description>删除后，后续服务更新将采用默认的滚动更新方式。</description></item>
+        /// <item><description>在删除前，请确认要删除的服务名称和地域，并了解当前发布状态（可以通过调用<c>DescribeServiceRollout</c>接口获取）。</description></item>
+        /// <item><description>如果需要回退版本，请在删除策略后通过重新创建策略或直接更新服务镜像来实现。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceRolloutRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceRolloutResponse
+        /// </returns>
+        public DeleteServiceRolloutResponse DeleteServiceRollout(string ClusterId, string ServiceName, DeleteServiceRolloutRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteServiceRolloutWithOptions(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除服务更新计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>不可恢复</b>：删除操作不可撤销，请谨慎操作。</description></item>
+        /// <item><description><b>不自动回退</b>：删除策略不会回退已更新的副本。</description></item>
+        /// <item><description><b>停止发布</b>：正在进行的发布会立即停止。</description></item>
+        /// <item><description><b>状态保留</b>：已更新的副本保持新版本，未更新的保持旧版本。</description></item>
+        /// <item><description>删除后，后续服务更新将采用默认的滚动更新方式。</description></item>
+        /// <item><description>在删除前，请确认要删除的服务名称和地域，并了解当前发布状态（可以通过调用<c>DescribeServiceRollout</c>接口获取）。</description></item>
+        /// <item><description>如果需要回退版本，请在删除策略后通过重新创建策略或直接更新服务镜像来实现。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteServiceRolloutRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteServiceRolloutResponse
+        /// </returns>
+        public async Task<DeleteServiceRolloutResponse> DeleteServiceRolloutAsync(string ClusterId, string ServiceName, DeleteServiceRolloutRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteServiceRolloutWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a virtual resource group that contains no resources or instances.</para>
         /// </summary>
         /// 
@@ -7921,6 +8293,176 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DescribeServiceMirrorWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看服务更新计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于查询特定服务的发布策略（Rollout）配置和当前执行状态。</description></item>
+        /// <item><description>返回的信息包括但不限于发布策略的具体参数、当前发布进度等。</description></item>
+        /// <item><description>请求时需提供<c>ClusterId</c>和服务名称<c>ServiceName</c>作为路径参数。</description></item>
+        /// <item><description>注意，请求速率限制为每秒最多100次。</description></item>
+        /// <item><description>如果服务不存在或未创建发布策略，调用此接口将返回错误。</description></item>
+        /// <item><description>返回的状态是实时查询的结果，可能会随时间而变化，请根据实际需要调整轮询间隔。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceRolloutRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceRolloutResponse
+        /// </returns>
+        public DescribeServiceRolloutResponse DescribeServiceRolloutWithOptions(string ClusterId, string ServiceName, DescribeServiceRolloutRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeServiceRollout",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/rollout",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeServiceRolloutResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看服务更新计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于查询特定服务的发布策略（Rollout）配置和当前执行状态。</description></item>
+        /// <item><description>返回的信息包括但不限于发布策略的具体参数、当前发布进度等。</description></item>
+        /// <item><description>请求时需提供<c>ClusterId</c>和服务名称<c>ServiceName</c>作为路径参数。</description></item>
+        /// <item><description>注意，请求速率限制为每秒最多100次。</description></item>
+        /// <item><description>如果服务不存在或未创建发布策略，调用此接口将返回错误。</description></item>
+        /// <item><description>返回的状态是实时查询的结果，可能会随时间而变化，请根据实际需要调整轮询间隔。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceRolloutRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceRolloutResponse
+        /// </returns>
+        public async Task<DescribeServiceRolloutResponse> DescribeServiceRolloutWithOptionsAsync(string ClusterId, string ServiceName, DescribeServiceRolloutRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeServiceRollout",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/rollout",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeServiceRolloutResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看服务更新计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于查询特定服务的发布策略（Rollout）配置和当前执行状态。</description></item>
+        /// <item><description>返回的信息包括但不限于发布策略的具体参数、当前发布进度等。</description></item>
+        /// <item><description>请求时需提供<c>ClusterId</c>和服务名称<c>ServiceName</c>作为路径参数。</description></item>
+        /// <item><description>注意，请求速率限制为每秒最多100次。</description></item>
+        /// <item><description>如果服务不存在或未创建发布策略，调用此接口将返回错误。</description></item>
+        /// <item><description>返回的状态是实时查询的结果，可能会随时间而变化，请根据实际需要调整轮询间隔。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceRolloutRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceRolloutResponse
+        /// </returns>
+        public DescribeServiceRolloutResponse DescribeServiceRollout(string ClusterId, string ServiceName, DescribeServiceRolloutRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DescribeServiceRolloutWithOptions(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查看服务更新计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于查询特定服务的发布策略（Rollout）配置和当前执行状态。</description></item>
+        /// <item><description>返回的信息包括但不限于发布策略的具体参数、当前发布进度等。</description></item>
+        /// <item><description>请求时需提供<c>ClusterId</c>和服务名称<c>ServiceName</c>作为路径参数。</description></item>
+        /// <item><description>注意，请求速率限制为每秒最多100次。</description></item>
+        /// <item><description>如果服务不存在或未创建发布策略，调用此接口将返回错误。</description></item>
+        /// <item><description>返回的状态是实时查询的结果，可能会随时间而变化，请根据实际需要调整轮询间隔。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeServiceRolloutRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeServiceRolloutResponse
+        /// </returns>
+        public async Task<DescribeServiceRolloutResponse> DescribeServiceRolloutAsync(string ClusterId, string ServiceName, DescribeServiceRolloutRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DescribeServiceRolloutWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15189,6 +15731,200 @@ namespace AlibabaCloud.SDK.Eas20210701
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateServiceMirrorWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新服务发布计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>至少提供一个参数</b>：必须在请求中指定<c>Partition</c>、<c>Batch</c>或<c>Paused</c>中的至少一个参数。</description></item>
+        /// <item><description><b>互斥策略</b>：不能同时提供<c>Partition</c>和<c>Batch</c>配置。</description></item>
+        /// <item><description><b>实时生效</b>：更新将立即生效，影响正在进行的服务发布过程。</description></item>
+        /// <item><description><b>回退操作</b>：通过增加<c>Partition</c>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</description></item>
+        /// <item><description><b>暂停不影响参数</b>：暂停发布不会改变已设置的<c>Partition</c>或<c>Batch</c>参数，仅暂停执行当前策略。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceRolloutRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceRolloutResponse
+        /// </returns>
+        public UpdateServiceRolloutResponse UpdateServiceRolloutWithOptions(string ClusterId, string ServiceName, UpdateServiceRolloutRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Batch))
+            {
+                body["Batch"] = request.Batch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Partition))
+            {
+                body["Partition"] = request.Partition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Paused))
+            {
+                body["Paused"] = request.Paused;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceRollout",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/rollout",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceRolloutResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新服务发布计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>至少提供一个参数</b>：必须在请求中指定<c>Partition</c>、<c>Batch</c>或<c>Paused</c>中的至少一个参数。</description></item>
+        /// <item><description><b>互斥策略</b>：不能同时提供<c>Partition</c>和<c>Batch</c>配置。</description></item>
+        /// <item><description><b>实时生效</b>：更新将立即生效，影响正在进行的服务发布过程。</description></item>
+        /// <item><description><b>回退操作</b>：通过增加<c>Partition</c>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</description></item>
+        /// <item><description><b>暂停不影响参数</b>：暂停发布不会改变已设置的<c>Partition</c>或<c>Batch</c>参数，仅暂停执行当前策略。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceRolloutRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceRolloutResponse
+        /// </returns>
+        public async Task<UpdateServiceRolloutResponse> UpdateServiceRolloutWithOptionsAsync(string ClusterId, string ServiceName, UpdateServiceRolloutRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Batch))
+            {
+                body["Batch"] = request.Batch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Partition))
+            {
+                body["Partition"] = request.Partition;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Paused))
+            {
+                body["Paused"] = request.Paused;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateServiceRollout",
+                Version = "2021-07-01",
+                Protocol = "HTTPS",
+                Pathname = "/api/v2/services/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ClusterId) + "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ServiceName) + "/rollout",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateServiceRolloutResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新服务发布计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>至少提供一个参数</b>：必须在请求中指定<c>Partition</c>、<c>Batch</c>或<c>Paused</c>中的至少一个参数。</description></item>
+        /// <item><description><b>互斥策略</b>：不能同时提供<c>Partition</c>和<c>Batch</c>配置。</description></item>
+        /// <item><description><b>实时生效</b>：更新将立即生效，影响正在进行的服务发布过程。</description></item>
+        /// <item><description><b>回退操作</b>：通过增加<c>Partition</c>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</description></item>
+        /// <item><description><b>暂停不影响参数</b>：暂停发布不会改变已设置的<c>Partition</c>或<c>Batch</c>参数，仅暂停执行当前策略。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceRolloutRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceRolloutResponse
+        /// </returns>
+        public UpdateServiceRolloutResponse UpdateServiceRollout(string ClusterId, string ServiceName, UpdateServiceRolloutRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateServiceRolloutWithOptions(ClusterId, ServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新服务发布计划</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description><b>至少提供一个参数</b>：必须在请求中指定<c>Partition</c>、<c>Batch</c>或<c>Paused</c>中的至少一个参数。</description></item>
+        /// <item><description><b>互斥策略</b>：不能同时提供<c>Partition</c>和<c>Batch</c>配置。</description></item>
+        /// <item><description><b>实时生效</b>：更新将立即生效，影响正在进行的服务发布过程。</description></item>
+        /// <item><description><b>回退操作</b>：通过增加<c>Partition</c>值可以实现版本回退，但不会自动触发，需要手动更新服务镜像。</description></item>
+        /// <item><description><b>暂停不影响参数</b>：暂停发布不会改变已设置的<c>Partition</c>或<c>Batch</c>参数，仅暂停执行当前策略。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateServiceRolloutRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateServiceRolloutResponse
+        /// </returns>
+        public async Task<UpdateServiceRolloutResponse> UpdateServiceRolloutAsync(string ClusterId, string ServiceName, UpdateServiceRolloutRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateServiceRolloutWithOptionsAsync(ClusterId, ServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
