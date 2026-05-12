@@ -117,6 +117,50 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             }
 
+            [NameInMap("RelatedPrice")]
+            [Validation(Required=false)]
+            public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice RelatedPrice { get; set; }
+            public class DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice : TeaModel {
+                [NameInMap("MarketplaceImagePrice")]
+                [Validation(Required=false)]
+                public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice MarketplaceImagePrice { get; set; }
+                public class DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>CNY</para>
+                    /// </summary>
+                    [NameInMap("Currency")]
+                    [Validation(Required=false)]
+                    public string Currency { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>0</para>
+                    /// </summary>
+                    [NameInMap("DiscountPrice")]
+                    [Validation(Required=false)]
+                    public float? DiscountPrice { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>100</para>
+                    /// </summary>
+                    [NameInMap("OriginalPrice")]
+                    [Validation(Required=false)]
+                    public float? OriginalPrice { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>100</para>
+                    /// </summary>
+                    [NameInMap("TradePrice")]
+                    [Validation(Required=false)]
+                    public float? TradePrice { get; set; }
+
+                }
+
+            }
+
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public DescribeInstanceModificationPriceResponseBodyPriceInfoRules Rules { get; set; }

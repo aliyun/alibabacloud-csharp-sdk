@@ -13,21 +13,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public DescribeInstanceModificationPriceRequestSystemDisk SystemDisk { get; set; }
         public class DescribeInstanceModificationPriceRequestSystemDisk : TeaModel {
-            /// <summary>
-            /// <para>The category of the system disk. You must specify this parameter only when you upgrade a non-I/O optimized instance of a retired instance type to an I/O optimized instance of an available instance type. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> and <a href="https://help.aliyun.com/document_detail/55263.html">Retired instance types</a>.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>cloud_efficiency: ultra disk</description></item>
-            /// <item><description>cloud_ssd: standard SSD</description></item>
-            /// </list>
-            /// <para>This parameter is empty by default.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>cloud_ssd</para>
-            /// </summary>
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PL0</para>
+            /// </summary>
+            [NameInMap("PerformanceLevel")]
+            [Validation(Required=false)]
+            public string PerformanceLevel { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>40</para>
+            /// </summary>
+            [NameInMap("Size")]
+            [Validation(Required=false)]
+            public int? Size { get; set; }
 
         }
 
@@ -57,6 +61,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [NameInMap("Category")]
             [Validation(Required=false)]
             public string Category { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>d-bf4rupt9****</para>
+            /// </summary>
+            [NameInMap("DiskId")]
+            [Validation(Required=false)]
+            public string DiskId { get; set; }
 
             /// <summary>
             /// <para>The performance level of data disk N that is an enhanced SSD (ESSD). The value of N must be the same as that in <c>DataDisk.N.Category</c> when DataDisk.N.Category is set to cloud_essd. Valid values:</para>
@@ -106,6 +118,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>2025-12-06T22Z</para>
+        /// </summary>
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>BGP</para>
+        /// </summary>
+        [NameInMap("ISP")]
+        [Validation(Required=false)]
+        public string ISP { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>aliyun_2_1903_x64_20G_alibase_20200324.vhd</para>
+        /// </summary>
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the instance for which you want to query pricing information for a configuration upgrade.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -128,6 +164,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
         public string InstanceType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>PayByTraffic</para>
+        /// </summary>
+        [NameInMap("InternetChargeType")]
+        [Validation(Required=false)]
+        public string InternetChargeType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("InternetMaxBandwidthOut")]
+        [Validation(Required=false)]
+        public int? InternetMaxBandwidthOut { get; set; }
 
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
@@ -155,6 +207,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2025-12-05T22:40Z</para>
+        /// </summary>
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
     }
 
