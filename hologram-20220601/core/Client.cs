@@ -2485,6 +2485,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
             {
                 body["allTable"] = request.AllTable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnNames))
+            {
+                body["columnNames"] = request.ColumnNames;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
             {
                 body["databaseName"] = request.DatabaseName;
@@ -2550,6 +2554,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllTable))
             {
                 body["allTable"] = request.AllTable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnNames))
+            {
+                body["columnNames"] = request.ColumnNames;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
             {
@@ -4491,6 +4499,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
             {
                 body["allTable"] = request.AllTable;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnNames))
+            {
+                body["columnNames"] = request.ColumnNames;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
             {
                 body["databaseName"] = request.DatabaseName;
@@ -4556,6 +4568,10 @@ namespace AlibabaCloud.SDK.Hologram20220601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllTable))
             {
                 body["allTable"] = request.AllTable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ColumnNames))
+            {
+                body["columnNames"] = request.ColumnNames;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseName))
             {

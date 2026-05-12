@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Hologram20220601.Models
         [Validation(Required=false)]
         public bool? AllTable { get; set; }
 
+        [NameInMap("columnNames")]
+        [Validation(Required=false)]
+        public List<string> ColumnNames { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>my_db</para>
