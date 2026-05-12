@@ -39,6 +39,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>10000</para>
+            /// </summary>
+            [NameInMap("InputTokens")]
+            [Validation(Required=false)]
+            public double? InputTokens { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>rds_copilot***_public_cn-*********6</para>
             /// </summary>
             [NameInMap("InstanceId")]
@@ -52,6 +60,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [NameInMap("Model")]
             [Validation(Required=false)]
             public string Model { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10000</para>
+            /// </summary>
+            [NameInMap("OutputTokens")]
+            [Validation(Required=false)]
+            public double? OutputTokens { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

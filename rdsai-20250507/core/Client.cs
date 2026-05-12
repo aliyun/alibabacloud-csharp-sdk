@@ -3640,6 +3640,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                query["ApiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerName))
             {
                 query["ConsumerName"] = request.ConsumerName;
@@ -3710,6 +3714,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiKey))
+            {
+                query["ApiKey"] = request.ApiKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerName))
             {
                 query["ConsumerName"] = request.ConsumerName;

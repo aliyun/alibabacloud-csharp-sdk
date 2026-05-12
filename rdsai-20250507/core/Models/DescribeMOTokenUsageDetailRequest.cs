@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeMOTokenUsageDetailRequest : TeaModel {
+        [NameInMap("ApiKey")]
+        [Validation(Required=false)]
+        public string ApiKey { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>16<b><b><b>4_rds_copilot</b></b>_public_cn-4</b>**02</para>
