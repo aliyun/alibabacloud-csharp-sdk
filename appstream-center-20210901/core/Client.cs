@@ -3443,6 +3443,178 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>配置SLS日志投递</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeliverToUserSlsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeliverToUserSlsResponse
+        /// </returns>
+        public DeliverToUserSlsResponse DeliverToUserSlsWithOptions(DeliverToUserSlsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryScopes))
+            {
+                bodyFlat["DeliveryScopes"] = request.DeliveryScopes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExistedProjectName))
+            {
+                body["ExistedProjectName"] = request.ExistedProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStoreName))
+            {
+                body["LogStoreName"] = request.LogStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                body["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsRegionId))
+            {
+                body["SlsRegionId"] = request.SlsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
+            {
+                body["Ttl"] = request.Ttl;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeliverToUserSls",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeliverToUserSlsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置SLS日志投递</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeliverToUserSlsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeliverToUserSlsResponse
+        /// </returns>
+        public async Task<DeliverToUserSlsResponse> DeliverToUserSlsWithOptionsAsync(DeliverToUserSlsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryScopes))
+            {
+                bodyFlat["DeliveryScopes"] = request.DeliveryScopes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExistedProjectName))
+            {
+                body["ExistedProjectName"] = request.ExistedProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogStoreName))
+            {
+                body["LogStoreName"] = request.LogStoreName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                body["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SlsRegionId))
+            {
+                body["SlsRegionId"] = request.SlsRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ttl))
+            {
+                body["Ttl"] = request.Ttl;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeliverToUserSls",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeliverToUserSlsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置SLS日志投递</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeliverToUserSlsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeliverToUserSlsResponse
+        /// </returns>
+        public DeliverToUserSlsResponse DeliverToUserSls(DeliverToUserSlsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeliverToUserSlsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>配置SLS日志投递</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeliverToUserSlsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeliverToUserSlsResponse
+        /// </returns>
+        public async Task<DeliverToUserSlsResponse> DeliverToUserSlsAsync(DeliverToUserSlsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeliverToUserSlsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the Elastic IP Addresses (EIPs) of workstations.</para>
         /// </summary>
         /// 
