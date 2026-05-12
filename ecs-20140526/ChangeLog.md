@@ -1,3 +1,6 @@
+2026-05-12 Version: 7.7.6
+- Generated csharp 2014-05-26 for Ecs.
+
 2026-04-27 Version: 7.7.5
 - Update API CreateAutoProvisioningGroup: add request parameters CandidateOptions.
 - Update API CreateAutoProvisioningGroup: add response parameters Body.LaunchResults.$.CandidateEvaluateLevel.
