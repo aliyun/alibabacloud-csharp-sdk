@@ -163,6 +163,20 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                 [Validation(Required=false)]
                 public GetApplicationResponseBodyDataDraftVersionSynthesizerConfig SynthesizerConfig { get; set; }
                 public class GetApplicationResponseBodyDataDraftVersionSynthesizerConfig : TeaModel {
+                    [NameInMap("Model")]
+                    [Validation(Required=false)]
+                    public string Model { get; set; }
+
+                    [NameInMap("NlsAccessProfile")]
+                    [Validation(Required=false)]
+                    public GetApplicationResponseBodyDataDraftVersionSynthesizerConfigNlsAccessProfile NlsAccessProfile { get; set; }
+                    public class GetApplicationResponseBodyDataDraftVersionSynthesizerConfigNlsAccessProfile : TeaModel {
+                        [NameInMap("AccessProfileId")]
+                        [Validation(Required=false)]
+                        public string AccessProfileId { get; set; }
+
+                    }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>MANAGED</para>
@@ -186,6 +200,20 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                     [NameInMap("PitchRate")]
                     [Validation(Required=false)]
                     public int? PitchRate { get; set; }
+
+                    [NameInMap("PronRules")]
+                    [Validation(Required=false)]
+                    public List<GetApplicationResponseBodyDataDraftVersionSynthesizerConfigPronRules> PronRules { get; set; }
+                    public class GetApplicationResponseBodyDataDraftVersionSynthesizerConfigPronRules : TeaModel {
+                        [NameInMap("Pattern")]
+                        [Validation(Required=false)]
+                        public string Pattern { get; set; }
+
+                        [NameInMap("Replacement")]
+                        [Validation(Required=false)]
+                        public string Replacement { get; set; }
+
+                    }
 
                     /// <summary>
                     /// <b>Example:</b>
@@ -379,6 +407,20 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                 [Validation(Required=false)]
                 public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfig SynthesizerConfig { get; set; }
                 public class GetApplicationResponseBodyDataPublishedVersionSynthesizerConfig : TeaModel {
+                    [NameInMap("Model")]
+                    [Validation(Required=false)]
+                    public string Model { get; set; }
+
+                    [NameInMap("NlsAccessProfile")]
+                    [Validation(Required=false)]
+                    public GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigNlsAccessProfile NlsAccessProfile { get; set; }
+                    public class GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigNlsAccessProfile : TeaModel {
+                        [NameInMap("AccessProfileId")]
+                        [Validation(Required=false)]
+                        public string AccessProfileId { get; set; }
+
+                    }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>MANAGED</para>
@@ -402,6 +444,20 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                     [NameInMap("PitchRate")]
                     [Validation(Required=false)]
                     public int? PitchRate { get; set; }
+
+                    [NameInMap("PronRules")]
+                    [Validation(Required=false)]
+                    public List<GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigPronRules> PronRules { get; set; }
+                    public class GetApplicationResponseBodyDataPublishedVersionSynthesizerConfigPronRules : TeaModel {
+                        [NameInMap("Pattern")]
+                        [Validation(Required=false)]
+                        public string Pattern { get; set; }
+
+                        [NameInMap("Replacement")]
+                        [Validation(Required=false)]
+                        public string Replacement { get; set; }
+
+                    }
 
                     /// <summary>
                     /// <b>Example:</b>

@@ -127,6 +127,20 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public CreateApplicationVersionRequestSynthesizerConfig SynthesizerConfig { get; set; }
         public class CreateApplicationVersionRequestSynthesizerConfig : TeaModel {
+            [NameInMap("Model")]
+            [Validation(Required=false)]
+            public string Model { get; set; }
+
+            [NameInMap("NlsAccessProfile")]
+            [Validation(Required=false)]
+            public CreateApplicationVersionRequestSynthesizerConfigNlsAccessProfile NlsAccessProfile { get; set; }
+            public class CreateApplicationVersionRequestSynthesizerConfigNlsAccessProfile : TeaModel {
+                [NameInMap("AccessProfileId")]
+                [Validation(Required=false)]
+                public string AccessProfileId { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>MANAGED</para>
@@ -150,6 +164,20 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             [NameInMap("PitchRate")]
             [Validation(Required=false)]
             public int? PitchRate { get; set; }
+
+            [NameInMap("PronRules")]
+            [Validation(Required=false)]
+            public List<CreateApplicationVersionRequestSynthesizerConfigPronRules> PronRules { get; set; }
+            public class CreateApplicationVersionRequestSynthesizerConfigPronRules : TeaModel {
+                [NameInMap("Pattern")]
+                [Validation(Required=false)]
+                public string Pattern { get; set; }
+
+                [NameInMap("Replacement")]
+                [Validation(Required=false)]
+                public string Replacement { get; set; }
+
+            }
 
             /// <summary>
             /// <b>Example:</b>
