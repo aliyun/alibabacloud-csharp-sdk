@@ -219,6 +219,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
 
             }
 
+            [NameInMap("LinkId")]
+            [Validation(Required=false)]
+            public string LinkId { get; set; }
+
+            /// <term><b>Obsolete</b></term>
+            /// 
             /// <summary>
             /// <para>The time when the synchronization task was last modified.</para>
             /// 
@@ -227,7 +233,12 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             /// </summary>
             [NameInMap("ModifedTime")]
             [Validation(Required=false)]
+            [Obsolete]
             public long? ModifedTime { get; set; }
+
+            [NameInMap("ModifiedTime")]
+            [Validation(Required=false)]
+            public long? ModifiedTime { get; set; }
 
             /// <summary>
             /// <para>The ID of the image synchronization batch tasks, which is the same as the value of SyncRecordId in the request.</para>

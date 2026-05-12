@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an image building task of a repository.</para>
+        /// <para>Cancels a repository building record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an image building task of a repository.</para>
+        /// <para>Cancels a repository building record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an image building task of a repository.</para>
+        /// <para>Cancels a repository building record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels an image building task of a repository.</para>
+        /// <para>Cancels a repository building record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2872,6 +2872,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinkId))
+            {
+                query["LinkId"] = request.LinkId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceName))
             {
                 query["NamespaceName"] = request.NamespaceName;
@@ -2961,6 +2965,10 @@ namespace AlibabaCloud.SDK.Cr20181201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LinkId))
+            {
+                query["LinkId"] = request.LinkId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceName))
             {
@@ -3065,6 +3073,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await CreateRepoSyncRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually creates an image synchronization task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateRepoSyncTaskRequest
         /// </param>
@@ -3138,6 +3151,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<CreateRepoSyncTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually creates an image synchronization task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateRepoSyncTaskRequest
         /// </param>
@@ -3211,6 +3229,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<CreateRepoSyncTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually creates an image synchronization task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateRepoSyncTaskRequest
         /// </param>
@@ -3224,6 +3247,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return CreateRepoSyncTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Manually creates an image synchronization task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateRepoSyncTaskRequest
         /// </param>
@@ -4655,7 +4683,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a delivery pipeline.</para>
+        /// <para>Deletes a delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4701,7 +4729,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a delivery pipeline.</para>
+        /// <para>Deletes a delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4747,7 +4775,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a delivery pipeline.</para>
+        /// <para>Deletes a delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4765,7 +4793,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a delivery pipeline.</para>
+        /// <para>Deletes a delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6793,6 +6821,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await DeleteStorageDomainRoutingRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an artifact building rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetArtifactBuildRuleRequest
         /// </param>
@@ -6826,6 +6859,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetArtifactBuildRuleResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an artifact building rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetArtifactBuildRuleRequest
         /// </param>
@@ -6859,6 +6897,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetArtifactBuildRuleResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an artifact building rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetArtifactBuildRuleRequest
         /// </param>
@@ -6872,6 +6915,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return GetArtifactBuildRuleWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of an artifact building rule.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetArtifactBuildRuleRequest
         /// </param>
@@ -7607,7 +7655,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取交付链</para>
+        /// <para>Obtains the information of a delivery chain to understand the node execution sequence of the delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7653,7 +7701,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取交付链</para>
+        /// <para>Obtains the information of a delivery chain to understand the node execution sequence of the delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7699,7 +7747,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取交付链</para>
+        /// <para>Obtains the information of a delivery chain to understand the node execution sequence of the delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7717,7 +7765,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取交付链</para>
+        /// <para>Obtains the information of a delivery chain to understand the node execution sequence of the delivery chain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8122,9 +8170,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Queries the number of instances.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetInstanceCountRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8155,9 +8200,6 @@ namespace AlibabaCloud.SDK.Cr20181201
         /// <para>Queries the number of instances.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetInstanceCountRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8213,7 +8255,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint of an instance.</para>
+        /// <para>Queries an endpoint of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8263,7 +8305,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint of an instance.</para>
+        /// <para>Queries an endpoint of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8313,7 +8355,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint of an instance.</para>
+        /// <para>Queries an endpoint of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8331,7 +8373,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the endpoint of an instance.</para>
+        /// <para>Queries an endpoint of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9273,7 +9315,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The version of the repository.</para>
+        /// <para>Queries the information about an image tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9311,7 +9353,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The version of the repository.</para>
+        /// <para>Queries the information about an image tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9349,7 +9391,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The version of the repository.</para>
+        /// <para>Queries the information about an image tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9367,7 +9409,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The version of the repository.</para>
+        /// <para>Queries the information about an image tag.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9543,6 +9585,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return await GetRepoTagScanStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of vulnerabilities for each severity level. These vulnerabilities are detected in a security scan that is created for an image version.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRepoTagScanSummaryRequest
         /// </param>
@@ -9596,6 +9643,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetRepoTagScanSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of vulnerabilities for each severity level. These vulnerabilities are detected in a security scan that is created for an image version.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRepoTagScanSummaryRequest
         /// </param>
@@ -9649,6 +9701,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return TeaModel.ToObject<GetRepoTagScanSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of vulnerabilities for each severity level. These vulnerabilities are detected in a security scan that is created for an image version.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRepoTagScanSummaryRequest
         /// </param>
@@ -9662,6 +9719,11 @@ namespace AlibabaCloud.SDK.Cr20181201
             return GetRepoTagScanSummaryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the number of vulnerabilities for each severity level. These vulnerabilities are detected in a security scan that is created for an image version.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRepoTagScanSummaryRequest
         /// </param>
@@ -9821,7 +9883,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a scan rule.</para>
+        /// <para>Queries a scan rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9872,7 +9934,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a scan rule.</para>
+        /// <para>Queries a scan rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9923,7 +9985,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a scan rule.</para>
+        /// <para>Queries a scan rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9946,7 +10008,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a scan rule.</para>
+        /// <para>Queries a scan rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -10717,7 +10779,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>Queries execution records of delivery chains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10775,7 +10837,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>Queries execution records of delivery chains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10833,7 +10895,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>Queries execution records of delivery chains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10851,7 +10913,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>Queries execution records of delivery chains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11453,7 +11515,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of event notification rules.</para>
+        /// <para>Queries the name of an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11491,7 +11553,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of event notification rules.</para>
+        /// <para>Queries the name of an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11529,7 +11591,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of event notification rules.</para>
+        /// <para>Queries the name of an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11547,7 +11609,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the names of event notification rules.</para>
+        /// <para>Queries the name of an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15353,7 +15415,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an event notification rule.</para>
+        /// <para>Updates an event rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15441,7 +15503,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an event notification rule.</para>
+        /// <para>Updates an event rule.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15529,7 +15591,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an event notification rule.</para>
+        /// <para>Updates an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15547,7 +15609,7 @@ namespace AlibabaCloud.SDK.Cr20181201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an event notification rule.</para>
+        /// <para>Updates an event rule.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Cr20181201.Models
             [Validation(Required=false)]
             public bool? CrossUser { get; set; }
 
+            [NameInMap("LinkId")]
+            [Validation(Required=false)]
+            public string LinkId { get; set; }
+
             /// <summary>
             /// <para>The ID of the source instance.</para>
             /// 
