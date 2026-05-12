@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Rds20140815.Models
         public string DiskIds { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>data</para>
+        /// </summary>
+        [NameInMap("DiskType")]
+        [Validation(Required=false)]
+        public string DiskType { get; set; }
+
+        /// <summary>
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
