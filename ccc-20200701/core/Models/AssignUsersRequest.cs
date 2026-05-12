@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.CCC20200701.Models
 {
     public class AssignUsersRequest : TeaModel {
+        [NameInMap("Async")]
+        [Validation(Required=false)]
+        public bool? Async { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

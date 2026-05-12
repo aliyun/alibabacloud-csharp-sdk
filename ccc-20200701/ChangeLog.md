@@ -1,3 +1,7 @@
+2026-05-12 Version: 2.41.2
+- Update API AssignUsers: add request parameters Async.
+
+
 2026-03-27 Version: 2.41.1
 - Generated csharp 2020-07-01 for CCC.
 

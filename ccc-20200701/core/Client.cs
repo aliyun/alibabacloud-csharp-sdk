@@ -2295,6 +2295,10 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Async))
+            {
+                query["Async"] = request.Async;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -2359,6 +2363,10 @@ namespace AlibabaCloud.SDK.CCC20200701
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Async))
+            {
+                query["Async"] = request.Async;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
@@ -14102,6 +14110,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await HoldCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入管理员</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportAdminsRequest
         /// </param>
@@ -14143,6 +14156,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ImportAdminsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入管理员</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportAdminsRequest
         /// </param>
@@ -14184,6 +14202,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ImportAdminsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入管理员</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportAdminsRequest
         /// </param>
@@ -14197,6 +14220,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ImportAdminsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入管理员</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportAdminsRequest
         /// </param>
@@ -26870,6 +26898,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return await ModifyCustomCallTaggingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRequest
         /// </param>
@@ -26911,6 +26944,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifyInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRequest
         /// </param>
@@ -26952,6 +26990,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return TeaModel.ToObject<ModifyInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRequest
         /// </param>
@@ -26965,6 +27008,11 @@ namespace AlibabaCloud.SDK.CCC20200701
             return ModifyInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>修改实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRequest
         /// </param>
