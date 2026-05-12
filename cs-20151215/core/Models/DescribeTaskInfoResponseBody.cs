@@ -137,6 +137,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        [NameInMap("outputs")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Outputs { get; set; }
+
         /// <summary>
         /// <para>The task parameters.</para>
         /// </summary>
