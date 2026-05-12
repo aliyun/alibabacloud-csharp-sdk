@@ -2493,6 +2493,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
             {
                 query["filter"] = request.FilterShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeMission))
+            {
+                query["includeMission"] = request.IncludeMission;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
@@ -2560,6 +2564,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
             {
                 query["filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IncludeMission))
+            {
+                query["includeMission"] = request.IncludeMission;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {

@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 
         }
 
+        [NameInMap("includeMission")]
+        [Validation(Required=false)]
+        public bool? IncludeMission { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>20</para>
