@@ -21737,6 +21737,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["DesktopIdForModify"] = request.DesktopIdForModify;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopScenario))
+            {
+                query["DesktopScenario"] = request.DesktopScenario;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopTypeId))
             {
                 query["DesktopTypeId"] = request.DesktopTypeId;
@@ -21863,6 +21867,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIdForModify))
             {
                 query["DesktopIdForModify"] = request.DesktopIdForModify;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopScenario))
+            {
+                query["DesktopScenario"] = request.DesktopScenario;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopTypeId))
             {

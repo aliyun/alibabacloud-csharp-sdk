@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopIdForModify { get; set; }
 
+        [NameInMap("DesktopScenario")]
+        [Validation(Required=false)]
+        public string DesktopScenario { get; set; }
+
         /// <summary>
         /// <para>The specification ID.</para>
         /// <remarks>
