@@ -10,6 +10,22 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetImageTransformResponseBody : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
+        [NameInMap("AutoAvif")]
+        [Validation(Required=false)]
+        public string AutoAvif { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
+        [NameInMap("AutoWebp")]
+        [Validation(Required=false)]
+        public string AutoWebp { get; set; }
+
+        /// <summary>
         /// <para>Configuration ID.</para>
         /// 
         /// <b>Example:</b>

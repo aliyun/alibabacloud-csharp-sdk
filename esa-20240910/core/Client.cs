@@ -6519,6 +6519,14 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAvif))
+            {
+                query["AutoAvif"] = request.AutoAvif;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoWebp))
+            {
+                query["AutoWebp"] = request.AutoWebp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 query["Enable"] = request.Enable;
@@ -6585,6 +6593,14 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAvif))
+            {
+                query["AutoAvif"] = request.AutoAvif;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoWebp))
+            {
+                query["AutoWebp"] = request.AutoWebp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 query["Enable"] = request.Enable;
@@ -50999,6 +51015,14 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAvif))
+            {
+                query["AutoAvif"] = request.AutoAvif;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoWebp))
+            {
+                query["AutoWebp"] = request.AutoWebp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
             {
                 query["ConfigId"] = request.ConfigId;
@@ -51065,6 +51089,14 @@ namespace AlibabaCloud.SDK.ESA20240910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAvif))
+            {
+                query["AutoAvif"] = request.AutoAvif;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoWebp))
+            {
+                query["AutoWebp"] = request.AutoWebp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
             {
                 query["ConfigId"] = request.ConfigId;
