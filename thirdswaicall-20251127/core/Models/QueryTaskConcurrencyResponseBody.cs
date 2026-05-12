@@ -25,9 +25,25 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
+            [NameInMap("AvailableConcurrency")]
+            [Validation(Required=false)]
+            public long? AvailableConcurrency { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
             [NameInMap("CurrentConcurrency")]
             [Validation(Required=false)]
             public long? CurrentConcurrency { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>5</para>
+            /// </summary>
+            [NameInMap("MaxConcurrency")]
+            [Validation(Required=false)]
+            public long? MaxConcurrency { get; set; }
 
         }
 
