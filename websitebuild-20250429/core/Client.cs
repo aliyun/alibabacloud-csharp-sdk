@@ -5004,6 +5004,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             {
                 query["BizId"] = request.BizId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainKeyword))
+            {
+                query["DomainKeyword"] = request.DomainKeyword;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -5069,6 +5073,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
             {
                 query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainKeyword))
+            {
+                query["DomainKeyword"] = request.DomainKeyword;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {

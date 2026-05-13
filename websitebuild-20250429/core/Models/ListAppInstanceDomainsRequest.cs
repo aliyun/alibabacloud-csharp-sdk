@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        [NameInMap("DomainKeyword")]
+        [Validation(Required=false)]
+        public string DomainKeyword { get; set; }
+
         /// <summary>
         /// <para>Number of results per query.</para>
         /// <para>Range: 10~100. Default value: 20.</para>
