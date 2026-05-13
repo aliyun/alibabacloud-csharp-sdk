@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Domain20180208.Models
 {
-    public class QueryExportDomainExpireSnatchsRequest : TeaModel {
+    public class QueryExportDomainExpireSnatchsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Domain20180208.Models
 
         [NameInMap("DataSources")]
         [Validation(Required=false)]
-        public List<string> DataSources { get; set; }
+        public string DataSourcesShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

@@ -3414,7 +3414,7 @@ namespace AlibabaCloud.SDK.Domain20180208
         /// <para>查询导出的抢注域名</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// QueryExportDomainExpireSnatchsRequest
         /// </param>
         /// <param name="runtime">
@@ -3424,13 +3424,23 @@ namespace AlibabaCloud.SDK.Domain20180208
         /// <returns>
         /// QueryExportDomainExpireSnatchsResponse
         /// </returns>
-        public QueryExportDomainExpireSnatchsResponse QueryExportDomainExpireSnatchsWithOptions(QueryExportDomainExpireSnatchsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public QueryExportDomainExpireSnatchsResponse QueryExportDomainExpireSnatchsWithOptions(QueryExportDomainExpireSnatchsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryExportDomainExpireSnatchsShrinkRequest request = new QueryExportDomainExpireSnatchsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSources))
+            {
+                request.DataSourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSources, "DataSources", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentId))
             {
                 query["CurrentId"] = request.CurrentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourcesShrink))
+            {
+                query["DataSources"] = request.DataSourcesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -3468,7 +3478,7 @@ namespace AlibabaCloud.SDK.Domain20180208
         /// <para>查询导出的抢注域名</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// QueryExportDomainExpireSnatchsRequest
         /// </param>
         /// <param name="runtime">
@@ -3478,13 +3488,23 @@ namespace AlibabaCloud.SDK.Domain20180208
         /// <returns>
         /// QueryExportDomainExpireSnatchsResponse
         /// </returns>
-        public async Task<QueryExportDomainExpireSnatchsResponse> QueryExportDomainExpireSnatchsWithOptionsAsync(QueryExportDomainExpireSnatchsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<QueryExportDomainExpireSnatchsResponse> QueryExportDomainExpireSnatchsWithOptionsAsync(QueryExportDomainExpireSnatchsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryExportDomainExpireSnatchsShrinkRequest request = new QueryExportDomainExpireSnatchsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataSources))
+            {
+                request.DataSourcesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataSources, "DataSources", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentId))
             {
                 query["CurrentId"] = request.CurrentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataSourcesShrink))
+            {
+                query["DataSources"] = request.DataSourcesShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
