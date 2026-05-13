@@ -34,6 +34,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225.Models
 
         }
 
+        [NameInMap("credentialExternalId")]
+        [Validation(Required=false)]
+        public string CredentialExternalId { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

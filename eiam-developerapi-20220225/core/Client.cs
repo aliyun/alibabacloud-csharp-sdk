@@ -931,6 +931,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
             {
                 body["credentialContent"] = request.CredentialContent;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialExternalId))
+            {
+                body["credentialExternalId"] = request.CredentialExternalId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialIdentifier))
             {
                 body["credentialIdentifier"] = request.CredentialIdentifier;
@@ -1005,6 +1009,10 @@ namespace AlibabaCloud.SDK.Eiam_developerapi20220225
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialContent))
             {
                 body["credentialContent"] = request.CredentialContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialExternalId))
+            {
+                body["credentialExternalId"] = request.CredentialExternalId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialIdentifier))
             {
