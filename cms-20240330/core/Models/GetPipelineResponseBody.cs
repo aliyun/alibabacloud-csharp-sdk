@@ -201,6 +201,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 [Validation(Required=false)]
                 public string Project { get; set; }
 
+                [NameInMap("query")]
+                [Validation(Required=false)]
+                public string Query { get; set; }
+
             }
 
             /// <summary>

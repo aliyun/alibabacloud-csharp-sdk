@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DescribeMetricMetaListRequest : TeaModel {
+        [NameInMap("keywords")]
+        [Validation(Required=false)]
+        public string Keywords { get; set; }
+
         [NameInMap("labels")]
         [Validation(Required=false)]
         public List<DescribeMetricMetaListRequestLabels> Labels { get; set; }

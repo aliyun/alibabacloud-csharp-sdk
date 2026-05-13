@@ -61,6 +61,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public Dictionary<string, string> Labels { get; set; }
 
+            [NameInMap("metaFormat")]
+            [Validation(Required=false)]
+            public string MetaFormat { get; set; }
+
             [NameInMap("metricName")]
             [Validation(Required=false)]
             public string MetricName { get; set; }

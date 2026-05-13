@@ -7153,6 +7153,10 @@ namespace AlibabaCloud.SDK.Cms20240330
                 request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "labels", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keywords))
+            {
+                query["keywords"] = request.Keywords;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
             {
                 query["labels"] = request.LabelsShrink;
@@ -7225,6 +7229,10 @@ namespace AlibabaCloud.SDK.Cms20240330
                 request.LabelsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Labels, "labels", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keywords))
+            {
+                query["keywords"] = request.Keywords;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelsShrink))
             {
                 query["labels"] = request.LabelsShrink;
