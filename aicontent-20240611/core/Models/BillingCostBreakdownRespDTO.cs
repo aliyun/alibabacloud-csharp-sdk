@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
     public class BillingCostBreakdownRespDTO : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>[]</para>
+        /// </summary>
+        [NameInMap("columns")]
+        [Validation(Required=false)]
+        public List<MetricDefRespDTO> Columns { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>hourly</para>
         /// </summary>
         [NameInMap("granularity")]

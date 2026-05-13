@@ -8277,6 +8277,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["endTime"] = request.EndTime;
@@ -8288,6 +8292,14 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
+            {
+                query["modelTypes"] = request.ModelTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
@@ -8347,6 +8359,10 @@ namespace AlibabaCloud.SDK.AiContent20240611
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
+            {
+                query["clientId"] = request.ClientId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["endTime"] = request.EndTime;
@@ -8358,6 +8374,14 @@ namespace AlibabaCloud.SDK.AiContent20240611
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelId))
+            {
+                query["modelId"] = request.ModelId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelTypes))
+            {
+                query["modelTypes"] = request.ModelTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {

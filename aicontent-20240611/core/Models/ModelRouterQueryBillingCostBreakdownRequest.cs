@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class ModelRouterQueryBillingCostBreakdownRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
+        [NameInMap("clientId")]
+        [Validation(Required=false)]
+        public long? ClientId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +44,22 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>12</para>
+        /// </summary>
+        [NameInMap("modelId")]
+        [Validation(Required=false)]
+        public long? ModelId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Chat</para>
+        /// </summary>
+        [NameInMap("modelTypes")]
+        [Validation(Required=false)]
+        public string ModelTypes { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

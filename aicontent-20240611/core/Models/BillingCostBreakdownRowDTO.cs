@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>{&quot;billing_version&quot;: &quot;v1&quot;}</para>
+        /// </summary>
+        [NameInMap("dimValues")]
+        [Validation(Required=false)]
+        public string DimValues { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>qwen-plus</para>
         /// </summary>
         [NameInMap("modelCode")]
@@ -72,6 +80,22 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         [NameInMap("summaryTime")]
         [Validation(Required=false)]
         public long? SummaryTime { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[]</para>
+        /// </summary>
+        [NameInMap("tiers")]
+        [Validation(Required=false)]
+        public List<BillingBillTierDTO> Tiers { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{&quot;input_tokens&quot;: 512000, &quot;output_tokens&quot;: 256000}</para>
+        /// </summary>
+        [NameInMap("values")]
+        [Validation(Required=false)]
+        public string Values { get; set; }
 
     }
 
