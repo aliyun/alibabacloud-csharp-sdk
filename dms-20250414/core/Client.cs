@@ -8556,6 +8556,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["DmsUnit"] = request.DmsUnit;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadLinkExpire))
+            {
+                query["DownloadLinkExpire"] = request.DownloadLinkExpire;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileCategory))
             {
                 query["FileCategory"] = request.FileCategory;
@@ -8625,6 +8629,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DmsUnit))
             {
                 query["DmsUnit"] = request.DmsUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DownloadLinkExpire))
+            {
+                query["DownloadLinkExpire"] = request.DownloadLinkExpire;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileCategory))
             {

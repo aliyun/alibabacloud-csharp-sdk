@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string DmsUnit { get; set; }
 
+        [NameInMap("DownloadLinkExpire")]
+        [Validation(Required=false)]
+        public int? DownloadLinkExpire { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>TextReport</para>
