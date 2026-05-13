@@ -8,12 +8,18 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class SwitchInstanceHAResponseBody : TeaModel {
+    public class DescribeTaskDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>5D622714-AEDD-4609-9167-F5DDD3D1****</para>
+        /// <para>2026-05-12T07:18:57Z</para>
+        /// </summary>
+        [NameInMap("BeginTime")]
+        [Validation(Required=false)]
+        public string BeginTime { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>561AFBF1-BE20-44DB-9BD1-6988B53E****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -21,11 +27,11 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>674546459</para>
+        /// <para>RUNNING</para>
         /// </summary>
-        [NameInMap("TaskId")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string TaskId { get; set; }
+        public string Status { get; set; }
 
     }
 

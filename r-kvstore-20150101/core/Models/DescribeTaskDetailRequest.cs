@@ -8,18 +8,20 @@ using Tea;
 
 namespace AlibabaCloud.SDK.R_kvstore20150101.Models
 {
-    public class SwitchInstanceHAResponseBody : TeaModel {
+    public class DescribeTaskDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5D622714-AEDD-4609-9167-F5DDD3D1****</para>
+        /// <para>r-bp1zxszhcgatnx****</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("InstanceId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>674546459</para>
         /// </summary>

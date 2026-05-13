@@ -4371,6 +4371,462 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTairSkvDdbTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTairSkvDdbTableResponse
+        /// </returns>
+        public CreateTairSkvDdbTableResponse CreateTairSkvDdbTableWithOptions(CreateTairSkvDdbTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupId))
+            {
+                query["BackupId"] = request.BackupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                query["Schema"] = request.Schema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcDBInstanceId))
+            {
+                query["SrcDBInstanceId"] = request.SrcDBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtlSpec))
+            {
+                query["TtlSpec"] = request.TtlSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTairSkvDdbTable",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTairSkvDdbTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTairSkvDdbTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTairSkvDdbTableResponse
+        /// </returns>
+        public async Task<CreateTairSkvDdbTableResponse> CreateTairSkvDdbTableWithOptionsAsync(CreateTairSkvDdbTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupId))
+            {
+                query["BackupId"] = request.BackupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Schema))
+            {
+                query["Schema"] = request.Schema;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcDBInstanceId))
+            {
+                query["SrcDBInstanceId"] = request.SrcDBInstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtlSpec))
+            {
+                query["TtlSpec"] = request.TtlSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTairSkvDdbTable",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTairSkvDdbTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTairSkvDdbTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTairSkvDdbTableResponse
+        /// </returns>
+        public CreateTairSkvDdbTableResponse CreateTairSkvDdbTable(CreateTairSkvDdbTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTairSkvDdbTableWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTairSkvDdbTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTairSkvDdbTableResponse
+        /// </returns>
+        public async Task<CreateTairSkvDdbTableResponse> CreateTairSkvDdbTableAsync(CreateTairSkvDdbTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTairSkvDdbTableWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTairSkvDdbWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTairSkvDdbWorkspaceResponse
+        /// </returns>
+        public CreateTairSkvDdbWorkspaceResponse CreateTairSkvDdbWorkspaceWithOptions(CreateTairSkvDdbWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTairSkvDdbWorkspace",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTairSkvDdbWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTairSkvDdbWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTairSkvDdbWorkspaceResponse
+        /// </returns>
+        public async Task<CreateTairSkvDdbWorkspaceResponse> CreateTairSkvDdbWorkspaceWithOptionsAsync(CreateTairSkvDdbWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["InstanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Password))
+            {
+                query["Password"] = request.Password;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Port))
+            {
+                query["Port"] = request.Port;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTairSkvDdbWorkspace",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTairSkvDdbWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTairSkvDdbWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTairSkvDdbWorkspaceResponse
+        /// </returns>
+        public CreateTairSkvDdbWorkspaceResponse CreateTairSkvDdbWorkspace(CreateTairSkvDdbWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTairSkvDdbWorkspaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Tair Serverless 类型实例的Workspace</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTairSkvDdbWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTairSkvDdbWorkspaceResponse
+        /// </returns>
+        public async Task<CreateTairSkvDdbWorkspaceResponse> CreateTairSkvDdbWorkspaceAsync(CreateTairSkvDdbWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTairSkvDdbWorkspaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an account from a Tair (Redis OSS-compatible) instance.</para>
         /// </summary>
         /// 
@@ -17647,6 +18103,462 @@ namespace AlibabaCloud.SDK.R_kvstore20150101
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeTairKVCacheInferInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Tair Serverless KV DDB实例的table</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairSkvDdbTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairSkvDdbTableResponse
+        /// </returns>
+        public DescribeTairSkvDdbTableResponse DescribeTairSkvDdbTableWithOptions(DescribeTairSkvDdbTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTairSkvDdbTable",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTairSkvDdbTableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Tair Serverless KV DDB实例的table</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairSkvDdbTableRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairSkvDdbTableResponse
+        /// </returns>
+        public async Task<DescribeTairSkvDdbTableResponse> DescribeTairSkvDdbTableWithOptionsAsync(DescribeTairSkvDdbTableRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTairSkvDdbTable",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTairSkvDdbTableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Tair Serverless KV DDB实例的table</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairSkvDdbTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairSkvDdbTableResponse
+        /// </returns>
+        public DescribeTairSkvDdbTableResponse DescribeTairSkvDdbTable(DescribeTairSkvDdbTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTairSkvDdbTableWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Tair Serverless KV DDB实例的table</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairSkvDdbTableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairSkvDdbTableResponse
+        /// </returns>
+        public async Task<DescribeTairSkvDdbTableResponse> DescribeTairSkvDdbTableAsync(DescribeTairSkvDdbTableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTairSkvDdbTableWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Tair Serverless KV DDB实例的table schema</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairSkvDdbTableSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairSkvDdbTableSchemaResponse
+        /// </returns>
+        public DescribeTairSkvDdbTableSchemaResponse DescribeTairSkvDdbTableSchemaWithOptions(DescribeTairSkvDdbTableSchemaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupId))
+            {
+                query["BackupId"] = request.BackupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTairSkvDdbTableSchema",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTairSkvDdbTableSchemaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Tair Serverless KV DDB实例的table schema</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairSkvDdbTableSchemaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairSkvDdbTableSchemaResponse
+        /// </returns>
+        public async Task<DescribeTairSkvDdbTableSchemaResponse> DescribeTairSkvDdbTableSchemaWithOptionsAsync(DescribeTairSkvDdbTableSchemaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackupId))
+            {
+                query["BackupId"] = request.BackupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccount))
+            {
+                query["OwnerAccount"] = request.OwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
+            {
+                query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerAccount))
+            {
+                query["ResourceOwnerAccount"] = request.ResourceOwnerAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
+            {
+                query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityToken))
+            {
+                query["SecurityToken"] = request.SecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTairSkvDdbTableSchema",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTairSkvDdbTableSchemaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Tair Serverless KV DDB实例的table schema</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairSkvDdbTableSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairSkvDdbTableSchemaResponse
+        /// </returns>
+        public DescribeTairSkvDdbTableSchemaResponse DescribeTairSkvDdbTableSchema(DescribeTairSkvDdbTableSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTairSkvDdbTableSchemaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Tair Serverless KV DDB实例的table schema</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTairSkvDdbTableSchemaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTairSkvDdbTableSchemaResponse
+        /// </returns>
+        public async Task<DescribeTairSkvDdbTableSchemaResponse> DescribeTairSkvDdbTableSchemaAsync(DescribeTairSkvDdbTableSchemaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTairSkvDdbTableSchemaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTaskDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTaskDetailResponse
+        /// </returns>
+        public DescribeTaskDetailResponse DescribeTaskDetailWithOptions(DescribeTaskDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTaskDetail",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTaskDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTaskDetailRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTaskDetailResponse
+        /// </returns>
+        public async Task<DescribeTaskDetailResponse> DescribeTaskDetailWithOptionsAsync(DescribeTaskDetailRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeTaskDetail",
+                Version = "2015-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeTaskDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTaskDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTaskDetailResponse
+        /// </returns>
+        public DescribeTaskDetailResponse DescribeTaskDetail(DescribeTaskDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeTaskDetailWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeTaskDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeTaskDetailResponse
+        /// </returns>
+        public async Task<DescribeTaskDetailResponse> DescribeTaskDetailAsync(DescribeTaskDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeTaskDetailWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

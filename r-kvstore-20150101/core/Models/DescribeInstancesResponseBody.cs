@@ -205,6 +205,10 @@ namespace AlibabaCloud.SDK.R_kvstore20150101.Models
                 [Validation(Required=false)]
                 public string VpcId { get; set; }
 
+                [NameInMap("WorkspaceId")]
+                [Validation(Required=false)]
+                public string WorkspaceId { get; set; }
+
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
