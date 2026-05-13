@@ -591,9 +591,6 @@ namespace AlibabaCloud.SDK.Green20220302
         /// <para>Queries the token for uploading files.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeUploadTokenRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -624,9 +621,6 @@ namespace AlibabaCloud.SDK.Green20220302
         /// <para>Queries the token for uploading files.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DescribeUploadTokenRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>

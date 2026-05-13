@@ -590,6 +590,16 @@ namespace AlibabaCloud.SDK.Green20220302.Models
                         [Validation(Required=false)]
                         public Dictionary<string, object> TextInImage { get; set; }
 
+                        [NameInMap("VlContent")]
+                        [Validation(Required=false)]
+                        public VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent VlContent { get; set; }
+                        public class VideoModerationResultResponseBodyDataFrameResultFramesResultsVlContent : TeaModel {
+                            [NameInMap("OutputText")]
+                            [Validation(Required=false)]
+                            public string OutputText { get; set; }
+
+                        }
+
                     }
 
                     /// <summary>
