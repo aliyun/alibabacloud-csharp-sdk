@@ -1,3 +1,11 @@
+2026-05-13 Version: 1.23.9
+- Update API CreateCredential: add request parameters CredentialExternalId.
+- Update API GetCredential: add response parameters Body.Credential.CredentialExternalId.
+- Update API ListCredentials: add request parameters CredentialExternalIds.
+- Update API ListCredentials: add response parameters Body.Credentials.$.CredentialExternalId.
+- Update API ObtainCredential: add response parameters Body.Credential.CredentialExternalId.
+
+
 2026-04-28 Version: 1.23.8
 - Update API GetInstanceControlConfiguration: add request parameters ElementName.
 

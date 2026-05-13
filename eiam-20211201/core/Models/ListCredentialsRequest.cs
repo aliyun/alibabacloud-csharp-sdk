@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListCredentialsRequest : TeaModel {
+        [NameInMap("CredentialExternalIds")]
+        [Validation(Required=false)]
+        public List<string> CredentialExternalIds { get; set; }
+
         [NameInMap("CredentialIds")]
         [Validation(Required=false)]
         public List<string> CredentialIds { get; set; }

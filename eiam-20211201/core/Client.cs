@@ -4788,6 +4788,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["CredentialContent"] = request.CredentialContent;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialExternalId))
+            {
+                query["CredentialExternalId"] = request.CredentialExternalId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialIdentifier))
             {
                 query["CredentialIdentifier"] = request.CredentialIdentifier;
@@ -4873,6 +4877,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialContent))
             {
                 query["CredentialContent"] = request.CredentialContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialExternalId))
+            {
+                query["CredentialExternalId"] = request.CredentialExternalId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialIdentifier))
             {
@@ -30568,6 +30576,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialExternalIds))
+            {
+                query["CredentialExternalIds"] = request.CredentialExternalIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialIds))
             {
                 query["CredentialIds"] = request.CredentialIds;
@@ -30638,6 +30650,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialExternalIds))
+            {
+                query["CredentialExternalIds"] = request.CredentialExternalIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialIds))
             {
                 query["CredentialIds"] = request.CredentialIds;
