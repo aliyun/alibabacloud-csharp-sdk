@@ -761,6 +761,152 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建集群Vpc端点连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateClusterVpcEndpointConnectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateClusterVpcEndpointConnectionResponse
+        /// </returns>
+        public CreateClusterVpcEndpointConnectionResponse CreateClusterVpcEndpointConnectionWithOptions(CreateClusterVpcEndpointConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["clusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["dryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateClusterVpcEndpointConnection",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/k8sProxy/access/createClusterVpcEndpointConnection",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateClusterVpcEndpointConnectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建集群Vpc端点连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateClusterVpcEndpointConnectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateClusterVpcEndpointConnectionResponse
+        /// </returns>
+        public async Task<CreateClusterVpcEndpointConnectionResponse> CreateClusterVpcEndpointConnectionWithOptionsAsync(CreateClusterVpcEndpointConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
+            {
+                body["clusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["dryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                body["region"] = request.Region;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateClusterVpcEndpointConnection",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/k8sProxy/access/createClusterVpcEndpointConnection",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateClusterVpcEndpointConnectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建集群Vpc端点连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateClusterVpcEndpointConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateClusterVpcEndpointConnectionResponse
+        /// </returns>
+        public CreateClusterVpcEndpointConnectionResponse CreateClusterVpcEndpointConnection(CreateClusterVpcEndpointConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateClusterVpcEndpointConnectionWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建集群Vpc端点连接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateClusterVpcEndpointConnectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateClusterVpcEndpointConnectionResponse
+        /// </returns>
+        public async Task<CreateClusterVpcEndpointConnectionResponse> CreateClusterVpcEndpointConnectionAsync(CreateClusterVpcEndpointConnectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateClusterVpcEndpointConnectionWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建实例巡检</para>
         /// </summary>
         /// 
