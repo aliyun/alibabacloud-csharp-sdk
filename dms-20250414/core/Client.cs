@@ -5623,6 +5623,126 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取工作空间发布配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceCodePublishSettingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceCodePublishSettingResponse
+        /// </returns>
+        public GetWorkspaceCodePublishSettingResponse GetWorkspaceCodePublishSettingWithOptions(GetWorkspaceCodePublishSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkspaceCodePublishSetting",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkspaceCodePublishSettingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作空间发布配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceCodePublishSettingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceCodePublishSettingResponse
+        /// </returns>
+        public async Task<GetWorkspaceCodePublishSettingResponse> GetWorkspaceCodePublishSettingWithOptionsAsync(GetWorkspaceCodePublishSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkspaceCodePublishSetting",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkspaceCodePublishSettingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作空间发布配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceCodePublishSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceCodePublishSettingResponse
+        /// </returns>
+        public GetWorkspaceCodePublishSettingResponse GetWorkspaceCodePublishSetting(GetWorkspaceCodePublishSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetWorkspaceCodePublishSettingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取工作空间发布配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceCodePublishSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceCodePublishSettingResponse
+        /// </returns>
+        public async Task<GetWorkspaceCodePublishSettingResponse> GetWorkspaceCodePublishSettingAsync(GetWorkspaceCodePublishSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetWorkspaceCodePublishSettingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>列出资源Airflow</para>
         /// </summary>
         /// 
@@ -9483,6 +9603,138 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>设置工作空间代码发布配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetWorkspaceCodePublishSettingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetWorkspaceCodePublishSettingResponse
+        /// </returns>
+        public SetWorkspaceCodePublishSettingResponse SetWorkspaceCodePublishSettingWithOptions(SetWorkspaceCodePublishSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetWorkspaceCodePublishSetting",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetWorkspaceCodePublishSettingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置工作空间代码发布配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetWorkspaceCodePublishSettingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetWorkspaceCodePublishSettingResponse
+        /// </returns>
+        public async Task<SetWorkspaceCodePublishSettingResponse> SetWorkspaceCodePublishSettingWithOptionsAsync(SetWorkspaceCodePublishSettingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetWorkspaceCodePublishSetting",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetWorkspaceCodePublishSettingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置工作空间代码发布配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetWorkspaceCodePublishSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetWorkspaceCodePublishSettingResponse
+        /// </returns>
+        public SetWorkspaceCodePublishSettingResponse SetWorkspaceCodePublishSetting(SetWorkspaceCodePublishSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetWorkspaceCodePublishSettingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置工作空间代码发布配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SetWorkspaceCodePublishSettingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetWorkspaceCodePublishSettingResponse
+        /// </returns>
+        public async Task<SetWorkspaceCodePublishSettingResponse> SetWorkspaceCodePublishSettingAsync(SetWorkspaceCodePublishSettingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetWorkspaceCodePublishSettingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>更新UpdateAirflow</para>
         /// </summary>
         /// 
@@ -10683,6 +10935,394 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateDataLakeTableWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间异步操作日志查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WorkspaceActionLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WorkspaceActionLogResponse
+        /// </returns>
+        public WorkspaceActionLogResponse WorkspaceActionLogWithOptions(WorkspaceActionLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WorkspaceActionLog",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WorkspaceActionLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间异步操作日志查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WorkspaceActionLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WorkspaceActionLogResponse
+        /// </returns>
+        public async Task<WorkspaceActionLogResponse> WorkspaceActionLogWithOptionsAsync(WorkspaceActionLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WorkspaceActionLog",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WorkspaceActionLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间异步操作日志查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WorkspaceActionLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WorkspaceActionLogResponse
+        /// </returns>
+        public WorkspaceActionLogResponse WorkspaceActionLog(WorkspaceActionLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return WorkspaceActionLogWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间异步操作日志查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WorkspaceActionLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WorkspaceActionLogResponse
+        /// </returns>
+        public async Task<WorkspaceActionLogResponse> WorkspaceActionLogAsync(WorkspaceActionLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await WorkspaceActionLogWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间异步操作状态查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WorkspaceActionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WorkspaceActionStatusResponse
+        /// </returns>
+        public WorkspaceActionStatusResponse WorkspaceActionStatusWithOptions(WorkspaceActionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WorkspaceActionStatus",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WorkspaceActionStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间异步操作状态查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WorkspaceActionStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WorkspaceActionStatusResponse
+        /// </returns>
+        public async Task<WorkspaceActionStatusResponse> WorkspaceActionStatusWithOptionsAsync(WorkspaceActionStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WorkspaceActionStatus",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WorkspaceActionStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间异步操作状态查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WorkspaceActionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WorkspaceActionStatusResponse
+        /// </returns>
+        public WorkspaceActionStatusResponse WorkspaceActionStatus(WorkspaceActionStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return WorkspaceActionStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间异步操作状态查询接口</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WorkspaceActionStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WorkspaceActionStatusResponse
+        /// </returns>
+        public async Task<WorkspaceActionStatusResponse> WorkspaceActionStatusAsync(WorkspaceActionStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await WorkspaceActionStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间代码发布。这是个异步接口，请求返回一个key，请根据key查询 WorkspaceActionStatus接口获取状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WorkspaceCodePublishRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WorkspaceCodePublishResponse
+        /// </returns>
+        public WorkspaceCodePublishResponse WorkspaceCodePublishWithOptions(WorkspaceCodePublishRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WorkspaceCodePublish",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WorkspaceCodePublishResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间代码发布。这是个异步接口，请求返回一个key，请根据key查询 WorkspaceActionStatus接口获取状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WorkspaceCodePublishRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// WorkspaceCodePublishResponse
+        /// </returns>
+        public async Task<WorkspaceCodePublishResponse> WorkspaceCodePublishWithOptionsAsync(WorkspaceCodePublishRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                body["Config"] = request.Config;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "WorkspaceCodePublish",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<WorkspaceCodePublishResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间代码发布。这是个异步接口，请求返回一个key，请根据key查询 WorkspaceActionStatus接口获取状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WorkspaceCodePublishRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WorkspaceCodePublishResponse
+        /// </returns>
+        public WorkspaceCodePublishResponse WorkspaceCodePublish(WorkspaceCodePublishRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return WorkspaceCodePublishWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作空间代码发布。这是个异步接口，请求返回一个key，请根据key查询 WorkspaceActionStatus接口获取状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// WorkspaceCodePublishRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// WorkspaceCodePublishResponse
+        /// </returns>
+        public async Task<WorkspaceCodePublishResponse> WorkspaceCodePublishAsync(WorkspaceCodePublishRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await WorkspaceCodePublishWithOptionsAsync(request, runtime);
         }
 
     }
