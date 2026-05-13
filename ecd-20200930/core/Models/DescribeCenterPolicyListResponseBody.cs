@@ -33,6 +33,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string AdminAccess { get; set; }
 
+            [NameInMap("AdminKeyboardOnFullScreen")]
+            [Validation(Required=false)]
+            public string AdminKeyboardOnFullScreen { get; set; }
+
+            [NameInMap("AdminKeyboardOnWindows")]
+            [Validation(Required=false)]
+            public string AdminKeyboardOnWindows { get; set; }
+
+            [NameInMap("AdminMonitor")]
+            [Validation(Required=false)]
+            public int? AdminMonitor { get; set; }
+
             /// <summary>
             /// <para>Indicates whether anti-screenshot is enabled.</para>
             /// 
@@ -165,6 +177,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ClientControlMenu { get; set; }
 
+            [NameInMap("ClientCreateSnapshot")]
+            [Validation(Required=false)]
+            public string ClientCreateSnapshot { get; set; }
+
             [NameInMap("ClientHibernate")]
             [Validation(Required=false)]
             public string ClientHibernate { get; set; }
@@ -239,6 +255,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("CpuDownGradeDuration")]
             [Validation(Required=false)]
             public int? CpuDownGradeDuration { get; set; }
+
+            [NameInMap("CpuOverload")]
+            [Validation(Required=false)]
+            public string CpuOverload { get; set; }
 
             /// <summary>
             /// <para>The CPU processors.</para>
@@ -435,6 +455,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? DisconnectKeepSessionTime { get; set; }
 
+            [NameInMap("DiskOverload")]
+            [Validation(Required=false)]
+            public string DiskOverload { get; set; }
+
             /// <summary>
             /// <para>The display mode.</para>
             /// 
@@ -511,6 +535,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string EndUserApplyAdminCoordinate { get; set; }
 
+            [NameInMap("EndUserCount")]
+            [Validation(Required=false)]
+            public string EndUserCount { get; set; }
+
             /// <summary>
             /// <para>Indicates whether end users in the same office network can share cloud computers.</para>
             /// 
@@ -520,6 +548,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("EndUserGroupCoordinate")]
             [Validation(Required=false)]
             public string EndUserGroupCoordinate { get; set; }
+
+            [NameInMap("ExternalDrive")]
+            [Validation(Required=false)]
+            public string ExternalDrive { get; set; }
 
             [NameInMap("FileTransferAddress")]
             [Validation(Required=false)]
@@ -593,6 +625,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string InternetPrinter { get; set; }
 
+            [NameInMap("KeyboardControl")]
+            [Validation(Required=false)]
+            public string KeyboardControl { get; set; }
+
+            [NameInMap("KmsServer")]
+            [Validation(Required=false)]
+            public string KmsServer { get; set; }
+
+            [NameInMap("KmsServerConfig")]
+            [Validation(Required=false)]
+            public string KmsServerConfig { get; set; }
+
             /// <summary>
             /// <para>The read/write permissions on the on-premises drive.</para>
             /// 
@@ -622,6 +666,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("MemoryDownGradeDuration")]
             [Validation(Required=false)]
             public int? MemoryDownGradeDuration { get; set; }
+
+            [NameInMap("MemoryOverload")]
+            [Validation(Required=false)]
+            public string MemoryOverload { get; set; }
 
             /// <summary>
             /// <para>The memory processors.</para>
@@ -781,6 +829,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             }
 
+            [NameInMap("NetworkPrinter")]
+            [Validation(Required=false)]
+            public string NetworkPrinter { get; set; }
+
             /// <summary>
             /// <para>Indicates whether a disconnection is enforced upon inactivity.</para>
             /// <remarks>
@@ -806,6 +858,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [NameInMap("NoOperationDisconnectTime")]
             [Validation(Required=false)]
             public int? NoOperationDisconnectTime { get; set; }
+
+            [NameInMap("OrganizationCount")]
+            [Validation(Required=false)]
+            public string OrganizationCount { get; set; }
 
             /// <summary>
             /// <para>The policy ID.</para>
