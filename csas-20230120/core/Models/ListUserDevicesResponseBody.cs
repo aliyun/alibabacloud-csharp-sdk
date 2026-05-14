@@ -45,13 +45,61 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [Validation(Required=false)]
             public string City { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Beijing City</para>
+            /// </summary>
+            [NameInMap("CityEn")]
+            [Validation(Required=false)]
+            public string CityEn { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>北京市</para>
+            /// </summary>
+            [NameInMap("CityZh")]
+            [Validation(Required=false)]
+            public string CityZh { get; set; }
+
             [NameInMap("Continent")]
             [Validation(Required=false)]
             public string Continent { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Asia</para>
+            /// </summary>
+            [NameInMap("ContinentEn")]
+            [Validation(Required=false)]
+            public string ContinentEn { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>亚洲</para>
+            /// </summary>
+            [NameInMap("ContinentZh")]
+            [Validation(Required=false)]
+            public string ContinentZh { get; set; }
+
             [NameInMap("Country")]
             [Validation(Required=false)]
             public string Country { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>China</para>
+            /// </summary>
+            [NameInMap("CountryEn")]
+            [Validation(Required=false)]
+            public string CountryEn { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>中国</para>
+            /// </summary>
+            [NameInMap("CountryZh")]
+            [Validation(Required=false)]
+            public string CountryZh { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -218,6 +266,22 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Beijing</para>
+            /// </summary>
+            [NameInMap("ProvinceEn")]
+            [Validation(Required=false)]
+            public string ProvinceEn { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>北京市</para>
+            /// </summary>
+            [NameInMap("ProvinceZh")]
+            [Validation(Required=false)]
+            public string ProvinceZh { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

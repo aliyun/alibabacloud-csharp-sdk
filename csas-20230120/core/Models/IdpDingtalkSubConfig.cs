@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
         [Validation(Required=false)]
         public bool? Exclusive { get; set; }
 
+        [NameInMap("Oauth")]
+        [Validation(Required=false)]
+        public bool? Oauth { get; set; }
+
         [NameInMap("RedirectUri")]
         [Validation(Required=false)]
         public string RedirectUri { get; set; }

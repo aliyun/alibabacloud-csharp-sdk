@@ -9475,7 +9475,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询转发策略</para>
+        /// <para>Batch query forwarding rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9513,7 +9513,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询转发策略</para>
+        /// <para>Batch query forwarding rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9551,7 +9551,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询转发策略</para>
+        /// <para>Batch query forwarding rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9569,7 +9569,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询转发策略</para>
+        /// <para>Batch query forwarding rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9587,7 +9587,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询转发策略绑定项目</para>
+        /// <para>Batch Query Forwarding Rules Attached to Projects</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9625,7 +9625,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询转发策略绑定项目</para>
+        /// <para>Batch Query Forwarding Rules Attached to Projects</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9663,7 +9663,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询转发策略绑定项目</para>
+        /// <para>Batch Query Forwarding Rules Attached to Projects</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9681,7 +9681,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询转发策略绑定项目</para>
+        /// <para>Batch Query Forwarding Rules Attached to Projects</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12955,7 +12955,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销用户设备会话</para>
+        /// <para>Revoke a user device session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13001,7 +13001,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销用户设备会话</para>
+        /// <para>Revoke a user device session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13047,7 +13047,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销用户设备会话</para>
+        /// <para>Revoke a user device session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13065,7 +13065,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销用户设备会话</para>
+        /// <para>Revoke a user device session.</para>
         /// </summary>
         /// 
         /// <param name="request">
