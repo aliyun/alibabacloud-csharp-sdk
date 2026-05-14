@@ -40341,6 +40341,10 @@ namespace AlibabaCloud.SDK.Live20161101
             {
                 query["Status"] = request.Status;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamName))
             {
                 query["StreamName"] = request.StreamName;
@@ -40423,6 +40427,10 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageType))
+            {
+                query["StorageType"] = request.StorageType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StreamName))
             {

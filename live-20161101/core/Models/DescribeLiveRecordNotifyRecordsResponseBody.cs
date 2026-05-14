@@ -117,6 +117,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             [Validation(Required=false)]
             public string NotifyUrl { get; set; }
 
+            [NameInMap("StorageType")]
+            [Validation(Required=false)]
+            public string StorageType { get; set; }
+
             /// <summary>
             /// <para>The name of the live stream.</para>
             /// 
