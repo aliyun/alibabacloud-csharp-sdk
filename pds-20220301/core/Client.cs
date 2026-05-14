@@ -2590,6 +2590,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             {
                 body["type"] = request.Type;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadType))
+            {
+                body["upload_type"] = request.UploadType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserTags))
             {
                 body["user_tags"] = request.UserTags;
@@ -2707,6 +2711,10 @@ namespace AlibabaCloud.SDK.Pds20220301
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 body["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadType))
+            {
+                body["upload_type"] = request.UploadType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserTags))
             {

@@ -293,6 +293,14 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>multipart</para>
+        /// </summary>
+        [NameInMap("upload_type")]
+        [Validation(Required=false)]
+        public string UploadType { get; set; }
+
+        /// <summary>
         /// <para>The custom tags. You can specify up to 1,000 tags.</para>
         /// </summary>
         [NameInMap("user_tags")]

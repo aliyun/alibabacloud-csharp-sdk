@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.Pds20220301.Models
         [Validation(Required=false)]
         public long? PartSize { get; set; }
 
+        [NameInMap("upload_form_info")]
+        [Validation(Required=false)]
+        public UploadFormInfo UploadFormInfo { get; set; }
+
         /// <summary>
         /// <para>The upload URL. By default, the validity period of the URL is 15 minutes. If the URL expires, you must call the GetUploadUrl operation to obtain another URL. If the intelligent domain name feature is enabled, the internal_upload_url value is returned within the parameter based on the request.</para>
         /// <para>This parameter is required.</para>
