@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string Classify { get; set; }
 
+        [NameInMap("ProtectionType")]
+        [Validation(Required=false)]
+        public string ProtectionType { get; set; }
+
         /// <summary>
         /// <para>Region ID.</para>
         /// 

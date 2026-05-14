@@ -1,3 +1,7 @@
+2026-05-14 Version: 1.7.1
+- Update API ListServiceConfigs: add request parameters ProtectionType.
+
+
 2026-04-22 Version: 1.7.0
 - Support API DescribeOssV2Result.
 - Support API MarkOssV2Result.
