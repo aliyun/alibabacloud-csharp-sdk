@@ -1317,6 +1317,134 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批准PolarClaw设备配对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApprovePolarClawDevicePairRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApprovePolarClawDevicePairResponse
+        /// </returns>
+        public ApprovePolarClawDevicePairResponse ApprovePolarClawDevicePairWithOptions(ApprovePolarClawDevicePairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PairRequestId))
+            {
+                query["PairRequestId"] = request.PairRequestId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApprovePolarClawDevicePair",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApprovePolarClawDevicePairResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批准PolarClaw设备配对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApprovePolarClawDevicePairRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApprovePolarClawDevicePairResponse
+        /// </returns>
+        public async Task<ApprovePolarClawDevicePairResponse> ApprovePolarClawDevicePairWithOptionsAsync(ApprovePolarClawDevicePairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PairRequestId))
+            {
+                query["PairRequestId"] = request.PairRequestId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ApprovePolarClawDevicePair",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ApprovePolarClawDevicePairResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批准PolarClaw设备配对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApprovePolarClawDevicePairRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApprovePolarClawDevicePairResponse
+        /// </returns>
+        public ApprovePolarClawDevicePairResponse ApprovePolarClawDevicePair(ApprovePolarClawDevicePairRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ApprovePolarClawDevicePairWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批准PolarClaw设备配对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ApprovePolarClawDevicePairRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ApprovePolarClawDevicePairResponse
+        /// </returns>
+        public async Task<ApprovePolarClawDevicePairResponse> ApprovePolarClawDevicePairAsync(ApprovePolarClawDevicePairRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ApprovePolarClawDevicePairWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>挂载PolarFS到PolarDB应用</para>
         /// </summary>
         /// 
@@ -23413,6 +23541,182 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询PolarDB AI应用性能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationPerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationPerformanceResponse
+        /// </returns>
+        public DescribeApplicationPerformanceResponse DescribeApplicationPerformanceWithOptions(DescribeApplicationPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Consumer))
+            {
+                query["Consumer"] = request.Consumer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerGroup))
+            {
+                query["ConsumerGroup"] = request.ConsumerGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelService))
+            {
+                query["ModelService"] = request.ModelService;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApplicationPerformance",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApplicationPerformanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询PolarDB AI应用性能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationPerformanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationPerformanceResponse
+        /// </returns>
+        public async Task<DescribeApplicationPerformanceResponse> DescribeApplicationPerformanceWithOptionsAsync(DescribeApplicationPerformanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Consumer))
+            {
+                query["Consumer"] = request.Consumer;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerGroup))
+            {
+                query["ConsumerGroup"] = request.ConsumerGroup;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
+            {
+                query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Key))
+            {
+                query["Key"] = request.Key;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelService))
+            {
+                query["ModelService"] = request.ModelService;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApplicationPerformance",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApplicationPerformanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询PolarDB AI应用性能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationPerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationPerformanceResponse
+        /// </returns>
+        public DescribeApplicationPerformanceResponse DescribeApplicationPerformance(DescribeApplicationPerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApplicationPerformanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询PolarDB AI应用性能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationPerformanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationPerformanceResponse
+        /// </returns>
+        public async Task<DescribeApplicationPerformanceResponse> DescribeApplicationPerformanceAsync(DescribeApplicationPerformanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApplicationPerformanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询当前应用下所有的应用提示词策略列表</para>
         /// </summary>
         /// 
@@ -40073,6 +40377,134 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询PolarClaw异步任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawTaskResponse
+        /// </returns>
+        public DescribePolarClawTaskResponse DescribePolarClawTaskWithOptions(DescribePolarClawTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarClawTask",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarClawTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询PolarClaw异步任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawTaskResponse
+        /// </returns>
+        public async Task<DescribePolarClawTaskResponse> DescribePolarClawTaskWithOptionsAsync(DescribePolarClawTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePolarClawTask",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePolarClawTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询PolarClaw异步任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawTaskResponse
+        /// </returns>
+        public DescribePolarClawTaskResponse DescribePolarClawTask(DescribePolarClawTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePolarClawTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询PolarClaw异步任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribePolarClawTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePolarClawTaskResponse
+        /// </returns>
+        public async Task<DescribePolarClawTaskResponse> DescribePolarClawTaskAsync(DescribePolarClawTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePolarClawTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取PolarFS实例详情</para>
         /// </summary>
         /// 
@@ -47797,6 +48229,126 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>列出PolarClaw设备配对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPolarClawDevicePairsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPolarClawDevicePairsResponse
+        /// </returns>
+        public ListPolarClawDevicePairsResponse ListPolarClawDevicePairsWithOptions(ListPolarClawDevicePairsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPolarClawDevicePairs",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPolarClawDevicePairsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出PolarClaw设备配对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPolarClawDevicePairsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPolarClawDevicePairsResponse
+        /// </returns>
+        public async Task<ListPolarClawDevicePairsResponse> ListPolarClawDevicePairsWithOptionsAsync(ListPolarClawDevicePairsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPolarClawDevicePairs",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPolarClawDevicePairsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出PolarClaw设备配对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPolarClawDevicePairsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPolarClawDevicePairsResponse
+        /// </returns>
+        public ListPolarClawDevicePairsResponse ListPolarClawDevicePairs(ListPolarClawDevicePairsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListPolarClawDevicePairsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出PolarClaw设备配对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPolarClawDevicePairsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPolarClawDevicePairsResponse
+        /// </returns>
+        public async Task<ListPolarClawDevicePairsResponse> ListPolarClawDevicePairsAsync(ListPolarClawDevicePairsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListPolarClawDevicePairsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the tags that are added to one or more PolarDB clusters, or the PolarDB clusters to which one or more tags are added.</para>
         /// </summary>
         /// 
@@ -48125,6 +48677,134 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagResourcesForRegionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>登录PolarClaw Channel</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LoginPolarClawChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LoginPolarClawChannelResponse
+        /// </returns>
+        public LoginPolarClawChannelResponse LoginPolarClawChannelWithOptions(LoginPolarClawChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LoginPolarClawChannel",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LoginPolarClawChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>登录PolarClaw Channel</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LoginPolarClawChannelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LoginPolarClawChannelResponse
+        /// </returns>
+        public async Task<LoginPolarClawChannelResponse> LoginPolarClawChannelWithOptionsAsync(LoginPolarClawChannelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelId))
+            {
+                query["ChannelId"] = request.ChannelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LoginPolarClawChannel",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LoginPolarClawChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>登录PolarClaw Channel</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LoginPolarClawChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LoginPolarClawChannelResponse
+        /// </returns>
+        public LoginPolarClawChannelResponse LoginPolarClawChannel(LoginPolarClawChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return LoginPolarClawChannelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>登录PolarClaw Channel</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LoginPolarClawChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LoginPolarClawChannelResponse
+        /// </returns>
+        public async Task<LoginPolarClawChannelResponse> LoginPolarClawChannelAsync(LoginPolarClawChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await LoginPolarClawChannelWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -61941,6 +62621,134 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>拒绝PolarClaw设备配对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RejectPolarClawDevicePairRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectPolarClawDevicePairResponse
+        /// </returns>
+        public RejectPolarClawDevicePairResponse RejectPolarClawDevicePairWithOptions(RejectPolarClawDevicePairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PairRequestId))
+            {
+                query["PairRequestId"] = request.PairRequestId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RejectPolarClawDevicePair",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RejectPolarClawDevicePairResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拒绝PolarClaw设备配对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RejectPolarClawDevicePairRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectPolarClawDevicePairResponse
+        /// </returns>
+        public async Task<RejectPolarClawDevicePairResponse> RejectPolarClawDevicePairWithOptionsAsync(RejectPolarClawDevicePairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PairRequestId))
+            {
+                query["PairRequestId"] = request.PairRequestId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RejectPolarClawDevicePair",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RejectPolarClawDevicePairResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拒绝PolarClaw设备配对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RejectPolarClawDevicePairRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectPolarClawDevicePairResponse
+        /// </returns>
+        public RejectPolarClawDevicePairResponse RejectPolarClawDevicePair(RejectPolarClawDevicePairRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RejectPolarClawDevicePairWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>拒绝PolarClaw设备配对</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RejectPolarClawDevicePairRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RejectPolarClawDevicePairResponse
+        /// </returns>
+        public async Task<RejectPolarClawDevicePairResponse> RejectPolarClawDevicePairAsync(RejectPolarClawDevicePairRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RejectPolarClawDevicePairWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除应用环境变量</para>
         /// </summary>
         /// 
@@ -62297,6 +63105,134 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveDBClusterFromGDNWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除PolarClaw已配对设备</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemovePolarClawDevicePairRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemovePolarClawDevicePairResponse
+        /// </returns>
+        public RemovePolarClawDevicePairResponse RemovePolarClawDevicePairWithOptions(RemovePolarClawDevicePairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemovePolarClawDevicePair",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemovePolarClawDevicePairResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除PolarClaw已配对设备</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemovePolarClawDevicePairRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemovePolarClawDevicePairResponse
+        /// </returns>
+        public async Task<RemovePolarClawDevicePairResponse> RemovePolarClawDevicePairWithOptionsAsync(RemovePolarClawDevicePairRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceId))
+            {
+                query["DeviceId"] = request.DeviceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemovePolarClawDevicePair",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemovePolarClawDevicePairResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除PolarClaw已配对设备</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemovePolarClawDevicePairRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemovePolarClawDevicePairResponse
+        /// </returns>
+        public RemovePolarClawDevicePairResponse RemovePolarClawDevicePair(RemovePolarClawDevicePairRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemovePolarClawDevicePairWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移除PolarClaw已配对设备</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemovePolarClawDevicePairRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemovePolarClawDevicePairResponse
+        /// </returns>
+        public async Task<RemovePolarClawDevicePairResponse> RemovePolarClawDevicePairAsync(RemovePolarClawDevicePairRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemovePolarClawDevicePairWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

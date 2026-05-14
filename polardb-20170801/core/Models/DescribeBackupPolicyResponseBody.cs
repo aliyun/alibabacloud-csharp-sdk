@@ -77,6 +77,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string SrcType { get; set; }
 
+                [NameInMap("StorageClass")]
+                [Validation(Required=false)]
+                public string StorageClass { get; set; }
+
             }
 
         }
