@@ -722,7 +722,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <para>创建Airflow</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateAirflowRequest
         /// </param>
         /// <param name="runtime">
@@ -732,13 +732,23 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <returns>
         /// CreateAirflowResponse
         /// </returns>
-        public CreateAirflowResponse CreateAirflowWithOptions(CreateAirflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateAirflowResponse CreateAirflowWithOptions(CreateAirflowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAirflowShrinkRequest request = new CreateAirflowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataMountInfoList))
+            {
+                request.DataMountInfoListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataMountInfoList, "DataMountInfoList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AirflowName))
             {
                 query["AirflowName"] = request.AirflowName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AirflowVersion))
+            {
+                query["AirflowVersion"] = request.AirflowVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSpec))
             {
@@ -752,9 +762,21 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["DagsDir"] = request.DagsDir;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataMountInfoListShrink))
+            {
+                query["DataMountInfoList"] = request.DataMountInfoListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableServerless))
+            {
+                query["EnableServerless"] = request.EnableServerless;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GracefulShutdownTimeout))
+            {
+                query["GracefulShutdownTimeout"] = request.GracefulShutdownTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
             {
@@ -824,7 +846,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <para>创建Airflow</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateAirflowRequest
         /// </param>
         /// <param name="runtime">
@@ -834,13 +856,23 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <returns>
         /// CreateAirflowResponse
         /// </returns>
-        public async Task<CreateAirflowResponse> CreateAirflowWithOptionsAsync(CreateAirflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateAirflowResponse> CreateAirflowWithOptionsAsync(CreateAirflowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAirflowShrinkRequest request = new CreateAirflowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataMountInfoList))
+            {
+                request.DataMountInfoListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataMountInfoList, "DataMountInfoList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AirflowName))
             {
                 query["AirflowName"] = request.AirflowName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AirflowVersion))
+            {
+                query["AirflowVersion"] = request.AirflowVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppSpec))
             {
@@ -854,9 +886,21 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["DagsDir"] = request.DagsDir;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataMountInfoListShrink))
+            {
+                query["DataMountInfoList"] = request.DataMountInfoListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableServerless))
+            {
+                query["EnableServerless"] = request.EnableServerless;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GracefulShutdownTimeout))
+            {
+                query["GracefulShutdownTimeout"] = request.GracefulShutdownTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
             {
@@ -9738,7 +9782,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <para>更新UpdateAirflow</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateAirflowRequest
         /// </param>
         /// <param name="runtime">
@@ -9748,9 +9792,15 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <returns>
         /// UpdateAirflowResponse
         /// </returns>
-        public UpdateAirflowResponse UpdateAirflowWithOptions(UpdateAirflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public UpdateAirflowResponse UpdateAirflowWithOptions(UpdateAirflowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAirflowShrinkRequest request = new UpdateAirflowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataMountInfoList))
+            {
+                request.DataMountInfoListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataMountInfoList, "DataMountInfoList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AirflowId))
             {
@@ -9772,9 +9822,21 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["DagsDir"] = request.DagsDir;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataMountInfoListShrink))
+            {
+                query["DataMountInfoList"] = request.DataMountInfoListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableServerless))
+            {
+                query["EnableServerless"] = request.EnableServerless;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GracefulShutdownTimeout))
+            {
+                query["GracefulShutdownTimeout"] = request.GracefulShutdownTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginsDir))
             {
@@ -9820,7 +9882,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <para>更新UpdateAirflow</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// UpdateAirflowRequest
         /// </param>
         /// <param name="runtime">
@@ -9830,9 +9892,15 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <returns>
         /// UpdateAirflowResponse
         /// </returns>
-        public async Task<UpdateAirflowResponse> UpdateAirflowWithOptionsAsync(UpdateAirflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<UpdateAirflowResponse> UpdateAirflowWithOptionsAsync(UpdateAirflowRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAirflowShrinkRequest request = new UpdateAirflowShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DataMountInfoList))
+            {
+                request.DataMountInfoListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DataMountInfoList, "DataMountInfoList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AirflowId))
             {
@@ -9854,9 +9922,21 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["DagsDir"] = request.DagsDir;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DataMountInfoListShrink))
+            {
+                query["DataMountInfoList"] = request.DataMountInfoListShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableServerless))
+            {
+                query["EnableServerless"] = request.EnableServerless;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GracefulShutdownTimeout))
+            {
+                query["GracefulShutdownTimeout"] = request.GracefulShutdownTimeout;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginsDir))
             {

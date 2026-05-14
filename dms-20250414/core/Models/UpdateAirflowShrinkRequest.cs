@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
-    public class UpdateAirflowRequest : TeaModel {
+    public class UpdateAirflowShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
         [NameInMap("DataMountInfoList")]
         [Validation(Required=false)]
-        public List<DataMountInfo> DataMountInfoList { get; set; }
+        public string DataMountInfoListShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

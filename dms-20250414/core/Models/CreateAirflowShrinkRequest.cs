@@ -8,18 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
-    public class UpdateAirflowRequest : TeaModel {
+    public class CreateAirflowShrinkRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
-        /// <b>Example:</b>
-        /// <para>af-test****</para>
-        /// </summary>
-        [NameInMap("AirflowId")]
-        [Validation(Required=false)]
-        public string AirflowId { get; set; }
-
-        /// <summary>
         /// <b>Example:</b>
         /// <para>testairflow</para>
         /// </summary>
@@ -28,6 +20,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AirflowName { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>3.1</para>
+        /// </summary>
+        [NameInMap("AirflowVersion")]
+        [Validation(Required=false)]
+        public string AirflowVersion { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SMALL</para>
         /// </summary>
@@ -53,11 +55,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
         [NameInMap("DataMountInfoList")]
         [Validation(Required=false)]
-        public List<DataMountInfo> DataMountInfoList { get; set; }
+        public string DataMountInfoListShrink { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>test airflow</para>
+        /// <para>order scheduler</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -76,6 +78,26 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? GracefulShutdownTimeout { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>oss-test</para>
+        /// </summary>
+        [NameInMap("OssBucketName")]
+        [Validation(Required=false)]
+        public string OssBucketName { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>/airflow</para>
+        /// </summary>
+        [NameInMap("OssPath")]
+        [Validation(Required=false)]
+        public string OssPath { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>default/plugins</para>
         /// </summary>
@@ -92,6 +114,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequirementFile { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sg-bp108t8ldzeyk1****</para>
+        /// </summary>
+        [NameInMap("SecurityGroupId")]
+        [Validation(Required=false)]
+        public string SecurityGroupId { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>default/startup.sh</para>
         /// </summary>
@@ -100,6 +132,29 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string StartupFile { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-8vbaf073jawozfp****</para>
+        /// </summary>
+        [NameInMap("VSwitchId")]
+        [Validation(Required=false)]
+        public string VSwitchId { get; set; }
+
+        /// <summary>
+        /// <para>VPC ID。</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-uf63r6coyiw9o5****</para>
+        /// </summary>
+        [NameInMap("VpcId")]
+        [Validation(Required=false)]
+        public string VpcId { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -111,11 +166,19 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>863024238280****</para>
+        /// <para>8630242382****</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou-h</para>
+        /// </summary>
+        [NameInMap("ZoneId")]
+        [Validation(Required=false)]
+        public string ZoneId { get; set; }
 
     }
 

@@ -71,6 +71,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>3.1</para>
+            /// </summary>
+            [NameInMap("AirflowVersion")]
+            [Validation(Required=false)]
+            public string AirflowVersion { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>SMALL</para>
             /// </summary>
             [NameInMap("AppSpec")]
@@ -85,6 +93,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string AppType { get; set; }
 
+            [NameInMap("CustomAirflowCfg")]
+            [Validation(Required=false)]
+            public List<string> CustomAirflowCfg { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>default/dags</para>
@@ -92,6 +104,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("DagsDir")]
             [Validation(Required=false)]
             public string DagsDir { get; set; }
+
+            [NameInMap("DataMountInfoList")]
+            [Validation(Required=false)]
+            public List<DataMountInfo> DataMountInfoList { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -109,6 +125,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            [NameInMap("EnableServerless")]
+            [Validation(Required=false)]
+            public bool? EnableServerless { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2025-08-12T05:46:01.000+0000</para>
@@ -116,6 +136,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("GmtCreated")]
             [Validation(Required=false)]
             public string GmtCreated { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>60</para>
+            /// </summary>
+            [NameInMap("GracefulShutdownTimeout")]
+            [Validation(Required=false)]
+            public int? GracefulShutdownTimeout { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

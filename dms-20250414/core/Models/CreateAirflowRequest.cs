@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AirflowName { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>3.1</para>
+        /// </summary>
+        [NameInMap("AirflowVersion")]
+        [Validation(Required=false)]
+        public string AirflowVersion { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,15 +53,29 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string DagsDir { get; set; }
 
+        [NameInMap("DataMountInfoList")]
+        [Validation(Required=false)]
+        public List<DataMountInfo> DataMountInfoList { get; set; }
+
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>order scheduler</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("EnableServerless")]
+        [Validation(Required=false)]
+        public bool? EnableServerless { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>60</para>
+        /// </summary>
+        [NameInMap("GracefulShutdownTimeout")]
+        [Validation(Required=false)]
+        public int? GracefulShutdownTimeout { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -151,8 +173,6 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>
         /// </summary>
