@@ -2373,6 +2373,136 @@ namespace AlibabaCloud.SDK.Searchplat20240529
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取JinaAiReader解析结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJinaAiReaderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJinaAiReaderResponse
+        /// </returns>
+        public GetJinaAiReaderResponse GetJinaAiReaderWithOptions(string workspaceName, string serviceId, GetJinaAiReaderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJinaAiReader",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/jina-ai-reader/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJinaAiReaderResponse>(Execute(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取JinaAiReader解析结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJinaAiReaderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJinaAiReaderResponse
+        /// </returns>
+        public async Task<GetJinaAiReaderResponse> GetJinaAiReaderWithOptionsAsync(string workspaceName, string serviceId, GetJinaAiReaderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Url))
+            {
+                body["url"] = request.Url;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetJinaAiReader",
+                Version = "2024-05-29",
+                Protocol = "HTTPS",
+                Pathname = "/v3/openapi/workspaces/" + workspaceName + "/jina-ai-reader/" + serviceId,
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetJinaAiReaderResponse>(await ExecuteAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取JinaAiReader解析结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJinaAiReaderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJinaAiReaderResponse
+        /// </returns>
+        public GetJinaAiReaderResponse GetJinaAiReader(string workspaceName, string serviceId, GetJinaAiReaderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetJinaAiReaderWithOptions(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取JinaAiReader解析结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetJinaAiReaderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetJinaAiReaderResponse
+        /// </returns>
+        public async Task<GetJinaAiReaderResponse> GetJinaAiReaderAsync(string workspaceName, string serviceId, GetJinaAiReaderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetJinaAiReaderWithOptionsAsync(workspaceName, serviceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查看memory详情</para>
         /// </summary>
         /// 
