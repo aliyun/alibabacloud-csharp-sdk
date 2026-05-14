@@ -700,6 +700,402 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>检测budgetName是否存在</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckBudgetNameExistsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckBudgetNameExistsResponse
+        /// </returns>
+        public CheckBudgetNameExistsResponse CheckBudgetNameExistsWithOptions(CheckBudgetNameExistsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
+            {
+                body["BudgetName"] = request.BudgetName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckBudgetNameExists",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckBudgetNameExistsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检测budgetName是否存在</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckBudgetNameExistsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckBudgetNameExistsResponse
+        /// </returns>
+        public async Task<CheckBudgetNameExistsResponse> CheckBudgetNameExistsWithOptionsAsync(CheckBudgetNameExistsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
+            {
+                body["BudgetName"] = request.BudgetName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckBudgetNameExists",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckBudgetNameExistsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检测budgetName是否存在</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckBudgetNameExistsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckBudgetNameExistsResponse
+        /// </returns>
+        public CheckBudgetNameExistsResponse CheckBudgetNameExists(CheckBudgetNameExistsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckBudgetNameExistsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检测budgetName是否存在</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckBudgetNameExistsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckBudgetNameExistsResponse
+        /// </returns>
+        public async Task<CheckBudgetNameExistsResponse> CheckBudgetNameExistsAsync(CheckBudgetNameExistsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckBudgetNameExistsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建预算</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateBudgetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBudgetResponse
+        /// </returns>
+        public CreateBudgetResponse CreateBudgetWithOptions(CreateBudgetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateBudgetShrinkRequest request = new CreateBudgetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CycleQuota))
+            {
+                request.CycleQuotaShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CycleQuota, "CycleQuota", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
+            {
+                request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryFilter))
+            {
+                request.QueryFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryFilter, "QueryFilter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WarnConfs))
+            {
+                request.WarnConfsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WarnConfs, "WarnConfs", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
+            {
+                body["BudgetName"] = request.BudgetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetType))
+            {
+                body["BudgetType"] = request.BudgetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleEndPeriod))
+            {
+                body["CycleEndPeriod"] = request.CycleEndPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleQuotaShrink))
+            {
+                body["CycleQuota"] = request.CycleQuotaShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleStartPeriod))
+            {
+                body["CycleStartPeriod"] = request.CycleStartPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleType))
+            {
+                body["CycleType"] = request.CycleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metric))
+            {
+                body["Metric"] = request.Metric;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFilterShrink))
+            {
+                body["QueryFilter"] = request.QueryFilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quota))
+            {
+                body["Quota"] = request.Quota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaType))
+            {
+                body["QuotaType"] = request.QuotaType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarnConfsShrink))
+            {
+                body["WarnConfs"] = request.WarnConfsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBudget",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBudgetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建预算</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateBudgetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBudgetResponse
+        /// </returns>
+        public async Task<CreateBudgetResponse> CreateBudgetWithOptionsAsync(CreateBudgetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateBudgetShrinkRequest request = new CreateBudgetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CycleQuota))
+            {
+                request.CycleQuotaShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CycleQuota, "CycleQuota", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
+            {
+                request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryFilter))
+            {
+                request.QueryFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryFilter, "QueryFilter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WarnConfs))
+            {
+                request.WarnConfsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WarnConfs, "WarnConfs", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
+            {
+                body["BudgetName"] = request.BudgetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetType))
+            {
+                body["BudgetType"] = request.BudgetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleEndPeriod))
+            {
+                body["CycleEndPeriod"] = request.CycleEndPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleQuotaShrink))
+            {
+                body["CycleQuota"] = request.CycleQuotaShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleStartPeriod))
+            {
+                body["CycleStartPeriod"] = request.CycleStartPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleType))
+            {
+                body["CycleType"] = request.CycleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metric))
+            {
+                body["Metric"] = request.Metric;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFilterShrink))
+            {
+                body["QueryFilter"] = request.QueryFilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quota))
+            {
+                body["Quota"] = request.Quota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaType))
+            {
+                body["QuotaType"] = request.QuotaType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarnConfsShrink))
+            {
+                body["WarnConfs"] = request.WarnConfsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateBudget",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateBudgetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建预算</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBudgetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBudgetResponse
+        /// </returns>
+        public CreateBudgetResponse CreateBudget(CreateBudgetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateBudgetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建预算</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateBudgetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateBudgetResponse
+        /// </returns>
+        public async Task<CreateBudgetResponse> CreateBudgetAsync(CreateBudgetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateBudgetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建财务单元</para>
         /// </summary>
         /// 
@@ -2320,6 +2716,302 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteReportDefinitionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单个Budget</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBudgetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBudgetResponse
+        /// </returns>
+        public DescribeBudgetResponse DescribeBudgetWithOptions(DescribeBudgetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
+            {
+                body["BudgetName"] = request.BudgetName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBudget",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBudgetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单个Budget</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBudgetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBudgetResponse
+        /// </returns>
+        public async Task<DescribeBudgetResponse> DescribeBudgetWithOptionsAsync(DescribeBudgetRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
+            {
+                body["BudgetName"] = request.BudgetName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBudget",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBudgetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单个Budget</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBudgetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBudgetResponse
+        /// </returns>
+        public DescribeBudgetResponse DescribeBudget(DescribeBudgetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeBudgetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询单个Budget</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBudgetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBudgetResponse
+        /// </returns>
+        public async Task<DescribeBudgetResponse> DescribeBudgetAsync(DescribeBudgetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeBudgetWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询预算列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBudgetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBudgetsResponse
+        /// </returns>
+        public DescribeBudgetsResponse DescribeBudgetsWithOptions(DescribeBudgetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
+            {
+                body["BudgetName"] = request.BudgetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetType))
+            {
+                body["BudgetType"] = request.BudgetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireStatus))
+            {
+                body["ExpireStatus"] = request.ExpireStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBudgets",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBudgetsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询预算列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBudgetsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBudgetsResponse
+        /// </returns>
+        public async Task<DescribeBudgetsResponse> DescribeBudgetsWithOptionsAsync(DescribeBudgetsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
+            {
+                body["BudgetName"] = request.BudgetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetType))
+            {
+                body["BudgetType"] = request.BudgetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireStatus))
+            {
+                body["ExpireStatus"] = request.ExpireStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeBudgets",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeBudgetsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询预算列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBudgetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBudgetsResponse
+        /// </returns>
+        public DescribeBudgetsResponse DescribeBudgets(DescribeBudgetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeBudgetsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询预算列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeBudgetsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeBudgetsResponse
+        /// </returns>
+        public async Task<DescribeBudgetsResponse> DescribeBudgetsAsync(DescribeBudgetsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeBudgetsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7284,6 +7976,278 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetSavingPlanUserDeductRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新预算</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateBudgetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBudgetResponse
+        /// </returns>
+        public UpdateBudgetResponse UpdateBudgetWithOptions(UpdateBudgetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateBudgetShrinkRequest request = new UpdateBudgetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CycleQuota))
+            {
+                request.CycleQuotaShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CycleQuota, "CycleQuota", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
+            {
+                request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryFilter))
+            {
+                request.QueryFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryFilter, "QueryFilter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WarnConfs))
+            {
+                request.WarnConfsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WarnConfs, "WarnConfs", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
+            {
+                body["BudgetName"] = request.BudgetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetType))
+            {
+                body["BudgetType"] = request.BudgetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleEndPeriod))
+            {
+                body["CycleEndPeriod"] = request.CycleEndPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleQuotaShrink))
+            {
+                body["CycleQuota"] = request.CycleQuotaShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleStartPeriod))
+            {
+                body["CycleStartPeriod"] = request.CycleStartPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleType))
+            {
+                body["CycleType"] = request.CycleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metric))
+            {
+                body["Metric"] = request.Metric;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalBudgetName))
+            {
+                body["OriginalBudgetName"] = request.OriginalBudgetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFilterShrink))
+            {
+                body["QueryFilter"] = request.QueryFilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quota))
+            {
+                body["Quota"] = request.Quota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaType))
+            {
+                body["QuotaType"] = request.QuotaType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarnConfsShrink))
+            {
+                body["WarnConfs"] = request.WarnConfsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBudget",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBudgetResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新预算</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateBudgetRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBudgetResponse
+        /// </returns>
+        public async Task<UpdateBudgetResponse> UpdateBudgetWithOptionsAsync(UpdateBudgetRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateBudgetShrinkRequest request = new UpdateBudgetShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CycleQuota))
+            {
+                request.CycleQuotaShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CycleQuota, "CycleQuota", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EcIdAccountIds))
+            {
+                request.EcIdAccountIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EcIdAccountIds, "EcIdAccountIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.QueryFilter))
+            {
+                request.QueryFilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.QueryFilter, "QueryFilter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WarnConfs))
+            {
+                request.WarnConfsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WarnConfs, "WarnConfs", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIdsShrink))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetName))
+            {
+                body["BudgetName"] = request.BudgetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BudgetType))
+            {
+                body["BudgetType"] = request.BudgetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                body["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleEndPeriod))
+            {
+                body["CycleEndPeriod"] = request.CycleEndPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleQuotaShrink))
+            {
+                body["CycleQuota"] = request.CycleQuotaShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleStartPeriod))
+            {
+                body["CycleStartPeriod"] = request.CycleStartPeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CycleType))
+            {
+                body["CycleType"] = request.CycleType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metric))
+            {
+                body["Metric"] = request.Metric;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalBudgetName))
+            {
+                body["OriginalBudgetName"] = request.OriginalBudgetName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryFilterShrink))
+            {
+                body["QueryFilter"] = request.QueryFilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quota))
+            {
+                body["Quota"] = request.Quota;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaType))
+            {
+                body["QuotaType"] = request.QuotaType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WarnConfsShrink))
+            {
+                body["WarnConfs"] = request.WarnConfsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateBudget",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateBudgetResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新预算</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBudgetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBudgetResponse
+        /// </returns>
+        public UpdateBudgetResponse UpdateBudget(UpdateBudgetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateBudgetWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新预算</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateBudgetRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateBudgetResponse
+        /// </returns>
+        public async Task<UpdateBudgetResponse> UpdateBudgetAsync(UpdateBudgetRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateBudgetWithOptionsAsync(request, runtime);
         }
 
     }
