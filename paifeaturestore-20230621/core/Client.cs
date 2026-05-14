@@ -4973,6 +4973,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
                 request.JoinIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JoinIds, "JoinIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JoinIdsShrink))
             {
                 query["JoinIds"] = request.JoinIdsShrink;
@@ -5025,6 +5029,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
                 request.JoinIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.JoinIds, "JoinIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JoinIdsShrink))
             {
                 query["JoinIds"] = request.JoinIdsShrink;
