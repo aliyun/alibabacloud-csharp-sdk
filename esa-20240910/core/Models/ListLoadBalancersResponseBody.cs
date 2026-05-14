@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 [Validation(Required=false)]
                 public bool? FailoverAcrossPools { get; set; }
 
+                [NameInMap("OriginLevelRetry")]
+                [Validation(Required=false)]
+                public bool? OriginLevelRetry { get; set; }
+
             }
 
             /// <summary>
