@@ -435,7 +435,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a Job Template</para>
+        /// <para>Create a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -501,7 +501,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a Job Template</para>
+        /// <para>Create a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -567,7 +567,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a Job Template</para>
+        /// <para>Create a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -586,7 +586,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a Job Template</para>
+        /// <para>Create a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1005,7 +1005,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete an unused job template. If the template is already used by a job, you cannot delete it.</para>
+        /// <para>Deletes an unused job template. Templates that are used by jobs cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1045,7 +1045,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete an unused job template. If the template is already used by a job, you cannot delete it.</para>
+        /// <para>Deletes an unused job template. Templates that are used by jobs cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1085,7 +1085,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete an unused job template. If the template is already used by a job, you cannot delete it.</para>
+        /// <para>Deletes an unused job template. Templates that are used by jobs cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1104,7 +1104,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete an unused job template. If the template is already used by a job, you cannot delete it.</para>
+        /// <para>Deletes an unused job template. Templates that are used by jobs cannot be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5019,7 +5019,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a Job template</para>
+        /// <para>Updates a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5089,7 +5089,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a Job template</para>
+        /// <para>Updates a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5159,7 +5159,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a Job template</para>
+        /// <para>Updates a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5178,7 +5178,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a Job template</para>
+        /// <para>Updates a job template.</para>
         /// </summary>
         /// 
         /// <param name="request">

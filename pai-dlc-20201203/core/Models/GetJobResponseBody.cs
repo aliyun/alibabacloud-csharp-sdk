@@ -692,6 +692,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
             [Validation(Required=false)]
             public string RestartFailReason { get; set; }
 
+            [NameInMap("RestartLevelType")]
+            [Validation(Required=false)]
+            public string RestartLevelType { get; set; }
+
             [NameInMap("RestartStatus")]
             [Validation(Required=false)]
             public string RestartStatus { get; set; }
