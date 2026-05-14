@@ -221,6 +221,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
+            {
+                body["attributes"] = request.Attributes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRule))
             {
                 body["defaultRule"] = request.DefaultRule;
@@ -295,6 +299,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
+            {
+                body["attributes"] = request.Attributes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRule))
             {
                 body["defaultRule"] = request.DefaultRule;
@@ -2665,6 +2673,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
+            {
+                body["attributes"] = request.Attributes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRule))
             {
                 body["defaultRule"] = request.DefaultRule;
@@ -2727,6 +2739,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Attributes))
+            {
+                body["attributes"] = request.Attributes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultRule))
             {
                 body["defaultRule"] = request.DefaultRule;

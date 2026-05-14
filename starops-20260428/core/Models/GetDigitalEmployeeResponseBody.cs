@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class GetDigitalEmployeeResponseBody : TeaModel {
+        [NameInMap("attributes")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Attributes { get; set; }
+
         /// <summary>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 

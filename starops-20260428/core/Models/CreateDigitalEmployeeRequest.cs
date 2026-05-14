@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class CreateDigitalEmployeeRequest : TeaModel {
+        [NameInMap("attributes")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Attributes { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>test</para>
