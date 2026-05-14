@@ -53,6 +53,36 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
+                [NameInMap("ModulePermissions")]
+                [Validation(Required=false)]
+                public List<ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions> ModulePermissions { get; set; }
+                public class ListProjectRolesResponseBodyPagingInfoProjectRolesModulePermissions : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>2</para>
+                    /// </summary>
+                    [NameInMap("ModuleId")]
+                    [Validation(Required=false)]
+                    public long? ModuleId { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>HoloStudio</para>
+                    /// </summary>
+                    [NameInMap("ModuleName")]
+                    [Validation(Required=false)]
+                    public string ModuleName { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>Read</para>
+                    /// </summary>
+                    [NameInMap("PermissionType")]
+                    [Validation(Required=false)]
+                    public string PermissionType { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The name of the role.</para>
                 /// 
