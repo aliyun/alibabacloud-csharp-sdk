@@ -37749,7 +37749,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <para>Enables or disables the log collection feature for a protected object.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyResourceLogStatusRequest
         /// </param>
         /// <param name="runtime">
@@ -37759,9 +37759,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <returns>
         /// ModifyResourceLogStatusResponse
         /// </returns>
-        public ModifyResourceLogStatusResponse ModifyResourceLogStatusWithOptions(ModifyResourceLogStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifyResourceLogStatusResponse ModifyResourceLogStatusWithOptions(ModifyResourceLogStatusRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyResourceLogStatusShrinkRequest request = new ModifyResourceLogStatusShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TraceConfig))
+            {
+                request.TraceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TraceConfig, "TraceConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -37782,6 +37788,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceConfigShrink))
+            {
+                query["TraceConfig"] = request.TraceConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceStatus))
+            {
+                query["TraceStatus"] = request.TraceStatus;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -37807,7 +37821,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <para>Enables or disables the log collection feature for a protected object.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifyResourceLogStatusRequest
         /// </param>
         /// <param name="runtime">
@@ -37817,9 +37831,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <returns>
         /// ModifyResourceLogStatusResponse
         /// </returns>
-        public async Task<ModifyResourceLogStatusResponse> ModifyResourceLogStatusWithOptionsAsync(ModifyResourceLogStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifyResourceLogStatusResponse> ModifyResourceLogStatusWithOptionsAsync(ModifyResourceLogStatusRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifyResourceLogStatusShrinkRequest request = new ModifyResourceLogStatusShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TraceConfig))
+            {
+                request.TraceConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TraceConfig, "TraceConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
@@ -37840,6 +37860,14 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceConfigShrink))
+            {
+                query["TraceConfig"] = request.TraceConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TraceStatus))
+            {
+                query["TraceStatus"] = request.TraceStatus;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

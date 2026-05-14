@@ -50,6 +50,24 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public bool? Status { get; set; }
 
+            [NameInMap("TraceConfig")]
+            [Validation(Required=false)]
+            public DescribeResourceLogStatusResponseBodyResultTraceConfig TraceConfig { get; set; }
+            public class DescribeResourceLogStatusResponseBodyResultTraceConfig : TeaModel {
+                [NameInMap("RatePerMille")]
+                [Validation(Required=false)]
+                public int? RatePerMille { get; set; }
+
+                [NameInMap("Workspace")]
+                [Validation(Required=false)]
+                public string Workspace { get; set; }
+
+            }
+
+            [NameInMap("TraceStatus")]
+            [Validation(Required=false)]
+            public bool? TraceStatus { get; set; }
+
         }
 
     }

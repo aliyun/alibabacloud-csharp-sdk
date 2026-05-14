@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
-    public class ModifyResourceLogStatusRequest : TeaModel {
+    public class ModifyResourceLogStatusShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
         /// <remarks>
@@ -75,25 +75,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         [NameInMap("TraceConfig")]
         [Validation(Required=false)]
-        public ModifyResourceLogStatusRequestTraceConfig TraceConfig { get; set; }
-        public class ModifyResourceLogStatusRequestTraceConfig : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>0</para>
-            /// </summary>
-            [NameInMap("RatePerMille")]
-            [Validation(Required=false)]
-            public int? RatePerMille { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>cms-test</para>
-            /// </summary>
-            [NameInMap("Workspace")]
-            [Validation(Required=false)]
-            public string Workspace { get; set; }
-
-        }
+        public string TraceConfigShrink { get; set; }
 
         [NameInMap("TraceStatus")]
         [Validation(Required=false)]
