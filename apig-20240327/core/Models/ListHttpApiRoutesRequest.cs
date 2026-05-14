@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListHttpApiRoutesRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>test-svc</para>
+        /// </summary>
+        [NameInMap("backendServiceName")]
+        [Validation(Required=false)]
+        public string BackendServiceName { get; set; }
+
+        /// <summary>
         /// <para>The string that is used to filter routes based on consumer authentication rules. Only authorized APIs are returned.</para>
         /// 
         /// <b>Example:</b>

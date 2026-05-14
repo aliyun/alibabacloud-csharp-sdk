@@ -9907,6 +9907,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackendServiceName))
+            {
+                query["backendServiceName"] = request.BackendServiceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerAuthorizationRuleId))
             {
                 query["consumerAuthorizationRuleId"] = request.ConsumerAuthorizationRuleId;
@@ -10005,6 +10009,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BackendServiceName))
+            {
+                query["backendServiceName"] = request.BackendServiceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerAuthorizationRuleId))
             {
                 query["consumerAuthorizationRuleId"] = request.ConsumerAuthorizationRuleId;
