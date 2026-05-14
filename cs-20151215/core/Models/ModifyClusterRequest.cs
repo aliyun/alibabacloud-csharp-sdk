@@ -84,6 +84,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ClusterName { get; set; }
 
+        [NameInMap("cluster_spec")]
+        [Validation(Required=false)]
+        public string ClusterSpec { get; set; }
+
         /// <summary>
         /// <para>The control plane configurations of an ACK dedicated cluster.</para>
         /// </summary>

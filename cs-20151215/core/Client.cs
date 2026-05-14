@@ -15268,6 +15268,10 @@ namespace AlibabaCloud.SDK.CS20151215
             {
                 body["cluster_name"] = request.ClusterName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
+            {
+                body["cluster_spec"] = request.ClusterSpec;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneConfig))
             {
                 body["control_plane_config"] = request.ControlPlaneConfig;
@@ -15385,6 +15389,10 @@ namespace AlibabaCloud.SDK.CS20151215
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterName))
             {
                 body["cluster_name"] = request.ClusterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterSpec))
+            {
+                body["cluster_spec"] = request.ClusterSpec;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ControlPlaneConfig))
             {
