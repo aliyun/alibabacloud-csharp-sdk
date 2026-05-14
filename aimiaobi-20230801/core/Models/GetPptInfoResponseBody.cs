@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 {
-    public class InitiatePptCreationV2ResponseBody : TeaModel {
+    public class GetPptInfoResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>DataNotExists</para>
@@ -19,27 +19,15 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public InitiatePptCreationV2ResponseBodyData Data { get; set; }
-        public class InitiatePptCreationV2ResponseBodyData : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>本月版本内的配送额度已经用尽，超额使用将走按量后付费，下个月配送额度将重新下发；请知晓</para>
-            /// </summary>
-            [NameInMap("Alert")]
+        public GetPptInfoResponseBodyData Data { get; set; }
+        public class GetPptInfoResponseBodyData : TeaModel {
+            [NameInMap("ExportFileLink")]
             [Validation(Required=false)]
-            public string Alert { get; set; }
+            public List<string> ExportFileLink { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>S1X5ecouBztZelaQ</para>
-            /// </summary>
-            [NameInMap("AppKey")]
-            [Validation(Required=false)]
-            public string AppKey { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>66b25058-d735-47e5-a534-5da93453d3df</para>
+            /// <para>xxx-xxx-xx</para>
             /// </summary>
             [NameInMap("ExportTaskId")]
             [Validation(Required=false)]
@@ -47,15 +35,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para><a href="http://a.com/xxx.png">http://a.com/xxx.png</a></para>
-            /// </summary>
-            [NameInMap("PptArtifactCover")]
-            [Validation(Required=false)]
-            public string PptArtifactCover { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>53059801</para>
+            /// <para>5423431</para>
             /// </summary>
             [NameInMap("PptArtifactId")]
             [Validation(Required=false)]
@@ -63,7 +43,7 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>8485143</para>
+            /// <para>11231232</para>
             /// </summary>
             [NameInMap("PptProcessId")]
             [Validation(Required=false)]
@@ -71,11 +51,19 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>dBBGvT0Toje5887Qw+/IwwMNYfk=</para>
+            /// <para>关于班会主题的PPT</para>
             /// </summary>
-            [NameInMap("Signature")]
+            [NameInMap("Query")]
             [Validation(Required=false)]
-            public string Signature { get; set; }
+            public string Query { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xxx-xxx-xx</para>
+            /// </summary>
+            [NameInMap("TaskId")]
+            [Validation(Required=false)]
+            public string TaskId { get; set; }
 
         }
 

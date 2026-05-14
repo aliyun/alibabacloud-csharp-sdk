@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>中国传统文化艺术的魅力</para>
+        /// </summary>
+        [NameInMap("PptTitle")]
+        [Validation(Required=false)]
+        public string PptTitle { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
         [NameInMap("ProcessType")]
