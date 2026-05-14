@@ -1587,7 +1587,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加已有节点到集群节点池</para>
+        /// <para>Adds existing nodes to a specific node pool. You can add existing ENS instances to an ECK cluster as worker nodes. You can also add removed worker nodes back to the node pool by invoking AttachInstancesToNodePool.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1643,7 +1643,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加已有节点到集群节点池</para>
+        /// <para>Adds existing nodes to a specific node pool. You can add existing ENS instances to an ECK cluster as worker nodes. You can also add removed worker nodes back to the node pool by invoking AttachInstancesToNodePool.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1699,7 +1699,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加已有节点到集群节点池</para>
+        /// <para>Adds existing nodes to a specific node pool. You can add existing ENS instances to an ECK cluster as worker nodes. You can also add removed worker nodes back to the node pool by invoking AttachInstancesToNodePool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1717,7 +1717,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加已有节点到集群节点池</para>
+        /// <para>Adds existing nodes to a specific node pool. You can add existing ENS instances to an ECK cluster as worker nodes. You can also add removed worker nodes back to the node pool by invoking AttachInstancesToNodePool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16711,7 +16711,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询添加已有节点到集群节点池的脚本</para>
+        /// <para>To add existing ENS instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after removing worker nodes, ECK supports manually adding existing nodes to a node pool. You can invoke the DescribeClusterAttachScripts interface to obtain the script for adding existing nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16761,7 +16761,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询添加已有节点到集群节点池的脚本</para>
+        /// <para>To add existing ENS instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after removing worker nodes, ECK supports manually adding existing nodes to a node pool. You can invoke the DescribeClusterAttachScripts interface to obtain the script for adding existing nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16811,7 +16811,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询添加已有节点到集群节点池的脚本</para>
+        /// <para>To add existing ENS instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after removing worker nodes, ECK supports manually adding existing nodes to a node pool. You can invoke the DescribeClusterAttachScripts interface to obtain the script for adding existing nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16829,7 +16829,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询添加已有节点到集群节点池的脚本</para>
+        /// <para>To add existing ENS instances to an ECK cluster as worker nodes, or to re-add node instances to a node pool after removing worker nodes, ECK supports manually adding existing nodes to a node pool. You can invoke the DescribeClusterAttachScripts interface to obtain the script for adding existing nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28302,6 +28302,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["SDGIds"] = request.SDGIdsShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SameDiskId))
+            {
+                query["SameDiskId"] = request.SameDiskId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -28357,6 +28361,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SDGIdsShrink))
             {
                 query["SDGIds"] = request.SDGIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SameDiskId))
+            {
+                query["SameDiskId"] = request.SameDiskId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -50195,7 +50203,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群证书</para>
+        /// <para>Update cluster certificates</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50237,7 +50245,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群证书</para>
+        /// <para>Update cluster certificates</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50279,7 +50287,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群证书</para>
+        /// <para>Update cluster certificates</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50297,7 +50305,7 @@ namespace AlibabaCloud.SDK.Ens20171110
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新集群证书</para>
+        /// <para>Update cluster certificates</para>
         /// </summary>
         /// 
         /// <param name="request">

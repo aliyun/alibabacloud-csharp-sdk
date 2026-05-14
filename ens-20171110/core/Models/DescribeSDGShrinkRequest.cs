@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public string SDGIdsShrink { get; set; }
 
+        [NameInMap("SameDiskId")]
+        [Validation(Required=false)]
+        public bool? SameDiskId { get; set; }
+
     }
 
 }
