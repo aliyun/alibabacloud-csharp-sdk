@@ -17,6 +17,42 @@ namespace AlibabaCloud.SDK.Aliding20230426.Models
             [Validation(Required=false)]
             public InvokeAssistantResponseBodyMessagesContent Content { get; set; }
             public class InvokeAssistantResponseBodyMessagesContent : TeaModel {
+                [NameInMap("aguiContent")]
+                [Validation(Required=false)]
+                public InvokeAssistantResponseBodyMessagesContentAguiContent AguiContent { get; set; }
+                public class InvokeAssistantResponseBodyMessagesContentAguiContent : TeaModel {
+                    [NameInMap("aguiEventList")]
+                    [Validation(Required=false)]
+                    public List<InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList> AguiEventList { get; set; }
+                    public class InvokeAssistantResponseBodyMessagesContentAguiContentAguiEventList : TeaModel {
+                        [NameInMap("activityType")]
+                        [Validation(Required=false)]
+                        public string ActivityType { get; set; }
+
+                        [NameInMap("content")]
+                        [Validation(Required=false)]
+                        public object Content { get; set; }
+
+                        [NameInMap("messageId")]
+                        [Validation(Required=false)]
+                        public string MessageId { get; set; }
+
+                        [NameInMap("replace")]
+                        [Validation(Required=false)]
+                        public bool? Replace { get; set; }
+
+                        [NameInMap("timestamp")]
+                        [Validation(Required=false)]
+                        public long? Timestamp { get; set; }
+
+                        [NameInMap("type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("cardCallback")]
                 [Validation(Required=false)]
                 public InvokeAssistantResponseBodyMessagesContentCardCallback CardCallback { get; set; }
