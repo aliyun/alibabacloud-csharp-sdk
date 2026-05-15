@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? CycleDuration { get; set; }
 
+        [NameInMap("DelayTime")]
+        [Validation(Required=false)]
+        public int? DelayTime { get; set; }
+
         /// <summary>
         /// <para>The main streaming domain.</para>
         /// <para>This parameter is required.</para>
@@ -67,6 +71,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
+
+        [NameInMap("FormatConfig")]
+        [Validation(Required=false)]
+        public bool? FormatConfig { get; set; }
 
         /// <summary>
         /// <para>Specifies whether to enable on-demand recording. Valid values:</para>
@@ -86,6 +94,40 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        [NameInMap("RecordFormat")]
+        [Validation(Required=false)]
+        public List<UpdateLiveRecordVodConfigRequestRecordFormat> RecordFormat { get; set; }
+        public class UpdateLiveRecordVodConfigRequestRecordFormat : TeaModel {
+            [NameInMap("AutoCompose")]
+            [Validation(Required=false)]
+            public string AutoCompose { get; set; }
+
+            [NameInMap("Format")]
+            [Validation(Required=false)]
+            public string Format { get; set; }
+
+            [NameInMap("ProcessMethod")]
+            [Validation(Required=false)]
+            public string ProcessMethod { get; set; }
+
+            [NameInMap("ProcessTemplateId")]
+            [Validation(Required=false)]
+            public string ProcessTemplateId { get; set; }
+
+            [NameInMap("SliceDuration")]
+            [Validation(Required=false)]
+            public int? SliceDuration { get; set; }
+
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public string Tags { get; set; }
+
+            [NameInMap("VideoProcess")]
+            [Validation(Required=false)]
+            public string VideoProcess { get; set; }
+
+        }
+
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -100,9 +142,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string StreamName { get; set; }
 
+        [NameInMap("TranscodeTemplates")]
+        [Validation(Required=false)]
+        public List<string> TranscodeTemplates { get; set; }
+
         /// <summary>
         /// <para>The ID of the transcoding template group in ApsaraVideo VOD.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e2d796d3bb5fd8049d32bff62f94****</para>

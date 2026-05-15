@@ -37,13 +37,69 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 [Validation(Required=false)]
                 public int? CycleDuration { get; set; }
 
+                [NameInMap("DelayTime")]
+                [Validation(Required=false)]
+                public int? DelayTime { get; set; }
+
                 [NameInMap("DomainName")]
                 [Validation(Required=false)]
                 public string DomainName { get; set; }
 
+                [NameInMap("FormatConfig")]
+                [Validation(Required=false)]
+                public bool? FormatConfig { get; set; }
+
                 [NameInMap("OnDemand")]
                 [Validation(Required=false)]
                 public int? OnDemand { get; set; }
+
+                [NameInMap("RecordContent")]
+                [Validation(Required=false)]
+                public string RecordContent { get; set; }
+
+                [NameInMap("RecordFormatList")]
+                [Validation(Required=false)]
+                public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatList RecordFormatList { get; set; }
+                public class DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatList : TeaModel {
+                    [NameInMap("RecordFormat")]
+                    [Validation(Required=false)]
+                    public List<DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat> RecordFormat { get; set; }
+                    public class DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfigRecordFormatListRecordFormat : TeaModel {
+                        [NameInMap("AutoCompose")]
+                        [Validation(Required=false)]
+                        public string AutoCompose { get; set; }
+
+                        [NameInMap("Format")]
+                        [Validation(Required=false)]
+                        public string Format { get; set; }
+
+                        [NameInMap("ProcessMethod")]
+                        [Validation(Required=false)]
+                        public string ProcessMethod { get; set; }
+
+                        [NameInMap("ProcessTemplateId")]
+                        [Validation(Required=false)]
+                        public string ProcessTemplateId { get; set; }
+
+                        [NameInMap("SliceDuration")]
+                        [Validation(Required=false)]
+                        public int? SliceDuration { get; set; }
+
+                        [NameInMap("Tags")]
+                        [Validation(Required=false)]
+                        public string Tags { get; set; }
+
+                        [NameInMap("VideoProcess")]
+                        [Validation(Required=false)]
+                        public string VideoProcess { get; set; }
+
+                    }
+
+                }
+
+                [NameInMap("SpaceId")]
+                [Validation(Required=false)]
+                public string SpaceId { get; set; }
 
                 [NameInMap("StorageLocation")]
                 [Validation(Required=false)]
@@ -52,6 +108,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
                 [NameInMap("StreamName")]
                 [Validation(Required=false)]
                 public string StreamName { get; set; }
+
+                [NameInMap("TranscodeTemplates")]
+                [Validation(Required=false)]
+                public string TranscodeTemplates { get; set; }
 
                 [NameInMap("VodTranscodeGroupId")]
                 [Validation(Required=false)]
