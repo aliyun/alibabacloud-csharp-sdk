@@ -362,6 +362,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             {
                 body["deliveryOrderType"] = request.DeliveryOrderType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Exclusive))
+            {
+                body["exclusive"] = request.Exclusive;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReceiveTps))
             {
                 body["maxReceiveTps"] = request.MaxReceiveTps;
@@ -438,6 +442,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeliveryOrderType))
             {
                 body["deliveryOrderType"] = request.DeliveryOrderType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Exclusive))
+            {
+                body["exclusive"] = request.Exclusive;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxReceiveTps))
             {

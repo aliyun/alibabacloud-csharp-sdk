@@ -120,6 +120,10 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
             [Validation(Required=false)]
             public string DeliveryOrderType { get; set; }
 
+            [NameInMap("exclusive")]
+            [Validation(Required=false)]
+            public bool? Exclusive { get; set; }
+
             /// <summary>
             /// <para>The ID of the instance.</para>
             /// 
