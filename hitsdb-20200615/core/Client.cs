@@ -620,6 +620,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalAliBid))
+            {
+                query["AdditionalAliBid"] = request.AdditionalAliBid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalAliUid))
+            {
+                query["AdditionalAliUid"] = request.AdditionalAliUid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalVpcId))
             {
                 query["AdditionalVpcId"] = request.AdditionalVpcId;
@@ -678,6 +686,14 @@ namespace AlibabaCloud.SDK.Hitsdb20200615
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalAliBid))
+            {
+                query["AdditionalAliBid"] = request.AdditionalAliBid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalAliUid))
+            {
+                query["AdditionalAliUid"] = request.AdditionalAliUid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalVpcId))
             {
                 query["AdditionalVpcId"] = request.AdditionalVpcId;

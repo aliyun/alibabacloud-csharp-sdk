@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Hitsdb20200615.Models
 {
     public class CreateAdditionalVpcLinkRequest : TeaModel {
+        [NameInMap("AdditionalAliBid")]
+        [Validation(Required=false)]
+        public string AdditionalAliBid { get; set; }
+
+        [NameInMap("AdditionalAliUid")]
+        [Validation(Required=false)]
+        public string AdditionalAliUid { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
