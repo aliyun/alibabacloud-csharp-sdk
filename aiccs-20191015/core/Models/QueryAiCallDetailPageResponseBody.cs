@@ -51,6 +51,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>示例值</para>
+                /// </summary>
+                [NameInMap("BranchName")]
+                [Validation(Required=false)]
+                public string BranchName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>9</para>
                 /// </summary>
                 [NameInMap("BranchVersionId")]
@@ -184,6 +192,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 [NameInMap("TaskId")]
                 [Validation(Required=false)]
                 public string TaskId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>示例值示例值</para>
+                /// </summary>
+                [NameInMap("VersionName")]
+                [Validation(Required=false)]
+                public string VersionName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>55</para>
+                /// </summary>
+                [NameInMap("VersionNo")]
+                [Validation(Required=false)]
+                public long? VersionNo { get; set; }
 
             }
 

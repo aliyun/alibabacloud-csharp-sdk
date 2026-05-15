@@ -2162,10 +2162,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 query["ApplicationCode"] = request.ApplicationCode;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationName))
-            {
-                query["ApplicationName"] = request.ApplicationName;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDayShrink))
             {
                 query["CallDay"] = request.CallDayShrink;
@@ -2297,10 +2293,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationCode))
             {
                 query["ApplicationCode"] = request.ApplicationCode;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationName))
-            {
-                query["ApplicationName"] = request.ApplicationName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallDayShrink))
             {
@@ -17311,6 +17303,166 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>分页查询智能体列表（代运营模式V2）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PageQueryAgentListNewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PageQueryAgentListNewResponse
+        /// </returns>
+        public PageQueryAgentListNewResponse PageQueryAgentListNewWithOptions(PageQueryAgentListNewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAvailable))
+            {
+                query["IsAvailable"] = request.IsAvailable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["PageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PageQueryAgentListNew",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PageQueryAgentListNewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询智能体列表（代运营模式V2）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PageQueryAgentListNewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PageQueryAgentListNewResponse
+        /// </returns>
+        public async Task<PageQueryAgentListNewResponse> PageQueryAgentListNewWithOptionsAsync(PageQueryAgentListNewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsAvailable))
+            {
+                query["IsAvailable"] = request.IsAvailable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageIndex))
+            {
+                query["PageIndex"] = request.PageIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PageQueryAgentListNew",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PageQueryAgentListNewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询智能体列表（代运营模式V2）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PageQueryAgentListNewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PageQueryAgentListNewResponse
+        /// </returns>
+        public PageQueryAgentListNewResponse PageQueryAgentListNew(PageQueryAgentListNewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PageQueryAgentListNewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询智能体列表（代运营模式V2）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PageQueryAgentListNewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PageQueryAgentListNewResponse
+        /// </returns>
+        public async Task<PageQueryAgentListNewResponse> PageQueryAgentListNewAsync(PageQueryAgentListNewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PageQueryAgentListNewWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询明细记录</para>
         /// </summary>
         /// 
@@ -18079,6 +18231,142 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryAiVoiceAgentDetailWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询智能体详情（代运营模式V2）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAiVoiceAgentDetailNewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAiVoiceAgentDetailNewResponse
+        /// </returns>
+        public QueryAiVoiceAgentDetailNewResponse QueryAiVoiceAgentDetailNewWithOptions(QueryAiVoiceAgentDetailNewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchId))
+            {
+                query["BranchId"] = request.BranchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAiVoiceAgentDetailNew",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAiVoiceAgentDetailNewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询智能体详情（代运营模式V2）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAiVoiceAgentDetailNewRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAiVoiceAgentDetailNewResponse
+        /// </returns>
+        public async Task<QueryAiVoiceAgentDetailNewResponse> QueryAiVoiceAgentDetailNewWithOptionsAsync(QueryAiVoiceAgentDetailNewRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchId))
+            {
+                query["BranchId"] = request.BranchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["VersionId"] = request.VersionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAiVoiceAgentDetailNew",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAiVoiceAgentDetailNewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询智能体详情（代运营模式V2）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAiVoiceAgentDetailNewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAiVoiceAgentDetailNewResponse
+        /// </returns>
+        public QueryAiVoiceAgentDetailNewResponse QueryAiVoiceAgentDetailNew(QueryAiVoiceAgentDetailNewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryAiVoiceAgentDetailNewWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询智能体详情（代运营模式V2）</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAiVoiceAgentDetailNewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAiVoiceAgentDetailNewResponse
+        /// </returns>
+        public async Task<QueryAiVoiceAgentDetailNewResponse> QueryAiVoiceAgentDetailNewAsync(QueryAiVoiceAgentDetailNewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryAiVoiceAgentDetailNewWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

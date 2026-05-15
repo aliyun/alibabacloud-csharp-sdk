@@ -26,14 +26,6 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ApplicationCode { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>示例值示例值</para>
-        /// </summary>
-        [NameInMap("ApplicationName")]
-        [Validation(Required=false)]
-        public string ApplicationName { get; set; }
-
-        /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CallDay")]
