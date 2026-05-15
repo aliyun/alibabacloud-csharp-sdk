@@ -22867,6 +22867,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             {
                 query["DryRun"] = request.DryRun;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRollback))
+            {
+                query["IsRollback"] = request.IsRollback;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewShardNumber))
             {
                 query["NewShardNumber"] = request.NewShardNumber;
@@ -22944,6 +22948,10 @@ namespace AlibabaCloud.SDK.Adb20190315
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
                 query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRollback))
+            {
+                query["IsRollback"] = request.IsRollback;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewShardNumber))
             {

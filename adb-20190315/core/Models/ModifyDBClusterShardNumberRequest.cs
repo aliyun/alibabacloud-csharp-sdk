@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Adb20190315.Models
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
+        [NameInMap("IsRollback")]
+        [Validation(Required=false)]
+        public bool? IsRollback { get; set; }
+
         /// <summary>
         /// <para>The desired number of shards.</para>
         /// 
