@@ -123,10 +123,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string SandboxIdleTimeoutInSeconds { get; set; }
 
-        /// <term><b>Obsolete</b></term>
         [NameInMap("sandboxTTLInSeconds")]
         [Validation(Required=false)]
-        [Obsolete]
         public string SandboxTTLInSeconds { get; set; }
 
         [NameInMap("scalingStatus")]

@@ -68,6 +68,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
             [Validation(Required=false)]
             public bool? CompatibilityCheck { get; set; }
 
+            /// <summary>
+            /// <para>调用方指定的 AgentRun 凭证资源名称。转换后会替换模型相关节点访问凭证</para>
+            /// </summary>
             [NameInMap("credentialName")]
             [Validation(Required=false)]
             public string CredentialName { get; set; }

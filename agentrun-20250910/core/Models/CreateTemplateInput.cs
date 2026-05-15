@@ -114,8 +114,6 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public int? SandboxIdleTimeoutInSeconds { get; set; }
 
-        /// <term><b>Obsolete</b></term>
-        /// 
         /// <summary>
         /// <para>沙箱存活时间（秒）</para>
         /// 
@@ -124,7 +122,6 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// </summary>
         [NameInMap("sandboxTTLInSeconds")]
         [Validation(Required=false)]
-        [Obsolete]
         public int? SandboxTTLInSeconds { get; set; }
 
         [NameInMap("scalingConfig")]
