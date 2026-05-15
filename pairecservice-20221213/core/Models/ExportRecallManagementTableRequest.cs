@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.PaiRecService20221213.Models
         [Validation(Required=false)]
         public Dictionary<string, string> Partitions { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20250213000000</para>
+        /// </summary>
+        [NameInMap("RecallManagementTableVersionId")]
+        [Validation(Required=false)]
+        public string RecallManagementTableVersionId { get; set; }
+
     }
 
 }

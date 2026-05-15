@@ -10681,6 +10681,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             {
                 body["Partitions"] = request.Partitions;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallManagementTableVersionId))
+            {
+                body["RecallManagementTableVersionId"] = request.RecallManagementTableVersionId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -10742,6 +10746,10 @@ namespace AlibabaCloud.SDK.PaiRecService20221213
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Partitions))
             {
                 body["Partitions"] = request.Partitions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecallManagementTableVersionId))
+            {
+                body["RecallManagementTableVersionId"] = request.RecallManagementTableVersionId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
