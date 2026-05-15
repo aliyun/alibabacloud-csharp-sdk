@@ -226,6 +226,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
                 [Validation(Required=false)]
                 public string SecurityGroupId { get; set; }
 
+                [NameInMap("ServerlessSwitch")]
+                [Validation(Required=false)]
+                public bool? ServerlessSwitch { get; set; }
+
                 /// <summary>
                 /// <para>The instance status. Valid values:</para>
                 /// <list type="bullet">

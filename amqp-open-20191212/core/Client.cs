@@ -583,6 +583,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
                 request.VswitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VswitchIds, "VswitchIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthModel))
+            {
+                query["AuthModel"] = request.AuthModel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 query["AutoRenew"] = request.AutoRenew;
@@ -670,6 +674,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessChargeType))
             {
                 query["ServerlessChargeType"] = request.ServerlessChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessSwitch))
+            {
+                query["ServerlessSwitch"] = request.ServerlessSwitch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
             {
@@ -752,6 +760,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
                 request.VswitchIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VswitchIds, "VswitchIds", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthModel))
+            {
+                query["AuthModel"] = request.AuthModel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
             {
                 query["AutoRenew"] = request.AutoRenew;
@@ -839,6 +851,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessChargeType))
             {
                 query["ServerlessChargeType"] = request.ServerlessChargeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerlessSwitch))
+            {
+                query["ServerlessSwitch"] = request.ServerlessSwitch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageSize))
             {

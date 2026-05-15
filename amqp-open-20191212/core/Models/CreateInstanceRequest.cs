@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
 {
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ram openSource</para>
+        /// </summary>
+        [NameInMap("AuthModel")]
+        [Validation(Required=false)]
+        public string AuthModel { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: enables auto-renewal.</description></item>
@@ -264,6 +272,10 @@ namespace AlibabaCloud.SDK.Amqp_open20191212.Models
         [NameInMap("ServerlessChargeType")]
         [Validation(Required=false)]
         public string ServerlessChargeType { get; set; }
+
+        [NameInMap("ServerlessSwitch")]
+        [Validation(Required=false)]
+        public bool? ServerlessSwitch { get; set; }
 
         /// <summary>
         /// <para>The storage capacity. Unit: GB. Valid values:</para>
