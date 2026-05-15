@@ -1439,6 +1439,126 @@ namespace AlibabaCloud.SDK.Yike20260319
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询一刻提示词扩写和音频修复视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikePromptExpansionVoiceFixJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikePromptExpansionVoiceFixJobResponse
+        /// </returns>
+        public GetYikePromptExpansionVoiceFixJobResponse GetYikePromptExpansionVoiceFixJobWithOptions(GetYikePromptExpansionVoiceFixJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikePromptExpansionVoiceFixJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikePromptExpansionVoiceFixJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询一刻提示词扩写和音频修复视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikePromptExpansionVoiceFixJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikePromptExpansionVoiceFixJobResponse
+        /// </returns>
+        public async Task<GetYikePromptExpansionVoiceFixJobResponse> GetYikePromptExpansionVoiceFixJobWithOptionsAsync(GetYikePromptExpansionVoiceFixJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                body["JobId"] = request.JobId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetYikePromptExpansionVoiceFixJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetYikePromptExpansionVoiceFixJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询一刻提示词扩写和音频修复视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikePromptExpansionVoiceFixJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikePromptExpansionVoiceFixJobResponse
+        /// </returns>
+        public GetYikePromptExpansionVoiceFixJobResponse GetYikePromptExpansionVoiceFixJob(GetYikePromptExpansionVoiceFixJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetYikePromptExpansionVoiceFixJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询一刻提示词扩写和音频修复视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetYikePromptExpansionVoiceFixJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetYikePromptExpansionVoiceFixJobResponse
+        /// </returns>
+        public async Task<GetYikePromptExpansionVoiceFixJobResponse> GetYikePromptExpansionVoiceFixJobAsync(GetYikePromptExpansionVoiceFixJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetYikePromptExpansionVoiceFixJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取一刻故事板任务</para>
         /// </summary>
         /// 
@@ -3251,6 +3371,134 @@ namespace AlibabaCloud.SDK.Yike20260319
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SubmitYikeAIAppJobWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻提示词扩写和音频修复视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikePromptExpansionVoiceFixJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikePromptExpansionVoiceFixJobResponse
+        /// </returns>
+        public SubmitYikePromptExpansionVoiceFixJobResponse SubmitYikePromptExpansionVoiceFixJobWithOptions(SubmitYikePromptExpansionVoiceFixJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParams))
+            {
+                body["JobParams"] = request.JobParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                body["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitYikePromptExpansionVoiceFixJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitYikePromptExpansionVoiceFixJobResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻提示词扩写和音频修复视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikePromptExpansionVoiceFixJobRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikePromptExpansionVoiceFixJobResponse
+        /// </returns>
+        public async Task<SubmitYikePromptExpansionVoiceFixJobResponse> SubmitYikePromptExpansionVoiceFixJobWithOptionsAsync(SubmitYikePromptExpansionVoiceFixJobRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobParams))
+            {
+                body["JobParams"] = request.JobParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
+            {
+                body["UserData"] = request.UserData;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitYikePromptExpansionVoiceFixJob",
+                Version = "2026-03-19",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitYikePromptExpansionVoiceFixJobResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻提示词扩写和音频修复视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikePromptExpansionVoiceFixJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikePromptExpansionVoiceFixJobResponse
+        /// </returns>
+        public SubmitYikePromptExpansionVoiceFixJobResponse SubmitYikePromptExpansionVoiceFixJob(SubmitYikePromptExpansionVoiceFixJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitYikePromptExpansionVoiceFixJobWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交一刻提示词扩写和音频修复视频生成任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitYikePromptExpansionVoiceFixJobRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitYikePromptExpansionVoiceFixJobResponse
+        /// </returns>
+        public async Task<SubmitYikePromptExpansionVoiceFixJobResponse> SubmitYikePromptExpansionVoiceFixJobAsync(SubmitYikePromptExpansionVoiceFixJobRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitYikePromptExpansionVoiceFixJobWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
