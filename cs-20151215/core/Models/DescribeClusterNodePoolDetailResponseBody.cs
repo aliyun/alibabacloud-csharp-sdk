@@ -120,6 +120,28 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        [NameInMap("eflo_node_group")]
+        [Validation(Required=false)]
+        public DescribeClusterNodePoolDetailResponseBodyEfloNodeGroup EfloNodeGroup { get; set; }
+        public class DescribeClusterNodePoolDetailResponseBodyEfloNodeGroup : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>i113790071760688002461</para>
+            /// </summary>
+            [NameInMap("cluster_id")]
+            [Validation(Required=false)]
+            public string ClusterId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>i128147721760688002463</para>
+            /// </summary>
+            [NameInMap("group_id")]
+            [Validation(Required=false)]
+            public string GroupId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Indicates whether the pods in the edge node pool can use the host network.</para>
         /// <para><c>true</c>: sets to host network.</para>
