@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string CategoryId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>電視廣播2020年報</para>
+            /// </summary>
             [NameInMap("DocName")]
             [Validation(Required=false)]
             public string DocName { get; set; }
@@ -49,6 +53,28 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string FileUrl { get; set; }
 
+            [NameInMap("PageInfo")]
+            [Validation(Required=false)]
+            public GetDocInfoResponseBodyDataPageInfo PageInfo { get; set; }
+            public class GetDocInfoResponseBodyDataPageInfo : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>200</para>
+                /// </summary>
+                [NameInMap("Height")]
+                [Validation(Required=false)]
+                public int? Height { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
+                [NameInMap("Width")]
+                [Validation(Required=false)]
+                public int? Width { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>0</para>
@@ -57,6 +83,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public int? Status { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>导入成功</para>
+            /// </summary>
             [NameInMap("StatusMessage")]
             [Validation(Required=false)]
             public string StatusMessage { get; set; }
