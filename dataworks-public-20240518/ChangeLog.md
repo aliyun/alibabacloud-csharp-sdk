@@ -1,3 +1,9 @@
+2026-05-15 Version: 5.4.0
+- Support API CreateProjectRole.
+- Support API DeleteProjectRole.
+- Support API UpdateProjectRole.
+
+
 2026-05-14 Version: 5.3.1
 - Update API GetProjectRole: add response parameters Body.ProjectRole.ModulePermissions.
 - Update API ListProjectRoles: add response parameters Body.PagingInfo.ProjectRoles.$.ModulePermissions.
