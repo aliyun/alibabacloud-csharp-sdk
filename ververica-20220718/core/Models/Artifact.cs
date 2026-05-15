@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class Artifact : TeaModel {
+        [NameInMap("cdcYamlArtifact")]
+        [Validation(Required=false)]
+        public CdcYamlArtifact CdcYamlArtifact { get; set; }
+
         /// <summary>
         /// <para>The information required for the SQL deployment.</para>
         /// </summary>
