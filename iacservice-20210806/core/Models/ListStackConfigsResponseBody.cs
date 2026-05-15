@@ -97,6 +97,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
+                    [NameInMap("sensitive")]
+                    [Validation(Required=false)]
+                    public bool? Sensitive { get; set; }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>string</para>

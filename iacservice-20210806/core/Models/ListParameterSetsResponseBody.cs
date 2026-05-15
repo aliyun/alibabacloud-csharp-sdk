@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("deletionProtection")]
             [Validation(Required=false)]
             public bool? DeletionProtection { get; set; }
@@ -69,10 +73,22 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             [Validation(Required=false)]
             public List<ListParameterSetsResponseBodyParameterSetsParameters> Parameters { get; set; }
             public class ListParameterSetsResponseBodyParameterSetsParameters : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>region</para>
+                /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("secret")]
+                [Validation(Required=false)]
+                public bool? Secret { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>HAS_VALUE</para>
+                /// </summary>
                 [NameInMap("status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }

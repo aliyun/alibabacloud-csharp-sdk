@@ -13,6 +13,36 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public GetJobResponseBodyJob Job { get; set; }
         public class GetJobResponseBodyJob : TeaModel {
+            [NameInMap("allParameters")]
+            [Validation(Required=false)]
+            public List<GetJobResponseBodyJobAllParameters> AllParameters { get; set; }
+            public class GetJobResponseBodyJobAllParameters : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>regionId</para>
+                /// </summary>
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("secret")]
+                [Validation(Required=false)]
+                public bool? Secret { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-zhangjiakou</para>
+                /// </summary>
+                [NameInMap("value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             [NameInMap("assertCheckDetail")]
             [Validation(Required=false)]
             public List<GetJobResponseBodyJobAssertCheckDetail> AssertCheckDetail { get; set; }

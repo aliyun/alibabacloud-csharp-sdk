@@ -2958,6 +2958,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             {
                 body["name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterSetIds))
+            {
+                body["parameterSetIds"] = request.ParameterSetIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtectionStrategy))
             {
                 body["protectionStrategy"] = request.ProtectionStrategy;
@@ -3063,6 +3067,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParameterSetIds))
+            {
+                body["parameterSetIds"] = request.ParameterSetIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtectionStrategy))
             {
@@ -9786,6 +9794,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             {
                 query["keyword"] = request.Keyword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                query["kmsKeyId"] = request.KmsKeyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["pageNumber"] = request.PageNumber;
@@ -9839,6 +9851,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                query["kmsKeyId"] = request.KmsKeyId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
@@ -11608,6 +11624,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             {
                 query["keyword"] = request.Keyword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                query["kmsKeyId"] = request.KmsKeyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["maxResults"] = request.MaxResults;
@@ -11673,6 +11693,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                query["kmsKeyId"] = request.KmsKeyId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
@@ -11788,6 +11812,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             {
                 query["keyword"] = request.Keyword;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                query["kmsKeyId"] = request.KmsKeyId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleId))
             {
                 query["moduleId"] = request.ModuleId;
@@ -11871,6 +11899,10 @@ namespace AlibabaCloud.SDK.IaCService20210806
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
                 query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KmsKeyId))
+            {
+                query["kmsKeyId"] = request.KmsKeyId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModuleId))
             {

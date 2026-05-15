@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>21a90f5d-a469-4ac4-a8ea-f6e1e7470e6f</para>
+        /// </summary>
+        [NameInMap("kmsKeyId")]
+        [Validation(Required=false)]
+        public string KmsKeyId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>mod-1525e992f1b62139d1c437d64ae</para>
         /// </summary>
         [NameInMap("moduleId")]

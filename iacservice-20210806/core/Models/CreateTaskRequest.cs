@@ -99,6 +99,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("parameterSetIds")]
+        [Validation(Required=false)]
+        public List<string> ParameterSetIds { get; set; }
+
         [NameInMap("protectionStrategy")]
         [Validation(Required=false)]
         public List<string> ProtectionStrategy { get; set; }

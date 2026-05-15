@@ -57,6 +57,14 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                [NameInMap("secret")]
+                [Validation(Required=false)]
+                public bool? Secret { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>HAS_VALUE</para>
+                /// </summary>
                 [NameInMap("status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
