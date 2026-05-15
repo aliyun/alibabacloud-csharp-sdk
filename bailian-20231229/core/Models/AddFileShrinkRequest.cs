@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string Parser { get; set; }
 
+        [NameInMap("ParserConfig")]
+        [Validation(Required=false)]
+        public string ParserConfigShrink { get; set; }
+
         /// <summary>
         /// <para>A list of tags associated with the document. The default value is null, which means no tags. You can specify up to 10 tags.</para>
         /// </summary>

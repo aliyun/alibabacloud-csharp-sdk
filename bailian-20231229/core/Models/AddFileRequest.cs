@@ -67,6 +67,28 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string Parser { get; set; }
 
+        [NameInMap("ParserConfig")]
+        [Validation(Required=false)]
+        public AddFileRequestParserConfig ParserConfig { get; set; }
+        public class AddFileRequestParserConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>qwen-vl-max</para>
+            /// </summary>
+            [NameInMap("ModelName")]
+            [Validation(Required=false)]
+            public string ModelName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>#角色 你是一个专业的图片内容标注人员，擅长识别并描述出图片中的内容。 # 任务目标 请结合输入图片，详细描述图片中的内容。</para>
+            /// </summary>
+            [NameInMap("ModelPrompt")]
+            [Validation(Required=false)]
+            public string ModelPrompt { get; set; }
+
+        }
+
         /// <summary>
         /// <para>A list of tags associated with the document. The default value is null, which means no tags. You can specify up to 10 tags.</para>
         /// </summary>

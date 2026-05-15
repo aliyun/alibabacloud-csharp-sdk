@@ -271,6 +271,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             AddFileShrinkRequest request = new AddFileShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ParserConfig))
+            {
+                request.ParserConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ParserConfig, "ParserConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -295,6 +299,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parser))
             {
                 body["Parser"] = request.Parser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParserConfigShrink))
+            {
+                body["ParserConfig"] = request.ParserConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
@@ -356,6 +364,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             AddFileShrinkRequest request = new AddFileShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ParserConfig))
+            {
+                request.ParserConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ParserConfig, "ParserConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
             {
                 request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
@@ -380,6 +392,10 @@ namespace AlibabaCloud.SDK.Bailian20231229
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parser))
             {
                 body["Parser"] = request.Parser;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParserConfigShrink))
+            {
+                body["ParserConfig"] = request.ParserConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
             {
@@ -1183,6 +1199,156 @@ namespace AlibabaCloud.SDK.Bailian20231229
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ApplyTempStorageLeaseWithOptionsAsync(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量更新文档Tag</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchUpdateFileTagRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUpdateFileTagResponse
+        /// </returns>
+        public BatchUpdateFileTagResponse BatchUpdateFileTagWithOptions(string WorkspaceId, BatchUpdateFileTagRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchUpdateFileTagShrinkRequest request = new BatchUpdateFileTagShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FileInfos))
+            {
+                request.FileInfosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FileInfos, "FileInfos", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInfosShrink))
+            {
+                body["FileInfos"] = request.FileInfosShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateMode))
+            {
+                body["UpdateMode"] = request.UpdateMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchUpdateFileTag",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/batchupdatetag",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchUpdateFileTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量更新文档Tag</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchUpdateFileTagRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUpdateFileTagResponse
+        /// </returns>
+        public async Task<BatchUpdateFileTagResponse> BatchUpdateFileTagWithOptionsAsync(string WorkspaceId, BatchUpdateFileTagRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchUpdateFileTagShrinkRequest request = new BatchUpdateFileTagShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.FileInfos))
+            {
+                request.FileInfosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.FileInfos, "FileInfos", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileInfosShrink))
+            {
+                body["FileInfos"] = request.FileInfosShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateMode))
+            {
+                body["UpdateMode"] = request.UpdateMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchUpdateFileTag",
+                Version = "2023-12-29",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(WorkspaceId) + "/datacenter/batchupdatetag",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchUpdateFileTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量更新文档Tag</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchUpdateFileTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUpdateFileTagResponse
+        /// </returns>
+        public BatchUpdateFileTagResponse BatchUpdateFileTag(string WorkspaceId, BatchUpdateFileTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchUpdateFileTagWithOptions(WorkspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量更新文档Tag</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchUpdateFileTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUpdateFileTagResponse
+        /// </returns>
+        public async Task<BatchUpdateFileTagResponse> BatchUpdateFileTagAsync(string WorkspaceId, BatchUpdateFileTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchUpdateFileTagWithOptionsAsync(WorkspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
