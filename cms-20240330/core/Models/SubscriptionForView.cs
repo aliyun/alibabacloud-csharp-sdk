@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SubscriptionForView : TeaModel {
+        [NameInMap("agentConfig")]
+        [Validation(Required=false)]
+        public SubscriptionForViewAgentConfig AgentConfig { get; set; }
+        public class SubscriptionForViewAgentConfig : TeaModel {
+            [NameInMap("agentUuid")]
+            [Validation(Required=false)]
+            public string AgentUuid { get; set; }
+
+            [NameInMap("routes")]
+            [Validation(Required=false)]
+            public List<NotifyRouteForSubscription> Routes { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Create Time.</para>
         /// 
@@ -119,6 +133,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("subscriptionName")]
         [Validation(Required=false)]
         public string SubscriptionName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>NORMAL</para>
+        /// </summary>
+        [NameInMap("subscriptionType")]
+        [Validation(Required=false)]
+        public string SubscriptionType { get; set; }
 
         [NameInMap("syncFromType")]
         [Validation(Required=false)]

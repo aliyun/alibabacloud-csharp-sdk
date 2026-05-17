@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SubscriptionForModify : TeaModel {
+        [NameInMap("agentConfig")]
+        [Validation(Required=false)]
+        public SubscriptionForModifyAgentConfig AgentConfig { get; set; }
+        public class SubscriptionForModifyAgentConfig : TeaModel {
+            [NameInMap("agentUuid")]
+            [Validation(Required=false)]
+            public string AgentUuid { get; set; }
+
+            [NameInMap("routes")]
+            [Validation(Required=false)]
+            public List<NotifyRouteForSubscription> Routes { get; set; }
+
+        }
+
         /// <summary>
         /// <para>Description.</para>
         /// 
