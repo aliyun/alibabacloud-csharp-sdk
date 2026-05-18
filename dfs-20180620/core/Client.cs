@@ -2893,6 +2893,154 @@ namespace AlibabaCloud.SDK.DFS20180620
             return await DescribeVscMountPointsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量卸载VSC 挂载点</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DetachVscFromMountPointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachVscFromMountPointsResponse
+        /// </returns>
+        public DetachVscFromMountPointsResponse DetachVscFromMountPointsWithOptions(DetachVscFromMountPointsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DetachVscFromMountPointsShrinkRequest request = new DetachVscFromMountPointsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DetachInfos))
+            {
+                request.DetachInfosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DetachInfos, "DetachInfos", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetachInfosShrink))
+            {
+                query["DetachInfos"] = request.DetachInfosShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputRegionId))
+            {
+                query["InputRegionId"] = request.InputRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseAssumeRoleChkServerPerm))
+            {
+                query["UseAssumeRoleChkServerPerm"] = request.UseAssumeRoleChkServerPerm;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachVscFromMountPoints",
+                Version = "2018-06-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetachVscFromMountPointsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量卸载VSC 挂载点</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// DetachVscFromMountPointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachVscFromMountPointsResponse
+        /// </returns>
+        public async Task<DetachVscFromMountPointsResponse> DetachVscFromMountPointsWithOptionsAsync(DetachVscFromMountPointsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DetachVscFromMountPointsShrinkRequest request = new DetachVscFromMountPointsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DetachInfos))
+            {
+                request.DetachInfosShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DetachInfos, "DetachInfos", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DetachInfosShrink))
+            {
+                query["DetachInfos"] = request.DetachInfosShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputRegionId))
+            {
+                query["InputRegionId"] = request.InputRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseAssumeRoleChkServerPerm))
+            {
+                query["UseAssumeRoleChkServerPerm"] = request.UseAssumeRoleChkServerPerm;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DetachVscFromMountPoints",
+                Version = "2018-06-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DetachVscFromMountPointsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量卸载VSC 挂载点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachVscFromMountPointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachVscFromMountPointsResponse
+        /// </returns>
+        public DetachVscFromMountPointsResponse DetachVscFromMountPoints(DetachVscFromMountPointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DetachVscFromMountPointsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量卸载VSC 挂载点</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DetachVscFromMountPointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DetachVscFromMountPointsResponse
+        /// </returns>
+        public async Task<DetachVscFromMountPointsResponse> DetachVscFromMountPointsAsync(DetachVscFromMountPointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DetachVscFromMountPointsWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="tmpReq">
         /// DetachVscMountPointRequest
         /// </param>
