@@ -214,8 +214,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? StorageSpace { get; set; }
 
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>essdpl0</para>
         /// </summary>
