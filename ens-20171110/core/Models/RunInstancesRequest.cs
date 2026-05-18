@@ -160,6 +160,10 @@ namespace AlibabaCloud.SDK.Ens20171110.Models
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
 
+        [NameInMap("DeploymentSetId")]
+        [Validation(Required=false)]
+        public string DeploymentSetId { get; set; }
+
         /// <summary>
         /// <para>The ID of the node.</para>
         /// <remarks>

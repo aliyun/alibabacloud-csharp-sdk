@@ -45114,6 +45114,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             {
                 query["DeletionProtection"] = request.DeletionProtection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentSetId))
+            {
+                query["DeploymentSetId"] = request.DeploymentSetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
                 query["EnsRegionId"] = request.EnsRegionId;
@@ -45341,6 +45345,10 @@ namespace AlibabaCloud.SDK.Ens20171110
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeletionProtection))
             {
                 query["DeletionProtection"] = request.DeletionProtection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeploymentSetId))
+            {
+                query["DeploymentSetId"] = request.DeploymentSetId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnsRegionId))
             {
