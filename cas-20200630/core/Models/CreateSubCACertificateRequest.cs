@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string Algorithm { get; set; }
 
+        [NameInMap("CertMaxTime")]
+        [Validation(Required=false)]
+        public int? CertMaxTime { get; set; }
+
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

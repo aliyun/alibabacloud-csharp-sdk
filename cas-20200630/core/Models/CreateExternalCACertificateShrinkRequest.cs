@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string ApiPassthroughShrink { get; set; }
 
+        [NameInMap("CertMaxTime")]
+        [Validation(Required=false)]
+        public int? CertMaxTime { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE REQUEST-----

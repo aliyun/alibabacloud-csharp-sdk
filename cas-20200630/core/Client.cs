@@ -1144,6 +1144,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["ApiPassthrough"] = request.ApiPassthroughShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertMaxTime))
+            {
+                query["CertMaxTime"] = request.CertMaxTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Csr))
             {
                 query["Csr"] = request.Csr;
@@ -1211,6 +1215,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApiPassthroughShrink))
             {
                 query["ApiPassthrough"] = request.ApiPassthroughShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertMaxTime))
+            {
+                query["CertMaxTime"] = request.CertMaxTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Csr))
             {
@@ -2290,6 +2298,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             {
                 query["Algorithm"] = request.Algorithm;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertMaxTime))
+            {
+                query["CertMaxTime"] = request.CertMaxTime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonName))
             {
                 query["CommonName"] = request.CommonName;
@@ -2401,6 +2413,10 @@ namespace AlibabaCloud.SDK.Cas20200630
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Algorithm))
             {
                 query["Algorithm"] = request.Algorithm;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertMaxTime))
+            {
+                query["CertMaxTime"] = request.CertMaxTime;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommonName))
             {
@@ -2847,9 +2863,6 @@ namespace AlibabaCloud.SDK.Cas20200630
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeCACertificateCountRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -2887,9 +2900,6 @@ namespace AlibabaCloud.SDK.Cas20200630
         /// <para>You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// DescribeCACertificateCountRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>

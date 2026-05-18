@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 
         }
 
+        [NameInMap("CertMaxTime")]
+        [Validation(Required=false)]
+        public int? CertMaxTime { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE REQUEST-----
