@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.LingMou20250527.Models
             [Validation(Required=false)]
             public List<string> LanguageHints { get; set; }
 
+            [NameInMap("mode")]
+            [Validation(Required=false)]
+            public string Mode { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>720p</para>
