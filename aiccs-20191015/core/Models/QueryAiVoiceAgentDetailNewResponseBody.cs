@@ -633,25 +633,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
                     [NameInMap("MappingTag")]
                     [Validation(Required=false)]
-                    public QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfigMappingTag MappingTag { get; set; }
-                    public class QueryAiVoiceAgentDetailNewResponseBodyDataSummaryConfigCallResultTagConfigMappingTag : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>示例值示例值</para>
-                        /// </summary>
-                        [NameInMap("Desc")]
-                        [Validation(Required=false)]
-                        public string Desc { get; set; }
-
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>示例值示例值示例值</para>
-                        /// </summary>
-                        [NameInMap("Tag")]
-                        [Validation(Required=false)]
-                        public string Tag { get; set; }
-
-                    }
+                    public Dictionary<string, string> MappingTag { get; set; }
 
                 }
 

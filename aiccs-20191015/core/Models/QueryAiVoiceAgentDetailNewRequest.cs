@@ -10,12 +10,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryAiVoiceAgentDetailNewRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345678</para>
         /// </summary>
         [NameInMap("AgentId")]
         [Validation(Required=false)]
-        public long? AgentId { get; set; }
+        public string AgentId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -23,7 +25,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// </summary>
         [NameInMap("BranchId")]
         [Validation(Required=false)]
-        public long? BranchId { get; set; }
+        public string BranchId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -31,7 +33,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// </summary>
         [NameInMap("VersionId")]
         [Validation(Required=false)]
-        public long? VersionId { get; set; }
+        public string VersionId { get; set; }
 
     }
 

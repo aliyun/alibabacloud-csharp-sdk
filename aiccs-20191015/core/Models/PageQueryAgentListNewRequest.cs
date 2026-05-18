@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         /// </summary>
         [NameInMap("AgentId")]
         [Validation(Required=false)]
-        public long? AgentId { get; set; }
+        public string AgentId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
