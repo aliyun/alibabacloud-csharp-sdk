@@ -26,6 +26,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public PutResourceMetricRulesRequestRulesEscalationsCritical Critical { get; set; }
                 public class PutResourceMetricRulesRequestRulesEscalationsCritical : TeaModel {
+                    /// <summary>
+                    /// <para>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
+                    /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
+                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
+                    /// <item><description>LessThanThreshold: less than the threshold</description></item>
+                    /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
+                    /// <item><description>EqualToThreshold: equal to the threshold</description></item>
+                    /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
+                    /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
+                    /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
+                    /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
+                    /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
+                    /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+                    /// </list>
+                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <remarks>
+                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>GreaterThanOrEqualToThreshold</para>
+                    /// </summary>
                     [NameInMap("ComparisonOperator")]
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
@@ -38,14 +62,45 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string PreCondition { get; set; }
 
+                    /// <summary>
+                    /// <para>The statistical methods for Critical-level alerts.</para>
+                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <para>The value of this parameter is determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+                    /// <remarks>
+                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Average</para>
+                    /// </summary>
                     [NameInMap("Statistics")]
                     [Validation(Required=false)]
                     public string Statistics { get; set; }
 
+                    /// <summary>
+                    /// <para>The threshold for Critical-level alerts.</para>
+                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <remarks>
+                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>90</para>
+                    /// </summary>
                     [NameInMap("Threshold")]
                     [Validation(Required=false)]
                     public string Threshold { get; set; }
 
+                    /// <summary>
+                    /// <para>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.</para>
+                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <remarks>
+                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3</para>
+                    /// </summary>
                     [NameInMap("Times")]
                     [Validation(Required=false)]
                     public int? Times { get; set; }
@@ -56,6 +111,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public PutResourceMetricRulesRequestRulesEscalationsInfo Info { get; set; }
                 public class PutResourceMetricRulesRequestRulesEscalationsInfo : TeaModel {
+                    /// <summary>
+                    /// <para>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
+                    /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
+                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
+                    /// <item><description>LessThanThreshold: less than the threshold</description></item>
+                    /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
+                    /// <item><description>EqualToThreshold: equal to the threshold</description></item>
+                    /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
+                    /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
+                    /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
+                    /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
+                    /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
+                    /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+                    /// </list>
+                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <remarks>
+                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>GreaterThanOrEqualToThreshold</para>
+                    /// </summary>
                     [NameInMap("ComparisonOperator")]
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
@@ -68,14 +147,44 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string PreCondition { get; set; }
 
+                    /// <summary>
+                    /// <para>The statistical methods for Info-level alerts.</para>
+                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <para>The value of this parameter is determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+                    /// <remarks>
+                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Average</para>
+                    /// </summary>
                     [NameInMap("Statistics")]
                     [Validation(Required=false)]
                     public string Statistics { get; set; }
 
+                    /// <summary>
+                    /// <para>The threshold for Info-level alerts.</para>
+                    /// <remarks>
+                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>90</para>
+                    /// </summary>
                     [NameInMap("Threshold")]
                     [Validation(Required=false)]
                     public string Threshold { get; set; }
 
+                    /// <summary>
+                    /// <para>The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.</para>
+                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <remarks>
+                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3</para>
+                    /// </summary>
                     [NameInMap("Times")]
                     [Validation(Required=false)]
                     public int? Times { get; set; }
@@ -86,6 +195,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public PutResourceMetricRulesRequestRulesEscalationsWarn Warn { get; set; }
                 public class PutResourceMetricRulesRequestRulesEscalationsWarn : TeaModel {
+                    /// <summary>
+                    /// <para>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
+                    /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
+                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
+                    /// <item><description>LessThanThreshold: less than the threshold</description></item>
+                    /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
+                    /// <item><description>EqualToThreshold: equal to the threshold</description></item>
+                    /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
+                    /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
+                    /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
+                    /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
+                    /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
+                    /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+                    /// </list>
+                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <remarks>
+                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>GreaterThanOrEqualToThreshold</para>
+                    /// </summary>
                     [NameInMap("ComparisonOperator")]
                     [Validation(Required=false)]
                     public string ComparisonOperator { get; set; }
@@ -98,14 +231,45 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public string PreCondition { get; set; }
 
+                    /// <summary>
+                    /// <para>The statistical methods for Warn-level alerts.</para>
+                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <para>The value of this parameter is determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+                    /// <remarks>
+                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Average</para>
+                    /// </summary>
                     [NameInMap("Statistics")]
                     [Validation(Required=false)]
                     public string Statistics { get; set; }
 
+                    /// <summary>
+                    /// <para>The threshold for Warn-level alerts.</para>
+                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <remarks>
+                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>90</para>
+                    /// </summary>
                     [NameInMap("Threshold")]
                     [Validation(Required=false)]
                     public string Threshold { get; set; }
 
+                    /// <summary>
+                    /// <para>The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.</para>
+                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <remarks>
+                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// </remarks>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>3</para>
+                    /// </summary>
                     [NameInMap("Times")]
                     [Validation(Required=false)]
                     public int? Times { get; set; }
@@ -306,6 +470,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
+
+            [NameInMap("SendOK")]
+            [Validation(Required=false)]
+            public bool? SendOK { get; set; }
 
             /// <summary>
             /// <para>The mute period during which new alert notifications are not sent even if the trigger conditions are met.</para>

@@ -56,9 +56,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// <para>The information about the resource for which alerts are triggered.</para>
-        /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]
         public DescribeMetricRuleTargetsResponseBodyTargets Targets { get; set; }
@@ -67,53 +64,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeMetricRuleTargetsResponseBodyTargetsTarget> Target { get; set; }
             public class DescribeMetricRuleTargetsResponseBodyTargetsTarget : TeaModel {
-                /// <summary>
-                /// <para>The Alibaba Cloud Resource Name (ARN) of the resource. Format: <c>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</c>. Example: <c>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</c>. Fields:</para>
-                /// <list type="bullet">
-                /// <item><description>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</description></item>
-                /// <item><description>{userId}: the ID of the Alibaba Cloud account.</description></item>
-                /// <item><description>{regionId}: the region ID of the message queue or topic.</description></item>
-                /// <item><description>{Resource type}<c>: the type of the resource for which alerts are triggered. Valid values: - **queues** - **topics** {Resource name}: the name of the resource. - If the resource type is set to **queues**, the resource name is the name of the message queue. - If the resource type is set to **topics**, the resource name is the name of the topic.</c></description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>acs:mns:cn-hangzhou:120886317861****:/queues/test/message</para>
-                /// </summary>
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
                 public string Arn { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the resource for which alerts are triggered.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>The parameters of the alert callback. The parameters are in the JSON format.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</para>
-                /// </summary>
                 [NameInMap("JsonParams")]
                 [Validation(Required=false)]
                 public string JsonParams { get; set; }
 
-                /// <summary>
-                /// <para>The level of the alert. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>INFO: information</description></item>
-                /// <item><description>WARN: warning</description></item>
-                /// <item><description>CRITICAL: critical</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</para>
-                /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
                 public string Level { get; set; }

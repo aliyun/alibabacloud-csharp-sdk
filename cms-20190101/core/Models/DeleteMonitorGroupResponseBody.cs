@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public DeleteMonitorGroupResponseBodyGroup Group { get; set; }
         public class DeleteMonitorGroupResponseBodyGroup : TeaModel {
-            /// <summary>
-            /// <para>The alert groups that receive alert notifications for the application group.</para>
-            /// </summary>
             [NameInMap("ContactGroups")]
             [Validation(Required=false)]
             public DeleteMonitorGroupResponseBodyGroupContactGroups ContactGroups { get; set; }
@@ -40,12 +37,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public List<DeleteMonitorGroupResponseBodyGroupContactGroupsContactGroup> ContactGroup { get; set; }
                 public class DeleteMonitorGroupResponseBodyGroupContactGroupsContactGroup : TeaModel {
-                    /// <summary>
-                    /// <para>The name of the alert group.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>ECS_Group</para>
-                    /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }

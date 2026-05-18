@@ -22,9 +22,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public int? Code { get; set; }
 
-        /// <summary>
-        /// <para>The queried meta information.</para>
-        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSystemEventMetaListResponseBodyData Data { get; set; }
@@ -33,52 +30,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeSystemEventMetaListResponseBodyDataResource> Resource { get; set; }
             public class DescribeSystemEventMetaListResponseBodyDataResource : TeaModel {
-                /// <summary>
-                /// <para>The type of the system event. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>StatusNotification: fault notifications</description></item>
-                /// <item><description>Exception: exceptions</description></item>
-                /// <item><description>Maintenance: O\&amp;M</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Exception</para>
-                /// </summary>
                 [NameInMap("EventType")]
                 [Validation(Required=false)]
                 public string EventType { get; set; }
 
-                /// <summary>
-                /// <para>The alert level. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>CRITICAL</description></item>
-                /// <item><description>WARN</description></item>
-                /// <item><description>INFO</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>INFO</para>
-                /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
                 public string Level { get; set; }
 
-                /// <summary>
-                /// <para>The name of the system event.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>SelectFailureRate</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <para>The description of the event name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>High query failure rate</para>
-                /// </summary>
                 [NameInMap("NameDesc")]
                 [Validation(Required=false)]
                 public string NameDesc { get; set; }
@@ -87,32 +50,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string NameDesc_en { get; set; }
 
-                /// <summary>
-                /// <para>The abbreviation of the service name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ADS</para>
-                /// </summary>
                 [NameInMap("Product")]
                 [Validation(Required=false)]
                 public string Product { get; set; }
 
-                /// <summary>
-                /// <para>The status of the system event.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>failed</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
-                /// <summary>
-                /// <para>The description of the event status.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Operation Failed</para>
-                /// </summary>
                 [NameInMap("StatusDesc")]
                 [Validation(Required=false)]
                 public string StatusDesc { get; set; }

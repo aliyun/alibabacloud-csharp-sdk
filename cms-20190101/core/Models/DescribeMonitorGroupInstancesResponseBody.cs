@@ -62,9 +62,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The information about the resources in the application group.</para>
-        /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public DescribeMonitorGroupInstancesResponseBodyResources Resources { get; set; }
@@ -73,52 +70,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeMonitorGroupInstancesResponseBodyResourcesResource> Resource { get; set; }
             public class DescribeMonitorGroupInstancesResponseBodyResourcesResource : TeaModel {
-                /// <summary>
-                /// <para>The abbreviation of the service name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ecs</para>
-                /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
-                /// <summary>
-                /// <para>The resource ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>12345</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
-                /// <summary>
-                /// <para>The instance ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-2ze3w55tr2r****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The instance name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>hostIP</para>
-                /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the region where the instance resides.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }

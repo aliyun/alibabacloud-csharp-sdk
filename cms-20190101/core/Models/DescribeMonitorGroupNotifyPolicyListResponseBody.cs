@@ -32,9 +32,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>The returned policies.</para>
-        /// </summary>
         [NameInMap("NotifyPolicyList")]
         [Validation(Required=false)]
         public DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyList NotifyPolicyList { get; set; }
@@ -43,54 +40,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy> NotifyPolicy { get; set; }
             public class DescribeMonitorGroupNotifyPolicyListResponseBodyNotifyPolicyListNotifyPolicy : TeaModel {
-                /// <summary>
-                /// <para>The end of the time range to query.</para>
-                /// <para>Unit: milliseconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1551761781273</para>
-                /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public long? EndTime { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the application group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>6780****</para>
-                /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
-                /// <summary>
-                /// <para>The policy ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123****</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
 
-                /// <summary>
-                /// <para>The beginning of the time range to query.</para>
-                /// <para>Unit: milliseconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1551761781273</para>
-                /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public long? StartTime { get; set; }
 
-                /// <summary>
-                /// <para>The policy type.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>PauseNotify</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }

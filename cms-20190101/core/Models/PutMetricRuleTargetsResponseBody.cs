@@ -29,9 +29,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public PutMetricRuleTargetsResponseBodyFailData FailData { get; set; }
         public class PutMetricRuleTargetsResponseBodyFailData : TeaModel {
-            /// <summary>
-            /// <para>The information about the resources for which alerts are triggered.</para>
-            /// </summary>
             [NameInMap("Targets")]
             [Validation(Required=false)]
             public PutMetricRuleTargetsResponseBodyFailDataTargets Targets { get; set; }
@@ -40,57 +37,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public List<PutMetricRuleTargetsResponseBodyFailDataTargetsTarget> Target { get; set; }
                 public class PutMetricRuleTargetsResponseBodyFailDataTargetsTarget : TeaModel {
-                    /// <summary>
-                    /// <para>The ARN of the resource. Format: <c>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</c>. SMQ, Auto Scaling, Simple Log Service, and Function Compute are supported. Example: <c>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</c>. The following part describes the ARN of SMQ and the parameters in the ARN:</para>
-                    /// <list type="bullet">
-                    /// <item><description><para>{Service name abbreviation}: mns.</para>
-                    /// </description></item>
-                    /// <item><description><para>{userId}: the ID of the Alibaba Cloud account.</para>
-                    /// </description></item>
-                    /// <item><description><para>{regionId}: the region ID of the SMQ queue or topic.</para>
-                    /// </description></item>
-                    /// <item><description><para>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description><b>queues</b></description></item>
-                    /// <item><description><b>topics</b></description></item>
-                    /// </list>
-                    /// </description></item>
-                    /// <item><description><para>{Resource name}: the resource name.</para>
-                    /// <list type="bullet">
-                    /// <item><description>If the resource type is <b>queues</b>, the resource name is the queue name.</description></item>
-                    /// <item><description>If the resource type is <b>topics</b>, the resource name is the topic name.</description></item>
-                    /// </list>
-                    /// </description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>acs:mns:cn-hangzhou:111:/queues/test/message</para>
-                    /// </summary>
                     [NameInMap("Arn")]
                     [Validation(Required=false)]
                     public string Arn { get; set; }
 
-                    /// <summary>
-                    /// <para>The ID of the resource for which alerts are triggered.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>1</para>
-                    /// </summary>
                     [NameInMap("Id")]
                     [Validation(Required=false)]
                     public string Id { get; set; }
 
-                    /// <summary>
-                    /// <para>The alert level. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>INFO</description></item>
-                    /// <item><description>WARN</description></item>
-                    /// <item><description>CRITICAL</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>[&quot;INFO&quot;, &quot;WARN&quot;, &quot;CRITICAL&quot;]</para>
-                    /// </summary>
                     [NameInMap("Level")]
                     [Validation(Required=false)]
                     public string Level { get; set; }

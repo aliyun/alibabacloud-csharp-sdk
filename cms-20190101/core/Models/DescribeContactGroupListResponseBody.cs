@@ -19,9 +19,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>List of alarm contact groups.</para>
-        /// </summary>
         [NameInMap("ContactGroupList")]
         [Validation(Required=false)]
         public DescribeContactGroupListResponseBodyContactGroupList ContactGroupList { get; set; }
@@ -30,9 +27,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeContactGroupListResponseBodyContactGroupListContactGroup> ContactGroup { get; set; }
             public class DescribeContactGroupListResponseBodyContactGroupListContactGroup : TeaModel {
-                /// <summary>
-                /// <para>List of contacts.</para>
-                /// </summary>
                 [NameInMap("Contacts")]
                 [Validation(Required=false)]
                 public DescribeContactGroupListResponseBodyContactGroupListContactGroupContacts Contacts { get; set; }
@@ -43,68 +37,26 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
-                /// <summary>
-                /// <para>Creation time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2023-06-07T03:52:30Z</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
-                /// <summary>
-                /// <para>Description information of the alarm contact group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Devops-运维组</para>
-                /// </summary>
                 [NameInMap("Describe")]
                 [Validation(Required=false)]
                 public string Describe { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the weekly report subscription function is enabled. Values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>true: Yes.</para>
-                /// </description></item>
-                /// <item><description><para>false: No.</para>
-                /// </description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
                 [NameInMap("EnableSubscribed")]
                 [Validation(Required=false)]
                 public bool? EnableSubscribed { get; set; }
 
-                /// <summary>
-                /// <para>Indicates whether the weekly report function is enabled.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
                 [NameInMap("EnabledWeeklyReport")]
                 [Validation(Required=false)]
                 public bool? EnabledWeeklyReport { get; set; }
 
-                /// <summary>
-                /// <para>Name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>name</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <para>Update time.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2025-03-04T02:12:06Z</para>
-                /// </summary>
                 [NameInMap("UpdateTime")]
                 [Validation(Required=false)]
                 public long? UpdateTime { get; set; }
@@ -113,9 +65,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
-        /// <summary>
-        /// <para>List of alarm contact groups.</para>
-        /// </summary>
         [NameInMap("ContactGroups")]
         [Validation(Required=false)]
         public DescribeContactGroupListResponseBodyContactGroups ContactGroups { get; set; }

@@ -22,9 +22,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is returned if the specified alert contact groups in the request failed to be created or modified.</para>
-        /// </summary>
         [NameInMap("FailedContactParameters")]
         [Validation(Required=false)]
         public PutEventRuleTargetsResponseBodyFailedContactParameters FailedContactParameters { get; set; }
@@ -33,30 +30,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<PutEventRuleTargetsResponseBodyFailedContactParametersContactParameter> ContactParameter { get; set; }
             public class PutEventRuleTargetsResponseBodyFailedContactParametersContactParameter : TeaModel {
-                /// <summary>
-                /// <para>The name of the alert contact group.</para>
-                /// </summary>
                 [NameInMap("ContactGroupName")]
                 [Validation(Required=false)]
                 public string ContactGroupName { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the recipient.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public int? Id { get; set; }
 
-                /// <summary>
-                /// <para>The alert notification methods. Valid values:</para>
-                /// <para>4: Alert notifications are sent by using DingTalk and emails.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
                 public string Level { get; set; }
@@ -65,9 +46,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
-        /// <summary>
-        /// <para>This parameter is returned if the specified functions in the request failed to be created or modified in Function Compute.</para>
-        /// </summary>
         [NameInMap("FailedFcParameters")]
         [Validation(Required=false)]
         public PutEventRuleTargetsResponseBodyFailedFcParameters FailedFcParameters { get; set; }
@@ -76,42 +54,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter> FcParameter { get; set; }
             public class PutEventRuleTargetsResponseBodyFailedFcParametersFcParameter : TeaModel {
-                /// <summary>
-                /// <para>The name of the function.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>functionTest1</para>
-                /// </summary>
                 [NameInMap("FunctionName")]
                 [Validation(Required=false)]
                 public string FunctionName { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the recipient.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public int? Id { get; set; }
 
-                /// <summary>
-                /// <para>The region ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }
 
-                /// <summary>
-                /// <para>The name of the Function Compute service.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>serviceTest1</para>
-                /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
@@ -120,9 +74,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
-        /// <summary>
-        /// <para>This parameter is returned if the specified queues in the request failed to be created or modified in SMQ.</para>
-        /// </summary>
         [NameInMap("FailedMnsParameters")]
         [Validation(Required=false)]
         public PutEventRuleTargetsResponseBodyFailedMnsParameters FailedMnsParameters { get; set; }
@@ -131,32 +82,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter> MnsParameter { get; set; }
             public class PutEventRuleTargetsResponseBodyFailedMnsParametersMnsParameter : TeaModel {
-                /// <summary>
-                /// <para>The ID of the recipient.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public int? Id { get; set; }
 
-                /// <summary>
-                /// <para>The name of the MNS queue.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>testQueue</para>
-                /// </summary>
                 [NameInMap("Queue")]
                 [Validation(Required=false)]
                 public string Queue { get; set; }
 
-                /// <summary>
-                /// <para>The region ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }

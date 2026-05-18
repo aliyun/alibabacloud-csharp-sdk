@@ -49,9 +49,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public DescribeMetricRuleTemplateAttributeResponseBodyResource Resource { get; set; }
         public class DescribeMetricRuleTemplateAttributeResponseBodyResource : TeaModel {
-            /// <summary>
-            /// <para>The queried alert templates.</para>
-            /// </summary>
             [NameInMap("AlertTemplates")]
             [Validation(Required=false)]
             public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplates AlertTemplates { get; set; }
@@ -60,206 +57,74 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public List<DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate> AlertTemplate { get; set; }
                 public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate : TeaModel {
-                    /// <summary>
-                    /// <para>The abbreviation of the Alibaba Cloud service name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>ecs</para>
-                    /// </summary>
                     [NameInMap("Category")]
                     [Validation(Required=false)]
                     public string Category { get; set; }
 
-                    /// <summary>
-                    /// <para>The threshold and the alert level.</para>
-                    /// </summary>
                     [NameInMap("Escalations")]
                     [Validation(Required=false)]
                     public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations Escalations { get; set; }
                     public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalations : TeaModel {
-                        /// <summary>
-                        /// <para>The conditions for triggering Critical-level alerts.</para>
-                        /// </summary>
                         [NameInMap("Critical")]
                         [Validation(Required=false)]
                         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical Critical { get; set; }
                         public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsCritical : TeaModel {
-                            /// <summary>
-                            /// <para>The comparison operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</para>
-                            /// <list type="bullet">
-                            /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-                            /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-                            /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-                            /// <item><description>LessThanThreshold: less than the threshold</description></item>
-                            /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-                            /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-                            /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-                            /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-                            /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-                            /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-                            /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
-                            /// </list>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>GreaterThanOrEqualToThreshold</para>
-                            /// </summary>
                             [NameInMap("ComparisonOperator")]
                             [Validation(Required=false)]
                             public string ComparisonOperator { get; set; }
 
-                            /// <summary>
-                            /// <para>The statistical method for Critical-level alerts.</para>
-                            /// <para>The value of the <c>Statistics</c> parameter varies with the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>Average</para>
-                            /// </summary>
                             [NameInMap("Statistics")]
                             [Validation(Required=false)]
                             public string Statistics { get; set; }
 
-                            /// <summary>
-                            /// <para>The threshold for Critical-level alerts.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>90</para>
-                            /// </summary>
                             [NameInMap("Threshold")]
                             [Validation(Required=false)]
                             public string Threshold { get; set; }
 
-                            /// <summary>
-                            /// <para>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>5</para>
-                            /// </summary>
                             [NameInMap("Times")]
                             [Validation(Required=false)]
                             public int? Times { get; set; }
 
                         }
 
-                        /// <summary>
-                        /// <para>The conditions for triggering Info-level alerts.</para>
-                        /// </summary>
                         [NameInMap("Info")]
                         [Validation(Required=false)]
                         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo Info { get; set; }
                         public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsInfo : TeaModel {
-                            /// <summary>
-                            /// <para>The comparison operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</para>
-                            /// <list type="bullet">
-                            /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-                            /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-                            /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-                            /// <item><description>LessThanThreshold: less than the threshold</description></item>
-                            /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-                            /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-                            /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-                            /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-                            /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-                            /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-                            /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
-                            /// </list>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>GreaterThanOrEqualToThreshold</para>
-                            /// </summary>
                             [NameInMap("ComparisonOperator")]
                             [Validation(Required=false)]
                             public string ComparisonOperator { get; set; }
 
-                            /// <summary>
-                            /// <para>The statistical method for Info-level alerts.</para>
-                            /// <para>The value of the <c>Statistics</c> parameter varies with the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>Average</para>
-                            /// </summary>
                             [NameInMap("Statistics")]
                             [Validation(Required=false)]
                             public string Statistics { get; set; }
 
-                            /// <summary>
-                            /// <para>The threshold for Info-level alerts.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>90</para>
-                            /// </summary>
                             [NameInMap("Threshold")]
                             [Validation(Required=false)]
                             public string Threshold { get; set; }
 
-                            /// <summary>
-                            /// <para>The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>3</para>
-                            /// </summary>
                             [NameInMap("Times")]
                             [Validation(Required=false)]
                             public int? Times { get; set; }
 
                         }
 
-                        /// <summary>
-                        /// <para>The conditions for triggering Warn-level alerts.</para>
-                        /// </summary>
                         [NameInMap("Warn")]
                         [Validation(Required=false)]
                         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn Warn { get; set; }
                         public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateEscalationsWarn : TeaModel {
-                            /// <summary>
-                            /// <para>The comparison operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</para>
-                            /// <list type="bullet">
-                            /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-                            /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-                            /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-                            /// <item><description>LessThanThreshold: less than the threshold</description></item>
-                            /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-                            /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-                            /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-                            /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-                            /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-                            /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-                            /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
-                            /// </list>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>GreaterThanOrEqualToThreshold</para>
-                            /// </summary>
                             [NameInMap("ComparisonOperator")]
                             [Validation(Required=false)]
                             public string ComparisonOperator { get; set; }
 
-                            /// <summary>
-                            /// <para>The statistical method for Warn-level alerts.</para>
-                            /// <para>The value of the <c>Statistics</c> parameter varies with the cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>Average</para>
-                            /// </summary>
                             [NameInMap("Statistics")]
                             [Validation(Required=false)]
                             public string Statistics { get; set; }
 
-                            /// <summary>
-                            /// <para>The threshold for Warn-level alerts.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>90</para>
-                            /// </summary>
                             [NameInMap("Threshold")]
                             [Validation(Required=false)]
                             public string Threshold { get; set; }
 
-                            /// <summary>
-                            /// <para>The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>3</para>
-                            /// </summary>
                             [NameInMap("Times")]
                             [Validation(Required=false)]
                             public int? Times { get; set; }
@@ -268,9 +133,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                     }
 
-                    /// <summary>
-                    /// <para>The tags of the alert template.</para>
-                    /// </summary>
                     [NameInMap("Labels")]
                     [Validation(Required=false)]
                     public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateLabels Labels { get; set; }
@@ -279,22 +141,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         [Validation(Required=false)]
                         public List<DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateLabelsLabels> Labels { get; set; }
                         public class DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplateLabelsLabels : TeaModel {
-                            /// <summary>
-                            /// <para>The tag key of the alert template.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>label1</para>
-                            /// </summary>
                             [NameInMap("Key")]
                             [Validation(Required=false)]
                             public string Key { get; set; }
 
-                            /// <summary>
-                            /// <para>The tag value of the alert template.</para>
-                            /// 
-                            /// <b>Example:</b>
-                            /// <para>value1</para>
-                            /// </summary>
                             [NameInMap("Value")]
                             [Validation(Required=false)]
                             public string Value { get; set; }
@@ -303,57 +153,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                     }
 
-                    /// <summary>
-                    /// <para>The metric name.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>cpu_total</para>
-                    /// </summary>
                     [NameInMap("MetricName")]
                     [Validation(Required=false)]
                     public string MetricName { get; set; }
 
-                    /// <summary>
-                    /// <para>The namespace of the Alibaba Cloud service.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>acs_ecs_dashboard</para>
-                    /// </summary>
                     [NameInMap("Namespace")]
                     [Validation(Required=false)]
                     public string Namespace { get; set; }
 
-                    /// <summary>
-                    /// <para>The method that is used to handle alerts when no monitoring data is found. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>KEEP_LAST_STATE (default): No operation is performed.</description></item>
-                    /// <item><description>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient data&quot; is triggered.</description></item>
-                    /// <item><description>OK: The status is considered normal.</description></item>
-                    /// </list>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>KEEP_LAST_STATE</para>
-                    /// </summary>
                     [NameInMap("NoDataPolicy")]
                     [Validation(Required=false)]
                     public string NoDataPolicy { get; set; }
 
-                    /// <summary>
-                    /// <para>The name of the alert rule.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>ECS_Rule</para>
-                    /// </summary>
                     [NameInMap("RuleName")]
                     [Validation(Required=false)]
                     public string RuleName { get; set; }
 
-                    /// <summary>
-                    /// <para>The dimension of the alert. It is an extended field.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>{&quot;disk&quot;:&quot;/&quot;}</para>
-                    /// </summary>
                     [NameInMap("Selector")]
                     [Validation(Required=false)]
                     public string Selector { get; set; }
@@ -362,12 +177,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public int? SilenceTime { get; set; }
 
-                    /// <summary>
-                    /// <para>The callback URL to which a request is sent when an alert is triggered.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>
-                    /// </summary>
                     [NameInMap("Webhook")]
                     [Validation(Required=false)]
                     public string Webhook { get; set; }

@@ -56,9 +56,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// <para>The unhealthy instances that are detected by the specified availability monitoring tasks.</para>
-        /// </summary>
         [NameInMap("UnhealthyList")]
         [Validation(Required=false)]
         public DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyList UnhealthyList { get; set; }
@@ -67,12 +64,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstance> NodeTaskInstance { get; set; }
             public class DescribeUnhealthyHostAvailabilityResponseBodyUnhealthyListNodeTaskInstance : TeaModel {
-                /// <summary>
-                /// <para>The ID of the availability monitoring task.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>123456</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public long? Id { get; set; }

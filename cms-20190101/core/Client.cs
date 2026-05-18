@@ -12817,6 +12817,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return await DescribeMetricMetaListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries blacklist policies.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMetricRuleBlackListRequest
         /// </param>
@@ -12890,6 +12895,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeMetricRuleBlackListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries blacklist policies.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMetricRuleBlackListRequest
         /// </param>
@@ -12963,6 +12973,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return TeaModel.ToObject<DescribeMetricRuleBlackListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries blacklist policies.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMetricRuleBlackListRequest
         /// </param>
@@ -12976,6 +12991,11 @@ namespace AlibabaCloud.SDK.Cms20190101
             return DescribeMetricRuleBlackListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries blacklist policies.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeMetricRuleBlackListRequest
         /// </param>
@@ -15555,7 +15575,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定资源的进程数列表</para>
+        /// <para>Invokes the DescribeMonitoringAgentProcesses interface to query the process list of a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15605,7 +15625,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定资源的进程数列表</para>
+        /// <para>Invokes the DescribeMonitoringAgentProcesses interface to query the process list of a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15655,7 +15675,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定资源的进程数列表</para>
+        /// <para>Invokes the DescribeMonitoringAgentProcesses interface to query the process list of a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15681,7 +15701,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定资源的进程数列表</para>
+        /// <para>Invokes the DescribeMonitoringAgentProcesses interface to query the process list of a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -17551,7 +17571,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询拨测探测节点列表</para>
+        /// <para>Queries detection points.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17621,7 +17641,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询拨测探测节点列表</para>
+        /// <para>Queries detection points.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17691,7 +17711,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询拨测探测节点列表</para>
+        /// <para>Queries detection points.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17709,7 +17729,7 @@ namespace AlibabaCloud.SDK.Cms20190101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询拨测探测节点列表</para>
+        /// <para>Queries detection points.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25046,6 +25066,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             {
                 query["RuleName"] = request.RuleName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendOK))
+            {
+                query["SendOK"] = request.SendOK;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SilenceTime))
             {
                 query["SilenceTime"] = request.SilenceTime;
@@ -25173,6 +25197,10 @@ namespace AlibabaCloud.SDK.Cms20190101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
             {
                 query["RuleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendOK))
+            {
+                query["SendOK"] = request.SendOK;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SilenceTime))
             {

@@ -22,9 +22,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The queried detection points.</para>
-        /// </summary>
         [NameInMap("IspCityList")]
         [Validation(Required=false)]
         public DescribeSiteMonitorISPCityListResponseBodyIspCityList IspCityList { get; set; }
@@ -41,12 +38,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string Area_zh_cN { get; set; }
 
-                /// <summary>
-                /// <para>The city ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>4</para>
-                /// </summary>
                 [NameInMap("City")]
                 [Validation(Required=false)]
                 public string City { get; set; }
@@ -59,15 +50,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string CityName_zh_cN { get; set; }
 
-                /// <summary>
-                /// <para>The country name.</para>
-                /// <remarks>
-                /// <para>This parameter is valid only on the China site (aliyun.com).</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>629</para>
-                /// </summary>
                 [NameInMap("Country")]
                 [Validation(Required=false)]
                 public string Country { get; set; }
@@ -80,9 +62,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string Country_zh_cN { get; set; }
 
-                /// <summary>
-                /// <para>The IP address pool.</para>
-                /// </summary>
                 [NameInMap("IPPool")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorISPCityListResponseBodyIspCityListIspCityIPPool IPPool { get; set; }
@@ -93,32 +72,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The number of IPv4 probes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>4</para>
-                /// </summary>
                 [NameInMap("IPV4ProbeCount")]
                 [Validation(Required=false)]
                 public string IPV4ProbeCount { get; set; }
 
-                /// <summary>
-                /// <para>The number of IPv6 probes.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("IPV6ProbeCount")]
                 [Validation(Required=false)]
                 public string IPV6ProbeCount { get; set; }
 
-                /// <summary>
-                /// <para>The carrier ID.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>232</para>
-                /// </summary>
                 [NameInMap("Isp")]
                 [Validation(Required=false)]
                 public string Isp { get; set; }
@@ -131,12 +92,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string IspName_zh_cN { get; set; }
 
-                /// <summary>
-                /// <para>The province name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>264</para>
-                /// </summary>
                 [NameInMap("Region")]
                 [Validation(Required=false)]
                 public string Region { get; set; }

@@ -32,9 +32,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>The information about the processes.</para>
-        /// </summary>
         [NameInMap("NodeProcesses")]
         [Validation(Required=false)]
         public DescribeMonitoringAgentProcessesResponseBodyNodeProcesses NodeProcesses { get; set; }
@@ -43,65 +40,26 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess> NodeProcess { get; set; }
             public class DescribeMonitoringAgentProcessesResponseBodyNodeProcessesNodeProcess : TeaModel {
-                /// <summary>
-                /// <para>The command used to obtain the number of processes. Valid value: <c>number</c>.</para>
-                /// <remarks>
-                /// <para> The <c>number</c> command obtains the number of processes that match the condition.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>number</para>
-                /// </summary>
                 [NameInMap("Command")]
                 [Validation(Required=false)]
                 public string Command { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the application group.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3619****</para>
-                /// </summary>
                 [NameInMap("GroupId")]
                 [Validation(Required=false)]
                 public string GroupId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the instance.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>i-hp3hl3cx1pbahzy8****</para>
-                /// </summary>
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the process.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>234567</para>
-                /// </summary>
                 [NameInMap("ProcessId")]
                 [Validation(Required=false)]
                 public long? ProcessId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the process.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Nginx</para>
-                /// </summary>
                 [NameInMap("ProcessName")]
                 [Validation(Required=false)]
                 public string ProcessName { get; set; }
 
-                /// <summary>
-                /// <para>The user who launched the process.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>alice</para>
-                /// </summary>
                 [NameInMap("ProcessUser")]
                 [Validation(Required=false)]
                 public string ProcessUser { get; set; }

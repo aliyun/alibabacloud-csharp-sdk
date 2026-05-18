@@ -42,9 +42,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The resources that are associated with the application group.</para>
-        /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
         public DescribeMonitorGroupDynamicRulesResponseBodyResource Resource { get; set; }
@@ -53,38 +50,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeMonitorGroupDynamicRulesResponseBodyResourceResource> Resource { get; set; }
             public class DescribeMonitorGroupDynamicRulesResponseBodyResourceResource : TeaModel {
-                /// <summary>
-                /// <para>The type of the cloud service to which the dynamic rule belongs. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>ecs: Elastic Compute Service (ECS)</description></item>
-                /// <item><description>rds: ApsaraDB RDS</description></item>
-                /// <item><description>slb: Server Load Balancer (SLB)</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ecs</para>
-                /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
-                /// <summary>
-                /// <para>The filter condition. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>and: queries the instances that meet all alert rules.</description></item>
-                /// <item><description>or: queries the instances that meet any alert rule.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>and</para>
-                /// </summary>
                 [NameInMap("FilterRelation")]
                 [Validation(Required=false)]
                 public string FilterRelation { get; set; }
 
-                /// <summary>
-                /// <para>The dynamic rules of the application group.</para>
-                /// </summary>
                 [NameInMap("Filters")]
                 [Validation(Required=false)]
                 public DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFilters Filters { get; set; }
@@ -93,37 +66,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public List<DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFiltersFilter> Filter { get; set; }
                     public class DescribeMonitorGroupDynamicRulesResponseBodyResourceResourceFiltersFilter : TeaModel {
-                        /// <summary>
-                        /// <para>The method that is used to filter the instances. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>contains: contains</description></item>
-                        /// <item><description>startWith: starts with a prefix</description></item>
-                        /// <item><description>endWith: ends with a suffix</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>contains</para>
-                        /// </summary>
                         [NameInMap("Function")]
                         [Validation(Required=false)]
                         public string Function { get; set; }
 
-                        /// <summary>
-                        /// <para>The instance name.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>hostName</para>
-                        /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
-                        /// <summary>
-                        /// <para>The value of the dynamic rule.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>1</para>
-                        /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
                         public string Value { get; set; }

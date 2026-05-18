@@ -56,9 +56,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// <para>The queried alert templates.</para>
-        /// </summary>
         [NameInMap("Templates")]
         [Validation(Required=false)]
         public DescribeMetricRuleTemplateListResponseBodyTemplates Templates { get; set; }
@@ -67,9 +64,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate> Template { get; set; }
             public class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplate : TeaModel {
-                /// <summary>
-                /// <para>The history of applying the alert templates to application groups.</para>
-                /// </summary>
                 [NameInMap("ApplyHistories")]
                 [Validation(Required=false)]
                 public DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistories ApplyHistories { get; set; }
@@ -78,33 +72,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public List<DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory> ApplyHistory { get; set; }
                     public class DescribeMetricRuleTemplateListResponseBodyTemplatesTemplateApplyHistoriesApplyHistory : TeaModel {
-                        /// <summary>
-                        /// <para>The timestamp when the alert template was applied to the application group.</para>
-                        /// <para>Unit: milliseconds.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>1646055898000</para>
-                        /// </summary>
                         [NameInMap("ApplyTime")]
                         [Validation(Required=false)]
                         public long? ApplyTime { get; set; }
 
-                        /// <summary>
-                        /// <para>The ID of the application group.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>3607****</para>
-                        /// </summary>
                         [NameInMap("GroupId")]
                         [Validation(Required=false)]
                         public long? GroupId { get; set; }
 
-                        /// <summary>
-                        /// <para>The name of the application group.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>ECS_Group</para>
-                        /// </summary>
                         [NameInMap("GroupName")]
                         [Validation(Required=false)]
                         public string GroupName { get; set; }
@@ -113,62 +88,26 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The description of the alert template.</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp when the alert template was created.</para>
-                /// <para>Unit: milliseconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1646018798000</para>
-                /// </summary>
                 [NameInMap("GmtCreate")]
                 [Validation(Required=false)]
                 public long? GmtCreate { get; set; }
 
-                /// <summary>
-                /// <para>The timestamp when the alert template was modified.</para>
-                /// <para>Unit: milliseconds.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1646054798000</para>
-                /// </summary>
                 [NameInMap("GmtModified")]
                 [Validation(Required=false)]
                 public long? GmtModified { get; set; }
 
-                /// <summary>
-                /// <para>The name of the alert template.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>ECS_Template1</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <para>The version of the alert template.</para>
-                /// <para>Default value: 0.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("RestVersion")]
                 [Validation(Required=false)]
                 public long? RestVersion { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the alert template.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>70****</para>
-                /// </summary>
                 [NameInMap("TemplateId")]
                 [Validation(Required=false)]
                 public long? TemplateId { get; set; }

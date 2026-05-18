@@ -52,9 +52,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Success { get; set; }
 
-        /// <summary>
-        /// <para>The information about the number of times the system event occurred during each interval of a time period.</para>
-        /// </summary>
         [NameInMap("SystemEventHistograms")]
         [Validation(Required=false)]
         public DescribeSystemEventHistogramResponseBodySystemEventHistograms SystemEventHistograms { get; set; }
@@ -63,34 +60,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram> SystemEventHistogram { get; set; }
             public class DescribeSystemEventHistogramResponseBodySystemEventHistogramsSystemEventHistogram : TeaModel {
-                /// <summary>
-                /// <para>The number of times the system event occurred.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public long? Count { get; set; }
 
-                /// <summary>
-                /// <para>The end time.</para>
-                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1552225753000</para>
-                /// </summary>
                 [NameInMap("EndTime")]
                 [Validation(Required=false)]
                 public long? EndTime { get; set; }
 
-                /// <summary>
-                /// <para>The start time.</para>
-                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1552225770000</para>
-                /// </summary>
                 [NameInMap("StartTime")]
                 [Validation(Required=false)]
                 public long? StartTime { get; set; }

@@ -56,9 +56,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// <para>The deleted tags.</para>
-        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public RemoveTagsResponseBodyTag Tag { get; set; }

@@ -22,9 +22,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The details of the custom event.</para>
-        /// </summary>
         [NameInMap("CustomEventCounts")]
         [Validation(Required=false)]
         public DescribeCustomEventCountResponseBodyCustomEventCounts CustomEventCounts { get; set; }
@@ -33,33 +30,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount> CustomEventCount { get; set; }
             public class DescribeCustomEventCountResponseBodyCustomEventCountsCustomEventCount : TeaModel {
-                /// <summary>
-                /// <para>The event name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>BABEL_BUY</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <para>The number of times that the custom event occurred.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>20</para>
-                /// </summary>
                 [NameInMap("Num")]
                 [Validation(Required=false)]
                 public int? Num { get; set; }
 
-                /// <summary>
-                /// <para>The time when the event occurred.</para>
-                /// <para>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1552267615000</para>
-                /// </summary>
                 [NameInMap("Time")]
                 [Validation(Required=false)]
                 public long? Time { get; set; }

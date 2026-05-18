@@ -28,9 +28,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public DeleteMetricRuleTargetsResponseBodyFailIds FailIds { get; set; }
         public class DeleteMetricRuleTargetsResponseBodyFailIds : TeaModel {
-            /// <summary>
-            /// <para>The IDs of the resources that failed to be deleted.</para>
-            /// </summary>
             [NameInMap("TargetIds")]
             [Validation(Required=false)]
             public DeleteMetricRuleTargetsResponseBodyFailIdsTargetIds TargetIds { get; set; }

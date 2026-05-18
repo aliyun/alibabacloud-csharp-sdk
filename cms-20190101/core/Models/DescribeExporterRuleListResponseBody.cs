@@ -22,9 +22,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The details of the data export rules.</para>
-        /// </summary>
         [NameInMap("Datapoints")]
         [Validation(Required=false)]
         public DescribeExporterRuleListResponseBodyDatapoints Datapoints { get; set; }
@@ -33,32 +30,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeExporterRuleListResponseBodyDatapointsDatapoint> Datapoint { get; set; }
             public class DescribeExporterRuleListResponseBodyDatapointsDatapoint : TeaModel {
-                /// <summary>
-                /// <para>The time when the rule was created. The value is a UNIX timestamp.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1584024616228</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
-                /// <summary>
-                /// <para>The description of the rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Export monitoring data</para>
-                /// </summary>
                 [NameInMap("Describe")]
                 [Validation(Required=false)]
                 public string Describe { get; set; }
 
-                /// <summary>
-                /// <para>The associated dimensions.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>{&quot;instanceId&quot;:&quot;xxxxx&quot;}</para>
-                /// </summary>
                 [NameInMap("Dimension")]
                 [Validation(Required=false)]
                 public string Dimension { get; set; }
@@ -73,62 +52,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
-                /// <summary>
-                /// <para>Indicates whether the rule is enabled.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("Enabled")]
                 [Validation(Required=false)]
                 public bool? Enabled { get; set; }
 
-                /// <summary>
-                /// <para>The name of the metric.</para>
-                /// <remarks>
-                /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cpu_total</para>
-                /// </summary>
                 [NameInMap("MetricName")]
                 [Validation(Required=false)]
                 public string MetricName { get; set; }
 
-                /// <summary>
-                /// <para>The namespace of the service.</para>
-                /// <remarks>
-                /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>acs_ecs_dashboard</para>
-                /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
-                /// <summary>
-                /// <para>The name of the data export rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>myRuleName</para>
-                /// </summary>
                 [NameInMap("RuleName")]
                 [Validation(Required=false)]
                 public string RuleName { get; set; }
 
-                /// <summary>
-                /// <para>The time window of the exported data.\
-                /// Multiple windows are separated with commas (,).</para>
-                /// <remarks>
-                /// <para>Data in a time window of less than 60 seconds cannot be exported.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>60,300</para>
-                /// </summary>
                 [NameInMap("TargetWindows")]
                 [Validation(Required=false)]
                 public string TargetWindows { get; set; }

@@ -32,9 +32,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <para>The alert rules that are configured for the site monitoring task.</para>
-        /// </summary>
         [NameInMap("MetricRules")]
         [Validation(Required=false)]
         public DescribeSiteMonitorAttributeResponseBodyMetricRules MetricRules { get; set; }
@@ -43,200 +40,66 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeSiteMonitorAttributeResponseBodyMetricRulesMetricRule> MetricRule { get; set; }
             public class DescribeSiteMonitorAttributeResponseBodyMetricRulesMetricRule : TeaModel {
-                /// <summary>
-                /// <para>Indicates whether the alert rule is enabled. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>true: The alert rule is enabled.</description></item>
-                /// <item><description>false: The alert rule is disabled.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("ActionEnable")]
                 [Validation(Required=false)]
                 public string ActionEnable { get; set; }
 
-                /// <summary>
-                /// <para>The alert contact group to which alert notifications are sent.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CloudMonitor</para>
-                /// </summary>
                 [NameInMap("AlarmActions")]
                 [Validation(Required=false)]
                 public string AlarmActions { get; set; }
 
-                /// <summary>
-                /// <para>The operator that is used to compare the metric value with the threshold in the alert rule. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><c>&gt;=</c></description></item>
-                /// <item><description><c>&gt;</c></description></item>
-                /// <item><description><c>&lt;=</c></description></item>
-                /// <item><description><c>&lt;</c></description></item>
-                /// <item><description><c>=</c></description></item>
-                /// <item><description><c>!=</c></description></item>
-                /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-                /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-                /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-                /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-                /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-                /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>GreaterThanYesterday</para>
-                /// </summary>
                 [NameInMap("ComparisonOperator")]
                 [Validation(Required=false)]
                 public string ComparisonOperator { get; set; }
 
-                /// <summary>
-                /// <para>The dimension of the alert rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>[{&quot;taskId&quot;: &quot;cc641dff-c19d-45f3-ad0a-818a0c4f****&quot; }]</para>
-                /// </summary>
                 [NameInMap("Dimensions")]
                 [Validation(Required=false)]
                 public string Dimensions { get; set; }
 
-                /// <summary>
-                /// <para>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>3</para>
-                /// </summary>
                 [NameInMap("EvaluationCount")]
                 [Validation(Required=false)]
                 public string EvaluationCount { get; set; }
 
-                /// <summary>
-                /// <para>The expression that is used to trigger alerts.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>$Availability=30</para>
-                /// </summary>
                 [NameInMap("Expression")]
                 [Validation(Required=false)]
                 public string Expression { get; set; }
 
-                /// <summary>
-                /// <para>The alert severity. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>1: critical</description></item>
-                /// <item><description>2: warning</description></item>
-                /// <item><description>3: information</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("Level")]
                 [Validation(Required=false)]
                 public string Level { get; set; }
 
-                /// <summary>
-                /// <para>The metric name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Availability</para>
-                /// </summary>
                 [NameInMap("MetricName")]
                 [Validation(Required=false)]
                 public string MetricName { get; set; }
 
-                /// <summary>
-                /// <para>The namespace of the cloud service.</para>
-                /// <para>The value is in the following format: acs_service name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>acs_networkmonitor</para>
-                /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }
 
-                /// <summary>
-                /// <para>The alert contact group that receives alert notifications.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>[ &quot;CloudMonitor&quot;]</para>
-                /// </summary>
                 [NameInMap("OkActions")]
                 [Validation(Required=false)]
                 public string OkActions { get; set; }
 
-                /// <summary>
-                /// <para>The time interval. The value is the same as the interval at which metric data is reported. Unit: seconds.</para>
-                /// <remarks>
-                /// <para> If you specify a statistical period for the alert rule, data is queried based on the statistical period.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>15s</para>
-                /// </summary>
                 [NameInMap("Period")]
                 [Validation(Required=false)]
                 public string Period { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the alert rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>bf071ae_7b7aec3817b0fdf****</para>
-                /// </summary>
                 [NameInMap("RuleId")]
                 [Validation(Required=false)]
                 public string RuleId { get; set; }
 
-                /// <summary>
-                /// <para>The name of the alert rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>rule1</para>
-                /// </summary>
                 [NameInMap("RuleName")]
                 [Validation(Required=false)]
                 public string RuleName { get; set; }
 
-                /// <summary>
-                /// <para>The alert status. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>OK: The alert rule has no active alerts.</description></item>
-                /// <item><description>ALARM: The alert rule has active alerts.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>OK</para>
-                /// </summary>
                 [NameInMap("StateValue")]
                 [Validation(Required=false)]
                 public string StateValue { get; set; }
 
-                /// <summary>
-                /// <para>The statistical method of the alert rule. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Availability: the percentage of available detection points</description></item>
-                /// <item><description>AvailableNumber: the number of available detection points</description></item>
-                /// <item><description>ErrorCodeMaximum: a status code for an alert</description></item>
-                /// <item><description>ErrorCodeMinimum: all status codes for a set of alerts</description></item>
-                /// <item><description>Average: response time</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Availability</para>
-                /// </summary>
                 [NameInMap("Statistics")]
                 [Validation(Required=false)]
                 public string Statistics { get; set; }
 
-                /// <summary>
-                /// <para>The alert threshold.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>30</para>
-                /// </summary>
                 [NameInMap("Threshold")]
                 [Validation(Required=false)]
                 public string Threshold { get; set; }
@@ -293,9 +156,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule CustomSchedule { get; set; }
             public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule : TeaModel {
-                /// <summary>
-                /// <para>The days in a week.</para>
-                /// </summary>
                 [NameInMap("days")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays Days { get; set; }
@@ -348,9 +208,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Interval { get; set; }
 
-            /// <summary>
-            /// <para>The information of detection points. The information includes the carriers that provide the detection points and the cities where the detection points reside.</para>
-            /// </summary>
             [NameInMap("IspCities")]
             [Validation(Required=false)]
             public DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCities IspCities { get; set; }
@@ -359,46 +216,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public List<DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCitiesIspCity> IspCity { get; set; }
                 public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCitiesIspCity : TeaModel {
-                    /// <summary>
-                    /// <para>The city ID.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>738</para>
-                    /// </summary>
                     [NameInMap("City")]
                     [Validation(Required=false)]
                     public string City { get; set; }
 
-                    /// <summary>
-                    /// <para>The city name.</para>
-                    /// </summary>
                     [NameInMap("CityName")]
                     [Validation(Required=false)]
                     public string CityName { get; set; }
 
-                    /// <summary>
-                    /// <para>The carrier ID.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>465</para>
-                    /// </summary>
                     [NameInMap("Isp")]
                     [Validation(Required=false)]
                     public string Isp { get; set; }
 
-                    /// <summary>
-                    /// <para>The carrier name.</para>
-                    /// </summary>
                     [NameInMap("IspName")]
                     [Validation(Required=false)]
                     public string IspName { get; set; }
 
-                    /// <summary>
-                    /// <para>The network type of the detection point. Valid values: IDC, LASTMILE, and MOBILE.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>IDC</para>
-                    /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
@@ -414,9 +247,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson OptionJson { get; set; }
             public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson : TeaModel {
-                /// <summary>
-                /// <para>The assertions.</para>
-                /// </summary>
                 [NameInMap("assertions")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAssertions Assertions { get; set; }
@@ -425,64 +255,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public List<DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAssertionsAssertions> Assertions { get; set; }
                     public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAssertionsAssertions : TeaModel {
-                        /// <summary>
-                        /// <para>The operator. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>contains: contains</description></item>
-                        /// <item><description>doesNotContain: does not contain</description></item>
-                        /// <item><description>matches: matches a regular expression</description></item>
-                        /// <item><description>doesNotMatch: does not match a regular expression</description></item>
-                        /// <item><description>is: equal to</description></item>
-                        /// <item><description>isNot: not equal to</description></item>
-                        /// <item><description>lessThan: less than</description></item>
-                        /// <item><description>moreThan: greater than</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>lessThan</para>
-                        /// </summary>
                         [NameInMap("operator")]
                         [Validation(Required=false)]
                         public string Operator { get; set; }
 
-                        /// <summary>
-                        /// <para>The path to the assertion.</para>
-                        /// <list type="bullet">
-                        /// <item><description>If the assertion type is body_json, the path is json path.</description></item>
-                        /// <item><description>If the assertion type is body_xml, the path is xml path.</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>json path</para>
-                        /// </summary>
                         [NameInMap("property")]
                         [Validation(Required=false)]
                         public string Property { get; set; }
 
-                        /// <summary>
-                        /// <para>The value or character to which the condition of the assertion is compared.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>0</para>
-                        /// </summary>
                         [NameInMap("target")]
                         [Validation(Required=false)]
                         public string Target { get; set; }
 
-                        /// <summary>
-                        /// <para>The assertion type. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>response_time: checks whether the response time meets expectations.</description></item>
-                        /// <item><description>status_code: checks whether the HTTP status code meets expectations.</description></item>
-                        /// <item><description>header: checks whether the fields in the response header meet expectations.</description></item>
-                        /// <item><description>body_text: check whether the content in the response body meets expectations by using text matching.</description></item>
-                        /// <item><description>body_json: check whether the content in the response body meets expectations by using JSON parsing (JSONPath).</description></item>
-                        /// <item><description>body_xml: check whether the content in the response body meets expectations by using XML parsing (XPath).</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>response_time</para>
-                        /// </summary>
                         [NameInMap("type")]
                         [Validation(Required=false)]
                         public string Type { get; set; }
@@ -585,9 +369,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The blocked URLs. Wildcards are supported in paths.</para>
-                /// </summary>
                 [NameInMap("blocked_url_list")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBlockedUrlList BlockedUrlList { get; set; }
@@ -598,9 +379,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The custom headers. Format: {&quot;key&quot;: &quot;somekey&quot;, &quot;value&quot;:&quot;somevalue&quot;}.</para>
-                /// </summary>
                 [NameInMap("browser_headers")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHeaders BrowserHeaders { get; set; }
@@ -611,9 +389,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The custom hosts. Format: {&quot;key&quot;: &quot;somekey&quot;, &quot;value&quot;:&quot;somevalue&quot;}.</para>
-                /// </summary>
                 [NameInMap("browser_hosts")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserHosts BrowserHosts { get; set; }
@@ -624,9 +399,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The browser information.</para>
-                /// </summary>
                 [NameInMap("browser_info")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfo BrowserInfo { get; set; }
@@ -635,22 +407,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public List<DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo> BrowserInfo { get; set; }
                     public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonBrowserInfoBrowserInfo : TeaModel {
-                        /// <summary>
-                        /// <para>The browser type.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>Chrome</para>
-                        /// </summary>
                         [NameInMap("browser")]
                         [Validation(Required=false)]
                         public string Browser { get; set; }
 
-                        /// <summary>
-                        /// <para>The device type.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>laptop</para>
-                        /// </summary>
                         [NameInMap("device")]
                         [Validation(Required=false)]
                         public string Device { get; set; }
@@ -819,9 +579,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public bool? EnablePacketCapture { get; set; }
 
-                /// <summary>
-                /// <para>The string that is expected to exist on the page.</para>
-                /// </summary>
                 [NameInMap("expect_exist_string")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectExistString ExpectExistString { get; set; }
@@ -832,9 +589,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The string that is not expected to exist on the page.</para>
-                /// </summary>
                 [NameInMap("expect_non_exist_string")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonExpectNonExistString ExpectNonExistString { get; set; }
@@ -1067,9 +821,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public bool? QuicEnabled { get; set; }
 
-                /// <summary>
-                /// <para>The sites for which the QUIC protocol is forcibly used.</para>
-                /// </summary>
                 [NameInMap("quic_target")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonQuicTarget QuicTarget { get; set; }
@@ -1290,9 +1041,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string TraceType { get; set; }
 
-                /// <summary>
-                /// <para>The traffic hijacking blacklist. When redirection occurs, if the URL of the resource loaded by the browser matches the expression in the blacklist, traffic hijacking is considered to have occurred.</para>
-                /// </summary>
                 [NameInMap("traffic_hijack_element_blacklist")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist TrafficHijackElementBlacklist { get; set; }
@@ -1313,9 +1061,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public int? TrafficHijackElementCount { get; set; }
 
-                /// <summary>
-                /// <para>The traffic hijacking whitelist. When redirection occurs, if the URL of the resource loaded by the browser does not match any expression in the whitelist, traffic hijacking is considered to have occurred.</para>
-                /// </summary>
                 [NameInMap("traffic_hijack_element_whitelist")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementWhitelist TrafficHijackElementWhitelist { get; set; }

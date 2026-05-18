@@ -440,6 +440,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
+        [NameInMap("SendOK")]
+        [Validation(Required=false)]
+        public bool? SendOK { get; set; }
+
         /// <summary>
         /// <para>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400.</para>
         /// <remarks>

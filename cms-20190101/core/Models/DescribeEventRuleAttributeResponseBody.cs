@@ -66,9 +66,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public DescribeEventRuleAttributeResponseBodyResultEventPattern EventPattern { get; set; }
             public class DescribeEventRuleAttributeResponseBodyResultEventPattern : TeaModel {
-                /// <summary>
-                /// <para>The types of the event-triggered alert rules.</para>
-                /// </summary>
                 [NameInMap("EventTypeList")]
                 [Validation(Required=false)]
                 public DescribeEventRuleAttributeResponseBodyResultEventPatternEventTypeList EventTypeList { get; set; }
@@ -86,9 +83,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj KeywordFilterObj { get; set; }
                 public class DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObj : TeaModel {
-                    /// <summary>
-                    /// <para>The keywords that are used to match events.</para>
-                    /// </summary>
                     [NameInMap("Keywords")]
                     [Validation(Required=false)]
                     public DescribeEventRuleAttributeResponseBodyResultEventPatternKeywordFilterObjKeywords Keywords { get; set; }

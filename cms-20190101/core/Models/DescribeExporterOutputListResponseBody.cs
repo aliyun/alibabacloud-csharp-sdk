@@ -22,9 +22,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The configuration sets for exporting monitoring data.</para>
-        /// </summary>
         [NameInMap("Datapoints")]
         [Validation(Required=false)]
         public DescribeExporterOutputListResponseBodyDatapoints Datapoints { get; set; }
@@ -33,84 +30,36 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeExporterOutputListResponseBodyDatapointsDatapoint> Datapoint { get; set; }
             public class DescribeExporterOutputListResponseBodyDatapointsDatapoint : TeaModel {
-                /// <summary>
-                /// <para>The JSON object that contains the details about the destination to which the monitoring data is exported.</para>
-                /// </summary>
                 [NameInMap("ConfigJson")]
                 [Validation(Required=false)]
                 public DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson ConfigJson { get; set; }
                 public class DescribeExporterOutputListResponseBodyDatapointsDatapointConfigJson : TeaModel {
-                    /// <summary>
-                    /// <para>The AccessKey ID.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>LTAIpY33********</para>
-                    /// </summary>
                     [NameInMap("ak")]
                     [Validation(Required=false)]
                     public string Ak { get; set; }
 
-                    /// <summary>
-                    /// <para>The Log Service endpoint to which the monitoring data is exported.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para><a href="http://cn-qingdao-share.log.aliyuncs.com">http://cn-qingdao-share.log.aliyuncs.com</a></para>
-                    /// </summary>
                     [NameInMap("endpoint")]
                     [Validation(Required=false)]
                     public string Endpoint { get; set; }
 
-                    /// <summary>
-                    /// <para>The Logstore.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>monitorlogstore</para>
-                    /// </summary>
                     [NameInMap("logstore")]
                     [Validation(Required=false)]
                     public string Logstore { get; set; }
 
-                    /// <summary>
-                    /// <para>The Log Service project to which the monitoring data is exported.</para>
-                    /// 
-                    /// <b>Example:</b>
-                    /// <para>exporter</para>
-                    /// </summary>
                     [NameInMap("project")]
                     [Validation(Required=false)]
                     public string Project { get; set; }
 
                 }
 
-                /// <summary>
-                /// <para>The time when the configuration set was created. The value is a UNIX timestamp.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1584016495498</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public long? CreateTime { get; set; }
 
-                /// <summary>
-                /// <para>The name of the configuration set.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>exporterOut</para>
-                /// </summary>
                 [NameInMap("DestName")]
                 [Validation(Required=false)]
                 public string DestName { get; set; }
 
-                /// <summary>
-                /// <para>The service to which the monitoring data is exported.</para>
-                /// <remarks>
-                /// <para>Only Log Service is supported. More services will be supported in the future.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>SLS</para>
-                /// </summary>
                 [NameInMap("DestType")]
                 [Validation(Required=false)]
                 public string DestType { get; set; }

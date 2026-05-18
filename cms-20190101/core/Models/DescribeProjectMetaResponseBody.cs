@@ -62,9 +62,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The details of the cloud service.</para>
-        /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public DescribeProjectMetaResponseBodyResources Resources { get; set; }
@@ -73,39 +70,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeProjectMetaResponseBodyResourcesResource> Resource { get; set; }
             public class DescribeProjectMetaResponseBodyResourcesResource : TeaModel {
-                /// <summary>
-                /// <para>The description.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>CDN</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The tags. Tags are used to filter services.</para>
-                /// <para>Tags are returned in the following format: <c>[{&quot;name&quot;:&quot;Tag key&quot;,&quot;value&quot;:&quot;Tag value&quot;}, {&quot;name&quot;:&quot;Tag key&quot;,&quot;value&quot;:&quot;Tag value&quot;}]</c>. The following tags are commonly used:</para>
-                /// <list type="bullet">
-                /// <item><description>alertUnit: the unit of the metric value in alerts. If the unit is small, the original metric value may be too large. In this case, you can use the <c>alertUnit</c> tag to specify an appropriate unit. This tag is used in CloudMonitor.</description></item>
-                /// <item><description>minAlertPeriod: the minimum time interval to report a new alert. The interval at which monitoring data is reported. The value is usually 1 minute.</description></item>
-                /// <item><description>metricCategory: the service specification. Example: kvstore_sharding. Some Alibaba Cloud services have multiple specifications that are defined in the same namespace. This parameter is used to identify the specifications.</description></item>
-                /// <item><description>is_alarm: indicates whether an alert rule can be configured. We recommend that you do not use the special tags in the CloudMonitor console.</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>[{&quot;groupFlag&quot;:true}]</para>
-                /// </summary>
                 [NameInMap("Labels")]
                 [Validation(Required=false)]
                 public string Labels { get; set; }
 
-                /// <summary>
-                /// <para>The namespace of the cloud service. Format: <c>acs_Service name abbreviation</c>. For more information about namespaces, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>acs_cdn</para>
-                /// </summary>
                 [NameInMap("Namespace")]
                 [Validation(Required=false)]
                 public string Namespace { get; set; }

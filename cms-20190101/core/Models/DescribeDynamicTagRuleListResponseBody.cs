@@ -76,9 +76,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
-        /// <summary>
-        /// <para>The tag rules of application groups.</para>
-        /// </summary>
         [NameInMap("TagGroupList")]
         [Validation(Required=false)]
         public DescribeDynamicTagRuleListResponseBodyTagGroupList TagGroupList { get; set; }
@@ -87,9 +84,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public List<DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup> TagGroup { get; set; }
             public class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroup : TeaModel {
-                /// <summary>
-                /// <para>The alert contact group.</para>
-                /// </summary>
                 [NameInMap("ContactGroupList")]
                 [Validation(Required=false)]
                 public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupContactGroupList ContactGroupList { get; set; }
@@ -100,19 +94,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The ID of the tag rule.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>1536df65-a719-429d-8813-73cc40d7****</para>
-                /// </summary>
                 [NameInMap("DynamicTagRuleId")]
                 [Validation(Required=false)]
                 public string DynamicTagRuleId { get; set; }
 
-                /// <summary>
-                /// <para>The conditional expressions used to create an application group based on the tag.</para>
-                /// </summary>
                 [NameInMap("MatchExpress")]
                 [Validation(Required=false)]
                 public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpress MatchExpress { get; set; }
@@ -121,43 +106,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     [Validation(Required=false)]
                     public List<DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress> MatchExpress { get; set; }
                     public class DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupMatchExpressMatchExpress : TeaModel {
-                        /// <summary>
-                        /// <para>The tag key.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>azone-version</para>
-                        /// </summary>
                         [NameInMap("TagKey")]
                         [Validation(Required=false)]
                         public string TagKey { get; set; }
 
-                        /// <summary>
-                        /// <para>The tag value.</para>
-                        /// <para>The <c>TagValue</c> and <c>TagValueMatchFunction</c> parameters must be used in pairs.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <list type="bullet">
-                        /// <item><description></description></item>
-                        /// </list>
-                        /// </summary>
                         [NameInMap("TagValue")]
                         [Validation(Required=false)]
                         public string TagValue { get; set; }
 
-                        /// <summary>
-                        /// <para>The method that is used to match tag values. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>all: includes all</description></item>
-                        /// <item><description>startWith: starts with a prefix</description></item>
-                        /// <item><description>endWith: ends with a suffix</description></item>
-                        /// <item><description>contains: contains</description></item>
-                        /// <item><description>notContains: does not contain</description></item>
-                        /// <item><description>equals: equals</description></item>
-                        /// </list>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>all</para>
-                        /// </summary>
                         [NameInMap("TagValueMatchFunction")]
                         [Validation(Required=false)]
                         public string TagValueMatchFunction { get; set; }
@@ -166,53 +122,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The logical operator that is used between conditional expressions. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><c>and</c></description></item>
-                /// <item><description><c>or</c></description></item>
-                /// </list>
-                /// <remarks>
-                /// <para> Only one logical operator can be used in a request.</para>
-                /// </remarks>
-                /// 
-                /// <b>Example:</b>
-                /// <para>or</para>
-                /// </summary>
                 [NameInMap("MatchExpressFilterRelation")]
                 [Validation(Required=false)]
                 public string MatchExpressFilterRelation { get; set; }
 
-                /// <summary>
-                /// <para>The ID of the region to which the tags belong.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>cn-hangzhou</para>
-                /// </summary>
                 [NameInMap("RegionId")]
                 [Validation(Required=false)]
                 public string RegionId { get; set; }
 
-                /// <summary>
-                /// <para>The status of adding instances that meet the tag rule to the application group. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><c>RUNNING</c></description></item>
-                /// <item><description><c>FINISH</c></description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>FINISH</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>tagkey1</para>
-                /// </summary>
                 [NameInMap("TagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
@@ -227,9 +148,6 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
-                /// <summary>
-                /// <para>The IDs of the alert templates.</para>
-                /// </summary>
                 [NameInMap("TemplateIdList")]
                 [Validation(Required=false)]
                 public DescribeDynamicTagRuleListResponseBodyTagGroupListTagGroupTemplateIdList TemplateIdList { get; set; }
