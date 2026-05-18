@@ -890,9 +890,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Deletes a completed or stopped job.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DeleteJobRequest
-        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -903,9 +900,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <returns>
         /// DeleteJobResponse
         /// </returns>
-        public DeleteJobResponse DeleteJobWithOptions(string JobId, DeleteJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteJobResponse DeleteJobWithOptions(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -930,9 +926,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Deletes a completed or stopped job.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DeleteJobRequest
-        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -943,9 +936,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <returns>
         /// DeleteJobResponse
         /// </returns>
-        public async Task<DeleteJobResponse> DeleteJobWithOptionsAsync(string JobId, DeleteJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteJobResponse> DeleteJobWithOptionsAsync(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -970,18 +962,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Deletes a completed or stopped job.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DeleteJobRequest
-        /// </param>
-        /// 
         /// <returns>
         /// DeleteJobResponse
         /// </returns>
-        public DeleteJobResponse DeleteJob(string JobId, DeleteJobRequest request)
+        public DeleteJobResponse DeleteJob(string JobId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteJobWithOptions(JobId, request, headers, runtime);
+            return DeleteJobWithOptions(JobId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -989,18 +977,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Deletes a completed or stopped job.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DeleteJobRequest
-        /// </param>
-        /// 
         /// <returns>
         /// DeleteJobResponse
         /// </returns>
-        public async Task<DeleteJobResponse> DeleteJobAsync(string JobId, DeleteJobRequest request)
+        public async Task<DeleteJobResponse> DeleteJobAsync(string JobId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteJobWithOptionsAsync(JobId, request, headers, runtime);
+            return await DeleteJobWithOptionsAsync(JobId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4620,9 +4604,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Stops a running job.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// StopJobRequest
-        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4633,9 +4614,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <returns>
         /// StopJobResponse
         /// </returns>
-        public StopJobResponse StopJobWithOptions(string JobId, StopJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public StopJobResponse StopJobWithOptions(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4660,9 +4640,6 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Stops a running job.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// StopJobRequest
-        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -4673,9 +4650,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <returns>
         /// StopJobResponse
         /// </returns>
-        public async Task<StopJobResponse> StopJobWithOptionsAsync(string JobId, StopJobRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<StopJobResponse> StopJobWithOptionsAsync(string JobId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4700,18 +4676,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Stops a running job.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// StopJobRequest
-        /// </param>
-        /// 
         /// <returns>
         /// StopJobResponse
         /// </returns>
-        public StopJobResponse StopJob(string JobId, StopJobRequest request)
+        public StopJobResponse StopJob(string JobId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return StopJobWithOptions(JobId, request, headers, runtime);
+            return StopJobWithOptions(JobId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4719,18 +4691,14 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
         /// <para>Stops a running job.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// StopJobRequest
-        /// </param>
-        /// 
         /// <returns>
         /// StopJobResponse
         /// </returns>
-        public async Task<StopJobResponse> StopJobAsync(string JobId, StopJobRequest request)
+        public async Task<StopJobResponse> StopJobAsync(string JobId)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await StopJobWithOptionsAsync(JobId, request, headers, runtime);
+            return await StopJobWithOptionsAsync(JobId, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -1,3 +1,6 @@
+2026-05-18 Version: 1.8.3
+- Generated csharp 2020-12-03 for pai-dlc.
+
 2026-05-14 Version: 1.8.2
 - Update API GetJob: add response parameters Body.RestartRecord.$.RestartLevelType.
 
