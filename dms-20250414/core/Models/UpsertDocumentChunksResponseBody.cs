@@ -8,46 +8,46 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
-    public class OneMetaKnowledgeBaseChunk : TeaModel {
+    public class UpsertDocumentChunksResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2026-04-20 15:51:27</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("ChunkMtime")]
+        [NameInMap("Data")]
         [Validation(Required=false)]
-        public string ChunkMtime { get; set; }
+        public bool? Data { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>titile1</para>
+        /// <para>KnowledgeBaseNotFound</para>
         /// </summary>
-        [NameInMap("ChunkTitle")]
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public string ChunkTitle { get; set; }
+        public string ErrorCode { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>abc</para>
+        /// <para>Resource not found kb-***</para>
         /// </summary>
-        [NameInMap("Content")]
+        [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
-        public string Content { get; set; }
+        public string ErrorMessage { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>test.md</para>
+        /// <para>67E910F2-4B62-5B0C-ACA3-7547695C****</para>
         /// </summary>
-        [NameInMap("DocName")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string DocName { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>2e12aeb5-52cd-4834-bcd8-****</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("Id")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public bool? Success { get; set; }
 
     }
 
