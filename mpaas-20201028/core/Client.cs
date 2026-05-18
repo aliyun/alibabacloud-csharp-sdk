@@ -918,6 +918,174 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             return await ChangeMdsCubeTaskStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户校验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckUserAuthToMsceneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckUserAuthToMsceneResponse
+        /// </returns>
+        public CheckUserAuthToMsceneResponse CheckUserAuthToMsceneWithOptions(CheckUserAuthToMsceneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthToken))
+            {
+                body["AuthToken"] = request.AuthToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MiniProgramId))
+            {
+                body["MiniProgramId"] = request.MiniProgramId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenUid))
+            {
+                body["OpenUid"] = request.OpenUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformId))
+            {
+                body["PlatformId"] = request.PlatformId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckUserAuthToMscene",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckUserAuthToMsceneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户校验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckUserAuthToMsceneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckUserAuthToMsceneResponse
+        /// </returns>
+        public async Task<CheckUserAuthToMsceneResponse> CheckUserAuthToMsceneWithOptionsAsync(CheckUserAuthToMsceneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
+            {
+                body["AppId"] = request.AppId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthToken))
+            {
+                body["AuthToken"] = request.AuthToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MiniProgramId))
+            {
+                body["MiniProgramId"] = request.MiniProgramId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenUid))
+            {
+                body["OpenUid"] = request.OpenUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformId))
+            {
+                body["PlatformId"] = request.PlatformId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                body["TenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckUserAuthToMscene",
+                Version = "2020-10-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckUserAuthToMsceneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户校验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckUserAuthToMsceneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckUserAuthToMsceneResponse
+        /// </returns>
+        public CheckUserAuthToMsceneResponse CheckUserAuthToMscene(CheckUserAuthToMsceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckUserAuthToMsceneWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>用户校验</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CheckUserAuthToMsceneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckUserAuthToMsceneResponse
+        /// </returns>
+        public async Task<CheckUserAuthToMsceneResponse> CheckUserAuthToMsceneAsync(CheckUserAuthToMsceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckUserAuthToMsceneWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// CopyMcdpGroupRequest
         /// </param>

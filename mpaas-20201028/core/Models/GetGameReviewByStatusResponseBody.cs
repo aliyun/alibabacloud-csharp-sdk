@@ -171,6 +171,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
                     [Validation(Required=false)]
                     public int? PublishStatus { get; set; }
 
+                    [NameInMap("PublishStatusDesc")]
+                    [Validation(Required=false)]
+                    public string PublishStatusDesc { get; set; }
+
                     [NameInMap("QrCodeUrl")]
                     [Validation(Required=false)]
                     public string QrCodeUrl { get; set; }
