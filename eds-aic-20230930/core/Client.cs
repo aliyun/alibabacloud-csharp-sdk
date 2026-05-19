@@ -12351,6 +12351,126 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>暂停云手机实例上正在运行的 Agent 任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PauseAgentTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseAgentTaskResponse
+        /// </returns>
+        public PauseAgentTaskResponse PauseAgentTaskWithOptions(PauseAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
+            {
+                query["TaskIds"] = request.TaskIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PauseAgentTask",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PauseAgentTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停云手机实例上正在运行的 Agent 任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PauseAgentTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseAgentTaskResponse
+        /// </returns>
+        public async Task<PauseAgentTaskResponse> PauseAgentTaskWithOptionsAsync(PauseAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
+            {
+                query["TaskIds"] = request.TaskIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PauseAgentTask",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PauseAgentTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停云手机实例上正在运行的 Agent 任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PauseAgentTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseAgentTaskResponse
+        /// </returns>
+        public PauseAgentTaskResponse PauseAgentTask(PauseAgentTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PauseAgentTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停云手机实例上正在运行的 Agent 任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PauseAgentTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PauseAgentTaskResponse
+        /// </returns>
+        public async Task<PauseAgentTaskResponse> PauseAgentTaskAsync(PauseAgentTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PauseAgentTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Restarts one or more cloud phone instances.</para>
         /// </summary>
         /// 
@@ -13491,6 +13611,134 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ResetAndroidInstancesInGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>继续云手机实例上正在运行的 Agent 任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeAgentTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeAgentTaskResponse
+        /// </returns>
+        public ResumeAgentTaskResponse ResumeAgentTaskWithOptions(ResumeAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalPrompt))
+            {
+                query["AdditionalPrompt"] = request.AdditionalPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
+            {
+                query["TaskIds"] = request.TaskIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeAgentTask",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResumeAgentTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>继续云手机实例上正在运行的 Agent 任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeAgentTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeAgentTaskResponse
+        /// </returns>
+        public async Task<ResumeAgentTaskResponse> ResumeAgentTaskWithOptionsAsync(ResumeAgentTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalPrompt))
+            {
+                query["AdditionalPrompt"] = request.AdditionalPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
+            {
+                query["TaskIds"] = request.TaskIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResumeAgentTask",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResumeAgentTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>继续云手机实例上正在运行的 Agent 任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeAgentTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeAgentTaskResponse
+        /// </returns>
+        public ResumeAgentTaskResponse ResumeAgentTask(ResumeAgentTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResumeAgentTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>继续云手机实例上正在运行的 Agent 任务。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ResumeAgentTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResumeAgentTaskResponse
+        /// </returns>
+        public async Task<ResumeAgentTaskResponse> ResumeAgentTaskAsync(ResumeAgentTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResumeAgentTaskWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
