@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.ModelService20220614
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
             {
-                query["SceneType"] = request.SceneType;
+                query["scene_type"] = request.SceneType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.ModelService20220614
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
             {
-                query["SceneType"] = request.SceneType;
+                query["scene_type"] = request.SceneType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

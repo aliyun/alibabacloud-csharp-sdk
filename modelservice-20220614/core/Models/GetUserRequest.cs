@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.ModelService20220614.Models
     public class GetUserRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>image_label</para>
+        /// <para>sales_pick</para>
         /// </summary>
-        [NameInMap("SceneType")]
+        [NameInMap("scene_type")]
         [Validation(Required=false)]
         public string SceneType { get; set; }
 
