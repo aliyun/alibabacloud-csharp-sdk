@@ -323,6 +323,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public bool? OrderAckFlag { get; set; }
 
+        [NameInMap("pointCoveredFlag")]
+        [Validation(Required=false)]
+        public bool? PointCoveredFlag { get; set; }
+
         [NameInMap("pointDeductionRuleList")]
         [Validation(Required=false)]
         public List<GetAICoachScriptResponseBodyPointDeductionRuleList> PointDeductionRuleList { get; set; }
@@ -482,6 +486,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [NameInMap("questionDescription")]
             [Validation(Required=false)]
             public string QuestionDescription { get; set; }
+
+            [NameInMap("scriptPointId")]
+            [Validation(Required=false)]
+            public string ScriptPointId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
