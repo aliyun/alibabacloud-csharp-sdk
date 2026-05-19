@@ -59,6 +59,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string TopologyType { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>enabled</para>
+            /// </summary>
+            [NameInMap("NestedVirtualization")]
+            [Validation(Required=false)]
+            public string NestedVirtualization { get; set; }
+
         }
 
         /// <summary>
