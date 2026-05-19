@@ -137,10 +137,6 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                         }
 
-                        [NameInMap("LlmResponse")]
-                        [Validation(Required=false)]
-                        public string LlmResponse { get; set; }
-
                         [NameInMap("Rid")]
                         [Validation(Required=false)]
                         public string Rid { get; set; }
