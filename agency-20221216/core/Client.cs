@@ -3486,7 +3486,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询T2优惠券审批详情</para>
+        /// <para>View Tier 2 coupon approval details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3528,7 +3528,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询T2优惠券审批详情</para>
+        /// <para>View Tier 2 coupon approval details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3570,7 +3570,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询T2优惠券审批详情</para>
+        /// <para>View Tier 2 coupon approval details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3588,7 +3588,7 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询T2优惠券审批详情</para>
+        /// <para>View Tier 2 coupon approval details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3858,6 +3858,174 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>T2 Sub-distributor Invitation (Supports Cross-Regional Validation)</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>The API caller must be a channel general distributor partner of Alibaba Cloud International.</description></item>
+        /// <item><description>The system automatically determines if the invitation is cross-regional based on whether the <c>registerNation</c> parameter is within the T1 contract coverage area (the contract coverage area can be queried using the ListCountries API).</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If it\&quot;s a cross-regional invitation, a cross-regional approval process will be initiated. After approval by Alibaba Cloud, an invitation registration email will be sent to the invited email address.</description></item>
+        /// <item><description>If it\&quot;s not a cross-regional invitation, an invitation registration email will be sent directly.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InviteSubResellerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InviteSubResellerResponse
+        /// </returns>
+        public InviteSubResellerResponse InviteSubResellerWithOptions(InviteSubResellerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountInfoList))
+            {
+                query["AccountInfoList"] = request.AccountInfoList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InviteSubReseller",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InviteSubResellerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>T2 Sub-distributor Invitation (Supports Cross-Regional Validation)</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>The API caller must be a channel general distributor partner of Alibaba Cloud International.</description></item>
+        /// <item><description>The system automatically determines if the invitation is cross-regional based on whether the <c>registerNation</c> parameter is within the T1 contract coverage area (the contract coverage area can be queried using the ListCountries API).</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If it\&quot;s a cross-regional invitation, a cross-regional approval process will be initiated. After approval by Alibaba Cloud, an invitation registration email will be sent to the invited email address.</description></item>
+        /// <item><description>If it\&quot;s not a cross-regional invitation, an invitation registration email will be sent directly.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InviteSubResellerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InviteSubResellerResponse
+        /// </returns>
+        public async Task<InviteSubResellerResponse> InviteSubResellerWithOptionsAsync(InviteSubResellerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountInfoList))
+            {
+                query["AccountInfoList"] = request.AccountInfoList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InviteSubReseller",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InviteSubResellerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>T2 Sub-distributor Invitation (Supports Cross-Regional Validation)</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>The API caller must be a channel general distributor partner of Alibaba Cloud International.</description></item>
+        /// <item><description>The system automatically determines if the invitation is cross-regional based on whether the <c>registerNation</c> parameter is within the T1 contract coverage area (the contract coverage area can be queried using the ListCountries API).</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If it\&quot;s a cross-regional invitation, a cross-regional approval process will be initiated. After approval by Alibaba Cloud, an invitation registration email will be sent to the invited email address.</description></item>
+        /// <item><description>If it\&quot;s not a cross-regional invitation, an invitation registration email will be sent directly.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InviteSubResellerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InviteSubResellerResponse
+        /// </returns>
+        public InviteSubResellerResponse InviteSubReseller(InviteSubResellerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return InviteSubResellerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>T2 Sub-distributor Invitation (Supports Cross-Regional Validation)</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>The API caller must be a channel general distributor partner of Alibaba Cloud International.</description></item>
+        /// <item><description>The system automatically determines if the invitation is cross-regional based on whether the <c>registerNation</c> parameter is within the T1 contract coverage area (the contract coverage area can be queried using the ListCountries API).</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>If it\&quot;s a cross-regional invitation, a cross-regional approval process will be initiated. After approval by Alibaba Cloud, an invitation registration email will be sent to the invited email address.</description></item>
+        /// <item><description>If it\&quot;s not a cross-regional invitation, an invitation registration email will be sent directly.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InviteSubResellerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InviteSubResellerResponse
+        /// </returns>
+        public async Task<InviteSubResellerResponse> InviteSubResellerAsync(InviteSubResellerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await InviteSubResellerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>发放优惠券</para>
         /// </summary>
         /// 
@@ -4018,9 +4186,6 @@ namespace AlibabaCloud.SDK.Agency20221216
         /// <para>The current API request rate for cloud products has not been disclosed.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// ListCountriesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4056,9 +4221,6 @@ namespace AlibabaCloud.SDK.Agency20221216
         /// <para>The current API request rate for cloud products has not been disclosed.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// ListCountriesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
