@@ -700,7 +700,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检测budgetName是否存在</para>
+        /// <para>Check whether budgetName exists</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -748,7 +748,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检测budgetName是否存在</para>
+        /// <para>Check whether budgetName exists</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -796,7 +796,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检测budgetName是否存在</para>
+        /// <para>Check whether budgetName exists</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -814,7 +814,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检测budgetName是否存在</para>
+        /// <para>Check whether budgetName exists</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -832,7 +832,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预算</para>
+        /// <para>Create Budget</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -946,7 +946,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预算</para>
+        /// <para>Create Budget</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1060,7 +1060,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预算</para>
+        /// <para>Create Budget</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1078,7 +1078,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预算</para>
+        /// <para>Create Budget</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2720,7 +2720,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个Budget</para>
+        /// <para>Query a Single Budget</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2768,7 +2768,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个Budget</para>
+        /// <para>Query a Single Budget</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2816,7 +2816,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个Budget</para>
+        /// <para>Query a Single Budget</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2834,7 +2834,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个Budget</para>
+        /// <para>Query a Single Budget</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2852,7 +2852,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预算列表</para>
+        /// <para>Query budget list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2916,7 +2916,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预算列表</para>
+        /// <para>Query budget list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2980,7 +2980,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预算列表</para>
+        /// <para>Query budget list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2998,7 +2998,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预算列表</para>
+        /// <para>Query budget list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6740,6 +6740,158 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Query Cost Overview of a Cost Center</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCostByCostCenterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCostByCostCenterResponse
+        /// </returns>
+        public QueryCostByCostCenterResponse QueryCostByCostCenterWithOptions(QueryCostByCostCenterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingMonth))
+            {
+                query["BillingMonth"] = request.BillingMonth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayZeroAmountBills))
+            {
+                query["DisplayZeroAmountBills"] = request.DisplayZeroAmountBills;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByCostCenterLevel))
+            {
+                query["GroupByCostCenterLevel"] = request.GroupByCostCenterLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metrics))
+            {
+                query["Metrics"] = request.Metrics;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccountId))
+            {
+                query["OwnerAccountId"] = request.OwnerAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCostByCostCenter",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCostByCostCenterResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Cost Overview of a Cost Center</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCostByCostCenterRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCostByCostCenterResponse
+        /// </returns>
+        public async Task<QueryCostByCostCenterResponse> QueryCostByCostCenterWithOptionsAsync(QueryCostByCostCenterRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillingMonth))
+            {
+                query["BillingMonth"] = request.BillingMonth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayZeroAmountBills))
+            {
+                query["DisplayZeroAmountBills"] = request.DisplayZeroAmountBills;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByCostCenterLevel))
+            {
+                query["GroupByCostCenterLevel"] = request.GroupByCostCenterLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Metrics))
+            {
+                query["Metrics"] = request.Metrics;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerAccountId))
+            {
+                query["OwnerAccountId"] = request.OwnerAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryCostByCostCenter",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryCostByCostCenterResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Cost Overview of a Cost Center</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCostByCostCenterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCostByCostCenterResponse
+        /// </returns>
+        public QueryCostByCostCenterResponse QueryCostByCostCenter(QueryCostByCostCenterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryCostByCostCenterWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query Cost Overview of a Cost Center</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryCostByCostCenterRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryCostByCostCenterResponse
+        /// </returns>
+        public async Task<QueryCostByCostCenterResponse> QueryCostByCostCenterAsync(QueryCostByCostCenterRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryCostByCostCenterWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询财务单元</para>
         /// </summary>
         /// 
@@ -7368,7 +7520,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改财务单元分摊规则</para>
+        /// <para>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7440,7 +7592,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改财务单元分摊规则</para>
+        /// <para>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7512,7 +7664,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改财务单元分摊规则</para>
+        /// <para>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7530,7 +7682,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改财务单元分摊规则</para>
+        /// <para>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</para>
         /// </summary>
         /// 
         /// <param name="request">
