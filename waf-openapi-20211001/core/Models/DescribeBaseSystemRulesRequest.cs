@@ -91,6 +91,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         [Validation(Required=false)]
         public long? RuleId { get; set; }
 
+        [NameInMap("RuleIds")]
+        [Validation(Required=false)]
+        public List<long?> RuleIds { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>systemRuleTest</para>

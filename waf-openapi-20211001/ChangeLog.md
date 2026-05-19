@@ -1,3 +1,7 @@
+2026-05-19 Version: 7.7.2
+- Update API DescribeBaseSystemRules: add request parameters RuleIds.
+
+
 2026-05-14 Version: 7.7.1
 - Update API DescribeResourceLogStatus: add response parameters Body.Result.$.TraceConfig.
 - Update API DescribeResourceLogStatus: add response parameters Body.Result.$.TraceStatus.
