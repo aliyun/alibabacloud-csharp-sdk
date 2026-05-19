@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class GetYikePromptExpansionVoiceFixJobResponseBody : TeaModel {
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public string EndTime { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>Forbidden</para>
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
+
+        [NameInMap("ErrorMessage")]
+        [Validation(Required=false)]
+        public string ErrorMessage { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -62,6 +70,10 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("StartTime")]
+        [Validation(Required=false)]
+        public string StartTime { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
