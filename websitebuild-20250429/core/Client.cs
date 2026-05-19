@@ -4071,6 +4071,134 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询LLM Proxy配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLlmProxyConfigForAdminRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLlmProxyConfigForAdminResponse
+        /// </returns>
+        public GetLlmProxyConfigForAdminResponse GetLlmProxyConfigForAdminWithOptions(GetLlmProxyConfigForAdminRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Capability))
+            {
+                query["Capability"] = request.Capability;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLlmProxyConfigForAdmin",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLlmProxyConfigForAdminResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询LLM Proxy配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLlmProxyConfigForAdminRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLlmProxyConfigForAdminResponse
+        /// </returns>
+        public async Task<GetLlmProxyConfigForAdminResponse> GetLlmProxyConfigForAdminWithOptionsAsync(GetLlmProxyConfigForAdminRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Capability))
+            {
+                query["Capability"] = request.Capability;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetLlmProxyConfigForAdmin",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetLlmProxyConfigForAdminResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询LLM Proxy配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLlmProxyConfigForAdminRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLlmProxyConfigForAdminResponse
+        /// </returns>
+        public GetLlmProxyConfigForAdminResponse GetLlmProxyConfigForAdmin(GetLlmProxyConfigForAdminRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetLlmProxyConfigForAdminWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询LLM Proxy配置</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetLlmProxyConfigForAdminRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetLlmProxyConfigForAdminResponse
+        /// </returns>
+        public async Task<GetLlmProxyConfigForAdminResponse> GetLlmProxyConfigForAdminAsync(GetLlmProxyConfigForAdminRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetLlmProxyConfigForAdminWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>通过授权码得到accessToken</para>
         /// </summary>
         /// 
