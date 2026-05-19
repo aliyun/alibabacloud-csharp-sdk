@@ -9,10 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class DescribeEmbodiedAIPlatformsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>298a7d5473b128dfe0b5e8707e******</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -202,6 +210,78 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
                     [NameInMap("WorkerSpecType")]
                     [Validation(Required=false)]
                     public string WorkerSpecType { get; set; }
+
+                }
+
+            }
+
+            [NameInMap("RayTrainConfig")]
+            [Validation(Required=false)]
+            public DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayTrainConfig RayTrainConfig { get; set; }
+            public class DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayTrainConfig : TeaModel {
+                [NameInMap("CpuAcu")]
+                [Validation(Required=false)]
+                public long? CpuAcu { get; set; }
+
+                [NameInMap("GpuSpecs")]
+                [Validation(Required=false)]
+                public List<DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayTrainConfigGpuSpecs> GpuSpecs { get; set; }
+                public class DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayTrainConfigGpuSpecs : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>&quot;1&quot;</para>
+                    /// </summary>
+                    [NameInMap("AllocateUnit")]
+                    [Validation(Required=false)]
+                    public string AllocateUnit { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
+                    [NameInMap("Count")]
+                    [Validation(Required=false)]
+                    public long? Count { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>ADB.MLTensor.2</para>
+                    /// </summary>
+                    [NameInMap("SpecName")]
+                    [Validation(Required=false)]
+                    public string SpecName { get; set; }
+
+                }
+
+                [NameInMap("TerminalConfig")]
+                [Validation(Required=false)]
+                public DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayTrainConfigTerminalConfig TerminalConfig { get; set; }
+                public class DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayTrainConfigTerminalConfig : TeaModel {
+                    [NameInMap("AcrConfig")]
+                    [Validation(Required=false)]
+                    public DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayTrainConfigTerminalConfigAcrConfig AcrConfig { get; set; }
+                    public class DescribeEmbodiedAIPlatformsResponseBodyPlatformsRayTrainConfigTerminalConfigAcrConfig : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>cri-***</para>
+                        /// </summary>
+                        [NameInMap("InstanceId")]
+                        [Validation(Required=false)]
+                        public string InstanceId { get; set; }
+
+                        [NameInMap("Namespaces")]
+                        [Validation(Required=false)]
+                        public List<string> Namespaces { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>example-vpc.example-region.cr.aliyuncs.com</para>
+                        /// </summary>
+                        [NameInMap("Registry")]
+                        [Validation(Required=false)]
+                        public string Registry { get; set; }
+
+                    }
 
                 }
 

@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("DeviceCount")]
         [Validation(Required=false)]
         public int? DeviceCount { get; set; }
@@ -36,6 +40,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [NameInMap("RayConfig")]
         [Validation(Required=false)]
         public string RayConfigShrink { get; set; }
+
+        [NameInMap("RayTrainConfig")]
+        [Validation(Required=false)]
+        public string RayTrainConfigShrink { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>

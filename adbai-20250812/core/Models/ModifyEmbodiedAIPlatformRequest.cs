@@ -117,6 +117,82 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 
         }
 
+        [NameInMap("RayTrainConfig")]
+        [Validation(Required=false)]
+        public ModifyEmbodiedAIPlatformRequestRayTrainConfig RayTrainConfig { get; set; }
+        public class ModifyEmbodiedAIPlatformRequestRayTrainConfig : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("CpuAcu")]
+            [Validation(Required=false)]
+            public long? CpuAcu { get; set; }
+
+            [NameInMap("GpuSpecs")]
+            [Validation(Required=false)]
+            public List<ModifyEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs> GpuSpecs { get; set; }
+            public class ModifyEmbodiedAIPlatformRequestRayTrainConfigGpuSpecs : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>&quot;1&quot;</para>
+                /// </summary>
+                [NameInMap("AllocateUnit")]
+                [Validation(Required=false)]
+                public string AllocateUnit { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("Count")]
+                [Validation(Required=false)]
+                public long? Count { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>ADB.MLTensor.2</para>
+                /// </summary>
+                [NameInMap("SpecName")]
+                [Validation(Required=false)]
+                public string SpecName { get; set; }
+
+            }
+
+            [NameInMap("TerminalConfig")]
+            [Validation(Required=false)]
+            public ModifyEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig TerminalConfig { get; set; }
+            public class ModifyEmbodiedAIPlatformRequestRayTrainConfigTerminalConfig : TeaModel {
+                [NameInMap("AcrConfig")]
+                [Validation(Required=false)]
+                public ModifyEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig AcrConfig { get; set; }
+                public class ModifyEmbodiedAIPlatformRequestRayTrainConfigTerminalConfigAcrConfig : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>i-8vb32jdd306b50rodza7</para>
+                    /// </summary>
+                    [NameInMap("InstanceId")]
+                    [Validation(Required=false)]
+                    public string InstanceId { get; set; }
+
+                    [NameInMap("Namespaces")]
+                    [Validation(Required=false)]
+                    public List<string> Namespaces { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>example-vpc.example-region.cr.aliyuncs.com</para>
+                    /// </summary>
+                    [NameInMap("Registry")]
+                    [Validation(Required=false)]
+                    public string Registry { get; set; }
+
+                }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

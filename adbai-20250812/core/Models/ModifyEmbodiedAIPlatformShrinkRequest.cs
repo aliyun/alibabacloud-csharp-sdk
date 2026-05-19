@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         [Validation(Required=false)]
         public string RayConfigShrink { get; set; }
 
+        [NameInMap("RayTrainConfig")]
+        [Validation(Required=false)]
+        public string RayTrainConfigShrink { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

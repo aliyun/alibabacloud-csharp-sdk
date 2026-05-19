@@ -217,6 +217,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             {
                 request.RayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayConfig, "RayConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RayTrainConfig))
+            {
+                request.RayTrainConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayTrainConfig, "RayTrainConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
@@ -233,6 +237,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayConfigShrink))
             {
                 query["RayConfig"] = request.RayConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayTrainConfigShrink))
+            {
+                query["RayTrainConfig"] = request.RayTrainConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -285,6 +293,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             {
                 request.RayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayConfig, "RayConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RayTrainConfig))
+            {
+                request.RayTrainConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayTrainConfig, "RayTrainConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
@@ -301,6 +313,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayConfigShrink))
             {
                 query["RayConfig"] = request.RayConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayTrainConfigShrink))
+            {
+                query["RayTrainConfig"] = request.RayTrainConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1577,6 +1593,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             {
                 request.RayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayConfig, "RayConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RayTrainConfig))
+            {
+                request.RayTrainConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayTrainConfig, "RayTrainConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
@@ -1593,6 +1613,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayConfigShrink))
             {
                 query["RayConfig"] = request.RayConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayTrainConfigShrink))
+            {
+                query["RayTrainConfig"] = request.RayTrainConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -1645,6 +1669,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             {
                 request.RayConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayConfig, "RayConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RayTrainConfig))
+            {
+                request.RayTrainConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RayTrainConfig, "RayTrainConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
@@ -1661,6 +1689,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayConfigShrink))
             {
                 query["RayConfig"] = request.RayConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RayTrainConfigShrink))
+            {
+                query["RayTrainConfig"] = request.RayTrainConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
