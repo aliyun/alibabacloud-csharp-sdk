@@ -31687,6 +31687,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return await DescribeDBInitializeVariableWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例性能数据</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstancePerformanceRequest
         /// </param>
@@ -31752,6 +31757,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBInstancePerformanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例性能数据</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstancePerformanceRequest
         /// </param>
@@ -31817,6 +31827,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return TeaModel.ToObject<DescribeDBInstancePerformanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例性能数据</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstancePerformanceRequest
         /// </param>
@@ -31830,6 +31845,11 @@ namespace AlibabaCloud.SDK.Polardb20170801
             return DescribeDBInstancePerformanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例性能数据</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstancePerformanceRequest
         /// </param>
@@ -40986,6 +41006,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
             {
                 query["PolarFsInstanceId"] = request.PolarFsInstanceId;
@@ -41039,6 +41067,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolarFsInstanceId))
             {

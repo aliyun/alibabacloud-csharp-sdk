@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Architecture { get; set; }
 
+        [NameInMap("CanDisableSnat")]
+        [Validation(Required=false)]
+        public bool? CanDisableSnat { get; set; }
+
         [NameInMap("Components")]
         [Validation(Required=false)]
         public List<DescribeApplicationAttributeResponseBodyComponents> Components { get; set; }
@@ -367,6 +371,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>pc-xxx</para>
+        /// </summary>
+        [NameInMap("NatGatewayId")]
+        [Validation(Required=false)]
+        public string NatGatewayId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>Postpaid</para>
         /// </summary>
         [NameInMap("PayType")]
@@ -502,6 +514,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("ServerlessType")]
         [Validation(Required=false)]
         public string ServerlessType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
+        [NameInMap("SnatStatus")]
+        [Validation(Required=false)]
+        public string SnatStatus { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
