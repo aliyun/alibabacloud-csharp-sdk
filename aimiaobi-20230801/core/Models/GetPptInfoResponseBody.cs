@@ -35,6 +35,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para><a href="http://a.com/xxx.jpeg">http://a.com/xxx.jpeg</a></para>
+            /// </summary>
+            [NameInMap("PptArtifactCover")]
+            [Validation(Required=false)]
+            public string PptArtifactCover { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>5423431</para>
             /// </summary>
             [NameInMap("PptArtifactId")]
