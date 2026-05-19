@@ -9077,6 +9077,154 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
             return await RevertAssignedSessionGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用原生Prompt调用通义晓蜜</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunCompletionMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCompletionMessageResponse
+        /// </returns>
+        public RunCompletionMessageResponse RunCompletionMessageWithOptions(RunCompletionMessageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunCompletionMessageShrinkRequest request = new RunCompletionMessageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Messages))
+            {
+                request.MessagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Messages, "Messages", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesShrink))
+            {
+                body["Messages"] = request.MessagesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCode))
+            {
+                body["ModelCode"] = request.ModelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["Stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunCompletionMessage",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunCompletionMessageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用原生Prompt调用通义晓蜜</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// RunCompletionMessageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCompletionMessageResponse
+        /// </returns>
+        public async Task<RunCompletionMessageResponse> RunCompletionMessageWithOptionsAsync(RunCompletionMessageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RunCompletionMessageShrinkRequest request = new RunCompletionMessageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Messages))
+            {
+                request.MessagesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Messages, "Messages", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MessagesShrink))
+            {
+                body["Messages"] = request.MessagesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelCode))
+            {
+                body["ModelCode"] = request.ModelCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Stream))
+            {
+                body["Stream"] = request.Stream;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunCompletionMessage",
+                Version = "2019-01-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunCompletionMessageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用原生Prompt调用通义晓蜜</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunCompletionMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCompletionMessageResponse
+        /// </returns>
+        public RunCompletionMessageResponse RunCompletionMessage(RunCompletionMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RunCompletionMessageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>使用原生Prompt调用通义晓蜜</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunCompletionMessageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunCompletionMessageResponse
+        /// </returns>
+        public async Task<RunCompletionMessageResponse> RunCompletionMessageAsync(RunCompletionMessageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RunCompletionMessageWithOptionsAsync(request, runtime);
+        }
+
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI SaveConfigDataSet is deprecated
