@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.AnyTrans20250707.Models
             [Validation(Required=false)]
             public SubmitDocTranslateTaskRequestExtConfig Config { get; set; }
             public class SubmitDocTranslateTaskRequestExtConfig : TeaModel {
+                [NameInMap("isBilingual")]
+                [Validation(Required=false)]
+                public bool? IsBilingual { get; set; }
+
                 [NameInMap("skipImgTrans")]
                 [Validation(Required=false)]
                 public bool? SkipImgTrans { get; set; }
