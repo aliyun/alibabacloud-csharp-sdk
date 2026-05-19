@@ -3648,6 +3648,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["ConsumerName"] = request.ConsumerName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cursor))
+            {
+                query["Cursor"] = request.Cursor;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -3721,6 +3725,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerName))
             {
                 query["ConsumerName"] = request.ConsumerName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cursor))
+            {
+                query["Cursor"] = request.Cursor;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {

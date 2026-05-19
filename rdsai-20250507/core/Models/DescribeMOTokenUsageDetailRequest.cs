@@ -23,6 +23,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>eyJpZCI6MTIzNDUsInRzIjoiMjAyNi0wNC0wOFQwMDowMDowMFoifQ==</para>
+        /// </summary>
+        [NameInMap("Cursor")]
+        [Validation(Required=false)]
+        public string Cursor { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>2025-12-13T16:00:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]

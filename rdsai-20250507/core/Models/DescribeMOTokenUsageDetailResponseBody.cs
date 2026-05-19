@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
     public class DescribeMOTokenUsageDetailResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>eyJpZCI6MTIzNDUsInRzIjoiMjAyNi0wNC0wOFQwMDowMDowMFoifQ==</para>
+        /// </summary>
+        [NameInMap("NextCursor")]
+        [Validation(Required=false)]
+        public string NextCursor { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
         [NameInMap("Page")]

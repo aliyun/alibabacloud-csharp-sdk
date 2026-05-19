@@ -34,6 +34,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public List<GetModelOperatorOrderResponseBodyDataInstanceList> InstanceList { get; set; }
             public class GetModelOperatorOrderResponseBodyDataInstanceList : TeaModel {
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>PREPAY</para>
+                /// </summary>
+                [NameInMap("ChargeType")]
+                [Validation(Required=false)]
+                public string ChargeType { get; set; }
+
+                /// <summary>
                 /// <para>The instance end time (format: Timestamp).</para>
                 /// 
                 /// <b>Example:</b>
