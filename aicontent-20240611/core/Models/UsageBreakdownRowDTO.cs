@@ -13,6 +13,22 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
+        [NameInMap("apiKeyId")]
+        [Validation(Required=false)]
+        public long? ApiKeyId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>默认密钥</para>
+        /// </summary>
+        [NameInMap("apiKeyName")]
+        [Validation(Required=false)]
+        public string ApiKeyName { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
         [NameInMap("clientId")]
         [Validation(Required=false)]
         public long? ClientId { get; set; }

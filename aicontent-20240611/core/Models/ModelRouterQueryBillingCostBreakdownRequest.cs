@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
     public class ModelRouterQueryBillingCostBreakdownRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
+        [NameInMap("apiKeyId")]
+        [Validation(Required=false)]
+        public long? ApiKeyId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
         [NameInMap("clientId")]
