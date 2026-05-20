@@ -17,6 +17,26 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeEndpointName { get; set; }
 
         /// <summary>
+        /// <para>兼容协议，指定后端响应格式转换。仅当 resourceType 为 flow 时必填：native 表示 FnF 原生调用；openai、dify-workflow、dify-chatflow 为对应兼容 API。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>native</para>
+        /// </summary>
+        [NameInMap("compatibleProtocol")]
+        [Validation(Required=false)]
+        public string CompatibleProtocol { get; set; }
+
+        /// <summary>
+        /// <para>Flow 版本/别名（仅当 resourceType 为 flow 时有效，默认 Default）</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Default</para>
+        /// </summary>
+        [NameInMap("flowEndpointName")]
+        [Validation(Required=false)]
+        public string FlowEndpointName { get; set; }
+
+        /// <summary>
         /// <para>支持的方法有：HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS</para>
         /// 
         /// <b>Example:</b>

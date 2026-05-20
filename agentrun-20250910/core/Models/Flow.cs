@@ -40,6 +40,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>是否禁用该工作流的公网访问，作为工作流级别的默认策略</para>
+        /// </summary>
+        [NameInMap("disablePublicNetworkAccess")]
+        [Validation(Required=false)]
+        public bool? DisablePublicNetworkAccess { get; set; }
+
+        /// <summary>
         /// <para>工作流的环境变量配置，包含一组命名变量列表</para>
         /// </summary>
         [NameInMap("environmentConfiguration")]

@@ -87,6 +87,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public int? DiskSize { get; set; }
 
+        [NameInMap("edition")]
+        [Validation(Required=false)]
+        public string Edition { get; set; }
+
         /// <summary>
         /// <para>是否启用会话隔离，启用后每个会话将在独立的环境中运行</para>
         /// 
