@@ -6936,6 +6936,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["ExportFileType"] = request.ExportFileType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["ExternalUserId"] = request.ExternalUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PptArtifactId))
             {
                 body["PptArtifactId"] = request.PptArtifactId;
@@ -6993,6 +6997,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportFileType))
             {
                 body["ExportFileType"] = request.ExportFileType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["ExternalUserId"] = request.ExternalUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PptArtifactId))
             {
@@ -12740,6 +12748,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             {
                 body["ExportTaskId"] = request.ExportTaskId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["ExternalUserId"] = request.ExternalUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 body["WorkspaceId"] = request.WorkspaceId;
@@ -12785,6 +12797,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportTaskId))
             {
                 body["ExportTaskId"] = request.ExportTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["ExternalUserId"] = request.ExternalUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
@@ -12992,6 +13008,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["ExternalUserId"] = request.ExternalUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 body["TaskId"] = request.TaskId;
@@ -13038,6 +13058,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExternalUserId))
+            {
+                body["ExternalUserId"] = request.ExternalUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 body["TaskId"] = request.TaskId;

@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>abc</para>
+        /// </summary>
+        [NameInMap("ExternalUserId")]
+        [Validation(Required=false)]
+        public string ExternalUserId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>llm-xxxx</para>
         /// </summary>
         [NameInMap("WorkspaceId")]

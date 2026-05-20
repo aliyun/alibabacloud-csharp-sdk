@@ -26,6 +26,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         public string ExportFileType { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>abc</para>
+        /// </summary>
+        [NameInMap("ExternalUserId")]
+        [Validation(Required=false)]
+        public string ExternalUserId { get; set; }
+
+        /// <summary>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

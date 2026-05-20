@@ -11,6 +11,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
     public class GetPptInfoRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
+        /// <para>abc</para>
+        /// </summary>
+        [NameInMap("ExternalUserId")]
+        [Validation(Required=false)]
+        public string ExternalUserId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1f178f22-ec52-467d-8489-eef4468x0240</para>
         /// </summary>
         [NameInMap("TaskId")]
