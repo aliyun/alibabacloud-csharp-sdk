@@ -5052,6 +5052,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["Filename"] = request.Filename;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucket))
+            {
+                query["OssBucket"] = request.OssBucket;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadLocation))
             {
                 query["UploadLocation"] = request.UploadLocation;
@@ -5109,6 +5113,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filename))
             {
                 query["Filename"] = request.Filename;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucket))
+            {
+                query["OssBucket"] = request.OssBucket;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadLocation))
             {

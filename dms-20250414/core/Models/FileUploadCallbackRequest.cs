@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string Filename { get; set; }
 
+        [NameInMap("OssBucket")]
+        [Validation(Required=false)]
+        public string OssBucket { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
