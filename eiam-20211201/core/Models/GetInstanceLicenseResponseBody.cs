@@ -52,9 +52,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 [Validation(Required=false)]
                 public long? M2mApplicationQuota { get; set; }
 
+                [NameInMap("MimApplicationLicenseStatus")]
+                [Validation(Required=false)]
+                public string MimApplicationLicenseStatus { get; set; }
+
                 [NameInMap("NetworkAccessEndpointQuota")]
                 [Validation(Required=false)]
                 public long? NetworkAccessEndpointQuota { get; set; }
+
+                [NameInMap("PrepaidActiveUserNumber")]
+                [Validation(Required=false)]
+                public long? PrepaidActiveUserNumber { get; set; }
 
                 [NameInMap("UserQuota")]
                 [Validation(Required=false)]
