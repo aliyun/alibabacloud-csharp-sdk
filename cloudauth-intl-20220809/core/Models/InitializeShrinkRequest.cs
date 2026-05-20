@@ -436,6 +436,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Ocr { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("OcrValueStandard")]
+        [Validation(Required=false)]
+        public string OcrValueStandard { get; set; }
+
+        /// <summary>
         /// <para>Page configuration for collection, multiple pages are connected using commas. Value range:</para>
         /// <list type="bullet">
         /// <item><description><para><b>01</b>: Front side of the document</para>

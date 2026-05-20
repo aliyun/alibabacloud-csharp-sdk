@@ -8297,6 +8297,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["Ocr"] = request.Ocr;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrValueStandard))
+            {
+                query["OcrValueStandard"] = request.OcrValueStandard;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pages))
             {
                 query["Pages"] = request.Pages;
@@ -8562,6 +8566,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ocr))
             {
                 query["Ocr"] = request.Ocr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrValueStandard))
+            {
+                query["OcrValueStandard"] = request.OcrValueStandard;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Pages))
             {
