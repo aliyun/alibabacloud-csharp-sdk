@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public bool? EnableRewrite { get; set; }
 
+        [NameInMap("Extra")]
+        [Validation(Required=false)]
+        public string ExtraShrink { get; set; }
+
         [NameInMap("Images")]
         [Validation(Required=false)]
         public string ImagesShrink { get; set; }

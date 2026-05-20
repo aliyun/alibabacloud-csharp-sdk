@@ -50,6 +50,16 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public bool? EnableRewrite { get; set; }
 
+        [NameInMap("Extra")]
+        [Validation(Required=false)]
+        public RetrieveRequestExtra Extra { get; set; }
+        public class RetrieveRequestExtra : TeaModel {
+            [NameInMap("uniqueId")]
+            [Validation(Required=false)]
+            public string UniqueId { get; set; }
+
+        }
+
         [NameInMap("Images")]
         [Validation(Required=false)]
         public List<string> Images { get; set; }
