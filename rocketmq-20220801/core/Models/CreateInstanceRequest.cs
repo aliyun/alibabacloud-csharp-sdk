@@ -47,6 +47,8 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         [Validation(Required=false)]
         public int? AutoRenewPeriod { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The commodity code. Valid values:</para>
         /// <list type="bullet">
@@ -61,6 +63,7 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
         /// </summary>
         [NameInMap("commodityCode")]
         [Validation(Required=false)]
+        [Obsolete]
         public string CommodityCode { get; set; }
 
         /// <summary>

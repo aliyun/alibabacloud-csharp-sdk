@@ -107,6 +107,14 @@ namespace AlibabaCloud.SDK.RocketMQ20220801.Models
 
             }
 
+            [NameInMap("autoRenew")]
+            [Validation(Required=false)]
+            public bool? AutoRenew { get; set; }
+
+            [NameInMap("autoRenewPeriod")]
+            [Validation(Required=false)]
+            public int? AutoRenewPeriod { get; set; }
+
             /// <summary>
             /// <para>The business ID (BID) of the commodity.</para>
             /// 
