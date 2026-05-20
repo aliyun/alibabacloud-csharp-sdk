@@ -1,3 +1,7 @@
+2026-05-20 Version: 1.8.0
+- Support API CreateImageLib.
+
+
 2026-05-14 Version: 1.7.1
 - Update API ListServiceConfigs: add request parameters ProtectionType.
 
