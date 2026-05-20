@@ -209,6 +209,42 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public CreateApplicationVersionRequestTranscriberConfig TranscriberConfig { get; set; }
         public class CreateApplicationVersionRequestTranscriberConfig : TeaModel {
+            [NameInMap("CorrectionRules")]
+            [Validation(Required=false)]
+            public List<CreateApplicationVersionRequestTranscriberConfigCorrectionRules> CorrectionRules { get; set; }
+            public class CreateApplicationVersionRequestTranscriberConfigCorrectionRules : TeaModel {
+                [NameInMap("Pattern")]
+                [Validation(Required=false)]
+                public string Pattern { get; set; }
+
+                [NameInMap("Replacement")]
+                [Validation(Required=false)]
+                public string Replacement { get; set; }
+
+            }
+
+            [NameInMap("CustomizationId")]
+            [Validation(Required=false)]
+            public string CustomizationId { get; set; }
+
+            [NameInMap("EndSilenceTimeout")]
+            [Validation(Required=false)]
+            public int? EndSilenceTimeout { get; set; }
+
+            [NameInMap("Model")]
+            [Validation(Required=false)]
+            public string Model { get; set; }
+
+            [NameInMap("NlsAccessProfile")]
+            [Validation(Required=false)]
+            public CreateApplicationVersionRequestTranscriberConfigNlsAccessProfile NlsAccessProfile { get; set; }
+            public class CreateApplicationVersionRequestTranscriberConfigNlsAccessProfile : TeaModel {
+                [NameInMap("AccessProfileId")]
+                [Validation(Required=false)]
+                public string AccessProfileId { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>MANAGED</para>
@@ -224,6 +260,14 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
             [NameInMap("NlsEngine")]
             [Validation(Required=false)]
             public string NlsEngine { get; set; }
+
+            [NameInMap("SpeechNoiseThreshold")]
+            [Validation(Required=false)]
+            public int? SpeechNoiseThreshold { get; set; }
+
+            [NameInMap("VocabularyId")]
+            [Validation(Required=false)]
+            public string VocabularyId { get; set; }
 
         }
 

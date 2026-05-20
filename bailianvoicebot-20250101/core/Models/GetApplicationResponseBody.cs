@@ -245,6 +245,42 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                 [Validation(Required=false)]
                 public GetApplicationResponseBodyDataDraftVersionTranscriberConfig TranscriberConfig { get; set; }
                 public class GetApplicationResponseBodyDataDraftVersionTranscriberConfig : TeaModel {
+                    [NameInMap("CorrectionRules")]
+                    [Validation(Required=false)]
+                    public List<GetApplicationResponseBodyDataDraftVersionTranscriberConfigCorrectionRules> CorrectionRules { get; set; }
+                    public class GetApplicationResponseBodyDataDraftVersionTranscriberConfigCorrectionRules : TeaModel {
+                        [NameInMap("Pattern")]
+                        [Validation(Required=false)]
+                        public string Pattern { get; set; }
+
+                        [NameInMap("Replacement")]
+                        [Validation(Required=false)]
+                        public string Replacement { get; set; }
+
+                    }
+
+                    [NameInMap("CustomizationId")]
+                    [Validation(Required=false)]
+                    public string CustomizationId { get; set; }
+
+                    [NameInMap("EndSilenceTimeout")]
+                    [Validation(Required=false)]
+                    public int? EndSilenceTimeout { get; set; }
+
+                    [NameInMap("Model")]
+                    [Validation(Required=false)]
+                    public string Model { get; set; }
+
+                    [NameInMap("NlsAccessProfile")]
+                    [Validation(Required=false)]
+                    public GetApplicationResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile NlsAccessProfile { get; set; }
+                    public class GetApplicationResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile : TeaModel {
+                        [NameInMap("AccessProfileId")]
+                        [Validation(Required=false)]
+                        public string AccessProfileId { get; set; }
+
+                    }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>MANAGED</para>
@@ -260,6 +296,14 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                     [NameInMap("NlsEngine")]
                     [Validation(Required=false)]
                     public string NlsEngine { get; set; }
+
+                    [NameInMap("SpeechNoiseThreshold")]
+                    [Validation(Required=false)]
+                    public int? SpeechNoiseThreshold { get; set; }
+
+                    [NameInMap("VocabularyId")]
+                    [Validation(Required=false)]
+                    public string VocabularyId { get; set; }
 
                 }
 
@@ -489,6 +533,42 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                 [Validation(Required=false)]
                 public GetApplicationResponseBodyDataPublishedVersionTranscriberConfig TranscriberConfig { get; set; }
                 public class GetApplicationResponseBodyDataPublishedVersionTranscriberConfig : TeaModel {
+                    [NameInMap("CorrectionRules")]
+                    [Validation(Required=false)]
+                    public List<GetApplicationResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules> CorrectionRules { get; set; }
+                    public class GetApplicationResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules : TeaModel {
+                        [NameInMap("Pattern")]
+                        [Validation(Required=false)]
+                        public string Pattern { get; set; }
+
+                        [NameInMap("Replacement")]
+                        [Validation(Required=false)]
+                        public string Replacement { get; set; }
+
+                    }
+
+                    [NameInMap("CustomizationId")]
+                    [Validation(Required=false)]
+                    public string CustomizationId { get; set; }
+
+                    [NameInMap("EndSilenceTimeout")]
+                    [Validation(Required=false)]
+                    public int? EndSilenceTimeout { get; set; }
+
+                    [NameInMap("Model")]
+                    [Validation(Required=false)]
+                    public string Model { get; set; }
+
+                    [NameInMap("NlsAccessProfile")]
+                    [Validation(Required=false)]
+                    public GetApplicationResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile NlsAccessProfile { get; set; }
+                    public class GetApplicationResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile : TeaModel {
+                        [NameInMap("AccessProfileId")]
+                        [Validation(Required=false)]
+                        public string AccessProfileId { get; set; }
+
+                    }
+
                     /// <summary>
                     /// <b>Example:</b>
                     /// <para>MANAGED</para>
@@ -504,6 +584,14 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                     [NameInMap("NlsEngine")]
                     [Validation(Required=false)]
                     public string NlsEngine { get; set; }
+
+                    [NameInMap("SpeechNoiseThreshold")]
+                    [Validation(Required=false)]
+                    public int? SpeechNoiseThreshold { get; set; }
+
+                    [NameInMap("VocabularyId")]
+                    [Validation(Required=false)]
+                    public string VocabularyId { get; set; }
 
                 }
 
