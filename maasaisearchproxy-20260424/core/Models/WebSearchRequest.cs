@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.MaasAISearchProxy20260424.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        [NameInMap("searchType")]
+        [Validation(Required=false)]
+        public string SearchType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>2026-03-06 10:04:45</para>
