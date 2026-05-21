@@ -22,6 +22,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>Prod</para>
+        /// </summary>
+        [NameInMap("EnvType")]
+        [Validation(Required=false)]
+        public string EnvType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>{<br>    &quot;status&quot;: &quot;Success&quot;,
         ///     &quot;executionDate&quot;: &quot;1763481600000&quot;
         /// }</para>

@@ -726,7 +726,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a resource group with a workspace.</para>
+        /// <para>Bind a resource group to a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -783,7 +783,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a resource group with a workspace.</para>
+        /// <para>Bind a resource group to a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -840,7 +840,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a resource group with a workspace.</para>
+        /// <para>Bind a resource group to a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -869,7 +869,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a resource group with a workspace.</para>
+        /// <para>Bind a resource group to a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -34490,6 +34490,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             {
                 body["BizDate"] = request.BizDate;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                body["EnvType"] = request.EnvType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
                 body["Filter"] = request.Filter;
@@ -34594,6 +34598,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizDate))
             {
                 body["BizDate"] = request.BizDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnvType))
+            {
+                body["EnvType"] = request.EnvType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Filter))
             {
