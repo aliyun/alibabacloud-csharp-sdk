@@ -79,6 +79,28 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         }
 
+        [NameInMap("envDomainIds")]
+        [Validation(Required=false)]
+        public List<string> EnvDomainIds { get; set; }
+
+        [NameInMap("envDomainInfos")]
+        [Validation(Required=false)]
+        public List<HttpApiDeployConfigEnvDomainInfos> EnvDomainInfos { get; set; }
+        public class HttpApiDeployConfigEnvDomainInfos : TeaModel {
+            [NameInMap("domainId")]
+            [Validation(Required=false)]
+            public string DomainId { get; set; }
+
+            [NameInMap("name")]
+            [Validation(Required=false)]
+            public string Name { get; set; }
+
+            [NameInMap("protocol")]
+            [Validation(Required=false)]
+            public string Protocol { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The environment ID.</para>
         /// 

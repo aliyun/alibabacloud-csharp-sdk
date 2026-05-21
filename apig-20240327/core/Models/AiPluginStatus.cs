@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
     public class AiPluginStatus : TeaModel {
         [NameInMap("errorLogs")]
         [Validation(Required=false)]
-        public Dictionary<string, string> ErrorLogs { get; set; }
+        public List<Dictionary<string, object>> ErrorLogs { get; set; }
 
         [NameInMap("pluginId")]
         [Validation(Required=false)]
