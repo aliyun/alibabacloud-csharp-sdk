@@ -38930,6 +38930,118 @@ namespace AlibabaCloud.SDK.ESA20240910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries pay-as-you-go instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPostpaidRatePlanInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPostpaidRatePlanInstancesResponse
+        /// </returns>
+        public ListPostpaidRatePlanInstancesResponse ListPostpaidRatePlanInstancesWithOptions(ListPostpaidRatePlanInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPostpaidRatePlanInstances",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPostpaidRatePlanInstancesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pay-as-you-go instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPostpaidRatePlanInstancesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPostpaidRatePlanInstancesResponse
+        /// </returns>
+        public async Task<ListPostpaidRatePlanInstancesResponse> ListPostpaidRatePlanInstancesWithOptionsAsync(ListPostpaidRatePlanInstancesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPostpaidRatePlanInstances",
+                Version = "2024-09-10",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPostpaidRatePlanInstancesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pay-as-you-go instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPostpaidRatePlanInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPostpaidRatePlanInstancesResponse
+        /// </returns>
+        public ListPostpaidRatePlanInstancesResponse ListPostpaidRatePlanInstances(ListPostpaidRatePlanInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListPostpaidRatePlanInstancesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries pay-as-you-go instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPostpaidRatePlanInstancesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPostpaidRatePlanInstancesResponse
+        /// </returns>
+        public async Task<ListPostpaidRatePlanInstancesResponse> ListPostpaidRatePlanInstancesAsync(ListPostpaidRatePlanInstancesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListPostpaidRatePlanInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of Domain Name System (DNS) records of a website, including the record value, priority, and authentication configurations. Supports filtering by specifying parameters such as RecordName and RecordMatchType.</para>
         /// </summary>
         /// 
