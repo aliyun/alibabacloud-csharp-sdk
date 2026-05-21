@@ -1,6 +1,9 @@
 2026-05-21 Version: 7.0.3
 - Generated csharp 2024-03-27 for APIG.
 
+2026-05-21 Version: 7.0.3
+- Generated csharp 2024-03-27 for APIG.
+
 2026-05-14 Version: 7.0.2
 - Update API ListHttpApiRoutes: add request parameters backendServiceName.
 
