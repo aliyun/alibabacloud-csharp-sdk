@@ -33,6 +33,14 @@ namespace AlibabaCloud.SDK.Pai_dsw20220101.Models
         [Validation(Required=false)]
         public int? MaxEventsNum { get; set; }
 
+        [NameInMap("Offset")]
+        [Validation(Required=false)]
+        public int? Offset { get; set; }
+
+        [NameInMap("Reverse")]
+        [Validation(Required=false)]
+        public bool? Reverse { get; set; }
+
         /// <summary>
         /// <para>The beginning of the time range to query.</para>
         /// 
