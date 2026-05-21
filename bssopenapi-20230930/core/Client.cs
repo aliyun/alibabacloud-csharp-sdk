@@ -7652,6 +7652,186 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询SLA优惠券</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMonthlySlaListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMonthlySlaListResponse
+        /// </returns>
+        public QueryMonthlySlaListResponse QueryMonthlySlaListWithOptions(QueryMonthlySlaListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIds))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                body["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Months))
+            {
+                body["Months"] = request.Months;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayStatuses))
+            {
+                body["PayStatuses"] = request.PayStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCodes))
+            {
+                body["ProductCodes"] = request.ProductCodes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryMonthlySlaList",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryMonthlySlaListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询SLA优惠券</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMonthlySlaListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMonthlySlaListResponse
+        /// </returns>
+        public async Task<QueryMonthlySlaListResponse> QueryMonthlySlaListWithOptionsAsync(QueryMonthlySlaListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIds))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                body["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Months))
+            {
+                body["Months"] = request.Months;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayStatuses))
+            {
+                body["PayStatuses"] = request.PayStatuses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCodes))
+            {
+                body["ProductCodes"] = request.ProductCodes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryMonthlySlaList",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryMonthlySlaListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询SLA优惠券</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMonthlySlaListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMonthlySlaListResponse
+        /// </returns>
+        public QueryMonthlySlaListResponse QueryMonthlySlaList(QueryMonthlySlaListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryMonthlySlaListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询SLA优惠券</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryMonthlySlaListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryMonthlySlaListResponse
+        /// </returns>
+        public async Task<QueryMonthlySlaListResponse> QueryMonthlySlaListAsync(QueryMonthlySlaListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryMonthlySlaListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modify cost center allocation rules, including creating, modifying, and deleting allocation rules</para>
         /// </summary>
         /// 
@@ -8260,6 +8440,154 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await SetSavingPlanUserDeductRuleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SLA优惠券申领</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSlaCouponApplyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSlaCouponApplyResponse
+        /// </returns>
+        public SubmitSlaCouponApplyResponse SubmitSlaCouponApplyWithOptions(SubmitSlaCouponApplyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIds))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DamagedIds))
+            {
+                body["DamagedIds"] = request.DamagedIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Month))
+            {
+                body["Month"] = request.Month;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSlaCouponApply",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSlaCouponApplyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SLA优惠券申领</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSlaCouponApplyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSlaCouponApplyResponse
+        /// </returns>
+        public async Task<SubmitSlaCouponApplyResponse> SubmitSlaCouponApplyWithOptionsAsync(SubmitSlaCouponApplyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcIdAccountIds))
+            {
+                query["EcIdAccountIds"] = request.EcIdAccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Nbid))
+            {
+                query["Nbid"] = request.Nbid;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DamagedIds))
+            {
+                body["DamagedIds"] = request.DamagedIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Month))
+            {
+                body["Month"] = request.Month;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSlaCouponApply",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSlaCouponApplyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SLA优惠券申领</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSlaCouponApplyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSlaCouponApplyResponse
+        /// </returns>
+        public SubmitSlaCouponApplyResponse SubmitSlaCouponApply(SubmitSlaCouponApplyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitSlaCouponApplyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>SLA优惠券申领</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitSlaCouponApplyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSlaCouponApplyResponse
+        /// </returns>
+        public async Task<SubmitSlaCouponApplyResponse> SubmitSlaCouponApplyAsync(SubmitSlaCouponApplyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitSlaCouponApplyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
