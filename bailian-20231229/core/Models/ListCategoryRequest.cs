@@ -25,6 +25,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>file_conn_xxxxx</para>
+        /// </summary>
+        [NameInMap("ConnectorId")]
+        [Validation(Required=false)]
+        public string ConnectorId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
         [NameInMap("MaxResults")]
