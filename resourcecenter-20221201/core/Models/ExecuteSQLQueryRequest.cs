@@ -25,10 +25,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         /// <summary>
         /// <para>The number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values: 1 to 1000.</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 1000.</para>
-        /// </description></item>
+        /// <item><description>Valid values: 1 to 1000.</description></item>
+        /// <item><description>Default value: 1000.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The matching method.</para>
+            /// <para>The matching mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Equals</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D696E6EF-3A6D-5770-801E-4982081FE4D0</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <summary>
             /// <para>The time when the resource was created.</para>
             /// <remarks>
-            /// <para>Whether this parameter is returned depends on the Alibaba Cloud service to which the resource belongs.</para>
+            /// <para> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -105,18 +105,6 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
-            /// <summary>
-            /// <para>Indicates whether the resource is deleted. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// </description></item>
-            /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
             [NameInMap("Deleted")]
             [Validation(Required=false)]
             public bool? Deleted { get; set; }
@@ -132,7 +120,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The attributes of the IP addresses.</para>
+            /// <para>The attributes of the IP address.</para>
             /// </summary>
             [NameInMap("IpAddressAttributes")]
             [Validation(Required=false)]
@@ -151,10 +139,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
                 /// <summary>
                 /// <para>The network type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Public</b>: Internet</para>
-                /// </description></item>
-                /// <item><description><para><b>Private</b>: Private network</para>
-                /// </description></item>
+                /// <item><description><b>Public</b>: the Internet</description></item>
+                /// <item><description><b>Private</b>: internal network</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -165,7 +151,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// <para>The IP address version.</para>
+                /// <para>The version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Ipv4</para>
@@ -179,7 +165,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <summary>
             /// <para>The IP addresses.</para>
             /// <remarks>
-            /// <para>Whether this parameter is returned depends on the Alibaba Cloud service to which the resource belongs.</para>
+            /// <para> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("IpAddresses")]
@@ -244,7 +230,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public List<SearchResourcesResponseBodyResourcesTags> Tags { get; set; }
             public class SearchResourcesResponseBodyResourcesTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The key of tag N.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_key</para>
@@ -254,7 +240,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The value of tag N.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_value</para>
@@ -268,7 +254,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <summary>
             /// <para>The zone ID.</para>
             /// <remarks>
-            /// <para>Whether this parameter is returned depends on the Alibaba Cloud service to which the resource belongs.</para>
+            /// <para> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         /// <summary>
         /// <para>The matching mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Equals: equal match</para>
-        /// </description></item>
-        /// <item><description><para>Prefix: match by prefix</para>
-        /// </description></item>
+        /// <item><description>Equals: equal match</description></item>
+        /// <item><description>Prefix: match by prefix</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

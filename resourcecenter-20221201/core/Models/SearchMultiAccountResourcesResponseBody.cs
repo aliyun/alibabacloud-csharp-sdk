@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The matching method.</para>
+            /// <para>The matching mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Equals</para>
@@ -56,17 +56,17 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to retrieve the next page of results.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>查询返回结果下一页的令牌。</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EFA806B9-7F36-55AB-8B7A-D680C2C5EE57</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public List<SearchMultiAccountResourcesResponseBodyResources> Resources { get; set; }
         public class SearchMultiAccountResourcesResponseBodyResources : TeaModel {
             /// <summary>
-            /// <para>The ID of the management account or a member account of the resource directory.</para>
+            /// <para>The ID of the management account or member of the resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>151266687691****</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <summary>
             /// <para>The time when the resource was created.</para>
             /// <remarks>
-            /// <para>Whether this parameter is returned depends on the Alibaba Cloud service that manages the resource.</para>
+            /// <para> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The attributes of the IP addresses.</para>
+            /// <para>The attributes of the IP address.</para>
             /// </summary>
             [NameInMap("IpAddressAttributes")]
             [Validation(Required=false)]
@@ -135,10 +135,8 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
                 /// <summary>
                 /// <para>The network type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Public</b>: Internet.</para>
-                /// </description></item>
-                /// <item><description><para><b>Private</b>: Private network.</para>
-                /// </description></item>
+                /// <item><description><b>Public</b>: the Internet</description></item>
+                /// <item><description><b>Private</b>: internal network</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -149,7 +147,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
                 public string NetworkType { get; set; }
 
                 /// <summary>
-                /// <para>The IP address version.</para>
+                /// <para>The version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Ipv4</para>
@@ -163,7 +161,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <summary>
             /// <para>The IP addresses.</para>
             /// <remarks>
-            /// <para>Whether this parameter is returned depends on the Alibaba Cloud service that manages the resource.</para>
+            /// <para> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("IpAddresses")]
@@ -228,7 +226,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             public List<SearchMultiAccountResourcesResponseBodyResourcesTags> Tags { get; set; }
             public class SearchMultiAccountResourcesResponseBodyResourcesTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The key of tag N.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_key</para>
@@ -238,7 +236,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>The value of tag N.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_value</para>
@@ -252,7 +250,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
             /// <summary>
             /// <para>The zone ID.</para>
             /// <remarks>
-            /// <para>Whether this parameter is returned depends on the Alibaba Cloud service that manages the resource.</para>
+            /// <para> Whether this parameter is returned is determined by the Alibaba Cloud service to which the resource belongs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -265,16 +263,12 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         }
 
         /// <summary>
-        /// <para>The scope of accounts in which the resources were searched. Valid values:</para>
+        /// <para>The search scope.</para>
         /// <list type="bullet">
-        /// <item><description><para>The ID of the resource directory. This indicates that resources were searched in the management account and all member accounts of the resource directory.</para>
-        /// </description></item>
-        /// <item><description><para>The ID of the Root folder. This indicates that resources were searched in all member accounts under the Root folder and its subfolders.</para>
-        /// </description></item>
-        /// <item><description><para>The ID of a folder. This indicates that resources were searched in all member accounts under the folder.</para>
-        /// </description></item>
-        /// <item><description><para>The ID of a member account. This indicates that resources were searched in the member account.</para>
-        /// </description></item>
+        /// <item><description>ID of a resource directory: Resources within the management account and all members of the resource directory are searched.</description></item>
+        /// <item><description>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched.</description></item>
+        /// <item><description>ID of a folder: Resources within all members in the folder are searched.</description></item>
+        /// <item><description>ID of a member: Resources within the member are searched.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

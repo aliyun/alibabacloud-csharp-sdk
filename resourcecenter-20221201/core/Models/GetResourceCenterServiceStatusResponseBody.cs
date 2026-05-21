@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 {
     public class GetResourceCenterServiceStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The initialization status. Valid values:</para>
+        /// <para>The initialization status of the service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Pending</para>
-        /// </description></item>
-        /// <item><description><para>Finished</para>
-        /// </description></item>
+        /// <item><description>Pending: The service is being initialized.</description></item>
+        /// <item><description>Finished: The service is initialized.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string InitialStatus { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AD5F848D-CCDC-5464-93E1-4BA50A4826DD</para>
@@ -36,12 +34,10 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The service status. Valid values:</para>
+        /// <para>The status of the service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Enabled</para>
-        /// </description></item>
-        /// <item><description><para>Disabled</para>
-        /// </description></item>
+        /// <item><description>Enabled: The service is activated.</description></item>
+        /// <item><description>Disabled: The service is deactivated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -28,9 +28,6 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
 
             /// <summary>
             /// <para>The description of the delivery channel.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>This is a description.</para>
             /// </summary>
             [NameInMap("DeliveryChannelDescription")]
             [Validation(Required=false)]
@@ -69,7 +66,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

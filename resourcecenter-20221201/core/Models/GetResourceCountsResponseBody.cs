@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         }
 
         /// <summary>
-        /// <para>The dimension by which the queried resources are grouped.</para>
+        /// <para>The dimension by which resources are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ResourceType</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource counts.</para>
+        /// <para>The numbers of resources.</para>
         /// </summary>
         [NameInMap("ResourceCounts")]
         [Validation(Required=false)]

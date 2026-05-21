@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ResourceCenter20221201.Models
         /// <para>The template ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cq-GeAck****</para>
+        /// <para>sq-GeAck****</para>
         /// </summary>
         [NameInMap("QueryId")]
         [Validation(Required=false)]
