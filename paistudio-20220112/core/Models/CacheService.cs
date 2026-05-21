@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.PaiStudio20220112.Models
         [Validation(Required=false)]
         public string CacheServiceId { get; set; }
 
+        [NameInMap("ClusterId")]
+        [Validation(Required=false)]
+        public string ClusterId { get; set; }
+
         [NameInMap("CreatedBy")]
         [Validation(Required=false)]
         public string CreatedBy { get; set; }

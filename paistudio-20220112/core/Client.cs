@@ -4565,6 +4565,168 @@ namespace AlibabaCloud.SDK.PaiStudio20220112
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取节点规格列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodeTypesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeTypesResponse
+        /// </returns>
+        public ListNodeTypesResponse ListNodeTypesWithOptions(ListNodeTypesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceleratorType))
+            {
+                query["AcceleratorType"] = request.AcceleratorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GPUType))
+            {
+                query["GPUType"] = request.GPUType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeTypes))
+            {
+                query["NodeTypes"] = request.NodeTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaId))
+            {
+                query["QuotaId"] = request.QuotaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIds))
+            {
+                query["ResourceGroupIds"] = request.ResourceGroupIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNodeTypes",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/nodetypes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNodeTypesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取节点规格列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodeTypesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeTypesResponse
+        /// </returns>
+        public async Task<ListNodeTypesResponse> ListNodeTypesWithOptionsAsync(ListNodeTypesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AcceleratorType))
+            {
+                query["AcceleratorType"] = request.AcceleratorType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GPUType))
+            {
+                query["GPUType"] = request.GPUType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NodeTypes))
+            {
+                query["NodeTypes"] = request.NodeTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaId))
+            {
+                query["QuotaId"] = request.QuotaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupIds))
+            {
+                query["ResourceGroupIds"] = request.ResourceGroupIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNodeTypes",
+                Version = "2022-01-12",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/nodetypes",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNodeTypesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取节点规格列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodeTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeTypesResponse
+        /// </returns>
+        public ListNodeTypesResponse ListNodeTypes(ListNodeTypesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListNodeTypesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取节点规格列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListNodeTypesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNodeTypesResponse
+        /// </returns>
+        public async Task<ListNodeTypesResponse> ListNodeTypesAsync(ListNodeTypesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListNodeTypesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取资源节点列表</para>
         /// </summary>
         /// 
