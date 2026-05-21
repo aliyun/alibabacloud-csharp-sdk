@@ -205,6 +205,30 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 
         }
 
+        [NameInMap("ToolConfig")]
+        [Validation(Required=false)]
+        public CreateApplicationVersionRequestToolConfig ToolConfig { get; set; }
+        public class CreateApplicationVersionRequestToolConfig : TeaModel {
+            [NameInMap("McpServers")]
+            [Validation(Required=false)]
+            public List<CreateApplicationVersionRequestToolConfigMcpServers> McpServers { get; set; }
+            public class CreateApplicationVersionRequestToolConfigMcpServers : TeaModel {
+                [NameInMap("BaseUrl")]
+                [Validation(Required=false)]
+                public string BaseUrl { get; set; }
+
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                [NameInMap("SseEndpoint")]
+                [Validation(Required=false)]
+                public string SseEndpoint { get; set; }
+
+            }
+
+        }
+
         [NameInMap("TranscriberConfig")]
         [Validation(Required=false)]
         public CreateApplicationVersionRequestTranscriberConfig TranscriberConfig { get; set; }

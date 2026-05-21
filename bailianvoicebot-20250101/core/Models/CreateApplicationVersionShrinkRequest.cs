@@ -53,6 +53,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
         [Validation(Required=false)]
         public string SynthesizerConfigShrink { get; set; }
 
+        [NameInMap("ToolConfig")]
+        [Validation(Required=false)]
+        public string ToolConfigShrink { get; set; }
+
         [NameInMap("TranscriberConfig")]
         [Validation(Required=false)]
         public string TranscriberConfigShrink { get; set; }

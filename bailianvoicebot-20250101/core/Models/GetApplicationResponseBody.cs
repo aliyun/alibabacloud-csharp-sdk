@@ -241,6 +241,30 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
 
                 }
 
+                [NameInMap("ToolConfig")]
+                [Validation(Required=false)]
+                public GetApplicationResponseBodyDataDraftVersionToolConfig ToolConfig { get; set; }
+                public class GetApplicationResponseBodyDataDraftVersionToolConfig : TeaModel {
+                    [NameInMap("McpServers")]
+                    [Validation(Required=false)]
+                    public List<GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers> McpServers { get; set; }
+                    public class GetApplicationResponseBodyDataDraftVersionToolConfigMcpServers : TeaModel {
+                        [NameInMap("BaseUrl")]
+                        [Validation(Required=false)]
+                        public string BaseUrl { get; set; }
+
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("SseEndpoint")]
+                        [Validation(Required=false)]
+                        public string SseEndpoint { get; set; }
+
+                    }
+
+                }
+
                 [NameInMap("TranscriberConfig")]
                 [Validation(Required=false)]
                 public GetApplicationResponseBodyDataDraftVersionTranscriberConfig TranscriberConfig { get; set; }
@@ -526,6 +550,30 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101.Models
                     [NameInMap("Volume")]
                     [Validation(Required=false)]
                     public int? Volume { get; set; }
+
+                }
+
+                [NameInMap("ToolConfig")]
+                [Validation(Required=false)]
+                public GetApplicationResponseBodyDataPublishedVersionToolConfig ToolConfig { get; set; }
+                public class GetApplicationResponseBodyDataPublishedVersionToolConfig : TeaModel {
+                    [NameInMap("McpServers")]
+                    [Validation(Required=false)]
+                    public List<GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers> McpServers { get; set; }
+                    public class GetApplicationResponseBodyDataPublishedVersionToolConfigMcpServers : TeaModel {
+                        [NameInMap("BaseUrl")]
+                        [Validation(Required=false)]
+                        public string BaseUrl { get; set; }
+
+                        [NameInMap("Name")]
+                        [Validation(Required=false)]
+                        public string Name { get; set; }
+
+                        [NameInMap("SseEndpoint")]
+                        [Validation(Required=false)]
+                        public string SseEndpoint { get; set; }
+
+                    }
 
                 }
 

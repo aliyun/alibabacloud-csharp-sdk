@@ -409,6 +409,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             {
                 request.SynthesizerConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SynthesizerConfig, "SynthesizerConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ToolConfig))
+            {
+                request.ToolConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ToolConfig, "ToolConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TranscriberConfig))
             {
                 request.TranscriberConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TranscriberConfig, "TranscriberConfig", "json");
@@ -441,6 +445,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynthesizerConfigShrink))
             {
                 query["SynthesizerConfig"] = request.SynthesizerConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolConfigShrink))
+            {
+                query["ToolConfig"] = request.ToolConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscriberConfigShrink))
             {
@@ -501,6 +509,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             {
                 request.SynthesizerConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SynthesizerConfig, "SynthesizerConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ToolConfig))
+            {
+                request.ToolConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ToolConfig, "ToolConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TranscriberConfig))
             {
                 request.TranscriberConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TranscriberConfig, "TranscriberConfig", "json");
@@ -533,6 +545,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynthesizerConfigShrink))
             {
                 query["SynthesizerConfig"] = request.SynthesizerConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolConfigShrink))
+            {
+                query["ToolConfig"] = request.ToolConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscriberConfigShrink))
             {
@@ -4725,6 +4741,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             {
                 request.SynthesizerConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SynthesizerConfig, "SynthesizerConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ToolConfig))
+            {
+                request.ToolConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ToolConfig, "ToolConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TranscriberConfig))
             {
                 request.TranscriberConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TranscriberConfig, "TranscriberConfig", "json");
@@ -4753,6 +4773,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynthesizerConfigShrink))
             {
                 query["SynthesizerConfig"] = request.SynthesizerConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolConfigShrink))
+            {
+                query["ToolConfig"] = request.ToolConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscriberConfigShrink))
             {
@@ -4817,6 +4841,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             {
                 request.SynthesizerConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SynthesizerConfig, "SynthesizerConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ToolConfig))
+            {
+                request.ToolConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ToolConfig, "ToolConfig", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TranscriberConfig))
             {
                 request.TranscriberConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TranscriberConfig, "TranscriberConfig", "json");
@@ -4845,6 +4873,10 @@ namespace AlibabaCloud.SDK.BailianVoiceBot20250101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SynthesizerConfigShrink))
             {
                 query["SynthesizerConfig"] = request.SynthesizerConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolConfigShrink))
+            {
+                query["ToolConfig"] = request.ToolConfigShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TranscriberConfigShrink))
             {
