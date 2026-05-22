@@ -119,6 +119,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>是否禁用会话亲和性。默认为 false（即默认启用会话亲和），设置为 true 时关闭会话亲和</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("disableSessionAffinity")]
+        [Validation(Required=false)]
+        public bool? DisableSessionAffinity { get; set; }
+
         [NameInMap("diskSize")]
         [Validation(Required=false)]
         public int? DiskSize { get; set; }
