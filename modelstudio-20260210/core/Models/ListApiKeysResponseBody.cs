@@ -31,6 +31,24 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             [Validation(Required=false)]
             public string ApiKeyValue { get; set; }
 
+            [NameInMap("auth")]
+            [Validation(Required=false)]
+            public ListApiKeysResponseBodyApiKeysAuth Auth { get; set; }
+            public class ListApiKeysResponseBodyApiKeysAuth : TeaModel {
+                [NameInMap("accessIps")]
+                [Validation(Required=false)]
+                public List<string> AccessIps { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>All</para>
+                /// </summary>
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1378030599924858</para>

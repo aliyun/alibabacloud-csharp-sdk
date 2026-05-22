@@ -9,6 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class CreateApiKeyRequest : TeaModel {
+        [NameInMap("auth")]
+        [Validation(Required=false)]
+        public CreateApiKeyRequestAuth Auth { get; set; }
+        public class CreateApiKeyRequestAuth : TeaModel {
+            [NameInMap("accessIps")]
+            [Validation(Required=false)]
+            public List<string> AccessIps { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>All</para>
+            /// </summary>
+            [NameInMap("type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>test</para>

@@ -8,11 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
-    public class GetApiKeyResponseBody : TeaModel {
+    public class ResetApiKeyResponseBody : TeaModel {
         [NameInMap("apiKey")]
         [Validation(Required=false)]
-        public GetApiKeyResponseBodyApiKey ApiKey { get; set; }
-        public class GetApiKeyResponseBodyApiKey : TeaModel {
+        public ResetApiKeyResponseBodyApiKey ApiKey { get; set; }
+        public class ResetApiKeyResponseBodyApiKey : TeaModel {
             /// <summary>
             /// <para>API Key ID。</para>
             /// 
@@ -25,61 +25,11 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>sk-ws-djI.mhU0D****testtestest</para>
+            /// <para>sk-ws-djI.8O7dkfkW2aICctnid4u4</para>
             /// </summary>
             [NameInMap("apiKeyValue")]
             [Validation(Required=false)]
             public string ApiKeyValue { get; set; }
-
-            [NameInMap("auth")]
-            [Validation(Required=false)]
-            public GetApiKeyResponseBodyApiKeyAuth Auth { get; set; }
-            public class GetApiKeyResponseBodyApiKeyAuth : TeaModel {
-                [NameInMap("accessIps")]
-                [Validation(Required=false)]
-                public List<string> AccessIps { get; set; }
-
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>All</para>
-                /// </summary>
-                [NameInMap("type")]
-                [Validation(Required=false)]
-                public string Type { get; set; }
-
-            }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1378030599924858</para>
-            /// </summary>
-            [NameInMap("createdBy")]
-            [Validation(Required=false)]
-            public string CreatedBy { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>v7</para>
-            /// </summary>
-            [NameInMap("description")]
-            [Validation(Required=false)]
-            public string Description { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>0</para>
-            /// </summary>
-            [NameInMap("disabled")]
-            [Validation(Required=false)]
-            public int? Disabled { get; set; }
-
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>1774338222000</para>
-            /// </summary>
-            [NameInMap("gmtCreate")]
-            [Validation(Required=false)]
-            public long? GmtCreate { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -109,7 +59,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
@@ -119,7 +69,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DFD55E7B-0615-5343-BDA0-FBEE86F29935</para>
+        /// <para>36045E0A-551D-592D-B1BC-4C56596CE59E</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
