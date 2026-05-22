@@ -3883,7 +3883,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通CN子实例</para>
+        /// <para>创建自定义地址</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3942,7 +3942,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通CN子实例</para>
+        /// <para>创建自定义地址</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4001,7 +4001,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通CN子实例</para>
+        /// <para>创建自定义地址</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -4024,7 +4024,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通CN子实例</para>
+        /// <para>创建自定义地址</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5211,7 +5211,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除CN子实例</para>
+        /// <para>删除自定义地址</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5236,6 +5236,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
             {
                 query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClusterName))
+            {
+                query["InstanceClusterName"] = request.InstanceClusterName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5262,7 +5266,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除CN子实例</para>
+        /// <para>删除自定义地址</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5287,6 +5291,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
             {
                 query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceClusterName))
+            {
+                query["InstanceClusterName"] = request.InstanceClusterName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -5313,7 +5321,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除CN子实例</para>
+        /// <para>删除自定义地址</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5336,7 +5344,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除CN子实例</para>
+        /// <para>删除自定义地址</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

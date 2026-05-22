@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        [NameInMap("InstanceClusterName")]
+        [Validation(Required=false)]
+        public string InstanceClusterName { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
