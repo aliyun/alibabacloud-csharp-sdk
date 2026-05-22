@@ -96,6 +96,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string EndTime { get; set; }
 
+            [NameInMap("GrantedPermission")]
+            [Validation(Required=false)]
+            public ListServiceInstancesResponseBodyServiceInstancesGrantedPermission GrantedPermission { get; set; }
+            public class ListServiceInstancesResponseBodyServiceInstancesGrantedPermission : TeaModel {
+                [NameInMap("OperationEndTime")]
+                [Validation(Required=false)]
+                public string OperationEndTime { get; set; }
+
+                [NameInMap("PolicyNames")]
+                [Validation(Required=false)]
+                public string PolicyNames { get; set; }
+
+            }
+
             /// <summary>
             /// <para>Indicates whether the hosted O\&amp;M feature is enabled for the service instance. Valid values:</para>
             /// <list type="bullet">
@@ -175,6 +189,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [NameInMap("PayType")]
             [Validation(Required=false)]
             public string PayType { get; set; }
+
+            [NameInMap("PolicyNames")]
+            [Validation(Required=false)]
+            public string PolicyNames { get; set; }
 
             /// <summary>
             /// <para>The deployment progress of the service instance. Unit: percentage.</para>

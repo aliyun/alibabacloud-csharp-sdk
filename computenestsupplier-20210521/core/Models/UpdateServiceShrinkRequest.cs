@@ -119,6 +119,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public long? Duration { get; set; }
 
+        [NameInMap("IsDefault")]
+        [Validation(Required=false)]
+        public bool? IsDefault { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable the hosted O\&amp;M feature for the service. Default value: false. Valid values:</para>
         /// <list type="bullet">
