@@ -67,6 +67,18 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string Feedback { get; set; }
 
+            [NameInMap("GenerationFinishedAt")]
+            [Validation(Required=false)]
+            public string GenerationFinishedAt { get; set; }
+
+            [NameInMap("GenerationStartedAt")]
+            [Validation(Required=false)]
+            public string GenerationStartedAt { get; set; }
+
+            [NameInMap("GenerationStatus")]
+            [Validation(Required=false)]
+            public string GenerationStatus { get; set; }
+
             /// <summary>
             /// <para>The message ID.</para>
             /// 
@@ -76,6 +88,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
+
+            [NameInMap("LastSentEntryId")]
+            [Validation(Required=false)]
+            public string LastSentEntryId { get; set; }
 
             /// <summary>
             /// <para>The query statement.</para>
@@ -90,6 +106,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [NameInMap("RetrieverResources")]
             [Validation(Required=false)]
             public List<object> RetrieverResources { get; set; }
+
+            [NameInMap("StreamKey")]
+            [Validation(Required=false)]
+            public string StreamKey { get; set; }
 
         }
 
