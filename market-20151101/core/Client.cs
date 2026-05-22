@@ -191,6 +191,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await ActivateLicenseWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置自动续费</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AutoRenewInstanceRequest
         /// </param>
@@ -244,6 +249,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<AutoRenewInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置自动续费</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AutoRenewInstanceRequest
         /// </param>
@@ -297,6 +307,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<AutoRenewInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置自动续费</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AutoRenewInstanceRequest
         /// </param>
@@ -310,6 +325,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return AutoRenewInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置自动续费</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AutoRenewInstanceRequest
         /// </param>
@@ -443,6 +463,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await ConfirmNotificationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateOrderRequest
         /// </param>
@@ -500,6 +525,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<CreateOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateOrderRequest
         /// </param>
@@ -557,6 +587,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<CreateOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateOrderRequest
         /// </param>
@@ -570,6 +605,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return CreateOrderWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateOrderRequest
         /// </param>
@@ -583,6 +623,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await CreateOrderWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>跨账号角色授权，根据token获取用户信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CrossAccountVerifyTokenRequest
         /// </param>
@@ -620,6 +665,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<CrossAccountVerifyTokenResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>跨账号角色授权，根据token获取用户信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CrossAccountVerifyTokenRequest
         /// </param>
@@ -657,6 +707,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<CrossAccountVerifyTokenResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>跨账号角色授权，根据token获取用户信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CrossAccountVerifyTokenRequest
         /// </param>
@@ -670,6 +725,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return CrossAccountVerifyTokenWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>跨账号角色授权，根据token获取用户信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CrossAccountVerifyTokenRequest
         /// </param>
@@ -795,6 +855,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribeApiMeteringWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作流当前节点信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCurrentNodeInfoRequest
         /// </param>
@@ -832,6 +897,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeCurrentNodeInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作流当前节点信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCurrentNodeInfoRequest
         /// </param>
@@ -869,6 +939,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeCurrentNodeInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作流当前节点信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCurrentNodeInfoRequest
         /// </param>
@@ -882,6 +957,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return DescribeCurrentNodeInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>工作流当前节点信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCurrentNodeInfoRequest
         /// </param>
@@ -1395,6 +1475,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribeImageInstanceForIsvWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceRequest
         /// </param>
@@ -1440,6 +1525,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceRequest
         /// </param>
@@ -1485,6 +1575,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceRequest
         /// </param>
@@ -1498,6 +1593,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return DescribeInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstanceRequest
         /// </param>
@@ -1631,6 +1731,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribeInstanceForIsvWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -1684,6 +1789,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -1737,6 +1847,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -1750,6 +1865,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return DescribeInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeInstancesRequest
         /// </param>
@@ -2075,6 +2195,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribeLicenseWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOrderRequest
         /// </param>
@@ -2112,6 +2237,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeOrderResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOrderRequest
         /// </param>
@@ -2149,6 +2279,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeOrderResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOrderRequest
         /// </param>
@@ -2162,6 +2297,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return DescribeOrderWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订单</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeOrderRequest
         /// </param>
@@ -2295,6 +2435,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribeOrderForIsvWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询价格</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePriceRequest
         /// </param>
@@ -2336,6 +2481,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribePriceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询价格</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePriceRequest
         /// </param>
@@ -2377,6 +2527,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribePriceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询价格</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePriceRequest
         /// </param>
@@ -2390,6 +2545,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return DescribePriceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询价格</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribePriceRequest
         /// </param>
@@ -2643,6 +2803,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribeProductsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>附件信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectAttachmentsRequest
         /// </param>
@@ -2680,6 +2845,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProjectAttachmentsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>附件信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectAttachmentsRequest
         /// </param>
@@ -2717,6 +2887,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProjectAttachmentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>附件信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectAttachmentsRequest
         /// </param>
@@ -2730,6 +2905,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return DescribeProjectAttachmentsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>附件信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectAttachmentsRequest
         /// </param>
@@ -2743,6 +2923,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribeProjectAttachmentsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>项目信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectInfoRequest
         /// </param>
@@ -2780,6 +2965,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProjectInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>项目信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectInfoRequest
         /// </param>
@@ -2817,6 +3007,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProjectInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>项目信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectInfoRequest
         /// </param>
@@ -2830,6 +3025,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return DescribeProjectInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>项目信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectInfoRequest
         /// </param>
@@ -2843,6 +3043,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribeProjectInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询项目留言信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectMessagesRequest
         /// </param>
@@ -2884,6 +3089,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProjectMessagesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询项目留言信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectMessagesRequest
         /// </param>
@@ -2925,6 +3135,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProjectMessagesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询项目留言信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectMessagesRequest
         /// </param>
@@ -2938,6 +3153,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return DescribeProjectMessagesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询项目留言信息</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectMessagesRequest
         /// </param>
@@ -2951,6 +3171,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribeProjectMessagesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询项目流程节点list</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
@@ -2995,6 +3220,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProjectNodesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询项目流程节点list</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
@@ -3039,6 +3269,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProjectNodesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询项目流程节点list</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
@@ -3059,6 +3294,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return DescribeProjectNodesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询项目流程节点list</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
@@ -3079,6 +3319,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribeProjectNodesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询项目操作记录列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectOperateLogsRequest
         /// </param>
@@ -3116,6 +3361,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProjectOperateLogsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询项目操作记录列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectOperateLogsRequest
         /// </param>
@@ -3153,6 +3403,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProjectOperateLogsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询项目操作记录列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectOperateLogsRequest
         /// </param>
@@ -3166,6 +3421,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return DescribeProjectOperateLogsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询项目操作记录列表</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProjectOperateLogsRequest
         /// </param>
@@ -3179,6 +3439,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribeProjectOperateLogsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>完成当前流程节点</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// FinishCurrentProjectNodeRequest
         /// </param>
@@ -3228,6 +3493,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<FinishCurrentProjectNodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>完成当前流程节点</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// FinishCurrentProjectNodeRequest
         /// </param>
@@ -3277,6 +3547,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<FinishCurrentProjectNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>完成当前流程节点</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// FinishCurrentProjectNodeRequest
         /// </param>
@@ -3290,6 +3565,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return FinishCurrentProjectNodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>完成当前流程节点</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// FinishCurrentProjectNodeRequest
         /// </param>
@@ -3463,6 +3743,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await ModifyInvoiceForIsvWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停项目</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PauseProjectRequest
         /// </param>
@@ -3508,6 +3793,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<PauseProjectResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停项目</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PauseProjectRequest
         /// </param>
@@ -3553,6 +3843,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<PauseProjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停项目</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PauseProjectRequest
         /// </param>
@@ -3566,6 +3861,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return PauseProjectWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>暂停项目</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PauseProjectRequest
         /// </param>
@@ -3579,6 +3879,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await PauseProjectWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>云市场计量推送接口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PushMeteringDataRequest
         /// </param>
@@ -3616,6 +3921,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<PushMeteringDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>云市场计量推送接口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PushMeteringDataRequest
         /// </param>
@@ -3653,6 +3963,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<PushMeteringDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>云市场计量推送接口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PushMeteringDataRequest
         /// </param>
@@ -3666,6 +3981,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return PushMeteringDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>云市场计量推送接口</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PushMeteringDataRequest
         /// </param>
@@ -3679,6 +3999,147 @@ namespace AlibabaCloud.SDK.Market20151101
             return await PushMeteringDataWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>按次售卖按量计费</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushTimesUsageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushTimesUsageResponse
+        /// </returns>
+        public PushTimesUsageResponse PushTimesUsageWithOptions(PushTimesUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Times))
+            {
+                query["Times"] = request.Times;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushTimesUsage",
+                Version = "2015-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PushTimesUsageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>按次售卖按量计费</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushTimesUsageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushTimesUsageResponse
+        /// </returns>
+        public async Task<PushTimesUsageResponse> PushTimesUsageWithOptionsAsync(PushTimesUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Times))
+            {
+                query["Times"] = request.Times;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PushTimesUsage",
+                Version = "2015-11-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PushTimesUsageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>按次售卖按量计费</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushTimesUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushTimesUsageResponse
+        /// </returns>
+        public PushTimesUsageResponse PushTimesUsage(PushTimesUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return PushTimesUsageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>按次售卖按量计费</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// PushTimesUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PushTimesUsageResponse
+        /// </returns>
+        public async Task<PushTimesUsageResponse> PushTimesUsageAsync(PushTimesUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await PushTimesUsageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复已暂停的项目</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeProjectRequest
         /// </param>
@@ -3724,6 +4185,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<ResumeProjectResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复已暂停的项目</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeProjectRequest
         /// </param>
@@ -3769,6 +4235,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<ResumeProjectResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复已暂停的项目</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeProjectRequest
         /// </param>
@@ -3782,6 +4253,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return ResumeProjectWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>恢复已暂停的项目</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeProjectRequest
         /// </param>
@@ -3795,6 +4271,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await ResumeProjectWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>当前流程节点回滚到上一步</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RollbackCurrentProjectNodeRequest
         /// </param>
@@ -3840,6 +4321,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<RollbackCurrentProjectNodeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>当前流程节点回滚到上一步</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RollbackCurrentProjectNodeRequest
         /// </param>
@@ -3885,6 +4371,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<RollbackCurrentProjectNodeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>当前流程节点回滚到上一步</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RollbackCurrentProjectNodeRequest
         /// </param>
@@ -3898,6 +4389,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return RollbackCurrentProjectNodeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>当前流程节点回滚到上一步</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RollbackCurrentProjectNodeRequest
         /// </param>

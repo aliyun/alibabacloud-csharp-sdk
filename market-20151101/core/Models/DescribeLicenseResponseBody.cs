@@ -45,22 +45,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 [Validation(Required=false)]
                 public List<DescribeLicenseResponseBodyLicenseExtendArrayLicenseAttribute> LicenseAttribute { get; set; }
                 public class DescribeLicenseResponseBodyLicenseExtendArrayLicenseAttribute : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <list type="bullet">
-                    /// <item><description></description></item>
-                    /// </list>
-                    /// </summary>
                     [NameInMap("Code")]
                     [Validation(Required=false)]
                     public string Code { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <list type="bullet">
-                    /// <item><description></description></item>
-                    /// </list>
-                    /// </summary>
                     [NameInMap("Value")]
                     [Validation(Required=false)]
                     public string Value { get; set; }

@@ -44,10 +44,6 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>111********11</para>
-        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public string OwnerId { get; set; }

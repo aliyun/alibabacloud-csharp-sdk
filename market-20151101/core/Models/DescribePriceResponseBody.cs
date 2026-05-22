@@ -17,10 +17,6 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public List<DescribePriceResponseBodyCouponsCoupon> Coupon { get; set; }
             public class DescribePriceResponseBodyCouponsCoupon : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>100.00</para>
-                /// </summary>
                 [NameInMap("CanPromFee")]
                 [Validation(Required=false)]
                 public float? CanPromFee { get; set; }
@@ -33,26 +29,14 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 [Validation(Required=false)]
                 public string CouponName { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>ActiveCoupon</para>
-                /// </summary>
                 [NameInMap("CouponOptionCode")]
                 [Validation(Required=false)]
                 public string CouponOptionCode { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>3874923111</para>
-                /// </summary>
                 [NameInMap("CouponOptionNo")]
                 [Validation(Required=false)]
                 public string CouponOptionNo { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
                 [NameInMap("IsSelected")]
                 [Validation(Required=false)]
                 public bool? IsSelected { get; set; }
@@ -145,10 +129,6 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>102112</para>
-                /// </summary>
                 [NameInMap("RuleId")]
                 [Validation(Required=false)]
                 public string RuleId { get; set; }

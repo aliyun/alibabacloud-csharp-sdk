@@ -105,18 +105,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public List<DescribeInstanceResponseBodyModulesModule> Module { get; set; }
             public class DescribeInstanceResponseBodyModulesModule : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>package_config</para>
-                /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>101*********026</para>
-                /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
                 public string Id { get; set; }
@@ -133,26 +125,14 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                     [Validation(Required=false)]
                     public List<DescribeInstanceResponseBodyModulesModulePropertiesProperty> Property { get; set; }
                     public class DescribeInstanceResponseBodyModulesModulePropertiesProperty : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>12</para>
-                        /// </summary>
                         [NameInMap("DisplayUnit")]
                         [Validation(Required=false)]
                         public string DisplayUnit { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>12</para>
-                        /// </summary>
                         [NameInMap("Key")]
                         [Validation(Required=false)]
                         public string Key { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>12</para>
-                        /// </summary>
                         [NameInMap("Name")]
                         [Validation(Required=false)]
                         public string Name { get; set; }
@@ -165,58 +145,30 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                             [Validation(Required=false)]
                             public List<DescribeInstanceResponseBodyModulesModulePropertiesPropertyPropertyValuesPropertyValue> PropertyValue { get; set; }
                             public class DescribeInstanceResponseBodyModulesModulePropertiesPropertyPropertyValuesPropertyValue : TeaModel {
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>12</para>
-                                /// </summary>
                                 [NameInMap("DisplayName")]
                                 [Validation(Required=false)]
                                 public string DisplayName { get; set; }
 
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>12</para>
-                                /// </summary>
                                 [NameInMap("Max")]
                                 [Validation(Required=false)]
                                 public string Max { get; set; }
 
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>12</para>
-                                /// </summary>
                                 [NameInMap("Min")]
                                 [Validation(Required=false)]
                                 public string Min { get; set; }
 
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>12</para>
-                                /// </summary>
                                 [NameInMap("Remark")]
                                 [Validation(Required=false)]
                                 public string Remark { get; set; }
 
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>12</para>
-                                /// </summary>
                                 [NameInMap("Step")]
                                 [Validation(Required=false)]
                                 public string Step { get; set; }
 
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>12</para>
-                                /// </summary>
                                 [NameInMap("Type")]
                                 [Validation(Required=false)]
                                 public string Type { get; set; }
 
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>12</para>
-                                /// </summary>
                                 [NameInMap("Value")]
                                 [Validation(Required=false)]
                                 public string Value { get; set; }
@@ -225,10 +177,6 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 
                         }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>12</para>
-                        /// </summary>
                         [NameInMap("ShowType")]
                         [Validation(Required=false)]
                         public string ShowType { get; set; }

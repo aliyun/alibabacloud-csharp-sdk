@@ -85,10 +85,6 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public List<DescribeProductResponseBodyProductExtrasProductExtra> ProductExtra { get; set; }
             public class DescribeProductResponseBodyProductExtrasProductExtra : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>product_advantage</para>
-                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
@@ -97,18 +93,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>0</para>
-                /// </summary>
                 [NameInMap("Order")]
                 [Validation(Required=false)]
                 public int? Order { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>HTML</para>
-                /// </summary>
                 [NameInMap("Type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }
@@ -129,34 +117,18 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public List<DescribeProductResponseBodyProductSkusProductSku> ProductSku { get; set; }
             public class DescribeProductResponseBodyProductSkusProductSku : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>PREPAY</para>
-                /// </summary>
                 [NameInMap("ChargeType")]
                 [Validation(Required=false)]
                 public string ChargeType { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>cmjj01****-Package</para>
-                /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>{\&quot;img_id\&quot;:{\&quot;img_version|img_region\&quot;:{\&quot;V1.7|cn-shenzhen-st3-a01\&quot;:[\&quot;m-wz9ho4hmos0lpxcldqoq\&quot;]}}</para>
-                /// </summary>
                 [NameInMap("Constraints")]
                 [Validation(Required=false)]
                 public string Constraints { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>true</para>
-                /// </summary>
                 [NameInMap("Hidden")]
                 [Validation(Required=false)]
                 public bool? Hidden { get; set; }
@@ -169,18 +141,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                     [Validation(Required=false)]
                     public List<DescribeProductResponseBodyProductSkusProductSkuModulesModule> Module { get; set; }
                     public class DescribeProductResponseBodyProductSkusProductSkuModulesModule : TeaModel {
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>img_id</para>
-                        /// </summary>
                         [NameInMap("Code")]
                         [Validation(Required=false)]
                         public string Code { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>248220</para>
-                        /// </summary>
                         [NameInMap("Id")]
                         [Validation(Required=false)]
                         public string Id { get; set; }
@@ -197,18 +161,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                             [Validation(Required=false)]
                             public List<DescribeProductResponseBodyProductSkusProductSkuModulesModulePropertiesProperty> Property { get; set; }
                             public class DescribeProductResponseBodyProductSkusProductSkuModulesModulePropertiesProperty : TeaModel {
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>1</para>
-                                /// </summary>
                                 [NameInMap("DisplayUnit")]
                                 [Validation(Required=false)]
                                 public string DisplayUnit { get; set; }
 
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>img_id</para>
-                                /// </summary>
                                 [NameInMap("Key")]
                                 [Validation(Required=false)]
                                 public string Key { get; set; }
@@ -229,50 +185,26 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                                         [Validation(Required=false)]
                                         public string DisplayName { get; set; }
 
-                                        /// <summary>
-                                        /// <b>Example:</b>
-                                        /// <para>123</para>
-                                        /// </summary>
                                         [NameInMap("Max")]
                                         [Validation(Required=false)]
                                         public string Max { get; set; }
 
-                                        /// <summary>
-                                        /// <b>Example:</b>
-                                        /// <para>11</para>
-                                        /// </summary>
                                         [NameInMap("Min")]
                                         [Validation(Required=false)]
                                         public string Min { get; set; }
 
-                                        /// <summary>
-                                        /// <b>Example:</b>
-                                        /// <para>abc</para>
-                                        /// </summary>
                                         [NameInMap("Remark")]
                                         [Validation(Required=false)]
                                         public string Remark { get; set; }
 
-                                        /// <summary>
-                                        /// <b>Example:</b>
-                                        /// <para>1</para>
-                                        /// </summary>
                                         [NameInMap("Step")]
                                         [Validation(Required=false)]
                                         public string Step { get; set; }
 
-                                        /// <summary>
-                                        /// <b>Example:</b>
-                                        /// <para>single_string</para>
-                                        /// </summary>
                                         [NameInMap("Type")]
                                         [Validation(Required=false)]
                                         public string Type { get; set; }
 
-                                        /// <summary>
-                                        /// <b>Example:</b>
-                                        /// <para>m-28e213e7t</para>
-                                        /// </summary>
                                         [NameInMap("Value")]
                                         [Validation(Required=false)]
                                         public string Value { get; set; }
@@ -281,10 +213,6 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 
                                 }
 
-                                /// <summary>
-                                /// <b>Example:</b>
-                                /// <para>number</para>
-                                /// </summary>
                                 [NameInMap("ShowType")]
                                 [Validation(Required=false)]
                                 public string ShowType { get; set; }
@@ -297,10 +225,6 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>21</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
@@ -317,10 +241,6 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                         [Validation(Required=false)]
                         public string Name { get; set; }
 
-                        /// <summary>
-                        /// <b>Example:</b>
-                        /// <para>HOUR</para>
-                        /// </summary>
                         [NameInMap("PeriodType")]
                         [Validation(Required=false)]
                         public string PeriodType { get; set; }
@@ -391,18 +311,10 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 [Validation(Required=false)]
                 public List<DescribeProductResponseBodyShopInfoWangWangsWangWang> WangWang { get; set; }
                 public class DescribeProductResponseBodyShopInfoWangWangsWangWang : TeaModel {
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>123</para>
-                    /// </summary>
                     [NameInMap("Remark")]
                     [Validation(Required=false)]
                     public string Remark { get; set; }
 
-                    /// <summary>
-                    /// <b>Example:</b>
-                    /// <para>ABC</para>
-                    /// </summary>
                     [NameInMap("UserName")]
                     [Validation(Required=false)]
                     public string UserName { get; set; }
