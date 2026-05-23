@@ -9,12 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class Attachment : TeaModel {
+        [NameInMap("attachResourceId")]
+        [Validation(Required=false)]
+        public string AttachResourceId { get; set; }
+
         /// <summary>
         /// <para>The resource IDs.</para>
         /// </summary>
         [NameInMap("attachResourceIds")]
         [Validation(Required=false)]
         public List<string> AttachResourceIds { get; set; }
+
+        [NameInMap("attachResourceParentIds")]
+        [Validation(Required=false)]
+        public List<string> AttachResourceParentIds { get; set; }
 
         /// <summary>
         /// <para>The supported mount point type. Valid values:</para>
