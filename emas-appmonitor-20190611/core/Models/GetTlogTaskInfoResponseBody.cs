@@ -8,42 +8,42 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
 {
-    public class ConditionalRule : TeaModel {
-        [NameInMap("Filter")]
+    public class GetTlogTaskInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
+        [NameInMap("ErrorCode")]
         [Validation(Required=false)]
-        public EventFilter Filter { get; set; }
+        public long? ErrorCode { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1205-02-01 12:00:00</para>
+        /// <para>Successful</para>
         /// </summary>
-        [NameInMap("ModifyTime")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string ModifyTime { get; set; }
+        public string Message { get; set; }
+
+        [NameInMap("Model")]
+        [Validation(Required=false)]
+        public object Model { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>A8313212-EB4E-4E15-A7F9-D9C8F3FE8E94</para>
         /// </summary>
-        [NameInMap("Name")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>user</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("Operator")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Operator { get; set; }
-
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>1</para>
-        /// </summary>
-        [NameInMap("SampleRate")]
-        [Validation(Required=false)]
-        public float? SampleRate { get; set; }
+        public bool? Success { get; set; }
 
     }
 

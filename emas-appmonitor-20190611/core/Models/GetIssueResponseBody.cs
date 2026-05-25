@@ -219,6 +219,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            [NameInMap("Reason")]
+            [Validation(Required=false)]
+            public string Reason { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>java.lang.NullPointerException</para>
@@ -254,6 +258,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<string> Tags { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
 
         }
 

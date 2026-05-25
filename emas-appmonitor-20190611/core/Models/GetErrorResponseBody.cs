@@ -269,6 +269,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
             [Validation(Required=false)]
             public string ColNo { get; set; }
 
+            [NameInMap("Controllers")]
+            [Validation(Required=false)]
+            public string Controllers { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>CN</para>
@@ -597,6 +601,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
             [Validation(Required=false)]
             public string FeatureScene { get; set; }
 
+            [NameInMap("FileDescriptor")]
+            [Validation(Required=false)]
+            public string FileDescriptor { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>baselineCspm_20241005</para>
@@ -775,6 +783,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
             [Validation(Required=false)]
             public string JsBacktrace { get; set; }
 
+            [NameInMap("LagCost")]
+            [Validation(Required=false)]
+            public int? LagCost { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>cn</para>
@@ -782,6 +794,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
             [NameInMap("Language")]
             [Validation(Required=false)]
             public string Language { get; set; }
+
+            [NameInMap("LaunchedCrashStage")]
+            [Validation(Required=false)]
+            public int? LaunchedCrashStage { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -818,6 +834,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
             [NameInMap("MainLog")]
             [Validation(Required=false)]
             public string MainLog { get; set; }
+
+            [NameInMap("MemInfo")]
+            [Validation(Required=false)]
+            public string MemInfo { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

@@ -168,6 +168,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
                 [Validation(Required=false)]
                 public string FirstVersion { get; set; }
 
+                [NameInMap("LagCost")]
+                [Validation(Required=false)]
+                public long? LagCost { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>ServiceType</para>
@@ -175,6 +179,10 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
+
+                [NameInMap("Reason")]
+                [Validation(Required=false)]
+                public string Reason { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -194,6 +202,14 @@ namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public int? Status { get; set; }
+
+                [NameInMap("Tags")]
+                [Validation(Required=false)]
+                public List<string> Tags { get; set; }
+
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
 
             }
 

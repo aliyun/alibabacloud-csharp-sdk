@@ -8,30 +8,34 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Emas_appmonitor20190611.Models
 {
-    public class FullSampleItem : TeaModel {
+    public class GetTlogDeviceInfoRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>id</para>
+        /// <para>233588686</para>
         /// </summary>
-        [NameInMap("Id")]
+        [NameInMap("AppKey")]
         [Validation(Required=false)]
-        public string Id { get; set; }
+        public long? AppKey { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1740489688615</para>
+        /// <para>ad-0008ane9g0qcyu90bpm1-829</para>
         /// </summary>
-        [NameInMap("ModifyTime")]
+        [NameInMap("DeviceId")]
         [Validation(Required=false)]
-        public string ModifyTime { get; set; }
+        public string DeviceId { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>testUser</para>
+        /// <para>android</para>
         /// </summary>
-        [NameInMap("Operator")]
+        [NameInMap("Os")]
         [Validation(Required=false)]
-        public string Operator { get; set; }
+        public string Os { get; set; }
 
     }
 
