@@ -16379,6 +16379,142 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>高德全双工</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmFullDuplexCallOperateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmFullDuplexCallOperateResponse
+        /// </returns>
+        public LlmFullDuplexCallOperateResponse LlmFullDuplexCallOperateWithOptions(LlmFullDuplexCallOperateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Command))
+            {
+                query["Command"] = request.Command;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Param))
+            {
+                query["Param"] = request.Param;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LlmFullDuplexCallOperate",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LlmFullDuplexCallOperateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>高德全双工</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmFullDuplexCallOperateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmFullDuplexCallOperateResponse
+        /// </returns>
+        public async Task<LlmFullDuplexCallOperateResponse> LlmFullDuplexCallOperateWithOptionsAsync(LlmFullDuplexCallOperateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallId))
+            {
+                query["CallId"] = request.CallId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Command))
+            {
+                query["Command"] = request.Command;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Param))
+            {
+                query["Param"] = request.Param;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LlmFullDuplexCallOperate",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LlmFullDuplexCallOperateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>高德全双工</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmFullDuplexCallOperateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmFullDuplexCallOperateResponse
+        /// </returns>
+        public LlmFullDuplexCallOperateResponse LlmFullDuplexCallOperate(LlmFullDuplexCallOperateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return LlmFullDuplexCallOperateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>高德全双工</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmFullDuplexCallOperateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmFullDuplexCallOperateResponse
+        /// </returns>
+        public async Task<LlmFullDuplexCallOperateResponse> LlmFullDuplexCallOperateAsync(LlmFullDuplexCallOperateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await LlmFullDuplexCallOperateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>基于大模型的智能外呼</para>
         /// </summary>
         /// 
@@ -16823,6 +16959,202 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await LlmSmartCallEncryptWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于大模型的智能外呼</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// LlmSmartCallFullDuplexRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmSmartCallFullDuplexResponse
+        /// </returns>
+        public LlmSmartCallFullDuplexResponse LlmSmartCallFullDuplexWithOptions(LlmSmartCallFullDuplexRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            LlmSmartCallFullDuplexShrinkRequest request = new LlmSmartCallFullDuplexShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StartWordParam))
+            {
+                request.StartWordParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StartWordParam, "StartWordParam", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationCode))
+            {
+                query["ApplicationCode"] = request.ApplicationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalledNumber))
+            {
+                query["CalledNumber"] = request.CalledNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerNumber))
+            {
+                query["CallerNumber"] = request.CallerNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionTimeout))
+            {
+                query["SessionTimeout"] = request.SessionTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWordParamShrink))
+            {
+                query["StartWordParam"] = request.StartWordParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsSpeed))
+            {
+                query["TtsSpeed"] = request.TtsSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsVoiceCode))
+            {
+                query["TtsVoiceCode"] = request.TtsVoiceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsVolume))
+            {
+                query["TtsVolume"] = request.TtsVolume;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LlmSmartCallFullDuplex",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LlmSmartCallFullDuplexResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于大模型的智能外呼</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// LlmSmartCallFullDuplexRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmSmartCallFullDuplexResponse
+        /// </returns>
+        public async Task<LlmSmartCallFullDuplexResponse> LlmSmartCallFullDuplexWithOptionsAsync(LlmSmartCallFullDuplexRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            LlmSmartCallFullDuplexShrinkRequest request = new LlmSmartCallFullDuplexShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StartWordParam))
+            {
+                request.StartWordParamShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StartWordParam, "StartWordParam", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationCode))
+            {
+                query["ApplicationCode"] = request.ApplicationCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CalledNumber))
+            {
+                query["CalledNumber"] = request.CalledNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerNumber))
+            {
+                query["CallerNumber"] = request.CallerNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutId))
+            {
+                query["OutId"] = request.OutId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionTimeout))
+            {
+                query["SessionTimeout"] = request.SessionTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartWordParamShrink))
+            {
+                query["StartWordParam"] = request.StartWordParamShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsSpeed))
+            {
+                query["TtsSpeed"] = request.TtsSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsVoiceCode))
+            {
+                query["TtsVoiceCode"] = request.TtsVoiceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsVolume))
+            {
+                query["TtsVolume"] = request.TtsVolume;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "LlmSmartCallFullDuplex",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<LlmSmartCallFullDuplexResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于大模型的智能外呼</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmSmartCallFullDuplexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmSmartCallFullDuplexResponse
+        /// </returns>
+        public LlmSmartCallFullDuplexResponse LlmSmartCallFullDuplex(LlmSmartCallFullDuplexRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return LlmSmartCallFullDuplexWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>基于大模型的智能外呼</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// LlmSmartCallFullDuplexRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// LlmSmartCallFullDuplexResponse
+        /// </returns>
+        public async Task<LlmSmartCallFullDuplexResponse> LlmSmartCallFullDuplexAsync(LlmSmartCallFullDuplexRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await LlmSmartCallFullDuplexWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
