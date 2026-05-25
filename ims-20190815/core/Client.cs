@@ -4054,9 +4054,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Generates the user credential report of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GenerateCredentialReportRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4087,9 +4084,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Generates the user credential report of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GenerateCredentialReportRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4148,9 +4142,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Generates a check report for Cloud Governance.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GenerateGovernanceReportRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4181,9 +4172,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Generates a check report for Cloud Governance.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GenerateGovernanceReportRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4490,9 +4478,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries information about the multi-factor authentication (MFA) devices of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetAccountMFAInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4523,9 +4508,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries information about the multi-factor authentication (MFA) devices of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetAccountMFAInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4584,9 +4566,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the security report of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetAccountSecurityPracticeReportRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4617,9 +4596,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the security report of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetAccountSecurityPracticeReportRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4678,9 +4654,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the overview information about an Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetAccountSummaryRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4711,9 +4684,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the overview information about an Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetAccountSummaryRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5288,9 +5258,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the default domain name of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetDefaultDomainRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5321,9 +5288,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the default domain name of an Alibaba Cloud account.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetDefaultDomainRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5638,9 +5602,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>查询成熟度报告状态</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetGovernanceReportStatusRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5671,9 +5632,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>查询成熟度报告状态</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetGovernanceReportStatusRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6116,9 +6074,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the details of the password policy for RAM users.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetPasswordPolicyRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6149,9 +6104,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the details of the password policy for RAM users.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetPasswordPolicyRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6330,9 +6282,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the security preferences for RAM users.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetSecurityPreferenceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6363,9 +6312,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the security preferences for RAM users.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetSecurityPreferenceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6808,9 +6754,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the configurations of user-based single sign-on (SSO).</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetUserSsoSettingsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6841,9 +6784,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries the configurations of user-based single sign-on (SSO).</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetUserSsoSettingsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7507,9 +7447,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named <c>myapp</c> belongs to the current account.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// ListApplicationsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7545,9 +7482,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>This topic provides an example on how to query the applications within the current account. The returned result shows that only one application named <c>myapp</c> belongs to the current account.</para>
         /// </description>
         /// 
-        /// <param name="request">
-        /// ListApplicationsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7616,9 +7550,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries information about all installed external applications.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListExternalApplicationsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -7649,9 +7580,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries information about all installed external applications.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListExternalApplicationsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8350,9 +8278,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries all metric values in the most recent governance check.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListRecentGovernanceMetricsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -8383,9 +8308,6 @@ namespace AlibabaCloud.SDK.Ims20190815
         /// <para>Queries all metric values in the most recent governance check.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListRecentGovernanceMetricsRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -10858,6 +10780,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             {
                 query["AllowUserToManagePersonalDingTalk"] = request.AllowUserToManagePersonalDingTalk;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUserToManageServiceCredentials))
+            {
+                query["AllowUserToManageServiceCredentials"] = request.AllowUserToManageServiceCredentials;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSaveMFATicket))
             {
                 query["EnableSaveMFATicket"] = request.EnableSaveMFATicket;
@@ -10959,6 +10885,10 @@ namespace AlibabaCloud.SDK.Ims20190815
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUserToManagePersonalDingTalk))
             {
                 query["AllowUserToManagePersonalDingTalk"] = request.AllowUserToManagePersonalDingTalk;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllowUserToManageServiceCredentials))
+            {
+                query["AllowUserToManageServiceCredentials"] = request.AllowUserToManageServiceCredentials;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableSaveMFATicket))
             {

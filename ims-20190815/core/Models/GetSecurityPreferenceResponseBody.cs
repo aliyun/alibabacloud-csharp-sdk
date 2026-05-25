@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
                 [Validation(Required=false)]
                 public bool? AllowUserToManageAccessKeys { get; set; }
 
+                [NameInMap("AllowUserToManageServiceCredentials")]
+                [Validation(Required=false)]
+                public bool? AllowUserToManageServiceCredentials { get; set; }
+
             }
 
             /// <summary>

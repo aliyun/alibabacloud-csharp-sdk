@@ -224,6 +224,10 @@ namespace AlibabaCloud.SDK.Ims20190815.Models
             [Validation(Required=false)]
             public int? RolesQuota { get; set; }
 
+            [NameInMap("ServiceCredentialsPerUserPerServiceQuota")]
+            [Validation(Required=false)]
+            public int? ServiceCredentialsPerUserPerServiceQuota { get; set; }
+
             /// <summary>
             /// <para>The number of RAM users.</para>
             /// 
