@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Nis20211216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network path in the cloud for reachability analysis.</para>
+        /// <para>Creates a network path for reachability analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Nis20211216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network path in the cloud for reachability analysis.</para>
+        /// <para>Creates a network path for reachability analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.Nis20211216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network path in the cloud for reachability analysis.</para>
+        /// <para>Creates a network path for reachability analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.Nis20211216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a network path in the cloud for reachability analysis.</para>
+        /// <para>Creates a network path for reachability analysis.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3654,9 +3654,6 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <para>巡检资源类型列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListNisInspectionResourceTypeRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -3687,9 +3684,6 @@ namespace AlibabaCloud.SDK.Nis20211216
         /// <para>巡检资源类型列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListNisInspectionResourceTypeRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>

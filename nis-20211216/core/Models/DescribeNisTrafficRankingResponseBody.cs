@@ -37,6 +37,14 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             [Validation(Required=false)]
             public double? Bytes { get; set; }
 
+            [NameInMap("BytesIncrease")]
+            [Validation(Required=false)]
+            public double? BytesIncrease { get; set; }
+
+            [NameInMap("BytesIncreaseRatio")]
+            [Validation(Required=false)]
+            public double? BytesIncreaseRatio { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>0.2</para>
@@ -44,6 +52,10 @@ namespace AlibabaCloud.SDK.Nis20211216.Models
             [NameInMap("BytesRate")]
             [Validation(Required=false)]
             public double? BytesRate { get; set; }
+
+            [NameInMap("CenId")]
+            [Validation(Required=false)]
+            public string CenId { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
