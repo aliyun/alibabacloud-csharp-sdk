@@ -225,6 +225,282 @@ namespace AlibabaCloud.SDK.AiSearchEngine20260417
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取数据集资源 OSS 访问地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDatasetResourceUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatasetResourceUrlResponse
+        /// </returns>
+        public GetDatasetResourceUrlResponse GetDatasetResourceUrlWithOptions(GetDatasetResourceUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                body["datasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryKey))
+            {
+                body["primaryKey"] = request.PrimaryKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDatasetResourceUrl",
+                Version = "2026-04-17",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/dataset/open/resources",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDatasetResourceUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集资源 OSS 访问地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDatasetResourceUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatasetResourceUrlResponse
+        /// </returns>
+        public async Task<GetDatasetResourceUrlResponse> GetDatasetResourceUrlWithOptionsAsync(GetDatasetResourceUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                body["datasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrimaryKey))
+            {
+                body["primaryKey"] = request.PrimaryKey;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDatasetResourceUrl",
+                Version = "2026-04-17",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/dataset/open/resources",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDatasetResourceUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集资源 OSS 访问地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDatasetResourceUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatasetResourceUrlResponse
+        /// </returns>
+        public GetDatasetResourceUrlResponse GetDatasetResourceUrl(GetDatasetResourceUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetDatasetResourceUrlWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取数据集资源 OSS 访问地址</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDatasetResourceUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDatasetResourceUrlResponse
+        /// </returns>
+        public async Task<GetDatasetResourceUrlResponse> GetDatasetResourceUrlAsync(GetDatasetResourceUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetDatasetResourceUrlWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交单条记录导入任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportDatasetDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportDatasetDataResponse
+        /// </returns>
+        public ImportDatasetDataResponse ImportDatasetDataWithOptions(ImportDatasetDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                body["datasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportDatasetData",
+                Version = "2026-04-17",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/dataset/open/upsert",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportDatasetDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交单条记录导入任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportDatasetDataRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportDatasetDataResponse
+        /// </returns>
+        public async Task<ImportDatasetDataResponse> ImportDatasetDataWithOptionsAsync(ImportDatasetDataRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetId))
+            {
+                body["datasetId"] = request.DatasetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Records))
+            {
+                body["records"] = request.Records;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportDatasetData",
+                Version = "2026-04-17",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/dataset/open/upsert",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportDatasetDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交单条记录导入任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportDatasetDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportDatasetDataResponse
+        /// </returns>
+        public ImportDatasetDataResponse ImportDatasetData(ImportDatasetDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ImportDatasetDataWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交单条记录导入任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportDatasetDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportDatasetDataResponse
+        /// </returns>
+        public async Task<ImportDatasetDataResponse> ImportDatasetDataAsync(ImportDatasetDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ImportDatasetDataWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>AI问答对话</para>
         /// </summary>
         /// 
