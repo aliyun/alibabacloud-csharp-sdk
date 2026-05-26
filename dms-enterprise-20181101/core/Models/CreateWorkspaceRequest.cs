@@ -31,17 +31,6 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The region to which the workspace belongs.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
-        /// </summary>
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
-        /// <summary>
         /// <para>The VPC ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,6 +51,16 @@ namespace AlibabaCloud.SDK.Dms_enterprise20181101.Models
         [NameInMap("WorkspaceName")]
         [Validation(Required=false)]
         public string WorkspaceName { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
+        [NameInMap("WorkspaceRegion")]
+        [Validation(Required=false)]
+        public string WorkspaceRegion { get; set; }
 
     }
 
