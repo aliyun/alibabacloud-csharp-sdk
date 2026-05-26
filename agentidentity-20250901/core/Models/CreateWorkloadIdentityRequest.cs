@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
         [Validation(Required=false)]
         public List<string> AllowedResourceOAuth2ReturnURLs { get; set; }
 
+        [NameInMap("CreateRAMRole")]
+        [Validation(Required=false)]
+        public bool? CreateRAMRole { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>example agent</para>
@@ -36,6 +40,18 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
         [NameInMap("RoleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
+
+        [NameInMap("SessionBindingEnabled")]
+        [Validation(Required=false)]
+        public bool? SessionBindingEnabled { get; set; }
+
+        [NameInMap("SourceAgentArn")]
+        [Validation(Required=false)]
+        public string SourceAgentArn { get; set; }
+
+        [NameInMap("SourcePlatform")]
+        [Validation(Required=false)]
+        public string SourcePlatform { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

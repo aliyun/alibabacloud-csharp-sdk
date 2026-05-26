@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
             [Validation(Required=false)]
             public OAuth2ProviderConfig OAuth2ProviderConfig { get; set; }
 
+            [NameInMap("TokenVaultName")]
+            [Validation(Required=false)]
+            public string TokenVaultName { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2025-12-18T06:19:17Z</para>

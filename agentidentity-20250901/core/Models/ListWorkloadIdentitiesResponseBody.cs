@@ -77,6 +77,18 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
             [Validation(Required=false)]
             public string RoleArn { get; set; }
 
+            [NameInMap("SessionBindingEnabled")]
+            [Validation(Required=false)]
+            public bool? SessionBindingEnabled { get; set; }
+
+            [NameInMap("SourceAgentArn")]
+            [Validation(Required=false)]
+            public string SourceAgentArn { get; set; }
+
+            [NameInMap("SourcePlatform")]
+            [Validation(Required=false)]
+            public string SourcePlatform { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2025-12-18T06:19:17Z</para>

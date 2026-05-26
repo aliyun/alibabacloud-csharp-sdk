@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.AgentIdentity20250901.Models
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
+        [NameInMap("SessionBindingEnabled")]
+        [Validation(Required=false)]
+        public string SessionBindingEnabled { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>agent-101</para>
