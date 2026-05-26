@@ -5406,10 +5406,6 @@ namespace AlibabaCloud.SDK.Live20161101
             {
                 query["DomainName"] = request.DomainName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatConfig))
-            {
-                query["FormatConfig"] = request.FormatConfig;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnDemand))
             {
                 query["OnDemand"] = request.OnDemand;
@@ -5521,10 +5517,6 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {
                 query["DomainName"] = request.DomainName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatConfig))
-            {
-                query["FormatConfig"] = request.FormatConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnDemand))
             {
@@ -80493,10 +80485,6 @@ namespace AlibabaCloud.SDK.Live20161101
             {
                 query["DomainName"] = request.DomainName;
             }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatConfig))
-            {
-                query["FormatConfig"] = request.FormatConfig;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnDemand))
             {
                 query["OnDemand"] = request.OnDemand;
@@ -80591,10 +80579,6 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainName))
             {
                 query["DomainName"] = request.DomainName;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FormatConfig))
-            {
-                query["FormatConfig"] = request.FormatConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OnDemand))
             {

@@ -72,10 +72,6 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
-        [NameInMap("FormatConfig")]
-        [Validation(Required=false)]
-        public bool? FormatConfig { get; set; }
-
         /// <summary>
         /// <para>Specifies whether to enable on-demand recording. Valid values:</para>
         /// <list type="bullet">
