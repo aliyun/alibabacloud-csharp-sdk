@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiSearchEngine20260417.Models
 {
     public class QaChatRequest : TeaModel {
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2047140750220754946</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.AiSearchEngine20260417.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public QaChatRequestMessage Message { get; set; }
