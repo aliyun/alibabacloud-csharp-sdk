@@ -9,6 +9,44 @@ using Tea;
 namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class GetYikeStoryboardJobResponseBody : TeaModel {
+        [NameInMap("JobCredit")]
+        [Validation(Required=false)]
+        public GetYikeStoryboardJobResponseBodyJobCredit JobCredit { get; set; }
+        public class GetYikeStoryboardJobResponseBodyJobCredit : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10.0</para>
+            /// </summary>
+            [NameInMap("ElementImageGeneration")]
+            [Validation(Required=false)]
+            public string ElementImageGeneration { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>200.2</para>
+            /// </summary>
+            [NameInMap("TotalCreditCost")]
+            [Validation(Required=false)]
+            public string TotalCreditCost { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10.2</para>
+            /// </summary>
+            [NameInMap("VideoComposition")]
+            [Validation(Required=false)]
+            public string VideoComposition { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>180.0</para>
+            /// </summary>
+            [NameInMap("VideoGeneration")]
+            [Validation(Required=false)]
+            public string VideoGeneration { get; set; }
+
+        }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para><b><b>a046-263c-3560-978a-fb287782</b></b></para>
