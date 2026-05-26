@@ -1507,7 +1507,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>号码分析实时查询蚂蚁</para>
+        /// <para>Obtains the analysis results of a number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1577,7 +1577,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>号码分析实时查询蚂蚁</para>
+        /// <para>Obtains the analysis results of a number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1647,7 +1647,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>号码分析实时查询蚂蚁</para>
+        /// <para>Obtains the analysis results of a number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1665,7 +1665,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>号码分析实时查询蚂蚁</para>
+        /// <para>Obtains the analysis results of a number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3491,7 +3491,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UAID申请Token所需的签名字段</para>
+        /// <para>Obtains the signature of an authorization token when China Mobile, China Unicom, or China Telecom provides the Uniform Anonymous Identifier (UAID) capability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3573,7 +3573,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UAID申请Token所需的签名字段</para>
+        /// <para>Obtains the signature of an authorization token when China Mobile, China Unicom, or China Telecom provides the Uniform Anonymous Identifier (UAID) capability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3655,7 +3655,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UAID申请Token所需的签名字段</para>
+        /// <para>Obtains the signature of an authorization token when China Mobile, China Unicom, or China Telecom provides the Uniform Anonymous Identifier (UAID) capability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3673,7 +3673,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UAID申请Token所需的签名字段</para>
+        /// <para>Obtains the signature of an authorization token when China Mobile, China Unicom, or China Telecom provides the Uniform Anonymous Identifier (UAID) capability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3887,6 +3887,174 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetUAIDConversionSignWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>历史三要素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HistoryThreeElementsVerificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// HistoryThreeElementsVerificationResponse
+        /// </returns>
+        public HistoryThreeElementsVerificationResponse HistoryThreeElementsVerificationWithOptions(HistoryThreeElementsVerificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Carrier))
+            {
+                query["Carrier"] = request.Carrier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertCode))
+            {
+                query["CertCode"] = request.CertCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
+            {
+                query["InputNumber"] = request.InputNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerificationTime))
+            {
+                query["VerificationTime"] = request.VerificationTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HistoryThreeElementsVerification",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HistoryThreeElementsVerificationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>历史三要素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HistoryThreeElementsVerificationRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// HistoryThreeElementsVerificationResponse
+        /// </returns>
+        public async Task<HistoryThreeElementsVerificationResponse> HistoryThreeElementsVerificationWithOptionsAsync(HistoryThreeElementsVerificationRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthCode))
+            {
+                query["AuthCode"] = request.AuthCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Carrier))
+            {
+                query["Carrier"] = request.Carrier;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertCode))
+            {
+                query["CertCode"] = request.CertCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InputNumber))
+            {
+                query["InputNumber"] = request.InputNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mask))
+            {
+                query["Mask"] = request.Mask;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VerificationTime))
+            {
+                query["VerificationTime"] = request.VerificationTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "HistoryThreeElementsVerification",
+                Version = "2020-02-17",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<HistoryThreeElementsVerificationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>历史三要素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HistoryThreeElementsVerificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// HistoryThreeElementsVerificationResponse
+        /// </returns>
+        public HistoryThreeElementsVerificationResponse HistoryThreeElementsVerification(HistoryThreeElementsVerificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return HistoryThreeElementsVerificationWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>历史三要素</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// HistoryThreeElementsVerificationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// HistoryThreeElementsVerificationResponse
+        /// </returns>
+        public async Task<HistoryThreeElementsVerificationResponse> HistoryThreeElementsVerificationAsync(HistoryThreeElementsVerificationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await HistoryThreeElementsVerificationWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8039,7 +8207,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UAID</para>
+        /// <para>Obtains a Uniform Anonymous Identifier (UAID) based on the authorization token of a carrier. For more information about how to obtain the authorization token and its signature value, see the GetUAIDApplyTokenSign documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8117,7 +8285,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UAID</para>
+        /// <para>Obtains a Uniform Anonymous Identifier (UAID) based on the authorization token of a carrier. For more information about how to obtain the authorization token and its signature value, see the GetUAIDApplyTokenSign documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8195,7 +8363,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UAID</para>
+        /// <para>Obtains a Uniform Anonymous Identifier (UAID) based on the authorization token of a carrier. For more information about how to obtain the authorization token and its signature value, see the GetUAIDApplyTokenSign documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8213,7 +8381,7 @@ namespace AlibabaCloud.SDK.Dytnsapi20200217
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UAID</para>
+        /// <para>Obtains a Uniform Anonymous Identifier (UAID) based on the authorization token of a carrier. For more information about how to obtain the authorization token and its signature value, see the GetUAIDApplyTokenSign documentation.</para>
         /// </summary>
         /// 
         /// <param name="request">
