@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public CredentialConfig CredentialConfig { get; set; }
 
+        [NameInMap("InclusionHints")]
+        [Validation(Required=false)]
+        public List<string> InclusionHints { get; set; }
+
         /// <summary>
         /// <para>The name of the project.</para>
         /// <para>This parameter is required.</para>

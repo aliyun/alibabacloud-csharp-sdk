@@ -1,3 +1,8 @@
+2026-05-26 Version: 4.7.7
+- Update API DetectImageCropping: add request parameters InclusionHints.
+- Update API DetectImageCropping: add response parameters Body.MatchedInclusionHints.
+
+
 2026-04-17 Version: 4.7.6
 - Update API ListBindings: add request parameters Name.
 

@@ -10969,6 +10969,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InclusionHints))
+            {
+                request.InclusionHintsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InclusionHints, "InclusionHints", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AspectRatios))
             {
@@ -10977,6 +10981,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InclusionHintsShrink))
+            {
+                query["InclusionHints"] = request.InclusionHintsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {
@@ -11029,6 +11037,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             {
                 request.CredentialConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CredentialConfig, "CredentialConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InclusionHints))
+            {
+                request.InclusionHintsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InclusionHints, "InclusionHints", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AspectRatios))
             {
@@ -11037,6 +11049,10 @@ namespace AlibabaCloud.SDK.Imm20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialConfigShrink))
             {
                 query["CredentialConfig"] = request.CredentialConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InclusionHintsShrink))
+            {
+                query["InclusionHints"] = request.InclusionHintsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
             {

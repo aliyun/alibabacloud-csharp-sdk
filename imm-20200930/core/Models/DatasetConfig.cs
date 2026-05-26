@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public InsightsConfig Insights { get; set; }
 
+        [NameInMap("SmartCluster")]
+        [Validation(Required=false)]
+        public SmartClusterConfig SmartCluster { get; set; }
+
     }
 
 }

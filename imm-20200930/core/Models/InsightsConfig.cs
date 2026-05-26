@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string Language { get; set; }
 
+        [NameInMap("Video")]
+        [Validation(Required=false)]
+        public VideoInsightsConfig Video { get; set; }
+
     }
 
 }

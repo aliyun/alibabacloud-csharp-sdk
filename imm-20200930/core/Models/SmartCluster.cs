@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class SmartCluster : TeaModel {
+        [NameInMap("ClusterType")]
+        [Validation(Required=false)]
+        public string ClusterType { get; set; }
+
         /// <summary>
         /// <para>The time when the cluster was created.</para>
         /// 
@@ -96,12 +100,20 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        [NameInMap("Reason")]
+        [Validation(Required=false)]
+        public string Reason { get; set; }
+
         /// <summary>
         /// <para>The clustering rule.</para>
         /// </summary>
         [NameInMap("Rule")]
         [Validation(Required=false)]
         public SmartClusterRule Rule { get; set; }
+
+        [NameInMap("Rules")]
+        [Validation(Required=false)]
+        public List<SmartClusterRule> Rules { get; set; }
 
         /// <summary>
         /// <para>The time when the cluster was updated.</para>

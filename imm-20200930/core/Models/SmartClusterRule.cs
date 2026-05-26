@@ -9,12 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Imm20200930.Models
 {
     public class SmartClusterRule : TeaModel {
+        [NameInMap("BaseURIs")]
+        [Validation(Required=false)]
+        public List<string> BaseURIs { get; set; }
+
         /// <summary>
         /// <para>Keywords</para>
         /// </summary>
         [NameInMap("Keywords")]
         [Validation(Required=false)]
         public List<string> Keywords { get; set; }
+
+        [NameInMap("RuleType")]
+        [Validation(Required=false)]
+        public string RuleType { get; set; }
 
         /// <summary>
         /// <para>Sensitivity</para>

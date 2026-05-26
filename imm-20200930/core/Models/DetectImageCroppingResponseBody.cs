@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Imm20200930.Models
         [Validation(Required=false)]
         public List<CroppingSuggestion> Croppings { get; set; }
 
+        [NameInMap("MatchedInclusionHints")]
+        [Validation(Required=false)]
+        public List<string> MatchedInclusionHints { get; set; }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 
