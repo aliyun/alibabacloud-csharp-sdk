@@ -48,6 +48,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
             [Validation(Required=false)]
             public string DomainName { get; set; }
 
+            [NameInMap("PermitPremiumRenew")]
+            [Validation(Required=false)]
+            public bool? PermitPremiumRenew { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>

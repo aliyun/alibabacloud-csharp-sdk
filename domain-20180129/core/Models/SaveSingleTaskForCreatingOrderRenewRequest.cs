@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        [NameInMap("PermitPremiumRenew")]
+        [Validation(Required=false)]
+        public bool? PermitPremiumRenew { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>123132</para>

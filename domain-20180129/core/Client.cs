@@ -5151,7 +5151,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据实例id查询域名信息</para>
+        /// <para>Queries the basic information about a domain name based on the instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5201,7 +5201,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据实例id查询域名信息</para>
+        /// <para>Queries the basic information about a domain name based on the instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5251,7 +5251,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据实例id查询域名信息</para>
+        /// <para>Queries the basic information about a domain name based on the instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5269,7 +5269,7 @@ namespace AlibabaCloud.SDK.Domain20180129
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据实例id查询域名信息</para>
+        /// <para>Queries the basic information about a domain name based on the instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14184,6 +14184,10 @@ namespace AlibabaCloud.SDK.Domain20180129
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermitPremiumRenew))
+            {
+                query["PermitPremiumRenew"] = request.PermitPremiumRenew;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionNo))
             {
                 query["PromotionNo"] = request.PromotionNo;
@@ -14257,6 +14261,10 @@ namespace AlibabaCloud.SDK.Domain20180129
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PermitPremiumRenew))
+            {
+                query["PermitPremiumRenew"] = request.PermitPremiumRenew;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionNo))
             {
