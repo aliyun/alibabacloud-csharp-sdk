@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public List<ListSupabaseProjectsResponseBodyItems> Items { get; set; }
         public class ListSupabaseProjectsResponseBodyItems : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("AutoScale")]
             [Validation(Required=false)]
             public string AutoScale { get; set; }
@@ -80,6 +84,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [Validation(Required=false)]
             public string EngineVersion { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2026-04-27T16:00:00Z</para>
+            /// </summary>
             [NameInMap("ExpireTime")]
             [Validation(Required=false)]
             public string ExpireTime { get; set; }
@@ -108,6 +116,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             [NameInMap("PrivateConnectUrl")]
             [Validation(Required=false)]
             public string PrivateConnectUrl { get; set; }
+
+            [NameInMap("ProjectDescription")]
+            [Validation(Required=false)]
+            public string ProjectDescription { get; set; }
 
             /// <summary>
             /// <para>The Supabase project ID.</para>

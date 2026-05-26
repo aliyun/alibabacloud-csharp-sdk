@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetSupabaseProjectResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("AutoScale")]
         [Validation(Required=false)]
         public string AutoScale { get; set; }
@@ -23,6 +27,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>127.0.0.1,100.64.XX.XX/10</para>
+        /// </summary>
         [NameInMap("DBSecurityIpList")]
         [Validation(Required=false)]
         public string DBSecurityIpList { get; set; }
@@ -81,14 +89,26 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>eni-xxxxxx</para>
+        /// </summary>
         [NameInMap("Eni")]
         [Validation(Required=false)]
         public string Eni { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>v1.0.3</para>
+        /// </summary>
         [NameInMap("InstanceVersion")]
         [Validation(Required=false)]
         public string InstanceVersion { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>POSTPAY</para>
+        /// </summary>
         [NameInMap("PayType")]
         [Validation(Required=false)]
         public string PayType { get; set; }
@@ -102,6 +122,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [NameInMap("PrivateConnectUrl")]
         [Validation(Required=false)]
         public string PrivateConnectUrl { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>for-test-project</para>
+        /// </summary>
+        [NameInMap("ProjectDescription")]
+        [Validation(Required=false)]
+        public string ProjectDescription { get; set; }
 
         /// <summary>
         /// <para>The Supabase instance ID.</para>
@@ -196,6 +224,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public long? StorageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cloud_essd_pl0</para>
+        /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]
         public string StorageType { get; set; }

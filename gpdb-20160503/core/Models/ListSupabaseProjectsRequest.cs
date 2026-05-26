@@ -29,10 +29,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -50,18 +58,34 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ProjectId</para>
+        /// </summary>
         [NameInMap("SearchField")]
         [Validation(Required=false)]
         public string SearchField { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>gp-bp***************</para>
+        /// </summary>
         [NameInMap("SearchValue")]
         [Validation(Required=false)]
         public string SearchValue { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>UpdatedDate</para>
+        /// </summary>
         [NameInMap("SortField")]
         [Validation(Required=false)]
         public string SortField { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>desc</para>
+        /// </summary>
         [NameInMap("SortOrder")]
         [Validation(Required=false)]
         public string SortOrder { get; set; }
