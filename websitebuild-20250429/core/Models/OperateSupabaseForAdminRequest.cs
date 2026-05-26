@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        [NameInMap("Env")]
+        [Validation(Required=false)]
+        public string Env { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>select * from profiles</para>
