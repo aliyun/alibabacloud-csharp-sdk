@@ -8,34 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
-    public class SumStorageMetricsByDateResponseBody : TeaModel {
+    public class SumStorageMetricsByTypeResponseBody : TeaModel {
         [NameInMap("data")]
         [Validation(Required=false)]
-        public List<SumStorageMetricsByDateResponseBodyData> Data { get; set; }
-        public class SumStorageMetricsByDateResponseBodyData : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>20250719</para>
-            /// </summary>
-            [NameInMap("dateTime")]
+        public List<SumStorageMetricsByTypeResponseBodyData> Data { get; set; }
+        public class SumStorageMetricsByTypeResponseBodyData : TeaModel {
+            [NameInMap("dailyStorageMetrics")]
             [Validation(Required=false)]
-            public string DateTime { get; set; }
-
-            [NameInMap("itemStorageMetrics")]
-            [Validation(Required=false)]
-            public List<SumStorageMetricsByDateResponseBodyDataItemStorageMetrics> ItemStorageMetrics { get; set; }
-            public class SumStorageMetricsByDateResponseBodyDataItemStorageMetrics : TeaModel {
+            public List<SumStorageMetricsByTypeResponseBodyDataDailyStorageMetrics> DailyStorageMetrics { get; set; }
+            public class SumStorageMetricsByTypeResponseBodyDataDailyStorageMetrics : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>prj</para>
+                /// <para>20260410</para>
                 /// </summary>
-                [NameInMap("itemName")]
+                [NameInMap("dateTime")]
                 [Validation(Required=false)]
-                public string ItemName { get; set; }
+                public string DateTime { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>91.22</para>
+                /// <para>50</para>
                 /// </summary>
                 [NameInMap("percentage")]
                 [Validation(Required=false)]
@@ -43,11 +35,27 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>300.560392</para>
+                /// <para>Storage</para>
+                /// </summary>
+                [NameInMap("storageType")]
+                [Validation(Required=false)]
+                public string StorageType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>GB</para>
+                /// </summary>
+                [NameInMap("unit")]
+                [Validation(Required=false)]
+                public string Unit { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>30</para>
                 /// </summary>
                 [NameInMap("usage")]
                 [Validation(Required=false)]
-                public string Usage { get; set; }
+                public double? Usage { get; set; }
 
             }
 
@@ -73,7 +81,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
             /// </summary>
             [NameInMap("usage")]
             [Validation(Required=false)]
-            public string Usage { get; set; }
+            public double? Usage { get; set; }
 
         }
 
@@ -87,7 +95,7 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>0abb781a17411408145995819e0dae</para>
+        /// <para>0a06dc0917476202205161986edbbc</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

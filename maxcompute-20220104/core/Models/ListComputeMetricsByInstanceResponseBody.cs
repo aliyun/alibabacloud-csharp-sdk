@@ -184,26 +184,6 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         }
 
         /// <summary>
-        /// <para>The error code.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>OBJECT_NOT_EXIST</para>
-        /// </summary>
-        [NameInMap("errorCode")]
-        [Validation(Required=false)]
-        public string ErrorCode { get; set; }
-
-        /// <summary>
-        /// <para>The error message.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>This object does not exist.</para>
-        /// </summary>
-        [NameInMap("errorMsg")]
-        [Validation(Required=false)]
-        public string ErrorMsg { get; set; }
-
-        /// <summary>
         /// <para>The HTTP status code.</para>
         /// <list type="bullet">
         /// <item><description>1xx: informational response. The request is received and is being processed.</description></item>

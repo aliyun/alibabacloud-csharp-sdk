@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [Validation(Required=false)]
         public bool? AscOrder { get; set; }
 
+        [NameInMap("codeList")]
+        [Validation(Required=false)]
+        public List<long?> CodeList { get; set; }
+
         [NameInMap("groupList")]
         [Validation(Required=false)]
         public List<string> GroupList { get; set; }

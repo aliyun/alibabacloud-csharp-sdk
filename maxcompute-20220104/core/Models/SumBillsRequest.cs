@@ -8,10 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.MaxCompute20220104.Models
 {
-    public class SumStorageMetricsByDateRequest : TeaModel {
+    public class SumBillsRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>1718590596556</para>
+        /// <para>1776232895313</para>
         /// </summary>
         [NameInMap("endDate")]
         [Validation(Required=false)]
@@ -36,6 +36,14 @@ namespace AlibabaCloud.SDK.MaxCompute20220104.Models
         [NameInMap("statsType")]
         [Validation(Required=false)]
         public string StatsType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>5</para>
+        /// </summary>
+        [NameInMap("topN")]
+        [Validation(Required=false)]
+        public int? TopN { get; set; }
 
     }
 
