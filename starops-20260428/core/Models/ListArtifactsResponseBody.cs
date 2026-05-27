@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class ListArtifactsResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[{&quot;path&quot;:&quot;reports/summary.pdf&quot;,&quot;size&quot;:1024,&quot;lastModified&quot;:&quot;2026-05-25T08:00:00Z&quot;,&quot;isDirectory&quot;:false}]</para>
+        /// </summary>
         [NameInMap("artifacts")]
         [Validation(Required=false)]
         public List<ListArtifactsResponseBodyArtifacts> Artifacts { get; set; }

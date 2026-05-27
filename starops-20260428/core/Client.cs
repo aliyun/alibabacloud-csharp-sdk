@@ -565,6 +565,184 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcpServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcpServiceResponse
+        /// </returns>
+        public CreateMcpServiceResponse CreateMcpServiceWithOptions(string name, CreateMcpServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Connection))
+            {
+                body["connection"] = request.Connection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpServiceName))
+            {
+                body["mcpServiceName"] = request.McpServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["network"] = request.Network;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tools))
+            {
+                body["tools"] = request.Tools;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMcpService",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/mcpService",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMcpServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcpServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcpServiceResponse
+        /// </returns>
+        public async Task<CreateMcpServiceResponse> CreateMcpServiceWithOptionsAsync(string name, CreateMcpServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Connection))
+            {
+                body["connection"] = request.Connection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.McpServiceName))
+            {
+                body["mcpServiceName"] = request.McpServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["network"] = request.Network;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tools))
+            {
+                body["tools"] = request.Tools;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMcpService",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/mcpService",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMcpServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcpServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcpServiceResponse
+        /// </returns>
+        public CreateMcpServiceResponse CreateMcpService(string name, CreateMcpServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateMcpServiceWithOptions(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMcpServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcpServiceResponse
+        /// </returns>
+        public async Task<CreateMcpServiceResponse> CreateMcpServiceAsync(string name, CreateMcpServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateMcpServiceWithOptionsAsync(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建会话</para>
         /// </summary>
         /// 
@@ -1085,6 +1263,124 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMcpServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcpServiceResponse
+        /// </returns>
+        public DeleteMcpServiceResponse DeleteMcpServiceWithOptions(string name, string mcpServiceName, DeleteMcpServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMcpService",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/mcpService/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServiceName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMcpServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMcpServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcpServiceResponse
+        /// </returns>
+        public async Task<DeleteMcpServiceResponse> DeleteMcpServiceWithOptionsAsync(string name, string mcpServiceName, DeleteMcpServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMcpService",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/mcpService/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServiceName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMcpServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMcpServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcpServiceResponse
+        /// </returns>
+        public DeleteMcpServiceResponse DeleteMcpService(string name, string mcpServiceName, DeleteMcpServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteMcpServiceWithOptions(name, mcpServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMcpServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcpServiceResponse
+        /// </returns>
+        public async Task<DeleteMcpServiceResponse> DeleteMcpServiceAsync(string name, string mcpServiceName, DeleteMcpServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteMcpServiceWithOptionsAsync(name, mcpServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除会话</para>
         /// </summary>
         /// 
@@ -1203,7 +1499,145 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载产物文件</para>
+        /// <para>预览远端 MCP 工具列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FetchRemoteMcpToolsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FetchRemoteMcpToolsResponse
+        /// </returns>
+        public FetchRemoteMcpToolsResponse FetchRemoteMcpToolsWithOptions(FetchRemoteMcpToolsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Connection))
+            {
+                body["connection"] = request.Connection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["network"] = request.Network;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FetchRemoteMcpTools",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/mcptools",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FetchRemoteMcpToolsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预览远端 MCP 工具列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FetchRemoteMcpToolsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// FetchRemoteMcpToolsResponse
+        /// </returns>
+        public async Task<FetchRemoteMcpToolsResponse> FetchRemoteMcpToolsWithOptionsAsync(FetchRemoteMcpToolsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Connection))
+            {
+                body["connection"] = request.Connection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["network"] = request.Network;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "FetchRemoteMcpTools",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/mcptools",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<FetchRemoteMcpToolsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预览远端 MCP 工具列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FetchRemoteMcpToolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FetchRemoteMcpToolsResponse
+        /// </returns>
+        public FetchRemoteMcpToolsResponse FetchRemoteMcpTools(FetchRemoteMcpToolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return FetchRemoteMcpToolsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>预览远端 MCP 工具列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// FetchRemoteMcpToolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// FetchRemoteMcpToolsResponse
+        /// </returns>
+        public async Task<FetchRemoteMcpToolsResponse> FetchRemoteMcpToolsAsync(FetchRemoteMcpToolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await FetchRemoteMcpToolsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>下载小型产物文件</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1266,7 +1700,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载产物文件</para>
+        /// <para>下载小型产物文件</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1329,7 +1763,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载产物文件</para>
+        /// <para>下载小型产物文件</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1348,7 +1782,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载产物文件</para>
+        /// <para>下载小型产物文件</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1611,6 +2045,124 @@ namespace AlibabaCloud.SDK.STAROps20260428
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetDigitalEmployeeSkillWithOptionsAsync(name, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMcpServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpServiceResponse
+        /// </returns>
+        public GetMcpServiceResponse GetMcpServiceWithOptions(string name, string mcpServiceName, GetMcpServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMcpService",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/mcpService/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServiceName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMcpServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMcpServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpServiceResponse
+        /// </returns>
+        public async Task<GetMcpServiceResponse> GetMcpServiceWithOptionsAsync(string name, string mcpServiceName, GetMcpServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMcpService",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/mcpService/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServiceName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMcpServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMcpServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpServiceResponse
+        /// </returns>
+        public GetMcpServiceResponse GetMcpService(string name, string mcpServiceName, GetMcpServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMcpServiceWithOptions(name, mcpServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMcpServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpServiceResponse
+        /// </returns>
+        public async Task<GetMcpServiceResponse> GetMcpServiceAsync(string name, string mcpServiceName, GetMcpServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMcpServiceWithOptionsAsync(name, mcpServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2471,6 +3023,144 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询数字员工下的 MCP 服务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcpServicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpServicesResponse
+        /// </returns>
+        public ListMcpServicesResponse ListMcpServicesWithOptions(string name, ListMcpServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcpServices",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/mcpServices",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcpServicesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数字员工下的 MCP 服务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcpServicesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpServicesResponse
+        /// </returns>
+        public async Task<ListMcpServicesResponse> ListMcpServicesWithOptionsAsync(string name, ListMcpServicesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcpServices",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/mcpServices",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcpServicesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数字员工下的 MCP 服务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcpServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpServicesResponse
+        /// </returns>
+        public ListMcpServicesResponse ListMcpServices(string name, ListMcpServicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMcpServicesWithOptions(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询数字员工下的 MCP 服务列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListMcpServicesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpServicesResponse
+        /// </returns>
+        public async Task<ListMcpServicesResponse> ListMcpServicesAsync(string name, ListMcpServicesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMcpServicesWithOptionsAsync(name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>列出会话</para>
         /// </summary>
         /// 
@@ -2981,6 +3671,176 @@ namespace AlibabaCloud.SDK.STAROps20260428
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateDigitalEmployeeSkillWithOptionsAsync(name, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMcpServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcpServiceResponse
+        /// </returns>
+        public UpdateMcpServiceResponse UpdateMcpServiceWithOptions(string name, string mcpServiceName, UpdateMcpServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Connection))
+            {
+                body["connection"] = request.Connection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["network"] = request.Network;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tools))
+            {
+                body["tools"] = request.Tools;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMcpService",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/mcpService/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServiceName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMcpServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMcpServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcpServiceResponse
+        /// </returns>
+        public async Task<UpdateMcpServiceResponse> UpdateMcpServiceWithOptionsAsync(string name, string mcpServiceName, UpdateMcpServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Connection))
+            {
+                body["connection"] = request.Connection;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
+            {
+                body["network"] = request.Network;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tools))
+            {
+                body["tools"] = request.Tools;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMcpService",
+                Version = "2026-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/digitalEmployee/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(name) + "/mcpService/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServiceName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMcpServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMcpServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcpServiceResponse
+        /// </returns>
+        public UpdateMcpServiceResponse UpdateMcpService(string name, string mcpServiceName, UpdateMcpServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateMcpServiceWithOptions(name, mcpServiceName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新 MCP 服务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMcpServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcpServiceResponse
+        /// </returns>
+        public async Task<UpdateMcpServiceResponse> UpdateMcpServiceAsync(string name, string mcpServiceName, UpdateMcpServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateMcpServiceWithOptionsAsync(name, mcpServiceName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
