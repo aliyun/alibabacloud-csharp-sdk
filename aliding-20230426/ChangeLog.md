@@ -6,6 +6,10 @@
 - Support API BatchGetUserIdByOpenDingtalkId.
 
 
+2026-05-27 Version: 2.53.0
+- Support API BatchGetUserIdByOpenDingtalkId.
+
+
 2026-05-22 Version: 2.52.1
 - Generated csharp 2023-04-26 for aliding.
 
