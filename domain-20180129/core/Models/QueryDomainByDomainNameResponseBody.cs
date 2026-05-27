@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain20180129.Models
 {
     public class QueryDomainByDomainNameResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>UN_SUPPORT</para>
+        /// </summary>
+        [NameInMap("CnnicPrivacyServiceStatus")]
+        [Validation(Required=false)]
+        public string CnnicPrivacyServiceStatus { get; set; }
+
         [NameInMap("DnsList")]
         [Validation(Required=false)]
         public QueryDomainByDomainNameResponseBodyDnsList DnsList { get; set; }
@@ -199,6 +207,14 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [NameInMap("Premium")]
         [Validation(Required=false)]
         public bool? Premium { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>UN_SUPPORT</para>
+        /// </summary>
+        [NameInMap("PrivacyServiceStatus")]
+        [Validation(Required=false)]
+        public string PrivacyServiceStatus { get; set; }
 
         /// <summary>
         /// <para>The status of real-name verification for the domain name. Valid values:</para>

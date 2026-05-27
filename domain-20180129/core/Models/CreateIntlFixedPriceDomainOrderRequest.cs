@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Domain20180129.Models
         [Validation(Required=false)]
         public long? ExpectedPrice { get; set; }
 
+        [NameInMap("ProductType")]
+        [Validation(Required=false)]
+        public int? ProductType { get; set; }
+
     }
 
 }
