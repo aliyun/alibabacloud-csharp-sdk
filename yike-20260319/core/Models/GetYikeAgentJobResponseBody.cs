@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Yike20260319.Models
 {
     public class GetYikeAgentJobResponseBody : TeaModel {
+        [NameInMap("CreateTime")]
+        [Validation(Required=false)]
+        public string CreateTime { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>WorkflowTaskFailed</para>
@@ -16,6 +20,10 @@ namespace AlibabaCloud.SDK.Yike20260319.Models
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
+
+        [NameInMap("FinishTime")]
+        [Validation(Required=false)]
+        public string FinishTime { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
