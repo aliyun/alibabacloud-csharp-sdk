@@ -163,6 +163,12 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 [Validation(Required=false)]
                 public string RuleStatus { get; set; }
 
+                /// <summary>
+                /// <para>Rule Type</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>DEFAULT</para>
+                /// </summary>
                 [NameInMap("ruleType")]
                 [Validation(Required=false)]
                 public string RuleType { get; set; }
