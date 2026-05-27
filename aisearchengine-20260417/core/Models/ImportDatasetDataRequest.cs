@@ -10,14 +10,12 @@ namespace AlibabaCloud.SDK.AiSearchEngine20260417.Models
 {
     public class ImportDatasetDataRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is required.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>730</para>
         /// </summary>
         [NameInMap("datasetId")]
         [Validation(Required=false)]
-        public long? DatasetId { get; set; }
+        public string DatasetId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
