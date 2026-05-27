@@ -56,14 +56,26 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public List<ListWuyingServerResponseBodyWuyingServerList> WuyingServerList { get; set; }
         public class ListWuyingServerResponseBodyWuyingServerList : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Added</para>
+            /// </summary>
             [NameInMap("AddVirtualNodePoolStatus")]
             [Validation(Required=false)]
             public string AddVirtualNodePoolStatus { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1234567890123456</para>
+            /// </summary>
             [NameInMap("AliUid")]
             [Validation(Required=false)]
             public long? AliUid { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
             public int? Bandwidth { get; set; }
@@ -115,10 +127,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public string DataDiskCategory { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>d-bp1234567890abcde</para>
+                /// </summary>
                 [NameInMap("DataDiskId")]
                 [Validation(Required=false)]
                 public string DataDiskId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("DataDiskNo")]
                 [Validation(Required=false)]
                 public string DataDiskNo { get; set; }
@@ -146,6 +166,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("EniPrivateIpAddressQuantity")]
+            [Validation(Required=false)]
+            public int? EniPrivateIpAddressQuantity { get; set; }
+
+            /// <summary>
             /// <para>The time when the subscription instance expires.</para>
             /// 
             /// <b>Example:</b>
@@ -155,6 +183,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>2.0.0</para>
+            /// </summary>
             [NameInMap("FotaVersion")]
             [Validation(Required=false)]
             public string FotaVersion { get; set; }
@@ -171,6 +203,9 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             /// <summary>
             /// <para>The image name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Ubuntu 22.04</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
@@ -205,6 +240,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>0.5</para>
+            /// </summary>
             [NameInMap("MaxPrice")]
             [Validation(Required=false)]
             public float? MaxPrice { get; set; }
@@ -263,6 +302,32 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public List<string> PolicyGroupIdList { get; set; }
 
+            [NameInMap("PrivateIpSets")]
+            [Validation(Required=false)]
+            public List<ListWuyingServerResponseBodyWuyingServerListPrivateIpSets> PrivateIpSets { get; set; }
+            public class ListWuyingServerResponseBodyWuyingServerListPrivateIpSets : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
+                [NameInMap("Primary")]
+                [Validation(Required=false)]
+                public bool? Primary { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10.0.0.1</para>
+                /// </summary>
+                [NameInMap("PrivateIpAddress")]
+                [Validation(Required=false)]
+                public string PrivateIpAddress { get; set; }
+
+            }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>Connected</para>
+            /// </summary>
             [NameInMap("ResourceSessionStatus")]
             [Validation(Required=false)]
             public string ResourceSessionStatus { get; set; }
@@ -308,6 +373,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
                 [Validation(Required=false)]
                 public int? GpuMemory { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>NVIDIA T4</para>
+                /// </summary>
                 [NameInMap("GpuSpec")]
                 [Validation(Required=false)]
                 public string GpuSpec { get; set; }
@@ -338,10 +407,18 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public List<ListWuyingServerResponseBodyWuyingServerListSessions> Sessions { get; set; }
             public class ListWuyingServerResponseBodyWuyingServerListSessions : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2026-01-01T08:00:00Z</para>
+                /// </summary>
                 [NameInMap("ResourceSessionStartTime")]
                 [Validation(Required=false)]
                 public string ResourceSessionStartTime { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>user1</para>
+                /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public string UserId { get; set; }
@@ -358,6 +435,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>spot</para>
+            /// </summary>
             [NameInMap("SubPayType")]
             [Validation(Required=false)]
             public string SubPayType { get; set; }
@@ -372,6 +453,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>d-bp1234567890abcde</para>
+            /// </summary>
             [NameInMap("SystemDiskId")]
             [Validation(Required=false)]
             public string SystemDiskId { get; set; }
@@ -396,6 +481,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public int? SystemDiskSize { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>tg-bp1234567890abcde</para>
+            /// </summary>
             [NameInMap("TimerGroupId")]
             [Validation(Required=false)]
             public string TimerGroupId { get; set; }
@@ -404,13 +493,33 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public List<string> Users { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>10.0.0.100</para>
+            /// </summary>
             [NameInMap("VirtualKubeletIp")]
             [Validation(Required=false)]
             public string VirtualKubeletIp { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>vnp-bp1234567890abcde</para>
+            /// </summary>
             [NameInMap("VirtualNodePoolId")]
             [Validation(Required=false)]
             public string VirtualNodePoolId { get; set; }
+
+            [NameInMap("VkUpgradeNeeded")]
+            [Validation(Required=false)]
+            public bool? VkUpgradeNeeded { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>1.0.0</para>
+            /// </summary>
+            [NameInMap("VkVersion")]
+            [Validation(Required=false)]
+            public string VkVersion { get; set; }
 
             /// <summary>
             /// <para>The ID of the workstation.</para>

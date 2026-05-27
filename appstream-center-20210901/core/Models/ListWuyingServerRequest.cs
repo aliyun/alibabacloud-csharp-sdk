@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Appstream_center20210901.Models
 {
     public class ListWuyingServerRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>Added</para>
+        /// </summary>
         [NameInMap("AddVirtualNodePoolStatusList")]
         [Validation(Required=false)]
         public List<string> AddVirtualNodePoolStatusList { get; set; }
@@ -23,6 +27,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string BizRegionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public int? BizType { get; set; }
@@ -77,6 +85,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>wuying_server</para>
+        /// </summary>
         [NameInMap("ProductType")]
         [Validation(Required=false)]
         public string ProductType { get; set; }
@@ -101,16 +113,27 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>user1</para>
+        /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<string> Users { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>vnp-bp1234567890abcde</para>
+        /// </summary>
         [NameInMap("VirtualNodePoolId")]
         [Validation(Required=false)]
         public string VirtualNodePoolId { get; set; }
 
         /// <summary>
         /// <para>The list of workstation IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aig-bp1234567890abcde</para>
         /// </summary>
         [NameInMap("WuyingServerIdList")]
         [Validation(Required=false)]

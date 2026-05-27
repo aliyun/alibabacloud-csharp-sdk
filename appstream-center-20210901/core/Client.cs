@@ -191,6 +191,134 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>为研发主机分配辅助私有IP</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssignWuyingServerPrivateAddressesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssignWuyingServerPrivateAddressesResponse
+        /// </returns>
+        public AssignWuyingServerPrivateAddressesResponse AssignWuyingServerPrivateAddressesWithOptions(AssignWuyingServerPrivateAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryPrivateIpAddressCount))
+            {
+                body["SecondaryPrivateIpAddressCount"] = request.SecondaryPrivateIpAddressCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerId))
+            {
+                body["WuyingServerId"] = request.WuyingServerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssignWuyingServerPrivateAddresses",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssignWuyingServerPrivateAddressesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为研发主机分配辅助私有IP</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssignWuyingServerPrivateAddressesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssignWuyingServerPrivateAddressesResponse
+        /// </returns>
+        public async Task<AssignWuyingServerPrivateAddressesResponse> AssignWuyingServerPrivateAddressesWithOptionsAsync(AssignWuyingServerPrivateAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecondaryPrivateIpAddressCount))
+            {
+                body["SecondaryPrivateIpAddressCount"] = request.SecondaryPrivateIpAddressCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerId))
+            {
+                body["WuyingServerId"] = request.WuyingServerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AssignWuyingServerPrivateAddresses",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AssignWuyingServerPrivateAddressesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为研发主机分配辅助私有IP</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssignWuyingServerPrivateAddressesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssignWuyingServerPrivateAddressesResponse
+        /// </returns>
+        public AssignWuyingServerPrivateAddressesResponse AssignWuyingServerPrivateAddresses(AssignWuyingServerPrivateAddressesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AssignWuyingServerPrivateAddressesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>为研发主机分配辅助私有IP</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AssignWuyingServerPrivateAddressesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AssignWuyingServerPrivateAddressesResponse
+        /// </returns>
+        public async Task<AssignWuyingServerPrivateAddressesResponse> AssignWuyingServerPrivateAddressesAsync(AssignWuyingServerPrivateAddressesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AssignWuyingServerPrivateAddressesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds assigned users to or removes assigned users from a delivery group. Only users added to the assigned user list can access App Streaming.</para>
         /// </summary>
         /// 
@@ -11459,6 +11587,134 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await TagCloudResourcesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑研发主机的辅助私有IP</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnassignWuyingServerPrivateAddressesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassignWuyingServerPrivateAddressesResponse
+        /// </returns>
+        public UnassignWuyingServerPrivateAddressesResponse UnassignWuyingServerPrivateAddressesWithOptions(UnassignWuyingServerPrivateAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddresses))
+            {
+                body["PrivateIpAddresses"] = request.PrivateIpAddresses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerId))
+            {
+                body["WuyingServerId"] = request.WuyingServerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnassignWuyingServerPrivateAddresses",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnassignWuyingServerPrivateAddressesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑研发主机的辅助私有IP</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnassignWuyingServerPrivateAddressesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassignWuyingServerPrivateAddressesResponse
+        /// </returns>
+        public async Task<UnassignWuyingServerPrivateAddressesResponse> UnassignWuyingServerPrivateAddressesWithOptionsAsync(UnassignWuyingServerPrivateAddressesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrivateIpAddresses))
+            {
+                body["PrivateIpAddresses"] = request.PrivateIpAddresses;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerId))
+            {
+                body["WuyingServerId"] = request.WuyingServerId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnassignWuyingServerPrivateAddresses",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnassignWuyingServerPrivateAddressesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑研发主机的辅助私有IP</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnassignWuyingServerPrivateAddressesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassignWuyingServerPrivateAddressesResponse
+        /// </returns>
+        public UnassignWuyingServerPrivateAddressesResponse UnassignWuyingServerPrivateAddresses(UnassignWuyingServerPrivateAddressesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnassignWuyingServerPrivateAddressesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>解绑研发主机的辅助私有IP</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnassignWuyingServerPrivateAddressesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnassignWuyingServerPrivateAddressesResponse
+        /// </returns>
+        public async Task<UnassignWuyingServerPrivateAddressesResponse> UnassignWuyingServerPrivateAddressesAsync(UnassignWuyingServerPrivateAddressesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnassignWuyingServerPrivateAddressesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
