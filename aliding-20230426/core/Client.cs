@@ -3031,6 +3031,194 @@ namespace AlibabaCloud.SDK.Aliding20230426
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量根据操作人工号与 openDingtalkId 获取被查看用户工号，单次最多 50 个。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchGetUserIdByOpenDingtalkIdRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// BatchGetUserIdByOpenDingtalkIdHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetUserIdByOpenDingtalkIdResponse
+        /// </returns>
+        public BatchGetUserIdByOpenDingtalkIdResponse BatchGetUserIdByOpenDingtalkIdWithOptions(BatchGetUserIdByOpenDingtalkIdRequest tmpReq, BatchGetUserIdByOpenDingtalkIdHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchGetUserIdByOpenDingtalkIdShrinkRequest request = new BatchGetUserIdByOpenDingtalkIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            BatchGetUserIdByOpenDingtalkIdShrinkHeaders headers = new BatchGetUserIdByOpenDingtalkIdShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OpenDingtalkIds))
+            {
+                request.OpenDingtalkIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OpenDingtalkIds, "openDingtalkIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenDingtalkIdsShrink))
+            {
+                body["openDingtalkIds"] = request.OpenDingtalkIdsShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetUserIdByOpenDingtalkId",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/im/batchGetUserIdByOpenDingtalkId",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchGetUserIdByOpenDingtalkIdResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量根据操作人工号与 openDingtalkId 获取被查看用户工号，单次最多 50 个。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchGetUserIdByOpenDingtalkIdRequest
+        /// </param>
+        /// <param name="tmpHeader">
+        /// BatchGetUserIdByOpenDingtalkIdHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetUserIdByOpenDingtalkIdResponse
+        /// </returns>
+        public async Task<BatchGetUserIdByOpenDingtalkIdResponse> BatchGetUserIdByOpenDingtalkIdWithOptionsAsync(BatchGetUserIdByOpenDingtalkIdRequest tmpReq, BatchGetUserIdByOpenDingtalkIdHeaders tmpHeader, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchGetUserIdByOpenDingtalkIdShrinkRequest request = new BatchGetUserIdByOpenDingtalkIdShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            BatchGetUserIdByOpenDingtalkIdShrinkHeaders headers = new BatchGetUserIdByOpenDingtalkIdShrinkHeaders();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpHeader, headers);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpHeader.AccountContext))
+            {
+                headers.AccountContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpHeader.AccountContext, "AccountContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TenantContext))
+            {
+                request.TenantContextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TenantContext, "TenantContext", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OpenDingtalkIds))
+            {
+                request.OpenDingtalkIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OpenDingtalkIds, "openDingtalkIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantContextShrink))
+            {
+                body["TenantContext"] = request.TenantContextShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpenDingtalkIdsShrink))
+            {
+                body["openDingtalkIds"] = request.OpenDingtalkIdsShrink;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.AccountContextShrink))
+            {
+                realHeaders["AccountContext"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.AccountContextShrink);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchGetUserIdByOpenDingtalkId",
+                Version = "2023-04-26",
+                Protocol = "HTTPS",
+                Pathname = "/dingtalk/v1/im/batchGetUserIdByOpenDingtalkId",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchGetUserIdByOpenDingtalkIdResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量根据操作人工号与 openDingtalkId 获取被查看用户工号，单次最多 50 个。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetUserIdByOpenDingtalkIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetUserIdByOpenDingtalkIdResponse
+        /// </returns>
+        public BatchGetUserIdByOpenDingtalkIdResponse BatchGetUserIdByOpenDingtalkId(BatchGetUserIdByOpenDingtalkIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            BatchGetUserIdByOpenDingtalkIdHeaders headers = new BatchGetUserIdByOpenDingtalkIdHeaders();
+            return BatchGetUserIdByOpenDingtalkIdWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量根据操作人工号与 openDingtalkId 获取被查看用户工号，单次最多 50 个。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchGetUserIdByOpenDingtalkIdRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchGetUserIdByOpenDingtalkIdResponse
+        /// </returns>
+        public async Task<BatchGetUserIdByOpenDingtalkIdResponse> BatchGetUserIdByOpenDingtalkIdAsync(BatchGetUserIdByOpenDingtalkIdRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            BatchGetUserIdByOpenDingtalkIdHeaders headers = new BatchGetUserIdByOpenDingtalkIdHeaders();
+            return await BatchGetUserIdByOpenDingtalkIdWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询群成员</para>
         /// </summary>
         /// 
