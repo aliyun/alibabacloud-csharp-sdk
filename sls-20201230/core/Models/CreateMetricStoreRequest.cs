@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateMetricStoreRequest : TeaModel {
+        [NameInMap("appendMeta")]
+        [Validation(Required=false)]
+        public bool? AppendMeta { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to enable automatic sharding.</para>
         /// 
@@ -78,6 +82,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("shardCount")]
         [Validation(Required=false)]
         public int? ShardCount { get; set; }
+
+        [NameInMap("shardingPolicy")]
+        [Validation(Required=false)]
+        public ShardingPolicy ShardingPolicy { get; set; }
 
         /// <summary>
         /// <para>The retention period of the metric data in the Metricstore. Unit: days.</para>

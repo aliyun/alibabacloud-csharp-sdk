@@ -24,19 +24,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>过滤content字段</para>
-        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>字段过滤处理</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]

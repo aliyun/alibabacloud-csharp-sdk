@@ -9,12 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class S3Ingestion : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("configuration")]
         [Validation(Required=false)]
-        public S3IngestionConfigurationSource Configuration { get; set; }
+        public S3IngestionConfiguration Configuration { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -25,6 +22,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>job description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>s3 ingestion</para>
         /// </summary>
@@ -33,6 +32,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>job displayName</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

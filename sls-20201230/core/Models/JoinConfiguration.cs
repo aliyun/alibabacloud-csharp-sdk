@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class JoinConfiguration : TeaModel {
         /// <summary>
+        /// <para>The condition of the set operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>$0.id == $1.id</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Condition { get; set; }
 
         /// <summary>
+        /// <para>The type of the set operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>left_join</para>
         /// </summary>

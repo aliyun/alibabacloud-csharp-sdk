@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class IndexJsonKey : TeaModel {
         /// <summary>
+        /// <para>Alias.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>myAlias</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Alias { get; set; }
 
         /// <summary>
+        /// <para>Case sensitivity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? CaseSensitive { get; set; }
 
         /// <summary>
+        /// <para>Whether the field contains Chinese characters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? Chn { get; set; }
 
         /// <summary>
+        /// <para>Whether to enable statistics.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -41,11 +49,15 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public bool? DocValue { get; set; }
 
+        /// <summary>
+        /// <para>Delimiter.</para>
+        /// </summary>
         [NameInMap("token")]
         [Validation(Required=false)]
         public List<string> Token { get; set; }
 
         /// <summary>
+        /// <para>The data type of the field.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

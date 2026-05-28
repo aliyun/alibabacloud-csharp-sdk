@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ESIngestionConfiguration : TeaModel {
         /// <summary>
+        /// <para>logstore</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("logstore")]

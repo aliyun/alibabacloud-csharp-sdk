@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class ProjectSummary : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1714360481</para>
         /// </summary>
         [NameInMap("createTime")]
         [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ali-test-project</para>
         /// </summary>
         [NameInMap("projectName")]
         [Validation(Required=false)]
@@ -32,6 +38,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
         /// </summary>
         [NameInMap("region")]
         [Validation(Required=false)]
@@ -39,6 +48,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acf******sq</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
@@ -46,6 +58,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1710230272</para>
         /// </summary>
         [NameInMap("updateTime")]
         [Validation(Required=false)]

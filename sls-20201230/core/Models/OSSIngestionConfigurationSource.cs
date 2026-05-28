@@ -9,7 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class OSSIngestionConfigurationSource : TeaModel {
+        [NameInMap("advancedParameters")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> AdvancedParameters { get; set; }
+
         /// <summary>
+        /// <para>The OSS bucket.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,16 +25,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Bucket { get; set; }
 
         /// <summary>
+        /// <para>The compression type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>none</para>
+        /// <para>none,snappy,gzip</para>
         /// </summary>
         [NameInMap("compressionCodec")]
         [Validation(Required=false)]
         public string CompressionCodec { get; set; }
 
         /// <summary>
+        /// <para>The encoding type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Encoding { get; set; }
 
         /// <summary>
+        /// <para>The point in time before which modified OSS objects are imported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714360481</para>
         /// </summary>
@@ -48,6 +57,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The OSS endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +68,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Endpoint { get; set; }
 
         /// <summary>
+        /// <para>The format.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("format")]
@@ -65,6 +76,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Dictionary<string, object> Format { get; set; }
 
         /// <summary>
+        /// <para>The interval at which the system checks for new files.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,6 +87,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Interval { get; set; }
 
         /// <summary>
+        /// <para>The regular expression that is used to filter OSS objects by directory.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>.*</para>
         /// </summary>
@@ -83,6 +97,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Pattern { get; set; }
 
         /// <summary>
+        /// <para>The directory of the OSS objects.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>prefix</para>
         /// </summary>
@@ -92,6 +108,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>ingest-processor-1756802123-953901</para>
+        /// </summary>
+        [NameInMap("processorId")]
+        [Validation(Required=false)]
+        public string ProcessorId { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to import OSS objects of the Archive class.</para>
+        /// 
+        /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
         [NameInMap("restoreObjectEnabled")]
@@ -99,6 +125,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? RestoreObjectEnabled { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the role.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::12345:role/aliyunlogdefaultrole</para>
         /// </summary>
@@ -107,6 +135,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string RoleARN { get; set; }
 
         /// <summary>
+        /// <para>The point in time after which modified OSS objects are imported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714274081</para>
         /// </summary>
@@ -123,6 +153,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? TagPackId { get; set; }
 
         /// <summary>
+        /// <para>The time field to extract.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b>time</b></para>
         /// </summary>
@@ -131,6 +163,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimeField { get; set; }
 
         /// <summary>
+        /// <para>The format of the time field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yyyy-MM-dd HH:mm:ss</para>
         /// </summary>
@@ -139,14 +173,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimeFormat { get; set; }
 
         /// <summary>
+        /// <para>The regular expression that is used to extract time.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>[0-9]{0,2}/[0-9a-zA-Z]+/[0-9:,]+</para>
+        /// <para>[0-9]{0,2}\/[0-9a-zA-Z]+\/[0-9:,]+</para>
         /// </summary>
         [NameInMap("timePattern")]
         [Validation(Required=false)]
         public string TimePattern { get; set; }
 
         /// <summary>
+        /// <para>The time zone of the time field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GMT+08:00</para>
         /// </summary>
@@ -155,6 +193,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimeZone { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable OSS metadata indexing.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

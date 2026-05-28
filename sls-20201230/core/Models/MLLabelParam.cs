@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class MLLabelParam : TeaModel {
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1695090077</para>
         /// </summary>
@@ -18,14 +20,15 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>默认表</para>
+        /// <para>The description of the tag table.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the tag table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>abbd488f6dd42d294495fb780858e83d</para>
         /// </summary>
@@ -34,6 +37,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string LabelId { get; set; }
 
         /// <summary>
+        /// <para>The last modification time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1695090077</para>
         /// </summary>
@@ -42,18 +47,22 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? LastModifyTime { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>标签表</para>
+        /// <para>The name of the tag table.</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The configurations of the tag tables.</para>
+        /// </summary>
         [NameInMap("settings")]
         [Validation(Required=false)]
         public List<MLLabelParamSettings> Settings { get; set; }
         public class MLLabelParamSettings : TeaModel {
             /// <summary>
+            /// <para>The details of the configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
             /// </summary>
@@ -62,6 +71,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Config { get; set; }
 
             /// <summary>
+            /// <para>The mode of the configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>builtin</para>
             /// </summary>
@@ -70,6 +81,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Mode { get; set; }
 
             /// <summary>
+            /// <para>The task type of the configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Trace.RCA</para>
             /// </summary>
@@ -78,6 +91,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Type { get; set; }
 
             /// <summary>
+            /// <para>The version number of the configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.01</para>
             /// </summary>
@@ -88,6 +103,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
+        /// <para>The type of the tag table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>

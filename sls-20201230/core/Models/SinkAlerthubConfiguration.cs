@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class SinkAlerthubConfiguration : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to send alerts.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

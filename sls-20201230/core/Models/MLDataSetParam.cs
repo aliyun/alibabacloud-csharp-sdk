@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class MLDataSetParam : TeaModel {
         /// <summary>
+        /// <para>The creator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sls-console</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string CreateBy { get; set; }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1695090077</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The type of the data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Metric</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DataType { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the dataset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>d9bd488f6dd42d294495fb780858e83d</para>
         /// </summary>
@@ -42,14 +50,15 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DatasetId { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>数据集A</para>
+        /// <para>The description of the dataset.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of the tag system that corresponds to the dataset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a191ae4ca615b0ccb93c211fc8a998af</para>
         /// </summary>
@@ -58,6 +67,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string LabelId { get; set; }
 
         /// <summary>
+        /// <para>The last modification time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1695090077</para>
         /// </summary>
@@ -66,6 +77,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? LastModifyTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the dataset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sls_builtin_dataset_metric.shapeclassification.anomalydetection</para>
         /// </summary>
@@ -74,6 +87,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The configuration type of the tag table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Metric.ShapeClassification.AnomalyDetection</para>
         /// </summary>

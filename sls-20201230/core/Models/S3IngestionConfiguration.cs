@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class S3IngestionConfiguration : TeaModel {
         /// <summary>
+        /// <para>logstore</para>
+        /// 
         /// <b>Example:</b>
         /// <para>myLogstore</para>
         /// </summary>

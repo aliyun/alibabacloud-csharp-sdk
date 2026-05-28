@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetMetricStoreResponseBody : TeaModel {
+        [NameInMap("appendMeta")]
+        [Validation(Required=false)]
+        public bool? AppendMeta { get; set; }
+
         /// <summary>
         /// <para>Indicates whether the automatic sharding feature is enabled.</para>
         /// 
@@ -87,6 +91,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("processorId")]
+        [Validation(Required=false)]
+        public string ProcessorId { get; set; }
+
         /// <summary>
         /// <para>The number of shards.</para>
         /// 
@@ -96,6 +104,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("shardCount")]
         [Validation(Required=false)]
         public int? ShardCount { get; set; }
+
+        [NameInMap("shardingPolicy")]
+        [Validation(Required=false)]
+        public ShardingPolicy ShardingPolicy { get; set; }
 
         /// <summary>
         /// <para>The retention period. Unit: days.</para>

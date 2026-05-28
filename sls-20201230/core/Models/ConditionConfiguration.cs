@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ConditionConfiguration : TeaModel {
         /// <summary>
+        /// <para>The evaluate expression.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cnt &gt; 100</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Condition { get; set; }
 
         /// <summary>
+        /// <para>The number of entries that match the evaluate expression to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b>count</b> &gt; 5</para>
         /// </summary>

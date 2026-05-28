@@ -30,10 +30,6 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string DashboardName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>这是一个仪表盘。</para>
-        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }

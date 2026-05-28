@@ -15,11 +15,11 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         [NameInMap("offset")]
         [Validation(Required=false)]
-        public string Offset { get; set; }
+        public int? Offset { get; set; }
 
         [NameInMap("size")]
         [Validation(Required=false)]
-        public string Size { get; set; }
+        public int? Size { get; set; }
 
     }
 

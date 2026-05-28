@@ -132,6 +132,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Obsolete]
         public int? ShardCount { get; set; }
 
+        [NameInMap("shardingPolicy")]
+        [Validation(Required=false)]
+        public ShardingPolicy ShardingPolicy { get; set; }
+
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class OSSIngestionConfiguration : TeaModel {
         /// <summary>
+        /// <para>The Logstore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Logstore { get; set; }
 
         /// <summary>
+        /// <para>The source that you specify for the configurations of the OSS data import job.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("source")]

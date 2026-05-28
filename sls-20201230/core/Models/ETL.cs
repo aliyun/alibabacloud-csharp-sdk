@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ETL : TeaModel {
         /// <summary>
+        /// <para>The configurations of the data transformation job.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public ETLConfiguration Configuration { get; set; }
 
         /// <summary>
+        /// <para>The time when the data transformation job was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714274900</para>
         /// </summary>
@@ -25,24 +28,29 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>job description</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>加工作业</para>
+        /// <para>ETL</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>job displayName</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>etljob</para>
+        /// <para>ETL</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>The time when the data transformation job was last modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714274900</para>
         /// </summary>
@@ -51,16 +59,19 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? LastModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>job name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>etl-20240426</para>
+        /// <para>ETL</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the scheduler.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>f0eb655e501a8780808d1970ef6d04c4</para>
         /// </summary>
@@ -69,6 +80,17 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ScheduleId { get; set; }
 
         /// <summary>
+        /// <para>The status of the data transformation job. Valid values:</para>
+        /// <ol>
+        /// <item><description>RUNNING</description></item>
+        /// <item><description>STOPPING</description></item>
+        /// <item><description>STOPPED</description></item>
+        /// <item><description>SUCCEEDED</description></item>
+        /// <item><description>FAILED</description></item>
+        /// <item><description>STARTING</description></item>
+        /// <item><description>RESTARTING</description></item>
+        /// </ol>
+        /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
         /// </summary>

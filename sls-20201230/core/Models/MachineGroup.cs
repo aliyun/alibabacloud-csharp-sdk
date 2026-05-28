@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public class MachineGroupGroupAttribute : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>test-group</para>
+            /// <para>testgroup</para>
             /// </summary>
             [NameInMap("externalName")]
             [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>test-topic</para>
+            /// <para>testtopic</para>
             /// </summary>
             [NameInMap("groupTopic")]
             [Validation(Required=false)]
@@ -35,12 +35,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test-group</para>
+        /// <para>machineGroup-1</para>
         /// </summary>
         [NameInMap("groupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>“”</para>
+        /// </summary>
         [NameInMap("groupType")]
         [Validation(Required=false)]
         public string GroupType { get; set; }

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListProjectRequest : TeaModel {
+        [NameInMap("description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
+
         [NameInMap("fetchQuota")]
         [Validation(Required=false)]
         public bool? FetchQuota { get; set; }
@@ -33,6 +37,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-aekzf******sxby</para>
+        /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

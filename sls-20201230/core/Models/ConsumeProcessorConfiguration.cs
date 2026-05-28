@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ConsumeProcessorConfiguration : TeaModel {
         /// <summary>
+        /// <para>SPL statement</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

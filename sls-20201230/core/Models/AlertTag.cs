@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class AlertTag : TeaModel {
         /// <summary>
+        /// <para>The key name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>title</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>The key value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example value</para>
         /// </summary>

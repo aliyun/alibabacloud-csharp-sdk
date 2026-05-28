@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class AlertQuery : TeaModel {
         /// <summary>
+        /// <para>The name of the chart.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>chartExmaple</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ChartTitle { get; set; }
 
         /// <summary>
+        /// <para>The ID of the dashboard.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dashboardExample</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DashboardId { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string End { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable Dedicated SQL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>auto</para>
         /// </summary>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string PowerSqlMode { get; set; }
 
         /// <summary>
+        /// <para>The name of the project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +62,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Project { get; set; }
 
         /// <summary>
+        /// <para>The query statement.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +75,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>The region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,11 +85,15 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Region { get; set; }
 
+        /// <summary>
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the role.</para>
+        /// </summary>
         [NameInMap("roleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,6 +104,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Start { get; set; }
 
         /// <summary>
+        /// <para>The name of the storage.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,6 +115,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Store { get; set; }
 
         /// <summary>
+        /// <para>The storage type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -110,6 +126,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string StoreType { get; set; }
 
         /// <summary>
+        /// <para>The type of the time span.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -119,6 +136,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string TimeSpanType { get; set; }
 
+        /// <summary>
+        /// <para>The page on which you can record frontend configurations in specified scenarios.</para>
+        /// </summary>
         [NameInMap("ui")]
         [Validation(Required=false)]
         public string Ui { get; set; }

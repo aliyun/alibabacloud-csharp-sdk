@@ -1,3 +1,49 @@
+2026-05-28 Version: 5.11.0
+- Support API CreateAzureBlobIngestion.
+- Support API CreateElasticsearchIngestion.
+- Support API CreateGCSIngestion.
+- Support API CreateMaterializedView.
+- Support API DeleteAzureBlobIngestion.
+- Support API DeleteElasticsearchIngestion.
+- Support API DeleteMaterializedView.
+- Support API GetAsyncSql.
+- Support API GetAzureBlobIngestion.
+- Support API GetElasticsearchIngestion.
+- Support API GetGCSIngestion.
+- Support API GetLogStoreConfig.
+- Support API GetMaterializedView.
+- Support API ListAzureBlobIngestion.
+- Support API ListElasticsearchIngestions.
+- Support API ListGCSIngestions.
+- Support API ListMaterializedView.
+- Support API ListMaterializedViews.
+- Support API PutLogStoreConfig.
+- Support API StartAzureBlobIngestion.
+- Support API StartElasticsearchIngestion.
+- Support API StartGCSIngestion.
+- Support API StopAzureBlobIngestion.
+- Support API StopElasticsearchIngestion.
+- Support API StopGCSIngestion.
+- Support API SubmitAsyncSql.
+- Support API UpdateAzureBlobIngestion.
+- Support API UpdateElasticsearchIngestion.
+- Support API UpdateGCSIngestion.
+- Support API UpdateMaterializedView.
+- Update API CreateLogStore: add request parameters body.resourceGroupId.
+- Update API CreateLogStore: add request parameters body.shardingPolicy.
+- Update API CreateMetricStore: add request parameters body.appendMeta.
+- Update API CreateMetricStore: add request parameters body.shardingPolicy.
+- Update API DescribeRegions: add response parameters Body.regions.$.internalEndpoint.
+- Update API GetLogsV2: add request parameters body.isAccurate.
+- Update API GetMetricStore: add response parameters Body.appendMeta.
+- Update API GetMetricStore: add response parameters Body.processorId.
+- Update API GetMetricStore: add response parameters Body.shardingPolicy.
+- Update API ListProject: add request parameters description.
+- Update API UpdateLogStore: add request parameters body.shardingPolicy.
+- Update API UpdateMetricStore: add request parameters body.appendMeta.
+- Update API UpdateMetricStore: add request parameters body.shardingPolicy.
+
+
 2025-09-11 Version: 5.10.0
 - Support API CreateS3Ingestion.
 - Support API DeleteS3Ingestion.

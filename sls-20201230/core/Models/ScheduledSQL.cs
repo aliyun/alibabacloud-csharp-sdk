@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ScheduledSQL : TeaModel {
         /// <summary>
+        /// <para>The configuration of the Scheduled SQL job.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public ScheduledSQLConfiguration Configuration { get; set; }
 
         /// <summary>
+        /// <para>The time when the Scheduled SQL job was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714123644</para>
         /// </summary>
@@ -25,24 +28,29 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The description of the scheduled SQL job.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>schedule-sql-test</para>
+        /// <para>This is a scheduled sql job</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The display name of the scheduled SQL job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>scheduleSqlTest</para>
+        /// <para>This is a scheduled sql job</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>The time when the Scheduled SQL job was last modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714123644</para>
         /// </summary>
@@ -51,16 +59,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? LastModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the scheduled SQL job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>sql-1714123463-225223</para>
+        /// <para>test-scheduled-sql</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The scheduling settings of the Scheduled SQL job.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("schedule")]
@@ -68,6 +78,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Schedule Schedule { get; set; }
 
         /// <summary>
+        /// <para>The ID of the scheduler.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>e73f43732852064ad5d091914e39342f</para>
         /// </summary>
@@ -76,6 +88,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ScheduleId { get; set; }
 
         /// <summary>
+        /// <para>The status of the Scheduled SQL job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENABLED</para>
         /// </summary>

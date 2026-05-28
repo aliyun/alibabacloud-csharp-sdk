@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public bool? EnableSlsContext { get; set; }
 
+        [NameInMap("enableVpcNat")]
+        [Validation(Required=false)]
+        public bool? EnableVpcNat { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -60,6 +64,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("encoding")]
         [Validation(Required=false)]
         public string Encoding { get; set; }
+
+        [NameInMap("format")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Format { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -88,6 +96,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("parseArray")]
         [Validation(Required=false)]
         public bool? ParseArray { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ingest-processor-1756802123-953901</para>
+        /// </summary>
+        [NameInMap("processorId")]
+        [Validation(Required=false)]
+        public string ProcessorId { get; set; }
+
+        [NameInMap("securityGroups")]
+        [Validation(Required=false)]
+        public string SecurityGroups { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
@@ -144,6 +164,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("vpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
+
+        [NameInMap("vswitchId")]
+        [Validation(Required=false)]
+        public string VswitchId { get; set; }
 
     }
 

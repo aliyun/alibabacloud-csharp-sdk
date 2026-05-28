@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public bool? Highlight { get; set; }
 
+        [NameInMap("isAccurate")]
+        [Validation(Required=false)]
+        public bool? IsAccurate { get; set; }
+
         /// <summary>
         /// <para>The maximum number of logs to return for the request. This parameter takes effect only when the query parameter is set to a search statement. Valid values: 0 to 100. Default value: 100.</para>
         /// 

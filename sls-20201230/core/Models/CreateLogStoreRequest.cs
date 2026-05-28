@@ -130,6 +130,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string ProcessorId { get; set; }
 
+        [NameInMap("resourceGroupId")]
+        [Validation(Required=false)]
+        public string ResourceGroupId { get; set; }
+
         /// <summary>
         /// <para>The number of shards.</para>
         /// <remarks>
@@ -143,6 +147,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("shardCount")]
         [Validation(Required=false)]
         public int? ShardCount { get; set; }
+
+        [NameInMap("shardingPolicy")]
+        [Validation(Required=false)]
+        public ShardingPolicy ShardingPolicy { get; set; }
 
         /// <summary>
         /// <para>The type of the observable data. Valid values:</para>

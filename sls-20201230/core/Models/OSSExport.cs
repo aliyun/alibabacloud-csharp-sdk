@@ -9,55 +9,68 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class OSSExport : TeaModel {
+        /// <summary>
+        /// <para>The OSS export configuration.</para>
+        /// </summary>
         [NameInMap("configuration")]
         [Validation(Required=false)]
         public OSSExportConfiguration Configuration { get; set; }
 
         /// <summary>
+        /// <para>The time when the OSS data shipping job was created.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>1714284025</para>
+        /// <para>123456789</para>
         /// </summary>
         [NameInMap("createTime")]
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The description of the OSS data shipping job.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>job-test</para>
+        /// <para>This is a oss export</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The display name of the OSS data shipping job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>job-demo</para>
+        /// <para>This is a oss export</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>The time when the OSS data shipping job was last modified.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>1714284115</para>
+        /// <para>123456789</para>
         /// </summary>
         [NameInMap("lastModifiedTime")]
         [Validation(Required=false)]
         public long? LastModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the OSS data shipping job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>job-1714109458-123456</para>
+        /// <para>myossexportjob</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the OSS data shipping job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c7f01719d9feb105fc9d8df92af62010</para>
         /// </summary>
@@ -66,6 +79,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ScheduleId { get; set; }
 
         /// <summary>
+        /// <para>The status of the OSS data shipping job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
         /// </summary>

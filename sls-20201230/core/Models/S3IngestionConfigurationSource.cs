@@ -9,7 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class S3IngestionConfigurationSource : TeaModel {
+        [NameInMap("advancedParameters")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> AdvancedParameters { get; set; }
+
         /// <summary>
+        /// <para>aws access key</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +25,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string AwsAccessKey { get; set; }
 
         /// <summary>
+        /// <para>aws access key secret</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +36,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string AwsAccessKeySecret { get; set; }
 
         /// <summary>
+        /// <para>s3 region</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string AwsRegion { get; set; }
 
         /// <summary>
+        /// <para>sqs queue url</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://sqs.ap-northeast-1.amazonaws.com/123456788/chifan">https://sqs.ap-northeast-1.amazonaws.com/123456788/chifan</a></para>
         /// </summary>
@@ -56,6 +65,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? AwsUseSQS { get; set; }
 
         /// <summary>
+        /// <para>s3 bucket</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +74,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("bucket")]
         [Validation(Required=false)]
         public string Bucket { get; set; }
+
+        [NameInMap("cloudFrontEndpoint")]
+        [Validation(Required=false)]
+        public string CloudFrontEndpoint { get; set; }
+
+        [NameInMap("cloudFrontToken")]
+        [Validation(Required=false)]
+        public string CloudFrontToken { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -92,6 +110,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public long? EndTime { get; set; }
+
+        /// <summary>
+        /// <para>s3 endpoint</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>s3.us-east-1.amazonaws.com</para>
+        /// </summary>
+        [NameInMap("endpoint")]
+        [Validation(Required=false)]
+        public string Endpoint { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -128,6 +156,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>ingest-processor-1756802123-953901</para>
+        /// </summary>
+        [NameInMap("processorId")]
+        [Validation(Required=false)]
+        public string ProcessorId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1714274081</para>
         /// </summary>
         [NameInMap("startTime")]
@@ -160,7 +196,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>[0-9]{0,2}/[0-9a-zA-Z]+/[0-9:,]+</para>
+        /// <para>[0-9]{0,2}\/[0-9a-zA-Z]+\/[0-9:,]+</para>
         /// </summary>
         [NameInMap("timePattern")]
         [Validation(Required=false)]
@@ -181,6 +217,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [NameInMap("useAwsSQSOnly")]
         [Validation(Required=false)]
         public bool? UseAwsSQSOnly { get; set; }
+
+        [NameInMap("useCloudFront")]
+        [Validation(Required=false)]
+        public bool? UseCloudFront { get; set; }
 
     }
 

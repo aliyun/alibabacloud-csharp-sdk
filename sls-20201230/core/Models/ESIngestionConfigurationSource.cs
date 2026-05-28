@@ -19,9 +19,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
+        [NameInMap("ConnectorMode")]
+        [Validation(Required=false)]
+        public string ConnectorMode { get; set; }
+
+        [NameInMap("EndTime")]
+        [Validation(Required=false)]
+        public long? EndTime { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("Index")]
         [Validation(Required=false)]
         public string Index { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("MaxDataDelaySec")]
+        [Validation(Required=false)]
+        public long? MaxDataDelaySec { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -30,56 +48,38 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public long? MinFragRangeSec { get; set; }
 
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("connectorMode")]
-        [Validation(Required=false)]
-        public string ConnectorMode { get; set; }
-
-        [NameInMap("endTime")]
-        [Validation(Required=false)]
-        public long? EndTime { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("maxDataDelaySec")]
-        [Validation(Required=false)]
-        public long? MaxDataDelaySec { get; set; }
-
-        [NameInMap("password")]
+        [NameInMap("Password")]
         [Validation(Required=false)]
         public string Password { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("query")]
+        [NameInMap("Query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
-        [NameInMap("startTime")]
+        [NameInMap("StartTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
 
-        [NameInMap("timeFieldName")]
+        [NameInMap("TimeFieldName")]
         [Validation(Required=false)]
         public string TimeFieldName { get; set; }
 
-        [NameInMap("timeFormat")]
+        [NameInMap("TimeFormat")]
         [Validation(Required=false)]
         public string TimeFormat { get; set; }
 
-        [NameInMap("timeZone")]
+        [NameInMap("TimeZone")]
         [Validation(Required=false)]
         public string TimeZone { get; set; }
 
-        [NameInMap("username")]
+        [NameInMap("Username")]
         [Validation(Required=false)]
         public string Username { get; set; }
 
-        [NameInMap("vpcId")]
+        [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 

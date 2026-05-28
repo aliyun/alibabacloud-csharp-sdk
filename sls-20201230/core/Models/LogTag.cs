@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class LogTag : TeaModel {
         /// <summary>
+        /// <para>The name of the custom key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>The value of the custom key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
