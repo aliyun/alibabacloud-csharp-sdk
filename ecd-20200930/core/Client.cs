@@ -24154,6 +24154,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
@@ -24270,6 +24274,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessChannel))
+            {
+                query["BusinessChannel"] = request.BusinessChannel;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
@@ -40393,6 +40401,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["DesktopId"] = request.DesktopId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIds))
+            {
+                query["DesktopIds"] = request.DesktopIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewHostName))
             {
                 query["NewHostName"] = request.NewHostName;
@@ -40447,6 +40459,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
             {
                 query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIds))
+            {
+                query["DesktopIds"] = request.DesktopIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewHostName))
             {
@@ -40544,6 +40560,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["DesktopId"] = request.DesktopId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIds))
+            {
+                query["DesktopIds"] = request.DesktopIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewDesktopName))
             {
                 query["NewDesktopName"] = request.NewDesktopName;
@@ -40551,6 +40571,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAssignMode))
+            {
+                query["UserAssignMode"] = request.UserAssignMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -40594,6 +40618,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["DesktopId"] = request.DesktopId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIds))
+            {
+                query["DesktopIds"] = request.DesktopIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NewDesktopName))
             {
                 query["NewDesktopName"] = request.NewDesktopName;
@@ -40601,6 +40629,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserAssignMode))
+            {
+                query["UserAssignMode"] = request.UserAssignMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -46511,7 +46543,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询桌面历史使用时长排行榜</para>
+        /// <para>Query and sort historical usage duration by user or desktop dimension.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46569,7 +46601,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询桌面历史使用时长排行榜</para>
+        /// <para>Query and sort historical usage duration by user or desktop dimension.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46627,7 +46659,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询桌面历史使用时长排行榜</para>
+        /// <para>Query and sort historical usage duration by user or desktop dimension.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46645,7 +46677,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询桌面历史使用时长排行榜</para>
+        /// <para>Query and sort historical usage duration by user or desktop dimension.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ModifyDesktopHostNameRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the cloud computer.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -19,6 +18,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
+
+        [NameInMap("DesktopIds")]
+        [Validation(Required=false)]
+        public List<string> DesktopIds { get; set; }
 
         /// <summary>
         /// <para>The new hostname of the cloud computer. The hostname must meet the following requirements:</para>

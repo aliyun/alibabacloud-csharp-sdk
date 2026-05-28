@@ -11,7 +11,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ModifyDesktopNameRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the cloud computer.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -20,6 +19,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopId { get; set; }
 
+        [NameInMap("DesktopIds")]
+        [Validation(Required=false)]
+        public List<string> DesktopIds { get; set; }
+
         /// <summary>
         /// <para>The new name of the cloud computer. The name of the cloud computer must meet the following requirements:</para>
         /// <list type="bullet">
@@ -27,7 +30,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <item><description>The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</description></item>
         /// <item><description>The name can only contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -46,6 +48,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("UserAssignMode")]
+        [Validation(Required=false)]
+        public string UserAssignMode { get; set; }
 
     }
 
