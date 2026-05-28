@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
         [Validation(Required=false)]
         public List<int?> BizTypeList { get; set; }
 
+        [NameInMap("Distro")]
+        [Validation(Required=false)]
+        public string Distro { get; set; }
+
         /// <summary>
         /// <para>The features supported by the image.</para>
         /// </summary>

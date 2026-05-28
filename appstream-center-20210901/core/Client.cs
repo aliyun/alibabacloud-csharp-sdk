@@ -6380,6 +6380,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Distro))
+            {
+                query["Distro"] = request.Distro;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
             {
                 query["TagList"] = request.TagList;
@@ -6504,6 +6508,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Distro))
+            {
+                query["Distro"] = request.Distro;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagList))
             {
                 query["TagList"] = request.TagList;
