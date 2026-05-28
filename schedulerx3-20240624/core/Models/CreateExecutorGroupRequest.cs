@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string AuthType { get; set; }
 
+        [NameInMap("AutoScale")]
+        [Validation(Required=false)]
+        public bool? AutoScale { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,6 +39,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [Validation(Required=false)]
         public string ClusterId { get; set; }
 
+        [NameInMap("CmsWorkspaceId")]
+        [Validation(Required=false)]
+        public string CmsWorkspaceId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>group1</para>
@@ -42,6 +50,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        [NameInMap("IntegrationType")]
+        [Validation(Required=false)]
+        public string IntegrationType { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
@@ -88,6 +100,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
         [NameInMap("Workers")]
         [Validation(Required=false)]
         public string Workers { get; set; }
+
+        [NameInMap("XAttrs")]
+        [Validation(Required=false)]
+        public string XAttrs { get; set; }
 
     }
 

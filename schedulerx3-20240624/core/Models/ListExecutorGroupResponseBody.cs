@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public string AuthType { get; set; }
 
+                [NameInMap("AutoScale")]
+                [Validation(Required=false)]
+                public bool? AutoScale { get; set; }
+
                 [NameInMap("CiteList")]
                 [Validation(Required=false)]
                 public List<ListExecutorGroupResponseBodyDataRecordsCiteList> CiteList { get; set; }
@@ -84,6 +88,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
 
                 }
 
+                [NameInMap("CmsWorkspaceId")]
+                [Validation(Required=false)]
+                public string CmsWorkspaceId { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>my first workflow</para>
@@ -91,6 +99,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
+
+                [NameInMap("IntegrationType")]
+                [Validation(Required=false)]
+                public string IntegrationType { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>
@@ -116,6 +128,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [Validation(Required=false)]
                 public string Protocol { get; set; }
 
+                [NameInMap("ResolvedWorkers")]
+                [Validation(Required=false)]
+                public string ResolvedWorkers { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -139,6 +155,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
                 [NameInMap("Workers")]
                 [Validation(Required=false)]
                 public string Workers { get; set; }
+
+                [NameInMap("XAttrs")]
+                [Validation(Required=false)]
+                public string XAttrs { get; set; }
 
             }
 

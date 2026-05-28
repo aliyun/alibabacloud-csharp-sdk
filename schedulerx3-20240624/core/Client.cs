@@ -760,13 +760,25 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["AuthType"] = request.AuthType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScale))
+            {
+                body["AutoScale"] = request.AutoScale;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 body["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmsWorkspaceId))
+            {
+                body["CmsWorkspaceId"] = request.CmsWorkspaceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntegrationType))
+            {
+                body["IntegrationType"] = request.IntegrationType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -787,6 +799,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workers))
             {
                 body["Workers"] = request.Workers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XAttrs))
+            {
+                body["XAttrs"] = request.XAttrs;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -834,13 +850,25 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["AuthType"] = request.AuthType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScale))
+            {
+                body["AutoScale"] = request.AutoScale;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 body["ClusterId"] = request.ClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmsWorkspaceId))
+            {
+                body["CmsWorkspaceId"] = request.CmsWorkspaceId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IntegrationType))
+            {
+                body["IntegrationType"] = request.IntegrationType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
@@ -861,6 +889,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workers))
             {
                 body["Workers"] = request.Workers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XAttrs))
+            {
+                body["XAttrs"] = request.XAttrs;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2164,6 +2196,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["Id"] = request.Id;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -2209,6 +2245,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -12364,9 +12404,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["AuthType"] = request.AuthType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScale))
+            {
+                body["AutoScale"] = request.AutoScale;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmsWorkspaceId))
+            {
+                body["CmsWorkspaceId"] = request.CmsWorkspaceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -12375,6 +12423,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
             {
@@ -12391,6 +12443,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workers))
             {
                 body["Workers"] = request.Workers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XAttrs))
+            {
+                body["XAttrs"] = request.XAttrs;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -12438,9 +12494,17 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             {
                 body["AuthType"] = request.AuthType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoScale))
+            {
+                body["AutoScale"] = request.AutoScale;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 body["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CmsWorkspaceId))
+            {
+                body["CmsWorkspaceId"] = request.CmsWorkspaceId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -12449,6 +12513,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 body["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Network))
             {
@@ -12465,6 +12533,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workers))
             {
                 body["Workers"] = request.Workers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XAttrs))
+            {
+                body["XAttrs"] = request.XAttrs;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -74,6 +74,10 @@ namespace AlibabaCloud.SDK.SchedulerX320240624.Models
             [Validation(Required=false)]
             public int? Port { get; set; }
 
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>2.0.2</para>
