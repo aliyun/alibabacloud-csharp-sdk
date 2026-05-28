@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.IQS20241111.Models
         /// </summary>
         [NameInMap("imageBase64")]
         [Validation(Required=false)]
-        public byte[] ImageBase64 { get; set; }
+        public string ImageBase64 { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
