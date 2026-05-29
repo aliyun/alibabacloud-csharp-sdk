@@ -15380,6 +15380,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 query["TtsVoiceCode"] = request.TtsVoiceCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceType))
+            {
+                query["VoiceType"] = request.VoiceType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -15433,6 +15437,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsVoiceCode))
             {
                 query["TtsVoiceCode"] = request.TtsVoiceCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceType))
+            {
+                query["VoiceType"] = request.VoiceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

@@ -31,6 +31,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string TtsVoiceCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>示例值示例值</para>
+        /// </summary>
+        [NameInMap("VoiceType")]
+        [Validation(Required=false)]
+        public string VoiceType { get; set; }
+
     }
 
 }
