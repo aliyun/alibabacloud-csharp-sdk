@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public string Protocol { get; set; }
 
+            [NameInMap("ResourceDomain")]
+            [Validation(Required=false)]
+            public string ResourceDomain { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>i-8vbdlsd********81e22</para>

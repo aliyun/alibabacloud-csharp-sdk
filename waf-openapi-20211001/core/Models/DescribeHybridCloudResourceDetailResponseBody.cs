@@ -147,6 +147,24 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public DescribeHybridCloudResourceDetailResponseBodyDomainRedirect Redirect { get; set; }
             public class DescribeHybridCloudResourceDetailResponseBodyDomainRedirect : TeaModel {
+                [NameInMap("BackendPorts")]
+                [Validation(Required=false)]
+                public List<DescribeHybridCloudResourceDetailResponseBodyDomainRedirectBackendPorts> BackendPorts { get; set; }
+                public class DescribeHybridCloudResourceDetailResponseBodyDomainRedirectBackendPorts : TeaModel {
+                    [NameInMap("BackendPort")]
+                    [Validation(Required=false)]
+                    public int? BackendPort { get; set; }
+
+                    [NameInMap("ListenPort")]
+                    [Validation(Required=false)]
+                    public int? ListenPort { get; set; }
+
+                    [NameInMap("Protocol")]
+                    [Validation(Required=false)]
+                    public string Protocol { get; set; }
+
+                }
+
                 [NameInMap("Backends")]
                 [Validation(Required=false)]
                 public List<string> Backends { get; set; }
@@ -206,6 +224,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 [NameInMap("Loadbalance")]
                 [Validation(Required=false)]
                 public string Loadbalance { get; set; }
+
+                [NameInMap("ProxyProtocol")]
+                [Validation(Required=false)]
+                public bool? ProxyProtocol { get; set; }
 
                 /// <summary>
                 /// <b>Example:</b>

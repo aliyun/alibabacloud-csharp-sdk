@@ -89,6 +89,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             [Validation(Required=false)]
             public List<string> CustomCiphers { get; set; }
 
+            [NameInMap("Domain")]
+            [Validation(Required=false)]
+            public string Domain { get; set; }
+
             /// <summary>
             /// <para>Specifies whether to support TLS 1.3. This parameter is available only if you specify <b>HttpsPorts</b>. Valid values:</para>
             /// <list type="bullet">
@@ -122,7 +126,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             /// <summary>
             /// <para>The port of the cloud service.</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -137,7 +140,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <item><description><b>http</b></description></item>
             /// <item><description><b>https</b></description></item>
             /// </list>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>http</para>
@@ -148,7 +150,6 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
             /// <summary>
             /// <para>The instance ID of the cloud service.</para>
-            /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lb-bp1*****</para>
