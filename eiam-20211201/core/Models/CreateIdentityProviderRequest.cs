@@ -823,6 +823,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public bool? RequireRequestSigned { get; set; }
 
+            [NameInMap("WantAssertionsSigned")]
+            [Validation(Required=false)]
+            public bool? WantAssertionsSigned { get; set; }
+
+            [NameInMap("WantResponseSigned")]
+            [Validation(Required=false)]
+            public bool? WantResponseSigned { get; set; }
+
         }
 
         /// <summary>
