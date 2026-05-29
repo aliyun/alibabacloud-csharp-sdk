@@ -39,6 +39,154 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>增加实例白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AddInstanceWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddInstanceWhiteListResponse
+        /// </returns>
+        public AddInstanceWhiteListResponse AddInstanceWhiteListWithOptions(AddInstanceWhiteListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddInstanceWhiteListShrinkRequest request = new AddInstanceWhiteListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WhiteListItem))
+            {
+                request.WhiteListItemShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WhiteListItem, "WhiteListItem", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListItemShrink))
+            {
+                query["WhiteListItem"] = request.WhiteListItemShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListType))
+            {
+                query["WhiteListType"] = request.WhiteListType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddInstanceWhiteList",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddInstanceWhiteListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加实例白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// AddInstanceWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddInstanceWhiteListResponse
+        /// </returns>
+        public async Task<AddInstanceWhiteListResponse> AddInstanceWhiteListWithOptionsAsync(AddInstanceWhiteListRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddInstanceWhiteListShrinkRequest request = new AddInstanceWhiteListShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WhiteListItem))
+            {
+                request.WhiteListItemShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WhiteListItem, "WhiteListItem", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListItemShrink))
+            {
+                query["WhiteListItem"] = request.WhiteListItemShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListType))
+            {
+                query["WhiteListType"] = request.WhiteListType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddInstanceWhiteList",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddInstanceWhiteListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加实例白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddInstanceWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddInstanceWhiteListResponse
+        /// </returns>
+        public AddInstanceWhiteListResponse AddInstanceWhiteList(AddInstanceWhiteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddInstanceWhiteListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>增加实例白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddInstanceWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddInstanceWhiteListResponse
+        /// </returns>
+        public async Task<AddInstanceWhiteListResponse> AddInstanceWhiteListAsync(AddInstanceWhiteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddInstanceWhiteListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a pair of static username and password. If you access an ApsaraMQ for RabbitMQ broker from an open source RabbitMQ client, you must use a pair of username and password for authentication. You can access the ApsaraMQ for RabbitMQ broker only after the authentication is passed. ApsaraMQ for RabbitMQ allows you to generate usernames and passwords by using AccessKey pairs provided by Alibaba Cloud Resource Access Management (RAM).</para>
         /// </summary>
         /// 
@@ -2815,6 +2963,134 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询实例ip/vpc白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceWhiteListResponse
+        /// </returns>
+        public ListInstanceWhiteListResponse ListInstanceWhiteListWithOptions(ListInstanceWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListType))
+            {
+                query["whiteListType"] = request.WhiteListType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceWhiteList",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceWhiteListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例ip/vpc白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceWhiteListResponse
+        /// </returns>
+        public async Task<ListInstanceWhiteListResponse> ListInstanceWhiteListWithOptionsAsync(ListInstanceWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListType))
+            {
+                query["whiteListType"] = request.WhiteListType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceWhiteList",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceWhiteListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例ip/vpc白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceWhiteListResponse
+        /// </returns>
+        public ListInstanceWhiteListResponse ListInstanceWhiteList(ListInstanceWhiteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListInstanceWhiteListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询实例ip/vpc白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceWhiteListResponse
+        /// </returns>
+        public async Task<ListInstanceWhiteListResponse> ListInstanceWhiteListAsync(ListInstanceWhiteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListInstanceWhiteListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries all AparaMQ for RabbitMQ instances in a region. The returned data includes the basic information, endpoint, and specification limits of each instance.</para>
         /// </summary>
         /// 
@@ -3391,6 +3667,142 @@ namespace AlibabaCloud.SDK.Amqp_open20191212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListVirtualHostsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除实例ip/vpc白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveInstanceWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveInstanceWhiteListResponse
+        /// </returns>
+        public RemoveInstanceWhiteListResponse RemoveInstanceWhiteListWithOptions(RemoveInstanceWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListItemId))
+            {
+                query["whiteListItemId"] = request.WhiteListItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListType))
+            {
+                query["whiteListType"] = request.WhiteListType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveInstanceWhiteList",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveInstanceWhiteListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除实例ip/vpc白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveInstanceWhiteListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveInstanceWhiteListResponse
+        /// </returns>
+        public async Task<RemoveInstanceWhiteListResponse> RemoveInstanceWhiteListWithOptionsAsync(RemoveInstanceWhiteListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListItemId))
+            {
+                query["whiteListItemId"] = request.WhiteListItemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WhiteListType))
+            {
+                query["whiteListType"] = request.WhiteListType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveInstanceWhiteList",
+                Version = "2019-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveInstanceWhiteListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除实例ip/vpc白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveInstanceWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveInstanceWhiteListResponse
+        /// </returns>
+        public RemoveInstanceWhiteListResponse RemoveInstanceWhiteList(RemoveInstanceWhiteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveInstanceWhiteListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除实例ip/vpc白名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveInstanceWhiteListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveInstanceWhiteListResponse
+        /// </returns>
+        public async Task<RemoveInstanceWhiteListResponse> RemoveInstanceWhiteListAsync(RemoveInstanceWhiteListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveInstanceWhiteListWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
