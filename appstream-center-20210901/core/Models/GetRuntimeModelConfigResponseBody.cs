@@ -123,6 +123,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string ModelTemplateName { get; set; }
 
+            [NameInMap("ModelTemplateRefType")]
+            [Validation(Required=false)]
+            public string ModelTemplateRefType { get; set; }
+
+            [NameInMap("ResourceGroupId")]
+            [Validation(Required=false)]
+            public string ResourceGroupId { get; set; }
+
         }
 
         /// <summary>

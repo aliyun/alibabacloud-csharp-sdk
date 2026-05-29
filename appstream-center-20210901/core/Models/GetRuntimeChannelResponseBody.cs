@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public string AvatarUrl { get; set; }
 
+            [NameInMap("ChannelType")]
+            [Validation(Required=false)]
+            public string ChannelType { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>dingtalk-connector</para>

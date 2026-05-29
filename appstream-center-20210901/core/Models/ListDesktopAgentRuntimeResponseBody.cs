@@ -149,6 +149,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [Validation(Required=false)]
             public bool? ModelConfigure { get; set; }
 
+            [NameInMap("ModelTemplateId")]
+            [Validation(Required=false)]
+            public string ModelTemplateId { get; set; }
+
+            [NameInMap("ModelTemplateName")]
+            [Validation(Required=false)]
+            public string ModelTemplateName { get; set; }
+
             [NameInMap("OsType")]
             [Validation(Required=false)]
             public string OsType { get; set; }
@@ -164,6 +172,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210901.Models
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
+
+            [NameInMap("RegionLocation")]
+            [Validation(Required=false)]
+            public string RegionLocation { get; set; }
 
             [NameInMap("ResourceGroup")]
             [Validation(Required=false)]

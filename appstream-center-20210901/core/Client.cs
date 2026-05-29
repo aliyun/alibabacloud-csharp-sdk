@@ -6827,6 +6827,150 @@ namespace AlibabaCloud.SDK.Appstream_center20210901
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询模型提供商 Endpoint 列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListModelProviderEndpointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelProviderEndpointsResponse
+        /// </returns>
+        public ListModelProviderEndpointsResponse ListModelProviderEndpointsWithOptions(ListModelProviderEndpointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentPlatform))
+            {
+                query["AgentPlatform"] = request.AgentPlatform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProvider))
+            {
+                query["AgentProvider"] = request.AgentProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProviderName))
+            {
+                query["ProviderName"] = request.ProviderName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListModelProviderEndpoints",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListModelProviderEndpointsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型提供商 Endpoint 列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListModelProviderEndpointsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelProviderEndpointsResponse
+        /// </returns>
+        public async Task<ListModelProviderEndpointsResponse> ListModelProviderEndpointsWithOptionsAsync(ListModelProviderEndpointsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentPlatform))
+            {
+                query["AgentPlatform"] = request.AgentPlatform;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProvider))
+            {
+                query["AgentProvider"] = request.AgentProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
+            {
+                query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProviderName))
+            {
+                query["ProviderName"] = request.ProviderName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListModelProviderEndpoints",
+                Version = "2021-09-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListModelProviderEndpointsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型提供商 Endpoint 列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListModelProviderEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelProviderEndpointsResponse
+        /// </returns>
+        public ListModelProviderEndpointsResponse ListModelProviderEndpoints(ListModelProviderEndpointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListModelProviderEndpointsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询模型提供商 Endpoint 列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListModelProviderEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListModelProviderEndpointsResponse
+        /// </returns>
+        public async Task<ListModelProviderEndpointsResponse> ListModelProviderEndpointsAsync(ListModelProviderEndpointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListModelProviderEndpointsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询模型提供商模板列表</para>
         /// </summary>
         /// 
