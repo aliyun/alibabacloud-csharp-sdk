@@ -206,6 +206,20 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        [NameInMap("SecurityGroupIds")]
+        [Validation(Required=false)]
+        public List<CreateLoadBalancerRequestSecurityGroupIds> SecurityGroupIds { get; set; }
+        public class CreateLoadBalancerRequestSecurityGroupIds : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>sg-gw82chzr7ru23iwbn9mu</para>
+            /// </summary>
+            [NameInMap("SecurityGroupId")]
+            [Validation(Required=false)]
+            public string SecurityGroupId { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The tags.</para>
         /// </summary>

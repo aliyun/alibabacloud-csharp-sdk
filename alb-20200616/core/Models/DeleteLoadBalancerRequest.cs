@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
+        [NameInMap("RetainResourceType")]
+        [Validation(Required=false)]
+        public List<string> RetainResourceType { get; set; }
+
     }
 
 }

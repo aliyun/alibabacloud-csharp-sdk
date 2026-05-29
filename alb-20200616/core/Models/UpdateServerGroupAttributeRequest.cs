@@ -286,6 +286,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>Affinity</para>
+        /// </summary>
+        [NameInMap("IpVersionAffinityMode")]
+        [Validation(Required=false)]
+        public string IpVersionAffinityMode { get; set; }
+
+        /// <summary>
         /// <para>The scheduling algorithm. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Wrr</b>: the weighted round robin algorithm. Backend servers that have higher weights receive more requests than those that have lower weights.</description></item>

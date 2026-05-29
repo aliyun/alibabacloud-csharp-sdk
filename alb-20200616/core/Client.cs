@@ -987,7 +987,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an EIP bandwidth plan with an Application Load Balancer (ALB) instance.</para>
+        /// <para>Associates an Internet Shared Bandwidth instance with an Application Load Balancer (ALB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1054,7 +1054,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an EIP bandwidth plan with an Application Load Balancer (ALB) instance.</para>
+        /// <para>Associates an Internet Shared Bandwidth instance with an Application Load Balancer (ALB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1121,7 +1121,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an EIP bandwidth plan with an Application Load Balancer (ALB) instance.</para>
+        /// <para>Associates an Internet Shared Bandwidth instance with an Application Load Balancer (ALB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1148,7 +1148,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates an EIP bandwidth plan with an Application Load Balancer (ALB) instance.</para>
+        /// <para>Associates an Internet Shared Bandwidth instance with an Application Load Balancer (ALB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2337,6 +2337,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupIds))
+            {
+                query["SecurityGroupIds"] = request.SecurityGroupIds;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
                 query["Tag"] = request.Tag;
@@ -2439,6 +2443,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 query["ResourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupIds))
+            {
+                query["SecurityGroupIds"] = request.SecurityGroupIds;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -3237,6 +3245,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["HealthCheckConfig"] = request.HealthCheckConfig;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersionAffinityMode))
+            {
+                query["IpVersionAffinityMode"] = request.IpVersionAffinityMode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Enabled))
             {
                 query["Ipv6Enabled"] = request.Ipv6Enabled;
@@ -3355,6 +3367,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConfig))
             {
                 query["HealthCheckConfig"] = request.HealthCheckConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersionAffinityMode))
+            {
+                query["IpVersionAffinityMode"] = request.IpVersionAffinityMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ipv6Enabled))
             {
@@ -4173,6 +4189,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["LoadBalancerId"] = request.LoadBalancerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetainResourceType))
+            {
+                query["RetainResourceType"] = request.RetainResourceType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -4231,6 +4251,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
             {
                 query["LoadBalancerId"] = request.LoadBalancerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetainResourceType))
+            {
+                query["RetainResourceType"] = request.RetainResourceType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5319,7 +5343,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an elastic IP address (EIP) bandwidth plan from an Application Load Balancer (ALB) instance.</para>
+        /// <para>Disassociates an Internet Shared Bandwidth instance from an Application Load Balancer (ALB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5386,7 +5410,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an elastic IP address (EIP) bandwidth plan from an Application Load Balancer (ALB) instance.</para>
+        /// <para>Disassociates an Internet Shared Bandwidth instance from an Application Load Balancer (ALB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5453,7 +5477,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an elastic IP address (EIP) bandwidth plan from an Application Load Balancer (ALB) instance.</para>
+        /// <para>Disassociates an Internet Shared Bandwidth instance from an Application Load Balancer (ALB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5480,7 +5504,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociates an elastic IP address (EIP) bandwidth plan from an Application Load Balancer (ALB) instance.</para>
+        /// <para>Disassociates an Internet Shared Bandwidth instance from an Application Load Balancer (ALB) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5643,7 +5667,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the access log feature for a Server Load Balancer (SLB) instance.</para>
+        /// <para>Disables the access log feature for a Application Load Balancer (ALB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5693,7 +5717,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the access log feature for a Server Load Balancer (SLB) instance.</para>
+        /// <para>Disables the access log feature for a Application Load Balancer (ALB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5743,7 +5767,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the access log feature for a Server Load Balancer (SLB) instance.</para>
+        /// <para>Disables the access log feature for a Application Load Balancer (ALB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5761,7 +5785,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables the access log feature for a Server Load Balancer (SLB) instance.</para>
+        /// <para>Disables the access log feature for a Application Load Balancer (ALB) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9590,9 +9614,6 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// <para>Queries system security policies in a region.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListSystemSecurityPoliciesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -9623,9 +9644,6 @@ namespace AlibabaCloud.SDK.Alb20200616
         /// <para>Queries system security policies in a region.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListSystemSecurityPoliciesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -13289,6 +13307,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["LoadBalancerId"] = request.LoadBalancerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetainResourceType))
+            {
+                query["RetainResourceType"] = request.RetainResourceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneMappings))
             {
                 query["ZoneMappings"] = request.ZoneMappings;
@@ -13361,6 +13383,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
             {
                 query["LoadBalancerId"] = request.LoadBalancerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetainResourceType))
+            {
+                query["RetainResourceType"] = request.RetainResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneMappings))
             {
@@ -13874,6 +13900,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             {
                 query["LoadBalancerId"] = request.LoadBalancerId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetainResourceType))
+            {
+                query["RetainResourceType"] = request.RetainResourceType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneMappings))
             {
                 query["ZoneMappings"] = request.ZoneMappings;
@@ -13939,6 +13969,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerId))
             {
                 query["LoadBalancerId"] = request.LoadBalancerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetainResourceType))
+            {
+                query["RetainResourceType"] = request.RetainResourceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneMappings))
             {
@@ -14657,7 +14691,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a server group, such as health checks, session persistence, server group names, routing algorithms, and protocols.</para>
+        /// <para>Modifies the configurations of a server group, such as health checks, session persistence, the server group name, the routing algorithm, and the protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14703,6 +14737,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConfig))
             {
                 query["HealthCheckConfig"] = request.HealthCheckConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersionAffinityMode))
+            {
+                query["IpVersionAffinityMode"] = request.IpVersionAffinityMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scheduler))
             {
@@ -14757,7 +14795,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a server group, such as health checks, session persistence, server group names, routing algorithms, and protocols.</para>
+        /// <para>Modifies the configurations of a server group, such as health checks, session persistence, the server group name, the routing algorithm, and the protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14803,6 +14841,10 @@ namespace AlibabaCloud.SDK.Alb20200616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HealthCheckConfig))
             {
                 query["HealthCheckConfig"] = request.HealthCheckConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IpVersionAffinityMode))
+            {
+                query["IpVersionAffinityMode"] = request.IpVersionAffinityMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scheduler))
             {
@@ -14857,7 +14899,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a server group, such as health checks, session persistence, server group names, routing algorithms, and protocols.</para>
+        /// <para>Modifies the configurations of a server group, such as health checks, session persistence, the server group name, the routing algorithm, and the protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14885,7 +14927,7 @@ namespace AlibabaCloud.SDK.Alb20200616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a server group, such as health checks, session persistence, server group names, routing algorithms, and protocols.</para>
+        /// <para>Modifies the configurations of a server group, such as health checks, session persistence, the server group name, the routing algorithm, and the protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

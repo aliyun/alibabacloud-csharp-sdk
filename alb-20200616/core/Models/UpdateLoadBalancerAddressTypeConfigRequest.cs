@@ -63,6 +63,10 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
         [Validation(Required=false)]
         public string LoadBalancerId { get; set; }
 
+        [NameInMap("RetainResourceType")]
+        [Validation(Required=false)]
+        public List<string> RetainResourceType { get; set; }
+
         /// <summary>
         /// <para>The zones and the vSwitches in the zones. You can specify a maximum of 10 zones. If the selected region supports two or more zones, select at least two zones to ensure the high availability of your service.</para>
         /// </summary>

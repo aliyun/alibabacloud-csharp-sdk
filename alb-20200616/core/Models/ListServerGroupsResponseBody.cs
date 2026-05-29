@@ -297,6 +297,14 @@ namespace AlibabaCloud.SDK.Alb20200616.Models
             }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>Affinity</para>
+            /// </summary>
+            [NameInMap("IpVersionAffinityMode")]
+            [Validation(Required=false)]
+            public string IpVersionAffinityMode { get; set; }
+
+            /// <summary>
             /// <para>Indicates whether IPv6 is supported. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b></description></item>
