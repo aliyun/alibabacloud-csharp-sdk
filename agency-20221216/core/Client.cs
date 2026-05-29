@@ -98,6 +98,150 @@ namespace AlibabaCloud.SDK.Agency20221216
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>设置自动销账</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AutomaticWriteOffRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AutomaticWriteOffResponse
+        /// </returns>
+        public AutomaticWriteOffResponse AutomaticWriteOffWithOptions(AutomaticWriteOffRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutomaticWriteOffAmount))
+            {
+                query["AutomaticWriteOffAmount"] = request.AutomaticWriteOffAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutomaticWriteOffEnabled))
+            {
+                query["AutomaticWriteOffEnabled"] = request.AutomaticWriteOffEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUid))
+            {
+                query["CustomerUid"] = request.CustomerUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AutomaticWriteOff",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AutomaticWriteOffResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置自动销账</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AutomaticWriteOffRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AutomaticWriteOffResponse
+        /// </returns>
+        public async Task<AutomaticWriteOffResponse> AutomaticWriteOffWithOptionsAsync(AutomaticWriteOffRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutomaticWriteOffAmount))
+            {
+                query["AutomaticWriteOffAmount"] = request.AutomaticWriteOffAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutomaticWriteOffEnabled))
+            {
+                query["AutomaticWriteOffEnabled"] = request.AutomaticWriteOffEnabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUid))
+            {
+                query["CustomerUid"] = request.CustomerUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AutomaticWriteOff",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AutomaticWriteOffResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置自动销账</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AutomaticWriteOffRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AutomaticWriteOffResponse
+        /// </returns>
+        public AutomaticWriteOffResponse AutomaticWriteOff(AutomaticWriteOffRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AutomaticWriteOffWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>设置自动销账</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AutomaticWriteOffRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AutomaticWriteOffResponse
+        /// </returns>
+        public async Task<AutomaticWriteOffResponse> AutomaticWriteOffAsync(AutomaticWriteOffRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AutomaticWriteOffWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>作废优惠券</para>
         /// </summary>
         /// 
@@ -4922,6 +5066,166 @@ namespace AlibabaCloud.SDK.Agency20221216
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ProcessApprovalWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询自动销账变更记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAutomaticWriteOffChangeRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAutomaticWriteOffChangeRecordsResponse
+        /// </returns>
+        public QueryAutomaticWriteOffChangeRecordsResponse QueryAutomaticWriteOffChangeRecordsWithOptions(QueryAutomaticWriteOffChangeRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUid))
+            {
+                query["CustomerUid"] = request.CustomerUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAutomaticWriteOffChangeRecords",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAutomaticWriteOffChangeRecordsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询自动销账变更记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAutomaticWriteOffChangeRecordsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAutomaticWriteOffChangeRecordsResponse
+        /// </returns>
+        public async Task<QueryAutomaticWriteOffChangeRecordsResponse> QueryAutomaticWriteOffChangeRecordsWithOptionsAsync(QueryAutomaticWriteOffChangeRecordsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomerUid))
+            {
+                query["CustomerUid"] = request.CustomerUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryAutomaticWriteOffChangeRecords",
+                Version = "2022-12-16",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryAutomaticWriteOffChangeRecordsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询自动销账变更记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAutomaticWriteOffChangeRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAutomaticWriteOffChangeRecordsResponse
+        /// </returns>
+        public QueryAutomaticWriteOffChangeRecordsResponse QueryAutomaticWriteOffChangeRecords(QueryAutomaticWriteOffChangeRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryAutomaticWriteOffChangeRecordsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询自动销账变更记录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// QueryAutomaticWriteOffChangeRecordsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryAutomaticWriteOffChangeRecordsResponse
+        /// </returns>
+        public async Task<QueryAutomaticWriteOffChangeRecordsResponse> QueryAutomaticWriteOffChangeRecordsAsync(QueryAutomaticWriteOffChangeRecordsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryAutomaticWriteOffChangeRecordsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
