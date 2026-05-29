@@ -1,3 +1,7 @@
+2026-05-29 Version: 9.4.1
+- Update API ListAgentlessAsset: add request parameters InstanceIds.
+
+
 2026-05-19 Version: 9.4.0
 - Support API AddFileProtectBindMachine.
 - Support API CreateFileProtectClientRule.

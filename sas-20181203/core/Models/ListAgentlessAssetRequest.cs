@@ -45,6 +45,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("InstanceIds")]
+        [Validation(Required=false)]
+        public List<string> InstanceIds { get; set; }
+
         /// <summary>
         /// <para>The name of the asset instance.</para>
         /// 
