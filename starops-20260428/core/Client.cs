@@ -257,6 +257,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
             {
                 body["tags"] = request.Tags;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolPolicy))
+            {
+                body["toolPolicy"] = request.ToolPolicy;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -334,6 +338,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 body["tags"] = request.Tags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolPolicy))
+            {
+                body["toolPolicy"] = request.ToolPolicy;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3387,6 +3395,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
             {
                 body["roleArn"] = request.RoleArn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolPolicy))
+            {
+                body["toolPolicy"] = request.ToolPolicy;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3452,6 +3464,10 @@ namespace AlibabaCloud.SDK.STAROps20260428
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleArn))
             {
                 body["roleArn"] = request.RoleArn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolPolicy))
+            {
+                body["toolPolicy"] = request.ToolPolicy;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
