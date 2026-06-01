@@ -180,6 +180,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string RegistryKey { get; set; }
 
+        [NameInMap("TargetDefault")]
+        [Validation(Required=false)]
+        public string TargetDefault { get; set; }
+
         /// <summary>
         /// <para>The type of the custom defense rule. Valid values:</para>
         /// <list type="bullet">

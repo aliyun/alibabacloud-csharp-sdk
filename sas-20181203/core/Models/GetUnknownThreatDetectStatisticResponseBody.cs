@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public GetUnknownThreatDetectStatisticResponseBodyData Data { get; set; }
         public class GetUnknownThreatDetectStatisticResponseBodyData : TeaModel {
+            [NameInMap("BlockEventMachineCount")]
+            [Validation(Required=false)]
+            public int? BlockEventMachineCount { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>

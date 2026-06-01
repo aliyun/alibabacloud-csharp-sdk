@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string AnalyzeResult { get; set; }
 
+            [NameInMap("ExplanationEn")]
+            [Validation(Required=false)]
+            public string ExplanationEn { get; set; }
+
+            [NameInMap("ExplanationZh")]
+            [Validation(Required=false)]
+            public string ExplanationZh { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1694576692000</para>

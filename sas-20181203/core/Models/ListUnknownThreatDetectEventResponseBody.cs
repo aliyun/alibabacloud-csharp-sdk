@@ -13,6 +13,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<ListUnknownThreatDetectEventResponseBodyData> Data { get; set; }
         public class ListUnknownThreatDetectEventResponseBodyData : TeaModel {
+            [NameInMap("AnalyzeDesc")]
+            [Validation(Required=false)]
+            public string AnalyzeDesc { get; set; }
+
+            [NameInMap("AnalyzeResult")]
+            [Validation(Required=false)]
+            public string AnalyzeResult { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>[{&quot;5133&quot;:&quot;pickup -l -t unix -u&quot;},{&quot;1077&quot;:&quot;/usr/libexec/postfix/master -w&quot;},{&quot;1&quot;:&quot;/usr/lib/systemd/systemd --switched-root --system --deserialize 22&quot;}]</para>

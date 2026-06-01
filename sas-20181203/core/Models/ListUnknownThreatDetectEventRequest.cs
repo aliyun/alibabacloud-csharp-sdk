@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUnknownThreatDetectEventRequest : TeaModel {
+        [NameInMap("AnalyzeResult")]
+        [Validation(Required=false)]
+        public string AnalyzeResult { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
@@ -24,6 +28,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("HashKey")]
         [Validation(Required=false)]
         public string HashKey { get; set; }
+
+        [NameInMap("Lang")]
+        [Validation(Required=false)]
+        public string Lang { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

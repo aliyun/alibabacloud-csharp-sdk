@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<ListUnknownThreatDetectMachineResponseBodyData> Data { get; set; }
         public class ListUnknownThreatDetectMachineResponseBodyData : TeaModel {
+            [NameInMap("EffectDays")]
+            [Validation(Required=false)]
+            public long? EffectDays { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>12</para>
@@ -37,6 +41,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            [NameInMap("PluginStatus")]
+            [Validation(Required=false)]
+            public string PluginStatus { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
@@ -60,6 +68,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [NameInMap("StudyMode")]
             [Validation(Required=false)]
             public string StudyMode { get; set; }
+
+            [NameInMap("StudyRemainDays")]
+            [Validation(Required=false)]
+            public long? StudyRemainDays { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
