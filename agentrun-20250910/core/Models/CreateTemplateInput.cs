@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public bool? EnableAgent { get; set; }
 
+        [NameInMap("enablePreStop")]
+        [Validation(Required=false)]
+        public bool? EnablePreStop { get; set; }
+
         [NameInMap("environmentVariables")]
         [Validation(Required=false)]
         public Dictionary<string, string> EnvironmentVariables { get; set; }
@@ -103,6 +107,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [NameInMap("ossConfiguration")]
         [Validation(Required=false)]
         public List<OssConfiguration> OssConfiguration { get; set; }
+
+        [NameInMap("preStopTimeoutInSeconds")]
+        [Validation(Required=false)]
+        public int? PreStopTimeoutInSeconds { get; set; }
 
         /// <summary>
         /// <para>沙箱空闲超时时间（秒）</para>
