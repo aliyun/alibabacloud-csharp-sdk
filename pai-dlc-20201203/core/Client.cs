@@ -605,6 +605,184 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建 RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRayHistoryServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRayHistoryServerResponse
+        /// </returns>
+        public CreateRayHistoryServerResponse CreateRayHistoryServerWithOptions(CreateRayHistoryServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsSpec))
+            {
+                body["EcsSpec"] = request.EcsSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRuntimeMinutes))
+            {
+                body["MaxRuntimeMinutes"] = request.MaxRuntimeMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                body["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePath))
+            {
+                body["StoragePath"] = request.StoragePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRayHistoryServer",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/rayhistoryservers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRayHistoryServerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRayHistoryServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRayHistoryServerResponse
+        /// </returns>
+        public async Task<CreateRayHistoryServerResponse> CreateRayHistoryServerWithOptionsAsync(CreateRayHistoryServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Accessibility))
+            {
+                body["Accessibility"] = request.Accessibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EcsSpec))
+            {
+                body["EcsSpec"] = request.EcsSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxRuntimeMinutes))
+            {
+                body["MaxRuntimeMinutes"] = request.MaxRuntimeMinutes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                body["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoragePath))
+            {
+                body["StoragePath"] = request.StoragePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateRayHistoryServer",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/rayhistoryservers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateRayHistoryServerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRayHistoryServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRayHistoryServerResponse
+        /// </returns>
+        public CreateRayHistoryServerResponse CreateRayHistoryServer(CreateRayHistoryServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateRayHistoryServerWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateRayHistoryServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateRayHistoryServerResponse
+        /// </returns>
+        public async Task<CreateRayHistoryServerResponse> CreateRayHistoryServerAsync(CreateRayHistoryServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateRayHistoryServerWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a TensorBoard by using a job or specifying a data source configuration.</para>
         /// </summary>
         /// 
@@ -1103,6 +1281,124 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteJobTemplateWithOptionsAsync(TemplateId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRayHistoryServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRayHistoryServerResponse
+        /// </returns>
+        public DeleteRayHistoryServerResponse DeleteRayHistoryServerWithOptions(string RayHistoryServerId, DeleteRayHistoryServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRayHistoryServer",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/rayhistoryservers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RayHistoryServerId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRayHistoryServerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRayHistoryServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRayHistoryServerResponse
+        /// </returns>
+        public async Task<DeleteRayHistoryServerResponse> DeleteRayHistoryServerWithOptionsAsync(string RayHistoryServerId, DeleteRayHistoryServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteRayHistoryServer",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/rayhistoryservers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RayHistoryServerId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteRayHistoryServerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRayHistoryServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRayHistoryServerResponse
+        /// </returns>
+        public DeleteRayHistoryServerResponse DeleteRayHistoryServer(string RayHistoryServerId, DeleteRayHistoryServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteRayHistoryServerWithOptions(RayHistoryServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteRayHistoryServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteRayHistoryServerResponse
+        /// </returns>
+        public async Task<DeleteRayHistoryServerResponse> DeleteRayHistoryServerAsync(string RayHistoryServerId, DeleteRayHistoryServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteRayHistoryServerWithOptionsAsync(RayHistoryServerId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2583,6 +2879,124 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询 RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRayHistoryServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRayHistoryServerResponse
+        /// </returns>
+        public GetRayHistoryServerResponse GetRayHistoryServerWithOptions(string RayHistoryServerId, GetRayHistoryServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRayHistoryServer",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/rayhistoryservers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RayHistoryServerId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRayHistoryServerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRayHistoryServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRayHistoryServerResponse
+        /// </returns>
+        public async Task<GetRayHistoryServerResponse> GetRayHistoryServerWithOptionsAsync(string RayHistoryServerId, GetRayHistoryServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetRayHistoryServer",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/rayhistoryservers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RayHistoryServerId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetRayHistoryServerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRayHistoryServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRayHistoryServerResponse
+        /// </returns>
+        public GetRayHistoryServerResponse GetRayHistoryServer(string RayHistoryServerId, GetRayHistoryServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetRayHistoryServerWithOptions(RayHistoryServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetRayHistoryServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetRayHistoryServerResponse
+        /// </returns>
+        public async Task<GetRayHistoryServerResponse> GetRayHistoryServerAsync(string RayHistoryServerId, GetRayHistoryServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetRayHistoryServerWithOptionsAsync(RayHistoryServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the information of a TensorBoard instance.</para>
         /// </summary>
         /// 
@@ -4059,6 +4473,256 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>列出资源RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRayHistoryServersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRayHistoryServersResponse
+        /// </returns>
+        public ListRayHistoryServersResponse ListRayHistoryServersWithOptions(ListRayHistoryServersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                query["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdPrefix))
+            {
+                query["IdPrefix"] = request.IdPrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifiedAfter))
+            {
+                query["ModifiedAfter"] = request.ModifiedAfter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                query["PaymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowOwn))
+            {
+                query["ShowOwn"] = request.ShowOwn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdForFilter))
+            {
+                query["UserIdForFilter"] = request.UserIdForFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRayHistoryServers",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/rayhistoryservers",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRayHistoryServersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出资源RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRayHistoryServersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRayHistoryServersResponse
+        /// </returns>
+        public async Task<ListRayHistoryServersResponse> ListRayHistoryServersWithOptionsAsync(ListRayHistoryServersRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                query["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdPrefix))
+            {
+                query["IdPrefix"] = request.IdPrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifiedAfter))
+            {
+                query["ModifiedAfter"] = request.ModifiedAfter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Order))
+            {
+                query["Order"] = request.Order;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
+            {
+                query["PaymentType"] = request.PaymentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceId))
+            {
+                query["ResourceId"] = request.ResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShowOwn))
+            {
+                query["ShowOwn"] = request.ShowOwn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["SortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdForFilter))
+            {
+                query["UserIdForFilter"] = request.UserIdForFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Username))
+            {
+                query["Username"] = request.Username;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRayHistoryServers",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/rayhistoryservers",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRayHistoryServersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出资源RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRayHistoryServersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRayHistoryServersResponse
+        /// </returns>
+        public ListRayHistoryServersResponse ListRayHistoryServers(ListRayHistoryServersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListRayHistoryServersWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出资源RayHistoryServer</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRayHistoryServersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRayHistoryServersResponse
+        /// </returns>
+        public async Task<ListRayHistoryServersResponse> ListRayHistoryServersAsync(ListRayHistoryServersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListRayHistoryServersWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of TensorBoard instances.</para>
         /// </summary>
         /// 
@@ -4471,6 +5135,124 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>启动 Ray History Server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartRayHistoryServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRayHistoryServerResponse
+        /// </returns>
+        public StartRayHistoryServerResponse StartRayHistoryServerWithOptions(string RayHistoryServerId, StartRayHistoryServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartRayHistoryServer",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/rayhistoryservers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RayHistoryServerId) + "/start",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartRayHistoryServerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动 Ray History Server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartRayHistoryServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRayHistoryServerResponse
+        /// </returns>
+        public async Task<StartRayHistoryServerResponse> StartRayHistoryServerWithOptionsAsync(string RayHistoryServerId, StartRayHistoryServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StartRayHistoryServer",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/rayhistoryservers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RayHistoryServerId) + "/start",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StartRayHistoryServerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动 Ray History Server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartRayHistoryServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRayHistoryServerResponse
+        /// </returns>
+        public StartRayHistoryServerResponse StartRayHistoryServer(string RayHistoryServerId, StartRayHistoryServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StartRayHistoryServerWithOptions(RayHistoryServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启动 Ray History Server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StartRayHistoryServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StartRayHistoryServerResponse
+        /// </returns>
+        public async Task<StartRayHistoryServerResponse> StartRayHistoryServerAsync(string RayHistoryServerId, StartRayHistoryServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StartRayHistoryServerWithOptionsAsync(RayHistoryServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Starts a TensorBoard instance.</para>
         /// </summary>
         /// 
@@ -4699,6 +5481,124 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await StopJobWithOptionsAsync(JobId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止 Ray History Server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopRayHistoryServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRayHistoryServerResponse
+        /// </returns>
+        public StopRayHistoryServerResponse StopRayHistoryServerWithOptions(string RayHistoryServerId, StopRayHistoryServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopRayHistoryServer",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/rayhistoryservers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RayHistoryServerId) + "/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopRayHistoryServerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止 Ray History Server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopRayHistoryServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRayHistoryServerResponse
+        /// </returns>
+        public async Task<StopRayHistoryServerResponse> StopRayHistoryServerWithOptionsAsync(string RayHistoryServerId, StopRayHistoryServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "StopRayHistoryServer",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/rayhistoryservers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(RayHistoryServerId) + "/stop",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<StopRayHistoryServerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止 Ray History Server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopRayHistoryServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRayHistoryServerResponse
+        /// </returns>
+        public StopRayHistoryServerResponse StopRayHistoryServer(string RayHistoryServerId, StopRayHistoryServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return StopRayHistoryServerWithOptions(RayHistoryServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>停止 Ray History Server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// StopRayHistoryServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// StopRayHistoryServerResponse
+        /// </returns>
+        public async Task<StopRayHistoryServerResponse> StopRayHistoryServerAsync(string RayHistoryServerId, StopRayHistoryServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await StopRayHistoryServerWithOptionsAsync(RayHistoryServerId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

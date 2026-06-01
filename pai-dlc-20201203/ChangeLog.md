@@ -1,3 +1,12 @@
+2026-06-01 Version: 1.9.0
+- Support API CreateRayHistoryServer.
+- Support API DeleteRayHistoryServer.
+- Support API GetRayHistoryServer.
+- Support API ListRayHistoryServers.
+- Support API StartRayHistoryServer.
+- Support API StopRayHistoryServer.
+
+
 2026-05-18 Version: 1.8.3
 - Generated csharp 2020-12-03 for pai-dlc.
 
