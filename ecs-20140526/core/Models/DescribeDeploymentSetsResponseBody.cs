@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public long? AccountId { get; set; }
 
+                [NameInMap("Affinity")]
+                [Validation(Required=false)]
+                public long? Affinity { get; set; }
+
                 [NameInMap("Capacities")]
                 [Validation(Required=false)]
                 public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities Capacities { get; set; }

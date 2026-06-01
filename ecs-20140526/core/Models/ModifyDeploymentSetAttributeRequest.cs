@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDeploymentSetAttributeRequest : TeaModel {
+        [NameInMap("Affinity")]
+        [Validation(Required=false)]
+        public long? Affinity { get; set; }
+
         /// <summary>
         /// <para>The ID of the deployment set.</para>
         /// <para>This parameter is required.</para>

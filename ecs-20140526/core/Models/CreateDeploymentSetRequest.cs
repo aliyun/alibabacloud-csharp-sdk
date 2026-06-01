@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDeploymentSetRequest : TeaModel {
+        [NameInMap("Affinity")]
+        [Validation(Required=false)]
+        public long? Affinity { get; set; }
+
         /// <summary>
         /// <para>The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
