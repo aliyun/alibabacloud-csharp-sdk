@@ -2891,6 +2891,214 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建套餐包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMobileAgentPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMobileAgentPackageResponse
+        /// </returns>
+        public CreateMobileAgentPackageResponse CreateMobileAgentPackageWithOptions(CreateMobileAgentPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditAmount))
+            {
+                query["CreditAmount"] = request.CreditAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditConfig))
+            {
+                query["CreditConfig"] = request.CreditConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileAgentPackageSpec))
+            {
+                query["MobileAgentPackageSpec"] = request.MobileAgentPackageSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallbackUrl))
+            {
+                query["PaidCallbackUrl"] = request.PaidCallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMobileAgentPackage",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMobileAgentPackageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建套餐包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMobileAgentPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMobileAgentPackageResponse
+        /// </returns>
+        public async Task<CreateMobileAgentPackageResponse> CreateMobileAgentPackageWithOptionsAsync(CreateMobileAgentPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Amount))
+            {
+                query["Amount"] = request.Amount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizRegionId))
+            {
+                query["BizRegionId"] = request.BizRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditAmount))
+            {
+                query["CreditAmount"] = request.CreditAmount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreditConfig))
+            {
+                query["CreditConfig"] = request.CreditConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
+            {
+                query["InstanceName"] = request.InstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileAgentPackageSpec))
+            {
+                query["MobileAgentPackageSpec"] = request.MobileAgentPackageSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallbackUrl))
+            {
+                query["PaidCallbackUrl"] = request.PaidCallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMobileAgentPackage",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMobileAgentPackageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建套餐包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMobileAgentPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMobileAgentPackageResponse
+        /// </returns>
+        public CreateMobileAgentPackageResponse CreateMobileAgentPackage(CreateMobileAgentPackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateMobileAgentPackageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建套餐包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateMobileAgentPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMobileAgentPackageResponse
+        /// </returns>
+        public async Task<CreateMobileAgentPackageResponse> CreateMobileAgentPackageAsync(CreateMobileAgentPackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateMobileAgentPackageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a policy.</para>
         /// </summary>
         /// 
@@ -7131,6 +7339,166 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeMetricTopWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询节点套餐详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMobileAgentPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMobileAgentPackageResponse
+        /// </returns>
+        public DescribeMobileAgentPackageResponse DescribeMobileAgentPackageWithOptions(DescribeMobileAgentPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageIds))
+            {
+                query["PackageIds"] = request.PackageIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageSpec))
+            {
+                query["PackageSpec"] = request.PackageSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageStatus))
+            {
+                query["PackageStatus"] = request.PackageStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMobileAgentPackage",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMobileAgentPackageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询节点套餐详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMobileAgentPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMobileAgentPackageResponse
+        /// </returns>
+        public async Task<DescribeMobileAgentPackageResponse> DescribeMobileAgentPackageWithOptionsAsync(DescribeMobileAgentPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageIds))
+            {
+                query["PackageIds"] = request.PackageIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageSpec))
+            {
+                query["PackageSpec"] = request.PackageSpec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageStatus))
+            {
+                query["PackageStatus"] = request.PackageStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNum))
+            {
+                query["PageNum"] = request.PageNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMobileAgentPackage",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMobileAgentPackageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询节点套餐详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMobileAgentPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMobileAgentPackageResponse
+        /// </returns>
+        public DescribeMobileAgentPackageResponse DescribeMobileAgentPackage(DescribeMobileAgentPackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeMobileAgentPackageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询节点套餐详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeMobileAgentPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMobileAgentPackageResponse
+        /// </returns>
+        public async Task<DescribeMobileAgentPackageResponse> DescribeMobileAgentPackageAsync(DescribeMobileAgentPackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeMobileAgentPackageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13447,6 +13815,174 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RenewCloudPhoneNodesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>续费MobileAgent套餐包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewMobileAgentPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewMobileAgentPackageResponse
+        /// </returns>
+        public RenewMobileAgentPackageResponse RenewMobileAgentPackageWithOptions(RenewMobileAgentPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileAgentPackageIds))
+            {
+                query["MobileAgentPackageIds"] = request.MobileAgentPackageIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallbackUrl))
+            {
+                query["PaidCallbackUrl"] = request.PaidCallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenewMobileAgentPackage",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenewMobileAgentPackageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>续费MobileAgent套餐包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewMobileAgentPackageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewMobileAgentPackageResponse
+        /// </returns>
+        public async Task<RenewMobileAgentPackageResponse> RenewMobileAgentPackageWithOptionsAsync(RenewMobileAgentPackageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoRenew))
+            {
+                query["AutoRenew"] = request.AutoRenew;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MobileAgentPackageIds))
+            {
+                query["MobileAgentPackageIds"] = request.MobileAgentPackageIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaidCallbackUrl))
+            {
+                query["PaidCallbackUrl"] = request.PaidCallbackUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodUnit))
+            {
+                query["PeriodUnit"] = request.PeriodUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenewMobileAgentPackage",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenewMobileAgentPackageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>续费MobileAgent套餐包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewMobileAgentPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewMobileAgentPackageResponse
+        /// </returns>
+        public RenewMobileAgentPackageResponse RenewMobileAgentPackage(RenewMobileAgentPackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RenewMobileAgentPackageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>续费MobileAgent套餐包</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewMobileAgentPackageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewMobileAgentPackageResponse
+        /// </returns>
+        public async Task<RenewMobileAgentPackageResponse> RenewMobileAgentPackageAsync(RenewMobileAgentPackageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RenewMobileAgentPackageWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
