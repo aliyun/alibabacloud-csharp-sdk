@@ -1342,6 +1342,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["Name"] = request.Name;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedSessionId))
+            {
+                query["RelatedSessionId"] = request.RelatedSessionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleTaskConfigShrink))
             {
                 query["ScheduleTaskConfig"] = request.ScheduleTaskConfigShrink;
@@ -1449,6 +1453,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedSessionId))
+            {
+                query["RelatedSessionId"] = request.RelatedSessionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleTaskConfigShrink))
             {
@@ -4259,6 +4267,150 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除工作空间代码以及目录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkspaceCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkspaceCodeResponse
+        /// </returns>
+        public DeleteWorkspaceCodeResponse DeleteWorkspaceCodeWithOptions(DeleteWorkspaceCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Repo))
+            {
+                query["Repo"] = request.Repo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Symlink))
+            {
+                query["Symlink"] = request.Symlink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWorkspaceCode",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWorkspaceCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作空间代码以及目录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkspaceCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkspaceCodeResponse
+        /// </returns>
+        public async Task<DeleteWorkspaceCodeResponse> DeleteWorkspaceCodeWithOptionsAsync(DeleteWorkspaceCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Repo))
+            {
+                query["Repo"] = request.Repo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Symlink))
+            {
+                query["Symlink"] = request.Symlink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWorkspaceCode",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWorkspaceCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作空间代码以及目录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkspaceCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkspaceCodeResponse
+        /// </returns>
+        public DeleteWorkspaceCodeResponse DeleteWorkspaceCode(DeleteWorkspaceCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteWorkspaceCodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除工作空间代码以及目录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkspaceCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkspaceCodeResponse
+        /// </returns>
+        public async Task<DeleteWorkspaceCodeResponse> DeleteWorkspaceCodeAsync(DeleteWorkspaceCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteWorkspaceCodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>DescribeCustomAgent</para>
         /// </summary>
         /// 
@@ -6751,6 +6903,142 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetNotebookTaskStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取工作空间的代码文件内容</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceCodeResponse
+        /// </returns>
+        public GetWorkspaceCodeResponse GetWorkspaceCodeWithOptions(GetWorkspaceCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iac))
+            {
+                query["Iac"] = request.Iac;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkspaceCode",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkspaceCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取工作空间的代码文件内容</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceCodeResponse
+        /// </returns>
+        public async Task<GetWorkspaceCodeResponse> GetWorkspaceCodeWithOptionsAsync(GetWorkspaceCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iac))
+            {
+                query["Iac"] = request.Iac;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkspaceCode",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkspaceCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取工作空间的代码文件内容</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceCodeResponse
+        /// </returns>
+        public GetWorkspaceCodeResponse GetWorkspaceCode(GetWorkspaceCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetWorkspaceCodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取工作空间的代码文件内容</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetWorkspaceCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspaceCodeResponse
+        /// </returns>
+        public async Task<GetWorkspaceCodeResponse> GetWorkspaceCodeAsync(GetWorkspaceCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetWorkspaceCodeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10711,6 +10999,134 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>列出工作空间目录下的code文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceCodeResponse
+        /// </returns>
+        public ListWorkspaceCodeResponse ListWorkspaceCodeWithOptions(ListWorkspaceCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkspaceCode",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkspaceCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作空间目录下的code文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceCodeResponse
+        /// </returns>
+        public async Task<ListWorkspaceCodeResponse> ListWorkspaceCodeWithOptionsAsync(ListWorkspaceCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkspaceCode",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkspaceCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作空间目录下的code文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceCodeResponse
+        /// </returns>
+        public ListWorkspaceCodeResponse ListWorkspaceCode(ListWorkspaceCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListWorkspaceCodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列出工作空间目录下的code文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListWorkspaceCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspaceCodeResponse
+        /// </returns>
+        public async Task<ListWorkspaceCodeResponse> ListWorkspaceCodeAsync(ListWorkspaceCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListWorkspaceCodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>ModifyCustomAgent</para>
         /// </summary>
         /// 
@@ -10785,6 +11201,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedSessionId))
+            {
+                query["RelatedSessionId"] = request.RelatedSessionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleTaskConfigShrink))
             {
@@ -10897,6 +11317,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RelatedSessionId))
+            {
+                query["RelatedSessionId"] = request.RelatedSessionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleTaskConfigShrink))
             {
@@ -11367,6 +11791,178 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RemoveUserToDataAgentWorkspaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存工作空间代码，如果文件不存在则自动新建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveWorkspaceCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveWorkspaceCodeResponse
+        /// </returns>
+        public SaveWorkspaceCodeResponse SaveWorkspaceCodeWithOptions(SaveWorkspaceCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iac))
+            {
+                query["Iac"] = request.Iac;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mtime))
+            {
+                query["Mtime"] = request.Mtime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Repo))
+            {
+                query["Repo"] = request.Repo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                body["Path"] = request.Path;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveWorkspaceCode",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveWorkspaceCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存工作空间代码，如果文件不存在则自动新建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveWorkspaceCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveWorkspaceCodeResponse
+        /// </returns>
+        public async Task<SaveWorkspaceCodeResponse> SaveWorkspaceCodeWithOptionsAsync(SaveWorkspaceCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iac))
+            {
+                query["Iac"] = request.Iac;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mtime))
+            {
+                query["Mtime"] = request.Mtime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Repo))
+            {
+                query["Repo"] = request.Repo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                body["Path"] = request.Path;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveWorkspaceCode",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveWorkspaceCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存工作空间代码，如果文件不存在则自动新建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveWorkspaceCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveWorkspaceCodeResponse
+        /// </returns>
+        public SaveWorkspaceCodeResponse SaveWorkspaceCode(SaveWorkspaceCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SaveWorkspaceCodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>保存工作空间代码，如果文件不存在则自动新建</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveWorkspaceCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveWorkspaceCodeResponse
+        /// </returns>
+        public async Task<SaveWorkspaceCodeResponse> SaveWorkspaceCodeAsync(SaveWorkspaceCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SaveWorkspaceCodeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

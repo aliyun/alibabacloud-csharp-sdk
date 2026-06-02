@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("RelatedSessionId")]
+        [Validation(Required=false)]
+        public string RelatedSessionId { get; set; }
+
         [NameInMap("ScheduleTaskConfig")]
         [Validation(Required=false)]
         public string ScheduleTaskConfigShrink { get; set; }

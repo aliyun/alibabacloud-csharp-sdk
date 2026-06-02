@@ -213,6 +213,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>5xyz...</para>
+            /// </summary>
+            [NameInMap("RelatedSessionId")]
+            [Validation(Required=false)]
+            public string RelatedSessionId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>2025-12-11T14:04:32.000+00:00</para>
             /// </summary>
             [NameInMap("ReleaseTime")]
