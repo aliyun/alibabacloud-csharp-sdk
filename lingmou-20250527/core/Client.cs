@@ -1843,6 +1843,124 @@ namespace AlibabaCloud.SDK.LingMou20250527
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除播报贴图</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteBroadcastStickerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBroadcastStickerResponse
+        /// </returns>
+        public DeleteBroadcastStickerResponse DeleteBroadcastStickerWithOptions(string stickerId, DeleteBroadcastStickerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteBroadcastSticker",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/broadcast/materials/stickers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(stickerId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteBroadcastStickerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除播报贴图</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteBroadcastStickerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBroadcastStickerResponse
+        /// </returns>
+        public async Task<DeleteBroadcastStickerResponse> DeleteBroadcastStickerWithOptionsAsync(string stickerId, DeleteBroadcastStickerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteBroadcastSticker",
+                Version = "2025-05-27",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/broadcast/materials/stickers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(stickerId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteBroadcastStickerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除播报贴图</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteBroadcastStickerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBroadcastStickerResponse
+        /// </returns>
+        public DeleteBroadcastStickerResponse DeleteBroadcastSticker(string stickerId, DeleteBroadcastStickerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteBroadcastStickerWithOptions(stickerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除播报贴图</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteBroadcastStickerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteBroadcastStickerResponse
+        /// </returns>
+        public async Task<DeleteBroadcastStickerResponse> DeleteBroadcastStickerAsync(string stickerId, DeleteBroadcastStickerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteBroadcastStickerWithOptionsAsync(stickerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询播报模板详情</para>
         /// </summary>
         /// 
