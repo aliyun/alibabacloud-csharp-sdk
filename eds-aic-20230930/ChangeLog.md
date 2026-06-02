@@ -1,3 +1,8 @@
+2026-06-02 Version: 4.24.0
+- Support API CreateCreditPackage.
+- Support API DescribeCreditPackage.
+
+
 2026-06-01 Version: 4.23.0
 - Support API CreateMobileAgentPackage.
 - Support API DescribeMobileAgentPackage.
