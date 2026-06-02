@@ -189,6 +189,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 
                     /// <summary>
                     /// <b>Example:</b>
+                    /// <para>被叫用户</para>
+                    /// </summary>
+                    [NameInMap("HangUpDirection")]
+                    [Validation(Required=false)]
+                    public string HangUpDirection { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
                     [NameInMap("HasAnswered")]

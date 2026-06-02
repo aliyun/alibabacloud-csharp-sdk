@@ -701,6 +701,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 [Validation(Required=false)]
                 public string TaskId { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
+                [NameInMap("TotalDuration")]
+                [Validation(Required=false)]
+                public long? TotalDuration { get; set; }
+
             }
 
         }

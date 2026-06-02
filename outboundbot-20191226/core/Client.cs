@@ -3946,9 +3946,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         /// <para>清空归属地号码库</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DeleteAllNumberDistrictInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -3979,9 +3976,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         /// <para>清空归属地号码库</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// DeleteAllNumberDistrictInfoRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -9643,9 +9637,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetBaseStrategyPeriodWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
-        /// GetConcurrentConversationQuotaRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -9671,9 +9662,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetConcurrentConversationQuotaResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <param name="request">
-        /// GetConcurrentConversationQuotaRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -10518,9 +10506,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         /// <para>获取号码库模板下载链接</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetNumberDistrictInfoTemplateDownloadUrlRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -10551,9 +10536,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         /// <para>获取号码库模板下载链接</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetNumberDistrictInfoTemplateDownloadUrlRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -10956,9 +10938,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         /// <para>GetVersion</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetVersionRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -10989,9 +10968,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         /// <para>GetVersion</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetVersionRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -11418,9 +11394,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         /// <para>租户绑定号码列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListAllTenantBindNumberBindingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -11451,9 +11424,6 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
         /// <para>租户绑定号码列表</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListAllTenantBindNumberBindingRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
