@@ -913,6 +913,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return await CreateInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>测试窗开启文本对话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DebugBeginDialogueRequest
         /// </param>
@@ -947,6 +952,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShouldUseSandBox))
+            {
+                query["ShouldUseSandBox"] = request.ShouldUseSandBox;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -966,6 +975,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DebugBeginDialogueResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>测试窗开启文本对话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DebugBeginDialogueRequest
         /// </param>
@@ -1000,6 +1014,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             {
                 query["InstanceId"] = request.InstanceId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShouldUseSandBox))
+            {
+                query["ShouldUseSandBox"] = request.ShouldUseSandBox;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -1019,6 +1037,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return TeaModel.ToObject<DebugBeginDialogueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>测试窗开启文本对话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DebugBeginDialogueRequest
         /// </param>
@@ -1032,6 +1055,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             return DebugBeginDialogueWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>测试窗开启文本对话</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DebugBeginDialogueRequest
         /// </param>

@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("ShouldUseSandBox")]
+        [Validation(Required=false)]
+        public bool? ShouldUseSandBox { get; set; }
+
     }
 
 }
