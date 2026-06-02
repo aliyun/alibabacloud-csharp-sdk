@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
         [NameInMap("ScoreNum")]
         [Validation(Required=false)]
-        public int? ScoreNum { get; set; }
+        public float? ScoreNum { get; set; }
 
         [NameInMap("ScoreNumType")]
         [Validation(Required=false)]
