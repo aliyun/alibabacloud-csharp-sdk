@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Wyota20210420.Models
 {
-    public class DescribeDeviceSeatsResponse : TeaModel {
+    public class DescribeClientsResponse : TeaModel {
         [NameInMap("headers")]
         [Validation(Required=false)]
         public Dictionary<string, string> Headers { get; set; }
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
 
         [NameInMap("body")]
         [Validation(Required=false)]
-        public DescribeDeviceSeatsResponseBody Body { get; set; }
+        public DescribeClientsResponseBody Body { get; set; }
 
     }
 
