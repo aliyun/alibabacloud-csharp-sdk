@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.ModelService20220614.Models
         [Validation(Required=false)]
         public string Host { get; set; }
 
+        [NameInMap("InnerToken")]
+        [Validation(Required=false)]
+        public string InnerToken { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>success</para>

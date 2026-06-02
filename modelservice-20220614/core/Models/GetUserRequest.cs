@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.ModelService20220614.Models
 {
     public class GetUserRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>sales_pick</para>
-        /// </summary>
-        [NameInMap("scene_type")]
+        [NameInMap("channel")]
         [Validation(Required=false)]
-        public string SceneType { get; set; }
+        public string Channel { get; set; }
+
+        [NameInMap("region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
 
     }
 

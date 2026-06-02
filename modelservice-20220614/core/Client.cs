@@ -189,9 +189,13 @@ namespace AlibabaCloud.SDK.ModelService20220614
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
             {
-                query["scene_type"] = request.SceneType;
+                query["channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["region"] = request.Region;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -235,9 +239,13 @@ namespace AlibabaCloud.SDK.ModelService20220614
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneType))
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
             {
-                query["scene_type"] = request.SceneType;
+                query["channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["region"] = request.Region;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
