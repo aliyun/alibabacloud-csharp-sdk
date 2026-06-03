@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Wss20211221.Models
 {
     public class CreateMultiOrderRequest : TeaModel {
+        [NameInMap("ChannelCookie")]
+        [Validation(Required=false)]
+        public string ChannelCookie { get; set; }
+
         [NameInMap("OrderItems")]
         [Validation(Required=false)]
         public List<CreateMultiOrderRequestOrderItems> OrderItems { get; set; }

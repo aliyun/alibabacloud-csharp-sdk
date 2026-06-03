@@ -62,6 +62,10 @@ namespace AlibabaCloud.SDK.Wss20211221
                 request.PropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Properties, "Properties", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCookie))
+            {
+                query["ChannelCookie"] = request.ChannelCookie;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderItems))
             {
                 query["OrderItems"] = request.OrderItems;
@@ -122,6 +126,10 @@ namespace AlibabaCloud.SDK.Wss20211221
                 request.PropertiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Properties, "Properties", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelCookie))
+            {
+                query["ChannelCookie"] = request.ChannelCookie;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderItems))
             {
                 query["OrderItems"] = request.OrderItems;
