@@ -8,28 +8,28 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
-    public class SaveBatchTaskForDomainNameProxyServiceRequest : TeaModel {
+    public class SaveSingleTaskForReserveDropListDomainRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("ContactTemplateId")]
+        [Validation(Required=false)]
+        public string ContactTemplateId { get; set; }
+
+        [NameInMap("Dns1")]
+        [Validation(Required=false)]
+        public string Dns1 { get; set; }
+
+        [NameInMap("Dns2")]
+        [Validation(Required=false)]
+        public string Dns2 { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
-        public List<string> DomainName { get; set; }
-
-        [NameInMap("Lang")]
-        [Validation(Required=false)]
-        public string Lang { get; set; }
-
-        [NameInMap("UserClientIp")]
-        [Validation(Required=false)]
-        public string UserClientIp { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("status")]
-        [Validation(Required=false)]
-        public bool? Status { get; set; }
+        public string DomainName { get; set; }
 
     }
 

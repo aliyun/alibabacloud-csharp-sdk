@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class SaveSingleTaskForCreatingOrderTransferRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AuthorizationCode")]
         [Validation(Required=false)]
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         public string CouponNo { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         public string PromotionNo { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegistrantProfileId")]
         [Validation(Required=false)]

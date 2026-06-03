@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class DeleteEmailVerificationRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]

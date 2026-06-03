@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         public string Country { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
@@ -33,21 +33,21 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IdentityCredential")]
         [Validation(Required=false)]
         public string IdentityCredential { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IdentityCredentialNo")]
         [Validation(Required=false)]
         public string IdentityCredentialNo { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IdentityCredentialType")]
         [Validation(Required=false)]
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         public string RegistrantOrganization { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegistrantType")]
         [Validation(Required=false)]
         public string RegistrantType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TelArea")]
         [Validation(Required=false)]
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         public string TelExt { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Telephone")]
         [Validation(Required=false)]
         public string Telephone { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TransferOutProhibited")]
         [Validation(Required=false)]

@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class SaveSingleTaskForModifyingDSRecordRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Algorithm")]
         [Validation(Required=false)]
         public int? Algorithm { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Digest")]
         [Validation(Required=false)]
         public string Digest { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DigestType")]
         [Validation(Required=false)]
         public int? DigestType { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("KeyTag")]
         [Validation(Required=false)]

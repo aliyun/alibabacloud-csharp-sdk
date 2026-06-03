@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         public string Dns2 { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]

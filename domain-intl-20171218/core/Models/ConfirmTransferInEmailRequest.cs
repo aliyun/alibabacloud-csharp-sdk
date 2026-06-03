@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class ConfirmTransferInEmailRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public List<string> DomainName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]

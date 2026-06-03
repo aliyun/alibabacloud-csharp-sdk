@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class SaveSingleTaskForDeletingDnsHostRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DnsName")]
         [Validation(Required=false)]
         public string DnsName { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Ip")]
         [Validation(Required=false)]

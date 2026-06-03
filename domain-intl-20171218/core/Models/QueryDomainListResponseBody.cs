@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class QueryDomainListResponseBody : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("CurrentPageNum")]
         [Validation(Required=false)]
         public int? CurrentPageNum { get; set; }
@@ -85,26 +89,50 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 
         }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>False</para>
+        /// </summary>
         [NameInMap("NextPage")]
         [Validation(Required=false)]
         public bool? NextPage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>50</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>True</para>
+        /// </summary>
         [NameInMap("PrePage")]
         [Validation(Required=false)]
         public bool? PrePage { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("TotalItemNum")]
         [Validation(Required=false)]
         public int? TotalItemNum { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("TotalPageNum")]
         [Validation(Required=false)]
         public int? TotalPageNum { get; set; }

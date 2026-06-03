@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class RegistrantProfileRealNameVerificationRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IdentityCredential")]
         [Validation(Required=false)]
         public string IdentityCredential { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IdentityCredentialNo")]
         [Validation(Required=false)]
         public string IdentityCredentialNo { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IdentityCredentialType")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegistrantProfileID")]
         [Validation(Required=false)]

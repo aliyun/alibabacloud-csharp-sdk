@@ -1,6 +1,3 @@
-/**
- *
- */
 // This file is auto-generated, don't edit it. Thanks.
 
 using System;
@@ -17,7 +14,7 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TaskDetailNo")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
 {
     public class SaveBatchTaskForReserveDropListDomainRequest : TeaModel {
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ContactTemplateId")]
         [Validation(Required=false)]
         public string ContactTemplateId { get; set; }
 
         /// <summary>
-        /// This parameter is required.
+        /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
             public string Dns2 { get; set; }
 
             /// <summary>
-            /// This parameter is required.
+            /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("DomainName")]
             [Validation(Required=false)]

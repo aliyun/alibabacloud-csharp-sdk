@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.Domain_intl20171218.Models
                 [Validation(Required=false)]
                 public string ErrorMsg { get; set; }
 
+                [NameInMap("FailReason")]
+                [Validation(Required=false)]
+                public string FailReason { get; set; }
+
                 [NameInMap("InstanceId")]
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
