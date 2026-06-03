@@ -67,6 +67,10 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("isE2B")]
+        [Validation(Required=false)]
+        public bool? IsE2B { get; set; }
+
         /// <summary>
         /// <para>The time when the custom domain name was last updated.</para>
         /// 
