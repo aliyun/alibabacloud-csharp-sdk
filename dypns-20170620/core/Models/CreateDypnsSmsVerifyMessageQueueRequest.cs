@@ -1,0 +1,52 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Dypns20170620.Models
+{
+    public class CreateDypnsSmsVerifyMessageQueueRequest : TeaModel {
+        [NameInMap("OwnerId")]
+        [Validation(Required=false)]
+        public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <list type="bullet">
+        /// <item><description></description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("QueryQueueTypes")]
+        [Validation(Required=false)]
+        public string QueryQueueTypes { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>dypnsSmsVerifyMnsReport</para>
+        /// </summary>
+        [NameInMap("QueueType")]
+        [Validation(Required=false)]
+        public string QueueType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
+        [NameInMap("ResourceOwnerAccount")]
+        [Validation(Required=false)]
+        public string ResourceOwnerAccount { get; set; }
+
+        [NameInMap("ResourceOwnerId")]
+        [Validation(Required=false)]
+        public long? ResourceOwnerId { get; set; }
+
+    }
+
+}
