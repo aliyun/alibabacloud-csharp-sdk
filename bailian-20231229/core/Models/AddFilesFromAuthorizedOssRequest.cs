@@ -56,6 +56,36 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             [Validation(Required=false)]
             public string OssKey { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>AUTO_SELECT</para>
+            /// </summary>
+            [NameInMap("Parser")]
+            [Validation(Required=false)]
+            public string Parser { get; set; }
+
+            [NameInMap("ParserConfig")]
+            [Validation(Required=false)]
+            public AddFilesFromAuthorizedOssRequestFileDetailsParserConfig ParserConfig { get; set; }
+            public class AddFilesFromAuthorizedOssRequestFileDetailsParserConfig : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>qwen-vl-max</para>
+                /// </summary>
+                [NameInMap("ModelName")]
+                [Validation(Required=false)]
+                public string ModelName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>#角色 你是一个专业的图片内容标注人员，擅长识别并描述出图片中的内容。 # 任务目标 请结合输入图片，详细描述图片中的内容。</para>
+                /// </summary>
+                [NameInMap("ModelPrompt")]
+                [Validation(Required=false)]
+                public string ModelPrompt { get; set; }
+
+            }
+
         }
 
         /// <summary>
