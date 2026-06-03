@@ -9,17 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_dbaudit20180320.Models
 {
     public class StartInstanceRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
-        [NameInMap("VswitchId")]
-        [Validation(Required=false)]
-        public string VswitchId { get; set; }
-
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("VswitchId")]
+        [Validation(Required=false)]
+        public string VswitchId { get; set; }
 
     }
 

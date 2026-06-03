@@ -9,13 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_dbaudit20180320.Models
 {
     public class DescribeSyncInfoRequest : TeaModel {
-        [NameInMap("RegionId")]
-        [Validation(Required=false)]
-        public string RegionId { get; set; }
-
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("RegionId")]
+        [Validation(Required=false)]
+        public string RegionId { get; set; }
 
     }
 

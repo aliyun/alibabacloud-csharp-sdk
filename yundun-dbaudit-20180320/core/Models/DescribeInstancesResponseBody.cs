@@ -9,42 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_dbaudit20180320.Models
 {
     public class DescribeInstancesResponseBody : TeaModel {
-        [NameInMap("TotalCount")]
-        [Validation(Required=false)]
-        public long? TotalCount { get; set; }
-
-        [NameInMap("RequestId")]
-        [Validation(Required=false)]
-        public string RequestId { get; set; }
-
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeInstancesResponseBodyInstances> Instances { get; set; }
         public class DescribeInstancesResponseBodyInstances : TeaModel {
-            [NameInMap("VpcId")]
-            [Validation(Required=false)]
-            public string VpcId { get; set; }
-
-            [NameInMap("VswitchId")]
-            [Validation(Required=false)]
-            public string VswitchId { get; set; }
-
-            [NameInMap("InternetIp")]
-            [Validation(Required=false)]
-            public string InternetIp { get; set; }
-
-            [NameInMap("NetworkType")]
-            [Validation(Required=false)]
-            public string NetworkType { get; set; }
-
-            [NameInMap("ImageVersionName")]
-            [Validation(Required=false)]
-            public string ImageVersionName { get; set; }
-
-            [NameInMap("SeriesCode")]
-            [Validation(Required=false)]
-            public string SeriesCode { get; set; }
-
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -52,6 +20,50 @@ namespace AlibabaCloud.SDK.Yundun_dbaudit20180320.Models
             [NameInMap("EcsStatus")]
             [Validation(Required=false)]
             public string EcsStatus { get; set; }
+
+            [NameInMap("ExpireTime")]
+            [Validation(Required=false)]
+            public long? ExpireTime { get; set; }
+
+            [NameInMap("ImageVersionName")]
+            [Validation(Required=false)]
+            public string ImageVersionName { get; set; }
+
+            [NameInMap("InstanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            [NameInMap("InstanceStatus")]
+            [Validation(Required=false)]
+            public string InstanceStatus { get; set; }
+
+            [NameInMap("InternetEndpoint")]
+            [Validation(Required=false)]
+            public string InternetEndpoint { get; set; }
+
+            [NameInMap("InternetIp")]
+            [Validation(Required=false)]
+            public string InternetIp { get; set; }
+
+            [NameInMap("IntranetEndpoint")]
+            [Validation(Required=false)]
+            public string IntranetEndpoint { get; set; }
+
+            [NameInMap("IntranetIp")]
+            [Validation(Required=false)]
+            public string IntranetIp { get; set; }
+
+            [NameInMap("Legacy")]
+            [Validation(Required=false)]
+            public bool? Legacy { get; set; }
+
+            [NameInMap("LicenseCode")]
+            [Validation(Required=false)]
+            public string LicenseCode { get; set; }
+
+            [NameInMap("NetworkType")]
+            [Validation(Required=false)]
+            public string NetworkType { get; set; }
 
             [NameInMap("Operatable")]
             [Validation(Required=false)]
@@ -61,41 +73,21 @@ namespace AlibabaCloud.SDK.Yundun_dbaudit20180320.Models
             [Validation(Required=false)]
             public int? PlanUpgradeStatus { get; set; }
 
-            [NameInMap("ExpireTime")]
+            [NameInMap("PlanUpgradeable")]
             [Validation(Required=false)]
-            public long? ExpireTime { get; set; }
-
-            [NameInMap("Upgradeable")]
-            [Validation(Required=false)]
-            public bool? Upgradeable { get; set; }
-
-            [NameInMap("Legacy")]
-            [Validation(Required=false)]
-            public bool? Legacy { get; set; }
-
-            [NameInMap("InstanceId")]
-            [Validation(Required=false)]
-            public string InstanceId { get; set; }
-
-            [NameInMap("InternetEndpoint")]
-            [Validation(Required=false)]
-            public string InternetEndpoint { get; set; }
-
-            [NameInMap("IntranetIp")]
-            [Validation(Required=false)]
-            public string IntranetIp { get; set; }
-
-            [NameInMap("Renewable")]
-            [Validation(Required=false)]
-            public bool? Renewable { get; set; }
+            public bool? PlanUpgradeable { get; set; }
 
             [NameInMap("RegionId")]
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
-            [NameInMap("IntranetEndpoint")]
+            [NameInMap("Renewable")]
             [Validation(Required=false)]
-            public string IntranetEndpoint { get; set; }
+            public bool? Renewable { get; set; }
+
+            [NameInMap("SeriesCode")]
+            [Validation(Required=false)]
+            public string SeriesCode { get; set; }
 
             [NameInMap("StartTime")]
             [Validation(Required=false)]
@@ -105,19 +97,27 @@ namespace AlibabaCloud.SDK.Yundun_dbaudit20180320.Models
             [Validation(Required=false)]
             public int? UpgradeStatus { get; set; }
 
-            [NameInMap("PlanUpgradeable")]
+            [NameInMap("Upgradeable")]
             [Validation(Required=false)]
-            public bool? PlanUpgradeable { get; set; }
+            public bool? Upgradeable { get; set; }
 
-            [NameInMap("InstanceStatus")]
+            [NameInMap("VpcId")]
             [Validation(Required=false)]
-            public string InstanceStatus { get; set; }
+            public string VpcId { get; set; }
 
-            [NameInMap("LicenseCode")]
+            [NameInMap("VswitchId")]
             [Validation(Required=false)]
-            public string LicenseCode { get; set; }
+            public string VswitchId { get; set; }
 
         }
+
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+        [NameInMap("TotalCount")]
+        [Validation(Required=false)]
+        public long? TotalCount { get; set; }
 
     }
 

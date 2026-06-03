@@ -9,13 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Yundun_dbaudit20180320.Models
 {
     public class ModifyInstanceAttributeRequest : TeaModel {
-        [NameInMap("InstanceId")]
-        [Validation(Required=false)]
-        public string InstanceId { get; set; }
-
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
+
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// </summary>
+        [NameInMap("InstanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
 
         [NameInMap("RegionId")]
         [Validation(Required=false)]
