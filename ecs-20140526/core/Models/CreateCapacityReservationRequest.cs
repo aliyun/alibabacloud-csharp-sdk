@@ -96,6 +96,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public int? InstanceAmount { get; set; }
 
+        [NameInMap("InstanceChargeType")]
+        [Validation(Required=false)]
+        public string InstanceChargeType { get; set; }
+
         /// <summary>
         /// <para>The instance type. You can create a capacity reservation to reserve the capacity of only one instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the instance types provided by ECS.</para>
         /// <para>This parameter is required.</para>

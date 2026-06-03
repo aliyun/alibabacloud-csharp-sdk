@@ -337,6 +337,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string HttpTokens { get; set; }
 
+                    [NameInMap("InstanceMetadataTags")]
+                    [Validation(Required=false)]
+                    public string InstanceMetadataTags { get; set; }
+
                 }
 
                 [NameInMap("NetworkInterfaces")]

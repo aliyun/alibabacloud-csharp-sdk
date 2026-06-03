@@ -93,6 +93,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [Validation(Required=false)]
                 public string CapacityReservationOwnerId { get; set; }
 
+                [NameInMap("DeliveryTime")]
+                [Validation(Required=false)]
+                public string DeliveryTime { get; set; }
+
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
@@ -176,6 +180,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 [NameInMap("TimeSlot")]
                 [Validation(Required=false)]
                 public string TimeSlot { get; set; }
+
+                [NameInMap("UnlockedTime")]
+                [Validation(Required=false)]
+                public string UnlockedTime { get; set; }
 
             }
 
