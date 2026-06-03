@@ -20796,6 +20796,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["DesktopIds"] = request.DesktopIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {
                 query["GroupId"] = request.GroupId;
@@ -20885,6 +20889,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopIds))
             {
                 query["DesktopIds"] = request.DesktopIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
             {

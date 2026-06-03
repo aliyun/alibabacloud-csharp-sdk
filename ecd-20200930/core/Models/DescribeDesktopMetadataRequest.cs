@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> DesktopIds { get; set; }
 
+        [NameInMap("EndUserId")]
+        [Validation(Required=false)]
+        public string EndUserId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>dg-i1ruuudp92qpj****</para>
