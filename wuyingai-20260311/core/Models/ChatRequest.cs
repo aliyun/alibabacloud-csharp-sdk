@@ -39,6 +39,14 @@ namespace AlibabaCloud.SDK.WuyingAI20260311.Models
             public class ChatRequestInputContent : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
+                /// <para>report.pdf</para>
+                /// </summary>
+                [NameInMap("FileName")]
+                [Validation(Required=false)]
+                public string FileName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
                 /// <para>/workspace/report.pdf</para>
                 /// </summary>
                 [NameInMap("FileUrl")]
