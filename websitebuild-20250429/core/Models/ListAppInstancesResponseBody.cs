@@ -146,6 +146,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         /// <summary>
         /// <para>For the current query, apart from pagination limits, the server processes up to the most recent 1000 records. If the result exceeds 1000 records, <b>ResultLimit</b> is <b>true</b>, please narrow down the time range and search again; otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>False</para>
         /// </summary>
         [NameInMap("ResultLimit")]
         [Validation(Required=false)]
@@ -170,6 +173,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("StartPosition")]
+        [Validation(Required=false)]
+        public string StartPosition { get; set; }
 
         /// <summary>
         /// <para>Reserved parameter.</para>

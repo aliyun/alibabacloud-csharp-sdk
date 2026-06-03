@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public string AgentId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>测试业务空间</para>
+            /// </summary>
             [NameInMap("AgentName")]
             [Validation(Required=false)]
             public string AgentName { get; set; }
@@ -181,6 +185,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string RootErrorCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>系统异常</para>
+        /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }

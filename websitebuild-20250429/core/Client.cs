@@ -1438,9 +1438,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateAction))
+            {
+                query["CreateAction"] = request.CreateAction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployArea))
             {
                 query["DeployArea"] = request.DeployArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
@@ -1449,6 +1457,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extend))
             {
                 query["Extend"] = request.Extend;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
             {
@@ -1465,6 +1477,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
             {
                 query["SiteVersion"] = request.SiteVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
@@ -1532,9 +1548,17 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateAction))
+            {
+                query["CreateAction"] = request.CreateAction;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeployArea))
             {
                 query["DeployArea"] = request.DeployArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Duration))
             {
@@ -1543,6 +1567,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Extend))
             {
                 query["Extend"] = request.Extend;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PaymentType))
             {
@@ -1559,6 +1587,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteVersion))
             {
                 query["SiteVersion"] = request.SiteVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Version))
+            {
+                query["Version"] = request.Version;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))

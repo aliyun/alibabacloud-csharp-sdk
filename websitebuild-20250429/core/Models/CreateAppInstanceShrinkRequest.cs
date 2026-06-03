@@ -40,6 +40,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>OPEN_SUBSCRIPTION</para>
+        /// </summary>
+        [NameInMap("CreateAction")]
+        [Validation(Required=false)]
+        public string CreateAction { get; set; }
+
+        /// <summary>
         /// <para>Deployment area</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +56,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("DeployArea")]
         [Validation(Required=false)]
         public string DeployArea { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>go-to-the-docks-for-french-fries</para>
+        /// </summary>
+        [NameInMap("Description")]
+        [Validation(Required=false)]
+        public string Description { get; set; }
 
         /// <summary>
         /// <para>Required. The number of subscription periods</para>
@@ -68,6 +84,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("Extend")]
         [Validation(Required=false)]
         public string Extend { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>docs</para>
+        /// </summary>
+        [NameInMap("Name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
 
         /// <summary>
         /// <para>Payment type</para>
@@ -99,6 +123,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public int? Quantity { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>rg-aek2smovqqpvuly</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -116,6 +144,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2023-09-01</para>
+        /// </summary>
+        [NameInMap("Version")]
+        [Validation(Required=false)]
+        public string Version { get; set; }
 
     }
 

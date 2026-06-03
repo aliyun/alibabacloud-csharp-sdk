@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAppAssistantAgentRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>测试业务空间</para>
+        /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
         public string AgentName { get; set; }

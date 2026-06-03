@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string PayTime { get; set; }
 
+        [NameInMap("PreviewUrl")]
+        [Validation(Required=false)]
+        public string PreviewUrl { get; set; }
+
         [NameInMap("SeoSite")]
         [Validation(Required=false)]
         public string SeoSite { get; set; }
