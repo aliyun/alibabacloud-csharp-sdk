@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
-    public class UpdateColumnBusinessMetadataRequest : TeaModel {
+    public class UpdateColumnBusinessMetadataShrinkRequest : TeaModel {
         /// <summary>
         /// <b>Example:</b>
         /// <para>{&quot;biz_owner&quot;:[&quot;张三&quot;]}</para>
         /// </summary>
         [NameInMap("CustomAttributes")]
         [Validation(Required=false)]
-        public Dictionary<string, List<string>> CustomAttributes { get; set; }
+        public string CustomAttributesShrink { get; set; }
 
         /// <summary>
         /// <para>The field business description.</para>

@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public ColumnBusinessMetadata BusinessMetadata { get; set; }
         public class ColumnBusinessMetadata : TeaModel {
+            [NameInMap("CustomAttributes")]
+            [Validation(Required=false)]
+            public Dictionary<string, List<string>> CustomAttributes { get; set; }
+
             /// <summary>
             /// <para>A business-level description of the field (supported only by MaxCompute, HMS (EMR clusters) and DLF.</para>
             /// </summary>

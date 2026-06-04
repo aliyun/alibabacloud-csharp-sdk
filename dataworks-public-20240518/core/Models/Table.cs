@@ -52,6 +52,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 
             }
 
+            [NameInMap("CustomAttributes")]
+            [Validation(Required=false)]
+            public Dictionary<string, List<string>> CustomAttributes { get; set; }
+
             /// <summary>
             /// <para>The extended information. Only MaxCompute tables supports this parameter.</para>
             /// </summary>
