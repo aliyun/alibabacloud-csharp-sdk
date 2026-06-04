@@ -4070,9 +4070,6 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <para>Queries service categories.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListServiceCategoriesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4103,9 +4100,6 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <para>Queries service categories.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListServiceCategoriesRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5725,6 +5719,134 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListTagValuesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>续费服务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewServiceInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewServiceInstanceResponse
+        /// </returns>
+        public RenewServiceInstanceResponse RenewServiceInstanceWithOptions(RenewServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenewServiceInstance",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenewServiceInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>续费服务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewServiceInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewServiceInstanceResponse
+        /// </returns>
+        public async Task<RenewServiceInstanceResponse> RenewServiceInstanceWithOptionsAsync(RenewServiceInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceInstanceId))
+            {
+                query["ServiceInstanceId"] = request.ServiceInstanceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RenewServiceInstance",
+                Version = "2021-06-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RenewServiceInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>续费服务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewServiceInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewServiceInstanceResponse
+        /// </returns>
+        public RenewServiceInstanceResponse RenewServiceInstance(RenewServiceInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RenewServiceInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>续费服务实例</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RenewServiceInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RenewServiceInstanceResponse
+        /// </returns>
+        public async Task<RenewServiceInstanceResponse> RenewServiceInstanceAsync(RenewServiceInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RenewServiceInstanceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

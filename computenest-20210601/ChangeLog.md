@@ -1,3 +1,7 @@
+2026-06-04 Version: 3.4.0
+- Support API RenewServiceInstance.
+
+
 2026-03-16 Version: 3.3.3
 - Update API CheckServiceDeployable: add response parameters Body.CheckResults.$.Skippable.
 
