@@ -160,6 +160,20 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("Tags")]
+            [Validation(Required=false)]
+            public List<DescribeExpressConnectRouterAssociationResponseBodyAssociationListTags> Tags { get; set; }
+            public class DescribeExpressConnectRouterAssociationResponseBodyAssociationListTags : TeaModel {
+                [NameInMap("Key")]
+                [Validation(Required=false)]
+                public string Key { get; set; }
+
+                [NameInMap("Value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The TR ID.</para>
             /// 
@@ -169,6 +183,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             [NameInMap("TransitRouterId")]
             [Validation(Required=false)]
             public string TransitRouterId { get; set; }
+
+            [NameInMap("TransitRouterName")]
+            [Validation(Required=false)]
+            public string TransitRouterName { get; set; }
 
             /// <summary>
             /// <para>The ID of the Alibaba Cloud account that owns the TR.</para>
@@ -189,6 +207,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             [NameInMap("VpcId")]
             [Validation(Required=false)]
             public string VpcId { get; set; }
+
+            [NameInMap("VpcName")]
+            [Validation(Required=false)]
+            public string VpcName { get; set; }
 
             /// <summary>
             /// <para>The ID of the Alibaba Cloud account to which the VPC belongs.</para>

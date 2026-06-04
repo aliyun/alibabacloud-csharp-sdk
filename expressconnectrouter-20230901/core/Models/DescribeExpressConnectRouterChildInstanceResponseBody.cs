@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.ExpressConnectRouter20230901.Models
             [Validation(Required=false)]
             public string ChildInstanceId { get; set; }
 
+            [NameInMap("ChildInstanceName")]
+            [Validation(Required=false)]
+            public string ChildInstanceName { get; set; }
+
             /// <summary>
             /// <para>The ID of the Alibaba Cloud account that owns the VBR.</para>
             /// 
