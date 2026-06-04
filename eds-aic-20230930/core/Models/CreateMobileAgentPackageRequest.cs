@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string CreditConfig { get; set; }
 
+        [NameInMap("ImageId")]
+        [Validation(Required=false)]
+        public string ImageId { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>CloudPhone</para>
@@ -72,6 +76,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [NameInMap("MobileAgentPackageSpec")]
         [Validation(Required=false)]
         public string MobileAgentPackageSpec { get; set; }
+
+        [NameInMap("PackageSpecId")]
+        [Validation(Required=false)]
+        public long? PackageSpecId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>

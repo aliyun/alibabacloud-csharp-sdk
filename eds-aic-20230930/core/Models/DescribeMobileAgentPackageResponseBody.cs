@@ -65,6 +65,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string PackageSpec { get; set; }
 
+            [NameInMap("PackageSpecName")]
+            [Validation(Required=false)]
+            public string PackageSpecName { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>ACTIVE</para>

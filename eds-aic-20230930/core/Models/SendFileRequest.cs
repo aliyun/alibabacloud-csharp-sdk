@@ -25,6 +25,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("FileMd5")]
+        [Validation(Required=false)]
+        public string FileMd5 { get; set; }
+
         /// <summary>
         /// <para>The path to which you want to upload the pushed file in the cloud phone instance.</para>
         /// <para>This parameter is required.</para>
