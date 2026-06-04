@@ -62,6 +62,8 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         public string StoragePath { get; set; }
 
         /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>

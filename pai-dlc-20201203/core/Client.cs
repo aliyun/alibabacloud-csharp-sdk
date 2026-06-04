@@ -605,7 +605,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 RayHistoryServer</para>
+        /// <para>Create RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -675,7 +675,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 RayHistoryServer</para>
+        /// <para>Create RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -745,7 +745,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 RayHistoryServer</para>
+        /// <para>Create RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -764,7 +764,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 RayHistoryServer</para>
+        /// <para>Create RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1285,7 +1285,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除RayHistoryServer</para>
+        /// <para>Delete RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1325,7 +1325,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除RayHistoryServer</para>
+        /// <para>Delete RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1365,7 +1365,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除RayHistoryServer</para>
+        /// <para>Delete RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1384,7 +1384,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除RayHistoryServer</para>
+        /// <para>Delete RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2405,6 +2405,208 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取metrics数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMetricsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetricsResponse
+        /// </returns>
+        public GetMetricsResponse GetMetricsWithOptions(GetMetricsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            {
+                query["Dimensions"] = request.Dimensions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Length))
+            {
+                query["Length"] = request.Length;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricName))
+            {
+                query["MetricName"] = request.MetricName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMetrics",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/cms/metrics",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMetricsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取metrics数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMetricsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetricsResponse
+        /// </returns>
+        public async Task<GetMetricsResponse> GetMetricsWithOptionsAsync(GetMetricsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Dimensions))
+            {
+                query["Dimensions"] = request.Dimensions;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
+            {
+                query["JobId"] = request.JobId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Length))
+            {
+                query["Length"] = request.Length;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricName))
+            {
+                query["MetricName"] = request.MetricName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["Namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Token))
+            {
+                query["Token"] = request.Token;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMetrics",
+                Version = "2020-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/cms/metrics",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMetricsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取metrics数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetricsResponse
+        /// </returns>
+        public GetMetricsResponse GetMetrics(GetMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMetricsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取metrics数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMetricsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMetricsResponse
+        /// </returns>
+        public async Task<GetMetricsResponse> GetMetricsAsync(GetMetricsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMetricsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Obtains the system events of a specific node in a job to locate and troubleshoot issues.</para>
         /// </summary>
         /// 
@@ -2879,7 +3081,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 RayHistoryServer</para>
+        /// <para>Query RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2919,7 +3121,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 RayHistoryServer</para>
+        /// <para>Query RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2959,7 +3161,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 RayHistoryServer</para>
+        /// <para>Query RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2978,7 +3180,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 RayHistoryServer</para>
+        /// <para>Query RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4473,7 +4675,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源RayHistoryServer</para>
+        /// <para>List resource RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4579,7 +4781,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源RayHistoryServer</para>
+        /// <para>List resource RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4685,7 +4887,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源RayHistoryServer</para>
+        /// <para>List resource RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4704,7 +4906,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源RayHistoryServer</para>
+        /// <para>List resource RayHistoryServer</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5135,7 +5337,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动 Ray History Server</para>
+        /// <para>Start Ray History Server</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5175,7 +5377,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动 Ray History Server</para>
+        /// <para>Start Ray History Server</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5215,7 +5417,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动 Ray History Server</para>
+        /// <para>Start Ray History Server</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5234,7 +5436,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动 Ray History Server</para>
+        /// <para>Start Ray History Server</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5485,7 +5687,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止 Ray History Server</para>
+        /// <para>Stop Ray History Server</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5525,7 +5727,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止 Ray History Server</para>
+        /// <para>Stop Ray History Server</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5565,7 +5767,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止 Ray History Server</para>
+        /// <para>Stop Ray History Server</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5584,7 +5786,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止 Ray History Server</para>
+        /// <para>Stop Ray History Server</para>
         /// </summary>
         /// 
         /// <param name="request">
