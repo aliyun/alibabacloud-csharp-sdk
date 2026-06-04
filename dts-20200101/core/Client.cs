@@ -23361,6 +23361,10 @@ namespace AlibabaCloud.SDK.Dts20200101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseCount))
+            {
+                query["DatabaseCount"] = request.DatabaseCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
             {
                 query["DtsJobId"] = request.DtsJobId;
@@ -23419,6 +23423,10 @@ namespace AlibabaCloud.SDK.Dts20200101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseCount))
+            {
+                query["DatabaseCount"] = request.DatabaseCount;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtsJobId))
             {
                 query["DtsJobId"] = request.DtsJobId;

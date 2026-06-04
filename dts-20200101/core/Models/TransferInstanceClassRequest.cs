@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Dts20200101.Models
 {
     public class TransferInstanceClassRequest : TeaModel {
+        [NameInMap("DatabaseCount")]
+        [Validation(Required=false)]
+        public int? DatabaseCount { get; set; }
+
         /// <summary>
         /// <para>The ID of the data migration or data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</para>
         /// <para>This parameter is required.</para>
