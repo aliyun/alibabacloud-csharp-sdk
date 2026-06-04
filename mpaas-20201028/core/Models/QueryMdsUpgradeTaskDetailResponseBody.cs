@@ -193,6 +193,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
                     [Validation(Required=false)]
                     public string ReleaseType { get; set; }
 
+                    [NameInMap("ReminderPeriod")]
+                    [Validation(Required=false)]
+                    public string ReminderPeriod { get; set; }
+
                     [NameInMap("RuleJsonList")]
                     [Validation(Required=false)]
                     public List<QueryMdsUpgradeTaskDetailResponseBodyResultContentDataContentRuleJsonList> RuleJsonList { get; set; }

@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public QueryPayOrderToMsenceResponseBodyMpaasUserGamecenterPaymentQuerystatusResponse MpaasUserGamecenterPaymentQuerystatusResponse { get; set; }
         public class QueryPayOrderToMsenceResponseBodyMpaasUserGamecenterPaymentQuerystatusResponse : TeaModel {
+            [NameInMap("CpExtra")]
+            [Validation(Required=false)]
+            public string CpExtra { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>1</para>
