@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListInstancesRequest : TeaModel {
+        [NameInMap("Edition")]
+        [Validation(Required=false)]
+        public string Edition { get; set; }
+
         /// <summary>
         /// <para>The list of instance IDs.</para>
         /// </summary>
