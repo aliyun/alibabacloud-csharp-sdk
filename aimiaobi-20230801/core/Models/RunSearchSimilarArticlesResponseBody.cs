@@ -37,6 +37,10 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [Validation(Required=false)]
             public string Event { get; set; }
 
+            [NameInMap("EventInfo")]
+            [Validation(Required=false)]
+            public string EventInfo { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>3f7045e099474ba28ceca1b4eb6d6e21</para>
