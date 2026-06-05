@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public GetMcpServerResponseBodyData Data { get; set; }
         public class GetMcpServerResponseBodyData : TeaModel {
+            [NameInMap("apiId")]
+            [Validation(Required=false)]
+            public string ApiId { get; set; }
+
             /// <summary>
             /// <para>The list of assembly sources. This parameter is required when the type parameter is set to AssemblyMCP.</para>
             /// </summary>
