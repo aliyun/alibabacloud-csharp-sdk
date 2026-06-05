@@ -1070,7 +1070,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建自定义实体</para>
+        /// <para>Create multiple metadata entities at a time. The metadata entities in a batch must be of the same type. Only the pure custom type and the extended table type (corresponding to Database/Table) are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1118,7 +1118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建自定义实体</para>
+        /// <para>Create multiple metadata entities at a time. The metadata entities in a batch must be of the same type. Only the pure custom type and the extended table type (corresponding to Database/Table) are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1166,7 +1166,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建自定义实体</para>
+        /// <para>Create multiple metadata entities at a time. The metadata entities in a batch must be of the same type. Only the pure custom type and the extended table type (corresponding to Database/Table) are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1184,7 +1184,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量创建自定义实体</para>
+        /// <para>Create multiple metadata entities at a time. The metadata entities in a batch must be of the same type. Only the pure custom type and the extended table type (corresponding to Database/Table) are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1202,7 +1202,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除自定义实体</para>
+        /// <para>Deletes metadata entity objects in batches. You can delete custom entities and extended table type objects (Database/Table). You cannot delete columns separately. To delete associated column objects, delete the table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1250,7 +1250,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除自定义实体</para>
+        /// <para>Deletes metadata entity objects in batches. You can delete custom entities and extended table type objects (Database/Table). You cannot delete columns separately. To delete associated column objects, delete the table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1298,7 +1298,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除自定义实体</para>
+        /// <para>Deletes metadata entity objects in batches. You can delete custom entities and extended table type objects (Database/Table). You cannot delete columns separately. To delete associated column objects, delete the table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1316,7 +1316,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除自定义实体</para>
+        /// <para>Deletes metadata entity objects in batches. You can delete custom entities and extended table type objects (Database/Table). You cannot delete columns separately. To delete associated column objects, delete the table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1810,6 +1810,258 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CloneDataSourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 Agent</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentResponse
+        /// </returns>
+        public CreateAgentResponse CreateAgentWithOptions(CreateAgentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAgentShrinkRequest request = new CreateAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallableAgents))
+            {
+                request.CallableAgentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallableAgents, "CallableAgents", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Metadata))
+            {
+                request.MetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Metadata, "Metadata", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Model))
+            {
+                request.ModelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Model, "Model", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Skills))
+            {
+                request.SkillsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Skills, "Skills", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tools))
+            {
+                request.ToolsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tools, "Tools", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VisibilityScope))
+            {
+                request.VisibilityScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibilityScope, "VisibilityScope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallableAgentsShrink))
+            {
+                body["CallableAgents"] = request.CallableAgentsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetadataShrink))
+            {
+                body["Metadata"] = request.MetadataShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelShrink))
+            {
+                body["Model"] = request.ModelShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillsShrink))
+            {
+                body["Skills"] = request.SkillsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemPrompt))
+            {
+                body["SystemPrompt"] = request.SystemPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolsShrink))
+            {
+                body["Tools"] = request.ToolsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
+            {
+                body["Visibility"] = request.Visibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilityScopeShrink))
+            {
+                body["VisibilityScope"] = request.VisibilityScopeShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 Agent</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentResponse
+        /// </returns>
+        public async Task<CreateAgentResponse> CreateAgentWithOptionsAsync(CreateAgentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAgentShrinkRequest request = new CreateAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CallableAgents))
+            {
+                request.CallableAgentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CallableAgents, "CallableAgents", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Metadata))
+            {
+                request.MetadataShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Metadata, "Metadata", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Model))
+            {
+                request.ModelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Model, "Model", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Skills))
+            {
+                request.SkillsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Skills, "Skills", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tools))
+            {
+                request.ToolsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tools, "Tools", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VisibilityScope))
+            {
+                request.VisibilityScopeShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibilityScope, "VisibilityScope", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallableAgentsShrink))
+            {
+                body["CallableAgents"] = request.CallableAgentsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["DisplayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetadataShrink))
+            {
+                body["Metadata"] = request.MetadataShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModelShrink))
+            {
+                body["Model"] = request.ModelShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillsShrink))
+            {
+                body["Skills"] = request.SkillsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SystemPrompt))
+            {
+                body["SystemPrompt"] = request.SystemPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ToolsShrink))
+            {
+                body["Tools"] = request.ToolsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
+            {
+                body["Visibility"] = request.Visibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilityScopeShrink))
+            {
+                body["VisibilityScope"] = request.VisibilityScopeShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 Agent</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentResponse
+        /// </returns>
+        public CreateAgentResponse CreateAgent(CreateAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建 Agent</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentResponse
+        /// </returns>
+        public async Task<CreateAgentResponse> CreateAgentAsync(CreateAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAgentWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2590,7 +2842,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义属性定义</para>
+        /// <para>Create a custom attribute</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2670,7 +2922,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义属性定义</para>
+        /// <para>Create a custom attribute</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2750,7 +3002,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义属性定义</para>
+        /// <para>Create a custom attribute</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2768,7 +3020,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义属性定义</para>
+        /// <para>Create a custom attribute</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7022,7 +7274,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义实体定义</para>
+        /// <para>Creates metadata entity definitions (including pure custom types and extended table types)</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7086,7 +7338,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义实体定义</para>
+        /// <para>Creates metadata entity definitions (including pure custom types and extended table types)</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7150,7 +7402,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义实体定义</para>
+        /// <para>Creates metadata entity definitions (including pure custom types and extended table types)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7168,7 +7420,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义实体定义</para>
+        /// <para>Creates metadata entity definitions (including pure custom types and extended table types)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10178,6 +10430,126 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除 Agent</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentResponse
+        /// </returns>
+        public DeleteAgentResponse DeleteAgentWithOptions(DeleteAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 Agent</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentResponse
+        /// </returns>
+        public async Task<DeleteAgentResponse> DeleteAgentWithOptionsAsync(DeleteAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 Agent</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentResponse
+        /// </returns>
+        public DeleteAgentResponse DeleteAgent(DeleteAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 Agent</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentResponse
+        /// </returns>
+        public async Task<DeleteAgentResponse> DeleteAgentAsync(DeleteAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a custom monitoring alert rule.</para>
         /// </summary>
         /// 
@@ -10914,7 +11286,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义属性定义</para>
+        /// <para>Delete Custom Attribute</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10956,7 +11328,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义属性定义</para>
+        /// <para>Delete Custom Attribute</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10998,7 +11370,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义属性定义</para>
+        /// <para>Delete Custom Attribute</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11016,7 +11388,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义属性定义</para>
+        /// <para>Delete Custom Attribute</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13406,6 +13778,126 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除 MCP Server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMcpServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcpServerResponse
+        /// </returns>
+        public DeleteMcpServerResponse DeleteMcpServerWithOptions(DeleteMcpServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMcpServer",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMcpServerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 MCP Server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMcpServerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcpServerResponse
+        /// </returns>
+        public async Task<DeleteMcpServerResponse> DeleteMcpServerWithOptionsAsync(DeleteMcpServerRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMcpServer",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMcpServerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 MCP Server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMcpServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcpServerResponse
+        /// </returns>
+        public DeleteMcpServerResponse DeleteMcpServer(DeleteMcpServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteMcpServerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 MCP Server</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteMcpServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcpServerResponse
+        /// </returns>
+        public async Task<DeleteMcpServerResponse> DeleteMcpServerAsync(DeleteMcpServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteMcpServerWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a collection in Data Map. Collections include categories and data albums. If you want to delete a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</para>
         /// </summary>
         /// 
@@ -13526,7 +14018,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义实体定义</para>
+        /// <para>Delete metadata entity definitions (including pure custom types and extended table types)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13572,7 +14064,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义实体定义</para>
+        /// <para>Delete metadata entity definitions (including pure custom types and extended table types)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13618,7 +14110,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义实体定义</para>
+        /// <para>Delete metadata entity definitions (including pure custom types and extended table types)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13636,7 +14128,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义实体定义</para>
+        /// <para>Delete metadata entity definitions (including pure custom types and extended table types)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14930,6 +15422,126 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteRouteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 Skill</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSkillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSkillResponse
+        /// </returns>
+        public DeleteSkillResponse DeleteSkillWithOptions(DeleteSkillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSkill",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSkillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 Skill</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSkillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSkillResponse
+        /// </returns>
+        public async Task<DeleteSkillResponse> DeleteSkillWithOptionsAsync(DeleteSkillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSkill",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSkillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 Skill</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSkillResponse
+        /// </returns>
+        public DeleteSkillResponse DeleteSkill(DeleteSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSkillWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除 Skill</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSkillResponse
+        /// </returns>
+        public async Task<DeleteSkillResponse> DeleteSkillAsync(DeleteSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSkillWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16514,6 +17126,126 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ExecuteAdhocWorkflowInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取 Agent 详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentResponse
+        /// </returns>
+        public GetAgentResponse GetAgentWithOptions(GetAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取 Agent 详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentResponse
+        /// </returns>
+        public async Task<GetAgentResponse> GetAgentWithOptionsAsync(GetAgentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgent",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取 Agent 详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentResponse
+        /// </returns>
+        public GetAgentResponse GetAgent(GetAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgentWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>读取 Agent 详情</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentResponse
+        /// </returns>
+        public async Task<GetAgentResponse> GetAgentAsync(GetAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgentWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -21302,7 +22034,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义实体详情</para>
+        /// <para>Obtains the details of a metadata entity. Currently, only pure custom types are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21344,7 +22076,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义实体详情</para>
+        /// <para>Obtains the details of a metadata entity. Currently, only pure custom types are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21386,7 +22118,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义实体详情</para>
+        /// <para>Obtains the details of a metadata entity. Currently, only pure custom types are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21404,7 +22136,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义实体详情</para>
+        /// <para>Obtains the details of a metadata entity. Currently, only pure custom types are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21422,7 +22154,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义实体定义详情</para>
+        /// <para>Queries the details of a custom entity definition</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21464,7 +22196,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义实体定义详情</para>
+        /// <para>Queries the details of a custom entity definition</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21506,7 +22238,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义实体定义详情</para>
+        /// <para>Queries the details of a custom entity definition</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21524,7 +22256,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义实体定义详情</para>
+        /// <para>Queries the details of a custom entity definition</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32066,7 +32798,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义实体列表</para>
+        /// <para>Queries the list of metadata entities. Currently, only custom types are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32150,7 +32882,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义实体列表</para>
+        /// <para>Queries the list of metadata entities. Currently, only custom types are supported.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -32234,7 +32966,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义实体列表</para>
+        /// <para>Queries the list of metadata entities. Currently, only custom types are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32252,7 +32984,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义实体列表</para>
+        /// <para>Queries the list of metadata entities. Currently, only custom types are supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32270,7 +33002,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义实体定义列表</para>
+        /// <para>Queries a list of custom entity definitions (including custom entity types and extended table types).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32336,7 +33068,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义实体定义列表</para>
+        /// <para>Queries a list of custom entity definitions (including custom entity types and extended table types).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32402,7 +33134,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义实体定义列表</para>
+        /// <para>Queries a list of custom entity definitions (including custom entity types and extended table types).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32420,7 +33152,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义实体定义列表</para>
+        /// <para>Queries a list of custom entity definitions (including custom entity types and extended table types).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42110,7 +42842,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义属性定义</para>
+        /// <para>Updates custom attribute definitions</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42186,7 +42918,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义属性定义</para>
+        /// <para>Updates custom attribute definitions</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -42262,7 +42994,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义属性定义</para>
+        /// <para>Updates custom attribute definitions</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42280,7 +43012,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义属性定义</para>
+        /// <para>Updates custom attribute definitions</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45638,7 +46370,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义实体</para>
+        /// <para>Updates metadata entities. You can update custom objects or extended table objects (Database, Table, and Column).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45702,7 +46434,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义实体</para>
+        /// <para>Updates metadata entities. You can update custom objects or extended table objects (Database, Table, and Column).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45766,7 +46498,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义实体</para>
+        /// <para>Updates metadata entities. You can update custom objects or extended table objects (Database, Table, and Column).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45784,7 +46516,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义实体</para>
+        /// <para>Updates metadata entities. You can update custom objects or extended table objects (Database, Table, and Column).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45802,7 +46534,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义实体定义</para>
+        /// <para>Updates metadata entity definitions (including pure custom types and extended table types)</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45870,7 +46602,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义实体定义</para>
+        /// <para>Updates metadata entity definitions (including pure custom types and extended table types)</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -45938,7 +46670,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义实体定义</para>
+        /// <para>Updates metadata entity definitions (including pure custom types and extended table types)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45956,7 +46688,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义实体定义</para>
+        /// <para>Updates metadata entity definitions (including pure custom types and extended table types)</para>
         /// </summary>
         /// 
         /// <param name="request">
