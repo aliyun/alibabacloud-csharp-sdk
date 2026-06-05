@@ -37,6 +37,178 @@ namespace AlibabaCloud.SDK.Vs20181212
             return AlibabaCloud.EndpointUtil.Common.GetEndpointRules(productId, regionId, endpointRule, network, suffix);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加负载到集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// AddHiveEdgeWorkersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddHiveEdgeWorkersResponse
+        /// </returns>
+        public AddHiveEdgeWorkersResponse AddHiveEdgeWorkersWithOptions(AddHiveEdgeWorkersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddHiveEdgeWorkersShrinkRequest request = new AddHiveEdgeWorkersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddHiveEdgeWorkers",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddHiveEdgeWorkersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加负载到集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// AddHiveEdgeWorkersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddHiveEdgeWorkersResponse
+        /// </returns>
+        public async Task<AddHiveEdgeWorkersResponse> AddHiveEdgeWorkersWithOptionsAsync(AddHiveEdgeWorkersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddHiveEdgeWorkersShrinkRequest request = new AddHiveEdgeWorkersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddHiveEdgeWorkers",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddHiveEdgeWorkersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加负载到集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddHiveEdgeWorkersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddHiveEdgeWorkersResponse
+        /// </returns>
+        public AddHiveEdgeWorkersResponse AddHiveEdgeWorkers(AddHiveEdgeWorkersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddHiveEdgeWorkersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>添加负载到集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddHiveEdgeWorkersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddHiveEdgeWorkersResponse
+        /// </returns>
+        public async Task<AddHiveEdgeWorkersResponse> AddHiveEdgeWorkersAsync(AddHiveEdgeWorkersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddHiveEdgeWorkersWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// AddVsPullStreamInfoConfigRequest
         /// </param>
@@ -3185,6 +3357,126 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await BindTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传用户数据文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelComfyTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelComfyTaskResponse
+        /// </returns>
+        public CancelComfyTaskResponse CancelComfyTaskWithOptions(CancelComfyTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelComfyTask",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelComfyTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传用户数据文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelComfyTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelComfyTaskResponse
+        /// </returns>
+        public async Task<CancelComfyTaskResponse> CancelComfyTaskWithOptionsAsync(CancelComfyTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelComfyTask",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelComfyTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传用户数据文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelComfyTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelComfyTaskResponse
+        /// </returns>
+        public CancelComfyTaskResponse CancelComfyTask(CancelComfyTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelComfyTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传用户数据文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelComfyTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelComfyTaskResponse
+        /// </returns>
+        public async Task<CancelComfyTaskResponse> CancelComfyTaskAsync(CancelComfyTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelComfyTaskWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="request">
         /// ContinuousAdjustRequest
         /// </param>
@@ -3439,6 +3731,398 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ContinuousMoveWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传用户数据文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComfyTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComfyTaskResponse
+        /// </returns>
+        public CreateComfyTaskResponse CreateComfyTaskWithOptions(CreateComfyTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserParameters))
+            {
+                query["UserParameters"] = request.UserParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateComfyTask",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateComfyTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传用户数据文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComfyTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComfyTaskResponse
+        /// </returns>
+        public async Task<CreateComfyTaskResponse> CreateComfyTaskWithOptionsAsync(CreateComfyTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserParameters))
+            {
+                query["UserParameters"] = request.UserParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateComfyTask",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateComfyTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传用户数据文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComfyTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComfyTaskResponse
+        /// </returns>
+        public CreateComfyTaskResponse CreateComfyTask(CreateComfyTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateComfyTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传用户数据文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComfyTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComfyTaskResponse
+        /// </returns>
+        public async Task<CreateComfyTaskResponse> CreateComfyTaskAsync(CreateComfyTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateComfyTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个用户数据的目录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComfyUserDataDirRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComfyUserDataDirResponse
+        /// </returns>
+        public CreateComfyUserDataDirResponse CreateComfyUserDataDirWithOptions(CreateComfyUserDataDirRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateComfyUserDataDir",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateComfyUserDataDirResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个用户数据的目录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComfyUserDataDirRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComfyUserDataDirResponse
+        /// </returns>
+        public async Task<CreateComfyUserDataDirResponse> CreateComfyUserDataDirWithOptionsAsync(CreateComfyUserDataDirRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
+            {
+                query["Path"] = request.Path;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateComfyUserDataDir",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateComfyUserDataDirResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个用户数据的目录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComfyUserDataDirRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComfyUserDataDirResponse
+        /// </returns>
+        public CreateComfyUserDataDirResponse CreateComfyUserDataDir(CreateComfyUserDataDirRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateComfyUserDataDirWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建一个用户数据的目录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComfyUserDataDirRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComfyUserDataDirResponse
+        /// </returns>
+        public async Task<CreateComfyUserDataDirResponse> CreateComfyUserDataDirAsync(CreateComfyUserDataDirRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateComfyUserDataDirWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Comfy工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComfyWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComfyWorkflowResponse
+        /// </returns>
+        public CreateComfyWorkflowResponse CreateComfyWorkflowWithOptions(CreateComfyWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workflow))
+            {
+                query["Workflow"] = request.Workflow;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateComfyWorkflow",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateComfyWorkflowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Comfy工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComfyWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComfyWorkflowResponse
+        /// </returns>
+        public async Task<CreateComfyWorkflowResponse> CreateComfyWorkflowWithOptionsAsync(CreateComfyWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workflow))
+            {
+                query["Workflow"] = request.Workflow;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateComfyWorkflow",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateComfyWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Comfy工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComfyWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComfyWorkflowResponse
+        /// </returns>
+        public CreateComfyWorkflowResponse CreateComfyWorkflow(CreateComfyWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateComfyWorkflowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Comfy工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateComfyWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateComfyWorkflowResponse
+        /// </returns>
+        public async Task<CreateComfyWorkflowResponse> CreateComfyWorkflowAsync(CreateComfyWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateComfyWorkflowWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -4191,6 +4875,166 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateHiveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHiveResponse
+        /// </returns>
+        public CreateHiveResponse CreateHiveWithOptions(CreateHiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateHive",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateHiveResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateHiveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHiveResponse
+        /// </returns>
+        public async Task<CreateHiveResponse> CreateHiveWithOptionsAsync(CreateHiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateHive",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateHiveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateHiveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHiveResponse
+        /// </returns>
+        public CreateHiveResponse CreateHive(CreateHiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateHiveWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateHiveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateHiveResponse
+        /// </returns>
+        public async Task<CreateHiveResponse> CreateHiveAsync(CreateHiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateHiveWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -5383,6 +6227,178 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>从集群删除负载</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DelHiveEdgeWorkersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DelHiveEdgeWorkersResponse
+        /// </returns>
+        public DelHiveEdgeWorkersResponse DelHiveEdgeWorkersWithOptions(DelHiveEdgeWorkersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DelHiveEdgeWorkersShrinkRequest request = new DelHiveEdgeWorkersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DelHiveEdgeWorkers",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DelHiveEdgeWorkersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从集群删除负载</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// DelHiveEdgeWorkersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DelHiveEdgeWorkersResponse
+        /// </returns>
+        public async Task<DelHiveEdgeWorkersResponse> DelHiveEdgeWorkersWithOptionsAsync(DelHiveEdgeWorkersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DelHiveEdgeWorkersShrinkRequest request = new DelHiveEdgeWorkersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DelHiveEdgeWorkers",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DelHiveEdgeWorkersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从集群删除负载</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DelHiveEdgeWorkersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DelHiveEdgeWorkersResponse
+        /// </returns>
+        public DelHiveEdgeWorkersResponse DelHiveEdgeWorkers(DelHiveEdgeWorkersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DelHiveEdgeWorkersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从集群删除负载</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DelHiveEdgeWorkersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DelHiveEdgeWorkersResponse
+        /// </returns>
+        public async Task<DelHiveEdgeWorkersResponse> DelHiveEdgeWorkersAsync(DelHiveEdgeWorkersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DelHiveEdgeWorkersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除云应用</para>
         /// </summary>
         /// 
@@ -5499,6 +6515,366 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteCloudAppWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户的生成结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteComfyProductionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComfyProductionResponse
+        /// </returns>
+        public DeleteComfyProductionResponse DeleteComfyProductionWithOptions(DeleteComfyProductionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteComfyProduction",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteComfyProductionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户的生成结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteComfyProductionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComfyProductionResponse
+        /// </returns>
+        public async Task<DeleteComfyProductionResponse> DeleteComfyProductionWithOptionsAsync(DeleteComfyProductionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteComfyProduction",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteComfyProductionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户的生成结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteComfyProductionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComfyProductionResponse
+        /// </returns>
+        public DeleteComfyProductionResponse DeleteComfyProduction(DeleteComfyProductionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteComfyProductionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户的生成结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteComfyProductionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComfyProductionResponse
+        /// </returns>
+        public async Task<DeleteComfyProductionResponse> DeleteComfyProductionAsync(DeleteComfyProductionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteComfyProductionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户数据的中的文件或目录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteComfyUserDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComfyUserDataResponse
+        /// </returns>
+        public DeleteComfyUserDataResponse DeleteComfyUserDataWithOptions(DeleteComfyUserDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteComfyUserData",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteComfyUserDataResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户数据的中的文件或目录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteComfyUserDataRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComfyUserDataResponse
+        /// </returns>
+        public async Task<DeleteComfyUserDataResponse> DeleteComfyUserDataWithOptionsAsync(DeleteComfyUserDataRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteComfyUserData",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteComfyUserDataResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户数据的中的文件或目录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteComfyUserDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComfyUserDataResponse
+        /// </returns>
+        public DeleteComfyUserDataResponse DeleteComfyUserData(DeleteComfyUserDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteComfyUserDataWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除用户数据的中的文件或目录</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteComfyUserDataRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComfyUserDataResponse
+        /// </returns>
+        public async Task<DeleteComfyUserDataResponse> DeleteComfyUserDataAsync(DeleteComfyUserDataRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteComfyUserDataWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Comfy工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteComfyWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComfyWorkflowResponse
+        /// </returns>
+        public DeleteComfyWorkflowResponse DeleteComfyWorkflowWithOptions(DeleteComfyWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteComfyWorkflow",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteComfyWorkflowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Comfy工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteComfyWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComfyWorkflowResponse
+        /// </returns>
+        public async Task<DeleteComfyWorkflowResponse> DeleteComfyWorkflowWithOptionsAsync(DeleteComfyWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteComfyWorkflow",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteComfyWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Comfy工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteComfyWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComfyWorkflowResponse
+        /// </returns>
+        public DeleteComfyWorkflowResponse DeleteComfyWorkflow(DeleteComfyWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteComfyWorkflowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Comfy工作流</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteComfyWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteComfyWorkflowResponse
+        /// </returns>
+        public async Task<DeleteComfyWorkflowResponse> DeleteComfyWorkflowAsync(DeleteComfyWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteComfyWorkflowWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -5943,6 +7319,158 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteHiveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHiveResponse
+        /// </returns>
+        public DeleteHiveResponse DeleteHiveWithOptions(DeleteHiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteHive",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteHiveResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteHiveRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHiveResponse
+        /// </returns>
+        public async Task<DeleteHiveResponse> DeleteHiveWithOptionsAsync(DeleteHiveRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteHive",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteHiveResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteHiveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHiveResponse
+        /// </returns>
+        public DeleteHiveResponse DeleteHive(DeleteHiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteHiveWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteHiveRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteHiveResponse
+        /// </returns>
+        public async Task<DeleteHiveResponse> DeleteHiveAsync(DeleteHiveRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteHiveWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -7259,6 +8787,942 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAccountStatWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户生成结果的下载链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyProductionDownloadUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyProductionDownloadUrlResponse
+        /// </returns>
+        public DescribeComfyProductionDownloadUrlResponse DescribeComfyProductionDownloadUrlWithOptions(DescribeComfyProductionDownloadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyProductionDownloadUrl",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyProductionDownloadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户生成结果的下载链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyProductionDownloadUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyProductionDownloadUrlResponse
+        /// </returns>
+        public async Task<DescribeComfyProductionDownloadUrlResponse> DescribeComfyProductionDownloadUrlWithOptionsAsync(DescribeComfyProductionDownloadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductionId))
+            {
+                query["ProductionId"] = request.ProductionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyProductionDownloadUrl",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyProductionDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户生成结果的下载链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyProductionDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyProductionDownloadUrlResponse
+        /// </returns>
+        public DescribeComfyProductionDownloadUrlResponse DescribeComfyProductionDownloadUrl(DescribeComfyProductionDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeComfyProductionDownloadUrlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户生成结果的下载链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyProductionDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyProductionDownloadUrlResponse
+        /// </returns>
+        public async Task<DescribeComfyProductionDownloadUrlResponse> DescribeComfyProductionDownloadUrlAsync(DescribeComfyProductionDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeComfyProductionDownloadUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>本接口支持根据不同请求条件查询Comfy生成物列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyProductionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyProductionsResponse
+        /// </returns>
+        public DescribeComfyProductionsResponse DescribeComfyProductionsWithOptions(DescribeComfyProductionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyProductions",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyProductionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>本接口支持根据不同请求条件查询Comfy生成物列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyProductionsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyProductionsResponse
+        /// </returns>
+        public async Task<DescribeComfyProductionsResponse> DescribeComfyProductionsWithOptionsAsync(DescribeComfyProductionsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["TaskId"] = request.TaskId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyProductions",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyProductionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>本接口支持根据不同请求条件查询Comfy生成物列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyProductionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyProductionsResponse
+        /// </returns>
+        public DescribeComfyProductionsResponse DescribeComfyProductions(DescribeComfyProductionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeComfyProductionsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>本接口支持根据不同请求条件查询Comfy生成物列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyProductionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyProductionsResponse
+        /// </returns>
+        public async Task<DescribeComfyProductionsResponse> DescribeComfyProductionsAsync(DescribeComfyProductionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeComfyProductionsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyTasksResponse
+        /// </returns>
+        public DescribeComfyTasksResponse DescribeComfyTasksWithOptions(DescribeComfyTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskState))
+            {
+                query["TaskState"] = request.TaskState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyTasks",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyTasksResponse
+        /// </returns>
+        public async Task<DescribeComfyTasksResponse> DescribeComfyTasksWithOptionsAsync(DescribeComfyTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskState))
+            {
+                query["TaskState"] = request.TaskState;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyTasks",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyTasksResponse
+        /// </returns>
+        public DescribeComfyTasksResponse DescribeComfyTasks(DescribeComfyTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeComfyTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyTasksResponse
+        /// </returns>
+        public async Task<DescribeComfyTasksResponse> DescribeComfyTasksAsync(DescribeComfyTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeComfyTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传用户数据文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyUserDataDownloadUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyUserDataDownloadUrlResponse
+        /// </returns>
+        public DescribeComfyUserDataDownloadUrlResponse DescribeComfyUserDataDownloadUrlWithOptions(DescribeComfyUserDataDownloadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyUserDataDownloadUrl",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyUserDataDownloadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传用户数据文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyUserDataDownloadUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyUserDataDownloadUrlResponse
+        /// </returns>
+        public async Task<DescribeComfyUserDataDownloadUrlResponse> DescribeComfyUserDataDownloadUrlWithOptionsAsync(DescribeComfyUserDataDownloadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyUserDataDownloadUrl",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyUserDataDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传用户数据文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyUserDataDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyUserDataDownloadUrlResponse
+        /// </returns>
+        public DescribeComfyUserDataDownloadUrlResponse DescribeComfyUserDataDownloadUrl(DescribeComfyUserDataDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeComfyUserDataDownloadUrlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>上传用户数据文件</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyUserDataDownloadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyUserDataDownloadUrlResponse
+        /// </returns>
+        public async Task<DescribeComfyUserDataDownloadUrlResponse> DescribeComfyUserDataDownloadUrlAsync(DescribeComfyUserDataDownloadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeComfyUserDataDownloadUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户数据文件上传的URL，进行用户文件上传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyUserDataUploadUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyUserDataUploadUrlResponse
+        /// </returns>
+        public DescribeComfyUserDataUploadUrlResponse DescribeComfyUserDataUploadUrlWithOptions(DescribeComfyUserDataUploadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                query["ContentType"] = request.ContentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMd5))
+            {
+                query["FileMd5"] = request.FileMd5;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSizeBytes))
+            {
+                query["FileSizeBytes"] = request.FileSizeBytes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyUserDataUploadUrl",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyUserDataUploadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户数据文件上传的URL，进行用户文件上传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyUserDataUploadUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyUserDataUploadUrlResponse
+        /// </returns>
+        public async Task<DescribeComfyUserDataUploadUrlResponse> DescribeComfyUserDataUploadUrlWithOptionsAsync(DescribeComfyUserDataUploadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                query["ContentType"] = request.ContentType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMd5))
+            {
+                query["FileMd5"] = request.FileMd5;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSizeBytes))
+            {
+                query["FileSizeBytes"] = request.FileSizeBytes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyUserDataUploadUrl",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyUserDataUploadUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户数据文件上传的URL，进行用户文件上传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyUserDataUploadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyUserDataUploadUrlResponse
+        /// </returns>
+        public DescribeComfyUserDataUploadUrlResponse DescribeComfyUserDataUploadUrl(DescribeComfyUserDataUploadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeComfyUserDataUploadUrlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户数据文件上传的URL，进行用户文件上传</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyUserDataUploadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyUserDataUploadUrlResponse
+        /// </returns>
+        public async Task<DescribeComfyUserDataUploadUrlResponse> DescribeComfyUserDataUploadUrlAsync(DescribeComfyUserDataUploadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeComfyUserDataUploadUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyUserDatasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyUserDatasResponse
+        /// </returns>
+        public DescribeComfyUserDatasResponse DescribeComfyUserDatasWithOptions(DescribeComfyUserDatasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyUserDatas",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyUserDatasResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyUserDatasRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyUserDatasResponse
+        /// </returns>
+        public async Task<DescribeComfyUserDatasResponse> DescribeComfyUserDatasWithOptionsAsync(DescribeComfyUserDatasRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyUserDatas",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyUserDatasResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyUserDatasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyUserDatasResponse
+        /// </returns>
+        public DescribeComfyUserDatasResponse DescribeComfyUserDatas(DescribeComfyUserDatasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeComfyUserDatasWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>列举用户数据的中所有文件和目录的信息。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyUserDatasRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyUserDatasResponse
+        /// </returns>
+        public async Task<DescribeComfyUserDatasResponse> DescribeComfyUserDatasAsync(DescribeComfyUserDatasRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeComfyUserDatasWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Comfy工作流列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyWorkflowsResponse
+        /// </returns>
+        public DescribeComfyWorkflowsResponse DescribeComfyWorkflowsWithOptions(DescribeComfyWorkflowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyWorkflows",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyWorkflowsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Comfy工作流列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyWorkflowsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyWorkflowsResponse
+        /// </returns>
+        public async Task<DescribeComfyWorkflowsResponse> DescribeComfyWorkflowsWithOptionsAsync(DescribeComfyWorkflowsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeComfyWorkflows",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeComfyWorkflowsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Comfy工作流列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyWorkflowsResponse
+        /// </returns>
+        public DescribeComfyWorkflowsResponse DescribeComfyWorkflows(DescribeComfyWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeComfyWorkflowsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取Comfy工作流列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeComfyWorkflowsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeComfyWorkflowsResponse
+        /// </returns>
+        public async Task<DescribeComfyWorkflowsResponse> DescribeComfyWorkflowsAsync(DescribeComfyWorkflowsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeComfyWorkflowsWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -15551,6 +18015,226 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询所有负载信息，支持分页查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListEdgeWorkersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEdgeWorkersResponse
+        /// </returns>
+        public ListEdgeWorkersResponse ListEdgeWorkersWithOptions(ListEdgeWorkersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListEdgeWorkersShrinkRequest request = new ListEdgeWorkersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HiveIds))
+            {
+                request.HiveIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HiveIds, "HiveIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PlanIds))
+            {
+                request.PlanIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PlanIds, "PlanIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Statuses))
+            {
+                request.StatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "Statuses", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveIdsShrink))
+            {
+                query["HiveIds"] = request.HiveIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanIdsShrink))
+            {
+                query["PlanIds"] = request.PlanIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
+            {
+                query["Spec"] = request.Spec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusesShrink))
+            {
+                query["Statuses"] = request.StatusesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEdgeWorkers",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEdgeWorkersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有负载信息，支持分页查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListEdgeWorkersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEdgeWorkersResponse
+        /// </returns>
+        public async Task<ListEdgeWorkersResponse> ListEdgeWorkersWithOptionsAsync(ListEdgeWorkersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListEdgeWorkersShrinkRequest request = new ListEdgeWorkersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.HiveIds))
+            {
+                request.HiveIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.HiveIds, "HiveIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PlanIds))
+            {
+                request.PlanIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PlanIds, "PlanIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Statuses))
+            {
+                request.StatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "Statuses", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveIdsShrink))
+            {
+                query["HiveIds"] = request.HiveIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanIdsShrink))
+            {
+                query["PlanIds"] = request.PlanIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Spec))
+            {
+                query["Spec"] = request.Spec;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusesShrink))
+            {
+                query["Statuses"] = request.StatusesShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListEdgeWorkers",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListEdgeWorkersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有负载信息，支持分页查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEdgeWorkersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEdgeWorkersResponse
+        /// </returns>
+        public ListEdgeWorkersResponse ListEdgeWorkers(ListEdgeWorkersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListEdgeWorkersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有负载信息，支持分页查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListEdgeWorkersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListEdgeWorkersResponse
+        /// </returns>
+        public async Task<ListEdgeWorkersResponse> ListEdgeWorkersAsync(ListEdgeWorkersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListEdgeWorkersWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询文件的实例推送状态信息列表。</para>
         /// </summary>
         /// 
@@ -15771,6 +18455,166 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListFilesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有集群信息，支持分页查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHivesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHivesResponse
+        /// </returns>
+        public ListHivesResponse ListHivesWithOptions(ListHivesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHives",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHivesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有集群信息，支持分页查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHivesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHivesResponse
+        /// </returns>
+        public async Task<ListHivesResponse> ListHivesWithOptionsAsync(ListHivesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListHives",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListHivesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有集群信息，支持分页查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHivesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHivesResponse
+        /// </returns>
+        public ListHivesResponse ListHives(ListHivesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListHivesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询所有集群信息，支持分页查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListHivesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListHivesResponse
+        /// </returns>
+        public async Task<ListHivesResponse> ListHivesAsync(ListHivesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListHivesWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -16967,6 +19811,142 @@ namespace AlibabaCloud.SDK.Vs20181212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询规格信息，支持分页查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSpecificationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSpecificationsResponse
+        /// </returns>
+        public ListSpecificationsResponse ListSpecificationsWithOptions(ListSpecificationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Specification))
+            {
+                query["Specification"] = request.Specification;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSpecifications",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSpecificationsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询规格信息，支持分页查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSpecificationsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSpecificationsResponse
+        /// </returns>
+        public async Task<ListSpecificationsResponse> ListSpecificationsWithOptionsAsync(ListSpecificationsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Specification))
+            {
+                query["Specification"] = request.Specification;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSpecifications",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSpecificationsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询规格信息，支持分页查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSpecificationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSpecificationsResponse
+        /// </returns>
+        public ListSpecificationsResponse ListSpecifications(ListSpecificationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSpecificationsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询规格信息，支持分页查询。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSpecificationsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSpecificationsResponse
+        /// </returns>
+        public async Task<ListSpecificationsResponse> ListSpecificationsAsync(ListSpecificationsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSpecificationsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>安全登陆管理</para>
         /// </summary>
         /// 
@@ -17107,6 +20087,142 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ManageLoginWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Comfy的工作流详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyComfyWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyComfyWorkflowResponse
+        /// </returns>
+        public ModifyComfyWorkflowResponse ModifyComfyWorkflowWithOptions(ModifyComfyWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowName))
+            {
+                query["WorkflowName"] = request.WorkflowName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyComfyWorkflow",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyComfyWorkflowResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Comfy的工作流详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyComfyWorkflowRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyComfyWorkflowResponse
+        /// </returns>
+        public async Task<ModifyComfyWorkflowResponse> ModifyComfyWorkflowWithOptionsAsync(ModifyComfyWorkflowRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowId))
+            {
+                query["WorkflowId"] = request.WorkflowId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkflowName))
+            {
+                query["WorkflowName"] = request.WorkflowName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyComfyWorkflow",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyComfyWorkflowResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Comfy的工作流详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyComfyWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyComfyWorkflowResponse
+        /// </returns>
+        public ModifyComfyWorkflowResponse ModifyComfyWorkflow(ModifyComfyWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyComfyWorkflowWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询Comfy的工作流详细信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyComfyWorkflowRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyComfyWorkflowResponse
+        /// </returns>
+        public async Task<ModifyComfyWorkflowResponse> ModifyComfyWorkflowAsync(ModifyComfyWorkflowRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyComfyWorkflowWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -18083,6 +21199,174 @@ namespace AlibabaCloud.SDK.Vs20181212
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyHiveAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHiveAttributeResponse
+        /// </returns>
+        public ModifyHiveAttributeResponse ModifyHiveAttributeWithOptions(ModifyHiveAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyHiveAttribute",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyHiveAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyHiveAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHiveAttributeResponse
+        /// </returns>
+        public async Task<ModifyHiveAttributeResponse> ModifyHiveAttributeWithOptionsAsync(ModifyHiveAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyHiveAttribute",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyHiveAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyHiveAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHiveAttributeResponse
+        /// </returns>
+        public ModifyHiveAttributeResponse ModifyHiveAttribute(ModifyHiveAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyHiveAttributeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyHiveAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyHiveAttributeResponse
+        /// </returns>
+        public async Task<ModifyHiveAttributeResponse> ModifyHiveAttributeAsync(ModifyHiveAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyHiveAttributeWithOptionsAsync(request, runtime);
         }
 
         /// <param name="request">
@@ -19077,9 +22361,178 @@ namespace AlibabaCloud.SDK.Vs20181212
             return await ModifyTemplateWithOptionsAsync(request, runtime);
         }
 
-        /// <param name="request">
-        /// OpenVsServiceRequest
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移动负载到集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// MoveHiveEdgeWorkersRequest
         /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveHiveEdgeWorkersResponse
+        /// </returns>
+        public MoveHiveEdgeWorkersResponse MoveHiveEdgeWorkersWithOptions(MoveHiveEdgeWorkersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            MoveHiveEdgeWorkersShrinkRequest request = new MoveHiveEdgeWorkersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MoveHiveEdgeWorkers",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MoveHiveEdgeWorkersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移动负载到集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// MoveHiveEdgeWorkersRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveHiveEdgeWorkersResponse
+        /// </returns>
+        public async Task<MoveHiveEdgeWorkersResponse> MoveHiveEdgeWorkersWithOptionsAsync(MoveHiveEdgeWorkersRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            MoveHiveEdgeWorkersShrinkRequest request = new MoveHiveEdgeWorkersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HiveId))
+            {
+                query["HiveId"] = request.HiveId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "MoveHiveEdgeWorkers",
+                Version = "2018-12-12",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<MoveHiveEdgeWorkersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移动负载到集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MoveHiveEdgeWorkersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveHiveEdgeWorkersResponse
+        /// </returns>
+        public MoveHiveEdgeWorkersResponse MoveHiveEdgeWorkers(MoveHiveEdgeWorkersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return MoveHiveEdgeWorkersWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>移动负载到集群</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>请求说明</h2>
+        /// <list type="bullet">
+        /// <item><description>该接口用于将满足特定条件的实例与指定项目进行关联。</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// MoveHiveEdgeWorkersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// MoveHiveEdgeWorkersResponse
+        /// </returns>
+        public async Task<MoveHiveEdgeWorkersResponse> MoveHiveEdgeWorkersAsync(MoveHiveEdgeWorkersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await MoveHiveEdgeWorkersWithOptionsAsync(request, runtime);
+        }
+
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -19105,9 +22558,6 @@ namespace AlibabaCloud.SDK.Vs20181212
             return TeaModel.ToObject<OpenVsServiceResponse>(CallApi(params_, req, runtime));
         }
 
-        /// <param name="request">
-        /// OpenVsServiceRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>

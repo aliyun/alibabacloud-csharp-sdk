@@ -41,26 +41,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo> PvUvDataInfo { get; set; }
             public class DescribeVsDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("PV")]
                 [Validation(Required=false)]
                 public string PV { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2021-10-14T23:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("UV")]
                 [Validation(Required=false)]
                 public string UV { get; set; }

@@ -25,18 +25,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVsDomainSnapshotDataResponseBodySnapshotDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1</para>
-                /// </summary>
                 [NameInMap("SnapshotValue")]
                 [Validation(Required=false)]
                 public string SnapshotValue { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2015-12-10T20:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }

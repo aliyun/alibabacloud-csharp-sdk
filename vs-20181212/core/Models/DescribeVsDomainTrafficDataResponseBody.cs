@@ -57,18 +57,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVsDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2021-09-20T07:10:42Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>100</para>
-                /// </summary>
                 [NameInMap("TrafficValue")]
                 [Validation(Required=false)]
                 public string TrafficValue { get; set; }

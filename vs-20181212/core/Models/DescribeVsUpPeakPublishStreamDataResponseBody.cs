@@ -21,34 +21,18 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
                 [Validation(Required=false)]
                 public string BandWidth { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1522252320000</para>
-                /// </summary>
                 [NameInMap("PeakTime")]
                 [Validation(Required=false)]
                 public string PeakTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>31</para>
-                /// </summary>
                 [NameInMap("PublishStreamNum")]
                 [Validation(Required=false)]
                 public int? PublishStreamNum { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1522166400000</para>
-                /// </summary>
                 [NameInMap("QueryTime")]
                 [Validation(Required=false)]
                 public string QueryTime { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>example.com</para>
-                /// </summary>
                 [NameInMap("StatName")]
                 [Validation(Required=false)]
                 public string StatName { get; set; }

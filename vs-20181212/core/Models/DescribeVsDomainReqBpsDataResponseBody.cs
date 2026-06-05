@@ -41,18 +41,10 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [Validation(Required=false)]
             public List<DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerIntervalDataModule> DataModule { get; set; }
             public class DescribeVsDomainReqBpsDataResponseBodyReqBpsDataPerIntervalDataModule : TeaModel {
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>1000</para>
-                /// </summary>
                 [NameInMap("ReqBpsValue")]
                 [Validation(Required=false)]
                 public string ReqBpsValue { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2021-12-24T16:00:00Z</para>
-                /// </summary>
                 [NameInMap("TimeStamp")]
                 [Validation(Required=false)]
                 public string TimeStamp { get; set; }

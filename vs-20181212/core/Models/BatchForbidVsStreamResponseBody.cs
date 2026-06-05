@@ -27,26 +27,14 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
                 }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>2</para>
-                /// </summary>
                 [NameInMap("Count")]
                 [Validation(Required=false)]
                 public int? Count { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>ok</para>
-                /// </summary>
                 [NameInMap("Detail")]
                 [Validation(Required=false)]
                 public string Detail { get; set; }
 
-                /// <summary>
-                /// <b>Example:</b>
-                /// <para>success</para>
-                /// </summary>
                 [NameInMap("Result")]
                 [Validation(Required=false)]
                 public string Result { get; set; }

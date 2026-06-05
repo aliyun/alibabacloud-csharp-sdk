@@ -259,6 +259,20 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
 
         }
 
+        [NameInMap("ResourceStatus")]
+        [Validation(Required=false)]
+        public DescribeRenderingInstanceResponseBodyResourceStatus ResourceStatus { get; set; }
+        public class DescribeRenderingInstanceResponseBodyResourceStatus : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>running</para>
+            /// </summary>
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+        }
+
         [NameInMap("StorageSize")]
         [Validation(Required=false)]
         public int? StorageSize { get; set; }
