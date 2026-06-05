@@ -1890,7 +1890,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加用户积分</para>
+        /// <para>Allocates points to a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1936,7 +1936,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加用户积分</para>
+        /// <para>Allocates points to a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1982,7 +1982,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加用户积分</para>
+        /// <para>Allocates points to a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2000,7 +2000,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加用户积分</para>
+        /// <para>Allocates points to a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2566,7 +2566,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取一刻AI应用生成任务</para>
+        /// <para>Retrieves information about multiple AI application jobs in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2608,7 +2608,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取一刻AI应用生成任务</para>
+        /// <para>Retrieves information about multiple AI application jobs in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2650,7 +2650,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取一刻AI应用生成任务</para>
+        /// <para>Retrieves information about multiple AI application jobs in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2668,7 +2668,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取一刻AI应用生成任务</para>
+        /// <para>Retrieves information about multiple AI application jobs in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2686,7 +2686,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Retrieves information about multiple media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2728,7 +2728,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Retrieves information about multiple media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2770,7 +2770,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Retrieves information about multiple media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2788,7 +2788,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量获取媒资信息</para>
+        /// <para>Retrieves information about multiple media assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9438,7 +9438,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资上传凭证</para>
+        /// <para>Obtains the upload credential for a WonderClip media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9484,7 +9484,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资上传凭证</para>
+        /// <para>Obtains the upload credential for a WonderClip media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9530,7 +9530,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资上传凭证</para>
+        /// <para>Obtains the upload credential for a WonderClip media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9548,7 +9548,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资上传凭证</para>
+        /// <para>Obtains the upload credential for a WonderClip media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9566,7 +9566,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻项目</para>
+        /// <para>Creates a WonderClip project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9612,7 +9612,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻项目</para>
+        /// <para>Creates a WonderClip project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9658,7 +9658,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻项目</para>
+        /// <para>Creates a WonderClip project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9676,7 +9676,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻项目</para>
+        /// <para>Creates a WonderClip project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9694,7 +9694,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻子用户</para>
+        /// <para>Creates a sub-account in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9752,7 +9752,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻子用户</para>
+        /// <para>Creates a sub-account in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9810,7 +9810,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻子用户</para>
+        /// <para>Creates a sub-account in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9828,7 +9828,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建一刻子用户</para>
+        /// <para>Creates a sub-account in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9846,7 +9846,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作室</para>
+        /// <para>Creates a workspace in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9892,7 +9892,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作室</para>
+        /// <para>Creates a workspace in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9938,7 +9938,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作室</para>
+        /// <para>Creates a workspace in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9956,7 +9956,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作室</para>
+        /// <para>Creates a workspace in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16146,7 +16146,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16192,7 +16192,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16238,7 +16238,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16256,7 +16256,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除媒资信息</para>
+        /// <para>Deletes media asset information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18098,7 +18098,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>转呼通话到目标电话</para>
+        /// <para>Forwards an active call to a specified target phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18156,7 +18156,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>转呼通话到目标电话</para>
+        /// <para>Forwards an active call to a specified target phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18214,7 +18214,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>转呼通话到目标电话</para>
+        /// <para>Forwards an active call to a specified target phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18232,7 +18232,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>转呼通话到目标电话</para>
+        /// <para>Forwards an active call to a specified target phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18714,7 +18714,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取智能体当前通话并发数</para>
+        /// <para>Gets the current active call parallelism for the specified agent. This operation is a lightweight query operation that returns the number of active instances. It does not return instance details or historical peaks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18756,7 +18756,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取智能体当前通话并发数</para>
+        /// <para>Gets the current active call parallelism for the specified agent. This operation is a lightweight query operation that returns the number of active instances. It does not return instance details or historical peaks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18798,7 +18798,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取智能体当前通话并发数</para>
+        /// <para>Gets the current active call parallelism for the specified agent. This operation is a lightweight query operation that returns the number of active instances. It does not return instance details or historical peaks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18816,7 +18816,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取智能体当前通话并发数</para>
+        /// <para>Gets the current active call parallelism for the specified agent. This operation is a lightweight query operation that returns the number of active instances. It does not return instance details or historical peaks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24730,7 +24730,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a media editing and production job. The requested information includes the state, timeline, template, and data of the job. You can call this operation to query only media editing and production jobs created within the past year.</para>
+        /// <para>Retrieves details for an editing and composition job, such as its status, timeline, template, and data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24772,7 +24772,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a media editing and production job. The requested information includes the state, timeline, template, and data of the job. You can call this operation to query only media editing and production jobs created within the past year.</para>
+        /// <para>Retrieves details for an editing and composition job, such as its status, timeline, template, and data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24814,7 +24814,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a media editing and production job. The requested information includes the state, timeline, template, and data of the job. You can call this operation to query only media editing and production jobs created within the past year.</para>
+        /// <para>Retrieves details for an editing and composition job, such as its status, timeline, template, and data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24832,7 +24832,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a media editing and production job. The requested information includes the state, timeline, template, and data of the job. You can call this operation to query only media editing and production jobs created within the past year.</para>
+        /// <para>Retrieves details for an editing and composition job, such as its status, timeline, template, and data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28046,7 +28046,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻AI应用任务</para>
+        /// <para>Retrieves information about an AI application job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28088,7 +28088,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻AI应用任务</para>
+        /// <para>Retrieves information about an AI application job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28130,7 +28130,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻AI应用任务</para>
+        /// <para>Retrieves information about an AI application job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28148,7 +28148,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻AI应用任务</para>
+        /// <para>Retrieves information about an AI application job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28166,7 +28166,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资内容信息</para>
+        /// <para>Retrieves information about the media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28208,7 +28208,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资内容信息</para>
+        /// <para>Retrieves information about the media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28250,7 +28250,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资内容信息</para>
+        /// <para>Retrieves information about the media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28268,7 +28268,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻媒资内容信息</para>
+        /// <para>Retrieves information about the media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28286,7 +28286,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻AI应用任务</para>
+        /// <para>Retrieves storyboard jobs in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28328,7 +28328,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻AI应用任务</para>
+        /// <para>Retrieves storyboard jobs in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28370,7 +28370,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻AI应用任务</para>
+        /// <para>Retrieves storyboard jobs in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28388,7 +28388,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻AI应用任务</para>
+        /// <para>Retrieves storyboard jobs in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28406,7 +28406,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻子用户信息</para>
+        /// <para>Retrieves information about a WonderClip sub-account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28448,7 +28448,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻子用户信息</para>
+        /// <para>Retrieves information about a WonderClip sub-account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28490,7 +28490,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻子用户信息</para>
+        /// <para>Retrieves information about a WonderClip sub-account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28508,7 +28508,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻子用户信息</para>
+        /// <para>Retrieves information about a WonderClip sub-account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28526,7 +28526,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻用户积分</para>
+        /// <para>Queries the point balance of a WonderClip user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28568,7 +28568,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻用户积分</para>
+        /// <para>Queries the point balance of a WonderClip user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28610,7 +28610,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻用户积分</para>
+        /// <para>Queries the point balance of a WonderClip user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28628,7 +28628,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询一刻用户积分</para>
+        /// <para>Queries the point balance of a WonderClip user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38738,7 +38738,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻文件夹列表</para>
+        /// <para>Retrieves a list of WonderClip folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38788,7 +38788,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻文件夹列表</para>
+        /// <para>Retrieves a list of WonderClip folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38838,7 +38838,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻文件夹列表</para>
+        /// <para>Retrieves a list of WonderClip folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38856,7 +38856,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻文件夹列表</para>
+        /// <para>Retrieves a list of WonderClip folders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38874,7 +38874,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻项目列表</para>
+        /// <para>Retrieves a list of WonderClip projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38932,7 +38932,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻项目列表</para>
+        /// <para>Retrieves a list of WonderClip projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38990,7 +38990,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻项目列表</para>
+        /// <para>Retrieves a list of WonderClip projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39008,7 +39008,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取一刻项目列表</para>
+        /// <para>Retrieves a list of WonderClip projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39178,7 +39178,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查应用参数是否合法</para>
+        /// <para>Validates the parameters of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39224,7 +39224,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查应用参数是否合法</para>
+        /// <para>Validates the parameters of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39270,7 +39270,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查应用参数是否合法</para>
+        /// <para>Validates the parameters of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39288,7 +39288,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查应用参数是否合法</para>
+        /// <para>Validates the parameters of an AI application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42158,7 +42158,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册一刻媒资</para>
+        /// <para>Registers a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42212,7 +42212,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册一刻媒资</para>
+        /// <para>Registers a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42266,7 +42266,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册一刻媒资</para>
+        /// <para>Registers a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42284,7 +42284,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册一刻媒资</para>
+        /// <para>Registers a media asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42430,7 +42430,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>故事板任务恢复继续执行任务</para>
+        /// <para>Resumes a storyboard job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42472,7 +42472,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>故事板任务恢复继续执行任务</para>
+        /// <para>Resumes a storyboard job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42514,7 +42514,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>故事板任务恢复继续执行任务</para>
+        /// <para>Resumes a storyboard job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42532,7 +42532,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>故事板任务恢复继续执行任务</para>
+        /// <para>Resumes a storyboard job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46010,7 +46010,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置用户角色</para>
+        /// <para>Sets the user role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46056,7 +46056,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置用户角色</para>
+        /// <para>Sets the user role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46102,7 +46102,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置用户角色</para>
+        /// <para>Sets the user role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46120,7 +46120,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置用户角色</para>
+        /// <para>Sets the user role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46362,7 +46362,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates an outbound phone call for an AI agent.</para>
+        /// <para>Initiates an outbound phone call from an AI agent. The agent calls the specified phone number using the caller number and returns the instance ID of the call.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -46434,7 +46434,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates an outbound phone call for an AI agent.</para>
+        /// <para>Initiates an outbound phone call from an AI agent. The agent calls the specified phone number using the caller number and returns the instance ID of the call.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -46506,7 +46506,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates an outbound phone call for an AI agent.</para>
+        /// <para>Initiates an outbound phone call from an AI agent. The agent calls the specified phone number using the caller number and returns the instance ID of the call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46524,7 +46524,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates an outbound phone call for an AI agent.</para>
+        /// <para>Initiates an outbound phone call from an AI agent. The agent calls the specified phone number using the caller number and returns the instance ID of the call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48002,7 +48002,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扣减用户积分</para>
+        /// <para>Reclaims points from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48048,7 +48048,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扣减用户积分</para>
+        /// <para>Reclaims points from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48094,7 +48094,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扣减用户积分</para>
+        /// <para>Reclaims points from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48112,7 +48112,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扣减用户积分</para>
+        /// <para>Reclaims points from a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48506,7 +48506,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts the provided text content into a high-quality audio file.</para>
+        /// <para>Submits an audio production job that converts text into an audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48572,7 +48572,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts the provided text content into a high-quality audio file.</para>
+        /// <para>Submits an audio production job that converts text into an audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48638,7 +48638,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts the provided text content into a high-quality audio file.</para>
+        /// <para>Submits an audio production job that converts text into an audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -48656,7 +48656,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Converts the provided text content into a high-quality audio file.</para>
+        /// <para>Submits an audio production job that converts text into an audio file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49562,7 +49562,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a basic voice cloning job.</para>
+        /// <para>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49608,7 +49608,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a basic voice cloning job.</para>
+        /// <para>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49654,7 +49654,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a basic voice cloning job.</para>
+        /// <para>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49672,7 +49672,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a basic voice cloning job.</para>
+        /// <para>Submits a human voice cloning job. The value of VoiceId must be the one used during audio check. The system uses this ID to find the cached audio file for training. After you call this operation, the JobId is returned. The training process is asynchronous. During training, you can call the GetCustomizedVoiceJob operation to query information such as the job state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53994,7 +53994,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a snapshot job.</para>
+        /// <para>Submits a snapshot job. You can specify the ID or URL of a media file, as well as the time point and format of the snapshot. The system generates the snapshot based on these parameters and saves it to the specified position.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -54074,7 +54074,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a snapshot job.</para>
+        /// <para>Submits a snapshot job. You can specify the ID or URL of a media file, as well as the time point and format of the snapshot. The system generates the snapshot based on these parameters and saves it to the specified position.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -54154,7 +54154,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a snapshot job.</para>
+        /// <para>Submits a snapshot job. You can specify the ID or URL of a media file, as well as the time point and format of the snapshot. The system generates the snapshot based on these parameters and saves it to the specified position.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54172,7 +54172,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a snapshot job.</para>
+        /// <para>Submits a snapshot job. You can specify the ID or URL of a media file, as well as the time point and format of the snapshot. The system generates the snapshot based on these parameters and saves it to the specified position.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55414,7 +55414,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a transcoding job.</para>
+        /// <para>Submits a transcoding job to IMS by specifying the source file, output format, and other related parameters.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -55490,7 +55490,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a transcoding job.</para>
+        /// <para>Submits a transcoding job to IMS by specifying the source file, output format, and other related parameters.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -55566,7 +55566,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a transcoding job.</para>
+        /// <para>Submits a transcoding job to IMS by specifying the source file, output format, and other related parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -55584,7 +55584,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a transcoding job.</para>
+        /// <para>Submits a transcoding job to IMS by specifying the source file, output format, and other related parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56002,7 +56002,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻AI应用任务</para>
+        /// <para>Submits a storyboard job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56056,7 +56056,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻AI应用任务</para>
+        /// <para>Submits a storyboard job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56110,7 +56110,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻AI应用任务</para>
+        /// <para>Submits a storyboard job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56128,7 +56128,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻AI应用任务</para>
+        /// <para>Submits a storyboard job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56146,7 +56146,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻AI应用任务</para>
+        /// <para>Submits a storyboard job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56242,7 +56242,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻AI应用任务</para>
+        /// <para>Submits a storyboard job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56338,7 +56338,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻AI应用任务</para>
+        /// <para>Submits a storyboard job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56356,7 +56356,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交一刻AI应用任务</para>
+        /// <para>Submits a storyboard job in WonderClip.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62018,7 +62018,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an audio or video file based on the URL of the source file. You can upload multiple media files at a time.</para>
+        /// <para>Uploads audio or video files from source URLs. Batch upload is supported. This operation is ideal for uploading files from a public URL rather than from a local server or device.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -62096,7 +62096,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an audio or video file based on the URL of the source file. You can upload multiple media files at a time.</para>
+        /// <para>Uploads audio or video files from source URLs. Batch upload is supported. This operation is ideal for uploading files from a public URL rather than from a local server or device.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -62174,7 +62174,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an audio or video file based on the URL of the source file. You can upload multiple media files at a time.</para>
+        /// <para>Uploads audio or video files from source URLs. Batch upload is supported. This operation is ideal for uploading files from a public URL rather than from a local server or device.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -62204,7 +62204,7 @@ namespace AlibabaCloud.SDK.ICE20201109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads an audio or video file based on the URL of the source file. You can upload multiple media files at a time.</para>
+        /// <para>Uploads audio or video files from source URLs. Batch upload is supported. This operation is ideal for uploading files from a public URL rather than from a local server or device.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
