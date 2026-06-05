@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.ModelService20220614.Models
 {
     public class GetUserResponseBody : TeaModel {
+        [NameInMap("AnthropicHost")]
+        [Validation(Required=false)]
+        public string AnthropicHost { get; set; }
+
+        [NameInMap("ApiKeys")]
+        [Validation(Required=false)]
+        public object ApiKeys { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>20200425******</para>
