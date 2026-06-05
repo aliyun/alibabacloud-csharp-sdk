@@ -77,6 +77,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string TemplateId { get; set; }
 
+        [NameInMap("chatbiTaskId")]
+        [Validation(Required=false)]
+        public string ChatbiTaskId { get; set; }
+
+        [NameInMap("chatbiTaskStatus")]
+        [Validation(Required=false)]
+        public string ChatbiTaskStatus { get; set; }
+
     }
 
 }
