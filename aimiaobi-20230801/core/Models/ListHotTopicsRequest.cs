@@ -21,6 +21,30 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>2026-06-04 23:59:59</para>
+        /// </summary>
+        [NameInMap("CreateTimeEnd")]
+        [Validation(Required=false)]
+        public string CreateTimeEnd { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2026-06-01 00:00:00</para>
+        /// </summary>
+        [NameInMap("CreateTimeStart")]
+        [Validation(Required=false)]
+        public string CreateTimeStart { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>biz-tag-001</para>
+        /// </summary>
+        [NameInMap("CustomField")]
+        [Validation(Required=false)]
+        public string CustomField { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
         [NameInMap("MaxResults")]

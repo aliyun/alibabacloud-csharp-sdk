@@ -31,11 +31,27 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
 
             /// <summary>
             /// <b>Example:</b>
+            /// <para>2026-06-04 12:34:56</para>
+            /// </summary>
+            [NameInMap("CreateTime")]
+            [Validation(Required=false)]
+            public string CreateTime { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
             /// <para>创建用户ID（自定义主题场景下使用）</para>
             /// </summary>
             [NameInMap("CreateUser")]
             [Validation(Required=false)]
             public string CreateUser { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>biz-tag-001</para>
+            /// </summary>
+            [NameInMap("CustomField")]
+            [Validation(Required=false)]
+            public string CustomField { get; set; }
 
             /// <summary>
             /// <b>Example:</b>
@@ -148,6 +164,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("TopicSource")]
             [Validation(Required=false)]
             public string TopicSource { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="https://www.example.com/topic/123">https://www.example.com/topic/123</a></para>
+            /// </summary>
+            [NameInMap("TopicUrl")]
+            [Validation(Required=false)]
+            public string TopicUrl { get; set; }
 
             /// <summary>
             /// <b>Example:</b>

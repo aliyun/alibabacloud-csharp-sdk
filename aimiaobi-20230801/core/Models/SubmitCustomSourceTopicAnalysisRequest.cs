@@ -85,6 +85,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
         [Validation(Required=false)]
         public List<SubmitCustomSourceTopicAnalysisRequestTopics> Topics { get; set; }
         public class SubmitCustomSourceTopicAnalysisRequestTopics : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>biz-tag-001</para>
+            /// </summary>
+            [NameInMap("CustomField")]
+            [Validation(Required=false)]
+            public string CustomField { get; set; }
+
             [NameInMap("News")]
             [Validation(Required=false)]
             public List<HottopicNews> News { get; set; }
@@ -96,6 +104,14 @@ namespace AlibabaCloud.SDK.AiMiaoBi20230801.Models
             [NameInMap("Topic")]
             [Validation(Required=false)]
             public string Topic { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para><a href="https://www.example.com/topic/123">https://www.example.com/topic/123</a></para>
+            /// </summary>
+            [NameInMap("TopicUrl")]
+            [Validation(Required=false)]
+            public string TopicUrl { get; set; }
 
         }
 
