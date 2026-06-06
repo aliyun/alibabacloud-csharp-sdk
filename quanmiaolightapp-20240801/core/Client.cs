@@ -39,6 +39,306 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>批量取消任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchCancelTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCancelTasksResponse
+        /// </returns>
+        public BatchCancelTasksResponse BatchCancelTasksWithOptions(string workspaceId, BatchCancelTasksRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchCancelTasksShrinkRequest request = new BatchCancelTasksShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIds))
+            {
+                request.TaskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIds, "taskIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCode))
+            {
+                body["taskCode"] = request.TaskCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdsShrink))
+            {
+                body["taskIds"] = request.TaskIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCancelTasks",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/batchCancelTasks",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCancelTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量取消任务</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchCancelTasksRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCancelTasksResponse
+        /// </returns>
+        public async Task<BatchCancelTasksResponse> BatchCancelTasksWithOptionsAsync(string workspaceId, BatchCancelTasksRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchCancelTasksShrinkRequest request = new BatchCancelTasksShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIds))
+            {
+                request.TaskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIds, "taskIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCode))
+            {
+                body["taskCode"] = request.TaskCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdsShrink))
+            {
+                body["taskIds"] = request.TaskIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchCancelTasks",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/batchCancelTasks",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchCancelTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量取消任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchCancelTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCancelTasksResponse
+        /// </returns>
+        public BatchCancelTasksResponse BatchCancelTasks(string workspaceId, BatchCancelTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchCancelTasksWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量取消任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchCancelTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchCancelTasksResponse
+        /// </returns>
+        public async Task<BatchCancelTasksResponse> BatchCancelTasksAsync(string workspaceId, BatchCancelTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchCancelTasksWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchQueryTaskStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchQueryTaskStatusResponse
+        /// </returns>
+        public BatchQueryTaskStatusResponse BatchQueryTaskStatusWithOptions(string workspaceId, BatchQueryTaskStatusRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchQueryTaskStatusShrinkRequest request = new BatchQueryTaskStatusShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIds))
+            {
+                request.TaskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIds, "taskIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCode))
+            {
+                body["taskCode"] = request.TaskCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdsShrink))
+            {
+                body["taskIds"] = request.TaskIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchQueryTaskStatus",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/batchQueryTaskStatus",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchQueryTaskStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchQueryTaskStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchQueryTaskStatusResponse
+        /// </returns>
+        public async Task<BatchQueryTaskStatusResponse> BatchQueryTaskStatusWithOptionsAsync(string workspaceId, BatchQueryTaskStatusRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchQueryTaskStatusShrinkRequest request = new BatchQueryTaskStatusShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskIds))
+            {
+                request.TaskIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskIds, "taskIds", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCode))
+            {
+                body["taskCode"] = request.TaskCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIdsShrink))
+            {
+                body["taskIds"] = request.TaskIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchQueryTaskStatus",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/batchQueryTaskStatus",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchQueryTaskStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchQueryTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchQueryTaskStatusResponse
+        /// </returns>
+        public BatchQueryTaskStatusResponse BatchQueryTaskStatus(string workspaceId, BatchQueryTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchQueryTaskStatusWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询任务状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchQueryTaskStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchQueryTaskStatusResponse
+        /// </returns>
+        public async Task<BatchQueryTaskStatusResponse> BatchQueryTaskStatusAsync(string workspaceId, BatchQueryTaskStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchQueryTaskStatusWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>取消异步任务</para>
         /// </summary>
         /// 
@@ -1147,6 +1447,136 @@ namespace AlibabaCloud.SDK.QuanMiaoLightApp20240801
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetTagMiningAnalysisTaskWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务执行情况统计</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTaskExecutionStatisticsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskExecutionStatisticsResponse
+        /// </returns>
+        public GetTaskExecutionStatisticsResponse GetTaskExecutionStatisticsWithOptions(string workspaceId, GetTaskExecutionStatisticsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCode))
+            {
+                query["taskCode"] = request.TaskCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTaskExecutionStatistics",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/getTaskExecutionStatistics",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTaskExecutionStatisticsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务执行情况统计</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTaskExecutionStatisticsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskExecutionStatisticsResponse
+        /// </returns>
+        public async Task<GetTaskExecutionStatisticsResponse> GetTaskExecutionStatisticsWithOptionsAsync(string workspaceId, GetTaskExecutionStatisticsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskCode))
+            {
+                query["taskCode"] = request.TaskCode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTaskExecutionStatistics",
+                Version = "2024-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/quanmiao/lightapp/getTaskExecutionStatistics",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTaskExecutionStatisticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务执行情况统计</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTaskExecutionStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskExecutionStatisticsResponse
+        /// </returns>
+        public GetTaskExecutionStatisticsResponse GetTaskExecutionStatistics(string workspaceId, GetTaskExecutionStatisticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetTaskExecutionStatisticsWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询任务执行情况统计</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTaskExecutionStatisticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTaskExecutionStatisticsResponse
+        /// </returns>
+        public async Task<GetTaskExecutionStatisticsResponse> GetTaskExecutionStatisticsAsync(string workspaceId, GetTaskExecutionStatisticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetTaskExecutionStatisticsWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
