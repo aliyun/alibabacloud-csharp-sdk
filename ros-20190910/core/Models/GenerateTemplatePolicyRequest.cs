@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GenerateTemplatePolicyRequest : TeaModel {
+        [NameInMap("GenerateOptions")]
+        [Validation(Required=false)]
+        public List<string> GenerateOptions { get; set; }
+
         /// <summary>
         /// <para>The type of operation N for which you want to generate the policy information.</para>
         /// <para>Valid values:</para>
@@ -30,6 +34,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [NameInMap("OperationTypes")]
         [Validation(Required=false)]
         public List<string> OperationTypes { get; set; }
+
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public List<GenerateTemplatePolicyRequestParameters> Parameters { get; set; }
+        public class GenerateTemplatePolicyRequestParameters : TeaModel {
+            [NameInMap("ParameterKey")]
+            [Validation(Required=false)]
+            public string ParameterKey { get; set; }
+
+            [NameInMap("ParameterValue")]
+            [Validation(Required=false)]
+            public string ParameterValue { get; set; }
+
+        }
 
         /// <summary>
         /// <para>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.</para>

@@ -4151,7 +4151,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to detect drift on a stack.</para>
+        /// <para>Performs drift detection on resources in a stack to check whether the resources have drifted from the expected template configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4205,7 +4205,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to detect drift on a stack.</para>
+        /// <para>Performs drift detection on resources in a stack to check whether the resources have drifted from the expected template configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4259,7 +4259,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to detect drift on a stack.</para>
+        /// <para>Performs drift detection on resources in a stack to check whether the resources have drifted from the expected template configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4277,7 +4277,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to detect drift on a stack.</para>
+        /// <para>Performs drift detection on resources in a stack to check whether the resources have drifted from the expected template configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4295,7 +4295,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对资源栈组进行偏差检测</para>
+        /// <para>Performs drift detection on stack groups to check whether the stack groups have drifted from the expected template configurations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4355,7 +4355,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对资源栈组进行偏差检测</para>
+        /// <para>Performs drift detection on stack groups to check whether the stack groups have drifted from the expected template configurations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4415,7 +4415,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对资源栈组进行偏差检测</para>
+        /// <para>Performs drift detection on stack groups to check whether the stack groups have drifted from the expected template configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4433,7 +4433,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>对资源栈组进行偏差检测</para>
+        /// <para>Performs drift detection on stack groups to check whether the stack groups have drifted from the expected template configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4598,9 +4598,6 @@ namespace AlibabaCloud.SDK.ROS20190910
         /// <para>开启可信服务访问</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// EnableServiceAccessRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -4631,9 +4628,6 @@ namespace AlibabaCloud.SDK.ROS20190910
         /// <para>开启可信服务访问</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// EnableServiceAccessRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -5184,9 +5178,17 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateOptions))
+            {
+                query["GenerateOptions"] = request.GenerateOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTypes))
             {
                 query["OperationTypes"] = request.OperationTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
             {
@@ -5248,9 +5250,17 @@ namespace AlibabaCloud.SDK.ROS20190910
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GenerateOptions))
+            {
+                query["GenerateOptions"] = request.GenerateOptions;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationTypes))
             {
                 query["OperationTypes"] = request.OperationTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Parameters))
+            {
+                query["Parameters"] = request.Parameters;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateBody))
             {
@@ -5905,7 +5915,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic provides an example on how to query the details of <c>ALIYUN::ROS::WaitConditionHandle</c>.</para>
+        /// <para>This topic provides an example on how to query the details of \<c>ALIYUN::ROS::WaitConditionHandle\\</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5956,7 +5966,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic provides an example on how to query the details of <c>ALIYUN::ROS::WaitConditionHandle</c>.</para>
+        /// <para>This topic provides an example on how to query the details of \<c>ALIYUN::ROS::WaitConditionHandle\\</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6007,7 +6017,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic provides an example on how to query the details of <c>ALIYUN::ROS::WaitConditionHandle</c>.</para>
+        /// <para>This topic provides an example on how to query the details of \<c>ALIYUN::ROS::WaitConditionHandle\\</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6030,7 +6040,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic provides an example on how to query the details of <c>ALIYUN::ROS::WaitConditionHandle</c>.</para>
+        /// <para>This topic provides an example on how to query the details of \<c>ALIYUN::ROS::WaitConditionHandle\\</c>.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6181,12 +6191,9 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可信服务</para>
+        /// <para>Queries a trusted service.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetServiceAccessRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6214,12 +6221,9 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可信服务</para>
+        /// <para>Queries a trusted service.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// GetServiceAccessRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6247,7 +6251,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可信服务</para>
+        /// <para>Queries a trusted service.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6261,7 +6265,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询可信服务</para>
+        /// <para>Queries a trusted service.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6811,7 +6815,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>In this example, the information about a stack group named \<c>MyStackGroup\\</c> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</para>
+        /// <para>In this example, the information about a stack group named \\<c>MyStackGroup\\\\</c> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6866,7 +6870,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>In this example, the information about a stack group named \<c>MyStackGroup\\</c> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</para>
+        /// <para>In this example, the information about a stack group named \\<c>MyStackGroup\\\\</c> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6921,7 +6925,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>In this example, the information about a stack group named \<c>MyStackGroup\\</c> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</para>
+        /// <para>In this example, the information about a stack group named \\<c>MyStackGroup\\\\</c> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6944,7 +6948,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>In this example, the information about a stack group named \<c>MyStackGroup\\</c> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</para>
+        /// <para>In this example, the information about a stack group named \\<c>MyStackGroup\\\\</c> is queried. The stack group is granted self-managed permissions and created in the China (Hangzhou) region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7287,7 +7291,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query information about a stack policy.</para>
+        /// <para>Queries the information about a stack policy in an Alibaba Cloud region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7338,7 +7342,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query information about a stack policy.</para>
+        /// <para>Queries the information about a stack policy in an Alibaba Cloud region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7389,7 +7393,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query information about a stack policy.</para>
+        /// <para>Queries the information about a stack policy in an Alibaba Cloud region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7412,7 +7416,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to query information about a stack policy.</para>
+        /// <para>Queries the information about a stack policy in an Alibaba Cloud region.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8563,7 +8567,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推荐参数</para>
+        /// <para>Queries recommended parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8629,7 +8633,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推荐参数</para>
+        /// <para>Queries recommended parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8695,7 +8699,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推荐参数</para>
+        /// <para>Queries recommended parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8713,7 +8717,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推荐参数</para>
+        /// <para>Queries recommended parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11547,7 +11551,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is <c>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</c> in the China (Hangzhou) region are queried.</para>
+        /// <para>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is \<c>4a6c9851-3b0f-4f5f-b4ca-a14bf691\\*\\*\\*\\*\\</c> in the China (Hangzhou) region are queried.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11598,7 +11602,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is <c>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</c> in the China (Hangzhou) region are queried.</para>
+        /// <para>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is \<c>4a6c9851-3b0f-4f5f-b4ca-a14bf691\\*\\*\\*\\*\\</c> in the China (Hangzhou) region are queried.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11649,7 +11653,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is <c>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</c> in the China (Hangzhou) region are queried.</para>
+        /// <para>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is \<c>4a6c9851-3b0f-4f5f-b4ca-a14bf691\\*\\*\\*\\*\\</c> in the China (Hangzhou) region are queried.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11672,7 +11676,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is <c>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</c> in the China (Hangzhou) region are queried.</para>
+        /// <para>This topic provides an example on how to query the resources in a specified stack. In this example, the resources in the stack whose ID is \<c>4a6c9851-3b0f-4f5f-b4ca-a14bf691\\*\\*\\*\\*\\</c> in the China (Hangzhou) region are queried.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -11935,7 +11939,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询总览</para>
+        /// <para>Queries summaries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11977,7 +11981,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询总览</para>
+        /// <para>Queries summaries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12019,7 +12023,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询总览</para>
+        /// <para>Queries summaries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12037,7 +12041,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询总览</para>
+        /// <para>Queries summaries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13723,7 +13727,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改资源栈的删除保护属性</para>
+        /// <para>Modifies the deletion protection setting for a stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13773,7 +13777,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改资源栈的删除保护属性</para>
+        /// <para>Modifies the deletion protection setting for a stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13823,7 +13827,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改资源栈的删除保护属性</para>
+        /// <para>Modifies the deletion protection setting for a stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13841,7 +13845,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改资源栈的删除保护属性</para>
+        /// <para>Modifies the deletion protection setting for a stack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14003,7 +14007,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to configure a stack policy.</para>
+        /// <para>Configures a stack policy for a stack.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14062,7 +14066,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to configure a stack policy.</para>
+        /// <para>Configures a stack policy for a stack.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14121,7 +14125,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to configure a stack policy.</para>
+        /// <para>Configures a stack policy for a stack.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14144,7 +14148,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call this operation to configure a stack policy.</para>
+        /// <para>Configures a stack policy for a stack.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14511,7 +14515,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a stack group operation.</para>
+        /// <para>Stops an ongoing operation in a stack group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14562,7 +14566,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a stack group operation.</para>
+        /// <para>Stops an ongoing operation in a stack group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14613,7 +14617,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a stack group operation.</para>
+        /// <para>Stops an ongoing operation in a stack group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -14636,7 +14640,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops a stack group operation.</para>
+        /// <para>Stops an ongoing operation in a stack group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15335,7 +15339,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The region ID of the stack group. You can call the [DescribeRegions]\(<del>131035</del>) operation to query the latest list of Alibaba Cloud regions.</para>
+        /// <para>Update an already created stack group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15483,7 +15487,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The region ID of the stack group. You can call the [DescribeRegions]\(<del>131035</del>) operation to query the latest list of Alibaba Cloud regions.</para>
+        /// <para>Update an already created stack group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15631,7 +15635,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The region ID of the stack group. You can call the [DescribeRegions]\(<del>131035</del>) operation to query the latest list of Alibaba Cloud regions.</para>
+        /// <para>Update an already created stack group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15655,7 +15659,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The region ID of the stack group. You can call the [DescribeRegions]\(<del>131035</del>) operation to query the latest list of Alibaba Cloud regions.</para>
+        /// <para>Update an already created stack group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15927,7 +15931,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Corrects a template to eliminate stack drift.</para>
+        /// <para>Eliminates stack drifts by performing drift detection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15995,7 +15999,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Corrects a template to eliminate stack drift.</para>
+        /// <para>Eliminates stack drifts by performing drift detection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16063,7 +16067,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Corrects a template to eliminate stack drift.</para>
+        /// <para>Eliminates stack drifts by performing drift detection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -16087,7 +16091,7 @@ namespace AlibabaCloud.SDK.ROS20190910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Corrects a template to eliminate stack drift.</para>
+        /// <para>Eliminates stack drifts by performing drift detection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

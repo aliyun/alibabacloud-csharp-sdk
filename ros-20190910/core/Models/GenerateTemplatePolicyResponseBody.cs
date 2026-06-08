@@ -84,6 +84,56 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        [NameInMap("PolicyFunctions")]
+        [Validation(Required=false)]
+        public List<GenerateTemplatePolicyResponseBodyPolicyFunctions> PolicyFunctions { get; set; }
+        public class GenerateTemplatePolicyResponseBodyPolicyFunctions : TeaModel {
+            [NameInMap("Action")]
+            [Validation(Required=false)]
+            public string Action { get; set; }
+
+            [NameInMap("ActionPolicyFunctions")]
+            [Validation(Required=false)]
+            public List<GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions> ActionPolicyFunctions { get; set; }
+            public class GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions : TeaModel {
+                [NameInMap("Functions")]
+                [Validation(Required=false)]
+                public List<GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions> Functions { get; set; }
+                public class GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions : TeaModel {
+                    [NameInMap("Function")]
+                    [Validation(Required=false)]
+                    public string Function { get; set; }
+
+                    [NameInMap("OperationType")]
+                    [Validation(Required=false)]
+                    public string OperationType { get; set; }
+
+                    [NameInMap("RelatedProperties")]
+                    [Validation(Required=false)]
+                    public List<string> RelatedProperties { get; set; }
+
+                    [NameInMap("RequirementLevel")]
+                    [Validation(Required=false)]
+                    public string RequirementLevel { get; set; }
+
+                }
+
+                [NameInMap("LogicalResourceId")]
+                [Validation(Required=false)]
+                public string LogicalResourceId { get; set; }
+
+                [NameInMap("ResourceType")]
+                [Validation(Required=false)]
+                public string ResourceType { get; set; }
+
+            }
+
+            [NameInMap("RequirementLevel")]
+            [Validation(Required=false)]
+            public string RequirementLevel { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The ID of the request.</para>
         /// 
