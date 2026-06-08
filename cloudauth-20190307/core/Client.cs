@@ -12400,6 +12400,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 body["FaceFile"] = request.FaceFile;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePicture))
+            {
+                body["FacePicture"] = request.FacePicture;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceUrl))
             {
                 body["FaceUrl"] = request.FaceUrl;
@@ -12466,6 +12470,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceFile))
             {
                 body["FaceFile"] = request.FaceFile;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacePicture))
+            {
+                body["FacePicture"] = request.FacePicture;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FaceUrl))
             {
@@ -13633,6 +13641,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             {
                 query["CertifyUrlType"] = request.CertifyUrlType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableBeauty))
+            {
+                query["EnableBeauty"] = request.EnableBeauty;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptType))
             {
                 query["EncryptType"] = request.EncryptType;
@@ -13846,6 +13858,10 @@ namespace AlibabaCloud.SDK.Cloudauth20190307
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CertifyUrlType))
             {
                 query["CertifyUrlType"] = request.CertifyUrlType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableBeauty))
+            {
+                query["EnableBeauty"] = request.EnableBeauty;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EncryptType))
             {

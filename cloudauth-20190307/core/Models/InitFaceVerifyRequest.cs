@@ -196,6 +196,14 @@ namespace AlibabaCloud.SDK.Cloudauth20190307.Models
         public string Crop { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
+        [NameInMap("EnableBeauty")]
+        [Validation(Required=false)]
+        public string EnableBeauty { get; set; }
+
+        /// <summary>
         /// <para>Encryption algorithm to be used, currently supporting only the SM2 national encryption algorithm.</para>
         /// <para>After enabling encrypted transmission, you need to pass in the encrypted CertName and CertNo. For how to encrypt, please refer to <a href="https://help.aliyun.com/zh/id-verification/financial-grade-id-verification/description-of-parameter-encryption?spm=a2c4g.11186623.0.0.1a9d566eWdqwy8#task-2229332">Parameter Encryption Instructions</a>.</para>
         /// 
