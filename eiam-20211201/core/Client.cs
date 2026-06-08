@@ -34391,6 +34391,198 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取指定ResourceServer下Scope列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceServerScopesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceServerScopesResponse
+        /// </returns>
+        public ListResourceServerScopesResponse ListResourceServerScopesWithOptions(ListResourceServerScopesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationType))
+            {
+                query["AuthorizationType"] = request.AuthorizationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviousToken))
+            {
+                query["PreviousToken"] = request.PreviousToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceServerScopeIds))
+            {
+                query["ResourceServerScopeIds"] = request.ResourceServerScopeIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceServerScopeName))
+            {
+                query["ResourceServerScopeName"] = request.ResourceServerScopeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceServerScopeType))
+            {
+                query["ResourceServerScopeType"] = request.ResourceServerScopeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceServerScopeValue))
+            {
+                query["ResourceServerScopeValue"] = request.ResourceServerScopeValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceServerScopes",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceServerScopesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定ResourceServer下Scope列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceServerScopesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceServerScopesResponse
+        /// </returns>
+        public async Task<ListResourceServerScopesResponse> ListResourceServerScopesWithOptionsAsync(ListResourceServerScopesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthorizationType))
+            {
+                query["AuthorizationType"] = request.AuthorizationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreviousToken))
+            {
+                query["PreviousToken"] = request.PreviousToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceServerScopeIds))
+            {
+                query["ResourceServerScopeIds"] = request.ResourceServerScopeIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceServerScopeName))
+            {
+                query["ResourceServerScopeName"] = request.ResourceServerScopeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceServerScopeType))
+            {
+                query["ResourceServerScopeType"] = request.ResourceServerScopeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceServerScopeValue))
+            {
+                query["ResourceServerScopeValue"] = request.ResourceServerScopeValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListResourceServerScopes",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListResourceServerScopesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定ResourceServer下Scope列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceServerScopesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceServerScopesResponse
+        /// </returns>
+        public ListResourceServerScopesResponse ListResourceServerScopes(ListResourceServerScopesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListResourceServerScopesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取指定ResourceServer下Scope列表。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListResourceServerScopesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListResourceServerScopesResponse
+        /// </returns>
+        public async Task<ListResourceServerScopesResponse> ListResourceServerScopesAsync(ListResourceServerScopesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListResourceServerScopesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询用户的被授予ResourceServers和Scopes的权限</para>
         /// </summary>
         /// 

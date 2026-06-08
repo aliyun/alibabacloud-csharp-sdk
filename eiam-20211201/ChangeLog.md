@@ -1,3 +1,7 @@
+2026-06-08 Version: 1.24.0
+- Support API ListResourceServerScopes.
+
+
 2026-06-04 Version: 1.23.12
 - Update API ListInstances: add request parameters Edition.
 
