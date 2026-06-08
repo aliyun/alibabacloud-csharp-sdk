@@ -153,6 +153,10 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
             [Validation(Required=false)]
             public string AccessType { get; set; }
 
+            [NameInMap("IsLoginByCipherParam")]
+            [Validation(Required=false)]
+            public string IsLoginByCipherParam { get; set; }
+
             [NameInMap("PreferVpcAccess")]
             [Validation(Required=false)]
             public bool? PreferVpcAccess { get; set; }

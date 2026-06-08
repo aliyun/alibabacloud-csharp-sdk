@@ -430,6 +430,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             {
                 query["Channel"] = request.Channel;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherEndUserId))
+            {
+                query["CipherEndUserId"] = request.CipherEndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherPassword))
+            {
+                query["CipherPassword"] = request.CipherPassword;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {
                 query["ClientId"] = request.ClientId;
@@ -625,6 +633,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210220
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
             {
                 query["Channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherEndUserId))
+            {
+                query["CipherEndUserId"] = request.CipherEndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CipherPassword))
+            {
+                query["CipherPassword"] = request.CipherPassword;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientId))
             {

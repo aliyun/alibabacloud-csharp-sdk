@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.Appstream_center20210220.Models
         [Validation(Required=false)]
         public string Channel { get; set; }
 
+        [NameInMap("CipherEndUserId")]
+        [Validation(Required=false)]
+        public string CipherEndUserId { get; set; }
+
+        [NameInMap("CipherPassword")]
+        [Validation(Required=false)]
+        public string CipherPassword { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
