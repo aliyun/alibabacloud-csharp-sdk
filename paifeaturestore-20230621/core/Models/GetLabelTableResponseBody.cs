@@ -29,6 +29,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public List<GetLabelTableResponseBodyFields> Fields { get; set; }
         public class GetLabelTableResponseBodyFields : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>item</para>
+            /// </summary>
+            [NameInMap("AlignedEntityName")]
+            [Validation(Required=false)]
+            public string AlignedEntityName { get; set; }
+
             [NameInMap("Attributes")]
             [Validation(Required=false)]
             public List<string> Attributes { get; set; }

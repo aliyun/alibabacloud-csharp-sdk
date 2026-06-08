@@ -27,6 +27,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public List<CreateLabelTableRequestFields> Fields { get; set; }
         public class CreateLabelTableRequestFields : TeaModel {
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>item</para>
+            /// </summary>
+            [NameInMap("AlignedEntityName")]
+            [Validation(Required=false)]
+            public string AlignedEntityName { get; set; }
+
+            /// <summary>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Attributes")]

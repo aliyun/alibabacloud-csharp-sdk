@@ -55,6 +55,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public string SecondJoinKey { get; set; }
 
+        [NameInMap("JoinWithLabel")]
+        [Validation(Required=false)]
+        public bool? JoinWithLabel { get; set; }
+
     }
 
 }
