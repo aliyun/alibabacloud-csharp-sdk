@@ -18277,6 +18277,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             {
                 body["BizOrderStatus"] = request.BizOrderStatus;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
+            {
+                body["ClientType"] = request.ClientType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpExtra))
+            {
+                body["CpExtra"] = request.CpExtra;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomId))
             {
                 body["CustomId"] = request.CustomId;
@@ -18354,6 +18362,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizOrderStatus))
             {
                 body["BizOrderStatus"] = request.BizOrderStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
+            {
+                body["ClientType"] = request.ClientType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CpExtra))
+            {
+                body["CpExtra"] = request.CpExtra;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomId))
             {

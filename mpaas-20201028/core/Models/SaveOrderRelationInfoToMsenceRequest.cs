@@ -41,6 +41,14 @@ namespace AlibabaCloud.SDK.MPaaS20201028.Models
         [Validation(Required=false)]
         public int? BizOrderStatus { get; set; }
 
+        [NameInMap("ClientType")]
+        [Validation(Required=false)]
+        public string ClientType { get; set; }
+
+        [NameInMap("CpExtra")]
+        [Validation(Required=false)]
+        public string CpExtra { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>test_custom_id</para>
