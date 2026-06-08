@@ -1547,30 +1547,30 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         public CreateAppChatResponse CreateAppChatWithOptions(CreateAppChatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BotId))
             {
-                query["BotId"] = request.BotId;
+                body["BotId"] = request.BotId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
             {
-                query["ChatId"] = request.ChatId;
+                body["ChatId"] = request.ChatId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
             {
-                query["ConversationId"] = request.ConversationId;
+                body["ConversationId"] = request.ConversationId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
             {
-                query["Messages"] = request.Messages;
+                body["Messages"] = request.Messages;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
             {
-                query["SiteId"] = request.SiteId;
+                body["SiteId"] = request.SiteId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -1605,30 +1605,30 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         public async Task<CreateAppChatResponse> CreateAppChatWithOptionsAsync(CreateAppChatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BotId))
             {
-                query["BotId"] = request.BotId;
+                body["BotId"] = request.BotId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
             {
-                query["ChatId"] = request.ChatId;
+                body["ChatId"] = request.ChatId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
             {
-                query["ConversationId"] = request.ConversationId;
+                body["ConversationId"] = request.ConversationId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Messages))
             {
-                query["Messages"] = request.Messages;
+                body["Messages"] = request.Messages;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SiteId))
             {
-                query["SiteId"] = request.SiteId;
+                body["SiteId"] = request.SiteId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7615,6 +7615,426 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetLlmProxyConfigForAdminWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取小程序授权链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMiniAppAuthUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMiniAppAuthUrlResponse
+        /// </returns>
+        public GetMiniAppAuthUrlResponse GetMiniAppAuthUrlWithOptions(GetMiniAppAuthUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedirectUri))
+            {
+                query["RedirectUri"] = request.RedirectUri;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMiniAppAuthUrl",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMiniAppAuthUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取小程序授权链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMiniAppAuthUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMiniAppAuthUrlResponse
+        /// </returns>
+        public async Task<GetMiniAppAuthUrlResponse> GetMiniAppAuthUrlWithOptionsAsync(GetMiniAppAuthUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RedirectUri))
+            {
+                query["RedirectUri"] = request.RedirectUri;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMiniAppAuthUrl",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMiniAppAuthUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取小程序授权链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMiniAppAuthUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMiniAppAuthUrlResponse
+        /// </returns>
+        public GetMiniAppAuthUrlResponse GetMiniAppAuthUrl(GetMiniAppAuthUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMiniAppAuthUrlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取小程序授权链接</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMiniAppAuthUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMiniAppAuthUrlResponse
+        /// </returns>
+        public async Task<GetMiniAppAuthUrlResponse> GetMiniAppAuthUrlAsync(GetMiniAppAuthUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMiniAppAuthUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点绑定的小程序</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetMiniAppBindingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMiniAppBindingResponse
+        /// </returns>
+        public GetMiniAppBindingResponse GetMiniAppBindingWithOptions(GetMiniAppBindingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetMiniAppBindingShrinkRequest request = new GetMiniAppBindingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SettingKeys))
+            {
+                request.SettingKeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SettingKeys, "SettingKeys", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SettingKeysShrink))
+            {
+                query["SettingKeys"] = request.SettingKeysShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMiniAppBinding",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMiniAppBindingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点绑定的小程序</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetMiniAppBindingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMiniAppBindingResponse
+        /// </returns>
+        public async Task<GetMiniAppBindingResponse> GetMiniAppBindingWithOptionsAsync(GetMiniAppBindingRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetMiniAppBindingShrinkRequest request = new GetMiniAppBindingShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SettingKeys))
+            {
+                request.SettingKeysShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SettingKeys, "SettingKeys", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SettingKeysShrink))
+            {
+                query["SettingKeys"] = request.SettingKeysShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMiniAppBinding",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMiniAppBindingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点绑定的小程序</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMiniAppBindingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMiniAppBindingResponse
+        /// </returns>
+        public GetMiniAppBindingResponse GetMiniAppBinding(GetMiniAppBindingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMiniAppBindingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询站点绑定的小程序</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMiniAppBindingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMiniAppBindingResponse
+        /// </returns>
+        public async Task<GetMiniAppBindingResponse> GetMiniAppBindingAsync(GetMiniAppBindingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMiniAppBindingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据条件查询应用实例绑定的小程序</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMiniAppBindingForAdminRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMiniAppBindingForAdminResponse
+        /// </returns>
+        public GetMiniAppBindingForAdminResponse GetMiniAppBindingForAdminWithOptions(GetMiniAppBindingForAdminRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformAppid))
+            {
+                query["PlatformAppid"] = request.PlatformAppid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMiniAppBindingForAdmin",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMiniAppBindingForAdminResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据条件查询应用实例绑定的小程序</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMiniAppBindingForAdminRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMiniAppBindingForAdminResponse
+        /// </returns>
+        public async Task<GetMiniAppBindingForAdminResponse> GetMiniAppBindingForAdminWithOptionsAsync(GetMiniAppBindingForAdminRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlatformAppid))
+            {
+                query["PlatformAppid"] = request.PlatformAppid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMiniAppBindingForAdmin",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMiniAppBindingForAdminResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据条件查询应用实例绑定的小程序</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMiniAppBindingForAdminRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMiniAppBindingForAdminResponse
+        /// </returns>
+        public GetMiniAppBindingForAdminResponse GetMiniAppBindingForAdmin(GetMiniAppBindingForAdminRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMiniAppBindingForAdminWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>根据条件查询应用实例绑定的小程序</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMiniAppBindingForAdminRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMiniAppBindingForAdminResponse
+        /// </returns>
+        public async Task<GetMiniAppBindingForAdminResponse> GetMiniAppBindingForAdminAsync(GetMiniAppBindingForAdminRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMiniAppBindingForAdminWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -17855,6 +18275,150 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateAppSupabaseSecretWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新绑定小程序信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMiniAppBindingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMiniAppBindingResponse
+        /// </returns>
+        public UpdateMiniAppBindingResponse UpdateMiniAppBindingWithOptions(UpdateMiniAppBindingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SettingKey))
+            {
+                query["SettingKey"] = request.SettingKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SettingValue))
+            {
+                query["SettingValue"] = request.SettingValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMiniAppBinding",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMiniAppBindingResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新绑定小程序信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMiniAppBindingRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMiniAppBindingResponse
+        /// </returns>
+        public async Task<UpdateMiniAppBindingResponse> UpdateMiniAppBindingWithOptionsAsync(UpdateMiniAppBindingRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
+            {
+                query["Channel"] = request.Channel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SettingKey))
+            {
+                query["SettingKey"] = request.SettingKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SettingValue))
+            {
+                query["SettingValue"] = request.SettingValue;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMiniAppBinding",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMiniAppBindingResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新绑定小程序信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMiniAppBindingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMiniAppBindingResponse
+        /// </returns>
+        public UpdateMiniAppBindingResponse UpdateMiniAppBinding(UpdateMiniAppBindingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateMiniAppBindingWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新绑定小程序信息</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateMiniAppBindingRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMiniAppBindingResponse
+        /// </returns>
+        public async Task<UpdateMiniAppBindingResponse> UpdateMiniAppBindingAsync(UpdateMiniAppBindingRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateMiniAppBindingWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
