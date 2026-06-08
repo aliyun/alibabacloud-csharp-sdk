@@ -1,0 +1,24 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
+{
+    public class DeleteProcessDefinitionRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>f0d6d578-a305-40ac-ba1e-0a09f64cbc69</para>
+        /// </summary>
+        [NameInMap("Id")]
+        [Validation(Required=false)]
+        public string Id { get; set; }
+
+    }
+
+}
