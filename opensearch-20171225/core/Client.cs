@@ -4839,6 +4839,11 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return await DescribeInterventionDictionaryWithOptionsAsync(name, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the query analysis rule for a version of an OpenSearch application.</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -4870,6 +4875,11 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeQueryProcessorResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the query analysis rule for a version of an OpenSearch application.</para>
+        /// </summary>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -4901,6 +4911,11 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return TeaModel.ToObject<DescribeQueryProcessorResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the query analysis rule for a version of an OpenSearch application.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribeQueryProcessorResponse
         /// </returns>
@@ -4911,6 +4926,11 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             return DescribeQueryProcessorWithOptions(appGroupIdentity, appId, name, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the query analysis rule for a version of an OpenSearch application.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribeQueryProcessorResponse
         /// </returns>
@@ -15211,6 +15231,136 @@ namespace AlibabaCloud.SDK.OpenSearch20171225
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateABTestSceneWithOptionsAsync(appGroupIdentity, sceneId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用删除保护</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAppGroupDeleteProtectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAppGroupDeleteProtectionResponse
+        /// </returns>
+        public UpdateAppGroupDeleteProtectionResponse UpdateAppGroupDeleteProtectionWithOptions(string appGroupIdentity, UpdateAppGroupDeleteProtectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                body["body"] = request.Body;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAppGroupDeleteProtection",
+                Version = "2017-12-25",
+                Protocol = "HTTPS",
+                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/delete-protection",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAppGroupDeleteProtectionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用删除保护</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAppGroupDeleteProtectionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAppGroupDeleteProtectionResponse
+        /// </returns>
+        public async Task<UpdateAppGroupDeleteProtectionResponse> UpdateAppGroupDeleteProtectionWithOptionsAsync(string appGroupIdentity, UpdateAppGroupDeleteProtectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Body))
+            {
+                body["body"] = request.Body;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAppGroupDeleteProtection",
+                Version = "2017-12-25",
+                Protocol = "HTTPS",
+                Pathname = "/v4/openapi/app-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(appGroupIdentity) + "/delete-protection",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAppGroupDeleteProtectionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用删除保护</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAppGroupDeleteProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAppGroupDeleteProtectionResponse
+        /// </returns>
+        public UpdateAppGroupDeleteProtectionResponse UpdateAppGroupDeleteProtection(string appGroupIdentity, UpdateAppGroupDeleteProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAppGroupDeleteProtectionWithOptions(appGroupIdentity, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>应用删除保护</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAppGroupDeleteProtectionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAppGroupDeleteProtectionResponse
+        /// </returns>
+        public async Task<UpdateAppGroupDeleteProtectionResponse> UpdateAppGroupDeleteProtectionAsync(string appGroupIdentity, UpdateAppGroupDeleteProtectionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAppGroupDeleteProtectionWithOptionsAsync(appGroupIdentity, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
