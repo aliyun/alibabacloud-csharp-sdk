@@ -26,6 +26,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> DesktopIds { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>FAILED</para>
+        /// </summary>
         [NameInMap("DisplayResultName")]
         [Validation(Required=false)]
         public string DisplayResultName { get; set; }
@@ -72,6 +76,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceTypes")]
+        [Validation(Required=false)]
+        public List<string> ResourceTypes { get; set; }
+
         /// <summary>
         /// <para>The type of the execution result. You can specify this parameter to filter the execution results.</para>
         /// <para>Valid values:</para>
@@ -89,6 +97,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ResultCategory { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Retryable")]
         [Validation(Required=false)]
         public bool? Retryable { get; set; }
@@ -128,6 +140,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("TimerTypes")]
         [Validation(Required=false)]
         public List<string> TimerTypes { get; set; }
+
+        [NameInMap("WuyingServerIds")]
+        [Validation(Required=false)]
+        public List<string> WuyingServerIds { get; set; }
 
     }
 

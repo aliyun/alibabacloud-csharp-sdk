@@ -24464,6 +24464,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypes))
+            {
+                query["ResourceTypes"] = request.ResourceTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
             {
                 query["SearchRegionId"] = request.SearchRegionId;
@@ -24525,6 +24529,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypes))
+            {
+                query["ResourceTypes"] = request.ResourceTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchRegionId))
             {
@@ -24636,6 +24644,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypes))
+            {
+                query["ResourceTypes"] = request.ResourceTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultCategory))
             {
                 query["ResultCategory"] = request.ResultCategory;
@@ -24655,6 +24667,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimerTypes))
             {
                 query["TimerTypes"] = request.TimerTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerIds))
+            {
+                query["WuyingServerIds"] = request.WuyingServerIds;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -24722,6 +24738,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceTypes))
+            {
+                query["ResourceTypes"] = request.ResourceTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultCategory))
             {
                 query["ResultCategory"] = request.ResultCategory;
@@ -24741,6 +24761,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimerTypes))
             {
                 query["TimerTypes"] = request.TimerTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingServerIds))
+            {
+                query["WuyingServerIds"] = request.WuyingServerIds;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

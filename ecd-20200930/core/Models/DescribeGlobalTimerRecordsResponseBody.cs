@@ -46,6 +46,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeGlobalTimerRecordsResponseBodyResults> Results { get; set; }
         public class DescribeGlobalTimerRecordsResponseBodyResults : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>REBOOT</para>
+            /// </summary>
             [NameInMap("ActionType")]
             [Validation(Required=false)]
             public string ActionType { get; set; }
@@ -60,6 +64,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string BatchId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>{}</para>
+            /// </summary>
             [NameInMap("Context")]
             [Validation(Required=false)]
             public string Context { get; set; }
@@ -94,6 +102,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DesktopName { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>SKIPPED</para>
+            /// </summary>
             [NameInMap("DisplayResultName")]
             [Validation(Required=false)]
             public string DisplayResultName { get; set; }
@@ -118,6 +130,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>p-xxx</para>
+            /// </summary>
+            [NameInMap("ResourceParentId")]
+            [Validation(Required=false)]
+            public string ResourceParentId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("Retryable")]
             [Validation(Required=false)]
             public bool? Retryable { get; set; }
@@ -132,6 +156,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string TimerGroupId { get; set; }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>t-xxx</para>
+            /// </summary>
             [NameInMap("TimerRecordId")]
             [Validation(Required=false)]
             public string TimerRecordId { get; set; }

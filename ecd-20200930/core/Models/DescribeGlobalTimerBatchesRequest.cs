@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceTypes")]
+        [Validation(Required=false)]
+        public List<string> ResourceTypes { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
