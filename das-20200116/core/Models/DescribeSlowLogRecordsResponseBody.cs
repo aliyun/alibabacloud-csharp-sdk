@@ -136,6 +136,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 [Validation(Required=false)]
                 public string DocsExamined { get; set; }
 
+                [NameInMap("ExtText")]
+                [Validation(Required=false)]
+                public string ExtText { get; set; }
+
                 [NameInMap("Fail")]
                 [Validation(Required=false)]
                 public string Fail { get; set; }

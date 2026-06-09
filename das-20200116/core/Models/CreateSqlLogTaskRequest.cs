@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
     public class CreateSqlLogTaskRequest : TeaModel {
         /// <summary>
         /// <para>The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1608888296000</para>
@@ -100,6 +101,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// <para>The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1596177993000</para>
