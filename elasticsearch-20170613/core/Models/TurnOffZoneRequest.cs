@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Elasticsearch20170613.Models
 {
     public class TurnOffZoneRequest : TeaModel {
+        [NameInMap("hpAlbZoneDrained")]
+        [Validation(Required=false)]
+        public bool? HpAlbZoneDrained { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>

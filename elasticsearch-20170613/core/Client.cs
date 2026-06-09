@@ -21063,6 +21063,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HpAlbZoneDrained))
+            {
+                query["hpAlbZoneDrained"] = request.HpAlbZoneDrained;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Zone))
             {
                 query["zone"] = request.Zone;
@@ -21109,6 +21113,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HpAlbZoneDrained))
+            {
+                query["hpAlbZoneDrained"] = request.HpAlbZoneDrained;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Zone))
             {
                 query["zone"] = request.Zone;
@@ -21193,6 +21201,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HpAlbZoneDrained))
+            {
+                query["hpAlbZoneDrained"] = request.HpAlbZoneDrained;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Zone))
             {
                 query["zone"] = request.Zone;
@@ -21239,6 +21251,10 @@ namespace AlibabaCloud.SDK.Elasticsearch20170613
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HpAlbZoneDrained))
+            {
+                query["hpAlbZoneDrained"] = request.HpAlbZoneDrained;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Zone))
             {
                 query["zone"] = request.Zone;
