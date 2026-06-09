@@ -1,3 +1,6 @@
+2026-06-09 Version: 5.8.1
+- Generated csharp 2024-05-18 for dataworks-public.
+
 2026-06-08 Version: 5.8.0
 - Support API ApplyResourceAccessPermission.
 - Support API ApproveProcessInstance.
