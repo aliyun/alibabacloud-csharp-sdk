@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Domain { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>123123</para>
+        /// </summary>
+        [NameInMap("SeAuthInfo")]
+        [Validation(Required=false)]
+        public string SeAuthInfo { get; set; }
+
+        /// <summary>
         /// <para>Search Engine Type</para>
         /// 
         /// <b>Example:</b>

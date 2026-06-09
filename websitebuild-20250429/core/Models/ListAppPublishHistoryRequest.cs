@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        [NameInMap("DeployChannel")]
+        [Validation(Required=false)]
+        public string DeployChannel { get; set; }
+
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
