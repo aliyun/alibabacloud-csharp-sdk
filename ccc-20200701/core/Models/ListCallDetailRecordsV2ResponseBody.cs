@@ -387,6 +387,10 @@ namespace AlibabaCloud.SDK.CCC20200701.Models
                 [Validation(Required=false)]
                 public string OffsiteAgentReleaseReason { get; set; }
 
+                [NameInMap("OutsideNumberDestinationNumber")]
+                [Validation(Required=false)]
+                public string OutsideNumberDestinationNumber { get; set; }
+
                 [NameInMap("OutsideNumberReleaseReason")]
                 [Validation(Required=false)]
                 public string OutsideNumberReleaseReason { get; set; }
