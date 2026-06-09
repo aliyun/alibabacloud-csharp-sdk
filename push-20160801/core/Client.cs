@@ -2055,6 +2055,14 @@ namespace AlibabaCloud.SDK.Push20160801
             {
                 query["AndroidXiaomiBigPictureUrl"] = request.AndroidXiaomiBigPictureUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaomiFocusParam))
+            {
+                query["AndroidXiaomiFocusParam"] = request.AndroidXiaomiFocusParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaomiFocusPics))
+            {
+                query["AndroidXiaomiFocusPics"] = request.AndroidXiaomiFocusPics;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaomiImageUrl))
             {
                 query["AndroidXiaomiImageUrl"] = request.AndroidXiaomiImageUrl;
@@ -2570,6 +2578,14 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaomiBigPictureUrl))
             {
                 query["AndroidXiaomiBigPictureUrl"] = request.AndroidXiaomiBigPictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaomiFocusParam))
+            {
+                query["AndroidXiaomiFocusParam"] = request.AndroidXiaomiFocusParam;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaomiFocusPics))
+            {
+                query["AndroidXiaomiFocusPics"] = request.AndroidXiaomiFocusPics;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaomiImageUrl))
             {
@@ -4378,6 +4394,11 @@ namespace AlibabaCloud.SDK.Push20160801
             return await QueryDevicesByAliasWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取推送历史记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryPushRecordsRequest
         /// </param>
@@ -4451,6 +4472,11 @@ namespace AlibabaCloud.SDK.Push20160801
             return TeaModel.ToObject<QueryPushRecordsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取推送历史记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryPushRecordsRequest
         /// </param>
@@ -4524,6 +4550,11 @@ namespace AlibabaCloud.SDK.Push20160801
             return TeaModel.ToObject<QueryPushRecordsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取推送历史记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryPushRecordsRequest
         /// </param>
@@ -4537,6 +4568,11 @@ namespace AlibabaCloud.SDK.Push20160801
             return QueryPushRecordsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取推送历史记录</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryPushRecordsRequest
         /// </param>

@@ -347,6 +347,14 @@ namespace AlibabaCloud.SDK.Push20160801.Models
                         [Validation(Required=false)]
                         public string Channel { get; set; }
 
+                        [NameInMap("FocusParam")]
+                        [Validation(Required=false)]
+                        public string FocusParam { get; set; }
+
+                        [NameInMap("FocusPics")]
+                        [Validation(Required=false)]
+                        public string FocusPics { get; set; }
+
                     }
 
                 }

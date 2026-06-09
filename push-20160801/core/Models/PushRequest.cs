@@ -354,6 +354,14 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         [Obsolete]
         public string AndroidXiaomiBigPictureUrl { get; set; }
 
+        [NameInMap("AndroidXiaomiFocusParam")]
+        [Validation(Required=false)]
+        public string AndroidXiaomiFocusParam { get; set; }
+
+        [NameInMap("AndroidXiaomiFocusPics")]
+        [Validation(Required=false)]
+        public string AndroidXiaomiFocusPics { get; set; }
+
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
