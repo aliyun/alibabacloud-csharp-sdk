@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string DBInstanceName { get; set; }
 
+        [NameInMap("InstanceName")]
+        [Validation(Required=false)]
+        public string InstanceName { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
