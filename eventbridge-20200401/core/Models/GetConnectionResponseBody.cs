@@ -396,6 +396,26 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                 }
 
+                /// <summary>
+                /// <para>数据源连接参数（JSON 对象）。仅数据源类型连接返回，Http 类型为空。字段定义参考 GetConnectionType 返回的 ParamsSchema</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</para>
+                /// </summary>
+                [NameInMap("Parameters")]
+                [Validation(Required=false)]
+                public object Parameters { get; set; }
+
+                /// <summary>
+                /// <para>连接类型。可选值：Http、MySQL、PostgreSQL、Elasticsearch</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Http</para>
+                /// </summary>
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
             }
 
         }

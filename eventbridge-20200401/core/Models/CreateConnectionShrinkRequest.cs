@@ -45,6 +45,26 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string NetworkParametersShrink { get; set; }
 
+        /// <summary>
+        /// <para>数据源连接参数（JSON 对象），Type 为数据源类型时必填，Http 类型不需要。具体字段定义请调用 GetConnectionType 接口，参考返回结果中的 ParamsSchema</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</para>
+        /// </summary>
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public string ParametersShrink { get; set; }
+
+        /// <summary>
+        /// <para>连接类型。可选值：MySQL、PostgreSQL、Elasticsearch、Http。数据源类型连接必填，不传默认为 Http。Http 类型用于 API Destination 等 HTTP 协议目标；数据源类型用于集成广场的数据连接</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Http</para>
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
     }
 
 }

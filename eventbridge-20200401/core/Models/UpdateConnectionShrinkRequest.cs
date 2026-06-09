@@ -45,6 +45,26 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string NetworkParametersShrink { get; set; }
 
+        /// <summary>
+        /// <para>数据源连接参数（JSON 对象）。具体字段定义请调用 GetConnectionType 接口，参考返回结果中的 ParamsSchema</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</para>
+        /// </summary>
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public string ParametersShrink { get; set; }
+
+        /// <summary>
+        /// <para>连接类型。可选值：MySQL、PostgreSQL、Elasticsearch、Http</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Http</para>
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
     }
 
 }

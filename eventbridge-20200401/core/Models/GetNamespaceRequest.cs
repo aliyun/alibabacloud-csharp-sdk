@@ -8,10 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
-    public class Namespace : TeaModel {
+    public class GetNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>命名空间所属的数据目录名称</para>
-        /// <para>This parameter is required.</para>
+        /// <para>命名空间所属的数据目录名称。可通过 ListCatalogs 接口获取已有目录列表</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_catalog</para>
@@ -21,17 +20,18 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Catalog { get; set; }
 
         /// <summary>
-        /// <para>命名空间的备注描述信息</para>
+        /// <para>用于保证请求幂等性的Token。建议使用 UUID</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试命名空间</para>
+        /// <para>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</para>
         /// </summary>
-        [NameInMap("Comment")]
+        [NameInMap("ClientToken")]
         [Validation(Required=false)]
-        public string Comment { get; set; }
+        public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>命名空间的唯一标识名称</para>
+        /// <para>要查询的命名空间名称。需同时指定所属 Catalog。可通过 ListNamespaces 获取已有命名空间列表</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_namespace</para>
@@ -39,16 +39,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
-
-        /// <summary>
-        /// <para>命名空间的扩展属性</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
-        /// </summary>
-        [NameInMap("properties")]
-        [Validation(Required=false)]
-        public string Properties { get; set; }
 
     }
 

@@ -8,38 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
-    public class Column : TeaModel {
+    public class DeleteNamespaceResponseBody : TeaModel {
         /// <summary>
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>200</para>
         /// </summary>
-        [NameInMap("IsNull")]
+        [NameInMap("Code")]
         [Validation(Required=false)]
-        public bool? IsNull { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>index</para>
+        /// <para>Operation success</para>
         /// </summary>
-        [NameInMap("Name")]
+        [NameInMap("Message")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Message { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>text</para>
+        /// <para>34AD682D-5B91-5773-8132-AA38C130****</para>
         /// </summary>
-        [NameInMap("Type")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Type { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
         /// <b>Example:</b>
-        /// <para>product_info</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("Value")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string Value { get; set; }
+        public bool? Success { get; set; }
 
     }
 

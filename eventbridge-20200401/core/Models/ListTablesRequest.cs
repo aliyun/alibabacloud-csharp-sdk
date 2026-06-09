@@ -8,10 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
-    public class Namespace : TeaModel {
+    public class ListTablesRequest : TeaModel {
         /// <summary>
-        /// <para>命名空间所属的数据目录名称</para>
-        /// <para>This parameter is required.</para>
+        /// <para>表所属的数据目录名称。可通过 ListCatalogs 获取</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_catalog</para>
@@ -21,34 +20,34 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Catalog { get; set; }
 
         /// <summary>
-        /// <para>命名空间的备注描述信息</para>
+        /// <para>每页返回的最大数据条数。不传时默认 10，最大 100</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试命名空间</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("Comment")]
+        [NameInMap("Limit")]
         [Validation(Required=false)]
-        public string Comment { get; set; }
+        public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>命名空间的唯一标识名称</para>
+        /// <para>表所属的命名空间名称。可通过 ListNamespaces 获取</para>
         /// 
         /// <b>Example:</b>
         /// <para>my_namespace</para>
         /// </summary>
-        [NameInMap("Name")]
+        [NameInMap("Namespace")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>命名空间的扩展属性</para>
+        /// <para>分页查询的起始Token。首次查询不传或传 &quot;0&quot;；后续翻页使用上一次响应中返回的 NextToken 值</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;key&quot;:&quot;value&quot;}</para>
+        /// <para>0</para>
         /// </summary>
-        [NameInMap("properties")]
+        [NameInMap("NextToken")]
         [Validation(Required=false)]
-        public string Properties { get; set; }
+        public string NextToken { get; set; }
 
     }
 
