@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public int? TargetValue { get; set; }
 
+        [NameInMap("Tolerance")]
+        [Validation(Required=false)]
+        public string Tolerance { get; set; }
+
     }
 
 }

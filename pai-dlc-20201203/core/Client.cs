@@ -2405,7 +2405,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取metrics数据</para>
+        /// <para>Queries metrics data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2487,7 +2487,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取metrics数据</para>
+        /// <para>Queries metrics data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2569,7 +2569,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取metrics数据</para>
+        /// <para>Queries metrics data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2588,7 +2588,7 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取metrics数据</para>
+        /// <para>Queries metrics data.</para>
         /// </summary>
         /// 
         /// <param name="request">

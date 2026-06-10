@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public int? Active { get; set; }
 
+        [NameInMap("CurrentSpotInstanceType")]
+        [Validation(Required=false)]
+        public string CurrentSpotInstanceType { get; set; }
+
         [NameInMap("Dequeued")]
         [Validation(Required=false)]
         public int? Dequeued { get; set; }

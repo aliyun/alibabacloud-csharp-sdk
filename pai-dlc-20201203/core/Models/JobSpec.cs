@@ -40,6 +40,10 @@ namespace AlibabaCloud.SDK.Pai_dlc20201203.Models
         [Validation(Required=false)]
         public string EcsSpec { get; set; }
 
+        [NameInMap("ElasticSpotSpecs")]
+        [Validation(Required=false)]
+        public List<ElasticSpotSpec> ElasticSpotSpecs { get; set; }
+
         /// <summary>
         /// <para>The additional pod configurations.</para>
         /// </summary>
