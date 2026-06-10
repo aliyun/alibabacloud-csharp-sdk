@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of pages.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -38,7 +38,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records on each page.</para>
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

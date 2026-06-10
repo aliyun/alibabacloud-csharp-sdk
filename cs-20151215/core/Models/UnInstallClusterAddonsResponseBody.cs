@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>c5b5e80b0b64a4bf6939d2d8fbbc5****</para>
+        /// <para>c5b5e80b0b64a4bf6939d2d8fbb******</para>
         /// </summary>
         [NameInMap("cluster_id")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>74D1512F-67DA-54E8-99EA-4D50EB4898F4</para>
+        /// <para>74D1512F-67DA-54E8-99EA-4D50EB******</para>
         /// </summary>
         [NameInMap("request_id")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>T-66e39b39c0fdd001320005c0</para>
+        /// <para>T-66e39b39c0fdd00132******</para>
         /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]

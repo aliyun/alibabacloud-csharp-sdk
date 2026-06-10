@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The ID of the log entry.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>590749245</para>
+            /// <para>73117232145******</para>
             /// </summary>
             [NameInMap("ID")]
             [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The time when the log entry was generated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-09-11T10:11:51+08:00</para>
+            /// <para>2025-04-10T17:54:26+08:00</para>
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The time when the log entry was updated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-09-11T10:11:51+08:00</para>
+            /// <para>2025-04-10T17:54:26+08:00</para>
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]

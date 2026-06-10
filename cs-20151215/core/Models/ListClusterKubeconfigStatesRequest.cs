@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class ListClusterKubeconfigStatesRequest : TeaModel {
+        /// <summary>
+        /// <para>Whether to query the KubeConfig list of service roles for cloud products within the cluster.  </para>
+        /// <list type="bullet">
+        /// <item><description>true: Query the KubeConfig list of service roles for cloud products within the cluster.  </description></item>
+        /// <item><description>false: Query the KubeConfig list of Resource Access Management (RAM) users or roles within the cluster.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("cloudServiceKubeConfig")]
         [Validation(Required=false)]
         public bool? CloudServiceKubeConfig { get; set; }

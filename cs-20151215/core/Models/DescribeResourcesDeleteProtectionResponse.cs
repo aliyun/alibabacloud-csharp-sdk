@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>arms-prom</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]

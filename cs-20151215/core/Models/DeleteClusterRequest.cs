@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DeleteClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The type of cluster resource that you want to delete or retain.</para>
+        /// <para>The options for deleting the resources that are associated with the cluster.</para>
         /// </summary>
         [NameInMap("delete_options")]
         [Validation(Required=false)]
         public List<DeleteClusterRequestDeleteOptions> DeleteOptions { get; set; }
         public class DeleteClusterRequestDeleteOptions : TeaModel {
             /// <summary>
-            /// <para>The deletion policy for the specified type of resource. Valid values:</para>
+            /// <para>The deletion policy for the specified resource type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>delete: deletes the specified type of resource.</description></item>
-            /// <item><description>retain: retains the specified type of resource.</description></item>
+            /// <item><description><para>delete: Deletes the resources.</para>
+            /// </description></item>
+            /// <item><description><para>retain: Retains the resources.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,13 +33,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string DeleteMode { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource. Valid values:</para>
+            /// <para>The type of resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SLB: SLB resources created for Services. By default, the SLB resources are automatically deleted.</description></item>
-            /// <item><description>ALB: Application Load Balancer (ALB) resources created by the ALB Ingress controller. By default, the ALB resources are retained.</description></item>
-            /// <item><description>SLS_Data: Simple Log Service projects used by the cluster logging feature. By default, the Simple Log Service projects are retained.</description></item>
-            /// <item><description>SLS_ControlPlane: Simple Log Service projects used to store the logs of control planes in ACK managed clusters. By default, the Simple Log Service projects are retained.</description></item>
-            /// <item><description>PrivateZone: PrivateZone resources created by ACK Serverless clusters. By default, the PrivateZone resources are retained.</description></item>
+            /// <item><description><para>SLB: the SLB resources created for Services. These resources are deleted by default, but you can choose to retain them.</para>
+            /// </description></item>
+            /// <item><description><para>ALB: the ALB resources created by the ALB Ingress controller. These resources are retained by default, but you can choose to delete them.</para>
+            /// </description></item>
+            /// <item><description><para>SLS_Data: the SLS project used for cluster logs. This resource is retained by default, but you can choose to delete it.</para>
+            /// </description></item>
+            /// <item><description><para>SLS_ControlPlane: the SLS project used for control plane logs in a managed cluster. This resource is retained by default, but you can choose to delete it.</para>
+            /// </description></item>
+            /// <item><description><para>PrivateZone: the PrivateZone resource created by an ACK Serverless cluster. This resource is retained by default, but you can choose to delete it.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -52,12 +59,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to retain the Server Load Balancer (SLB) resources that are created by the cluster.</para>
+        /// <para>Whether to retain SLB resources. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: retains the SLB instances that are created by the cluster.</description></item>
-        /// <item><description><c>false</c>: does not retain the SLB instances that are created by the cluster.</description></item>
+        /// <item><description><para><c>true</c>: Retains the SLB resources that are created for the cluster.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Does not retain the SLB resources that are created for the cluster.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <c>false</c>. Set resource_type to <c>SLB</c> in the <c>delete_options</c> parameter to manage SLB instances.</para>
+        /// <para>Default value: <c>false</c>.
+        /// Use the <c>delete_options</c> parameter to manage <c>SLB</c> resources instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -68,10 +78,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? KeepSlb { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retain all resources. If you set the parameter to <c>true</c>, the <c>retain_resources</c> parameter is ignored. The cloud resources that are created by the cluster are retained. You can call the <c>DescribeClusterResources</c> operation to query cloud resources created by the cluster. If you set the parameter to <c>false</c>, resources to be retained by default in the <c>delete_options</c> parameter are still retained. To delete these resources, set <c>delete_mode</c> to <c>delete</c> in <c>delete_options</c>.</para>
+        /// <para>Whether to retain all associated resources. If you set this parameter to <c>true</c>, the <c>retain_resources</c> parameter is ignored, and all cloud resources that are created with the cluster and can be queried by calling <c>DescribeClusterResources</c> are retained. If you set this parameter to <c>false</c>, note that resources that are configured to be retained by default in the <c>delete_options</c> parameter are still retained. To delete these resources, you must explicitly set the <c>delete_mode</c> parameter to <c>delete</c> for them in <c>delete_options</c>.</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: retains all resources, including cloud resources created by the cluster.</description></item>
-        /// <item><description><c>false</c>: does not retain all resources. Resources to be retained by default in the <c>delete_options</c> parameter are retained. For example, <c>ALB</c> instances are retained when this parameter is set to <c>false</c>.</description></item>
+        /// <item><description><para><c>true</c>: Retains all associated cloud resources that are created with the cluster.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Does not retain all associated cloud resources. Resources that are configured to be retained by default in the <c>delete_options</c> parameter, such as <c>ALB</c>, are still retained when this parameter is set to <c>false</c>.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -83,7 +95,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? RetainAllResources { get; set; }
 
         /// <summary>
-        /// <para>The list of resources. To retain resources when you delete a cluster, you need to specify the IDs of the resources to be retained.</para>
+        /// <para>The IDs of resources to retain when the cluster is deleted.</para>
         /// </summary>
         [NameInMap("retain_resources")]
         [Validation(Required=false)]

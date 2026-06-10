@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>The description of the inspection item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>集群API Server负载均衡实例异常会影响集群可用性，请检查负载均衡实例状态是否正常。</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -52,6 +55,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>The fixing suggestion.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>请提交工单处理。</para>
             /// </summary>
             [NameInMap("fix")]
             [Validation(Required=false)]
@@ -75,6 +81,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>The name of the inspection item.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>API Server CLB 实例状态异常</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]

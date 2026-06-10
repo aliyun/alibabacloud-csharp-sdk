@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>If you set <c>type=NodePoolUpgrade</c>, you must set this parameter to the node pool ID. Otherwise, this parameter is optional.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>np1f6779297c4444a3a1cdd29be8e5****</para>
+        /// <para>np1f6779297c4444a3a1cdd29be8******</para>
         /// </summary>
         [NameInMap("target")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ClusterUpgrade</para>
+        /// <para>NodePoolUpgrade</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

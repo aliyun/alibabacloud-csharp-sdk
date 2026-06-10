@@ -140,26 +140,60 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string CertState { get; set; }
 
+            /// <summary>
+            /// <para>Cloud service name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cs/ecs/sls</para>
+            /// </summary>
             [NameInMap("cloud_service_name")]
             [Validation(Required=false)]
             public string CloudServiceName { get; set; }
 
+            /// <summary>
+            /// <para>List of cluster roles associated with the cluster cloud product service roles.</para>
+            /// </summary>
             [NameInMap("cloud_service_roles")]
             [Validation(Required=false)]
             public List<ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles> CloudServiceRoles { get; set; }
             public class ListClusterKubeconfigStatesResponseBodyStatesCloudServiceRoles : TeaModel {
+                /// <summary>
+                /// <para>Indicates whether the content matches the default cluster role template.  </para>
+                /// <list type="bullet">
+                /// <item><description>true: Matches  </description></item>
+                /// <item><description>false: Does not match</description></item>
+                /// </list>
+                /// </summary>
                 [NameInMap("is_default_template")]
                 [Validation(Required=false)]
                 public bool? IsDefaultTemplate { get; set; }
 
+                /// <summary>
+                /// <para>Name of the cluster role associated with the cluster cloud product service role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cluster-admin</para>
+                /// </summary>
                 [NameInMap("role_name")]
                 [Validation(Required=false)]
                 public string RoleName { get; set; }
 
+                /// <summary>
+                /// <para>Namespace of the cluster role associated with the cluster cloud product service role.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>kube-system</para>
+                /// </summary>
                 [NameInMap("role_namespace")]
                 [Validation(Required=false)]
                 public string RoleNamespace { get; set; }
 
+                /// <summary>
+                /// <para>The type of the cluster role associated with the cloud service role of the cluster.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ClusterRole</para>
+                /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]
                 public string Type { get; set; }

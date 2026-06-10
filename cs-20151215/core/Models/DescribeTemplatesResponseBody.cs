@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The time when the template was created.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-06-10T16:30:16+08:00</para>
+            /// <para>2025-04-25T16:56:33+08:00</para>
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The ID of the template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>874ec485-e7e6-4373-8a3b-47bde8ae789f</para>
+            /// <para>874ec485-e7e6-4373-8a3b-47bde8******</para>
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The ID of the parent template. The value of <c>template_with_hist_id</c> is the same for each template version. This allows you to manage different template versions.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ad81d115-7c8b-47e7-a222-9c28d7f6e588</para>
+            /// <para>ad81d115-7c8b-47e7-a222-9c28d7******</para>
             /// </summary>
             [NameInMap("template_with_hist_id")]
             [Validation(Required=false)]
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The time when the template was updated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-06-10T16:30:16+08:00</para>
+            /// <para>2025-04-25T16:56:33+08:00</para>
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]

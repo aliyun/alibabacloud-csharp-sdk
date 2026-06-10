@@ -75,6 +75,11 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>Adds existing Elastic Compute Service (ECS) instances to a Container Service for Kubernetes (ACK) cluster. When you need to add an ECS instance as a worker node to an ACK cluster or re-add a worker node to the cluster, you can call this operation.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，请仔细阅读<a href="https://help.aliyun.com/document_detail/86919.html">使用限制</a>，确保待添加的ECS实例满足条件。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AttachInstancesRequest
         /// </param>
@@ -168,6 +173,11 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <summary>
         /// <para>Adds existing Elastic Compute Service (ECS) instances to a Container Service for Kubernetes (ACK) cluster. When you need to add an ECS instance as a worker node to an ACK cluster or re-add a worker node to the cluster, you can call this operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，请仔细阅读<a href="https://help.aliyun.com/document_detail/86919.html">使用限制</a>，确保待添加的ECS实例满足条件。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachInstancesRequest
@@ -263,6 +273,11 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>Adds existing Elastic Compute Service (ECS) instances to a Container Service for Kubernetes (ACK) cluster. When you need to add an ECS instance as a worker node to an ACK cluster or re-add a worker node to the cluster, you can call this operation.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，请仔细阅读<a href="https://help.aliyun.com/document_detail/86919.html">使用限制</a>，确保待添加的ECS实例满足条件。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// AttachInstancesRequest
         /// </param>
@@ -281,6 +296,11 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <summary>
         /// <para>Adds existing Elastic Compute Service (ECS) instances to a Container Service for Kubernetes (ACK) cluster. When you need to add an ECS instance as a worker node to an ACK cluster or re-add a worker node to the cluster, you can call this operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，请仔细阅读<a href="https://help.aliyun.com/document_detail/86919.html">使用限制</a>，确保待添加的ECS实例满足条件。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachInstancesRequest
@@ -1508,8 +1528,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an auto-repair policy.</para>
+        /// <para>Create a self-healing rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAutoRepairPolicyRequest
@@ -1566,8 +1594,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an auto-repair policy.</para>
+        /// <para>Create a self-healing rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAutoRepairPolicyRequest
@@ -1624,8 +1660,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an auto-repair policy.</para>
+        /// <para>Create a self-healing rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAutoRepairPolicyRequest
@@ -1643,8 +1687,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an auto-repair policy.</para>
+        /// <para>Create a self-healing rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAutoRepairPolicyRequest
@@ -1662,7 +1714,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.</para>
+        /// <para>Create an auto scaling policy to automatically add or remove compute resources based on configured scaling rules to handle your cluster\&quot;s workload. You can specify metrics and thresholds, scaling order, a cooldown period, and more.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1768,7 +1820,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.</para>
+        /// <para>Create an auto scaling policy to automatically add or remove compute resources based on configured scaling rules to handle your cluster\&quot;s workload. You can specify metrics and thresholds, scaling order, a cooldown period, and more.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1874,7 +1926,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.</para>
+        /// <para>Create an auto scaling policy to automatically add or remove compute resources based on configured scaling rules to handle your cluster\&quot;s workload. You can specify metrics and thresholds, scaling order, a cooldown period, and more.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1893,7 +1945,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a scaling configuration to allow the system to scale resources based on the given scaling rules. When you create a scaling configuration, you can specify the scaling metrics, thresholds, scaling order, and scaling interval.</para>
+        /// <para>Create an auto scaling policy to automatically add or remove compute resources based on configured scaling rules to handle your cluster\&quot;s workload. You can specify metrics and thresholds, scaling order, a cooldown period, and more.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1912,19 +1964,22 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Container Service for Kubernetes (ACK) cluster. For example, you can create an ACK managed cluster, ACK Serverless cluster, ACK Edge cluster, or registered cluster. When you create an ACK cluster, you need to configure the cluster information, components, and cloud resources used by ACK.</para>
+        /// <para>Create an ACK cluster using OpenAPI. Supported cluster types include ACK managed clusters, ACK serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, configure the cluster information, components, and related Alibaba Cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#-openapi-"></a>Generate API request parameters through the ACK console</h3>
-        /// <para>When calling the CreateCluster operation to create a cluster, if the API call fails due to invalid parameter settings, you can generate valid request parameters through the ACK console. Follow these steps:</para>
+        /// <h3>Generate OpenAPI request parameters in the console</h3>
+        /// <para>If your CreateCluster API call fails due to invalid parameter combinations, you can generate valid request parameters directly in the console. Follow these steps:</para>
         /// <ol>
-        /// <item><description>Log on to the <a href="https://csnew.console.aliyun.com">ACK console</a>. In the left-side navigation pane, click <b>Clusters</b>.</description></item>
+        /// <item><description>Log on to the <a href="https://csnew.console.aliyun.com">Container Service for Kubernetes console</a>. In the left navigation pane, select <b>Clusters</b>.</description></item>
         /// <item><description>On the <b>Clusters</b> page, click <b>Cluster Templates</b>.</description></item>
-        /// <item><description>In the Select Cluster Template dialog box, select the type of cluster you want to create and click Create. Then, configure the cluster parameters.</description></item>
-        /// <item><description>In the <b>Confirm</b> step, click <b>Generate API Request Parameters</b>.
-        /// The API request parameters are displayed in the API Request Parameters dialog box.</description></item>
+        /// <item><description>In the dialog box, select the cluster type you want to create and click Create. Then configure your cluster on the cluster configuration page.</description></item>
+        /// <item><description>After completing your configuration, go to the <b>Review Configuration</b> page and click <b>Equivalent Code</b> in the upper-right corner. The dialog box displays the required parameter combination for cluster creation. Copy and use it as needed.<remarks>
+        /// <para>Notice: 
+        /// Starting July 4, 2026, some request parameters will no longer take effect. For details about the changes and replacement parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on Changes and Deprecation of OpenAPI Parameters for ACK Cluster Management</a>.</para>
+        /// </remarks>
+        /// </description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2379,19 +2434,22 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Container Service for Kubernetes (ACK) cluster. For example, you can create an ACK managed cluster, ACK Serverless cluster, ACK Edge cluster, or registered cluster. When you create an ACK cluster, you need to configure the cluster information, components, and cloud resources used by ACK.</para>
+        /// <para>Create an ACK cluster using OpenAPI. Supported cluster types include ACK managed clusters, ACK serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, configure the cluster information, components, and related Alibaba Cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#-openapi-"></a>Generate API request parameters through the ACK console</h3>
-        /// <para>When calling the CreateCluster operation to create a cluster, if the API call fails due to invalid parameter settings, you can generate valid request parameters through the ACK console. Follow these steps:</para>
+        /// <h3>Generate OpenAPI request parameters in the console</h3>
+        /// <para>If your CreateCluster API call fails due to invalid parameter combinations, you can generate valid request parameters directly in the console. Follow these steps:</para>
         /// <ol>
-        /// <item><description>Log on to the <a href="https://csnew.console.aliyun.com">ACK console</a>. In the left-side navigation pane, click <b>Clusters</b>.</description></item>
+        /// <item><description>Log on to the <a href="https://csnew.console.aliyun.com">Container Service for Kubernetes console</a>. In the left navigation pane, select <b>Clusters</b>.</description></item>
         /// <item><description>On the <b>Clusters</b> page, click <b>Cluster Templates</b>.</description></item>
-        /// <item><description>In the Select Cluster Template dialog box, select the type of cluster you want to create and click Create. Then, configure the cluster parameters.</description></item>
-        /// <item><description>In the <b>Confirm</b> step, click <b>Generate API Request Parameters</b>.
-        /// The API request parameters are displayed in the API Request Parameters dialog box.</description></item>
+        /// <item><description>In the dialog box, select the cluster type you want to create and click Create. Then configure your cluster on the cluster configuration page.</description></item>
+        /// <item><description>After completing your configuration, go to the <b>Review Configuration</b> page and click <b>Equivalent Code</b> in the upper-right corner. The dialog box displays the required parameter combination for cluster creation. Copy and use it as needed.<remarks>
+        /// <para>Notice: 
+        /// Starting July 4, 2026, some request parameters will no longer take effect. For details about the changes and replacement parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on Changes and Deprecation of OpenAPI Parameters for ACK Cluster Management</a>.</para>
+        /// </remarks>
+        /// </description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2846,19 +2904,22 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Container Service for Kubernetes (ACK) cluster. For example, you can create an ACK managed cluster, ACK Serverless cluster, ACK Edge cluster, or registered cluster. When you create an ACK cluster, you need to configure the cluster information, components, and cloud resources used by ACK.</para>
+        /// <para>Create an ACK cluster using OpenAPI. Supported cluster types include ACK managed clusters, ACK serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, configure the cluster information, components, and related Alibaba Cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#-openapi-"></a>Generate API request parameters through the ACK console</h3>
-        /// <para>When calling the CreateCluster operation to create a cluster, if the API call fails due to invalid parameter settings, you can generate valid request parameters through the ACK console. Follow these steps:</para>
+        /// <h3>Generate OpenAPI request parameters in the console</h3>
+        /// <para>If your CreateCluster API call fails due to invalid parameter combinations, you can generate valid request parameters directly in the console. Follow these steps:</para>
         /// <ol>
-        /// <item><description>Log on to the <a href="https://csnew.console.aliyun.com">ACK console</a>. In the left-side navigation pane, click <b>Clusters</b>.</description></item>
+        /// <item><description>Log on to the <a href="https://csnew.console.aliyun.com">Container Service for Kubernetes console</a>. In the left navigation pane, select <b>Clusters</b>.</description></item>
         /// <item><description>On the <b>Clusters</b> page, click <b>Cluster Templates</b>.</description></item>
-        /// <item><description>In the Select Cluster Template dialog box, select the type of cluster you want to create and click Create. Then, configure the cluster parameters.</description></item>
-        /// <item><description>In the <b>Confirm</b> step, click <b>Generate API Request Parameters</b>.
-        /// The API request parameters are displayed in the API Request Parameters dialog box.</description></item>
+        /// <item><description>In the dialog box, select the cluster type you want to create and click Create. Then configure your cluster on the cluster configuration page.</description></item>
+        /// <item><description>After completing your configuration, go to the <b>Review Configuration</b> page and click <b>Equivalent Code</b> in the upper-right corner. The dialog box displays the required parameter combination for cluster creation. Copy and use it as needed.<remarks>
+        /// <para>Notice: 
+        /// Starting July 4, 2026, some request parameters will no longer take effect. For details about the changes and replacement parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on Changes and Deprecation of OpenAPI Parameters for ACK Cluster Management</a>.</para>
+        /// </remarks>
+        /// </description></item>
         /// </ol>
         /// </description>
         /// 
@@ -2878,19 +2939,22 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Container Service for Kubernetes (ACK) cluster. For example, you can create an ACK managed cluster, ACK Serverless cluster, ACK Edge cluster, or registered cluster. When you create an ACK cluster, you need to configure the cluster information, components, and cloud resources used by ACK.</para>
+        /// <para>Create an ACK cluster using OpenAPI. Supported cluster types include ACK managed clusters, ACK serverless clusters, ACK Edge clusters, and registered clusters. When creating a cluster, configure the cluster information, components, and related Alibaba Cloud resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3><a href="#-openapi-"></a>Generate API request parameters through the ACK console</h3>
-        /// <para>When calling the CreateCluster operation to create a cluster, if the API call fails due to invalid parameter settings, you can generate valid request parameters through the ACK console. Follow these steps:</para>
+        /// <h3>Generate OpenAPI request parameters in the console</h3>
+        /// <para>If your CreateCluster API call fails due to invalid parameter combinations, you can generate valid request parameters directly in the console. Follow these steps:</para>
         /// <ol>
-        /// <item><description>Log on to the <a href="https://csnew.console.aliyun.com">ACK console</a>. In the left-side navigation pane, click <b>Clusters</b>.</description></item>
+        /// <item><description>Log on to the <a href="https://csnew.console.aliyun.com">Container Service for Kubernetes console</a>. In the left navigation pane, select <b>Clusters</b>.</description></item>
         /// <item><description>On the <b>Clusters</b> page, click <b>Cluster Templates</b>.</description></item>
-        /// <item><description>In the Select Cluster Template dialog box, select the type of cluster you want to create and click Create. Then, configure the cluster parameters.</description></item>
-        /// <item><description>In the <b>Confirm</b> step, click <b>Generate API Request Parameters</b>.
-        /// The API request parameters are displayed in the API Request Parameters dialog box.</description></item>
+        /// <item><description>In the dialog box, select the cluster type you want to create and click Create. Then configure your cluster on the cluster configuration page.</description></item>
+        /// <item><description>After completing your configuration, go to the <b>Review Configuration</b> page and click <b>Equivalent Code</b> in the upper-right corner. The dialog box displays the required parameter combination for cluster creation. Copy and use it as needed.<remarks>
+        /// <para>Notice: 
+        /// Starting July 4, 2026, some request parameters will no longer take effect. For details about the changes and replacement parameters, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on Changes and Deprecation of OpenAPI Parameters for ACK Cluster Management</a>.</para>
+        /// </remarks>
+        /// </description></item>
         /// </ol>
         /// </description>
         /// 
@@ -3194,7 +3258,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&amp;M workload.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same properties, enabling unified management and O&amp;M operations such as node upgrades and Auto Scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce operational costs—for example, by automatically patching OS CVE vulnerabilities, automatically recovering failed nodes, and automatically upgrading kubelet and containerd versions. You can invoke CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3300,7 +3364,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&amp;M workload.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same properties, enabling unified management and O&amp;M operations such as node upgrades and Auto Scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce operational costs—for example, by automatically patching OS CVE vulnerabilities, automatically recovering failed nodes, and automatically upgrading kubelet and containerd versions. You can invoke CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3406,7 +3470,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&amp;M workload.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same properties, enabling unified management and O&amp;M operations such as node upgrades and Auto Scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce operational costs—for example, by automatically patching OS CVE vulnerabilities, automatically recovering failed nodes, and automatically upgrading kubelet and containerd versions. You can invoke CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3425,7 +3489,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node pool for a Container Service for Kubernetes (ACK) cluster. You can use node pools to facilitate node management. For example, you can schedule, configure, or maintain nodes by node pool, and enable auto scaling for a node pool. We recommend that you use a managed node pool, which can help automate specific O\\\\\\&amp;M tasks for nodes, such as Common Vulnerabilities and Exposures (CVE) patching and node repair. This reduces your O\\\\\\&amp;M workload.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same properties, enabling unified management and O&amp;M operations such as node upgrades and Auto Scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce operational costs—for example, by automatically patching OS CVE vulnerabilities, automatically recovering failed nodes, and automatically upgrading kubelet and containerd versions. You can invoke CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3787,6 +3851,13 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>Creates a trigger for an application to redeploy the application pods when specific conditions are met.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>创建触发器仅支持Pod的重新部署。</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateTriggerRequest
         /// </param>
@@ -3844,6 +3915,13 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <summary>
         /// <para>Creates a trigger for an application to redeploy the application pods when specific conditions are met.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>创建触发器仅支持Pod的重新部署。</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTriggerRequest
@@ -3903,6 +3981,13 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>Creates a trigger for an application to redeploy the application pods when specific conditions are met.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>创建触发器仅支持Pod的重新部署。</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateTriggerRequest
         /// </param>
@@ -3922,6 +4007,13 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>Creates a trigger for an application to redeploy the application pods when specific conditions are met.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>创建触发器仅支持Pod的重新部署。</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateTriggerRequest
         /// </param>
@@ -3938,7 +4030,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more ACK alert contacts.</para>
+        /// <para>Deletes ACK alert contacts.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3990,7 +4082,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more ACK alert contacts.</para>
+        /// <para>Deletes ACK alert contacts.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4042,7 +4134,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more ACK alert contacts.</para>
+        /// <para>Deletes ACK alert contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4061,7 +4153,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes one or more ACK alert contacts.</para>
+        /// <para>Deletes ACK alert contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4222,8 +4314,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>Deletes an auto repair policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet publicly available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -4258,8 +4358,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>Deletes an auto repair policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet publicly available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -4294,8 +4402,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>Deletes an auto repair policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet publicly available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteAutoRepairPolicyResponse
@@ -4309,8 +4425,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>Deletes an auto repair policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet publicly available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteAutoRepairPolicyResponse
@@ -4324,18 +4448,18 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DeleteCluster operation to delete a cluster and specify whether to delete or retain the relevant cluster resources. Before you delete a cluster, you must manually delete workloads in the cluster, such as Deployments, StatefulSets, Jobs, and CronJobs. Otherwise, you may fail to delete the cluster.</para>
+        /// <para>When you no longer need a cluster, you can delete it and choose whether to delete or retain its associated resources. Before deleting a cluster, you must manually remove its workloads, such as stateless applications, stateful applications, jobs, and cronjobs. Otherwise, the deletion might fail.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Warning:</para>
+        /// <para>Important</para>
         /// <list type="bullet">
-        /// <item><description>Subscription ECS instances and Lingjun nodes in a cluster cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release the resources. For more information, see \<a href="{0}" target="_blank">Rules for deleting clusters and releasing nodes\</a>.</description></item>
-        /// <item><description>If the SLB instance of the API server uses the subscription billing method, it cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release it.</description></item>
-        /// <item><description>By default, virtual private clouds (VPCs), vSwitches, security groups, and RAM roles are retained if they are used by other resources. To avoid unnecessary costs, we recommend that you manually release the resources.</description></item>
-        /// <item><description>Elastic container instances created on virtual nodes are automatically released.</description></item>
-        /// <item><description>Some resources created together with a cluster are not automatically released when the cluster is deleted. After the cluster is deleted, you are still charged for the resources. Release or retain the resources based on your actual needs. The resources include Simple Log Service projects automatically created by the cluster and dynamically provisioned disks.</description></item>
+        /// <item><description>Subscription-based resources, such as ECS instances and Lingjun computing nodes, are not automatically released. You must manually release them to avoid unnecessary charges. For more details, see Cluster deletion and node release rules.</description></item>
+        /// <item><description>Subscription-based APIServer SLB resources are not automatically released. You must manually release them to avoid unnecessary charges.</description></item>
+        /// <item><description>If resources such as VPCs, VSwitches, security groups, and RAM roles are in use by other resources, they are retained by default. You must release them manually.</description></item>
+        /// <item><description>ECIs created with virtual nodes are automatically released.</description></item>
+        /// <item><description>Some cloud resources created with the cluster are not automatically released when you delete the cluster and continue to incur charges. You can choose to retain or release them. These resources include SLS projects automatically created by the cluster and cloud disks purchased via dynamic volumes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4404,18 +4528,18 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DeleteCluster operation to delete a cluster and specify whether to delete or retain the relevant cluster resources. Before you delete a cluster, you must manually delete workloads in the cluster, such as Deployments, StatefulSets, Jobs, and CronJobs. Otherwise, you may fail to delete the cluster.</para>
+        /// <para>When you no longer need a cluster, you can delete it and choose whether to delete or retain its associated resources. Before deleting a cluster, you must manually remove its workloads, such as stateless applications, stateful applications, jobs, and cronjobs. Otherwise, the deletion might fail.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Warning:</para>
+        /// <para>Important</para>
         /// <list type="bullet">
-        /// <item><description>Subscription ECS instances and Lingjun nodes in a cluster cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release the resources. For more information, see \<a href="{0}" target="_blank">Rules for deleting clusters and releasing nodes\</a>.</description></item>
-        /// <item><description>If the SLB instance of the API server uses the subscription billing method, it cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release it.</description></item>
-        /// <item><description>By default, virtual private clouds (VPCs), vSwitches, security groups, and RAM roles are retained if they are used by other resources. To avoid unnecessary costs, we recommend that you manually release the resources.</description></item>
-        /// <item><description>Elastic container instances created on virtual nodes are automatically released.</description></item>
-        /// <item><description>Some resources created together with a cluster are not automatically released when the cluster is deleted. After the cluster is deleted, you are still charged for the resources. Release or retain the resources based on your actual needs. The resources include Simple Log Service projects automatically created by the cluster and dynamically provisioned disks.</description></item>
+        /// <item><description>Subscription-based resources, such as ECS instances and Lingjun computing nodes, are not automatically released. You must manually release them to avoid unnecessary charges. For more details, see Cluster deletion and node release rules.</description></item>
+        /// <item><description>Subscription-based APIServer SLB resources are not automatically released. You must manually release them to avoid unnecessary charges.</description></item>
+        /// <item><description>If resources such as VPCs, VSwitches, security groups, and RAM roles are in use by other resources, they are retained by default. You must release them manually.</description></item>
+        /// <item><description>ECIs created with virtual nodes are automatically released.</description></item>
+        /// <item><description>Some cloud resources created with the cluster are not automatically released when you delete the cluster and continue to incur charges. You can choose to retain or release them. These resources include SLS projects automatically created by the cluster and cloud disks purchased via dynamic volumes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4484,18 +4608,18 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DeleteCluster operation to delete a cluster and specify whether to delete or retain the relevant cluster resources. Before you delete a cluster, you must manually delete workloads in the cluster, such as Deployments, StatefulSets, Jobs, and CronJobs. Otherwise, you may fail to delete the cluster.</para>
+        /// <para>When you no longer need a cluster, you can delete it and choose whether to delete or retain its associated resources. Before deleting a cluster, you must manually remove its workloads, such as stateless applications, stateful applications, jobs, and cronjobs. Otherwise, the deletion might fail.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Warning:</para>
+        /// <para>Important</para>
         /// <list type="bullet">
-        /// <item><description>Subscription ECS instances and Lingjun nodes in a cluster cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release the resources. For more information, see \<a href="{0}" target="_blank">Rules for deleting clusters and releasing nodes\</a>.</description></item>
-        /// <item><description>If the SLB instance of the API server uses the subscription billing method, it cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release it.</description></item>
-        /// <item><description>By default, virtual private clouds (VPCs), vSwitches, security groups, and RAM roles are retained if they are used by other resources. To avoid unnecessary costs, we recommend that you manually release the resources.</description></item>
-        /// <item><description>Elastic container instances created on virtual nodes are automatically released.</description></item>
-        /// <item><description>Some resources created together with a cluster are not automatically released when the cluster is deleted. After the cluster is deleted, you are still charged for the resources. Release or retain the resources based on your actual needs. The resources include Simple Log Service projects automatically created by the cluster and dynamically provisioned disks.</description></item>
+        /// <item><description>Subscription-based resources, such as ECS instances and Lingjun computing nodes, are not automatically released. You must manually release them to avoid unnecessary charges. For more details, see Cluster deletion and node release rules.</description></item>
+        /// <item><description>Subscription-based APIServer SLB resources are not automatically released. You must manually release them to avoid unnecessary charges.</description></item>
+        /// <item><description>If resources such as VPCs, VSwitches, security groups, and RAM roles are in use by other resources, they are retained by default. You must release them manually.</description></item>
+        /// <item><description>ECIs created with virtual nodes are automatically released.</description></item>
+        /// <item><description>Some cloud resources created with the cluster are not automatically released when you delete the cluster and continue to incur charges. You can choose to retain or release them. These resources include SLS projects automatically created by the cluster and cloud disks purchased via dynamic volumes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4515,18 +4639,18 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DeleteCluster operation to delete a cluster and specify whether to delete or retain the relevant cluster resources. Before you delete a cluster, you must manually delete workloads in the cluster, such as Deployments, StatefulSets, Jobs, and CronJobs. Otherwise, you may fail to delete the cluster.</para>
+        /// <para>When you no longer need a cluster, you can delete it and choose whether to delete or retain its associated resources. Before deleting a cluster, you must manually remove its workloads, such as stateless applications, stateful applications, jobs, and cronjobs. Otherwise, the deletion might fail.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Warning:</para>
+        /// <para>Important</para>
         /// <list type="bullet">
-        /// <item><description>Subscription ECS instances and Lingjun nodes in a cluster cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release the resources. For more information, see \<a href="{0}" target="_blank">Rules for deleting clusters and releasing nodes\</a>.</description></item>
-        /// <item><description>If the SLB instance of the API server uses the subscription billing method, it cannot be automatically released. To avoid unnecessary costs, we recommend that you manually release it.</description></item>
-        /// <item><description>By default, virtual private clouds (VPCs), vSwitches, security groups, and RAM roles are retained if they are used by other resources. To avoid unnecessary costs, we recommend that you manually release the resources.</description></item>
-        /// <item><description>Elastic container instances created on virtual nodes are automatically released.</description></item>
-        /// <item><description>Some resources created together with a cluster are not automatically released when the cluster is deleted. After the cluster is deleted, you are still charged for the resources. Release or retain the resources based on your actual needs. The resources include Simple Log Service projects automatically created by the cluster and dynamically provisioned disks.</description></item>
+        /// <item><description>Subscription-based resources, such as ECS instances and Lingjun computing nodes, are not automatically released. You must manually release them to avoid unnecessary charges. For more details, see Cluster deletion and node release rules.</description></item>
+        /// <item><description>Subscription-based APIServer SLB resources are not automatically released. You must manually release them to avoid unnecessary charges.</description></item>
+        /// <item><description>If resources such as VPCs, VSwitches, security groups, and RAM roles are in use by other resources, they are retained by default. You must release them manually.</description></item>
+        /// <item><description>ECIs created with virtual nodes are automatically released.</description></item>
+        /// <item><description>Some cloud resources created with the cluster are not automatically released when you delete the cluster and continue to incur charges. You can choose to retain or release them. These resources include SLS projects automatically created by the cluster and cloud disks purchased via dynamic volumes.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5432,7 +5556,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys a policy in the specified namespaces of a specific Container Service for Kubernetes (ACK) cluster. You can create and deploy a security policy by specifying the policy type, action of the policy such as alerting or denying, and namespaces to which the policy applies.</para>
+        /// <para>Call the <c>DeployPolicyInstance</c> operation to deploy a policy instance to specified namespaces in an ACK cluster. To create a policy instance, select a security policy, configure a governance action (alert or deny), and specify the target namespaces for the policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5486,7 +5610,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys a policy in the specified namespaces of a specific Container Service for Kubernetes (ACK) cluster. You can create and deploy a security policy by specifying the policy type, action of the policy such as alerting or denying, and namespaces to which the policy applies.</para>
+        /// <para>Call the <c>DeployPolicyInstance</c> operation to deploy a policy instance to specified namespaces in an ACK cluster. To create a policy instance, select a security policy, configure a governance action (alert or deny), and specify the target namespaces for the policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5540,7 +5664,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys a policy in the specified namespaces of a specific Container Service for Kubernetes (ACK) cluster. You can create and deploy a security policy by specifying the policy type, action of the policy such as alerting or denying, and namespaces to which the policy applies.</para>
+        /// <para>Call the <c>DeployPolicyInstance</c> operation to deploy a policy instance to specified namespaces in an ACK cluster. To create a policy instance, select a security policy, configure a governance action (alert or deny), and specify the target namespaces for the policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5559,7 +5683,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploys a policy in the specified namespaces of a specific Container Service for Kubernetes (ACK) cluster. You can create and deploy a security policy by specifying the policy type, action of the policy such as alerting or denying, and namespaces to which the policy applies.</para>
+        /// <para>Call the <c>DeployPolicyInstance</c> operation to deploy a policy instance to specified namespaces in an ACK cluster. To create a policy instance, select a security policy, configure a governance action (alert or deny), and specify the target namespaces for the policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5942,8 +6066,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>View self-healing rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -5978,8 +6110,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>View self-healing rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -6014,8 +6154,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>View self-healing rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <returns>
         /// DescribeAutoRepairPolicyResponse
@@ -6029,8 +6177,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>View self-healing rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <returns>
         /// DescribeAutoRepairPolicyResponse
@@ -6742,7 +6898,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scripts used to add existing nodes to a Container Service for Kubernetes (ACK) cluster. ACK allows you to manually add existing Elastic Compute Service (ECS) instances to an ACK cluster as worker nodes or re-add worker nodes that you remove from the cluster to a node pool.</para>
+        /// <para>To manually add existing ECS instances to an ACK cluster as worker nodes or add nodes back to a node pool, call the DescribeClusterAttachScripts operation to obtain the required attachment script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6816,7 +6972,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scripts used to add existing nodes to a Container Service for Kubernetes (ACK) cluster. ACK allows you to manually add existing Elastic Compute Service (ECS) instances to an ACK cluster as worker nodes or re-add worker nodes that you remove from the cluster to a node pool.</para>
+        /// <para>To manually add existing ECS instances to an ACK cluster as worker nodes or add nodes back to a node pool, call the DescribeClusterAttachScripts operation to obtain the required attachment script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6890,7 +7046,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scripts used to add existing nodes to a Container Service for Kubernetes (ACK) cluster. ACK allows you to manually add existing Elastic Compute Service (ECS) instances to an ACK cluster as worker nodes or re-add worker nodes that you remove from the cluster to a node pool.</para>
+        /// <para>To manually add existing ECS instances to an ACK cluster as worker nodes or add nodes back to a node pool, call the DescribeClusterAttachScripts operation to obtain the required attachment script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6909,7 +7065,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the scripts used to add existing nodes to a Container Service for Kubernetes (ACK) cluster. ACK allows you to manually add existing Elastic Compute Service (ECS) instances to an ACK cluster as worker nodes or re-add worker nodes that you remove from the cluster to a node pool.</para>
+        /// <para>To manually add existing ECS instances to an ACK cluster as worker nodes or add nodes back to a node pool, call the DescribeClusterAttachScripts operation to obtain the required attachment script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6928,7 +7084,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterDetail operation to query the details of a Container Service for Kubernetes (ACK) cluster by cluster ID.</para>
+        /// <para>You can call the DescribeClusterDetail operation to query detailed information about a specified cluster by its cluster ID.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6964,7 +7120,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterDetail operation to query the details of a Container Service for Kubernetes (ACK) cluster by cluster ID.</para>
+        /// <para>You can call the DescribeClusterDetail operation to query detailed information about a specified cluster by its cluster ID.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7000,7 +7156,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterDetail operation to query the details of a Container Service for Kubernetes (ACK) cluster by cluster ID.</para>
+        /// <para>You can call the DescribeClusterDetail operation to query detailed information about a specified cluster by its cluster ID.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7015,7 +7171,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterDetail operation to query the details of a Container Service for Kubernetes (ACK) cluster by cluster ID.</para>
+        /// <para>You can call the DescribeClusterDetail operation to query detailed information about a specified cluster by its cluster ID.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7030,7 +7186,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries events and event details in a Container Service for Kubernetes (ACK) cluster, including the severity level, status, and start time of each event. Events are generated when clusters created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
+        /// <para>Cluster operation events include cluster creation, modification, and upgrades, node pool creation and scale-out, and add-on installations. You can call the <c>DescribeClusterEvents</c> operation to retrieve events for a specified cluster and query their details, such as the severity level, status, and time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7092,7 +7248,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries events and event details in a Container Service for Kubernetes (ACK) cluster, including the severity level, status, and start time of each event. Events are generated when clusters created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
+        /// <para>Cluster operation events include cluster creation, modification, and upgrades, node pool creation and scale-out, and add-on installations. You can call the <c>DescribeClusterEvents</c> operation to retrieve events for a specified cluster and query their details, such as the severity level, status, and time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7154,7 +7310,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries events and event details in a Container Service for Kubernetes (ACK) cluster, including the severity level, status, and start time of each event. Events are generated when clusters created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
+        /// <para>Cluster operation events include cluster creation, modification, and upgrades, node pool creation and scale-out, and add-on installations. You can call the <c>DescribeClusterEvents</c> operation to retrieve events for a specified cluster and query their details, such as the severity level, status, and time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7173,7 +7329,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries events and event details in a Container Service for Kubernetes (ACK) cluster, including the severity level, status, and start time of each event. Events are generated when clusters created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
+        /// <para>Cluster operation events include cluster creation, modification, and upgrades, node pool creation and scale-out, and add-on installations. You can call the <c>DescribeClusterEvents</c> operation to retrieve events for a specified cluster and query their details, such as the severity level, status, and time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7294,7 +7450,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodePoolDetail.html operation to query the details about a node pool in a cluster by node pool ID.</para>
+        /// <para>You can call the DescribeClusterNodePoolDetail operation with a node pool ID to query the configuration of a specific node pool in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7330,7 +7486,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodePoolDetail.html operation to query the details about a node pool in a cluster by node pool ID.</para>
+        /// <para>You can call the DescribeClusterNodePoolDetail operation with a node pool ID to query the configuration of a specific node pool in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7366,7 +7522,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodePoolDetail.html operation to query the details about a node pool in a cluster by node pool ID.</para>
+        /// <para>You can call the DescribeClusterNodePoolDetail operation with a node pool ID to query the configuration of a specific node pool in a cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7381,7 +7537,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodePoolDetail.html operation to query the details about a node pool in a cluster by node pool ID.</para>
+        /// <para>You can call the DescribeClusterNodePoolDetail operation with a node pool ID to query the configuration of a specific node pool in a cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7396,7 +7552,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about all node pools in a cluster.</para>
+        /// <para>Lists all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7442,7 +7598,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about all node pools in a cluster.</para>
+        /// <para>Lists all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7488,7 +7644,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about all node pools in a cluster.</para>
+        /// <para>Lists all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7507,7 +7663,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about all node pools in a cluster.</para>
+        /// <para>Lists all node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7688,7 +7844,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterResources operation to query all resources in a cluster by cluster ID.</para>
+        /// <para>Container Service for Kubernetes uses other Alibaba Cloud resources, such as VPCs and SLBs. To query the resources associated with a specific cluster, call the <c>DescribeClusterResources</c> operation. To query node pools or nodes, call the <c>DescribeClusterNodePools</c> or <c>DescribeClusterNodes</c> operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7734,7 +7890,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterResources operation to query all resources in a cluster by cluster ID.</para>
+        /// <para>Container Service for Kubernetes uses other Alibaba Cloud resources, such as VPCs and SLBs. To query the resources associated with a specific cluster, call the <c>DescribeClusterResources</c> operation. To query node pools or nodes, call the <c>DescribeClusterNodePools</c> or <c>DescribeClusterNodes</c> operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7780,7 +7936,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterResources operation to query all resources in a cluster by cluster ID.</para>
+        /// <para>Container Service for Kubernetes uses other Alibaba Cloud resources, such as VPCs and SLBs. To query the resources associated with a specific cluster, call the <c>DescribeClusterResources</c> operation. To query node pools or nodes, call the <c>DescribeClusterNodePools</c> or <c>DescribeClusterNodes</c> operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7799,7 +7955,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterResources operation to query all resources in a cluster by cluster ID.</para>
+        /// <para>Container Service for Kubernetes uses other Alibaba Cloud resources, such as VPCs and SLBs. To query the resources associated with a specific cluster, call the <c>DescribeClusterResources</c> operation. To query node pools or nodes, call the <c>DescribeClusterNodePools</c> or <c>DescribeClusterNodes</c> operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7818,7 +7974,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tasks in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Lists the tasks in a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7876,7 +8032,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tasks in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Lists the tasks in a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7934,7 +8090,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tasks in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Lists the tasks in a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7953,7 +8109,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries tasks in a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>Lists the tasks in a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8146,7 +8302,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群kubeconfig接口</para>
+        /// <para>Obtain the kubeconfig API for a cluster</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8202,7 +8358,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群kubeconfig接口</para>
+        /// <para>Obtain the kubeconfig API for a cluster</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8258,7 +8414,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群kubeconfig接口</para>
+        /// <para>Obtain the kubeconfig API for a cluster</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8283,7 +8439,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取集群kubeconfig接口</para>
+        /// <para>Obtain the kubeconfig API for a cluster</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8410,7 +8566,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all existing clusters in ACK, including Kubernetes clusters and Swarm clusters.</para>
+        /// <para>View all clusters (including Swarm and Kubernetes clusters) created in the container service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8470,7 +8626,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all existing clusters in ACK, including Kubernetes clusters and Swarm clusters.</para>
+        /// <para>View all clusters (including Swarm and Kubernetes clusters) created in the container service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8530,7 +8686,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all existing clusters in ACK, including Kubernetes clusters and Swarm clusters.</para>
+        /// <para>View all clusters (including Swarm and Kubernetes clusters) created in the container service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8555,7 +8711,7 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all existing clusters in ACK, including Kubernetes clusters and Swarm clusters.</para>
+        /// <para>View all clusters (including Swarm and Kubernetes clusters) created in the container service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8576,7 +8732,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all clusters in a specified region.</para>
+        /// <para>Lists all clusters in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8646,7 +8802,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all clusters in a specified region.</para>
+        /// <para>Lists all clusters in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8716,7 +8872,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all clusters in a specified region.</para>
+        /// <para>Lists all clusters in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8735,7 +8891,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all clusters in a specified region.</para>
+        /// <para>Lists all clusters in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8754,7 +8910,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about Container Service for Kubernetes (ACK) clusters of specified types or specifications within an account.</para>
+        /// <para>Use the DescribeClustersV1 API to list ACK clusters by criteria such as cluster type and cluster specification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8828,7 +8984,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about Container Service for Kubernetes (ACK) clusters of specified types or specifications within an account.</para>
+        /// <para>Use the DescribeClustersV1 API to list ACK clusters by criteria such as cluster type and cluster specification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8902,7 +9058,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about Container Service for Kubernetes (ACK) clusters of specified types or specifications within an account.</para>
+        /// <para>Use the DescribeClustersV1 API to list ACK clusters by criteria such as cluster type and cluster specification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8921,7 +9077,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details about Container Service for Kubernetes (ACK) clusters of specified types or specifications within an account.</para>
+        /// <para>Use the DescribeClustersV1 API to list ACK clusters by criteria such as cluster type and cluster specification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8940,7 +9096,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a type of events, including the severity level, status, and time. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
+        /// <para>Cluster operation events include cluster creation, cluster changes, node pool creation, node pool scale-out, add-on installation, and cluster upgrade. Use the <c>DescribeEvents</c> API to query details for a specific event type, including its level, status, and timestamp.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9006,7 +9162,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a type of events, including the severity level, status, and time. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
+        /// <para>Cluster operation events include cluster creation, cluster changes, node pool creation, node pool scale-out, add-on installation, and cluster upgrade. Use the <c>DescribeEvents</c> API to query details for a specific event type, including its level, status, and timestamp.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9072,7 +9228,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a type of events, including the severity level, status, and time. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
+        /// <para>Cluster operation events include cluster creation, cluster changes, node pool creation, node pool scale-out, add-on installation, and cluster upgrade. Use the <c>DescribeEvents</c> API to query details for a specific event type, including its level, status, and timestamp.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9091,7 +9247,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information about a type of events, including the severity level, status, and time. Events are generated when clusters are created, modified, and updated, node pools are created and scaled out, and components are installed.</para>
+        /// <para>Cluster operation events include cluster creation, cluster changes, node pool creation, node pool scale-out, add-on installation, and cluster upgrade. Use the <c>DescribeEvents</c> API to query details for a specific event type, including its level, status, and timestamp.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9110,7 +9266,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all events in a specified region.</para>
+        /// <para>Retrieves a list of events in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9172,7 +9328,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all events in a specified region.</para>
+        /// <para>Retrieves a list of events in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9234,7 +9390,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all events in a specified region.</para>
+        /// <para>Retrieves a list of events in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9253,7 +9409,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all events in a specified region.</para>
+        /// <para>Retrieves a list of events in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9966,7 +10122,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Container Service for Kubernetes (ACK) clusters offer a variety of built-in container security policies, such as Compliance, Infra, K8s-general, and pod security policy (PSP). You can use these policies to ensure the security of containers running in a production environment. You can call the DescribePolicyGovernanceInCluster operation to query the details of policies for an ACK cluster. For example, you can query the number of policies that are enabled per severity level, the audit logs of policies, and the blocking and alerting information.</para>
+        /// <para>Container security policies for ACK clusters provide a rich set of built-in rule libraries, including <c>Compliance</c>, <c>Infra</c>, <c>K8s-general</c>, and <c>PSP</c>, to secure containers in a production environment. Call the <c>DescribePolicyGovernanceInCluster</c> API to retrieve policy governance details for a target cluster, such as policy statistics by severity, audit logs, and interception and alert events.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10002,7 +10158,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Container Service for Kubernetes (ACK) clusters offer a variety of built-in container security policies, such as Compliance, Infra, K8s-general, and pod security policy (PSP). You can use these policies to ensure the security of containers running in a production environment. You can call the DescribePolicyGovernanceInCluster operation to query the details of policies for an ACK cluster. For example, you can query the number of policies that are enabled per severity level, the audit logs of policies, and the blocking and alerting information.</para>
+        /// <para>Container security policies for ACK clusters provide a rich set of built-in rule libraries, including <c>Compliance</c>, <c>Infra</c>, <c>K8s-general</c>, and <c>PSP</c>, to secure containers in a production environment. Call the <c>DescribePolicyGovernanceInCluster</c> API to retrieve policy governance details for a target cluster, such as policy statistics by severity, audit logs, and interception and alert events.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10038,7 +10194,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Container Service for Kubernetes (ACK) clusters offer a variety of built-in container security policies, such as Compliance, Infra, K8s-general, and pod security policy (PSP). You can use these policies to ensure the security of containers running in a production environment. You can call the DescribePolicyGovernanceInCluster operation to query the details of policies for an ACK cluster. For example, you can query the number of policies that are enabled per severity level, the audit logs of policies, and the blocking and alerting information.</para>
+        /// <para>Container security policies for ACK clusters provide a rich set of built-in rule libraries, including <c>Compliance</c>, <c>Infra</c>, <c>K8s-general</c>, and <c>PSP</c>, to secure containers in a production environment. Call the <c>DescribePolicyGovernanceInCluster</c> API to retrieve policy governance details for a target cluster, such as policy statistics by severity, audit logs, and interception and alert events.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10053,7 +10209,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Container Service for Kubernetes (ACK) clusters offer a variety of built-in container security policies, such as Compliance, Infra, K8s-general, and pod security policy (PSP). You can use these policies to ensure the security of containers running in a production environment. You can call the DescribePolicyGovernanceInCluster operation to query the details of policies for an ACK cluster. For example, you can query the number of policies that are enabled per severity level, the audit logs of policies, and the blocking and alerting information.</para>
+        /// <para>Container security policies for ACK clusters provide a rich set of built-in rule libraries, including <c>Compliance</c>, <c>Infra</c>, <c>K8s-general</c>, and <c>PSP</c>, to secure containers in a production environment. Call the <c>DescribePolicyGovernanceInCluster</c> API to retrieve policy governance details for a target cluster, such as policy statistics by severity, audit logs, and interception and alert events.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10750,7 +10906,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about a task, such as the task type, status, and progress.</para>
+        /// <para>Use the DescribeTaskInfo operation to query details about a cluster task, such as its task type, running state, and running stage.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10786,7 +10942,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about a task, such as the task type, status, and progress.</para>
+        /// <para>Use the DescribeTaskInfo operation to query details about a cluster task, such as its task type, running state, and running stage.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -10822,7 +10978,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about a task, such as the task type, status, and progress.</para>
+        /// <para>Use the DescribeTaskInfo operation to query details about a cluster task, such as its task type, running state, and running stage.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10837,7 +10993,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about a task, such as the task type, status, and progress.</para>
+        /// <para>Use the DescribeTaskInfo operation to query details about a cluster task, such as its task type, running state, and running stage.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -12964,14 +13120,14 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>By default, RAM users or roles who aren\&quot;t cluster creators and haven\&quot;t been granted full cluster permissions have no RBAC permissions in the cluster. You can call this interface to update RBAC access permissions for RAM users/roles, including accessible resources, permission scopes, and preset roles, for enhanced security control on resources in Container Service for Kubernetes (ACK) clusters.</para>
+        /// <para>By default, a RAM user or RAM role has no RBAC permissions in a cluster they did not create, unless granted permissions at the all-clusters scope. Call the GrantPermissions operation to update the RBAC permissions for a RAM user or RAM role. This operation lets you configure accessible resources, permission scopes, and predefined roles to manage cluster access control.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you use a Resource Access Management (RAM) account to call this operation, make sure it has permissions to modify cluster authorization information for other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</para>
         /// <list type="bullet">
-        /// <item><description>This operation overwrites all existing cluster permissions for the target RAM user or RAM role. You must specify all the permissions you want to grant to the RAM user or RAM role in the request.</description></item>
+        /// <item><description>If you call this operation as a RAM user, you must have permission to modify the cluster permissions of other RAM users or RAM roles. Otherwise, the API call fails and returns the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Authorize a RAM user to manage the RBAC permissions of other RAM users</a>.</description></item>
+        /// <item><description>This operation overwrites all existing cluster permissions for the specified RAM user or RAM role. Your request must include the complete set of permissions you want to grant.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13013,14 +13169,14 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>By default, RAM users or roles who aren\&quot;t cluster creators and haven\&quot;t been granted full cluster permissions have no RBAC permissions in the cluster. You can call this interface to update RBAC access permissions for RAM users/roles, including accessible resources, permission scopes, and preset roles, for enhanced security control on resources in Container Service for Kubernetes (ACK) clusters.</para>
+        /// <para>By default, a RAM user or RAM role has no RBAC permissions in a cluster they did not create, unless granted permissions at the all-clusters scope. Call the GrantPermissions operation to update the RBAC permissions for a RAM user or RAM role. This operation lets you configure accessible resources, permission scopes, and predefined roles to manage cluster access control.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you use a Resource Access Management (RAM) account to call this operation, make sure it has permissions to modify cluster authorization information for other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</para>
         /// <list type="bullet">
-        /// <item><description>This operation overwrites all existing cluster permissions for the target RAM user or RAM role. You must specify all the permissions you want to grant to the RAM user or RAM role in the request.</description></item>
+        /// <item><description>If you call this operation as a RAM user, you must have permission to modify the cluster permissions of other RAM users or RAM roles. Otherwise, the API call fails and returns the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Authorize a RAM user to manage the RBAC permissions of other RAM users</a>.</description></item>
+        /// <item><description>This operation overwrites all existing cluster permissions for the specified RAM user or RAM role. Your request must include the complete set of permissions you want to grant.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13062,14 +13218,14 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>By default, RAM users or roles who aren\&quot;t cluster creators and haven\&quot;t been granted full cluster permissions have no RBAC permissions in the cluster. You can call this interface to update RBAC access permissions for RAM users/roles, including accessible resources, permission scopes, and preset roles, for enhanced security control on resources in Container Service for Kubernetes (ACK) clusters.</para>
+        /// <para>By default, a RAM user or RAM role has no RBAC permissions in a cluster they did not create, unless granted permissions at the all-clusters scope. Call the GrantPermissions operation to update the RBAC permissions for a RAM user or RAM role. This operation lets you configure accessible resources, permission scopes, and predefined roles to manage cluster access control.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you use a Resource Access Management (RAM) account to call this operation, make sure it has permissions to modify cluster authorization information for other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</para>
         /// <list type="bullet">
-        /// <item><description>This operation overwrites all existing cluster permissions for the target RAM user or RAM role. You must specify all the permissions you want to grant to the RAM user or RAM role in the request.</description></item>
+        /// <item><description>If you call this operation as a RAM user, you must have permission to modify the cluster permissions of other RAM users or RAM roles. Otherwise, the API call fails and returns the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Authorize a RAM user to manage the RBAC permissions of other RAM users</a>.</description></item>
+        /// <item><description>This operation overwrites all existing cluster permissions for the specified RAM user or RAM role. Your request must include the complete set of permissions you want to grant.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13089,14 +13245,14 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>By default, RAM users or roles who aren\&quot;t cluster creators and haven\&quot;t been granted full cluster permissions have no RBAC permissions in the cluster. You can call this interface to update RBAC access permissions for RAM users/roles, including accessible resources, permission scopes, and preset roles, for enhanced security control on resources in Container Service for Kubernetes (ACK) clusters.</para>
+        /// <para>By default, a RAM user or RAM role has no RBAC permissions in a cluster they did not create, unless granted permissions at the all-clusters scope. Call the GrantPermissions operation to update the RBAC permissions for a RAM user or RAM role. This operation lets you configure accessible resources, permission scopes, and predefined roles to manage cluster access control.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  If you use a Resource Access Management (RAM) account to call this operation, make sure it has permissions to modify cluster authorization information for other RAM users or RAM roles. Otherwise, the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code is returned. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</para>
         /// <list type="bullet">
-        /// <item><description>This operation overwrites all existing cluster permissions for the target RAM user or RAM role. You must specify all the permissions you want to grant to the RAM user or RAM role in the request.</description></item>
+        /// <item><description>If you call this operation as a RAM user, you must have permission to modify the cluster permissions of other RAM users or RAM roles. Otherwise, the API call fails and returns the <c>StatusForbidden</c> or <c>ForbiddenGrantPermissions</c> error code. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Authorize a RAM user to manage the RBAC permissions of other RAM users</a>.</description></item>
+        /// <item><description>This operation overwrites all existing cluster permissions for the specified RAM user or RAM role. Your request must include the complete set of permissions you want to grant.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13552,8 +13708,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List auto-repair policies.</para>
+        /// <para>Returns a list of self-healing rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API will be available in a future release.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -13588,8 +13752,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List auto-repair policies.</para>
+        /// <para>Returns a list of self-healing rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API will be available in a future release.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -13624,8 +13796,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List auto-repair policies.</para>
+        /// <para>Returns a list of self-healing rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API will be available in a future release.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <returns>
         /// ListAutoRepairPoliciesResponse
@@ -13639,8 +13819,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List auto-repair policies.</para>
+        /// <para>Returns a list of self-healing rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API will be available in a future release.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <returns>
         /// ListAutoRepairPoliciesResponse
@@ -14134,15 +14322,15 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</para>
+        /// <para>If you need to view the access control status of the current cluster, you can invoke the ListClusterKubeconfigStates API to obtain the list and status of KubeConfig configurations that have been issued to users for the current cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To call this operation, make sure that you have ram:ListUsers and ram:ListRoles permissions.</description></item>
-        /// <item><description>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</description></item>
+        /// <item><description>Invoking this API requires the ram:ListUsers and ram:ListRoles permissions.  </description></item>
+        /// <item><description>Invoking this API requires permissions to manage Container Service (CS) (AliyunCSFullAccess).</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -14198,15 +14386,15 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</para>
+        /// <para>If you need to view the access control status of the current cluster, you can invoke the ListClusterKubeconfigStates API to obtain the list and status of KubeConfig configurations that have been issued to users for the current cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To call this operation, make sure that you have ram:ListUsers and ram:ListRoles permissions.</description></item>
-        /// <item><description>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</description></item>
+        /// <item><description>Invoking this API requires the ram:ListUsers and ram:ListRoles permissions.  </description></item>
+        /// <item><description>Invoking this API requires permissions to manage Container Service (CS) (AliyunCSFullAccess).</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -14262,15 +14450,15 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</para>
+        /// <para>If you need to view the access control status of the current cluster, you can invoke the ListClusterKubeconfigStates API to obtain the list and status of KubeConfig configurations that have been issued to users for the current cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To call this operation, make sure that you have ram:ListUsers and ram:ListRoles permissions.</description></item>
-        /// <item><description>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</description></item>
+        /// <item><description>Invoking this API requires the ram:ListUsers and ram:ListRoles permissions.  </description></item>
+        /// <item><description>Invoking this API requires permissions to manage Container Service (CS) (AliyunCSFullAccess).</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -14291,15 +14479,15 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the kubeconfig files that are issued to users for the current cluster and the status of the kubeconfig files.</para>
+        /// <para>If you need to view the access control status of the current cluster, you can invoke the ListClusterKubeconfigStates API to obtain the list and status of KubeConfig configurations that have been issued to users for the current cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>To call this operation, make sure that you have ram:ListUsers and ram:ListRoles permissions.</description></item>
-        /// <item><description>To call this operation, make sure that you have the AliyunCSFullAccess permissions.</description></item>
+        /// <item><description>Invoking this API requires the ram:ListUsers and ram:ListRoles permissions.  </description></item>
+        /// <item><description>Invoking this API requires permissions to manage Container Service (CS) (AliyunCSFullAccess).</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -14458,7 +14646,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个地域的自动运维执行计划列表</para>
+        /// <para>Query the list of the latest 100 automated O&amp;M execution plans in a specified region. When features such as Auto Mode for Intelligent Cluster Management, automatic cluster upgrade, and node pool automated O&amp;M are enabled, you can use this API to query O&amp;M plans automatically generated by the System and their execution status, such as cluster upgrades or CVE fixes for node pools.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14512,7 +14700,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个地域的自动运维执行计划列表</para>
+        /// <para>Query the list of the latest 100 automated O&amp;M execution plans in a specified region. When features such as Auto Mode for Intelligent Cluster Management, automatic cluster upgrade, and node pool automated O&amp;M are enabled, you can use this API to query O&amp;M plans automatically generated by the System and their execution status, such as cluster upgrades or CVE fixes for node pools.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14566,7 +14754,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个地域的自动运维执行计划列表</para>
+        /// <para>Query the list of the latest 100 automated O&amp;M execution plans in a specified region. When features such as Auto Mode for Intelligent Cluster Management, automatic cluster upgrade, and node pool automated O&amp;M are enabled, you can use this API to query O&amp;M plans automatically generated by the System and their execution status, such as cluster upgrades or CVE fixes for node pools.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14585,7 +14773,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取单个地域的自动运维执行计划列表</para>
+        /// <para>Query the list of the latest 100 automated O&amp;M execution plans in a specified region. When features such as Auto Mode for Intelligent Cluster Management, automatic cluster upgrade, and node pool automated O&amp;M are enabled, you can use this API to query O&amp;M plans automatically generated by the System and their execution status, such as cluster upgrades or CVE fixes for node pools.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14955,6 +15143,11 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>The Container Service for Kubernetes (ACK) managed Pro cluster type is developed based on the ACK managed Basic cluster type. It inherits all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. It further enhances reliability, security, scheduling capabilities, and offers service level agreement (SLA)-backed guarantees, making it ideal for enterprise customers with large-scale production workloads requiring high stability and security. You can call the MigrateCluster operation to migrate an ACK managed Basic cluster to an ACK managed Pro cluster.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ACK托管集群基础版迁移至ACK托管集群Pro版后，将新增<a href="https://help.aliyun.com/document_detail/462278.html">集群管理费用</a>（由ACK收取），其他云资源计费保持不变。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MigrateClusterRequest
         /// </param>
@@ -15004,6 +15197,11 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <summary>
         /// <para>The Container Service for Kubernetes (ACK) managed Pro cluster type is developed based on the ACK managed Basic cluster type. It inherits all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. It further enhances reliability, security, scheduling capabilities, and offers service level agreement (SLA)-backed guarantees, making it ideal for enterprise customers with large-scale production workloads requiring high stability and security. You can call the MigrateCluster operation to migrate an ACK managed Basic cluster to an ACK managed Pro cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ACK托管集群基础版迁移至ACK托管集群Pro版后，将新增<a href="https://help.aliyun.com/document_detail/462278.html">集群管理费用</a>（由ACK收取），其他云资源计费保持不变。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MigrateClusterRequest
@@ -15055,6 +15253,11 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>The Container Service for Kubernetes (ACK) managed Pro cluster type is developed based on the ACK managed Basic cluster type. It inherits all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. It further enhances reliability, security, scheduling capabilities, and offers service level agreement (SLA)-backed guarantees, making it ideal for enterprise customers with large-scale production workloads requiring high stability and security. You can call the MigrateCluster operation to migrate an ACK managed Basic cluster to an ACK managed Pro cluster.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ACK托管集群基础版迁移至ACK托管集群Pro版后，将新增<a href="https://help.aliyun.com/document_detail/462278.html">集群管理费用</a>（由ACK收取），其他云资源计费保持不变。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MigrateClusterRequest
         /// </param>
@@ -15074,6 +15277,11 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>The Container Service for Kubernetes (ACK) managed Pro cluster type is developed based on the ACK managed Basic cluster type. It inherits all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. It further enhances reliability, security, scheduling capabilities, and offers service level agreement (SLA)-backed guarantees, making it ideal for enterprise customers with large-scale production workloads requiring high stability and security. You can call the MigrateCluster operation to migrate an ACK managed Basic cluster to an ACK managed Pro cluster.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>ACK托管集群基础版迁移至ACK托管集群Pro版后，将新增<a href="https://help.aliyun.com/document_detail/462278.html">集群管理费用</a>（由ACK收取），其他云资源计费保持不变。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// MigrateClusterRequest
         /// </param>
@@ -15090,8 +15298,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>Modify a self-healing rule</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAutoRepairPolicyRequest
@@ -15140,8 +15356,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>Modify a self-healing rule</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAutoRepairPolicyRequest
@@ -15190,8 +15414,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>Modify a self-healing rule</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAutoRepairPolicyRequest
@@ -15209,8 +15441,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自愈规则</para>
+        /// <para>Modify a self-healing rule</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This API is not yet available.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyAutoRepairPolicyRequest
@@ -15228,8 +15468,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyCluster operation to modify the cluster configurations by cluster ID.</para>
+        /// <para>You can call the ModifyCluster operation to modify the configuration of an ACK cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For details about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters and deprecation of OpenAPI operations related to ACK cluster management</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyClusterRequest
@@ -15350,8 +15598,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyCluster operation to modify the cluster configurations by cluster ID.</para>
+        /// <para>You can call the ModifyCluster operation to modify the configuration of an ACK cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For details about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters and deprecation of OpenAPI operations related to ACK cluster management</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyClusterRequest
@@ -15472,8 +15728,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyCluster operation to modify the cluster configurations by cluster ID.</para>
+        /// <para>You can call the ModifyCluster operation to modify the configuration of an ACK cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For details about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters and deprecation of OpenAPI operations related to ACK cluster management</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyClusterRequest
@@ -15491,8 +15755,16 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyCluster operation to modify the cluster configurations by cluster ID.</para>
+        /// <para>You can call the ModifyCluster operation to modify the configuration of an ACK cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// Starting July 4, 2026, the request parameters instance_deletion_protection, ingress_loadbalancer_id, and access_control_list will no longer take effect. For details about the changes, see <a href="https://help.aliyun.com/document_detail/2932733.html">Announcement on changes to input and output parameters and deprecation of OpenAPI operations related to ACK cluster management</a>.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyClusterRequest
@@ -15680,7 +15952,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyClusterNodePool operation to modify the configuration of a node pool with the specified node pool ID.</para>
+        /// <para>You can call the ModifyClusterNodePool API to update the configuration of a node pool by specifying its node pool ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15754,7 +16026,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyClusterNodePool operation to modify the configuration of a node pool with the specified node pool ID.</para>
+        /// <para>You can call the ModifyClusterNodePool API to update the configuration of a node pool by specifying its node pool ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15828,7 +16100,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyClusterNodePool operation to modify the configuration of a node pool with the specified node pool ID.</para>
+        /// <para>You can call the ModifyClusterNodePool API to update the configuration of a node pool by specifying its node pool ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15847,7 +16119,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyClusterNodePool operation to modify the configuration of a node pool with the specified node pool ID.</para>
+        /// <para>You can call the ModifyClusterNodePool API to update the configuration of a node pool by specifying its node pool ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15868,6 +16140,13 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <summary>
         /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>该API为全量更新，使用时请注意将完整的目标Tags设定为入参，避免丢失已有Tags。如需增量更新，请使用<a href="https://help.aliyun.com/document_detail/2667969.html">TagResources接口为集群绑定标签</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyClusterTagsRequest
@@ -15910,6 +16189,13 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>该API为全量更新，使用时请注意将完整的目标Tags设定为入参，避免丢失已有Tags。如需增量更新，请使用<a href="https://help.aliyun.com/document_detail/2667969.html">TagResources接口为集群绑定标签</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyClusterTagsRequest
         /// </param>
@@ -15951,6 +16237,13 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>该API为全量更新，使用时请注意将完整的目标Tags设定为入参，避免丢失已有Tags。如需增量更新，请使用<a href="https://help.aliyun.com/document_detail/2667969.html">TagResources接口为集群绑定标签</a>。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyClusterTagsRequest
         /// </param>
@@ -15969,6 +16262,13 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <summary>
         /// <para>You can add labels in key-value pairs to clusters. This allows cluster developers or O\\\&amp;M engineers to classify and manage clusters in a more flexible manner. This also meets the requirements for monitoring, cost analysis, and tenant isolation. You can call the ModifyClusterTags operation to modify the labels of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>该API为全量更新，使用时请注意将完整的目标Tags设定为入参，避免丢失已有Tags。如需增量更新，请使用<a href="https://help.aliyun.com/document_detail/2667969.html">TagResources接口为集群绑定标签</a>。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyClusterTagsRequest
@@ -16850,19 +17150,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the RemoveClusterNodes operation to remove nodes from a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>移除集群节点</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <hr>
-        /// <list type="bullet">
-        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</description></item>
-        /// <item><description>Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.</description></item>
-        /// <item><description>Nodes remain in the Unschedulable state when they are being removed.</description></item>
-        /// <item><description>You can remove only worker nodes. You cannot remove master nodes.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// RemoveClusterNodesRequest
@@ -16921,19 +17210,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the RemoveClusterNodes operation to remove nodes from a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>移除集群节点</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <hr>
-        /// <list type="bullet">
-        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</description></item>
-        /// <item><description>Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.</description></item>
-        /// <item><description>Nodes remain in the Unschedulable state when they are being removed.</description></item>
-        /// <item><description>You can remove only worker nodes. You cannot remove master nodes.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// RemoveClusterNodesRequest
@@ -16992,19 +17270,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the RemoveClusterNodes operation to remove nodes from a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>移除集群节点</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <hr>
-        /// <list type="bullet">
-        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</description></item>
-        /// <item><description>Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.</description></item>
-        /// <item><description>Nodes remain in the Unschedulable state when they are being removed.</description></item>
-        /// <item><description>You can remove only worker nodes. You cannot remove master nodes.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// RemoveClusterNodesRequest
@@ -17028,19 +17295,8 @@ namespace AlibabaCloud.SDK.CS20151215
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the RemoveClusterNodes operation to remove nodes from a Container Service for Kubernetes (ACK) cluster.</para>
+        /// <para>移除集群节点</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <hr>
-        /// <list type="bullet">
-        /// <item><description>When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</description></item>
-        /// <item><description>Unknown errors may occur when you remove nodes. Before you remove nodes, back up the data on the nodes.</description></item>
-        /// <item><description>Nodes remain in the Unschedulable state when they are being removed.</description></item>
-        /// <item><description>You can remove only worker nodes. You cannot remove master nodes.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// RemoveClusterNodesRequest
@@ -18294,15 +18550,8 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ScaleOutCluster operation to scale out a cluster by cluster ID.</para>
+        /// <para>扩容Kubernetes集群</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see <a href="https://help.aliyun.com/document_detail/184928.html">ScaleClusterNodePool</a>.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ScaleOutClusterRequest
@@ -18427,15 +18676,8 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ScaleOutCluster operation to scale out a cluster by cluster ID.</para>
+        /// <para>扩容Kubernetes集群</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see <a href="https://help.aliyun.com/document_detail/184928.html">ScaleClusterNodePool</a>.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ScaleOutClusterRequest
@@ -18560,15 +18802,8 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ScaleOutCluster operation to scale out a cluster by cluster ID.</para>
+        /// <para>扩容Kubernetes集群</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see <a href="https://help.aliyun.com/document_detail/184928.html">ScaleClusterNodePool</a>.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ScaleOutClusterRequest
@@ -18586,15 +18821,8 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ScaleOutCluster operation to scale out a cluster by cluster ID.</para>
+        /// <para>扩容Kubernetes集群</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <list type="bullet">
-        /// <item><description>****The ScaleOutCluster API operation is phased out. You must call the node pool-related API operations to manage nodes. If you want to add worker nodes to a Container Service for Kubernetes (ACK) cluster, call the ScaleClusterNodePool API operation. For more information, see <a href="https://help.aliyun.com/document_detail/184928.html">ScaleClusterNodePool</a>.</description></item>
-        /// </list>
-        /// </description>
         /// 
         /// <param name="request">
         /// ScaleOutClusterRequest
@@ -20330,8 +20558,17 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Secret encryption at rest configuration for a specified cluster by cluster ID.</para>
+        /// <para>Update the configuration of the Secret-at-rest encryption feature for a specified cluster by cluster ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>开启或关闭落盘加密功能的过程中以及成功开启该功能后，请勿使用 KMS 控制台或 OpenAPI 禁用或删除该功能所使用的 KMS 密钥，否则会导致集群 API Server 不可用，继而无法正常获取 Secret 和 ServiceAccount 等对象，影响业务应用的正常运行。更多信息，请参见<a href="https://help.aliyun.com/document_detail/177372.html">使用阿里云KMS进行Secret的落盘加密</a>。</para>
+        /// <list type="bullet">
+        /// <item><description>调用该 API 的用户或角色需要额外被授予所需的集群 RBAC 权限（需要被授予运维人员或管理员权限），否则将返回“ForbiddenUpdateKMSState”错误码。</description></item>
+        /// <item><description>成功调用该 API 后，集群状态将被变更为“更新中”，待变更完成后集群状态将恢复为“运行中”。针对同一个集群的变更完成后，需要间隔 5 分钟以上才能再次调用该 API，否则将返回“409”状态码。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateKMSEncryptionRequest
@@ -20380,8 +20617,17 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Secret encryption at rest configuration for a specified cluster by cluster ID.</para>
+        /// <para>Update the configuration of the Secret-at-rest encryption feature for a specified cluster by cluster ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>开启或关闭落盘加密功能的过程中以及成功开启该功能后，请勿使用 KMS 控制台或 OpenAPI 禁用或删除该功能所使用的 KMS 密钥，否则会导致集群 API Server 不可用，继而无法正常获取 Secret 和 ServiceAccount 等对象，影响业务应用的正常运行。更多信息，请参见<a href="https://help.aliyun.com/document_detail/177372.html">使用阿里云KMS进行Secret的落盘加密</a>。</para>
+        /// <list type="bullet">
+        /// <item><description>调用该 API 的用户或角色需要额外被授予所需的集群 RBAC 权限（需要被授予运维人员或管理员权限），否则将返回“ForbiddenUpdateKMSState”错误码。</description></item>
+        /// <item><description>成功调用该 API 后，集群状态将被变更为“更新中”，待变更完成后集群状态将恢复为“运行中”。针对同一个集群的变更完成后，需要间隔 5 分钟以上才能再次调用该 API，否则将返回“409”状态码。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateKMSEncryptionRequest
@@ -20430,8 +20676,17 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Secret encryption at rest configuration for a specified cluster by cluster ID.</para>
+        /// <para>Update the configuration of the Secret-at-rest encryption feature for a specified cluster by cluster ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>开启或关闭落盘加密功能的过程中以及成功开启该功能后，请勿使用 KMS 控制台或 OpenAPI 禁用或删除该功能所使用的 KMS 密钥，否则会导致集群 API Server 不可用，继而无法正常获取 Secret 和 ServiceAccount 等对象，影响业务应用的正常运行。更多信息，请参见<a href="https://help.aliyun.com/document_detail/177372.html">使用阿里云KMS进行Secret的落盘加密</a>。</para>
+        /// <list type="bullet">
+        /// <item><description>调用该 API 的用户或角色需要额外被授予所需的集群 RBAC 权限（需要被授予运维人员或管理员权限），否则将返回“ForbiddenUpdateKMSState”错误码。</description></item>
+        /// <item><description>成功调用该 API 后，集群状态将被变更为“更新中”，待变更完成后集群状态将恢复为“运行中”。针对同一个集群的变更完成后，需要间隔 5 分钟以上才能再次调用该 API，否则将返回“409”状态码。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateKMSEncryptionRequest
@@ -20449,8 +20704,17 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the Secret encryption at rest configuration for a specified cluster by cluster ID.</para>
+        /// <para>Update the configuration of the Secret-at-rest encryption feature for a specified cluster by cluster ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>开启或关闭落盘加密功能的过程中以及成功开启该功能后，请勿使用 KMS 控制台或 OpenAPI 禁用或删除该功能所使用的 KMS 密钥，否则会导致集群 API Server 不可用，继而无法正常获取 Secret 和 ServiceAccount 等对象，影响业务应用的正常运行。更多信息，请参见<a href="https://help.aliyun.com/document_detail/177372.html">使用阿里云KMS进行Secret的落盘加密</a>。</para>
+        /// <list type="bullet">
+        /// <item><description>调用该 API 的用户或角色需要额外被授予所需的集群 RBAC 权限（需要被授予运维人员或管理员权限），否则将返回“ForbiddenUpdateKMSState”错误码。</description></item>
+        /// <item><description>成功调用该 API 后，集群状态将被变更为“更新中”，待变更完成后集群状态将恢复为“运行中”。针对同一个集群的变更完成后，需要间隔 5 分钟以上才能再次调用该 API，否则将返回“409”状态码。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateKMSEncryptionRequest
@@ -20641,6 +20905,11 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>Updates the deletion protection status of the specified resources. You can enable or disable deletion protection for namespaces and Services. You can call this operation to enable deletion protection for namespaces or Services that involve businesses-critical and sensitive data to avoid incurring maintenance costs caused by accidental namespace or Service deletion.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，您需要先为集群安装或升级安全策略组件。具体操作，请参见<a href="https://help.aliyun.com/document_detail/359818.html">启用安全策略管理</a>。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateResourcesDeleteProtectionRequest
         /// </param>
@@ -20698,6 +20967,11 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <summary>
         /// <para>Updates the deletion protection status of the specified resources. You can enable or disable deletion protection for namespaces and Services. You can call this operation to enable deletion protection for namespaces or Services that involve businesses-critical and sensitive data to avoid incurring maintenance costs caused by accidental namespace or Service deletion.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，您需要先为集群安装或升级安全策略组件。具体操作，请参见<a href="https://help.aliyun.com/document_detail/359818.html">启用安全策略管理</a>。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateResourcesDeleteProtectionRequest
@@ -20757,6 +21031,11 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>Updates the deletion protection status of the specified resources. You can enable or disable deletion protection for namespaces and Services. You can call this operation to enable deletion protection for namespaces or Services that involve businesses-critical and sensitive data to avoid incurring maintenance costs caused by accidental namespace or Service deletion.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，您需要先为集群安装或升级安全策略组件。具体操作，请参见<a href="https://help.aliyun.com/document_detail/359818.html">启用安全策略管理</a>。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateResourcesDeleteProtectionRequest
         /// </param>
@@ -20775,6 +21054,11 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <summary>
         /// <para>Updates the deletion protection status of the specified resources. You can enable or disable deletion protection for namespaces and Services. You can call this operation to enable deletion protection for namespaces or Services that involve businesses-critical and sensitive data to avoid incurring maintenance costs caused by accidental namespace or Service deletion.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>调用本接口前，您需要先为集群安装或升级安全策略组件。具体操作，请参见<a href="https://help.aliyun.com/document_detail/359818.html">启用安全策略管理</a>。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateResourcesDeleteProtectionRequest
@@ -21327,6 +21611,15 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>升级集群组件实例版本可能会影响业务，请评估影响后在业务低峰期操作并提前做好相关的数据备份。</description></item>
+        /// <item><description>升级组件前，请参考<a href="https://help.aliyun.com/document_detail/176087.html">组件发布记录</a>了解指定组件的变更内容和变更影响。</description></item>
+        /// <item><description>请依次逐个组件升级，确认一个组件升级成功后再升级下一个组件。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpgradeClusterAddonsRequest
         /// </param>
@@ -21367,6 +21660,15 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <summary>
         /// <para>Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>升级集群组件实例版本可能会影响业务，请评估影响后在业务低峰期操作并提前做好相关的数据备份。</description></item>
+        /// <item><description>升级组件前，请参考<a href="https://help.aliyun.com/document_detail/176087.html">组件发布记录</a>了解指定组件的变更内容和变更影响。</description></item>
+        /// <item><description>请依次逐个组件升级，确认一个组件升级成功后再升级下一个组件。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradeClusterAddonsRequest
@@ -21409,6 +21711,15 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <para>Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>升级集群组件实例版本可能会影响业务，请评估影响后在业务低峰期操作并提前做好相关的数据备份。</description></item>
+        /// <item><description>升级组件前，请参考<a href="https://help.aliyun.com/document_detail/176087.html">组件发布记录</a>了解指定组件的变更内容和变更影响。</description></item>
+        /// <item><description>请依次逐个组件升级，确认一个组件升级成功后再升级下一个组件。</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpgradeClusterAddonsRequest
         /// </param>
@@ -21427,6 +21738,15 @@ namespace AlibabaCloud.SDK.CS20151215
         /// <summary>
         /// <para>Updates cluster components to use new features and patch vulnerabilities. You must update cluster components one after one and update a component only after the previous one is successfully updated. Before you update a component, we recommend that you read the update notes for each component. Cluster component updates may affect your businesses. Assess the impact, back up data, and perform the update during off-peak hours.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>升级集群组件实例版本可能会影响业务，请评估影响后在业务低峰期操作并提前做好相关的数据备份。</description></item>
+        /// <item><description>升级组件前，请参考<a href="https://help.aliyun.com/document_detail/176087.html">组件发布记录</a>了解指定组件的变更内容和变更影响。</description></item>
+        /// <item><description>请依次逐个组件升级，确认一个组件升级成功后再升级下一个组件。</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpgradeClusterAddonsRequest

@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>This parameter is deprecated. No need to pass values.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>k8s</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("component_name")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The target Kubernetes version for cluster upgrade.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.16.9-aliyun.1</para>
+        /// <para>1.32.1-aliyun.1</para>
         /// </summary>
         [NameInMap("next_version")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>This parameter is deprecated. Use next_version to specify the upgrade target Kubernetes version.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.14.8-aliyun.1</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]

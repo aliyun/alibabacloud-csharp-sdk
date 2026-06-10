@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D7631D83-6E98-1949-B665-766A62xxxxxx</para>
+        /// <para>D7631D83-6E98-1949-B665-766A62****</para>
         /// </summary>
         [NameInMap("request_id")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>T-5fd211e924e1d00787xxxxxx</para>
+        /// <para>T-5fd211e924e1d00787****</para>
         /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]

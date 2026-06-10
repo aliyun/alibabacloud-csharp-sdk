@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>48BD70F6-A7E6-543D-9F23-08DEB764C92E</para>
+        /// <para>48BD70F6-A7E6-543D-9F23-08DEB764****</para>
         /// </summary>
         [NameInMap("request_id")]
         [Validation(Required=false)]

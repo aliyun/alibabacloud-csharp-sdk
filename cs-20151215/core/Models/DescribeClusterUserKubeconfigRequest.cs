@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>Default value: <c>false</c></para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("PrivateIpAddress")]
         [Validation(Required=false)]

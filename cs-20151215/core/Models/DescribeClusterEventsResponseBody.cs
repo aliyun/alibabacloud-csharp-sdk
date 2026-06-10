@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<DescribeClusterEventsResponseBodyEvents> Events { get; set; }
         public class DescribeClusterEventsResponseBodyEvents : TeaModel {
             /// <summary>
-            /// <para>The ID of the cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c82e6987e2961451182edacd74faf****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The description of the event.</para>
+            /// <para>The event data.</para>
             /// </summary>
             [NameInMap("data")]
             [Validation(Required=false)]
@@ -35,29 +35,6 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public class DescribeClusterEventsResponseBodyEventsData : TeaModel {
                 /// <summary>
                 /// <para>The severity level of the event.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>warning</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>error</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>info</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- --></description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>info</para>
@@ -67,7 +44,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>The details of the event.</para>
+                /// <para>The event message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Start to upgrade NodePool nodePool/npdd89dc2b76c04f14b06774883b******</para>
@@ -77,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The status of the event.</para>
+                /// <para>The event status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Started</para>
@@ -102,14 +79,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The event source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cluster</para>
+            /// <para>task</para>
             /// </summary>
             [NameInMap("source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The subject related to the event.</para>
+            /// <para>The object associated with the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>npdd89dc2b76c04f14b06774883b******</para>
@@ -119,17 +96,51 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Subject { get; set; }
 
             /// <summary>
-            /// <para>The time when the event started.</para>
+            /// <para>The time the event occurred.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-12-01T17:31:00Z</para>
+            /// <para>2025-05-14T10:00:56+08:00</para>
             /// </summary>
             [NameInMap("time")]
             [Validation(Required=false)]
             public string Time { get; set; }
 
             /// <summary>
-            /// <para>The type of event. Valid values:</para>
+            /// <para>The event type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>cluster_create</c>: Cluster creation.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_scaleout</c>: Cluster scale-out.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_attach</c>: Attaching existing nodes to a cluster.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_delete</c>: Cluster deletion.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_upgrade</c>: Cluster upgrade.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_migrate</c>: Cluster migration.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_node_delete</c>: Node removal.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_node_drain</c>: Node drain.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_modify</c>: Cluster modification.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_configuration_modify</c>: Control plane configuration modification.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_addon_install</c>: Add-on installation.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_addon_upgrade</c>: Add-on upgrade.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_addon_uninstall</c>: Add-on uninstallation.</para>
+            /// </description></item>
+            /// <item><description><para><c>runtime_upgrade</c>: Container runtime upgrade.</para>
+            /// </description></item>
+            /// <item><description><para><c>nodepool_upgrade</c>: Node pool upgrade.</para>
+            /// </description></item>
+            /// <item><description><para><c>nodepool_update</c>: Node pool update.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>nodepool_update</para>
@@ -140,6 +151,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// <para>The token used to retrieve the next page of results. If this parameter is empty, there are no more results to return.</para>
+        /// </summary>
         [NameInMap("next_token")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -152,7 +166,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public DescribeClusterEventsResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeClusterEventsResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of the page to return.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -162,7 +176,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page. Valid values: 1 to 50. Default value: 50.</para>
+            /// <para>The number of entries returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -172,10 +186,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that match the query.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3</para>
+            /// <para>126</para>
             /// </summary>
             [NameInMap("total_count")]
             [Validation(Required=false)]

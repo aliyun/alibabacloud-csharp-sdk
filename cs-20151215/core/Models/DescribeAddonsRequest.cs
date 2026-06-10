@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>kubernetes</para>
+        /// <para>ManagedKubernetes</para>
         /// </summary>
         [NameInMap("cluster_type")]
         [Validation(Required=false)]

@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The time when the template was created.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-09-16T19:21:29+08:00</para>
+            /// <para>2025-04-25T16:56:33+08:00</para>
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The time when the template was updated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-09-16T19:21:29+08:00</para>
+            /// <para>2025-04-25T16:56:33+08:00</para>
             /// </summary>
             [NameInMap("updated")]
             [Validation(Required=false)]

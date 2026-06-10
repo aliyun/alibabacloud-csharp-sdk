@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The custom component settings that you want to use. The value is a JSON string.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;CpuRequest\&quot;:\&quot;800m\&quot;}</para>
+            /// <para>{&quot;CpuRequest&quot;:&quot;800m&quot;}</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1.6.7</para>
+            /// <para>v1.11.3.5-5321daf49-aliyun</para>
             /// </summary>
             [NameInMap("next_version")]
             [Validation(Required=false)]
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The current version of the component.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>v1.6.2</para>
+            /// <para>v1.11.3.2-f57ea7ed6-aliyun</para>
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]

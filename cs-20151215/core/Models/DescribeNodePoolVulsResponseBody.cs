@@ -96,10 +96,19 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public bool? NeedReboot { get; set; }
 
+                /// <summary>
+                /// <para>List of packages affected by the vulnerability.</para>
+                /// </summary>
                 [NameInMap("package_list")]
                 [Validation(Required=false)]
                 public List<DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList> PackageList { get; set; }
                 public class DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList : TeaModel {
+                    /// <summary>
+                    /// <para>Package name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>WebLogic</para>
+                    /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }

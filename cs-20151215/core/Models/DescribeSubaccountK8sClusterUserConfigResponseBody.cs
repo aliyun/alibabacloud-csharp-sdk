@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>apiVersion: v1****</para>
+        /// <para>apiVersion: v1\nclusters:\n- cluster:\n    server: <a href="https://114.55.xx.xx:6443%5C%5Cn">https://114.55.xx.xx:6443\\n</a>    certificate-authority-data: LS0tLS****</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The expiration date of the kubeconfig file. The value is the UTC time displayed in RFC3339 format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2024-03-10T09:56:17Z</para>
+        /// <para>2028-04-09T06:20:47Z</para>
         /// </summary>
         [NameInMap("expiration")]
         [Validation(Required=false)]

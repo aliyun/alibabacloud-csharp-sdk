@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The expiration date of the certificate used in a kubeconfig file. Format: the UTC time in the RFC3339 format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2026-11-30T07:41:50Z</para>
+            /// <para>2028-04-09T06:20:47Z</para>
             /// </summary>
             [NameInMap("cert_expire_time")]
             [Validation(Required=false)]

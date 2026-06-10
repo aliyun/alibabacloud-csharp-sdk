@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>logtail-ds</para>
+            /// <para>storage-operato</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>v1.7.3.0-aliyun</para>
+            /// <para>v1.32.9</para>
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]

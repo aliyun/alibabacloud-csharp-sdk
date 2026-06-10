@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The version of the cluster. If cluster_id is specified, this parameter is ignored. You must specify the region_id, cluster_type, profile, cluster_spec, and cluster_version parameters at the same time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.26.3-aliyun.1</para>
+        /// <para>1.32.1-aliyun.1</para>
         /// </summary>
         [NameInMap("cluster_version")]
         [Validation(Required=false)]

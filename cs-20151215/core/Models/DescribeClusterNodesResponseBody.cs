@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The time when the node was created.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-08-25T11:25:35+08:00</para>
+            /// <para>2025-04-16T07:28:00Z</para>
             /// </summary>
             [NameInMap("creation_time")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The expiration date of the node.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2099-12-31T23:59:00+08:00</para>
+            /// <para>2099-12-31T15:59:00Z</para>
             /// </summary>
             [NameInMap("expired_time")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The ID of the system image that is used by the node.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>aliyun_2_1903_x64_20G_alibase_20200529.vhd</para>
+            /// <para>aliyun_3_x64_20G_alibase_20241218.vhd</para>
             /// </summary>
             [NameInMap("image_id")]
             [Validation(Required=false)]
@@ -169,7 +169,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The name of the node. This name is the identifier of the node in the cluster.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-chengdu.192.168.0.36</para>
+            /// <para>cn-chengdu.192.168xx.xx</para>
             /// </summary>
             [NameInMap("node_name")]
             [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>Indicates how the node is initialized. A node can be manually created or created by using Resource Orchestration Service (ROS).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ess_attach</para>
+            /// <para>ess</para>
             /// </summary>
             [NameInMap("source")]
             [Validation(Required=false)]

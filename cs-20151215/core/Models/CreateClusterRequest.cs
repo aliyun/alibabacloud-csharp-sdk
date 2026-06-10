@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The network access control list (ACL) rule of the SLB instance associated with the API server if the cluster is a registered cluster.</para>
+        /// <para><b>[Deprecated]</b> Access control list for the registered cluster API Server SLB.</para>
         /// </summary>
         [NameInMap("access_control_list")]
         [Validation(Required=false)]
@@ -20,35 +20,41 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> AccessControlList { get; set; }
 
         /// <summary>
-        /// <para>The components that you want to install in the cluster. When you create a cluster, you can configure the <c>addons</c> parameter to specify the components that you want to install.</para>
-        /// <para><b>Network plug-in</b>: required. The Flannel and Terway plug-ins are supported. Select one of the plug-ins for the cluster.</para>
+        /// <para>List of cluster components. Specify components to install during cluster creation using the <c>addons</c> parameter.</para>
+        /// <para><b>Network components</b>: Required. Choose between Flannel and Terway:</para>
         /// <list type="bullet">
-        /// <item><description>If you want to use the Terway component, specify the network plug-in in the [{&quot;name&quot;:&quot;flannel&quot;,&quot;config&quot;:&quot;&quot;}] format.</description></item>
-        /// <item><description>If you want to use the Terway component, specify the value network plug-in in the [{&quot;name&quot;: &quot;terway-eniip&quot;,&quot;Config&quot;: &quot;&quot;}] format.</description></item>
+        /// <item><description><para>Flannel network: [{&quot;name&quot;:&quot;flannel&quot;,&quot;config&quot;:&quot;&quot;}].</para>
+        /// </description></item>
+        /// <item><description><para>Terway network: [{&quot;name&quot;: &quot;terway-eniip&quot;,&quot;config&quot;: &quot;&quot;}].</para>
+        /// </description></item>
         /// </list>
-        /// <para><b>Volume plug-in</b>: optional. Only the <c>Container Storage Interface (CSI)</c> plug-in is supported.</para>
-        /// <para>Specify the <c>CSI</c> plug-in in the following format: [{&quot;name&quot;:&quot;csi-plugin&quot;,&quot;config&quot;: &quot;&quot;},{&quot;name&quot;: &quot;csi-provisioner&quot;,&quot;config&quot;: &quot;&quot;}].</para>
-        /// <para><b>Simple Log Service component</b>: optional. We recommend that you enable Simple Log Service. If Simple Log Service is disabled, you cannot use the cluster auditing feature.</para>
+        /// <para><b>Storage components</b>: Optional. Only <c>csi</c> is supported:</para>
+        /// <para><c>csi</c>: [{&quot;name&quot;:&quot;csi-plugin&quot;,&quot;config&quot;: &quot;&quot;},{&quot;name&quot;: &quot;csi-provisioner&quot;,&quot;config&quot;: &quot;&quot;}].</para>
+        /// <para><b>Logging components</b>: Optional. We recommend enabling this. Without SLS, you cannot use cluster audit features.</para>
         /// <list type="bullet">
-        /// <item><description>Specify an existing <c>Simple Log Service project</c> in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;,&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</description></item>
-        /// <item><description>To create a <c>Simple Log Service project</c>, specify the component in the following format: [{&quot;name&quot;: &quot;logtail-ds&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;}&quot;}].</description></item>
+        /// <item><description><para>Use an existing <c>SLS Project</c>: [{&quot;name&quot;: &quot;loongcollector&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;,&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</para>
+        /// </description></item>
+        /// <item><description><para>Create a new <c>SLS Project</c>: [{&quot;name&quot;: &quot;loongcollector&quot;,&quot;config&quot;: &quot;{&quot;IngressDashboardEnabled&quot;:&quot;true&quot;}&quot;}].</para>
+        /// </description></item>
         /// </list>
-        /// <para><b>Ingress controller</b>: optional. By default, the <c>nginx-ingress-controller</c> component is installed in ACK dedicated clusters.</para>
+        /// <para><b>Ingress components</b>: Optional. ACK dedicated clusters install the <c>nginx-ingress-controller</c> by default.</para>
         /// <list type="bullet">
-        /// <item><description>To install nginx-ingress-controller and enable Internet access, specify the Ingress controller in the following format: [{&quot;name&quot;:&quot;nginx-ingress-controller&quot;,&quot;config&quot;:&quot;{&quot;IngressSlbNetworkType&quot;:&quot;internet&quot;}&quot;}].</description></item>
-        /// <item><description>To disable the automatic installation of nginx-ingress-controller, specify the Ingress controller in the following format: [{&quot;name&quot;: &quot;nginx-ingress-controller&quot;,&quot;config&quot;: &quot;&quot;,&quot;disabled&quot;: true}].</description></item>
+        /// <item><description><para>Install Ingress with public network access: [{&quot;name&quot;:&quot;nginx-ingress-controller&quot;,&quot;config&quot;:&quot;{&quot;IngressSlbNetworkType&quot;:&quot;internet&quot;}&quot;}].</para>
+        /// </description></item>
+        /// <item><description><para>Disable default Ingress installation: [{&quot;name&quot;: &quot;nginx-ingress-controller&quot;,&quot;config&quot;: &quot;&quot;,&quot;disabled&quot;: true}].</para>
+        /// </description></item>
         /// </list>
-        /// <para><b>Event center</b>: optional. By default, the event center feature is enabled.</para>
-        /// <para>You can use ACK event centers to store and query events and configure alerts. You can use the Logstores that are associated with ACK event centers free of charge within 90 days. For more information, see <a href="https://help.aliyun.com/document_detail/150476.html">Create and use an event center</a>.</para>
-        /// <para>To enable the event center feature, specify the event center component in the following format: [{&quot;name&quot;:&quot;ack-node-problem-detector&quot;,&quot;config&quot;:&quot;{&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</para>
+        /// <para><b>Event Hub</b>: Optional. Enabled by default.</para>
+        /// <para>Event Hub provides storage, querying, and alerting for Kubernetes events. The associated Logstore is free for 90 days. For more information about the free policy, see <a href="https://help.aliyun.com/document_detail/150476.html">Create and use Kubernetes Event Hub</a>.</para>
+        /// <para>Example to enable Event Hub: [{&quot;name&quot;:&quot;ack-node-problem-detector&quot;,&quot;config&quot;:&quot;{&quot;sls_project_name&quot;:&quot;your_sls_project_name&quot;}&quot;}].</para>
         /// </summary>
         [NameInMap("addons")]
         [Validation(Required=false)]
         public List<Addon> Addons { get; set; }
 
         /// <summary>
-        /// <para>Service accounts provide identities for pods when pods communicate with the <c>API server</c> of the cluster. The <c>api-audiences</c> parameter validates <c>tokens</c> and is used by the <c>API server</c> to check whether the <c>tokens</c> of requests are valid. Separate multiple values with commas (,).``</para>
-        /// <para>For more information about <c>service accounts</c>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</para>
+        /// <para>ServiceAccount is the access credential used by pods to communicate with the cluster API Server. The <c>api-audiences</c> specifies valid <c>token</c> identities for authenticating requests on the <c>apiserver</c> side. You can configure multiple <c>audience</c> values separated by commas (,).</para>
+        /// <para>For more information about <c>ServiceAccount</c>, see <a href="https://help.aliyun.com/document_detail/160384.html">Deploy service account token volume projection</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kubernetes.default.svc</para>
@@ -57,24 +63,66 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ApiAudiences { get; set; }
 
+        /// <summary>
+        /// <para>Cluster audit log configuration.</para>
+        /// </summary>
         [NameInMap("audit_log_config")]
         [Validation(Required=false)]
         public CreateClusterRequestAuditLogConfig AuditLogConfig { get; set; }
         public class CreateClusterRequestAuditLogConfig : TeaModel {
+            /// <summary>
+            /// <para>Whether to enable cluster audit logging.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Enable.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disable.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
+            /// <summary>
+            /// <para>The <a href="https://help.aliyun.com/document_detail/48873.html">SLS Project</a> containing the <a href="https://help.aliyun.com/document_detail/48873.html">Logstore</a> for cluster audit logs.</para>
+            /// <list type="bullet">
+            /// <item><description><para>Default value: <c>k8s-log-{clusterid}</c>.</para>
+            /// </description></item>
+            /// <item><description><para>When audit logging is enabled, a Logstore for audit logs is created in the specified SLS Project.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>k8s-log-c2345xxxxxxxxxxxx</para>
+            /// </summary>
             [NameInMap("sls_project_name")]
             [Validation(Required=false)]
             public string SlsProjectName { get; set; }
 
         }
 
+        /// <summary>
+        /// <para><a href="https://help.aliyun.com/document_detail/2938898.html">Intelligent Managed Mode</a> configuration.</para>
+        /// </summary>
         [NameInMap("auto_mode")]
         [Validation(Required=false)]
         public CreateClusterRequestAutoMode AutoMode { get; set; }
         public class CreateClusterRequestAutoMode : TeaModel {
+            /// <summary>
+            /// <para>Whether to enable Intelligent Managed Mode.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Enable.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disable.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
@@ -84,14 +132,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>]</para>
-        /// <para>Specifies whether to enable auto-renewal. This parameter takes effect only when <c>charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
+        /// <para><b>[Deprecated]</b></para>
+        /// <para>Whether to enable auto-renewal. Valid only when <c>charge_type</c> is <c>PrePaid</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: enables auto-renewal.</description></item>
-        /// <item><description><c>false</c>: disables auto-renewal.</description></item>
+        /// <item><description><para><c>true</c>: Enable auto-renewal.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disable auto-renewal.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
-        /// <para>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</para>
+        /// <para>This parameter changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on Changes to CreateCluster API Parameters</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -104,10 +154,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>]</para>
-        /// <para>The auto-renewal duration. This parameter takes effect only if charge_type is set to PrePaid and auto_renew is set to true. If you set <c>period_unit</c> to Month, the valid values of auto_renew_period are 1, 2, 3, 6, and 12.</para>
+        /// <para><b>[Deprecated]</b></para>
+        /// <para>Auto-renewal period in months. Valid only when prepaid and auto-renewal are enabled. When <c>PeriodUnit=Month</c>, valid values are {1, 2, 3, 6, 12}.</para>
         /// <para>Default value: 1.</para>
-        /// <para>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</para>
+        /// <para>This parameter changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on Changes to CreateCluster API Parameters</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -120,24 +170,28 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>]</para>
-        /// <para>The billing method of the CLB instance that is used by the API server. Default value: PostPaid. Valid values:</para>
+        /// <para><b>[Deprecated]</b></para>
+        /// <para>Billing type for the CLB instance used by the API Server. Default value: PostPaid. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PostPaid: pay-as-you-go.</description></item>
-        /// <item><description>PrePaid: subscription. This billing method is not supported by newly created CLB instances. Existing CLB instances are not affected.</description></item>
+        /// <item><description><para>PostPaid: Pay-as-you-go.</para>
+        /// </description></item>
+        /// <item><description><para>PrePaid: Subscription. New CLB instances no longer support subscription billing, but existing instances are unaffected.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
+        /// <para>Notice: </para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</para>
+        /// <item><description><para>This parameter changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on Changes to CreateCluster API Parameters</a>.</para>
         /// </description></item>
-        /// <item><description><para>Starting from December 1, 2024, newly created CLB instances no longer support the subscription billing method, and an instance fee will be charged for newly created CLB instances</para>
+        /// <item><description><para>Starting December 1, 2024, new CLB instances will no longer support subscription billing and will incur an instance fee.</para>
         /// </description></item>
         /// </list>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2839797.html">CLB billing adjustments</a>.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;For details, see <a href="~~2851191~~">[Product Announcement] Discontinuation of Subscription Billing for API Server CLB in New Clusters</a> and <a href="https://help.aliyun.com/document_detail/2839797.html">Adjustment of Classic Load Balancer Billing Items</a>.
+        /// &lt;props=&quot;intl&quot;&gt;For details, see <a href="https://help.aliyun.com/document_detail/2839797.html">Adjustment of Classic Load Balancer Billing Items</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>PostPaid</para>
         /// </summary>
         [NameInMap("charge_type")]
         [Validation(Required=false)]
@@ -147,7 +201,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[Deprecated] When you configure the control plane, use the <c>security_hardening_os</c> parameter in the <c>control_plane_config</c> section instead. When you configure a node pool, use the <c>security_hardening_os</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>security_hardening_os</c> parameter under <c>control_plane_config</c>. For node pool configuration, use the <c>security_hardening_os</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -160,16 +214,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>cloud_monitor_flags</c> parameter in the <c>control_plane_config</c> section instead. When you configure a node pool, use the <c>cms_enabled</c> parameter of the <c>kubernetes_config</c> field in the nodepool section instead.</para>
-        /// <para>Specifies whether to install the CloudMonitor agent. Valid values:</para>
+        /// <para><b>[Deprecated]</b> For control plane node configuration, use the cloud_monitor_flags parameter under <c>control_plane_config</c>. For node pool configuration, use the <c>cms_enabled</c> parameter under <c>kubernetes_config</c> in <c>nodepool</c>.</para>
+        /// <para>Whether to install the CloudMonitor agent on the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: installs the CloudMonitor agent.</description></item>
-        /// <item><description><c>false</c>: does not install the CloudMonitor agent.</description></item>
+        /// <item><description><para><c>true</c>: Install the CloudMonitor agent.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Do not install the CloudMonitor agent.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("cloud_monitor_flags")]
         [Validation(Required=false)]
@@ -177,8 +233,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? CloudMonitorFlags { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the cluster.</para>
-        /// <para>The domain name can contain one or more parts that are separated by periods (.). Each part cannot exceed 63 characters in length, and can contain lowercase letters, digits, and hyphens (-). Each part must start and end with a lowercase letter or digit.</para>
+        /// <para>Cluster local domain name.</para>
+        /// <para>Naming rules: The domain name consists of one or more parts separated by dots (.). Each part can be up to 63 characters long and can contain lowercase letters, digits, and hyphens (-). Each part must start and end with a lowercase letter or digit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cluster.local</para>
@@ -188,11 +244,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterDomain { get; set; }
 
         /// <summary>
-        /// <para>If you set <c>cluster_type</c> to <c>ManagedKubernetes</c> and specify <c>profile</c>, you can further specify the edition of the cluster. Valid values:</para>
+        /// <para>When you set <c>cluster_type</c> to <c>ManagedKubernetes</c> and configure <c>profile</c>, you can further specify the cluster specification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>ack.pro.small</c>: Pro Edition.</description></item>
-        /// <item><description><c>ack.standard</c>: Basic Edition. If you leave the parameter empty, an ACK Basic cluster is created.</description></item>
+        /// <item><description><para><c>ack.standard</c>: Basic Edition (default when this parameter is empty)</para>
+        /// </description></item>
+        /// <item><description><para><c>ack.pro.small</c>: Pro Edition</para>
+        /// </description></item>
+        /// <item><description><para><c>ack.pro.xlarge</c>: Pro XL</para>
+        /// </description></item>
+        /// <item><description><para><c>ack.pro.2xlarge</c>: Pro 2XL</para>
+        /// </description></item>
+        /// <item><description><para><c>ack.pro.4xlarge</c>: Pro 4XL (requires whitelist approval from customer service)</para>
+        /// </description></item>
         /// </list>
+        /// <para>Pro XL, Pro 2XL, and Pro 4XL are three tiers provided by &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/user-guide/ack-pro-provisioned-control-plane">ACK Pro Provisioned Control Plane</a>. These tiers pre-allocate and dedicate control plane resources to ensure consistently high API concurrency and pod scheduling performance. They are suitable for AI training and inference, ultra-large-scale clusters, and mission-critical workloads.</para>
+        /// <para>For cluster management fees for Pro Edition and provisioned control plane clusters, see &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/ack/ack-managed-and-ack-dedicated/product-overview/cluster-management-fee">Cluster management fees</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ack.pro.small</para>
@@ -203,9 +269,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><c>Kubernetes</c>: ACK dedicated cluster.</description></item>
-        /// <item><description><c>ManagedKubernetes</c>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic Edition and Pro Edition), ACK Edge clusters (Basic Edition and Pro Edition), and ACK Lingjun clusters (Pro Edition).</description></item>
-        /// <item><description><c>ExternalKubernetes</c>: registered cluster.</description></item>
+        /// <item><description><para><c>Kubernetes</c>: ACK dedicated cluster.</para>
+        /// </description></item>
+        /// <item><description><para><c>ManagedKubernetes</c>: ACK managed clusters, including ACK managed clusters (Pro Edition, Basic Edition), ACK serverless clusters (Pro Edition, Basic Edition), ACK Edge clusters (Pro Edition, Basic Edition), and ACK LINGJUN clusters (Pro Edition).</para>
+        /// </description></item>
+        /// <item><description><para><c>ExternalKubernetes</c>: registered cluster.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -216,10 +285,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>The pod CIDR block. You can specify 10.0.0.0/8, 172.16-31.0.0/12-16, 192.168.0.0/16, or their subnets as the pod CIDR block. The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</para>
-        /// <para>For more information about how to plan the network of an ACK cluster, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan the network of an ACK cluster</a>.</para>
+        /// <para>Pod network CIDR block. It must be a valid private CIDR block: 10.0.0.0/8, 172.16.0.0/12 to 172.31.0.0/16, or 192.168.0.0/16. It cannot overlap with the VPC or existing Kubernetes cluster CIDR blocks in the VPC. This cannot be modified after cluster creation.</para>
+        /// <para>For cluster network planning, see <a href="https://help.aliyun.com/document_detail/86500.html">Network planning for ACK managed clusters</a>.</para>
         /// <remarks>
-        /// <para> This parameter is required if the cluster uses the Flannel plug-in.</para>
+        /// <para>This field is required for Flannel clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -230,14 +299,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ContainerCidr { get; set; }
 
         /// <summary>
-        /// <para>The control plane configurations of an ACK dedicated cluster.</para>
+        /// <para>Control plane configuration for ACK dedicated clusters.</para>
         /// </summary>
         [NameInMap("control_plane_config")]
         [Validation(Required=false)]
         public CreateClusterRequestControlPlaneConfig ControlPlaneConfig { get; set; }
         public class CreateClusterRequestControlPlaneConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable auto-renewal for the node.</para>
+            /// <para>Whether to enable auto-renewal for control plane nodes. Valid only when charge_type is <c>PrePaid</c>.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Enable auto-renewal.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disable auto-renewal.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>Default value: true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -247,7 +323,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The auto-renewal duration for the node.</para>
+            /// <para>Auto-renewal duration for control plane nodes in months.</para>
+            /// <para>Valid values: {1, 2, 3, 6, 12}.</para>
+            /// <para>Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -257,27 +335,48 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? AutoRenewPeriod { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the node.</para>
+            /// <para>Control plane node billing type.</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>PrePaid</c>: Subscription.</para>
+            /// </description></item>
+            /// <item><description><para><c>PostPaid</c>: Pay-as-you-go.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>Default value: <c>PostPaid</c>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>PrePaid</para>
+            /// <para>PostPaid</para>
             /// </summary>
             [NameInMap("charge_type")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to install CloudMonitor on the node.</para>
+            /// <para>Whether to install Cloud Monitor on nodes.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Install the CloudMonitor agent.</para>
+            /// </description></item>
+            /// <item><description><para>false: Do not install the CloudMonitor agent.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("cloud_monitor_flags")]
             [Validation(Required=false)]
             public bool? CloudMonitorFlags { get; set; }
 
             /// <summary>
-            /// <para>The CPU management policy of the node.</para>
+            /// <para>Node CPU management policy.</para>
+            /// <list type="bullet">
+            /// <item><description><para>static: Enhances CPU affinity and exclusivity for pods with specific resource characteristics on the node.</para>
+            /// </description></item>
+            /// <item><description><para>none: Uses the default CPU affinity scheme.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>Default value: none.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>
@@ -287,7 +386,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CpuPolicy { get; set; }
 
             /// <summary>
-            /// <para>The ID of the deployment set.</para>
+            /// <para>Deployment set ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds-bp10b35imuam5amw****</para>
@@ -297,7 +396,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string DeploymentsetId { get; set; }
 
             /// <summary>
-            /// <para>The image ID.</para>
+            /// <para>Image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun_3_x64_20G_alibase_20240819.vhd</para>
@@ -307,7 +406,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The type of the OS image.</para>
+            /// <para>Operating system image type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliyunLinux3</para>
@@ -316,19 +415,22 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public string ImageType { get; set; }
 
+            /// <summary>
+            /// <para>ECS instance metadata access configuration.</para>
+            /// </summary>
             [NameInMap("instance_metadata_options")]
             [Validation(Required=false)]
             public InstanceMetadataOptions InstanceMetadataOptions { get; set; }
 
             /// <summary>
-            /// <para>The instance types of the nodes.</para>
+            /// <para>Node instance types.</para>
             /// </summary>
             [NameInMap("instance_types")]
             [Validation(Required=false)]
             public List<string> InstanceTypes { get; set; }
 
             /// <summary>
-            /// <para>The name of the key pair. You must set this parameter or login_password.</para>
+            /// <para>Key pair name. Choose either this parameter or login_password.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ack</para>
@@ -338,17 +440,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string KeyPair { get; set; }
 
             /// <summary>
-            /// <para>The SSH logon password. The password must be 8 to 30 characters in length and contain a minimum of three of the following character types: uppercase letters, lowercase letters, digits, and special characters. You must set this parameter or key_pair.</para>
+            /// <para>SSH login password. Password rules: 8–30 characters, containing at least three of the following: uppercase letters, lowercase letters, digits, and special characters. Choose either this parameter or key_pair.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ack@Test</para>
+            /// <hr>
             /// </summary>
             [NameInMap("login_password")]
             [Validation(Required=false)]
             public string LoginPassword { get; set; }
 
             /// <summary>
-            /// <para>The node port range.</para>
+            /// <para><b>[Deprecated]</b> Node service port range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30000-32767</para>
@@ -358,7 +460,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodePortRange { get; set; }
 
             /// <summary>
-            /// <para>The subscription duration of the node.</para>
+            /// <para>Subscription duration for control plane nodes in months. Required and valid only when charge_type is <c>PrePaid</c>.</para>
+            /// <para>Valid values: {1, 2, 3, 6, 12, 24, 36, 48, 60}.</para>
+            /// <para>Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -368,7 +472,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Period { get; set; }
 
             /// <summary>
-            /// <para>The unit of the subscription duration of the node.</para>
+            /// <para>Billing cycle unit for control plane nodes. Required and valid only when charge_type is <c>PrePaid</c>.</para>
+            /// <para>Valid value: <c>Month</c>. Only monthly billing is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Month</para>
@@ -378,7 +483,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The container runtime.</para>
+            /// <para><b>[Deprecated]</b> Control plane node runtime name. Valid value:</para>
+            /// <para>containerd: Containerd runtime, supported for all cluster versions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>containerd</para>
@@ -388,17 +494,25 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Runtime { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable Alibaba Cloud Linux Security Hardening.</para>
+            /// <para>Whether to enable Alibaba Cloud OS security hardening.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Enable Alibaba Cloud OS security hardening.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disable Alibaba Cloud OS security hardening.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("security_hardening_os")]
             [Validation(Required=false)]
             public bool? SecurityHardeningOs { get; set; }
 
             /// <summary>
-            /// <para>The number of control plane nodes.</para>
+            /// <para>Number of control plane nodes.</para>
+            /// <para>Valid values: <c>3</c> or <c>5</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -408,17 +522,31 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable MLPS security hardening.</para>
+            /// <para>Whether to enable MLPS 2.0 security hardening.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Enable MLPS 2.0 security hardening.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disable MLPS 2.0 security hardening.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("soc_enabled")]
             [Validation(Required=false)]
             public bool? SocEnabled { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the burst feature for the system disk.</para>
+            /// <para>Whether to enable performance burst for node system disks.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Enable.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disable.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>This parameter is supported only when <c>system_disk_category</c> is <c>cloud_auto</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -428,17 +556,31 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SystemDiskBurstingEnabled { get; set; }
 
             /// <summary>
-            /// <para>The system disk category for the node.</para>
+            /// <para>Node system disk type.</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>cloud_efficiency</c>: Ultra disk.</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_ssd</c>: Standard SSD.</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_essd</c>: ESSD.</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_auto</c>: ESSD AutoPL.</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_essd_entry</c>: ESSD Entry.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>Default value: <c>cloud_ssd</c>. The default may vary by zone.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cloud_essd</para>
+            /// <para>cloud_ssd</para>
             /// </summary>
             [NameInMap("system_disk_category")]
             [Validation(Required=false)]
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The PL of the system disk that you want to use for the node. This parameter takes effect only for ESSDs.</para>
+            /// <para>Node system disk performance level. Applies only to ESSD disks.</para>
+            /// <para>Disk performance levels depend on disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL1</para>
@@ -448,7 +590,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskPerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The preset read/write IOPS of the system disk.</para>
+            /// <para>Provisioned read/write IOPS for node system disks.</para>
+            /// <para>Valid range: 0 to min{50,000, 1000 × capacity - baseline performance}. Baseline performance = min{1,800 + 50 × capacity, 50,000}.</para>
+            /// <para>This parameter is supported only when <c>system_disk_category</c> is <c>cloud_auto</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -458,7 +602,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? SystemDiskProvisionedIops { get; set; }
 
             /// <summary>
-            /// <para>The system disk size of the node. The value must be at least 40 GB.</para>
+            /// <para>Node system disk size in GiB.</para>
+            /// <para>Valid range: [40,500].</para>
+            /// <para>Default value: <c>120</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -468,7 +614,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? SystemDiskSize { get; set; }
 
             /// <summary>
-            /// <para>The automatic snapshot policy of the node.</para>
+            /// <para>Automatic snapshot backup policy for node system disks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-2zej1nogjvovnz4z****</para>
@@ -479,14 +625,23 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// <para>Cluster connection configuration.</para>
+        /// </summary>
         [NameInMap("control_plane_endpoints_config")]
         [Validation(Required=false)]
         public CreateClusterRequestControlPlaneEndpointsConfig ControlPlaneEndpointsConfig { get; set; }
         public class CreateClusterRequestControlPlaneEndpointsConfig : TeaModel {
+            /// <summary>
+            /// <para>Internal domain name configuration for the cluster, applicable to ACK managed clusters. Internal domain names allow node-side system components such as kubelet and kube-proxy to access the API Server. Without internal domain name access, node-side components access the API Server through the CLB IP address.</para>
+            /// </summary>
             [NameInMap("internal_dns_config")]
             [Validation(Required=false)]
             public CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig InternalDnsConfig { get; set; }
             public class CreateClusterRequestControlPlaneEndpointsConfigInternalDnsConfig : TeaModel {
+                /// <summary>
+                /// <para>VPCs where the internal domain name resolution takes effect.</para>
+                /// </summary>
                 [NameInMap("bind_vpcs")]
                 [Validation(Required=false)]
                 public List<string> BindVpcs { get; set; }
@@ -496,15 +651,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The control plane components for which you want to enable log collection.</para>
-        /// <para>By default, the logs of kube-apiserver, kube-controller-manager, and kube-scheduler are collected.</para>
+        /// <para>List of component names specifying which control plane component logs to collect.</para>
+        /// <para>By default, logs are collected for kube-apiserver, kube-controller-manager, kube-scheduler, and cloud-controller-manager.</para>
         /// </summary>
         [NameInMap("controlplane_log_components")]
         [Validation(Required=false)]
         public List<string> ControlplaneLogComponents { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service project that is used to store the logs of control plane components. You can use an existing project or create one. If you choose to create a Simple Log Service project, the created project is named in the <c>k8s-log-{ClusterID}</c> format.</para>
+        /// <para>SLS Project for control plane component logs. You can use an existing Project for log storage or let the system automatically create one. If auto-created, the Project name will be <c>k8s-log-{ClusterID}</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>k8s-log-xxx</para>
@@ -514,7 +669,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ControlplaneLogProject { get; set; }
 
         /// <summary>
-        /// <para>The retention period of control plane logs in days.</para>
+        /// <para>Number of days to retain control plane component logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -526,11 +681,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>cpu_policy</c> parameter in the <c>control_plane_config</c> section instead. When you configure a node pool, use the <c>cpu_policy</c> parameter of the <c>kubernetes_config</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The CPU management policy of the node. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>cpu_policy</c> parameter under <c>control_plane_config</c>. For node pool configuration, use the <c>cpu_policy</c> parameter under <c>kubernetes_config</c> in <c>nodepool</c>.</para>
+        /// <para>Node CPU management policy. Supported for cluster versions 1.12.6 and later:</para>
         /// <list type="bullet">
-        /// <item><description><c>static</c>: allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</description></item>
-        /// <item><description><c>none</c>: specifies that the default CPU affinity is used.</description></item>
+        /// <item><description><para><c>static</c>: Enhances CPU affinity and exclusivity for pods with specific resource characteristics on the node.</para>
+        /// </description></item>
+        /// <item><description><para><c>none</c>: Uses the default CPU affinity scheme.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>none</c>.</para>
         /// 
@@ -545,7 +702,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The custom subject alternative names (SANs) for the API server certificate to accept requests from specified IP addresses or domain names. Separate multiple IP addresses and domain names with commas (,).</para>
+        /// <para><b>[Deprecated]</b> Use the <c>extra_sans</c> parameter instead.</para>
+        /// <para>Custom certificate SAN. Separate multiple IP addresses or domain names with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs.aliyun.com</para>
@@ -556,10 +714,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string CustomSan { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:</para>
+        /// <para>Cluster deletion protection prevents accidental cluster deletion through the console or API. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: enables cluster deletion protection.</description></item>
-        /// <item><description><c>false</c>: disables cluster deletion protection.</description></item>
+        /// <item><description><para><c>true</c>: Enable deletion protection. You cannot delete the cluster through the console or API.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disable deletion protection. You can delete the cluster through the console or API.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -573,11 +733,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] By default, the system does not perform a rollback when the cluster fails to be created. You must manually delete the cluster that fails to be created.</para>
-        /// <para>Specifies whether to perform a rollback when the cluster fails to be created. Valid values:</para>
+        /// <para><b>[Deprecated]</b> By default, clusters are not rolled back on creation failure. You must manually clean up failed clusters.</para>
+        /// <para>Whether to roll back on cluster creation failure. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: performs a rollback when the cluster fails to be created.</description></item>
-        /// <item><description><c>false</c>: does not perform a rollback when the cluster fails to be created.</description></item>
+        /// <item><description><para><c>true</c>: Roll back on failure.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Do not roll back on failure.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>true</c>.</para>
         /// 
@@ -592,10 +754,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature.</para>
+        /// <para><b>[Deprecated]</b> Use the <c>rrsa_config</c> parameter instead.</para>
+        /// <para>Whether to enable RRSA.</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Enable.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disable.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("enable_rrsa")]
         [Validation(Required=false)]
@@ -603,9 +772,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? EnableRrsa { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Key Management Service (KMS) key that is used to encrypt the system disk. For more information, see <a href="https://help.aliyun.com/document_detail/28935.html">What is KMS?</a></para>
+        /// <para>KMS key ID used to encrypt data disks. For more information, see <a href="https://help.aliyun.com/document_detail/28935.html">Key Management Service</a>.</para>
         /// <remarks>
-        /// <para> The key can be used only in ACK Pro clusters.</para>
+        /// <para>This feature is available only for professional managed clusters (ACK Pro clusters).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -616,10 +785,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string EncryptionProviderKey { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Internet access for the cluster. You can use an elastic IP address (EIP) to expose the API server. This way, you can access the cluster over the Internet. Valid values:</para>
+        /// <para>Whether to enable public network access. Expose the API Server through an EIP to allow public network access to the cluster.</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: enables Internet access for the cluster.</description></item>
-        /// <item><description><c>false</c>: disables Internet access for the cluster. If you set the value to false, the API server cannot be accessed over the Internet.</description></item>
+        /// <item><description><para><c>true</c>: Enable public network access.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disable public network access. If disabled, you cannot access the cluster API Server from external networks.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -630,6 +801,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public bool? EndpointPublicAccess { get; set; }
 
+        /// <summary>
+        /// <para>Custom API Server certificate SAN (Subject Alternative Name).</para>
+        /// </summary>
         [NameInMap("extra_sans")]
         [Validation(Required=false)]
         public List<string> ExtraSans { get; set; }
@@ -637,17 +811,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, you cannot add existing nodes to the cluster. If you want to add existing nodes, you must first create a node pool and then call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</para>
-        /// <para>Specifies whether to mount a data disk to a node that is created based on an existing ECS instance. Valid values:</para>
+        /// <para><b>[Deprecated]</b> Adding existing nodes during cluster creation is not supported. To add existing nodes to a cluster, first create a node pool and then call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> API.</para>
+        /// <para>When using existing instances to create a cluster, whether to mount data disks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: stores the data of containers and images on a data disk. The existing data stored in the data disk is lost. Back up the existing data first.</description></item>
-        /// <item><description><c>false</c>: does not store the data of containers and images on a data disk.</description></item>
+        /// <item><description><para><c>true</c>: Store containers and images on the data disk. Existing data on the data disk will be lost. Back up your data.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Do not store containers and images on the data disk.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
-        /// <para>How data disks are mounted:</para>
+        /// <para>Data disk mounting rules:</para>
         /// <list type="bullet">
-        /// <item><description>If an ECS instance has data disks mounted and the file system of the last data disk is not initialized, the system automatically formats the data disk to ext4. Then, the system mounts the data disk to /var/lib/docker and /var/lib/kubelet.</description></item>
-        /// <item><description>If no data disk is mounted to the ECS instance, the system does not purchase a new data disk.</description></item>
+        /// <item><description><para>If the ECS instance has a mounted data disk and the file system of the last data disk is uninitialized, the system automatically formats it as ext4 to store /var/lib/docker and /var/lib/kubelet.</para>
+        /// </description></item>
+        /// <item><description><para>If the ECS instance has no mounted data disks, no new data disks are mounted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -661,8 +839,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>image_id</c> parameter in the <c>control_plane_config</c> section instead. When you configure a node pool, use the <c>image_id</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The custom image for nodes. By default, the image provided by ACK is used. You can select a custom image to replace the default image. For more information, see <a href="https://help.aliyun.com/document_detail/146647.html">Use a custom image to create an ACK cluster</a>.</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>image_id</c> parameter under <c>control_plane_config</c>. For node pool configuration, use the <c>image_id</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Custom node image. By default, the system image is used. When you select a custom image, it replaces the default system image. See <a href="https://help.aliyun.com/document_detail/146647.html">Custom images</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-bp16z7xko3vvv8gt****</para>
@@ -675,18 +853,27 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>image_type</c> parameter in the <c>control_plane_config</c> section instead. When you configure a node pool, use the <c>image_type</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>image_type</c> parameter under <c>control_plane_config</c>. For node pool configuration, use the <c>image_type</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Operating system distribution type. We recommend using this parameter to specify the node operating system. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CentOS</description></item>
-        /// <item><description>AliyunLinux</description></item>
-        /// <item><description>AliyunLinux Qboot</description></item>
-        /// <item><description>AliyunLinuxUEFI</description></item>
-        /// <item><description>AliyunLinux3</description></item>
-        /// <item><description>Windows</description></item>
-        /// <item><description>WindowsCore</description></item>
-        /// <item><description>AliyunLinux3Arm64</description></item>
-        /// <item><description>ContainerOS</description></item>
+        /// <item><description><para>CentOS</para>
+        /// </description></item>
+        /// <item><description><para>AliyunLinux</para>
+        /// </description></item>
+        /// <item><description><para>AliyunLinux Qboot</para>
+        /// </description></item>
+        /// <item><description><para>AliyunLinuxUEFI</para>
+        /// </description></item>
+        /// <item><description><para>AliyunLinux3</para>
+        /// </description></item>
+        /// <item><description><para>Windows</para>
+        /// </description></item>
+        /// <item><description><para>WindowsCore</para>
+        /// </description></item>
+        /// <item><description><para>AliyunLinux3Arm64</para>
+        /// </description></item>
+        /// <item><description><para>ContainerOS</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>CentOS</c>.</para>
         /// 
@@ -701,10 +888,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, you cannot add existing nodes to the cluster. If you want to add existing nodes, you must first create a node pool and then call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</para>
-        /// <para>The existing ECS instances that are specified as worker nodes for the cluster.</para>
+        /// <para><b>[Deprecated]</b> Adding existing nodes during cluster creation is not supported. To add existing nodes to a cluster, first create a node pool and then call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> API.</para>
+        /// <para>When using existing nodes to create a cluster, specify the ECS instance list. These instances are added as worker nodes to the cluster.</para>
         /// <remarks>
-        /// <para> This parameter is required if you create worker nodes on existing ECS instances.</para>
+        /// <para>This field is required when using existing instances to create a cluster.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("instances")]
@@ -713,24 +900,27 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> Instances { get; set; }
 
         /// <summary>
-        /// <para>The IP stack of the cluster.</para>
+        /// <para>Cluster IP stack.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Optional value: ipv4 (Single stack) or ipv6 (Dual Stack)
-        /// Default value: IPV4</para>
+        /// <para>可选值：
+        /// ipv4（单栈）
+        /// dual（双栈），默认值为ipv4。</para>
         /// </summary>
         [NameInMap("ip_stack")]
         [Validation(Required=false)]
         public string IpStack { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to create an advanced security group. This parameter takes effect only if <c>security_group_id</c> is left empty.</para>
+        /// <para>Automatically create an advanced security group. This takes effect when <c>security_group_id</c> is empty.</para>
         /// <remarks>
-        /// <para> To use a basic security group, make sure that the sum of the number of nodes in the cluster and the number of pods that use Terway does not exceed 2,000. Therefore, we recommend that you specify an advanced security group for a cluster that uses Terway.</para>
+        /// <para>With basic security groups, the total number of nodes and Terway pods in a cluster cannot exceed 2,000. We recommend using advanced security groups for Terway network clusters.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: creates an advanced security group.</description></item>
-        /// <item><description><c>false</c>: does not create an advanced security group.</description></item>
+        /// <item><description><para><c>true</c>: Create and use an advanced security group.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Use a basic security group.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>true</c>.</para>
         /// 
@@ -744,11 +934,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, you cannot add existing nodes to the cluster. If you want to add existing nodes, you must first create a node pool and then call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</para>
-        /// <para>Specifies whether to retain the names of existing ECS instances that are used in the cluster. Valid values:</para>
+        /// <para><b>[Deprecated]</b> Adding existing nodes during cluster creation is not supported. To add existing nodes to a cluster, first create a node pool and then call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> API.</para>
+        /// <para>When using existing instances to create a cluster, whether to keep the instance names.</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: retains the names.</description></item>
-        /// <item><description><c>false</c>: does not retain the names. The system assigns new names.</description></item>
+        /// <item><description><para><c>true</c>: Keep.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Replace with system-generated names.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>true</c>.</para>
         /// 
@@ -763,11 +955,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>key_pair</c> parameter in the <c>control_plane_config</c> section instead. When you configure a node pool, use the <c>key_pair</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The name of the key pair. You must configure this parameter or <c>login_password</c>.</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>key_pair</c> parameter under <c>control_plane_config</c>. For node pool configuration, use the <c>key_pair</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Key pair name. Choose either this parameter or <c>login_password</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>secrity-key</para>
+        /// <para>security-key</para>
         /// </summary>
         [NameInMap("key_pair")]
         [Validation(Required=false)]
@@ -775,20 +967,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string KeyPair { get; set; }
 
         /// <summary>
-        /// <para>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not specify this parameter, the latest Kubernetes version is used.</para>
-        /// <para>You can create ACK clusters of the latest three Kubernetes versions in the ACK console. If you want to create clusters that run earlier Kubernetes versions, use the ACK API. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Support for Kubernetes versions</a>.</para>
+        /// <para>Cluster version, aligned with the Kubernetes community baseline version. We recommend selecting the latest version. If not specified, the latest version is used by default.</para>
+        /// <para>You can create clusters using any of the three most recent versions. Use the <a href="https://help.aliyun.com/document_detail/2667899.html">DescribeKubernetesVersionMetadata</a> API to query supported cluster versions.</para>
+        /// <para>For more information about Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Overview of Kubernetes version releases</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.16.9-aliyun.1</para>
+        /// <para>1.32.1-aliyun.1</para>
         /// </summary>
         [NameInMap("kubernetes_version")]
         [Validation(Required=false)]
         public string KubernetesVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies the ID of the CLB instance for accessing the API server. If this parameter is specified, the system does not automatically create a CLB instance for the API server.</para>
+        /// <para>Specify the CLB instance ID for API Server access. If specified, no new API Server CLB is automatically created.</para>
         /// <remarks>
-        /// <para> Make sure that the CLB instance does not have other dependencies, such as listeners and backend servers. You cannot specify shared-resource or Internet-facing CLB instances.</para>
+        /// <para>Ensure the CLB instance has no dependencies (such as listeners or backend servers). Shared and public CLB instances are not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -801,15 +994,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] The pay-as-you-go billing method is used by Classic Load Balancer (CLB) instances. This parameter does not take effect.</para>
-        /// <para>The specification of the Server Load Balancer (SLB) instance. Valid values:</para>
+        /// <para><b>[Deprecated]</b> CLB is billed based on usage. This parameter has no effect.</para>
+        /// <para>Load Balancer specification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>slb.s1.small</description></item>
-        /// <item><description>slb.s2.small</description></item>
-        /// <item><description>slb.s2.medium</description></item>
-        /// <item><description>slb.s3.small</description></item>
-        /// <item><description>slb.s3.medium</description></item>
-        /// <item><description>slb.s3.large</description></item>
+        /// <item><description><para>slb.s1.small</para>
+        /// </description></item>
+        /// <item><description><para>slb.s2.small</para>
+        /// </description></item>
+        /// <item><description><para>slb.s2.medium</para>
+        /// </description></item>
+        /// <item><description><para>slb.s3.small</para>
+        /// </description></item>
+        /// <item><description><para>slb.s3.medium</para>
+        /// </description></item>
+        /// <item><description><para>slb.s3.large</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>slb.s2.small</c>.</para>
         /// 
@@ -824,7 +1023,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Enables Simple Log Service for the cluster. This parameter takes effect only for ACK Serverless clusters. Set the value to <c>SLS</c>.</para>
+        /// <para><b>[Deprecated]</b> Enables SLS for the cluster. Applies only to ACK Serverless clusters and must be set to <c>SLS</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SLS</para>
@@ -837,11 +1036,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>login_password</c> parameter in the <c>control_plane_config</c> section instead. When you configure a node pool, use the <c>login_password</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The password for SSH logon. You must set this parameter or <c>key_pair</c>. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>login_password</c> parameter under <c>control_plane_config</c>. For node pool configuration, use the <c>login_password</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>SSH login password. Choose either this parameter or <c>key_pair</c>. Password rules: 8–30 characters, containing at least three of the following: uppercase letters, lowercase letters, digits, and special characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Hello@1234</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("login_password")]
         [Validation(Required=false)]
@@ -849,7 +1048,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string LoginPassword { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the cluster maintenance window.</para>
+        /// <para>Cluster maintenance window.</para>
         /// </summary>
         [NameInMap("maintenance_window")]
         [Validation(Required=false)]
@@ -858,11 +1057,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>auto-renew</c> parameter in the <c>control_plane_config</c> section instead.</para>
-        /// <para>Specifies whether to enable auto-renewal for master nodes. This parameter takes effect only when <c>master_instance_charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>auto_renew</c> parameter under <c>control_plane_config</c>.</para>
+        /// <para>Whether to enable auto-renewal for master nodes. Valid only when <c>master_instance_charge_type</c> is <c>PrePaid</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: enables auto-renewal.</description></item>
-        /// <item><description><c>false</c>: disables auto-renewal.</description></item>
+        /// <item><description><para><c>true</c>: Enable auto-renewal.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disable auto-renewal.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>true</c>.</para>
         /// 
@@ -877,9 +1078,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>auto-renew_period</c> parameter in the <c>control_plane_config</c> section instead.</para>
-        /// <para>The auto-renewal duration. This parameter takes effect and is required only when the subscription billing method is selected for master nodes.</para>
-        /// <para>Valid values: 1, 2, 3, 6, and 12.</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>auto_renew_period</c> parameter under <c>control_plane_config</c>.</para>
+        /// <para>Auto-renewal period for master nodes in months. Required and valid only when subscription billing is selected.</para>
+        /// <para>Valid values: {1, 2, 3, 6, 12}.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -893,8 +1094,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>size</c> parameter in the <c>control_plane_config</c> section instead.</para>
-        /// <para>The number of master nodes. Valid values: <c>3</c> and <c>5</c>.</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>size</c> parameter under <c>control_plane_config</c>.</para>
+        /// <para>Number of master nodes. Valid values: <c>3</c> or <c>5</c>.</para>
         /// <para>Default value: <c>3</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -908,11 +1109,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>instance_charge_type</c> parameter in the <c>control_plane_config</c> section instead.</para>
-        /// <para>The billing method of master nodes. Valid values:</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>instance_charge_type</c> parameter under <c>control_plane_config</c>.</para>
+        /// <para>Master node billing type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PrePaid</c>: subscription.</description></item>
-        /// <item><description><c>PostPaid</c>: pay-as-you-go.</description></item>
+        /// <item><description><para><c>PrePaid</c>: Subscription.</para>
+        /// </description></item>
+        /// <item><description><para><c>PostPaid</c>: Pay-as-you-go.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>PostPaid</c>.</para>
         /// 
@@ -927,8 +1130,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>instance_types</c> parameter in the <c>control_plane_config</c> section instead.</para>
-        /// <para>The instance types of master nodes. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>instance_types</c> parameter under <c>control_plane_config</c>.</para>
+        /// <para>Master node instance types. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
         /// </summary>
         [NameInMap("master_instance_types")]
         [Validation(Required=false)]
@@ -938,9 +1141,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>unit</c> parameter in the <c>control_plane_config</c> section instead.</para>
-        /// <para>The subscription duration of master nodes. This parameter takes effect and is required only when <c>master_instance_charge_type</c> is set to <c>PrePaid</c>.</para>
-        /// <para>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>unit</c> parameter under <c>control_plane_config</c>.</para>
+        /// <para>Subscription duration for master nodes in months. Required and valid only when <c>master_instance_charge_type</c> is <c>PrePaid</c>.</para>
+        /// <para>Valid values: {1, 2, 3, 6, 12, 24, 36, 48, 60}.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -954,9 +1157,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>period_unit</c> parameter in the <c>control_plane_config</c> section instead.</para>
-        /// <para>The billing cycle of the master nodes in the cluster. This parameter is required if master_instance_charge_type is set to <c>PrePaid</c>.</para>
-        /// <para>Valid value: <c>Month</c>, which indicates that master nodes are billed only on a monthly basis.</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>period_unit</c> parameter under <c>control_plane_config</c>.</para>
+        /// <para>Master node billing cycle. Required when master_instance_charge_type is <c>PrePaid</c>.</para>
+        /// <para>Valid value: <c>Month</c>. Only monthly billing is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -969,14 +1172,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>system_disk_category</c> parameter in the <c>control_plane_config</c> section instead.</para>
-        /// <para>The system disk category of master nodes. Valid values:</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>system_disk_category</c> parameter under <c>control_plane_config</c>.</para>
+        /// <para>Master node system disk type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>cloud_efficiency</c>: ultra disk.</description></item>
-        /// <item><description><c>cloud_ssd</c>: standard SSD.</description></item>
-        /// <item><description><c>cloud_essd</c>: Enterprise SSD (ESSD).</description></item>
+        /// <item><description><para><c>cloud_efficiency</c>: Ultra disk.</para>
+        /// </description></item>
+        /// <item><description><para><c>cloud_ssd</c>: Standard SSD.</para>
+        /// </description></item>
+        /// <item><description><para><c>cloud_essd</c>: ESSD.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <c>cloud_ssd</c>. The default value may vary in different zones.</para>
+        /// <para>Default value: <c>cloud_ssd</c>. The default may vary by zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_ssd</para>
@@ -989,8 +1195,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>system_disk_performance_level</c> parameter in the <c>control_plane_config</c> section instead.</para>
-        /// <para>The performance level (PL) of the system disk that you want to use for master nodes. This parameter takes effect only for ESSDs. For more information about the relationship between disk PLs and disk sizes, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>system_disk_performance_level</c> parameter under <c>control_plane_config</c>.</para>
+        /// <para>Performance level for master node system disks. Applies only to ESSD disks. Disk performance levels depend on disk size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -1003,8 +1209,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>system_disk_disk</c> parameter in the <c>control_plane_config</c> section instead.</para>
-        /// <para>The system disk size of master nodes. Valid values: 40 to 500. Unit: GiB.</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>system_disk_size</c> parameter under <c>control_plane_config</c>.</para>
+        /// <para>Valid range: [40,500].</para>
         /// <para>Default value: <c>120</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -1018,8 +1224,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>system_disk_snapshot_policy_id</c> parameter in the <c>control_plane_config</c> section instead.</para>
-        /// <para>The ID of the automatic snapshot policy that is used by the system disk specified for master nodes.</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>system_disk_snapshot_policy_id</c> parameter under <c>control_plane_config</c>.</para>
+        /// <para>Automatic snapshot policy ID for master node system disks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-2zej1nogjvovnz4z****</para>
@@ -1032,9 +1238,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] Use the <c>vswitch_ids</c> parameter instead.</para>
-        /// <para>The IDs of the vSwitches that are specified for master nodes. You can specify up to three vSwitches. We recommend that you specify three vSwitches in different zones to ensure high availability.</para>
-        /// <para>The number of vSwitches must be the same as the value of the <c>master_count</c> parameter and also the same as the number of vSwitches specified in the <c>master_vswitch_ids</c> parameter.</para>
+        /// <para><b>[Deprecated]</b> Use the <c>vswitch_ids</c> parameter instead.</para>
+        /// <para>List of master node vSwitch IDs. The number of vSwitches must be in the range [1,3]. For high availability, we recommend selecting three vSwitches in different zones.</para>
+        /// <para>The number of specified instance types must match <c>master_count</c> and correspond one-to-one with elements in <c>master_vswitch_ids</c>.</para>
         /// </summary>
         [NameInMap("master_vswitch_ids")]
         [Validation(Required=false)]
@@ -1042,8 +1248,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> MasterVswitchIds { get; set; }
 
         /// <summary>
-        /// <para>The cluster name.</para>
-        /// <para>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</para>
+        /// <para>Custom cluster name. It can contain digits, letters, Chinese characters, or hyphens (-). The name must be 1 to 63 characters long and cannot start with a hyphen (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -1056,7 +1261,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[Deprecated] Use the <c>snat_entry</c> parameter instead.</para>
+        /// <para><b>[Deprecated]</b> Use the <c>snat_entry</c> parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -1067,7 +1272,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? NatGateway { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of IP addresses that can be assigned to each node. This number is determined by the subnet mask of the specified CIDR block. This parameter takes effect only if the cluster uses the Flannel plug-in.</para>
+        /// <para>Number of node IP addresses, determined by the specified CIDR mask. This applies only to Flannel network clusters.</para>
         /// <para>Default value: <c>26</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -1080,17 +1285,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>node_name_mode</c> parameter of the <c>kubernetes_config</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The custom node name.</para>
-        /// <para>A custom node name consists of a prefix, a node IP address, and a suffix.</para>
-        /// <list type="bullet">
-        /// <item><description>The prefix and suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-), and must start and end with a lowercase letter or digit.</description></item>
-        /// <item><description>The IP substring length specifies the number of digits to be truncated from the end of the node IP address. The IP substring length ranges from 5 to 12.</description></item>
-        /// </list>
-        /// <para>For example, if the node IP address is 192.168.0.55, the prefix is aliyun.com, the IP substring length is 5, and the suffix is test, the node name will aliyun.com00055test.</para>
+        /// <para><b>[Deprecated]</b> Use the <c>node_name_mode</c> parameter under <c>kubernetes_config</c> in <c>nodepool</c> instead.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>aliyun.com00055test</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("node_name_mode")]
         [Validation(Required=false)]
@@ -1100,7 +1298,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The node port range. Valid values: 30000 to 65535.</para>
+        /// <para>Node service port range: [30000,65535].</para>
         /// <para>Default value: <c>30000-32767</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -1112,7 +1310,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NodePortRange { get; set; }
 
         /// <summary>
-        /// <para>The list of node pools.</para>
+        /// <para>List of node pools.</para>
         /// </summary>
         [NameInMap("nodepools")]
         [Validation(Required=false)]
@@ -1121,8 +1319,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>desired_size</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The number of worker nodes. Valid values: 0 to 100.</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>desired_size</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Number of worker nodes. Range: [0,100].</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -1133,36 +1331,45 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? NumOfNodes { get; set; }
 
         /// <summary>
-        /// <para>The automatic O\&amp;M policy of the cluster.</para>
+        /// <para>Cluster automated operations policy.</para>
         /// </summary>
         [NameInMap("operation_policy")]
         [Validation(Required=false)]
         public CreateClusterRequestOperationPolicy OperationPolicy { get; set; }
         public class CreateClusterRequestOperationPolicy : TeaModel {
             /// <summary>
-            /// <para>The configurations of auto cluster upgrade.</para>
+            /// <para>Cluster automatic upgrade.</para>
             /// </summary>
             [NameInMap("cluster_auto_upgrade")]
             [Validation(Required=false)]
             public CreateClusterRequestOperationPolicyClusterAutoUpgrade ClusterAutoUpgrade { get; set; }
             public class CreateClusterRequestOperationPolicyClusterAutoUpgrade : TeaModel {
                 /// <summary>
-                /// <para>The automatic update frequency. Valid values:</para>
+                /// <para>Cluster automatic upgrade frequency. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>patch</description></item>
-                /// <item><description>stable</description></item>
-                /// <item><description>rapid</description></item>
+                /// <item><description><para>patch: Automatically upgrade to the latest patch version within the current minor version. New Kubernetes versions do not include breaking changes.</para>
+                /// </description></item>
+                /// <item><description><para>stable: Automatically upgrade to the latest patch version of the second-newest minor version. New Kubernetes versions may include API and feature changes but have undergone extensive stability validation.</para>
+                /// </description></item>
+                /// <item><description><para>rapid: Automatically upgrade to the latest patch version of the newest minor version to quickly access new Kubernetes community features.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>patch</para>
+                /// <para>stable</para>
                 /// </summary>
                 [NameInMap("channel")]
                 [Validation(Required=false)]
                 public string Channel { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to enable auto cluster update.</para>
+                /// <para>Whether to enable cluster automatic upgrade.</para>
+                /// <list type="bullet">
+                /// <item><description><para>true: Enable.</para>
+                /// </description></item>
+                /// <item><description><para>false: Disable.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -1178,11 +1385,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>image_type</c> parameter in the <c>control_plane_config</c> section instead. When you configure a node pool, use the <c>image_type</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The type of OS. Valid values:</para>
+        /// <para><b>[Deprecated]</b> For control plane node configuration, use the <c>image_type</c> parameter under <c>control_plane_config</c>. For node pool configuration, use the <c>image_type</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Operating system platform type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Windows</description></item>
-        /// <item><description>Linux</description></item>
+        /// <item><description><para>Windows</para>
+        /// </description></item>
+        /// <item><description><para>Linux</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>Linux</c>.</para>
         /// 
@@ -1197,14 +1406,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>]</para>
-        /// <para>The subscription duration. This parameter takes effect and is required only when you set charge_type to PrePaid.</para>
-        /// <para>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
+        /// <para><b>[Deprecated]</b></para>
+        /// <para>Subscription duration in months. Required and valid only when charge_type is PrePaid.</para>
+        /// <para>Valid values: {1, 2, 3, 6, 12, 24, 36, 48, 60}.</para>
         /// <para>Default value: 1.</para>
-        /// <para>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</para>
+        /// <para>This parameter changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on Changes to CreateCluster API Parameters</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>FY2023</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("period")]
         [Validation(Required=false)]
@@ -1214,10 +1423,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>]</para>
-        /// <para>The billing cycle. This parameter is required if charge_type is set to PrePaid.</para>
-        /// <para>Valid value: Month, which indicates that resources are billed only on a monthly basis.</para>
-        /// <para>This parameter was changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on changes to the parameter behavior of the CreateCluster operation</a>.</para>
+        /// <para><b>[Deprecated]</b></para>
+        /// <para>Billing cycle. Required when the billing type is PrePaid.</para>
+        /// <para>Valid value: Month. Only monthly billing is supported.</para>
+        /// <para>This parameter changed on October 15, 2024. For more information, see <a href="https://help.aliyun.com/document_detail/2849194.html">Announcement on Changes to CreateCluster API Parameters</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -1230,15 +1439,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>platform</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The OS distribution that is used. Valid values:</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>platform</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Operating system distribution. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CentOS</description></item>
-        /// <item><description>AliyunLinux</description></item>
-        /// <item><description>QbootAliyunLinux</description></item>
-        /// <item><description>Qboot</description></item>
-        /// <item><description>Windows</description></item>
-        /// <item><description>WindowsCore</description></item>
+        /// <item><description><para>CentOS</para>
+        /// </description></item>
+        /// <item><description><para>AliyunLinux</para>
+        /// </description></item>
+        /// <item><description><para>QbootAliyunLinux</para>
+        /// </description></item>
+        /// <item><description><para>Qboot</para>
+        /// </description></item>
+        /// <item><description><para>Windows</para>
+        /// </description></item>
+        /// <item><description><para>WindowsCore</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>CentOS</c>.</para>
         /// 
@@ -1253,9 +1468,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>If you select Terway as the network plug-in, you must allocate vSwitches to pods. For each vSwitch that allocates IP addresses to worker nodes, you must select a vSwitch in the same zone to allocate IP addresses to pods.</para>
+        /// <para><b>[Deprecated]</b> When using the Terway network plugin, specify virtual switches to assign IP addresses to pods. Each pod virtual switch corresponds to a worker node virtual switch, and both must be in the same zone.</para>
         /// <remarks>
-        /// <para> We recommend that you select pod vSwitches whose subnet masks do not exceed 19 bits in length. The maximum subnet mask length of a pod vSwitch is 25 bits. If you select a pod vSwitch whose subnet mask exceeds 25 bits in length, the IP addresses that can be allocated to pods may be insufficient.</para>
+        /// <para>We recommend that the pod virtual switch CIDR mask not exceed /19 and must not exceed /25. Otherwise, the number of assignable pod IP addresses becomes very limited, affecting normal cluster operation.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("pod_vswitch_ids")]
@@ -1264,12 +1479,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> PodVswitchIds { get; set; }
 
         /// <summary>
-        /// <para>If you set <c>cluster_type</c> to <c>ManagedKubernetes</c>, an ACK managed cluster is created. In this case, you can further specify the cluster edition. Valid values:</para>
+        /// <para>When you set <c>cluster_type</c> to <c>ManagedKubernetes</c> (ACK managed cluster), you can further specify the cluster subtype.</para>
         /// <list type="bullet">
-        /// <item><description><c>Default</c>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</description></item>
-        /// <item><description><c>Edge</c>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</description></item>
-        /// <item><description><c>Serverless</c>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</description></item>
-        /// <item><description><c>Lingjun</c>: ACK Lingjun Pro cluster.</description></item>
+        /// <item><description><para><c>Default</c>: ACK managed cluster, including ACK clusters (Pro Edition, Basic Edition).</para>
+        /// </description></item>
+        /// <item><description><para><c>Edge</c>: ACK Edge cluster, including ACK Edge clusters (Pro Edition, Basic Edition).</para>
+        /// </description></item>
+        /// <item><description><para><c>Serverless</c>: ACK serverless cluster, including ACK serverless clusters (Pro Edition, Basic Edition).</para>
+        /// </description></item>
+        /// <item><description><para><c>Lingjun</c>: ACK LINGJUN cluster, available only in Pro Edition.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1280,10 +1499,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Profile { get; set; }
 
         /// <summary>
-        /// <para>The kube-proxy mode. Valid values:</para>
+        /// <para>kube-proxy proxy mode</para>
         /// <list type="bullet">
-        /// <item><description><c>iptables</c>: a mature and stable mode that uses iptables rules to conduct service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</description></item>
-        /// <item><description><c>ipvs</c>: a mode that provides high performance and uses IP Virtual Server (IPVS) to conduct service discovery and load balancing. This mode is suitable for clusters that run a large number of Services. We recommend that you use this mode in scenarios that require high-performance load balancing.</description></item>
+        /// <item><description><para><c>iptables</c>: A mature and stable kube-proxy mode. Kubernetes Service discovery and load balancing use iptables rules. Performance is moderate and scales poorly with large numbers of Services. Suitable for clusters with few Services.</para>
+        /// </description></item>
+        /// <item><description><para><c>ipvs</c>: A high-performance kube-proxy mode. Kubernetes Service discovery and load balancing use the Linux IPVS module. Suitable for clusters with many Services requiring high-performance load balancing.</para>
+        /// </description></item>
+        /// <item><description><para><c>nftables</c>: A next-generation kube-proxy mode based on Linux nftables for Service discovery and load balancing. It is the modern replacement for iptables. Compared to iptables, nftables offers better network performance, faster rule updates, and superior scalability for large numbers of Services.<br>
+        /// Supported only for clusters running Kubernetes version 1.35 or later. The Kubernetes community deprecated IPVS starting in version 1.35. We recommend using nftables for new clusters to ensure long-term community support.<br></para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>ipvs</c>.</para>
         /// 
@@ -1297,8 +1521,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>rds_instances</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The ApsaraDB RDS instances. The pod CIDR block and node CIDR block are added to the whitelists of the ApsaraDB RDS instances. We recommend that you add the pod CIDR block and node CIDR block to the whitelists of the ApsaraDB RDS instances in the ApsaraDB RDS console. If the RDS instances are not in the Running state, new nodes cannot be added to the cluster.</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>rds_instances</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>List of RDS instances to add to the whitelist. We recommend adding the pod and node CIDR blocks of your container cluster to the RDS whitelist. Setting RDS instances might fail if they are not in the Running state.</para>
         /// </summary>
         [NameInMap("rds_instances")]
         [Validation(Required=false)]
@@ -1306,7 +1530,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> RdsInstances { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which the cluster is deployed. For more information about the regions supported by ACK, see <a href="https://help.aliyun.com/document_detail/216938.html">Regions supported by ACK</a>.</para>
+        /// <para>The region ID where the cluster is deployed. For more information, see <a href="https://help.aliyun.com/document_detail/216938.html">Regions supported by Container Service for Kubernetes</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -1317,7 +1541,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the cluster belongs. You can use resource groups to isolate clusters.</para>
+        /// <para>The resource group ID to which the cluster belongs, used to isolate different resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm3mkrure****</para>
@@ -1326,10 +1550,25 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>RRSA feature configuration.</para>
+        /// </summary>
         [NameInMap("rrsa_config")]
         [Validation(Required=false)]
         public CreateClusterRequestRrsaConfig RrsaConfig { get; set; }
         public class CreateClusterRequestRrsaConfig : TeaModel {
+            /// <summary>
+            /// <para>Whether to enable RRSA.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Enable.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disable.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
@@ -1339,8 +1578,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.</para>
-        /// <para>For more information about how to select a proper container runtime, see <a href="https://help.aliyun.com/document_detail/160313.html">Comparison among Docker, containerd, and Sandboxed-Container</a>.</para>
+        /// <para>Container runtime for the cluster. Supports containerd, sandboxed containers, and Docker.</para>
+        /// <remarks>
+        /// <para>Kubernetes 1.24 no longer supports Docker as a built-in container runtime.</para>
+        /// </remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/160313.html">Comparison of Docker, containerd, and sandboxed container runtimes</a>.</para>
         /// </summary>
         [NameInMap("runtime")]
         [Validation(Required=false)]
@@ -1348,7 +1590,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public Runtime Runtime { get; set; }
 
         /// <summary>
-        /// <para>The ID of an existing security group. You must specify this parameter or <c>is_enterprise_security_group</c>. Cluster nodes are automatically added to the security group.</para>
+        /// <para>Specify an existing security group ID when creating a cluster. Choose either this parameter or <c>is_enterprise_security_group</c>. Cluster nodes are automatically added to this security group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp1bdue0qc1g7k****</para>
@@ -1360,11 +1602,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>security_hardening_os</c> parameter in the <c>control_plane_config</c> section instead. When you configure a node pool, use the <c>security_hardening_os</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>Specifies whether to enable Alibaba Cloud Linux Security Hardening. Valid values:</para>
+        /// <para><b>[Deprecated]</b> For control plane configuration, use the <c>security_hardening_os</c> parameter under <c>control_plane_config</c>. For node pool configuration, use the <c>security_hardening_os</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Alibaba Cloud OS security hardening. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: enables Alibaba Cloud Linux Security Hardening.</description></item>
-        /// <item><description><c>false</c>: disables Alibaba Cloud Linux Security Hardening.</description></item>
+        /// <item><description><para><c>true</c>: Enable Alibaba Cloud OS security hardening.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disable Alibaba Cloud OS security hardening.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -1377,8 +1621,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? SecurityHardeningOs { get; set; }
 
         /// <summary>
-        /// <para>Service accounts provide identities for pods when pods communicate with the <c>API server</c> of the cluster. <c>service-account-issuer</c> specifies the issuer of the <c>serviceaccount token</c>, which is specified by using the <c>iss</c> field in the <c>token payload</c>.</para>
-        /// <para>For more information about <c>ServiceAccount</c>, see <a href="https://help.aliyun.com/document_detail/160384.html">Enable service account token volume projection</a>.</para>
+        /// <para>ServiceAccount is the access credential used by pods to communicate with the cluster API Server. The <c>service-account-issuer</c> is the issuer identity in the <c>serviceaccount token</c>, represented by the <c>iss</c> field in the <c>token payload</c>.</para>
+        /// <para>For more information about <c>ServiceAccount</c>, see <a href="https://help.aliyun.com/document_detail/160384.html">Deploy service account token volume projection</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kubernetes.default.svc</para>
@@ -1388,8 +1632,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ServiceAccountIssuer { get; set; }
 
         /// <summary>
-        /// <para>The Service CIDR block. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The Service CIDR block cannot overlap with the VPC CIDR block (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the Service CIDR block after the cluster is created.</para>
-        /// <para>By default, the Service CIDR block is set to 172.19.0.0/20.</para>
+        /// <para>Service network CIDR block. Valid ranges: 10.0.0.0/16-24, 172.16.0.0/16-24 to 172.31.0.0/16-24, 192.168.0.0/16-24.
+        /// It cannot overlap with the VPC CIDR block 10.1.0.0/21 or existing Kubernetes cluster CIDR blocks in the VPC. This cannot be modified after cluster creation.</para>
+        /// <para>Default value: 172.19.0.0/20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>172.21.0.0/20</para>
@@ -1401,12 +1646,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The methods for implementing service discovery in <c>ACK Serverless</c> clusters.</para>
+        /// <para><b>[Deprecated]</b> Service discovery type for the cluster, used to specify the service discovery method in <c>ACK Serverless</c> clusters.</para>
         /// <list type="bullet">
-        /// <item><description><c>CoreDNS</c>: a standard service discovery plug-in that is provided by open source Kubernetes. To use DNS resolution, you must provision pods. By default, two elastic container instances are used. The specification of each instance is 0.25 vCores and 512 MiB of memory.</description></item>
-        /// <item><description><c>PrivateZone</c>: a DNS resolution service provided by Alibaba Cloud. You must activate Alibaba Cloud DNS PrivateZone before you can use it for service discovery.</description></item>
+        /// <item><description><para><c>CoreDNS</c>: Uses the standard Kubernetes service discovery component CoreDNS. Requires deploying a set of containers for DNS resolution. Defaults to two ECI instances with 0.25 vCPU and 512 MiB memory each.</para>
+        /// </description></item>
+        /// <item><description><para><c>PrivateZone</c>: Uses Alibaba Cloud PrivateZone for service discovery. Requires enabling the PrivateZone service.</para>
+        /// </description></item>
         /// </list>
-        /// <para>By default, this parameter is not specified.</para>
+        /// <para>Default value: Disabled.</para>
         /// </summary>
         [NameInMap("service_discovery_types")]
         [Validation(Required=false)]
@@ -1414,18 +1661,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<string> ServiceDiscoveryTypes { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to configure SNAT rules for the VPC in which your cluster is deployed. Valid values:</para>
+        /// <para>Configure SNAT for the VPC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: automatically creates a NAT gateway and configures SNAT rules. Set the value to <c>true</c> if nodes and applications in the cluster need to access the Internet.</description></item>
-        /// <item><description><c>false</c>: does not create a NAT gateway or configure SNAT rules. In this case, nodes and applications in the cluster cannot access the Internet.</description></item>
+        /// <item><description><para><c>true</c>: Automatically create a NAT Gateway and configure SNAT rules. Set this to <c>true</c> if nodes or applications in the cluster need public network access.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Do not create a NAT Gateway or SNAT rules. Nodes and applications in the cluster cannot access the public network.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If this feature is disabled when you create the cluster, you can also manually enable this feature after you create the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/178480.html">Enable an existing ACK cluster to access the Internet</a>.</para>
+        /// <para>If you do not enable this during cluster creation but later need public network access, you can <a href="https://help.aliyun.com/document_detail/178480.html">enable it manually</a>.</para>
         /// </remarks>
-        /// <para>Default value: <c>true</c>.</para>
+        /// <para>Default value: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("snat_entry")]
         [Validation(Required=false)]
@@ -1434,12 +1683,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure the control plane, use the <c>soc_enabled</c> parameter in the <c>control_plane_config</c> section instead. When you configure a node pool, use the <c>soc_enabled</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>Specifies whether to enable Multi-Level Protection Scheme (MLPS) security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">ACK security hardening based on MLPS</a>.</para>
+        /// <para><b>[Deprecated]</b> For control plane node configuration, use the <c>soc_enabled</c> parameter under <c>control_plane_config</c>. For node pool configuration, use the <c>soc_enabled</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>MLPS 2.0 security hardening. For more information, see <a href="https://help.aliyun.com/document_detail/196148.html">Using MLPS 2.0 security hardening in ACK</a>.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: enables MLPS security hardening.</description></item>
-        /// <item><description><c>false</c>: disables MLPS security hardening.</description></item>
+        /// <item><description><para><c>true</c>: Enable MLPS 2.0 security hardening.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disable MLPS 2.0 security hardening.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -1452,10 +1703,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? SocEnabled { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable SSH logon. If this parameter is set to true, you can log on to master nodes in an ACK dedicated cluster over the Internet. This parameter does not take effect for ACK managed clusters. Valid values:</para>
+        /// <para>Whether to enable public SSH logon. Used to log on to master nodes of ACK dedicated clusters. This parameter does not take effect for managed clusters.</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: enables SSH logon.</description></item>
-        /// <item><description><c>false</c>: disables SSH logon.</description></item>
+        /// <item><description><para><c>true</c>: Enable.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disable.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>false</c>.</para>
         /// 
@@ -1467,10 +1720,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? SshFlags { get; set; }
 
         /// <summary>
-        /// <para>The labels that you want to add to nodes. You must add labels based on the following rules:</para>
+        /// <para>Node labels. Label rules:</para>
         /// <list type="bullet">
-        /// <item><description>A label is a case-sensitive key-value pair. You can add up to 20 labels.</description></item>
-        /// <item><description>When you add a label, you must specify a unique key, but you can leave the value empty. A key cannot exceed 64 characters in length, and a value cannot exceed 128 characters in length. Keys and values cannot start with aliyun, acs:, https://, or http://. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</description></item>
+        /// <item><description><para>Labels consist of case-sensitive key-value pairs. You can add up to 20 tags.</para>
+        /// </description></item>
+        /// <item><description><para>Tag keys must be unique and up to 64 characters long. Tag values can be empty and up to 128 characters long. Neither tag keys nor tag values can start with &quot;aliyun&quot;, &quot;acs:&quot;, &quot;https\://&quot;, or &quot;http\://&quot;. For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("tags")]
@@ -1480,8 +1735,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>taints</c> parameter of the <c>kubernetes_config</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The taints that you want to add to nodes. Taints can be used together with tolerations to avoid scheduling pods to specific nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>taints</c> parameter under <c>kubernetes_config</c> in <c>nodepool</c>.</para>
+        /// <para>Node taint information. Taints and tolerations work together to prevent pods from being scheduled onto unsuitable nodes. For more information, see <a href="https://kubernetes.io/zh/docs/concepts/scheduling-eviction/taint-and-toleration/">taint-and-toleration</a>.</para>
         /// </summary>
         [NameInMap("taints")]
         [Validation(Required=false)]
@@ -1491,8 +1746,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] By default, the system does not perform a rollback when the cluster fails to be created. You must manually delete the cluster that fails to be created.</para>
-        /// <para>Specifies the timeout period of cluster creation. Unit: minutes.</para>
+        /// <para><b>[Deprecated]</b> By default, clusters are not rolled back on creation failure. You must manually clean up failed clusters.</para>
+        /// <para>Cluster creation timeout in minutes.</para>
         /// <para>Default value: <c>60</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -1504,7 +1759,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? TimeoutMins { get; set; }
 
         /// <summary>
-        /// <para>The time zone of the cluster.</para>
+        /// <para>Time zone used by the cluster. See <a href="https://help.aliyun.com/document_detail/354879.html">Supported time zones</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Asia/Shanghai</para>
@@ -1514,7 +1769,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Timezone { get; set; }
 
         /// <summary>
-        /// <para>The custom Certificate Authority (CA) certificate used by the cluster.</para>
+        /// <para>Custom cluster CA.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----****</para>
@@ -1526,7 +1781,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The user data of nodes.</para>
+        /// <para><b>[Deprecated]</b> Custom node data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFD****</para>
@@ -1537,7 +1792,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string UserData { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) in which you want to deploy the cluster. This parameter is required.</para>
+        /// <para>The VPC used by the cluster. You must provide this when creating a cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zeik9h3ahvv2zz95****</para>
@@ -1547,7 +1802,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Vpcid { get; set; }
 
         /// <summary>
-        /// <para>The vSwitches for nodes in the cluster. This parameter is required if you create an ACK managed cluster that does not contain nodes.</para>
+        /// <para>Virtual switches for cluster nodes. This field is required when creating a zero-node managed cluster.</para>
         /// </summary>
         [NameInMap("vswitch_ids")]
         [Validation(Required=false)]
@@ -1556,11 +1811,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>auto_renew</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>Specifies whether to enable auto-renewal for worker nodes. This parameter takes effect and is required only when <c>worker_instance_charge_type</c> is set to <c>PrePaid</c>. Valid values:</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>auto_renew</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Whether to enable auto-renewal for worker nodes. Valid only when <c>worker_instance_charge_type</c> is <c>PrePaid</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: enables auto-renewal.</description></item>
-        /// <item><description><c>false</c>: disables auto-renewal.</description></item>
+        /// <item><description><para><c>true</c>: Enable auto-renewal.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disable auto-renewal.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>true</c>.</para>
         /// 
@@ -1575,9 +1832,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>auto_renew_period</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The auto-renewal duration of worker nodes. This parameter takes effect and is required only if the subscription billing method is selected for worker nodes.</para>
-        /// <para>Valid values: 1, 2, 3, 6, and 12.</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>auto_renew_period</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Auto-renewal period for worker nodes in months. Required and valid only when subscription billing is selected.</para>
+        /// <para>Valid values: {1, 2, 3, 6, 12}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -1590,8 +1847,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>data_disks</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The configurations of the data disks that you want to mount to worker nodes. The configurations include the disk category and disk size.</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>data_disks</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Configuration for worker node data disks, including type and size.</para>
         /// </summary>
         [NameInMap("worker_data_disks")]
         [Validation(Required=false)]
@@ -1599,7 +1856,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public List<CreateClusterRequestWorkerDataDisks> WorkerDataDisks { get; set; }
         public class CreateClusterRequestWorkerDataDisks : TeaModel {
             /// <summary>
-            /// <para>The data disk category.</para>
+            /// <para>Data disk type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -1610,10 +1867,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to encrypt the data disk. Valid values:</para>
+            /// <para>Whether to encrypt the data disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: encrypts the data disk.</description></item>
-            /// <item><description><c>false</c>: does not encrypt the data disk.</description></item>
+            /// <item><description><para><c>true</c>: Encrypt the data disk.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Do not encrypt the data disk.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: <c>false</c>.</para>
             /// 
@@ -1625,7 +1884,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Encrypted { get; set; }
 
             /// <summary>
-            /// <para>The PL of the data disk. This parameter takes effect only for ESSDs. You can specify a higher PL if you increase the size of a data disk. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</para>
+            /// <para>Data disk performance level. Applies only to <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL1</para>
@@ -1635,7 +1894,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The data disk size. Valid values: 40 to 32767. Unit: GiB.</para>
+            /// <para>Data disk size in GiB. Valid range: 40–32767.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -1650,13 +1909,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>instance_charge_type</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The billing method of worker nodes. Valid values:</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>instance_charge_type</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Worker node billing type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>PrePaid</c>: subscription.</description></item>
-        /// <item><description><c>PostPaid</c>: pay-as-you-go.</description></item>
+        /// <item><description><para><c>PrePaid</c>: Subscription.</para>
+        /// </description></item>
+        /// <item><description><para><c>PostPaid</c>: Pay-as-you-go.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: PostPaid.</para>
+        /// <para>Default value: Pay-as-you-go.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -1669,8 +1930,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>instance_types</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The instance configurations of worker nodes.</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>instance_types</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Worker node instance configuration.</para>
         /// </summary>
         [NameInMap("worker_instance_types")]
         [Validation(Required=false)]
@@ -1680,9 +1941,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>period</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The subscription duration of worker nodes. This parameter takes effect and is required only when <c>worker_instance_charge_type</c> is set to <c>PrePaid</c>.</para>
-        /// <para>Valid values: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>period</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Subscription duration for worker nodes in months. Required and valid only when <c>worker_instance_charge_type</c> is <c>PrePaid</c>.</para>
+        /// <para>Valid values: {1, 2, 3, 6, 12, 24, 36, 48, 60}.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -1696,9 +1957,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>period_unit</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The billing cycle of worker nodes. This parameter is required if worker_instance_charge_type is set to <c>PrePaid</c>.</para>
-        /// <para>Valid value: <c>Month</c>, which indicates that worker nodes are billed only on a monthly basis.</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>period_unit</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Worker node billing cycle. Required when worker_instance_charge_type is <c>PrePaid</c>.</para>
+        /// <para>Valid value: <c>Month</c>. Only monthly billing is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -1711,12 +1972,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>system_disk_category</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The system disk category of worker nodes. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Elastic Block Storage devices</a>.</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>system_disk_category</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Worker node system disk type. For more information, see <a href="https://help.aliyun.com/document_detail/63136.html">Overview of Elastic Block Storage</a>.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>cloud_efficiency</c>: ultra disk.</description></item>
-        /// <item><description><c>cloud_ssd</c>: standard SSD.</description></item>
+        /// <item><description><para><c>cloud_efficiency</c>: Ultra disk.</para>
+        /// </description></item>
+        /// <item><description><para><c>cloud_ssd</c>: Standard SSD.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>cloud_ssd</c>.</para>
         /// 
@@ -1731,14 +1994,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>system_disk_performance_level</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>If the system disk is an ESSD, you can specify the PL of the ESSD. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>system_disk_performance_level</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>When the system disk is an ESSD, you can set the performance level (PL). For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PL0</description></item>
-        /// <item><description>PL1</description></item>
-        /// <item><description>PL2</description></item>
-        /// <item><description>PL3</description></item>
+        /// <item><description><para>PL0</para>
+        /// </description></item>
+        /// <item><description><para>PL1</para>
+        /// </description></item>
+        /// <item><description><para>PL2</para>
+        /// </description></item>
+        /// <item><description><para>PL3</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1752,10 +2019,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>system_disk_size</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The system disk size of worker nodes. Unit: GiB.</para>
-        /// <para>Valid values: 40 to 500.</para>
-        /// <para>The value of this parameter must be at least 40 and greater than or equal to the image size.</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>system_disk_size</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Worker node system disk size in GiB.</para>
+        /// <para>Valid range: [40,500].</para>
+        /// <para>This value must be greater than or equal to max{40, ImageSize}.</para>
         /// <para>Default value: <c>120</c>.</para>
         /// 
         /// <b>Example:</b>
@@ -1769,8 +2036,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>system_disk_snapshot_policy_id</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The ID of the automatic snapshot policy that is used by the system disk specified for worker nodes.</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>system_disk_snapshot_policy_id</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>Automatic snapshot policy ID for worker node system disks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-2zej1nogjvovnz4z****</para>
@@ -1783,9 +2050,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[<b>Deprecated</b>] When you configure a node pool, use the <c>vswitch_ids</c> parameter of the <c>scaling_group</c> field in the <c>nodepool</c> section instead.</para>
-        /// <para>The vSwitches for worker nodes. Each worker node is allocated a vSwitch.</para>
-        /// <para><c>worker_vswitch_ids</c> is optional, but <c>vswitch_ids</c> is required if you create an ACK managed cluster that does not contain nodes.</para>
+        /// <para><b>[Deprecated]</b> For node pool configuration, use the <c>vswitch_ids</c> parameter under <c>scaling_group</c> in <c>nodepool</c>.</para>
+        /// <para>List of vSwitches used by cluster nodes. One node corresponds to one value.</para>
+        /// <para>When creating a zero-node managed cluster, <c>worker_vswitch_ids</c> is optional, but you must provide <c>vswitch_ids</c>.</para>
         /// </summary>
         [NameInMap("worker_vswitch_ids")]
         [Validation(Required=false)]
@@ -1795,9 +2062,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>[Deprecated] Use the <c>zone_ids</c> parameter instead.</para>
-        /// <para>The ID of the zone to which the cluster belongs. This parameter is specific to ACK Serverless clusters.</para>
-        /// <para>When you create an ACK managed cluster, you must set the <c>zone_id</c> parameter if <c>vpc_id</c> and <c>vswitch_ids</c> are not specified. This way, the system automatically creates a VPC in the specified zone. This parameter is invalid if you specify the <c>vpc_id</c> and <c>vswitch_ids</c> parameters.</para>
+        /// <para><b>[Deprecated]</b> Use the <c>zone_ids</c> parameter instead.</para>
+        /// <para>The zone ID in the cluster region. This parameter applies only to ACK managed clusters.</para>
+        /// <para>When creating an ACK managed cluster, if you do not specify <c>vpc_id</c> and <c>vswitch_ids</c>, you must specify <c>zone_id</c> to automatically create VPC network resources in this zone. This parameter is ignored if you specify <c>vpc_id</c> and <c>vswitch_ids</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beiji****</para>
@@ -1808,8 +2075,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the zone in which the cluster is deployed. This parameter is specific to ACK managed clusters.</para>
-        /// <para>When you create an ACK managed cluster, you must set the <c>zone_id</c> parameter if <c>vpc_id</c> and <c>vswitch_ids</c> are not specified. This way, the system automatically creates a VPC in the specified zone. This parameter is invalid if you specify the <c>vpc_id</c> and <c>vswitch_ids</c> parameters.</para>
+        /// <para>A list of zone IDs in the cluster region. This parameter applies only to ACK managed clusters.</para>
         /// </summary>
         [NameInMap("zone_ids")]
         [Validation(Required=false)]

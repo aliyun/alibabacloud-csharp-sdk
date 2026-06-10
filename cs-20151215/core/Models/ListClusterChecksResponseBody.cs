@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The time when the cluster check task was created.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2023-10-16T08:31:20.292030178Z</para>
+            /// <para>2025-04-11T02:56:02.565982623Z</para>
             /// </summary>
             [NameInMap("created_at")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The time when the cluster check task was completed.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2023-10-16T08:35:20.292030178Z</para>
+            /// <para>2025-04-11T02:56:18.881054031Z</para>
             /// </summary>
             [NameInMap("finished_at")]
             [Validation(Required=false)]

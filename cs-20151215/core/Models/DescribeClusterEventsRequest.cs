@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -28,7 +28,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 50. Default value: 50.</para>
+        /// <para>The number of entries to return per page.</para>
+        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -38,10 +40,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the query task.</para>
+        /// <para>The task ID. If specified, only events associated with this task are returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>T-xascadasd*****</para>
+        /// <para>T-6823f946ffadbb0106****</para>
         /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]

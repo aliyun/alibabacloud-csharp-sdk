@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The kubeconfig file of the cluster.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>apiVersion: v1****</para>
+        /// <para>apiVersion: v1\nclusters:\n- cluster:\n    server: <a href="https://114.55.xx.xx:6443%5C%5Cn">https://114.55.xx.xx:6443\\n</a>    certificate-authority-data: LS0tLS****</para>
         /// </summary>
         [NameInMap("config")]
         [Validation(Required=false)]

@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The start time of the cluster maintenance window. The value follows a standard time format in Golang. Example: 15:04:05Z.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>03:00:00Z</para>
+        /// <para>2020-10-15T12:31:00.000+08:00</para>
         /// </summary>
         [NameInMap("maintenance_time")]
         [Validation(Required=false)]

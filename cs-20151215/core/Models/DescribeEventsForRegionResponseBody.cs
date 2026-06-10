@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeEventsForRegionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The events.</para>
+        /// <para>A list of events.</para>
         /// </summary>
         [NameInMap("events")]
         [Validation(Required=false)]
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cluster-id</para>
+            /// <para>c82e6987e2961451182edacd74faf****</para>
             /// </summary>
             [NameInMap("cluster_id")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The description of the event.</para>
+            /// <para>The event data.</para>
             /// </summary>
             [NameInMap("data")]
             [Validation(Required=false)]
             public DescribeEventsForRegionResponseBodyEventsData Data { get; set; }
             public class DescribeEventsForRegionResponseBodyEventsData : TeaModel {
                 /// <summary>
-                /// <para>The severity level of the event.</para>
+                /// <para>The event level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>info</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>The details of the event.</para>
+                /// <para>The event message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Start to upgrade NodePool nodePool/nodePool-A</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The event status.</para>
+                /// <para>The reason for the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Started</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The event ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>A234-1234-1234</para>
+            /// <para>e-9ad04f72-8ee7-46bf-a02c-e4a06b39****</para>
             /// </summary>
             [NameInMap("event_id")]
             [Validation(Required=false)]
@@ -77,26 +77,29 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>The event source.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>task</para>
             /// </summary>
             [NameInMap("source")]
             [Validation(Required=false)]
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The object associated with the event.</para>
+            /// <para>The event subject.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>nodePool-id</para>
+            /// <para>npdd89dc2b76c04f14b06774883b******</para>
             /// </summary>
             [NameInMap("subject")]
             [Validation(Required=false)]
             public string Subject { get; set; }
 
             /// <summary>
-            /// <para>The time when the event was generated.</para>
+            /// <para>The time when the event occurred.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-12-01T17:31:00Z</para>
+            /// <para>2025-05-14T10:00:56+08:00</para>
             /// </summary>
             [NameInMap("time")]
             [Validation(Required=false)]
@@ -114,19 +117,22 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is empty, all results have been returned.</para>
+        /// </summary>
         [NameInMap("next_token")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The pagination details.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("page_info")]
         [Validation(Required=false)]
         public DescribeEventsForRegionResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeEventsForRegionResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of pages.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -136,7 +142,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of records on each page.</para>
+            /// <para>The number of entries returned on each page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -146,7 +152,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

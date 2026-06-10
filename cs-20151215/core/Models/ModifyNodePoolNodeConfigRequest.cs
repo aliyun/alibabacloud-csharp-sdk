@@ -23,6 +23,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public KubeletConfig KubeletConfig { get; set; }
 
+        /// <summary>
+        /// <para>List of nodes to upgrade.</para>
+        /// </summary>
         [NameInMap("node_names")]
         [Validation(Required=false)]
         public List<string> NodeNames { get; set; }
@@ -34,6 +37,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public ModifyNodePoolNodeConfigRequestOsConfig OsConfig { get; set; }
         public class ModifyNodePoolNodeConfigRequestOsConfig : TeaModel {
+            /// <summary>
+            /// <para>Hugepage configuration.</para>
+            /// </summary>
             [NameInMap("hugepage")]
             [Validation(Required=false)]
             public Hugepage Hugepage { get; set; }

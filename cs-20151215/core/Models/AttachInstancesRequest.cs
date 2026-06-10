@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>Default value: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("keep_instance_name")]
         [Validation(Required=false)]
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>secrity-key</para>
+        /// <para>security-key</para>
         /// </summary>
         [NameInMap("key_pair")]
         [Validation(Required=false)]

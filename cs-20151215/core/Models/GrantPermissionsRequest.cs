@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class GrantPermissionsRequest : TeaModel {
         /// <summary>
-        /// <para>The request body.</para>
+        /// <para>The request body parameters.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public List<GrantPermissionsRequestBody> Body { get; set; }
         public class GrantPermissionsRequestBody : TeaModel {
             /// <summary>
-            /// <para>The ID of the cluster on which you want to grant permissions to the RAM role or RAM role.</para>
+            /// <para>The ID of the target cluster.</para>
             /// <list type="bullet">
-            /// <item><description>Set this parameter to an empty string if <c>role_type</c> is set to <c>all-clusters</c>.</description></item>
+            /// <item><description>If you set the <c>role_type</c> parameter to <c>all-clusters</c>, set this parameter to an empty string.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Cluster { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to assign a custom role to the RAM user or RAM role. If you want to assign a custom role to the RAM user or RAM role, set <c>role_name</c> to the name of the custom role.</para>
+            /// <para>Set to true if <c>role_name</c> specifies a custom ClusterRole.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? IsCustom { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to use a RAM role to grant permissions.</para>
+            /// <para>Set to true if you are granting permissions to a RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? IsRamRole { get; set; }
 
             /// <summary>
-            /// <para>The namespace that you want to authorize the RAM user or RAM role to manage. This parameter is required only if you set role_type to namespace.</para>
+            /// <para>The name of the namespace. This parameter is required only when <c>role_type</c> is set to <c>namespace</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -61,19 +61,29 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The predefined role name. Valid values:</para>
+            /// <para>The name of the role to grant. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>admin</c>: administrator</description></item>
-            /// <item><description><c>admin-view</c>: read-only administrator</description></item>
-            /// <item><description><c>ops</c>: O\&amp;M engineer</description></item>
-            /// <item><description><c>dev</c>: developer</description></item>
-            /// <item><description><c>restricted</c>: restricted user</description></item>
-            /// <item><description>Custom role</description></item>
+            /// <item><description><para><c>admin</c>: The administrator role.</para>
+            /// </description></item>
+            /// <item><description><para><c>admin-view</c>: The read-only administrator role.</para>
+            /// </description></item>
+            /// <item><description><para><c>ops</c>: The operations role.</para>
+            /// </description></item>
+            /// <item><description><para><c>dev</c>: The developer role.</para>
+            /// </description></item>
+            /// <item><description><para><c>restricted</c>: The restricted role.</para>
+            /// </description></item>
+            /// <item><description><para>The name of a custom ClusterRole.</para>
+            /// </description></item>
             /// </list>
-            /// <para>Note:</para>
+            /// <remarks>
+            /// <para>Notice: </para>
+            /// </remarks>
             /// <list type="bullet">
-            /// <item><description>You cannot grant namespace-level permissions to the <c>admin</c>, <c>admin-view</c>, and <c>ops</c> roles.</description></item>
-            /// <item><description>You cannot grant all cluster-level permissions to the <c>admin-view</c> role.</description></item>
+            /// <item><description><para>The <c>admin</c>, <c>admin-view</c>, and <c>ops</c> roles cannot be granted at the namespace scope.</para>
+            /// </description></item>
+            /// <item><description><para>The <c>admin-view</c> role is not currently supported for the all-clusters scope.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -85,11 +95,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>The authorization type. Valid values:</para>
+            /// <para>The authorization scope. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>cluster</c>: authorizes the RAM user or RAM role to manage the specified clusters.</description></item>
-            /// <item><description><c>namespace</c>: authorizes the RAM user or RAM role to manage the specified namespaces.</description></item>
-            /// <item><description><c>all-clusters</c>: authorizes the RAM user or RAM role to manage all clusters.</description></item>
+            /// <item><description><para><c>cluster</c>: Grants permissions at the cluster scope.</para>
+            /// </description></item>
+            /// <item><description><para><c>namespace</c>: Grants permissions at the namespace scope.</para>
+            /// </description></item>
+            /// <item><description><para><c>all-clusters</c>: Grants permissions at the all-clusters scope.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

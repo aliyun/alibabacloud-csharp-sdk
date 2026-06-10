@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1.16.9-aliyun.1</para>
+        /// <para>1.32.1-aliyun.1</para>
         /// </summary>
         [NameInMap("KubernetesVersion")]
         [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>Otherwise, all OS images are returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>docker</para>
+        /// <para>containerd</para>
         /// </summary>
         [NameInMap("runtime")]
         [Validation(Required=false)]

@@ -9,10 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateClusterNodePoolRequest : TeaModel {
+        /// <summary>
+        /// <para>Intelligent managed configuration for the node pool.</para>
+        /// </summary>
         [NameInMap("auto_mode")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestAutoMode AutoMode { get; set; }
         public class CreateClusterNodePoolRequestAutoMode : TeaModel {
+            /// <summary>
+            /// <para>Whether to enable the intelligent managed mode.<br>Valid values:  </para>
+            /// <list type="bullet">
+            /// <item><description>true: Enables the intelligent managed mode. This can be enabled only when the cluster has the intelligent managed mode enabled.  </description></item>
+            /// <item><description>false: Disables the intelligent managed mode.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
@@ -35,7 +48,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para><b>Important</b> This parameter is deprecated. Use the internet_charge_type and internet_max_bandwidth_out parameters instead.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>5</para>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("eip_bandwidth")]
             [Validation(Required=false)]
@@ -56,7 +69,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para><b>Important</b> This parameter is deprecated. Use the internet_charge_type and internet_max_bandwidth_out parameters instead.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>PayByBandwidth</para>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("eip_internet_charge_type")]
             [Validation(Required=false)]
@@ -72,7 +85,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>Default value: <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("enable")]
             [Validation(Required=false)]
@@ -92,7 +105,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para><b>Important</b> This parameter is deprecated. Use the internet_charge_type and internet_max_bandwidth_out parameters instead.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("is_bond_eip")]
             [Validation(Required=false)]
@@ -148,21 +161,36 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The number of nodes in the node pool.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
         [Obsolete]
         public long? Count { get; set; }
 
+        /// <summary>
+        /// <para>Lingjun node pool configuration.</para>
+        /// </summary>
         [NameInMap("eflo_node_group")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestEfloNodeGroup EfloNodeGroup { get; set; }
         public class CreateClusterNodePoolRequestEfloNodeGroup : TeaModel {
+            /// <summary>
+            /// <para>The Lingjun cluster ID that must be associated when creating a Lingjun node pool.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>i1169130516633730****</para>
+            /// </summary>
             [NameInMap("cluster_id")]
             [Validation(Required=false)]
             public string ClusterId { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the Lingjun group in the Lingjun cluster to associate when creating a Lingjun node pool.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ng-ec3c96ff0aa****</para>
+            /// </summary>
             [NameInMap("group_id")]
             [Validation(Required=false)]
             public string GroupId { get; set; }
@@ -199,7 +227,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The bandwidth of the enhanced edge node pool. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10</para>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("bandwidth")]
             [Validation(Required=false)]
@@ -210,7 +238,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The ID of the Cloud Connect Network (CCN) instance that is associated with the enhanced edge node pool.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ccn-qm5i0i0q9yi*******</para>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("ccn_id")]
             [Validation(Required=false)]
@@ -221,7 +249,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The region to which the CCN instance that is associated with the enhanced edge node pool belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-shanghai</para>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("ccn_region_id")]
             [Validation(Required=false)]
@@ -232,7 +260,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The ID of the Cloud Enterprise Network (CEN) instance that is associated with the enhanced edge node pool.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cen-ey9k9nfhz0f*******</para>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("cen_id")]
             [Validation(Required=false)]
@@ -243,7 +271,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The subscription duration of the enhanced edge node pool. The duration is measured in months.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("improved_period")]
             [Validation(Required=false)]
@@ -295,7 +323,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>Default value: <c>false</c></para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("cms_enabled")]
             [Validation(Required=false)]
@@ -332,7 +360,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>Set the parameter to a value in the customized,aliyun,ip,com format. The value consists of four parts that are separated by commas (,). customized and ip are fixed content. aliyun is the prefix and com is the suffix. Example: aliyun.192.168.xxx.xxx.com.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>customized,aliyun,ip,com</para>
+            /// <para>aliyun.com192.XX.YY.55test</para>
             /// </summary>
             [NameInMap("node_name_mode")]
             [Validation(Required=false)]
@@ -358,7 +386,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>Default value: containerd.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>docker</para>
+            /// <para>containerd</para>
             /// </summary>
             [NameInMap("runtime")]
             [Validation(Required=false)]
@@ -368,7 +396,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The version of the container runtime.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>19.03.5</para>
+            /// <para>1.6.38</para>
             /// </summary>
             [NameInMap("runtime_version")]
             [Validation(Required=false)]
@@ -410,6 +438,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestManagement Management { get; set; }
         public class CreateClusterNodePoolRequestManagement : TeaModel {
+            [NameInMap("auto_fault_diagnosis")]
+            [Validation(Required=false)]
+            public bool? AutoFaultDiagnosis { get; set; }
+
             /// <summary>
             /// <para>Specifies whether to enable auto node repair. This parameter takes effect only when <c>enable</c> is set to true.</para>
             /// <list type="bullet">
@@ -419,7 +451,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>If <c>enable</c> is set to true, the default value of this parameter is <c>true</c>. If <c>enable</c> is set to false, the default value of this parameter is <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>false</para>
+            /// <para>true</para>
             /// </summary>
             [NameInMap("auto_repair")]
             [Validation(Required=false)]
@@ -432,6 +464,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestManagementAutoRepairPolicy AutoRepairPolicy { get; set; }
             public class CreateClusterNodePoolRequestManagementAutoRepairPolicy : TeaModel {
+                /// <summary>
+                /// <para>Whether manual approval is required for edge zone repair.</para>
+                /// </summary>
                 [NameInMap("approval_required")]
                 [Validation(Required=false)]
                 public bool? ApprovalRequired { get; set; }
@@ -544,6 +579,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestManagementAutoVulFixPolicy AutoVulFixPolicy { get; set; }
             public class CreateClusterNodePoolRequestManagementAutoVulFixPolicy : TeaModel {
+                /// <summary>
+                /// <para>Packages to exclude during vulnerability remediation.</para>
+                /// <para>Default Value: <c>kernel</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>kernel</para>
+                /// </summary>
                 [NameInMap("exclude_packages")]
                 [Validation(Required=false)]
                 public string ExcludePackages { get; set; }
@@ -556,7 +598,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true</para>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("restart_node")]
                 [Validation(Required=false)]
@@ -617,7 +659,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <para><b>Caution</b> This parameter is deprecated. Use the preceding auto_upgrade parameter instead.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>false</para>
+                /// <para>null</para>
                 /// </summary>
                 [NameInMap("auto_upgrade")]
                 [Validation(Required=false)]
@@ -666,21 +708,30 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The maximum number of nodes that can be contained in the edge node pool.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("max_nodes")]
         [Validation(Required=false)]
         [Obsolete]
         public long? MaxNodes { get; set; }
 
+        /// <summary>
+        /// <para>List of edge zone widgets.</para>
+        /// </summary>
         [NameInMap("node_components")]
         [Validation(Required=false)]
         public List<CreateClusterNodePoolRequestNodeComponents> NodeComponents { get; set; }
         public class CreateClusterNodePoolRequestNodeComponents : TeaModel {
+            /// <summary>
+            /// <para>Configuration of the edge zone widget.</para>
+            /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestNodeComponentsConfig Config { get; set; }
             public class CreateClusterNodePoolRequestNodeComponentsConfig : TeaModel {
+                /// <summary>
+                /// <para>Custom Configuration of the edge zone widget.</para>
+                /// </summary>
                 [NameInMap("custom_config")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> CustomConfig { get; set; }
@@ -688,6 +739,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
+            /// <para>Name of the edge zone widget.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>kubelet</para>
             /// </summary>
@@ -696,6 +749,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Version of the edge zone widget.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.33.3-aliyun.1</para>
             /// </summary>
@@ -733,7 +788,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cluster-demo</para>
+            /// <para>nodepool-test</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -809,7 +864,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>This parameter is deprecated. Use security_hardening_os instead.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>false</para>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("cis_enabled")]
             [Validation(Required=false)]
@@ -857,6 +912,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public long? DesiredSize { get; set; }
 
+            /// <summary>
+            /// <para>Block device initialization configuration.</para>
+            /// </summary>
             [NameInMap("disk_init")]
             [Validation(Required=false)]
             public List<DiskInit> DiskInit { get; set; }
@@ -887,7 +945,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>AliyunLinux</para>
+            /// <para>AliyunLinux3</para>
             /// </summary>
             [NameInMap("image_type")]
             [Validation(Required=false)]
@@ -903,12 +961,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>PrePaid</para>
+            /// <para>PostPaid</para>
             /// </summary>
             [NameInMap("instance_charge_type")]
             [Validation(Required=false)]
             public string InstanceChargeType { get; set; }
 
+            /// <summary>
+            /// <para>Access configuration for ECS instance metadata.</para>
+            /// </summary>
             [NameInMap("instance_metadata_options")]
             [Validation(Required=false)]
             public InstanceMetadataOptions InstanceMetadataOptions { get; set; }
@@ -982,7 +1043,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The password for SSH logon. You must specify this parameter or the <c>key_pair</c> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Hello1234</para>
+            /// <hr>
             /// </summary>
             [NameInMap("login_password")]
             [Validation(Required=false)]
@@ -1071,7 +1132,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>Default value: <c>AliyunLinux</c>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AliyunLinux</para>
+            /// <para>null</para>
             /// </summary>
             [NameInMap("platform")]
             [Validation(Required=false)]
@@ -1104,7 +1165,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Open</para>
+                /// <para>Target</para>
                 /// </summary>
                 [NameInMap("match_criteria")]
                 [Validation(Required=false)]
@@ -1136,15 +1197,29 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public List<string> RdsInstances { get; set; }
 
+            /// <summary>
+            /// <para>The resource pool and resource pool policy used when creating instances. After you set this parameter, note the following:</para>
+            /// <para>This parameter takes effect only when pay-as-you-go instances are created.</para>
+            /// <para>This parameter cannot be set together with <c>private_pool_options.match_criteria</c> or <c>private_pool_options.id</c>.</para>
+            /// </summary>
             [NameInMap("resource_pool_options")]
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestScalingGroupResourcePoolOptions ResourcePoolOptions { get; set; }
             public class CreateClusterNodePoolRequestScalingGroupResourcePoolOptions : TeaModel {
+                /// <summary>
+                /// <para>A list of private pool IDs, which are either Elasticity Assurance service IDs or Capacity Reservation service IDs. This parameter accepts only private pool IDs in Target pattern. The value range for N is 1 to 20.</para>
+                /// </summary>
                 [NameInMap("private_pool_ids")]
                 [Validation(Required=false)]
                 public List<string> PrivatePoolIds { get; set; }
 
                 /// <summary>
+                /// <para>The resource pool policy used when creating an instance. Resource pools include private pools generated after Elasticity Assurance or Capacity Reservation services take effect, as well as the public pool, which are available for selection when starting an instance. Valid values:
+                /// PrivatePoolFirst: Private pool first. With this policy, if <c>resource_pool_options.private_pool_ids</c> is specified, the specified private pool is used first. If no private pool is specified or the specified private pool lacks sufficient capacity, an open-type private pool is automatically matched. If no eligible private pool exists, the instance is created using the public pool.
+                /// PrivatePoolOnly: Private pool only. With this policy, you must specify <c>resource_pool_options.private_pool_ids</c>. If the specified private pool lacks sufficient capacity, instance startup fails.
+                /// None: Do not use a resource pool policy.
+                /// Default Value: None.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>PrivatePoolFirst</para>
                 /// </summary>
@@ -1403,6 +1478,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public long? SystemDiskSize { get; set; }
 
+            /// <summary>
+            /// <para>Snapshot policy for the system disk.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sp-0jl6xnmme8v7o935****</para>
+            /// </summary>
             [NameInMap("system_disk_snapshot_policy_id")]
             [Validation(Required=false)]
             public string SystemDiskSnapshotPolicyId { get; set; }

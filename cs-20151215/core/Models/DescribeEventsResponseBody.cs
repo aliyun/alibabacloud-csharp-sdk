@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class DescribeEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the events.</para>
+        /// <para>A list of events.</para>
         /// </summary>
         [NameInMap("events")]
         [Validation(Required=false)]
         public List<DescribeEventsResponseBodyEvents> Events { get; set; }
         public class DescribeEventsResponseBodyEvents : TeaModel {
             /// <summary>
-            /// <para>The ID of the cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cf62854ac2130470897be7a27ed1f****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The description of the event.</para>
+            /// <para>The event details.</para>
             /// </summary>
             [NameInMap("data")]
             [Validation(Required=false)]
@@ -36,9 +36,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <summary>
                 /// <para>The severity level of the event. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>info</description></item>
-                /// <item><description>warning</description></item>
-                /// <item><description>error</description></item>
+                /// <item><description><para>info: An informational message.</para>
+                /// </description></item>
+                /// <item><description><para>warning: A warning.</para>
+                /// </description></item>
+                /// <item><description><para>error: An error.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>The details of the event.</para>
+                /// <para>A human-readable description of the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Start to upgrade NodePool nodePool/nodePool-A</para>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The status of the event.</para>
+                /// <para>A brief, machine-readable string that describes the reason for the event.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Started</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The subject of the event.</para>
+            /// <para>The object that the event is about.</para>
             /// 
             /// <b>Example:</b>
             /// <para>np6a5c86f4ecae436f8f4a3dc034a7****</para>
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Subject { get; set; }
 
             /// <summary>
-            /// <para>The time when the event started.</para>
+            /// <para>The event timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-23T20:48:01+08:00</para>
@@ -113,22 +116,38 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The event type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>cluster_create</c>: cluster creation.</description></item>
-            /// <item><description><c>cluster_scaleout</c>: cluster scale-out.</description></item>
-            /// <item><description><c>cluster_attach</c>: node addition.</description></item>
-            /// <item><description><c>cluster_delete</c>: cluster deletion.</description></item>
-            /// <item><description><c>cluster_upgrade</c>: cluster upgrades.</description></item>
-            /// <item><description><c>cluster_migrate</c>: cluster migration.</description></item>
-            /// <item><description><c>cluster_node_delete</c>: node removal.</description></item>
-            /// <item><description><c>cluster_node_drain</c>: node draining.</description></item>
-            /// <item><description><c>cluster_modify</c>: cluster modifications.</description></item>
-            /// <item><description><c>cluster_configuration_modify</c>: modifications of control plane configurations.</description></item>
-            /// <item><description><c>cluster_addon_install</c>: component installation.</description></item>
-            /// <item><description><c>cluster_addon_upgrade</c>: component updates.</description></item>
-            /// <item><description><c>cluster_addon_uninstall</c>: component uninstallation.</description></item>
-            /// <item><description><c>runtime_upgrade</c>: runtime updates.</description></item>
-            /// <item><description><c>nodepool_upgrade</c>: node pool upgrades.</description></item>
-            /// <item><description><c>nodepool_update</c>: node pool updates.</description></item>
+            /// <item><description><para><c>cluster_create</c>: A cluster is created.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_scaleout</c>: A cluster is scaled out.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_attach</c>: An existing node is added.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_delete</c>: A cluster is deleted.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_upgrade</c>: A cluster is upgraded.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_migrate</c>: A cluster is migrated.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_node_delete</c>: A node is removed.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_node_drain</c>: A node is drained.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_modify</c>: A cluster is modified.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_configuration_modify</c>: The control plane configuration of a cluster is modified.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_addon_install</c>: An add-on is installed.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_addon_upgrade</c>: An add-on is upgraded.</para>
+            /// </description></item>
+            /// <item><description><para><c>cluster_addon_uninstall</c>: An add-on is uninstalled.</para>
+            /// </description></item>
+            /// <item><description><para><c>runtime_upgrade</c>: The runtime is upgraded.</para>
+            /// </description></item>
+            /// <item><description><para><c>nodepool_upgrade</c>: A node pool is upgraded.</para>
+            /// </description></item>
+            /// <item><description><para><c>nodepool_update</c>: A node pool is updated.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,6 +159,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
         }
 
+        /// <summary>
+        /// <para>The token to retrieve the next page of results. If this parameter is absent from the response, all results have been returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5c0a1c0f91c14c6****</para>
+        /// </summary>
         [NameInMap("next_token")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -152,7 +177,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public DescribeEventsResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeEventsResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -162,7 +187,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of entries returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -172,7 +197,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries that match the query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

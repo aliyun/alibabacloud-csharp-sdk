@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The ID of the Resource Access Management (RAM) user that you use.</para>
+        /// <para>206945240368******</para>
         /// </summary>
         [NameInMap("user")]
         [Validation(Required=false)]

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public DescribeClusterTasksResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeClusterTasksResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of the page returned.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of entries returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the tasks.</para>
+        /// <para>The tasks.</para>
         /// </summary>
         [NameInMap("tasks")]
         [Validation(Required=false)]
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Created { get; set; }
 
             /// <summary>
-            /// <para>The error returned for the task.</para>
+            /// <para>The error message.</para>
             /// </summary>
             [NameInMap("error")]
             [Validation(Required=false)]
             public DescribeClusterTasksResponseBodyTasksError Error { get; set; }
             public class DescribeClusterTasksResponseBodyTasksError : TeaModel {
                 /// <summary>
-                /// <para>The error code returned.</para>
+                /// <para>The error code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BadRequest</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The error message returned.</para>
+                /// <para>The error message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Addon status not match</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The status of the task.</para>
+            /// <para>The task state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The type of task.</para>
+            /// <para>The task type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cluster_addon_install</para>

@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The time when the resource was created.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-09-11T10:11:54+08:00</para>
+            /// <para>2023-08-15T14:34:42+08:00</para>
             /// </summary>
             [NameInMap("created")]
             [Validation(Required=false)]
@@ -45,17 +45,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>lb-wz9poz4r0ymh8u0uf****</para>
+            /// <para>ngw-wz9sphwk42sdtjixo****</para>
             /// </summary>
             [NameInMap("instance_id")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The resource information. For more information about how to query the source information about the resource, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</para>
+            /// <para>Information about the resource. For more details about its source, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;Id\&quot;:\&quot;k8s_master_slb\&quot;,\&quot;Name\&quot;:\&quot;k8s_master_slb\&quot;,\&quot;Type\&quot;:\&quot;ALIYUN::SLB::LoadBalancer\&quot;,\&quot;Status\&quot;:\&quot;CREATE_COMPLETE\&quot;,\&quot;StatusReason\&quot;:\&quot;state changed\&quot;,\&quot;Updated\&quot;:\&quot;2020-05-21T13:25:02\&quot;,\&quot;PhysicalId\&quot;:\&quot;lb-wz9poz4r0ymh8u0uf****\&quot;}</para>
+            /// <para>{\&quot;Id\&quot;:\&quot;KubernetesWorkerRole\&quot;,\&quot;Name\&quot;:\&quot;KubernetesWorkerRole\&quot;,\&quot;Type\&quot;:\&quot;ALIYUN::RAM::Role\&quot;,\&quot;Status\&quot;:\&quot;CREATE_COMPLETE\&quot;,\&quot;StatusReason\&quot;:\&quot;state changed\&quot;,\&quot;Updated\&quot;:\&quot;2025-04-10T06:21:17\&quot;,\&quot;PhysicalId\&quot;:\&quot;KubernetesWorkerRole-7e611193-225f-40f6-bc3c-ea8633******\&quot;}</para>
             /// </summary>
             [NameInMap("resource_info")]
             [Validation(Required=false)]
@@ -65,23 +65,31 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ALIYUN::SLB::LoadBalancer</para>
+            /// <para>ALIYUN::VPC::NatGateway</para>
             /// </summary>
             [NameInMap("resource_type")]
             [Validation(Required=false)]
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The resource status. Valid values:</para>
+            /// <para>The state of the resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>CREATE_COMPLETE</c>: the resource is created.</description></item>
-            /// <item><description><c>CREATE_FAILED</c>: the resource failed to be created.</description></item>
-            /// <item><description><c>CREATE_IN_PROGRESS</c>: the resource is being created.</description></item>
-            /// <item><description><c>DELETE_FAILED</c>: the resource failed to be deleted.</description></item>
-            /// <item><description><c>DELETE_IN_PROGRESS</c>: the resource is being deleted.</description></item>
-            /// <item><description><c>ROLLBACK_COMPLETE</c>: the resource is rolled back.</description></item>
-            /// <item><description><c>ROLLBACK_FAILED</c>: the resource failed to be rolled back.</description></item>
-            /// <item><description><c>ROLLBACK_IN_PROGRESS</c>: the resource is being rolled back.</description></item>
+            /// <item><description><para><c>CREATE_COMPLETE</c>: The resource is successfully created.</para>
+            /// </description></item>
+            /// <item><description><para><c>CREATE_FAILED</c>: The resource fails to be created.</para>
+            /// </description></item>
+            /// <item><description><para><c>CREATE_IN_PROGRESS</c>: The resource is being created.</para>
+            /// </description></item>
+            /// <item><description><para><c>DELETE_FAILED</c>: The resource fails to be deleted.</para>
+            /// </description></item>
+            /// <item><description><para><c>DELETE_IN_PROGRESS</c>: The resource is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para><c>ROLLBACK_COMPLETE</c>: The rollback is successful.</para>
+            /// </description></item>
+            /// <item><description><para><c>ROLLBACK_FAILED</c>: The rollback fails.</para>
+            /// </description></item>
+            /// <item><description><para><c>ROLLBACK_IN_PROGRESS</c>: The rollback is in progress.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -92,10 +100,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the resource is created by Container Service for Kubernetes (ACK). Valid values:</para>
+            /// <para>Indicates whether the resource is created by ACK. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: the resource is created by ACK.</description></item>
-            /// <item><description>0: the resource is an existing resource.</description></item>
+            /// <item><description><para>1: The resource is created by ACK.</para>
+            /// </description></item>
+            /// <item><description><para>0: The resource is an existing resource.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,14 +116,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? AutoCreate { get; set; }
 
             /// <summary>
-            /// <para>The dependent resources.</para>
+            /// <para>The list of dependent resources.</para>
             /// </summary>
             [NameInMap("dependencies")]
             [Validation(Required=false)]
             public List<DescribeClusterResourcesResponseBodyDependencies> Dependencies { get; set; }
             public class DescribeClusterResourcesResponseBodyDependencies : TeaModel {
                 /// <summary>
-                /// <para>The ID of the cluster to which the dependent resource is related.</para>
+                /// <para>The cluster ID of the dependent resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cc5ee03f63e43425cb6f71f1a1756****</para>
@@ -123,7 +133,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The dependent resource type.</para>
+                /// <para>The type of the dependent resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALIYUN::VPC::NatGateway</para>
@@ -133,7 +143,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The dependent resource ID.</para>
+                /// <para>The instance ID of the dependent resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ngw-wz9sphwk42sdtjixo****</para>
@@ -145,14 +155,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The Kubernetes object with which the resource is associated.</para>
+            /// <para>The Kubernetes object that is associated with the resource.</para>
             /// </summary>
             [NameInMap("associated_object")]
             [Validation(Required=false)]
             public DescribeClusterResourcesResponseBodyAssociatedObject AssociatedObject { get; set; }
             public class DescribeClusterResourcesResponseBodyAssociatedObject : TeaModel {
                 /// <summary>
-                /// <para>The Kubernetes object type.</para>
+                /// <para>The type of the Kubernetes object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Service</para>
@@ -162,7 +172,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Kind { get; set; }
 
                 /// <summary>
-                /// <para>The namespace in which the Kubernetes object resides.</para>
+                /// <para>The namespace of the Kubernetes object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kube-system</para>
@@ -172,7 +182,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>The Kubernetes object name.</para>
+                /// <para>The name of the Kubernetes object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nginx-ingress-lb</para>
@@ -191,7 +201,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public DescribeClusterResourcesResponseBodyDeleteBehavior DeleteBehavior { get; set; }
             public class DescribeClusterResourcesResponseBodyDeleteBehavior : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to delete the resource by default when the cluster is deleted.</para>
+                /// <para>Indicates whether to delete the resource by default when the cluster is deleted. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>true: The resource is deleted by default.</para>
+                /// </description></item>
+                /// <item><description><para>false: The resource is not deleted by default.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -201,7 +217,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? DeleteByDefault { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the default behavior returned in delete_by_default can be changed.</para>
+                /// <para>Indicates whether the default behavior specified by the <c>delete_by_default</c> parameter can be changed. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>true: The default behavior can be changed.</para>
+                /// </description></item>
+                /// <item><description><para>false: The default behavior cannot be changed.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -213,11 +235,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The type of the resource creator. Valid values:</para>
+            /// <para>The type of the creator of the resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>user: The resource is created by the user.</description></item>
-            /// <item><description>system: The resource is created by the ACK management system.</description></item>
-            /// <item><description>addon: The resource is created by a cluster component.</description></item>
+            /// <item><description><para>user: The resource is created by a user.</para>
+            /// </description></item>
+            /// <item><description><para>system: The resource is created by the ACK control plane.</para>
+            /// </description></item>
+            /// <item><description><para>addon: The resource is created by an add-on.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -228,10 +253,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CreatorType { get; set; }
 
             /// <summary>
-            /// <para>The additional information about the resource.</para>
+            /// <para>Extra information about the resource.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;IP&quot;: &quot;xx.xx.xx.xx&quot;}</para>
+            /// <para>{ &quot;type&quot;: &quot;SLS_Data&quot; }</para>
             /// </summary>
             [NameInMap("extra_info")]
             [Validation(Required=false)]

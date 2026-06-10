@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The SSH password that is used to log on to the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Hello1234</para>
+        /// <hr>
         /// </summary>
         [NameInMap("password")]
         [Validation(Required=false)]

@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The ID of the trigger.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1234</para>
+            /// <para>75973497486******</para>
             /// </summary>
             [NameInMap("id")]
             [Validation(Required=false)]

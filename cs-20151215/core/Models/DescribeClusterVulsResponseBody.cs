@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The node pool ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>np0156da1082b54fa987e32618dd45f5d3</para>
+            /// <para>np0156da1082b54fa987e32618dd******</para>
             /// </summary>
             [NameInMap("nodepool_id")]
             [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The alias of the vulnerability.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CVE-2022-xxxx:rsync Security vulnerabilities</para>
+            /// <para>CVE-2022-xxxx:rsync 安全漏洞</para>
             /// </summary>
             [NameInMap("vul_alias_name")]
             [Validation(Required=false)]

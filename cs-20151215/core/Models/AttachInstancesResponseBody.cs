@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>T-5a544aff80282e39ea000039</para>
+        /// <para>T-5a544aff80282e39ea00****</para>
         /// </summary>
         [NameInMap("task_id")]
         [Validation(Required=false)]

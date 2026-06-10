@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The name of the custom role. If a custom role is assigned, the value is the name of the assigned custom role.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>view</para>
+            /// <para>terway-pod-reader</para>
             /// </summary>
             [NameInMap("role_name")]
             [Validation(Required=false)]

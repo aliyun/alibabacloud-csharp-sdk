@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para><b>Warning</b> This parameter is deprecated. Any configured values will be ignored.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("auto_restart")]
         [Validation(Required=false)]

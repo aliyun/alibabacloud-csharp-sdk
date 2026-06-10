@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The node pool ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>np****</para>
+        /// <para>npe25633140a7d4fbea56cd0479c******</para>
         /// </summary>
         [NameInMap("nodepool_id")]
         [Validation(Required=false)]

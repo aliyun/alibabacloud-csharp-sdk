@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The ID of the cluster check task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1697100584236600453-ce0da5a1d627e4e9e9f96cae8ad07****-clustercheck-lboto</para>
+        /// <para>1697100584236******-ce0da5a1d627e4e9e9f96cae8ad******-clustercheck-lboto</para>
         /// </summary>
         [NameInMap("check_id")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F04DF81D-5C12-1524-B36A-86E02526****</para>
+        /// <para>F04DF81D-5C12-1524-B36A-86E025******</para>
         /// </summary>
         [NameInMap("request_id")]
         [Validation(Required=false)]

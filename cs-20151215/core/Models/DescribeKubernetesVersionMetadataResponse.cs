@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <para>The ID of the image.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>centos_7_7_x64_20G_alibase_20200426.vhd</para>
+                /// <para>aliyun_3_x64_20G_alibase_20241218.vhd</para>
                 /// </summary>
                 [NameInMap("image_id")]
                 [Validation(Required=false)]
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <para>The image name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>CentOS 7.7</para>
+                /// <para>Alibaba Cloud Linux 3.2104</para>
                 /// </summary>
                 [NameInMap("image_name")]
                 [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>CentOS</para>
+                /// <para>AliyunLinux</para>
                 /// </summary>
                 [NameInMap("platform")]
                 [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <para>The version of the image.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>7.7</para>
+                /// <para>3.2104</para>
                 /// </summary>
                 [NameInMap("os_version")]
                 [Validation(Required=false)]
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>centos_7_7_20</para>
+                /// <para>AliyunLinux3</para>
                 /// </summary>
                 [NameInMap("image_type")]
                 [Validation(Required=false)]
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The Kubernetes version supported by ACK. For more information, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1.16.9-aliyun.1</para>
+            /// <para>1.31.1-aliyun.1</para>
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The release date of the Kubernetes version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2023-04-30T00:00:00Z</para>
+            /// <para>2025-01-30T00:00:00Z</para>
             /// </summary>
             [NameInMap("release_date")]
             [Validation(Required=false)]
@@ -195,7 +195,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <para>The expiration date of the Kubernetes version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2025-04-30T00:00:00Z</para>
+            /// <para>2026-01-30T00:00:00Z</para>
             /// </summary>
             [NameInMap("expiration_date")]
             [Validation(Required=false)]

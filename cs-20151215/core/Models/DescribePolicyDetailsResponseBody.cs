@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <para>The content of the policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>For more information, see sample requests.</para>
+        /// <para>详情请参见请求示例</para>
         /// </summary>
         [NameInMap("template")]
         [Validation(Required=false)]
