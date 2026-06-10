@@ -106,8 +106,6 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>x-oss-credential</para>
-            /// 
             /// <b>Example:</b>
             /// <para>123123</para>
             /// </summary>
@@ -116,8 +114,6 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string XossCredential { get; set; }
 
             /// <summary>
-            /// <para>x-oss-date</para>
-            /// 
             /// <b>Example:</b>
             /// <para>20260101</para>
             /// </summary>
@@ -128,8 +124,6 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>6C6B99AC-39EC-5350-874C-204128C905E6</para>
         /// </summary>
@@ -145,6 +139,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string RootErrorCode { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>系统异常</para>
+        /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }

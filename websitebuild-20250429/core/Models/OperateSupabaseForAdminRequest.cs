@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class OperateSupabaseForAdminRequest : TeaModel {
         /// <summary>
+        /// <para>Business ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Env { get; set; }
 
         /// <summary>
+        /// <para>SQL statement</para>
+        /// 
         /// <b>Example:</b>
         /// <para>select * from profiles</para>
         /// </summary>
@@ -32,6 +35,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ExecuteSql { get; set; }
 
         /// <summary>
+        /// <para>Operation Type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vul_fix</para>
         /// </summary>
@@ -40,6 +45,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OperateType { get; set; }
 
         /// <summary>
+        /// <para>ORDER BY clause</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>
@@ -48,6 +55,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderByClause { get; set; }
 
         /// <summary>
+        /// <para>Sorting field</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
         /// </summary>
@@ -56,6 +65,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
+        /// <para>Sorting type: ASC|DESC</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
         /// </summary>
@@ -64,6 +75,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderType { get; set; }
 
         /// <summary>
+        /// <para>Page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -72,6 +85,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Page size</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -80,6 +95,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Table name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default.ai_advertising_material_rec_train_v1103</para>
         /// </summary>
@@ -88,6 +105,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string TableName { get; set; }
 
         /// <summary>
+        /// <para>User ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>111</para>
         /// </summary>
@@ -96,6 +115,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>WHERE clause</para>
+        /// 
         /// <b>Example:</b>
         /// <para>null</para>
         /// </summary>

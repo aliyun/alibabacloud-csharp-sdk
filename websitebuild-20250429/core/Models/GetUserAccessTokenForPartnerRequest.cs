@@ -14,6 +14,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SiteHost { get; set; }
 
         /// <summary>
+        /// <para>Credential for connecting to the cloud application.  </para>
+        /// <remarks>
+        /// <para>This parameter appears when the API is invoked again (not on the first invocation).</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

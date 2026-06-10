@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class UpdateAppCodeRequest : TeaModel {
         /// <summary>
+        /// <para>Edit operation Content (JSON)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>verify_6554d8cc0de584306d16506dd119cbfc</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>session ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>81bc5a34-1d8d-4ef7-a208-7401c51b054b</para>
         /// </summary>

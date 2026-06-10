@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DeleteMaterialDirectoryRequest : TeaModel {
         /// <summary>
+        /// <para>The business ID of the application instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>The folder ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>68157a0a-769a-4364-bbdc-a0e2cf3d5ad</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryInspirationAccountDetailsRequest : TeaModel {
         /// <summary>
+        /// <para>Query End Time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-07-23T16:00:00Z</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>Sorting field</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gmtCreated</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
+        /// <para>Sorting type: ASC|DESC</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderType { get; set; }
 
         /// <summary>
+        /// <para>Page number, default is 1</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Page size, default is 10</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Source type filter (such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, PURCHASED)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MARKET_CLOUD_DREAM</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SourceType { get; set; }
 
         /// <summary>
+        /// <para>Query Start Time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-06-21T16:00:00Z</para>
         /// </summary>

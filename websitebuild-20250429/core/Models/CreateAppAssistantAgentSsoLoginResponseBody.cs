@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAppAssistantAgentSsoLoginResponseBody : TeaModel {
         /// <summary>
+        /// <para>Detailed reason for access denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>is retry allowed</para>
+        /// 
         /// <b>Example:</b>
         /// <para>False</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
+        /// <para>App name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dewuApp</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>dynamic error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
         /// </summary>
@@ -42,6 +50,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>Dynamic error message used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> field of the response.  </para>
+        /// <remarks>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
         /// </summary>
@@ -49,15 +62,23 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
+        /// <summary>
+        /// <para>faulty parameters</para>
+        /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
+        /// <summary>
+        /// <para>response data</para>
+        /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public CreateAppAssistantAgentSsoLoginResponseBodyModule Module { get; set; }
         public class CreateAppAssistantAgentSsoLoginResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>Expiration UNIX timestamp</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-07-30T16:00Z</para>
             /// </summary>
@@ -65,11 +86,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public long? ExpireTime { get; set; }
 
+            /// <summary>
+            /// <para>Platform-specific extension fields</para>
+            /// </summary>
             [NameInMap("Extra")]
             [Validation(Required=false)]
             public Dictionary<string, string> Extra { get; set; }
 
             /// <summary>
+            /// <para>Platform type identifier</para>
+            /// 
             /// <b>Example:</b>
             /// <para>VMWARE</para>
             /// </summary>
@@ -78,6 +104,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string PlatformType { get; set; }
 
             /// <summary>
+            /// <para>SSO免登URL</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://sso.agent">https://sso.agent</a></para>
             /// </summary>
@@ -98,6 +126,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
         /// </summary>
@@ -105,11 +135,19 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string RootErrorCode { get; set; }
 
+        /// <summary>
+        /// <para>abnormal message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>系统异常</para>
+        /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>Reserved parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

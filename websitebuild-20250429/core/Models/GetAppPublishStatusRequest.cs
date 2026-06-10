@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppPublishStatusRequest : TeaModel {
         /// <summary>
+        /// <para>Business ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WS20250731233102000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Deployment ticket ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4998717</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public long? DeployOrderId { get; set; }
 
         /// <summary>
+        /// <para>Website domain name</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
         /// </summary>

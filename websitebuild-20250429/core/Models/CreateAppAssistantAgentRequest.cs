@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAppAssistantAgentRequest : TeaModel {
         /// <summary>
+        /// <para>Agent name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>测试业务空间</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AgentName { get; set; }
 
         /// <summary>
+        /// <para>Business ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WS20250731233102000001</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Platform type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>LINUX64</para>
         /// </summary>

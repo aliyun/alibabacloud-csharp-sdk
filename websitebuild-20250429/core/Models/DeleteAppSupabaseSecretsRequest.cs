@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DeleteAppSupabaseSecretsRequest : TeaModel {
         /// <summary>
+        /// <para>Business ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WS20250801154628000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>JSON list of keys to be deleted</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;key&quot;:&quot;key&quot;}</para>
         /// </summary>

@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class OperateAppInstanceForPartnerRequest : TeaModel {
+        /// <summary>
+        /// <para>extension information</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;deliveryNodeName\&quot;:\&quot;交付质检\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Finish\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Provider\&quot;}</para>
+        /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
         public string Extend { get; set; }
 
         /// <summary>
+        /// <para>event type of the operation</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SERVICE_DELIVERY_PROCESS</para>
         /// </summary>

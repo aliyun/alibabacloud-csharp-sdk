@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppInstanceForPartnerResponseBody : TeaModel {
         /// <summary>
+        /// <para>Detailed reason why access was denied.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether retry is allowed</para>
+        /// 
         /// <b>Example:</b>
         /// <para>False</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
+        /// <para>AppName.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dewuApp</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>Dynamic error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
         /// </summary>
@@ -42,26 +50,42 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>Dynamic error message, used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> error message.  </para>
+        /// <remarks>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the provided request parameter <b>DtsJobId</b> is invalid.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
-        /// <para>SYSTEM_ERROR</para>
+        /// <para><a href="https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D">https://check-result-file-sh.oss-cn-shanghai.aliyuncs.com/gl3d6l3817id8p1/gl3d6l3817id8p1.diff.zip?Expires=1750392068&amp;OSSAccessKeyId=LTAI5tKUErVCETM4ev9SELNb&amp;Signature=Bcj3eohy8nmlSQ7AAGdq7JZoLjM%3D</a></para>
         /// </summary>
         [NameInMap("DynamicMessage")]
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
+        /// <summary>
+        /// <para>Returned error parameters</para>
+        /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
+        /// <summary>
+        /// <para>Response data</para>
+        /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public GetAppInstanceForPartnerResponseBodyModule Module { get; set; }
         public class GetAppInstanceForPartnerResponseBodyModule : TeaModel {
+            /// <summary>
+            /// <para>List of AI staff associated with the application</para>
+            /// </summary>
             [NameInMap("AiStaffList")]
             [Validation(Required=false)]
             public List<GetAppInstanceForPartnerResponseBodyModuleAiStaffList> AiStaffList { get; set; }
             public class GetAppInstanceForPartnerResponseBodyModuleAiStaffList : TeaModel {
                 /// <summary>
+                /// <para>Staff ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>370196</para>
                 /// </summary>
@@ -70,6 +94,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string StaffId { get; set; }
 
                 /// <summary>
+                /// <para>Staff Name</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>StaffName</para>
                 /// </summary>
@@ -78,6 +104,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string StaffName { get; set; }
 
                 /// <summary>
+                /// <para>Staff Type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>StaffType</para>
                 /// </summary>
@@ -86,6 +114,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string StaffType { get; set; }
 
                 /// <summary>
+                /// <para>Staff Status</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
                 /// </summary>
@@ -95,6 +125,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             }
 
+            /// <summary>
+            /// <para>Design order associated with the application</para>
+            /// </summary>
             [NameInMap("AppDesignSpec")]
             [Validation(Required=false)]
             public GetAppInstanceForPartnerResponseBodyModuleAppDesignSpec AppDesignSpec { get; set; }
@@ -110,6 +143,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public bool? Bilingual { get; set; }
 
                 /// <summary>
+                /// <para>Customer Business ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>WS20250801151731000007</para>
                 /// </summary>
@@ -128,6 +163,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BusinessScope { get; set; }
 
                 /// <summary>
+                /// <para>Specifies the color. Valid values: - <b>black</b>: black - <b>white</b>: white - <b>red</b>: red - <b>blue</b>: blue</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>style</para>
                 /// </summary>
@@ -136,6 +173,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ColorStyle { get; set; }
 
                 /// <summary>
+                /// <para>Company Name</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>bvt_test</para>
                 /// </summary>
@@ -144,6 +183,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string CompanyName { get; set; }
 
                 /// <summary>
+                /// <para>deployment region</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>HongKong</para>
                 /// </summary>
@@ -152,6 +193,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DeployArea { get; set; }
 
                 /// <summary>
+                /// <para>Creation Time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2022-12-21T08:27:03Z</para>
                 /// </summary>
@@ -160,6 +203,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>Updated At</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Wed Sep 10 09:53:35 CST 2025</para>
                 /// </summary>
@@ -168,6 +213,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>primary key</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>m1zumwgy6u</para>
                 /// </summary>
@@ -256,6 +303,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SiteTitle { get; set; }
 
                 /// <summary>
+                /// <para>Application Type. Web &amp; H5: web, miniapp: miniapp, iOS: ios, Android: android.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>web</para>
                 /// </summary>
@@ -275,15 +324,23 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             }
 
+            /// <summary>
+            /// <para>Application operation address</para>
+            /// </summary>
             [NameInMap("AppOperationAddress")]
             [Validation(Required=false)]
             public GetAppInstanceForPartnerResponseBodyModuleAppOperationAddress AppOperationAddress { get; set; }
             public class GetAppInstanceForPartnerResponseBodyModuleAppOperationAddress : TeaModel {
+                /// <summary>
+                /// <para>List of console operation buttons</para>
+                /// </summary>
                 [NameInMap("Actions")]
                 [Validation(Required=false)]
                 public List<GetAppInstanceForPartnerResponseBodyModuleAppOperationAddressActions> Actions { get; set; }
                 public class GetAppInstanceForPartnerResponseBodyModuleAppOperationAddressActions : TeaModel {
                     /// <summary>
+                    /// <para>Operation key value, used as a UUID for an operation behavior.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>BeginDialogue</para>
                     /// </summary>
@@ -292,6 +349,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ActionKey { get; set; }
 
                     /// <summary>
+                    /// <para>Action display text, used to show the action name in the interface</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -300,6 +359,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ActionText { get; set; }
 
                     /// <summary>
+                    /// <para>Enable status, indicating whether the operation is active.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
                     /// </summary>
@@ -308,6 +369,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public bool? Enable { get; set; }
 
                     /// <summary>
+                    /// <para>Link address, the URL to which the user is redirected when clicking the action</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -318,6 +381,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
+                /// <para>Customer service design URL</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -326,6 +391,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string AiCustomerConfigUrl { get; set; }
 
                 /// <summary>
+                /// <para>AI Design URL</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -334,6 +401,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string AiDesignUrl { get; set; }
 
                 /// <summary>
+                /// <para>Application publish URL</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -341,11 +410,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string AppPublishUrl { get; set; }
 
+                /// <summary>
+                /// <para>List of action buttons on the overview page</para>
+                /// </summary>
                 [NameInMap("DashboardActions")]
                 [Validation(Required=false)]
                 public List<GetAppInstanceForPartnerResponseBodyModuleAppOperationAddressDashboardActions> DashboardActions { get; set; }
                 public class GetAppInstanceForPartnerResponseBodyModuleAppOperationAddressDashboardActions : TeaModel {
                     /// <summary>
+                    /// <para>Operation key used to uniquely identify an operation behavior.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>CollectedNumber</para>
                     /// </summary>
@@ -354,6 +428,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ActionKey { get; set; }
 
                     /// <summary>
+                    /// <para>Action display text used to show the action name in the interface</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -362,6 +438,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ActionText { get; set; }
 
                     /// <summary>
+                    /// <para>Enable status indicating whether the action is active</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>true</para>
                     /// </summary>
@@ -370,6 +448,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public bool? Enable { get; set; }
 
                     /// <summary>
+                    /// <para>Link URL to which the user is redirected when clicking the action</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -380,6 +460,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
+                /// <para>Professional design URL</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -388,6 +470,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DesignUrl { get; set; }
 
                 /// <summary>
+                /// <para>Application instance logon URL</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -396,6 +480,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string InstanceLoginUrl { get; set; }
 
                 /// <summary>
+                /// <para>Renewal and purchase URL</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -404,6 +490,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string RenewBuyUrl { get; set; }
 
                 /// <summary>
+                /// <para>Service delivery URL</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -412,6 +500,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ServerDeliveryUrl { get; set; }
 
                 /// <summary>
+                /// <para>Upgrade purchase URL</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -421,11 +511,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             }
 
+            /// <summary>
+            /// <para>List of service instances associated with the application</para>
+            /// </summary>
             [NameInMap("AppServiceList")]
             [Validation(Required=false)]
             public List<GetAppInstanceForPartnerResponseBodyModuleAppServiceList> AppServiceList { get; set; }
             public class GetAppInstanceForPartnerResponseBodyModuleAppServiceList : TeaModel {
                 /// <summary>
+                /// <para>Application instance business ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>WS20251211153330000001</para>
                 /// </summary>
@@ -434,6 +529,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BizId { get; set; }
 
                 /// <summary>
+                /// <para>Deletion flag</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>fase</para>
                 /// </summary>
@@ -442,6 +539,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? Deleted { get; set; }
 
                 /// <summary>
+                /// <para>End time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-07-18T02:23:00Z</para>
                 /// </summary>
@@ -460,6 +559,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EspBizId { get; set; }
 
                 /// <summary>
+                /// <para>Creation Time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-07-30T02:08:40Z</para>
                 /// </summary>
@@ -468,6 +569,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>Updated At</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Tue Sep 09 10:27:49 CST 2025</para>
                 /// </summary>
@@ -475,11 +578,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string GmtModified { get; set; }
 
+                /// <summary>
+                /// <para>Application operation address</para>
+                /// </summary>
                 [NameInMap("Group")]
                 [Validation(Required=false)]
                 public GetAppInstanceForPartnerResponseBodyModuleAppServiceListGroup Group { get; set; }
                 public class GetAppInstanceForPartnerResponseBodyModuleAppServiceListGroup : TeaModel {
                     /// <summary>
+                    /// <para>primary key</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>d75fvq3ctk</para>
                     /// </summary>
@@ -488,6 +596,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string Id { get; set; }
 
                     /// <summary>
+                    /// <para>Website Name</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>mda-sb037wmidshg3w9v.mp4</para>
                     /// </summary>
@@ -516,6 +626,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string Type { get; set; }
 
                     /// <summary>
+                    /// <para>Temporary access URL for image</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://static.yipigai.cn/timuocr/tmp_57bc9cb3be1075f4e5cdae87f5cbb86abc54a694aaf10965.jpg">https://static.yipigai.cn/timuocr/tmp_57bc9cb3be1075f4e5cdae87f5cbb86abc54a694aaf10965.jpg</a></para>
                     /// </summary>
@@ -526,6 +638,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
+                /// <para>Associated business ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>InstanceBizId</para>
                 /// </summary>
@@ -534,6 +648,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string InstanceBizId { get; set; }
 
                 /// <summary>
+                /// <para>Service name</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>19609820.png</para>
                 /// </summary>
@@ -541,15 +657,23 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>Delivery flow</para>
+                /// </summary>
                 [NameInMap("NodeList")]
                 [Validation(Required=false)]
                 public List<GetAppInstanceForPartnerResponseBodyModuleAppServiceListNodeList> NodeList { get; set; }
                 public class GetAppInstanceForPartnerResponseBodyModuleAppServiceListNodeList : TeaModel {
+                    /// <summary>
+                    /// <para>Child folder object</para>
+                    /// </summary>
                     [NameInMap("Children")]
                     [Validation(Required=false)]
                     public List<object> Children { get; set; }
 
                     /// <summary>
+                    /// <para>The ordinal number of the last node.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>FinalStepNo</para>
                     /// </summary>
@@ -558,6 +682,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public int? FinalStepNo { get; set; }
 
                     /// <summary>
+                    /// <para>When FinishStatus (baseline instance completion status) is FINISH (completed), the UNIX timestamp of the baseline instance completion time is returned.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2023-01-13T07:58:12Z</para>
                     /// </summary>
@@ -576,6 +702,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public bool? IsContainerNode { get; set; }
 
                     /// <summary>
+                    /// <para>The ID of the OBServer edge zone where the resource node resides.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2927b500-c4e2-4241-bacf-0a2991c4be12</para>
                     /// </summary>
@@ -583,11 +711,24 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     [Validation(Required=false)]
                     public string NodeId { get; set; }
 
+                    /// <summary>
+                    /// <para>&lt;props=&quot;china&quot;&gt;The name of the matrix.
+                    /// &lt;props=&quot;intl&quot;&gt;This parameter is not publicly available.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>单路输出</para>
+                    /// </summary>
                     [NameInMap("NodeName")]
                     [Validation(Required=false)]
                     public string NodeName { get; set; }
 
                     /// <summary>
+                    /// <para>Node running status. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><b>UP</b>: The node is running.</description></item>
+                    /// <item><description><b>DOWN</b>: The node is faulty.</description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>NodeStatus</para>
                     /// </summary>
@@ -596,6 +737,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string NodeStatus { get; set; }
 
                     /// <summary>
+                    /// <para>The role of the operator.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>OperatorRole</para>
                     /// </summary>
@@ -604,6 +747,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string OperatorRole { get; set; }
 
                     /// <summary>
+                    /// <para>Parent node ID</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>dpYLaezmVNRMGX56Cg4gLjrrVrMqPxX6</para>
                     /// </summary>
@@ -612,6 +757,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ParentNodeId { get; set; }
 
                     /// <summary>
+                    /// <para>Ordinal number of the flow node</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>StepNo</para>
                     /// </summary>
@@ -621,15 +768,23 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 }
 
+                /// <summary>
+                /// <para>Used to uniquely identify an operation behavior</para>
+                /// </summary>
                 [NameInMap("OperationAddress")]
                 [Validation(Required=false)]
                 public GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddress OperationAddress { get; set; }
                 public class GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddress : TeaModel {
+                    /// <summary>
+                    /// <para>List of console operation buttons</para>
+                    /// </summary>
                     [NameInMap("Actions")]
                     [Validation(Required=false)]
                     public List<GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddressActions> Actions { get; set; }
                     public class GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddressActions : TeaModel {
                         /// <summary>
+                        /// <para>Action key, used as a UUID for an action behavior.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>CollectedNumber</para>
                         /// </summary>
@@ -638,6 +793,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                         public string ActionKey { get; set; }
 
                         /// <summary>
+                        /// <para>Display text for the action, used to show the action name in the interface.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>ActionText</para>
                         /// </summary>
@@ -646,6 +803,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                         public string ActionText { get; set; }
 
                         /// <summary>
+                        /// <para>Enable status, indicating whether the action is active.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>false</para>
                         /// </summary>
@@ -654,6 +813,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                         public bool? Enable { get; set; }
 
                         /// <summary>
+                        /// <para>Link address, the URL to which the user is redirected when clicking the action.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>Href</para>
                         /// </summary>
@@ -664,6 +825,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     }
 
                     /// <summary>
+                    /// <para>AI customer service design URL</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>AiCustomerConfigUrl</para>
                     /// </summary>
@@ -672,6 +835,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string AiCustomerConfigUrl { get; set; }
 
                     /// <summary>
+                    /// <para>AI design URL</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>AiDesignUrl</para>
                     /// </summary>
@@ -680,6 +845,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string AiDesignUrl { get; set; }
 
                     /// <summary>
+                    /// <para>Application publish URL</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>AppPublishUrl</para>
                     /// </summary>
@@ -687,11 +854,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     [Validation(Required=false)]
                     public string AppPublishUrl { get; set; }
 
+                    /// <summary>
+                    /// <para>List of overview page operation buttons</para>
+                    /// </summary>
                     [NameInMap("DashboardActions")]
                     [Validation(Required=false)]
                     public List<GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddressDashboardActions> DashboardActions { get; set; }
                     public class GetAppInstanceForPartnerResponseBodyModuleAppServiceListOperationAddressDashboardActions : TeaModel {
                         /// <summary>
+                        /// <para>Operation key used as a UUID for an operation behavior</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>AbortDialogue</para>
                         /// </summary>
@@ -700,6 +872,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                         public string ActionKey { get; set; }
 
                         /// <summary>
+                        /// <para>The display text of the action, used to show the action name in the interface.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>ActionText</para>
                         /// </summary>
@@ -708,6 +882,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                         public string ActionText { get; set; }
 
                         /// <summary>
+                        /// <para>The enable status, indicating whether the action is active.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
                         /// </summary>
@@ -716,6 +892,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                         public bool? Enable { get; set; }
 
                         /// <summary>
+                        /// <para>The URL address to which the hyperlink redirects when the action is clicked.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>Href</para>
                         /// </summary>
@@ -726,6 +904,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     }
 
                     /// <summary>
+                    /// <para>Professional design URL</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>DesignUrl</para>
                     /// </summary>
@@ -734,6 +914,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string DesignUrl { get; set; }
 
                     /// <summary>
+                    /// <para>Application instance logon URL</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>InstanceLoginUrl</para>
                     /// </summary>
@@ -742,6 +924,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string InstanceLoginUrl { get; set; }
 
                     /// <summary>
+                    /// <para>Renewal and purchase URL</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>renewBuyUrl</para>
                     /// </summary>
@@ -750,6 +934,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string RenewBuyUrl { get; set; }
 
                     /// <summary>
+                    /// <para>Service delivery URL</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ServerDeliveryUrl</para>
                     /// </summary>
@@ -758,6 +944,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ServerDeliveryUrl { get; set; }
 
                     /// <summary>
+                    /// <para>Upgrade purchase URL</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>UpgradeBuyUrl</para>
                     /// </summary>
@@ -768,6 +956,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
+                /// <para>Order ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>253790948890026</para>
                 /// </summary>
@@ -775,11 +965,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string OrderId { get; set; }
 
+                /// <summary>
+                /// <para>Instance service configuration</para>
+                /// </summary>
                 [NameInMap("Profile")]
                 [Validation(Required=false)]
                 public GetAppInstanceForPartnerResponseBodyModuleAppServiceListProfile Profile { get; set; }
                 public class GetAppInstanceForPartnerResponseBodyModuleAppServiceListProfile : TeaModel {
                     /// <summary>
+                    /// <para>Business ID</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>WS20250801003834000003</para>
                     /// </summary>
@@ -788,6 +983,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string BizId { get; set; }
 
                     /// <summary>
+                    /// <para>Design Type</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>DesignType</para>
                     /// </summary>
@@ -796,6 +993,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string DesignType { get; set; }
 
                     /// <summary>
+                    /// <para>Design type description</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>DesignTypeText</para>
                     /// </summary>
@@ -804,6 +1003,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string DesignTypeText { get; set; }
 
                     /// <summary>
+                    /// <para>Creation Time</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1620711265000</para>
                     /// </summary>
@@ -812,6 +1013,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string GmtCreate { get; set; }
 
                     /// <summary>
+                    /// <para>Updated At</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>Mon Sep 25 14:48:49 CST 2023</para>
                     /// </summary>
@@ -820,6 +1023,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string GmtModified { get; set; }
 
                     /// <summary>
+                    /// <para>primary key</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>108232</para>
                     /// </summary>
@@ -828,6 +1033,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string Id { get; set; }
 
                     /// <summary>
+                    /// <para>Lingxiao instance ID</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>LxInstanceId</para>
                     /// </summary>
@@ -836,6 +1043,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string LxInstanceId { get; set; }
 
                     /// <summary>
+                    /// <para>order ID</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>256146659280026</para>
                     /// </summary>
@@ -844,6 +1053,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string OrderId { get; set; }
 
                     /// <summary>
+                    /// <para>Service Specification</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>8</para>
                     /// </summary>
@@ -852,6 +1063,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ServiceSpec { get; set; }
 
                     /// <summary>
+                    /// <para>Service specification description</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ServiceSpecText</para>
                     /// </summary>
@@ -866,6 +1079,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
+                /// <para>Service Type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>WEBSITE_DESIGN</para>
                 /// </summary>
@@ -874,6 +1089,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ServiceType { get; set; }
 
                 /// <summary>
+                /// <para>Service Type Description</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ServiceTypeText</para>
                 /// </summary>
@@ -882,6 +1099,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ServiceTypeText { get; set; }
 
                 /// <summary>
+                /// <para>Application identity</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Slug</para>
                 /// </summary>
@@ -890,6 +1109,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Slug { get; set; }
 
                 /// <summary>
+                /// <para>Start Time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1754447102000</para>
                 /// </summary>
@@ -898,6 +1119,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
+                /// <para>Status</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>success</para>
                 /// </summary>
@@ -906,6 +1129,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>User ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>UserId</para>
                 /// </summary>
@@ -916,6 +1141,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
+            /// <para>Application subtype</para>
+            /// 
             /// <b>Example:</b>
             /// <para>placeHolder</para>
             /// </summary>
@@ -924,6 +1151,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AppSubType { get; set; }
 
             /// <summary>
+            /// <para>Application Type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>TRACE</para>
             /// </summary>
@@ -932,6 +1161,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AppType { get; set; }
 
             /// <summary>
+            /// <para>Application instance business ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>WS20250915163734000001</para>
             /// </summary>
@@ -940,6 +1171,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BizId { get; set; }
 
             /// <summary>
+            /// <para>Build Type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>placeHolder</para>
             /// </summary>
@@ -948,6 +1181,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BuildType { get; set; }
 
             /// <summary>
+            /// <para>Is deleted</para>
+            /// 
             /// <b>Example:</b>
             /// <para>fase</para>
             /// </summary>
@@ -956,6 +1191,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? Deleted { get; set; }
 
             /// <summary>
+            /// <para>Application Description</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/bak-&gt;serverless.handler(2020091300200279)</para>
             /// </summary>
@@ -974,6 +1211,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DesignSpecBizId { get; set; }
 
             /// <summary>
+            /// <para>Design Configuration ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>placeHolder</para>
             /// </summary>
@@ -982,6 +1221,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DesignSpecId { get; set; }
 
             /// <summary>
+            /// <para>Primary domain name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>stxycw.com</para>
             /// </summary>
@@ -990,6 +1231,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Domain { get; set; }
 
             /// <summary>
+            /// <para>End time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-01-05T15:59:00Z</para>
             /// </summary>
@@ -998,6 +1241,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string EndTime { get; set; }
 
             /// <summary>
+            /// <para>Environment</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pre</para>
             /// </summary>
@@ -1006,6 +1251,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Env { get; set; }
 
             /// <summary>
+            /// <para>Associated delivery order ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>placeHolder</para>
             /// </summary>
@@ -1014,6 +1261,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string EspBizId { get; set; }
 
             /// <summary>
+            /// <para>Creation Time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1740479834</para>
             /// </summary>
@@ -1022,6 +1271,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>Deletion time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>placeHolder</para>
             /// </summary>
@@ -1030,6 +1281,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtDelete { get; set; }
 
             /// <summary>
+            /// <para>Updated At</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-08-28T02:25:41Z</para>
             /// </summary>
@@ -1038,6 +1291,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>Published At</para>
+            /// 
             /// <b>Example:</b>
             /// <para>placeHolder</para>
             /// </summary>
@@ -1045,15 +1300,29 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public string GmtPublish { get; set; }
 
+            /// <summary>
+            /// <para>Application icon</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://yzm.zshud.com:34901/cloud-phone/%E5%85%BB%E7%94%9F_1763631730804.png">https://yzm.zshud.com:34901/cloud-phone/养生_1763631730804.png</a></para>
+            /// </summary>
             [NameInMap("IconUrl")]
             [Validation(Required=false)]
             public string IconUrl { get; set; }
 
+            /// <summary>
+            /// <para>Application Name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>文件名</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Order ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>250822465990301</para>
             /// </summary>
@@ -1061,6 +1330,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public string OrderId { get; set; }
 
+            /// <summary>
+            /// <para>Details</para>
+            /// </summary>
             [NameInMap("PartnerDetail")]
             [Validation(Required=false)]
             public GetAppInstanceForPartnerResponseBodyModulePartnerDetail PartnerDetail { get; set; }
@@ -1083,6 +1355,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string AliyunPk { get; set; }
 
                     /// <summary>
+                    /// <para>External bizId</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>WS20250801153127000002</para>
                     /// </summary>
@@ -1091,6 +1365,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string BizId { get; set; }
 
                     /// <summary>
+                    /// <para>Creation Time</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1672123722000</para>
                     /// </summary>
@@ -1099,6 +1375,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string GmtCreate { get; set; }
 
                     /// <summary>
+                    /// <para>Updated At</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>Wed Nov 26 10:15:28 CST 2025</para>
                     /// </summary>
@@ -1107,6 +1385,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string GmtModified { get; set; }
 
                     /// <summary>
+                    /// <para>User who owns the ICP filing service code</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>grantAliyunPk</para>
                     /// </summary>
@@ -1115,6 +1395,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string GrantAliyunPk { get; set; }
 
                     /// <summary>
+                    /// <para>Phone number</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <hr>
                     /// </summary>
@@ -1133,6 +1415,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ParentPk { get; set; }
 
                     /// <summary>
+                    /// <para>Externally associated partnerId</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>10001</para>
                     /// </summary>
@@ -1141,6 +1425,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string PartnerId { get; set; }
 
                     /// <summary>
+                    /// <para>Display name of the attached user</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>diaplayName</para>
                     /// </summary>
@@ -1151,6 +1437,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
+                /// <para>Partner ID, extension parameter</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10001</para>
                 /// </summary>
@@ -1159,6 +1447,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PartnerId { get; set; }
 
                 /// <summary>
+                /// <para>Possible values: unknown, init, testing, online</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
                 /// </summary>
@@ -1168,11 +1458,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             }
 
+            /// <summary>
+            /// <para>Instance Configuration</para>
+            /// </summary>
             [NameInMap("Profile")]
             [Validation(Required=false)]
             public GetAppInstanceForPartnerResponseBodyModuleProfile Profile { get; set; }
             public class GetAppInstanceForPartnerResponseBodyModuleProfile : TeaModel {
                 /// <summary>
+                /// <para>Management console URL</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1181,6 +1476,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string AdminUrl { get; set; }
 
                 /// <summary>
+                /// <para>Application type code</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>PC_WebSite</para>
                 /// </summary>
@@ -1189,6 +1486,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ApplicationType { get; set; }
 
                 /// <summary>
+                /// <para>Application type text description</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1197,6 +1496,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ApplicationTypeText { get; set; }
 
                 /// <summary>
+                /// <para>Attached CNAME record</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1205,6 +1506,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BindCname { get; set; }
 
                 /// <summary>
+                /// <para>Business ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>WS20250801152128000005</para>
                 /// </summary>
@@ -1213,6 +1516,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BizId { get; set; }
 
                 /// <summary>
+                /// <para>Product encoding</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
                 /// </summary>
@@ -1221,6 +1526,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
+                /// <para>Customer Service Information</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1229,6 +1536,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string CustomerService { get; set; }
 
                 /// <summary>
+                /// <para>Deployment area</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ChineseMainland</para>
                 /// </summary>
@@ -1237,6 +1546,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DeployArea { get; set; }
 
                 /// <summary>
+                /// <para>Domain name list</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[white:],<em>.eduresource.cn,</em>.dingtalk.com,<em>.aliyun.com,</em>.aliyuncs.com,euser.edu-aliyun.com,s-gm.mmstat.com</para>
                 /// </summary>
@@ -1245,6 +1556,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DomainList { get; set; }
 
                 /// <summary>
+                /// <para>Editor URL</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1253,6 +1566,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EditorUrl { get; set; }
 
                 /// <summary>
+                /// <para>Creation time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1605280632000</para>
                 /// </summary>
@@ -1261,6 +1576,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>Updated At</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2024-05-06T03:07:45Z</para>
                 /// </summary>
@@ -1269,6 +1586,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>ICP number</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1277,6 +1596,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string IcpbaNo { get; set; }
 
                 /// <summary>
+                /// <para>Image list</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;Image\&quot;: []}</para>
                 /// </summary>
@@ -1285,6 +1606,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ImageList { get; set; }
 
                 /// <summary>
+                /// <para>Lenovo instance ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1293,6 +1616,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string LxInstanceId { get; set; }
 
                 /// <summary>
+                /// <para>Order time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1301,6 +1626,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string OrdTime { get; set; }
 
                 /// <summary>
+                /// <para>Order ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>256146659280026</para>
                 /// </summary>
@@ -1309,6 +1636,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string OrderId { get; set; }
 
                 /// <summary>
+                /// <para>Order quantity</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -1317,6 +1646,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? OrderNum { get; set; }
 
                 /// <summary>
+                /// <para>Channel partner business ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100086</para>
                 /// </summary>
@@ -1325,6 +1656,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PartnerId { get; set; }
 
                 /// <summary>
+                /// <para>Payment time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1333,6 +1666,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PayTime { get; set; }
 
                 /// <summary>
+                /// <para>Preview URL</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://preview-lyj.aliyuncs.com/preview/1daacb3ebbb8435d9091fb950c528d0f?subSceneIds=682185">https://preview-lyj.aliyuncs.com/preview/1daacb3ebbb8435d9091fb950c528d0f?subSceneIds=682185</a></para>
                 /// </summary>
@@ -1341,6 +1676,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string PreviewUrl { get; set; }
 
                 /// <summary>
+                /// <para>SEO site information</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1349,6 +1686,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SeoSite { get; set; }
 
                 /// <summary>
+                /// <para>Site logo</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1357,6 +1696,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SiteLogo { get; set; }
 
                 /// <summary>
+                /// <para>Site version encoding</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Basic_Edition</para>
                 /// </summary>
@@ -1365,6 +1706,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SiteVersion { get; set; }
 
                 /// <summary>
+                /// <para>Site version text description</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1373,6 +1716,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SiteVersionText { get; set; }
 
                 /// <summary>
+                /// <para>Source information</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>edasmsc</para>
                 /// </summary>
@@ -1381,6 +1726,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Source { get; set; }
 
                 /// <summary>
+                /// <para>Template ETag identity</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1389,6 +1736,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string TemplateEtag { get; set; }
 
                 /// <summary>
+                /// <para>Template ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4644</para>
                 /// </summary>
@@ -1397,6 +1746,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string TemplateId { get; set; }
 
                 /// <summary>
+                /// <para>Text list</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1405,6 +1756,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string TextList { get; set; }
 
                 /// <summary>
+                /// <para>Thumbnail</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://aloss-recruit-aiinterview.oss-cn-beijing.aliyuncs.com/thumbnail-1753495551714-10000.png">https://aloss-recruit-aiinterview.oss-cn-beijing.aliyuncs.com/thumbnail-1753495551714-10000.png</a></para>
                 /// </summary>
@@ -1418,11 +1771,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             }
 
+            /// <summary>
+            /// <para>List of instances associated with the application</para>
+            /// </summary>
             [NameInMap("RelatedInstanceList")]
             [Validation(Required=false)]
             public List<GetAppInstanceForPartnerResponseBodyModuleRelatedInstanceList> RelatedInstanceList { get; set; }
             public class GetAppInstanceForPartnerResponseBodyModuleRelatedInstanceList : TeaModel {
                 /// <summary>
+                /// <para>application sub-type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1431,6 +1789,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string AppSubType { get; set; }
 
                 /// <summary>
+                /// <para>application Type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -1439,6 +1799,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string AppType { get; set; }
 
                 /// <summary>
+                /// <para>application instance business ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>WS20250929173805000001</para>
                 /// </summary>
@@ -1447,6 +1809,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BizId { get; set; }
 
                 /// <summary>
+                /// <para>Build Type</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1455,6 +1819,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BuildType { get; set; }
 
                 /// <summary>
+                /// <para>Is Deleted</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>fase</para>
                 /// </summary>
@@ -1463,6 +1829,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? Deleted { get; set; }
 
                 /// <summary>
+                /// <para>Application description</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>base</para>
                 /// </summary>
@@ -1481,6 +1849,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DesignSpecBizId { get; set; }
 
                 /// <summary>
+                /// <para>Design configuration ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1489,6 +1859,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DesignSpecId { get; set; }
 
                 /// <summary>
+                /// <para>primary domain name</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>shikuntech.com</para>
                 /// </summary>
@@ -1497,6 +1869,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Domain { get; set; }
 
                 /// <summary>
+                /// <para>End time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-05-23T15:01:25.891Z</para>
                 /// </summary>
@@ -1505,6 +1879,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EndTime { get; set; }
 
                 /// <summary>
+                /// <para>Environment</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>pre</para>
                 /// </summary>
@@ -1513,6 +1889,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Env { get; set; }
 
                 /// <summary>
+                /// <para>Associated Delivery Order ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1521,6 +1899,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EspBizId { get; set; }
 
                 /// <summary>
+                /// <para>Creation Time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-06-19T07:39:55Z</para>
                 /// </summary>
@@ -1529,6 +1909,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
+                /// <para>Deletion time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1537,6 +1919,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtDelete { get; set; }
 
                 /// <summary>
+                /// <para>Updated At</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-01-14T09:09:57Z</para>
                 /// </summary>
@@ -1545,6 +1929,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>Published At</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1553,6 +1939,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtPublish { get; set; }
 
                 /// <summary>
+                /// <para>application icon</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1617863868712071/1749090558651_%E9%AB%98%E5%BE%B7.png">https://app-center-icon-prod-shanghai.oss-cn-shanghai.aliyuncs.com/tenant/1617863868712071/1749090558651_%E9%AB%98%E5%BE%B7.png</a></para>
                 /// </summary>
@@ -1561,6 +1949,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string IconUrl { get; set; }
 
                 /// <summary>
+                /// <para>Application Name</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>19609820.png</para>
                 /// </summary>
@@ -1569,6 +1959,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>order ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>264987642530867,264988827010867,264982589530867,264985058640867,264982290930867,264982387520867,264987147460867,264985752990867,264988432850867</para>
                 /// </summary>
@@ -1576,11 +1968,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string OrderId { get; set; }
 
+                /// <summary>
+                /// <para>Instance configuration</para>
+                /// </summary>
                 [NameInMap("Profile")]
                 [Validation(Required=false)]
                 public GetAppInstanceForPartnerResponseBodyModuleRelatedInstanceListProfile Profile { get; set; }
                 public class GetAppInstanceForPartnerResponseBodyModuleRelatedInstanceListProfile : TeaModel {
                     /// <summary>
+                    /// <para>Management Console URL</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1589,6 +1986,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string AdminUrl { get; set; }
 
                     /// <summary>
+                    /// <para>Application Type Code</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>PC_WebSite</para>
                     /// </summary>
@@ -1597,6 +1996,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ApplicationType { get; set; }
 
                     /// <summary>
+                    /// <para>Application type text description</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1605,6 +2006,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ApplicationTypeText { get; set; }
 
                     /// <summary>
+                    /// <para>Attached CNAME record</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1613,6 +2016,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string BindCname { get; set; }
 
                     /// <summary>
+                    /// <para>Business ID</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>WS20250801153127000002</para>
                     /// </summary>
@@ -1621,6 +2026,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string BizId { get; set; }
 
                     /// <summary>
+                    /// <para>Product encoding</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>sas</para>
                     /// </summary>
@@ -1629,6 +2036,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string CommodityCode { get; set; }
 
                     /// <summary>
+                    /// <para>[responses_200_schema_properties_Module_properties_RelatedInstanceList_items_properties_CustomerService_description]Customer service information</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1637,6 +2046,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string CustomerService { get; set; }
 
                     /// <summary>
+                    /// <para>Deployment area</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ChineseMainland</para>
                     /// </summary>
@@ -1645,6 +2056,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string DeployArea { get; set; }
 
                     /// <summary>
+                    /// <para>Domain Name List</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>[\&quot;activity.syruijia.top\&quot;, \&quot;admin.syruijia.top\&quot;, \&quot;api.syruijia.top\&quot;, \&quot;game-admin.syruijia.top\&quot;, \&quot;h5game.syruijia.top\&quot;, \&quot;home.syruijia.top\&quot;, \&quot;invite.syruijia.top\&quot;]</para>
                     /// </summary>
@@ -1653,6 +2066,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string DomainList { get; set; }
 
                     /// <summary>
+                    /// <para>Editor URL</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1661,6 +2076,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string EditorUrl { get; set; }
 
                     /// <summary>
+                    /// <para>Creation Time</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1621734214000</para>
                     /// </summary>
@@ -1669,6 +2086,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string GmtCreate { get; set; }
 
                     /// <summary>
+                    /// <para>Updated At</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>Thu Oct 24 09:12:31 CST 2024</para>
                     /// </summary>
@@ -1677,6 +2096,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string GmtModified { get; set; }
 
                     /// <summary>
+                    /// <para>ICP number</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1685,6 +2106,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string IcpbaNo { get; set; }
 
                     /// <summary>
+                    /// <para>Image list</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>{\&quot;Image\&quot;: []}</para>
                     /// </summary>
@@ -1693,6 +2116,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string ImageList { get; set; }
 
                     /// <summary>
+                    /// <para>Lenovo instance ID</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1701,6 +2126,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string LxInstanceId { get; set; }
 
                     /// <summary>
+                    /// <para>Order Time</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1709,6 +2136,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string OrdTime { get; set; }
 
                     /// <summary>
+                    /// <para>Order ID</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>248808934190692</para>
                     /// </summary>
@@ -1717,6 +2146,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string OrderId { get; set; }
 
                     /// <summary>
+                    /// <para>Order Quantity</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
                     /// </summary>
@@ -1725,6 +2156,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public int? OrderNum { get; set; }
 
                     /// <summary>
+                    /// <para>Channel Partner Business ID</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>100086</para>
                     /// </summary>
@@ -1733,6 +2166,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string PartnerId { get; set; }
 
                     /// <summary>
+                    /// <para>Payment time</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1741,6 +2176,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string PayTime { get; set; }
 
                     /// <summary>
+                    /// <para>Preview URL</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://preview-lyj.aliyuncs.com/preview/temp/9fb36fc05d0a48cdb92d7397336c214f?subSceneIds=734285&type=interim">https://preview-lyj.aliyuncs.com/preview/temp/9fb36fc05d0a48cdb92d7397336c214f?subSceneIds=734285&amp;type=interim</a></para>
                     /// </summary>
@@ -1749,6 +2186,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string PreviewUrl { get; set; }
 
                     /// <summary>
+                    /// <para>SEO site information</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1757,6 +2196,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string SeoSite { get; set; }
 
                     /// <summary>
+                    /// <para>Site logo</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1765,6 +2206,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string SiteLogo { get; set; }
 
                     /// <summary>
+                    /// <para>Site version encoding</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>Trial_Edition</para>
                     /// </summary>
@@ -1773,6 +2216,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string SiteVersion { get; set; }
 
                     /// <summary>
+                    /// <para>Site Version Text Description</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1781,6 +2226,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string SiteVersionText { get; set; }
 
                     /// <summary>
+                    /// <para>Source Information</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>10.71.130.205</para>
                     /// </summary>
@@ -1789,6 +2236,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string Source { get; set; }
 
                     /// <summary>
+                    /// <para>Template ETag identity</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1797,6 +2246,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string TemplateEtag { get; set; }
 
                     /// <summary>
+                    /// <para>Template ID</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>4644</para>
                     /// </summary>
@@ -1805,6 +2256,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string TemplateId { get; set; }
 
                     /// <summary>
+                    /// <para>Text List</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>placeHolder</para>
                     /// </summary>
@@ -1813,6 +2266,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                     public string TextList { get; set; }
 
                     /// <summary>
+                    /// <para>Thumbnail</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://aloss-recruit-aiinterview.oss-cn-beijing.aliyuncs.com/thumbnail-1766456326256-0.png">https://aloss-recruit-aiinterview.oss-cn-beijing.aliyuncs.com/thumbnail-1766456326256-0.png</a></para>
                     /// </summary>
@@ -1827,6 +2282,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 }
 
                 /// <summary>
+                /// <para>domain name</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1835,6 +2292,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SiteHost { get; set; }
 
                 /// <summary>
+                /// <para>application identity</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1843,6 +2302,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Slug { get; set; }
 
                 /// <summary>
+                /// <para>Source MARKET_CLOUD_DREAM</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>MARKET_CLOUD_DREAM</para>
                 /// </summary>
@@ -1851,6 +2312,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
+                /// <para>Start Time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-07-22T02:23:00Z</para>
                 /// </summary>
@@ -1859,6 +2322,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string StartTime { get; set; }
 
                 /// <summary>
+                /// <para>Status</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>success</para>
                 /// </summary>
@@ -1867,6 +2332,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>Task Status text.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SUCCESS</para>
                 /// </summary>
@@ -1875,6 +2342,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string StatusText { get; set; }
 
                 /// <summary>
+                /// <para>Application thumbnail</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1883,6 +2352,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ThumbnailUrl { get; set; }
 
                 /// <summary>
+                /// <para>User ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>placeHolder</para>
                 /// </summary>
@@ -1891,6 +2362,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string UserId { get; set; }
 
                 /// <summary>
+                /// <para>Application instance Version</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2019-04-02</para>
                 /// </summary>
@@ -1901,6 +2374,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
+            /// <para>Domain name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>abcd.scd.wanwang.xin</para>
             /// </summary>
@@ -1909,6 +2384,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SiteHost { get; set; }
 
             /// <summary>
+            /// <para>Application identifier</para>
+            /// 
             /// <b>Example:</b>
             /// <para>placeHolder</para>
             /// </summary>
@@ -1917,6 +2394,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Slug { get; set; }
 
             /// <summary>
+            /// <para>Source MARKET_CLOUD_DREAM</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MARKET_CLOUD_DREAM</para>
             /// </summary>
@@ -1925,6 +2404,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SourceType { get; set; }
 
             /// <summary>
+            /// <para>Start Time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-03-24T10:10Z</para>
             /// </summary>
@@ -1933,6 +2414,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string StartTime { get; set; }
 
             /// <summary>
+            /// <para>Status</para>
+            /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
             /// </summary>
@@ -1941,6 +2424,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>Task Status text.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FILE_DOWNLOAD_FAILED</para>
             /// </summary>
@@ -1949,6 +2434,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string StatusText { get; set; }
 
             /// <summary>
+            /// <para>Application Thumbnail</para>
+            /// 
             /// <b>Example:</b>
             /// <para>placeHolder</para>
             /// </summary>
@@ -1957,6 +2444,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ThumbnailUrl { get; set; }
 
             /// <summary>
+            /// <para>User ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>placeHolder</para>
             /// </summary>
@@ -1965,6 +2454,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>Application instance Version</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2019-04-02</para>
             /// </summary>
@@ -1985,6 +2476,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
         /// </summary>
@@ -1992,11 +2485,19 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string RootErrorCode { get; set; }
 
+        /// <summary>
+        /// <para>Abnormal message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>系统异常</para>
+        /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>Reserved parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

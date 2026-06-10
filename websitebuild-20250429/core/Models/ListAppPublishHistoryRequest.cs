@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppPublishHistoryRequest : TeaModel {
         /// <summary>
+        /// <para>Business ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
         /// </summary>
@@ -21,11 +23,20 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string DeployChannel { get; set; }
 
+        /// <summary>
+        /// <para>Search keyword</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1_运营支持部_销售运营</para>
+        /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>Number of results per query.  </para>
+        /// <para>Value range: 10 to 100. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +45,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Token indicating the start of the next query. Empty if there is no next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
         /// </summary>
@@ -42,6 +55,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +65,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Page size</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -57,7 +74,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        [NameInMap("PublishEnv")]
+        [Validation(Required=false)]
+        public string PublishEnv { get; set; }
+
         /// <summary>
+        /// <para>Sorting method</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EndTime</para>
         /// </summary>
@@ -66,6 +89,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Sort { get; set; }
 
         /// <summary>
+        /// <para>Publish status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
         /// </summary>
@@ -73,7 +98,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        [NameInMap("Subchannel")]
+        [Validation(Required=false)]
+        public string Subchannel { get; set; }
+
         /// <summary>
+        /// <para>Website domain name</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
         /// </summary>

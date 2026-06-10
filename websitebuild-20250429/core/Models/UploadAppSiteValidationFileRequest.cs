@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class UploadAppSiteValidationFileRequest : TeaModel {
         /// <summary>
+        /// <para>business ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>domain name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yjdw.bpu.edu.cn-waf</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Domain { get; set; }
 
         /// <summary>
+        /// <para>file name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;URI\&quot;: \&quot;oss://imm-test-co-cn-chengdu/zqh/input/Image/indexImage/nn1.jpg\&quot;, \&quot;LatLong\&quot;:\&quot;+39.998800,+116.480900\&quot;}</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string File { get; set; }
 
         /// <summary>
+        /// <para>file content</para>
+        /// 
         /// <b>Example:</b>
         /// <para>abc</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string FileContent { get; set; }
 
         /// <summary>
+        /// <para>file type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>APP_MAPPING</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string FileType { get; set; }
 
         /// <summary>
+        /// <para>site host</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
         /// </summary>

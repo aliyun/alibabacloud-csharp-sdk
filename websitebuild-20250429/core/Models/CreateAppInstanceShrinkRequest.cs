@@ -124,6 +124,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? Quantity { get; set; }
 
         /// <summary>
+        /// <para>Resource group ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-aek2smovqqpvuly</para>
         /// </summary>
@@ -141,6 +143,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string SiteVersion { get; set; }
 
+        /// <summary>
+        /// <para>List of tags</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }

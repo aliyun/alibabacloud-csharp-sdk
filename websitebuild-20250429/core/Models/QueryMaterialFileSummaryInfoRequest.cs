@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryMaterialFileSummaryInfoRequest : TeaModel {
         /// <summary>
+        /// <para>Business instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Folder ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,11 +31,19 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string DirectoryId { get; set; }
 
+        /// <summary>
+        /// <para>File name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>文件名</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Sorting field</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
         /// </summary>
@@ -42,6 +52,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
+        /// <para>Sorting type: ASC or DESC</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
         /// </summary>
@@ -50,6 +62,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderType { get; set; }
 
         /// <summary>
+        /// <para>Page number. Default is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -58,6 +72,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Page size. Default is 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -65,10 +81,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>File status</para>
+        /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public List<string> StatusList { get; set; }
 
+        /// <summary>
+        /// <para>File type</para>
+        /// </summary>
         [NameInMap("TypeList")]
         [Validation(Required=false)]
         public List<string> TypeList { get; set; }

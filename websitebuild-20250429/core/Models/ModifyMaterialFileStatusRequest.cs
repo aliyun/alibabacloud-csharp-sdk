@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ModifyMaterialFileStatusRequest : TeaModel {
         /// <summary>
+        /// <para>Business instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>File ID</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FileIds")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public List<string> FileIds { get; set; }
 
         /// <summary>
+        /// <para>Modified status</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

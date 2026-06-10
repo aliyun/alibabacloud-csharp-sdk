@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SaveAppSupabaseSecretsRequest : TeaModel {
         /// <summary>
+        /// <para>Business ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Key list JSON</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;key&quot;:&quot;abc&quot;}</para>
         /// </summary>

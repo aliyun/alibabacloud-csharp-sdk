@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SyncAppInstanceForPartnerShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Application instance object data</para>
+        /// </summary>
         [NameInMap("AppInstance")]
         [Validation(Required=false)]
         public string AppInstanceShrink { get; set; }
 
         /// <summary>
+        /// <para>Type of system event. CREATE, UPDATE, COMPLETE</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CREATE</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EventType { get; set; }
 
         /// <summary>
+        /// <para>Operator ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>system</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Operator { get; set; }
 
         /// <summary>
+        /// <para>Source business ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>31104757</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SourceBizId { get; set; }
 
         /// <summary>
+        /// <para>Source: MARKET_CLOUD_DREAM</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MARKET_CLOUD_DREAM</para>
         /// </summary>

@@ -124,6 +124,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? Quantity { get; set; }
 
         /// <summary>
+        /// <para>Resource group ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-aek2smovqqpvuly</para>
         /// </summary>
@@ -141,11 +143,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string SiteVersion { get; set; }
 
+        /// <summary>
+        /// <para>List of tags</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateAppInstanceRequestTags> Tags { get; set; }
         public class CreateAppInstanceRequestTags : TeaModel {
             /// <summary>
+            /// <para>tag key</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Group</para>
             /// </summary>
@@ -154,6 +161,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string TagKey { get; set; }
 
             /// <summary>
+            /// <para>value of tag 0</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ufo</para>
             /// </summary>

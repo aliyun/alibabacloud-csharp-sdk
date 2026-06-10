@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppConversationsRequest : TeaModel {
         /// <summary>
+        /// <para>Bot ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Zero2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BotId { get; set; }
 
         /// <summary>
+        /// <para>End modification time (ISO 8601 format)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20201212</para>
         /// </summary>
@@ -26,6 +30,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EndModifyTime { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return in each query result.  </para>
+        /// <para>Valid values: 10 to 100. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Token indicating the start of the next query. It is empty when there is no next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
         /// </summary>
@@ -42,6 +51,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +61,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Number of entries per page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -58,6 +71,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Site ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1168642640022064</para>
         /// </summary>
@@ -66,6 +81,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SiteId { get; set; }
 
         /// <summary>
+        /// <para>Start modification time (ISO 8601 format)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20200101</para>
         /// </summary>

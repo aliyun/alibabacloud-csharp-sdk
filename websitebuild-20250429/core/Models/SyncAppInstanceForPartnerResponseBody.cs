@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SyncAppInstanceForPartnerResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Request result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SyncAppInstanceForPartnerResponseBodyData Data { get; set; }
         public class SyncAppInstanceForPartnerResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Application instance information</para>
+            /// </summary>
             [NameInMap("AppInstance")]
             [Validation(Required=false)]
             public SyncAppInstanceForPartnerResponseBodyDataAppInstance AppInstance { get; set; }
             public class SyncAppInstanceForPartnerResponseBodyDataAppInstance : TeaModel {
                 /// <summary>
+                /// <para>Customer business ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>WD20250626114752000001</para>
                 /// </summary>

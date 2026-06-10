@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QuerySupabaseInstanceInfoForAdminResponseBody : TeaModel {
         /// <summary>
+        /// <para>Detailed reason for access denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>Whether retry is allowed</para>
+        /// 
         /// <b>Example:</b>
         /// <para>False</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
+        /// <para>App Name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dewuApp</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>Dynamic error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
         /// </summary>
@@ -42,6 +50,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>Dynamic error message used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> error message.  </para>
+        /// <remarks>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the provided request parameter <b>DtsJobId</b> is invalid.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
         /// </summary>
@@ -49,15 +62,23 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
+        /// <summary>
+        /// <para>Returned error parameters</para>
+        /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
+        /// <summary>
+        /// <para>Response data</para>
+        /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public QuerySupabaseInstanceInfoForAdminResponseBodyModule Module { get; set; }
         public class QuerySupabaseInstanceInfoForAdminResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>Anonymity key</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1111</para>
             /// </summary>
@@ -66,6 +87,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AnonKey { get; set; }
 
             /// <summary>
+            /// <para>Business ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>WD20250703155602000001</para>
             /// </summary>
@@ -74,6 +97,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BizId { get; set; }
 
             /// <summary>
+            /// <para>Database instance creation time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -82,6 +107,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DbInstanceCreateTime { get; set; }
 
             /// <summary>
+            /// <para>Database instance ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-2bl4djolb02</para>
             /// </summary>
@@ -90,6 +117,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DbInstanceId { get; set; }
 
             /// <summary>
+            /// <para>Database public URL</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -98,6 +127,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DbPublicUrl { get; set; }
 
             /// <summary>
+            /// <para>Database type (rds/polardb)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ORACLE</para>
             /// </summary>
@@ -106,6 +137,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DbType { get; set; }
 
             /// <summary>
+            /// <para>Additional information</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;appId\&quot;:\&quot;APP_NTJAK8P11SNZDJ3M6BWC\&quot;}</para>
             /// </summary>
@@ -114,6 +147,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Extra { get; set; }
 
             /// <summary>
+            /// <para>Instance creation completion time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -122,6 +157,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string InstanceCreateFinishedTime { get; set; }
 
             /// <summary>
+            /// <para>Instance creation status</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1111</para>
             /// </summary>
@@ -130,6 +167,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string InstanceCreateStatus { get; set; }
 
             /// <summary>
+            /// <para>Deletion flag</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -138,6 +177,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? IsDeleted { get; set; }
 
             /// <summary>
+            /// <para>RDS database access password</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -146,6 +187,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string RdsDatabasePassword { get; set; }
 
             /// <summary>
+            /// <para>Service key</para>
+            /// 
             /// <b>Example:</b>
             /// <para>e80f5a7a08514709a2fb</para>
             /// </summary>
@@ -154,6 +197,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ServiceKey { get; set; }
 
             /// <summary>
+            /// <para>Status. 0: paused; 1: running</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -162,6 +207,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? Status { get; set; }
 
             /// <summary>
+            /// <para>Supabase Dashboard password</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1111</para>
             /// </summary>
@@ -170,6 +217,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabaseDashboardPassword { get; set; }
 
             /// <summary>
+            /// <para>Supabase Dashboard username</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1111</para>
             /// </summary>
@@ -178,6 +227,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabaseDashboardUserName { get; set; }
 
             /// <summary>
+            /// <para>Supabase instance creation time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -186,6 +237,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabaseInstanceCreateTime { get; set; }
 
             /// <summary>
+            /// <para>Supabase instance ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1111</para>
             /// </summary>
@@ -204,6 +257,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabaseKongUrl { get; set; }
 
             /// <summary>
+            /// <para>Supabase instance PrivateLink address</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1111</para>
             /// </summary>
@@ -212,6 +267,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabasePrivateIp { get; set; }
 
             /// <summary>
+            /// <para>Supabase instance public endpoint</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -220,6 +277,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabasePublicIp { get; set; }
 
             /// <summary>
+            /// <para>Supabase public URL</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -228,6 +287,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabasePublicUrl { get; set; }
 
             /// <summary>
+            /// <para>Tenant ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>GFCBAMJH-zh_CN</para>
             /// </summary>
@@ -236,6 +297,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string TenantId { get; set; }
 
             /// <summary>
+            /// <para>User ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -256,6 +319,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
         /// </summary>
@@ -263,11 +328,19 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string RootErrorCode { get; set; }
 
+        /// <summary>
+        /// <para>Abnormal message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>系统异常</para>
+        /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>Reserved parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

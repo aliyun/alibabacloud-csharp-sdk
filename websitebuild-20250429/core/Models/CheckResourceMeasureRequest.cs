@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CheckResourceMeasureRequest : TeaModel {
         /// <summary>
+        /// <para>Belonging ID (site ID or Alibaba Cloud User ID)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BelongId { get; set; }
 
         /// <summary>
+        /// <para>Belonging ID Type (siteId, uid)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>USER</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BelongIdType { get; set; }
 
         /// <summary>
+        /// <para>ESP business type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizType { get; set; }
 
         /// <summary>
+        /// <para>ESP business ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>p20202933455</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EspBizId { get; set; }
 
         /// <summary>
+        /// <para>Order module information (when empty, espBizId and bizType cannot be empty)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;siteversion&quot;:&quot;test&quot;}</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderComponentParams { get; set; }
 
         /// <summary>
+        /// <para>Resource identity</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InspirationTokens</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ResourceCode { get; set; }
 
         /// <summary>
+        /// <para>Resource value; default is empty. Required only for feature-type resources. 0 indicates not supported, and 1 indicates supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

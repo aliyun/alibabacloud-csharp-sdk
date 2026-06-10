@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetUserTmpIdentityForPartnerResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Result of the request.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetUserTmpIdentityForPartnerResponseBodyData Data { get; set; }
         public class GetUserTmpIdentityForPartnerResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Credential</para>
+            /// </summary>
             [NameInMap("Credentials")]
             [Validation(Required=false)]
             public GetUserTmpIdentityForPartnerResponseBodyDataCredentials Credentials { get; set; }
             public class GetUserTmpIdentityForPartnerResponseBodyDataCredentials : TeaModel {
                 /// <summary>
+                /// <para>Encrypted temporary AccessKey ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>7t2Rzt37ND7-xxx</para>
                 /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EncryptedAccessKeyId { get; set; }
 
                 /// <summary>
+                /// <para>Encrypted temporary AccessKey secret</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>7t2Rzt37ND7-xxx</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EncryptedAccessKeySecret { get; set; }
 
                 /// <summary>
+                /// <para>Encrypted Security Token Service token</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>7t2Rzt37ND7-xxx</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EncryptedSecurityToken { get; set; }
 
                 /// <summary>
+                /// <para>Expected expiration time of the certificate</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-04-29T14:00:00Z</para>
                 /// </summary>
@@ -51,6 +65,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
             }
 
+            /// <summary>
+            /// <para>Indicates whether authorization from the Customer has been obtained.</para>
+            /// </summary>
             [NameInMap("HasCustomRoleAuth")]
             [Validation(Required=false)]
             public bool? HasCustomRoleAuth { get; set; }
@@ -58,6 +75,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
+        /// <para>error code. The value is interpreted as follows: If the request succeeded, the ErrorCode field is not returned. If the request failed, the ErrorCode field is returned. For more information, see the error code List in this topic.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -66,6 +85,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</para>
         /// </summary>
@@ -84,6 +105,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

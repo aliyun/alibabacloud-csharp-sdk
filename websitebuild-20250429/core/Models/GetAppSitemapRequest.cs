@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppSitemapRequest : TeaModel {
         /// <summary>
+        /// <para>Business ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Domain name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yjdw.bpu.edu.cn-waf</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Domain { get; set; }
 
         /// <summary>
+        /// <para>Search engine type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>type</para>
         /// </summary>

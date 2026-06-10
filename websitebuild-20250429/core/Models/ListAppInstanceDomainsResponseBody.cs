@@ -222,18 +222,30 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 }
 
+                /// <summary>
+                /// <para>Domain name qualification information</para>
+                /// </summary>
                 [NameInMap("Qualification")]
                 [Validation(Required=false)]
                 public ListAppInstanceDomainsResponseBodyModuleDataQualification Qualification { get; set; }
                 public class ListAppInstanceDomainsResponseBodyModuleDataQualification : TeaModel {
+                    /// <summary>
+                    /// <para>ICP entity filing number</para>
+                    /// </summary>
                     [NameInMap("IcpRecordNumber")]
                     [Validation(Required=false)]
                     public string IcpRecordNumber { get; set; }
 
+                    /// <summary>
+                    /// <para>ICP website filing number</para>
+                    /// </summary>
                     [NameInMap("IcpSiteRecordNumber")]
                     [Validation(Required=false)]
                     public string IcpSiteRecordNumber { get; set; }
 
+                    /// <summary>
+                    /// <para>Public security filing number</para>
+                    /// </summary>
                     [NameInMap("PoliceRecordNumber")]
                     [Validation(Required=false)]
                     public string PoliceRecordNumber { get; set; }
@@ -503,18 +515,30 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
                 }
 
+                /// <summary>
+                /// <para>Domain name qualification information</para>
+                /// </summary>
                 [NameInMap("Qualification")]
                 [Validation(Required=false)]
                 public ListAppInstanceDomainsResponseBodyModuleNextQualification Qualification { get; set; }
                 public class ListAppInstanceDomainsResponseBodyModuleNextQualification : TeaModel {
+                    /// <summary>
+                    /// <para>ICP filing number of the entity</para>
+                    /// </summary>
                     [NameInMap("IcpRecordNumber")]
                     [Validation(Required=false)]
                     public string IcpRecordNumber { get; set; }
 
+                    /// <summary>
+                    /// <para>ICP filing number for the website</para>
+                    /// </summary>
                     [NameInMap("IcpSiteRecordNumber")]
                     [Validation(Required=false)]
                     public string IcpSiteRecordNumber { get; set; }
 
+                    /// <summary>
+                    /// <para>Public security filing number</para>
+                    /// </summary>
                     [NameInMap("PoliceRecordNumber")]
                     [Validation(Required=false)]
                     public string PoliceRecordNumber { get; set; }

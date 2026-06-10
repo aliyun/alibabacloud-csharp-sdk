@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class UpdateMiniAppBindingResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Request result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateMiniAppBindingResponseBodyData Data { get; set; }
         public class UpdateMiniAppBindingResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the operation succeeded.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>

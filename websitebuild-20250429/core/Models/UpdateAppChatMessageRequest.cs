@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class UpdateAppChatMessageRequest : TeaModel {
         /// <summary>
+        /// <para>Appended message metadata (JSON format)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AddedMetaData { get; set; }
 
         /// <summary>
+        /// <para>Message content</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FormatVersion: OOS-2019-06-01nTasks:n  - Name: runCommandn    Action: \&quot;ACS::ECS::RunCommand\&quot;n    Properties:n      commandContent: \&quot; echo Hksqj@@883289</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>Session ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>81bc5a34-1d8d-4ef7-a208-7401c51b054b</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>Message ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7baf7d67-1897-42ed-a380-f6ae825d6907</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppInstanceEntitlementRequest : TeaModel {
         /// <summary>
+        /// <para>Application instance business ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WD20250814102215000001</para>
         /// </summary>

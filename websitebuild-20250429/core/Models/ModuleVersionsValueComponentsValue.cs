@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ModuleVersionsValueComponentsValue : TeaModel {
         /// <summary>
+        /// <para>Unique component code (system internal identity)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ComponentCode</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ComponentCode { get; set; }
 
         /// <summary>
+        /// <para>Widget display name (user-visible name)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ComponentName</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string ComponentName { get; set; }
 
+        /// <summary>
+        /// <para>Component instance attribute configuration</para>
+        /// </summary>
         [NameInMap("InstanceProperty")]
         [Validation(Required=false)]
         public List<ModuleVersionsValueComponentsValueInstanceProperty> InstanceProperty { get; set; }
         public class ModuleVersionsValueComponentsValueInstanceProperty : TeaModel {
             /// <summary>
+            /// <para>Property encoding (system internal identity)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>code</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Code { get; set; }
 
             /// <summary>
+            /// <para>Attribute display name (user-visible name)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>name</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Attribute Value encoding (internal System value)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>value</para>
             /// </summary>
@@ -53,11 +66,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             [Validation(Required=false)]
             public string Value { get; set; }
 
+            /// <summary>
+            /// <para>List of module Attribute Values</para>
+            /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
             public List<ModuleVersionsValueComponentsValueInstancePropertyValues> Values { get; set; }
             public class ModuleVersionsValueComponentsValueInstancePropertyValues : TeaModel {
                 /// <summary>
+                /// <para>Property encoding (system internal identity)</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>code</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Code { get; set; }
 
                 /// <summary>
+                /// <para>Attribute Value encoding (internal System value)</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>value</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Value { get; set; }
 
                 /// <summary>
+                /// <para>Property display name (User-visible name)</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>name</para>
                 /// </summary>
@@ -85,11 +107,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 
         }
 
+        /// <summary>
+        /// <para>Widget instance attribute configuration</para>
+        /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]
         public Dictionary<string, ModuleVersionsValueComponentsValuePropertiesValue> Properties { get; set; }
 
         /// <summary>
+        /// <para>Module property status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>attr</para>
         /// </summary>

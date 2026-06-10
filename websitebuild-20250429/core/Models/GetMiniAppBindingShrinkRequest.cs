@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetMiniAppBindingShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Site ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WS20250814102215000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Channel</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WECHAT</para>
         /// </summary>
@@ -25,6 +29,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string Channel { get; set; }
 
+        /// <summary>
+        /// <para>List of extension information keys</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SERVER_DOMAIN</para>
+        /// </summary>
         [NameInMap("SettingKeys")]
         [Validation(Required=false)]
         public string SettingKeysShrink { get; set; }

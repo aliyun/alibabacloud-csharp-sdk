@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class EditPluginConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>Detailed reason for access denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>Whether retry is allowed</para>
+        /// 
         /// <b>Example:</b>
         /// <para>False</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
+        /// <para>The application name must start with a letter and can contain letters, digits, underscores (_), and hyphens (-). It supports up to 36 characters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>Dynamic code, currently unused. Please ignore.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>Error message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
         /// </summary>
@@ -49,11 +59,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
+        /// <summary>
+        /// <para>Faulty parameters.</para>
+        /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
+        /// <para>Response data</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -72,6 +87,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
         /// </summary>
@@ -80,6 +97,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
+        /// <para>Abnormal message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
         /// </summary>
@@ -88,6 +107,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>Whether processing is synchronous</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

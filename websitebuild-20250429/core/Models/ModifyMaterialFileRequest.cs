@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ModifyMaterialFileRequest : TeaModel {
         /// <summary>
+        /// <para>Application instance business ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>File ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +32,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string FileId { get; set; }
 
         /// <summary>
+        /// <para>Modified file Name</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试文件</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

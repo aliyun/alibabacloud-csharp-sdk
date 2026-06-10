@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class PushResourceMeasureRequest : TeaModel {
         /// <summary>
+        /// <para>Resource usage amount</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public long? Amount { get; set; }
 
         /// <summary>
+        /// <para>Belonging ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BelongId { get; set; }
 
         /// <summary>
+        /// <para>Belonging ID Type (siteId, uid)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>USER</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BelongIdType { get; set; }
 
         /// <summary>
+        /// <para>Business ID associated with this push, such as session ID, Job ID, or file ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WS20250801154628000001</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Metering data, used to flexibly push multiple data points such as model invocation count and token usage (JSON string)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;MD5\&quot;:\&quot;8ba46100bd898461f0f589704f2fad25\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;769\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:false,\&quot;uefi_preferred\&quot;:false}</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string MeasureData { get; set; }
 
         /// <summary>
+        /// <para>Business extension metadata (in Map format, must be a JSON string)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;MD5\&quot;:\&quot;8ba46100bd898461f0f589704f2fad25\&quot;,\&quot;driver\&quot;:\&quot;vhd\&quot;,\&quot;flag\&quot;:\&quot;769\&quot;,\&quot;imds_support\&quot;:\&quot;v1\&quot;,\&quot;io_optimized\&quot;:true,\&quot;nvme_supported\&quot;:false,\&quot;uefi_preferred\&quot;:false}</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string MetaData { get; set; }
 
         /// <summary>
+        /// <para>Resource identity</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InspirationTokens</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ResourceCode { get; set; }
 
         /// <summary>
+        /// <para>Usage time, format: yyyy-MM-dd HH:mm:ss</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yyyy-MM-dd HH:mm:ss</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string UseTime { get; set; }
 
         /// <summary>
+        /// <para>Usage type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MANUAL_BIZ</para>
         /// </summary>

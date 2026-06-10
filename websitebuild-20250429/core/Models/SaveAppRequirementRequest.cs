@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SaveAppRequirementRequest : TeaModel {
         /// <summary>
+        /// <para>Session ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5b7105a2-2999-430b-ba23-ba09149d5434</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
+        /// <para>Requirement document content</para>
+        /// 
         /// <b>Example:</b>
         /// <para>prd</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppSupabaseInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>Detailed reason for access denial.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
+        /// <para>Is retry allowed</para>
+        /// 
         /// <b>Example:</b>
         /// <para>False</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
+        /// <para>App Name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>Dynamic error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
         /// </summary>
@@ -42,6 +50,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
+        /// <para>Dynamic error message, used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> error message.  </para>
+        /// <remarks>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the provided request parameter <b>DtsJobId</b> is invalid.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
         /// </summary>
@@ -49,15 +62,23 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string DynamicMessage { get; set; }
 
+        /// <summary>
+        /// <para>Returned error parameters</para>
+        /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
+        /// <summary>
+        /// <para>Task object</para>
+        /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public GetAppSupabaseInstanceResponseBodyModule Module { get; set; }
         public class GetAppSupabaseInstanceResponseBodyModule : TeaModel {
             /// <summary>
+            /// <para>anonymity key</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1111</para>
             /// </summary>
@@ -66,6 +87,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AnonKey { get; set; }
 
             /// <summary>
+            /// <para>application instance business ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>WS20250915163734000001</para>
             /// </summary>
@@ -74,6 +97,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BizId { get; set; }
 
             /// <summary>
+            /// <para>database instance ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-2bl4djolb02</para>
             /// </summary>
@@ -82,6 +107,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DbInstanceId { get; set; }
 
             /// <summary>
+            /// <para>Database public URL</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -90,6 +117,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DbPublicUrl { get; set; }
 
             /// <summary>
+            /// <para>instance creation status</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1111</para>
             /// </summary>
@@ -98,6 +127,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string InstanceCreateStatus { get; set; }
 
             /// <summary>
+            /// <para>service key</para>
+            /// 
             /// <b>Example:</b>
             /// <para>e80f5a7a08514709a2fb</para>
             /// </summary>
@@ -106,7 +137,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ServiceKey { get; set; }
 
             /// <summary>
-            /// <para>trial,draft,live,refunded,expired,released</para>
+            /// <para>trial, draft, live, refunded, expired, released</para>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -116,6 +147,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? Status { get; set; }
 
             /// <summary>
+            /// <para>Supabase instance ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1111</para>
             /// </summary>
@@ -124,6 +157,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SupabaseInstanceId { get; set; }
 
             /// <summary>
+            /// <para>Supabase public URL</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -144,6 +179,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
         /// </summary>
@@ -151,11 +188,19 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string RootErrorCode { get; set; }
 
+        /// <summary>
+        /// <para>Abnormal message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>系统异常</para>
+        /// </summary>
         [NameInMap("RootErrorMsg")]
         [Validation(Required=false)]
         public string RootErrorMsg { get; set; }
 
         /// <summary>
+        /// <para>Spare parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

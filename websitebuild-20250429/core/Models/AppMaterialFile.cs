@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class AppMaterialFile : TeaModel {
         /// <summary>
+        /// <para>Application instance ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Content Type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>image/png</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ContentType { get; set; }
 
         /// <summary>
+        /// <para>Creation Time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-11-03 02:05:01</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>Deletion Time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-11-03 02:05:01</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DeletedTime { get; set; }
 
         /// <summary>
+        /// <para>Folder ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ddddwww</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
+        /// <para>File ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>d75e1e9693cc460da218419d67735567</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string FileId { get; set; }
 
         /// <summary>
+        /// <para>File URL</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://demo-moshicloud-test.oss-cn-hangzhou-internal.aliyuncs.com/document/testcase/aliyun/api_case/pdf_angle90_page1.pdf">https://demo-moshicloud-test.oss-cn-hangzhou-internal.aliyuncs.com/document/testcase/aliyun/api_case/pdf_angle90_page1.pdf</a></para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string FileUrl { get; set; }
 
         /// <summary>
+        /// <para>Image height</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1280</para>
         /// </summary>
@@ -73,11 +89,19 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public int? Height { get; set; }
 
+        /// <summary>
+        /// <para>File name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>文件名</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>File Status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
         /// </summary>
@@ -86,6 +110,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Bucket size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23M</para>
         /// </summary>
@@ -94,6 +120,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string StorageSize { get; set; }
 
         /// <summary>
+        /// <para>File suffix</para>
+        /// 
         /// <b>Example:</b>
         /// <para>png</para>
         /// </summary>
@@ -102,6 +130,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Suffix { get; set; }
 
         /// <summary>
+        /// <para>File Type</para>
+        /// 
         /// <b>Example:</b>
         /// <para>IMAGE</para>
         /// </summary>
@@ -110,6 +140,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>Image width</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1920</para>
         /// </summary>

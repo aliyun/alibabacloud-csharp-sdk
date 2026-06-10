@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class AppMaterialTask : TeaModel {
         /// <summary>
+        /// <para>Job completion time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-12-26 11:30:05</para>
         /// </summary>
@@ -17,19 +19,36 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string CompleteTime { get; set; }
 
+        /// <summary>
+        /// <para>Completion time display format</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1分钟前</para>
+        /// </summary>
         [NameInMap("CompleteTimeFormat")]
         [Validation(Required=false)]
         public string CompleteTimeFormat { get; set; }
 
+        /// <summary>
+        /// <para>Reason for failure</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>参数不合规</para>
+        /// </summary>
         [NameInMap("FailReason")]
         [Validation(Required=false)]
         public string FailReason { get; set; }
 
+        /// <summary>
+        /// <para>List of final files</para>
+        /// </summary>
         [NameInMap("FinalFileUrls")]
         [Validation(Required=false)]
         public List<string> FinalFileUrls { get; set; }
 
         /// <summary>
+        /// <para>Task Status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
         /// </summary>
@@ -38,6 +57,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Job substatus</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PENDING</para>
         /// </summary>
@@ -46,6 +67,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SubStatus { get; set; }
 
         /// <summary>
+        /// <para>Submitted At.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-12-26 11:30:05</para>
         /// </summary>
@@ -54,6 +77,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SubmitTime { get; set; }
 
         /// <summary>
+        /// <para>Job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>81d04d62c3483b32bacf1d306d2622b2</para>
         /// </summary>
@@ -61,11 +86,23 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
+        /// <summary>
+        /// <para>Job parameter</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;brandName&quot;: &quot;品牌名称&quot;,
+        ///     &quot;direction&quot;: &quot;HORIZONTAL&quot;,
+        ///     &quot;userPrompt&quot;: &quot;设计要求&quot;
+        /// }</para>
+        /// </summary>
         [NameInMap("TaskParam")]
         [Validation(Required=false)]
         public string TaskParam { get; set; }
 
         /// <summary>
+        /// <para>Task Type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>IMAGE_LOGO</para>
         /// </summary>

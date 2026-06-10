@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryMaterialDirectoryTreeRequest : TeaModel {
         /// <summary>
+        /// <para>Application instance ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WS20250731233102000001</para>
         /// </summary>
@@ -17,11 +19,15 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether shared folders are hidden.</para>
+        /// </summary>
         [NameInMap("HiddenPublic")]
         [Validation(Required=false)]
         public bool? HiddenPublic { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is for the top-level root folder.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryInspirationConsumeRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>Query end time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1762999521</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>Sorting field</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
+        /// <para>Sorting type: ASC or DESC</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderType { get; set; }
 
         /// <summary>
+        /// <para>Page number, default is 1</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
+        /// <para>Page size, default is 10</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -49,11 +59,19 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>Scenario Name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>百灵鸟-人员认证</para>
+        /// </summary>
         [NameInMap("SceneName")]
         [Validation(Required=false)]
         public string SceneName { get; set; }
 
         /// <summary>
+        /// <para>Start Time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-10-19T16:00:00Z</para>
         /// </summary>

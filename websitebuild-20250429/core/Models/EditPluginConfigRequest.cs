@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class EditPluginConfigRequest : TeaModel {
         /// <summary>
+        /// <para>Business ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
+        /// <para>Plugin configuration</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -26,14 +30,18 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PluginConfig { get; set; }
 
         /// <summary>
+        /// <para>Plugin description</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>通义万相通过文字描述生成图片</para>
+        /// <para>根据关键字查询相关的Github Repositories</para>
         /// </summary>
         [NameInMap("PluginDesc")]
         [Validation(Required=false)]
         public string PluginDesc { get; set; }
 
         /// <summary>
+        /// <para>Plugin ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aliplayer-react</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PluginId { get; set; }
 
         /// <summary>
+        /// <para>Plugin name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>alisecguard</para>
         /// </summary>

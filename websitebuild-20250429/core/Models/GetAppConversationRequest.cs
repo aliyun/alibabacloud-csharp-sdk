@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppConversationRequest : TeaModel {
         /// <summary>
+        /// <para>Bot ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Zero2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BotId { get; set; }
 
         /// <summary>
+        /// <para>Session ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>81bc5a34-1d8d-4ef7-a208-7401c51b054b</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppCodeWorkspaceDetailRequest : TeaModel {
         /// <summary>
+        /// <para>Site ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1071596645435968</para>
         /// </summary>

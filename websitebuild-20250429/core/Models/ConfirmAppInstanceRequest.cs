@@ -49,6 +49,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public int? Duration { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{\&quot;deliveryNodeName\&quot;:\&quot;视觉设计确认\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</para>
+        /// </summary>
         [NameInMap("Extend")]
         [Validation(Required=false)]
         public string Extend { get; set; }

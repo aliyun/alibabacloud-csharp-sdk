@@ -17,6 +17,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string LiveToken { get; set; }
 
         /// <summary>
+        /// <para>Set the operation to perform on the alert. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>deal</b>: Handle the alert (fencing)</description></item>
+        /// <item><description><b>ignore</b>: Ignore</description></item>
+        /// <item><description><b>mark_mis_info</b>: Mark as false positive (add to whitelist)</description></item>
+        /// <item><description><b>rm_mark_mis_info</b>: Unmark as false positive (remove from whitelist)</description></item>
+        /// <item><description><b>offline_handled</b>: Mark as Completed</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +35,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Operation { get; set; }
 
         /// <summary>
+        /// <para>Error parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[\&quot;\&quot;]</para>
         /// </summary>
@@ -35,6 +45,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Params { get; set; }
 
         /// <summary>
+        /// <para>Product code</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
