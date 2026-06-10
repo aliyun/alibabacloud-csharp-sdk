@@ -15,28 +15,26 @@ namespace AlibabaCloud.SDK.ModelService20220614.Models
 
         [NameInMap("ApiKeys")]
         [Validation(Required=false)]
-        public object ApiKeys { get; set; }
+        public List<GetUserResponseBodyApiKeys> ApiKeys { get; set; }
+        public class GetUserResponseBodyApiKeys : TeaModel {
+            [NameInMap("ApiKey")]
+            [Validation(Required=false)]
+            public string ApiKey { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>20200425******</para>
-        /// </summary>
+            [NameInMap("InnerApiKey")]
+            [Validation(Required=false)]
+            public string InnerApiKey { get; set; }
+
+        }
+
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>OK</para>
-        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>ai-service.******.alicontainer.com</para>
-        /// </summary>
         [NameInMap("Host")]
         [Validation(Required=false)]
         public string Host { get; set; }
@@ -45,26 +43,14 @@ namespace AlibabaCloud.SDK.ModelService20220614.Models
         [Validation(Required=false)]
         public string InnerToken { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>success</para>
-        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>897658D5-1FB8-5CFA-A030-727CCAE59EB0</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>Njk0Njk******</para>
-        /// </summary>
         [NameInMap("Token")]
         [Validation(Required=false)]
         public string Token { get; set; }
