@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1748312544852</para>
         /// </summary>
         [NameInMap("requestTime")]
         [Validation(Required=false)]
@@ -35,10 +38,17 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3spKwUgUpAGsXbbrHKnpVJPlI9wamoyhh96uqJuSyCKyJ7oscLAHRcz15dSzLG5L+ywFgYXSQNqdRtsn/Ri0j7pD0IuoKt9R7EnNo/U6viPvWD3Ldp3ehDDtOFtSrpUg6LTedvGtUWYU4x/zSD2jgCXijEdZCCMGCypcheMHRXfInYWF1xFtnCEXJfxtrBrnCk1p/pW3JSmdHJzmInnUEO3dWbNe3A==</para>
         /// </summary>
         [NameInMap("signature")]
         [Validation(Required=false)]
         public string Signature { get; set; }
+
+        [NameInMap("workspaceId")]
+        [Validation(Required=false)]
+        public string WorkspaceId { get; set; }
 
     }
 

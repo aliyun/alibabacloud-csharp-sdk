@@ -57,6 +57,10 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816.Models
             [Validation(Required=false)]
             public string Signature { get; set; }
 
+            [NameInMap("workspaceId")]
+            [Validation(Required=false)]
+            public string WorkspaceId { get; set; }
+
         }
 
         /// <summary>

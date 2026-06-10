@@ -335,6 +335,10 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816
             {
                 body["signature"] = request.Signature;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -392,6 +396,10 @@ namespace AlibabaCloud.SDK.BailianModelOnChip20240816
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Signature))
             {
                 body["signature"] = request.Signature;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                body["workspaceId"] = request.WorkspaceId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
