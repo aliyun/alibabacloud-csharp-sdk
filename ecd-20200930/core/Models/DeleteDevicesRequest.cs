@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ClientType")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("Force")]
         [Validation(Required=false)]

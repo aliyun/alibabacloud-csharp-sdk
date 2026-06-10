@@ -72,8 +72,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The time when the premium bandwidth plan expires.</para>
             /// <list type="bullet">
-            /// <item><description>If the plan is a subscription one, the time when the plan expires is returned.</description></item>
-            /// <item><description>If the plan is a pay-as-you-go one, <c>2099-12-31T15:59:59Z</c> is returned.</description></item>
+            /// <item><description><para>If the plan is a subscription one, the time when the plan expires is returned.</para>
+            /// </description></item>
+            /// <item><description><para>If the plan is a pay-as-you-go one, <c>2099-12-31T15:59:59Z</c> is returned.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,8 +95,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// </description></item>
             /// <item><description><para>Valid values when the <c>PayType</c> parameter is set to <c>PostPaid</c>:</para>
             /// <list type="bullet">
-            /// <item><description>PayByTraffic: charges by data transfer.</description></item>
-            /// <item><description>PayByBandwidth: charges by fixed bandwidth.</description></item>
+            /// <item><description><para>PayByTraffic: charges by data transfer.</para>
+            /// </description></item>
+            /// <item><description><para>PayByBandwidth: charges by fixed bandwidth.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -170,7 +174,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The office network name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>default</para>
             /// </summary>
             [NameInMap("OfficeSiteName")]
             [Validation(Required=false)]
@@ -180,9 +184,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The type of the office network.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>standard: advanced office network</description></item>
-            /// <item><description>customized: custom office network</description></item>
-            /// <item><description>basic: basic office network</description></item>
+            /// <item><description><para>standard: advanced office network</para>
+            /// </description></item>
+            /// <item><description><para>customized: custom office network</para>
+            /// </description></item>
+            /// <item><description><para>basic: basic office network</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -196,8 +203,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The billing method of the premium bandwidth plan.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PostPaid: pay-as-you-go</description></item>
-            /// <item><description>PrePaid: subscription</description></item>
+            /// <item><description><para>PostPaid: pay-as-you-go</para>
+            /// </description></item>
+            /// <item><description><para>PrePaid: subscription</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

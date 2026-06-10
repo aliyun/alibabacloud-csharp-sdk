@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class QueryHistoryMetricDistributionResponseBody : TeaModel {
+        /// <summary>
+        /// <para>An array of objects, each representing the distribution data for a specific value range.</para>
+        /// </summary>
         [NameInMap("DistributionList")]
         [Validation(Required=false)]
         public List<QueryHistoryMetricDistributionResponseBodyDistributionList> DistributionList { get; set; }
         public class QueryHistoryMetricDistributionResponseBodyDistributionList : TeaModel {
             /// <summary>
+            /// <para>The number of data points in this value range.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>40</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Count { get; set; }
 
             /// <summary>
+            /// <para>The range label that you defined in the request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2F2BF549-CBD9-1FED-9ABB-086B62D7B293</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Label { get; set; }
 
             /// <summary>
+            /// <para>The maximum value of the value range.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public float? Max { get; set; }
 
             /// <summary>
+            /// <para>The minimum value of the value range.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2F2BF549-CBD9-1FED-9ABB-086B62D7B293</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of data points that match the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>94</para>
         /// </summary>

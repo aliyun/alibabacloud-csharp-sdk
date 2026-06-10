@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is empty, all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6mnFXZiT7NdvGNgkInJ****</para>
@@ -40,13 +40,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The returned results.</para>
         /// </summary>
         [NameInMap("Results")]
         [Validation(Required=false)]
         public List<DescribeGlobalTimerRecordsResponseBodyResults> Results { get; set; }
         public class DescribeGlobalTimerRecordsResponseBodyResults : TeaModel {
             /// <summary>
+            /// <para>The type of action performed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>REBOOT</para>
             /// </summary>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ActionType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the batch in which the scheduled task is executed.</para>
+            /// <para>The batch ID of the scheduled task execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ccg-0cvfvf6u1enx1****</para>
@@ -65,6 +67,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BatchId { get; set; }
 
             /// <summary>
+            /// <para>The recorded information during the execution of the scheduled task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Context { get; set; }
 
             /// <summary>
-            /// <para>The time when the execution record was created.</para>
+            /// <para>The time when the record was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-03T08:27:29Z</para>
@@ -83,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The cloud computer ID.</para>
+            /// <para>The cloud desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-0c951fy9arnk9****</para>
@@ -93,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The cloud computer name.</para>
+            /// <para>The cloud desktop name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DesktopName</para>
@@ -111,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DisplayResultName { get; set; }
 
             /// <summary>
-            /// <para>The time when the scheduled task ended.</para>
+            /// <para>The time when the task ended.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-21T02:00:45Z</para>
@@ -147,7 +151,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? Retryable { get; set; }
 
             /// <summary>
-            /// <para>The ID of the scheduled task group.</para>
+            /// <para>The scheduled task group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ccg-xxxx</para>

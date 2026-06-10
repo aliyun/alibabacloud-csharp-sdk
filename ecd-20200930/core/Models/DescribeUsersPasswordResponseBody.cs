@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The display name of the end user.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>alice_1365*****</para>
+            /// <para>demo_user01_1488****</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The ID of the end user.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>alice</para>
+            /// <para>demo_user01</para>
             /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The password of the end user.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>tes123</para>
+            /// <para>3q8p-NDey-2Nac-TWcQ-****</para>
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]

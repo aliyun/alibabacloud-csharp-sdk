@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>t-7d2a745b412b4601b2d47f6a768d****</para>
+        /// <para>t-hz059ngm63k****</para>
         /// </summary>
         [NameInMap("InvokeId")]
         [Validation(Required=false)]

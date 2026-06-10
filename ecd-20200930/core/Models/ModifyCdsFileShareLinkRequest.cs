@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The number of times that the shared files are downloaded. The value of this parameter must be equal to or greater than 0.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("DownloadCount")]
         [Validation(Required=false)]
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The limit on the number of times that the shared files can be downloaded. The value of this parameter must be equal to or greater than 0. The value 0 specifies that no limit is imposed on the number of times that the shared files can be downloaded.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("DownloadLimit")]
         [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The number of times that the shared files are previewed. The value of this parameter must be equal to or greater than 0.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PreviewCount")]
         [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The number of times that the shared files are reported. The value of this parameter must be equal to or greater than 0.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("ReportCount")]
         [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The number of times that the shared files are dumped. The value of this parameter must be equal to or greater than 0.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("SaveCount")]
         [Validation(Required=false)]
@@ -204,6 +204,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <remarks>
         /// <para> The sharing task name must be 0 to 128 characters in length.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>File sharing</para>
         /// </summary>
         [NameInMap("ShareName")]
         [Validation(Required=false)]
@@ -249,7 +252,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The number of times that the videos are previewed in the shared files. The value of this parameter must be equal to or greater than 0.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("VideoPreviewCount")]
         [Validation(Required=false)]

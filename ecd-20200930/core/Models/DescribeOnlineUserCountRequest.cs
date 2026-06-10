@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeOnlineUserCountRequest : TeaModel {
         /// <summary>
+        /// <remarks>
+        /// <para>This parameter is for internal use only.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +22,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? BizType { get; set; }
 
         /// <summary>
+        /// <para>The office site ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai+dir-631324****</para>
         /// </summary>
@@ -26,6 +32,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -34,6 +42,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region to search. This filters the results to show only resources from the specified region.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>

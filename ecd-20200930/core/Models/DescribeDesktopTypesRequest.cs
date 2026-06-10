@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopTypesRequest : TeaModel {
         /// <summary>
-        /// <para>Applicable Scope of specifications. Default value: <c>Public</c></para>
+        /// <para>The scope of the instance types to query. Default value: <c>Public</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Public</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? CpuCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer share you want to modify. If this parameter is provided, the response will include compatibility information for the specified specification.</para>
+        /// <para>The ID of the desktop group to reconfigure. If you specify this parameter, the response returns only the instance types that are compatible with the specified group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-abcdefg****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupIdForModify { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer when you change instance types of cloud computers. If you specify this parameter, the information about whether the instance type is compatible with the cloud computer is included in the response.</para>
+        /// <para>The ID of the WUYING Workspace to reconfigure. If you specify this parameter, the response returns only the instance types that are compatible with the specified workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -58,36 +58,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopScenario { get; set; }
 
         /// <summary>
-        /// <para>The specification ID.</para>
+        /// <para>The ID of the instance type.</para>
         /// <remarks>
-        /// <para> If both <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> are empty, all cloud computer specifications will be queried.</para>
+        /// <para>If you omit both the <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> parameters, the operation returns all available WUYING Workspace instance types.</para>
         /// </remarks>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>eds.enterprise_office.4c8g</description></item>
-        /// <item><description>eds.hf.4c8g</description></item>
-        /// <item><description>ecd.basic.large</description></item>
-        /// <item><description>ecd.advanced.large</description></item>
-        /// <item><description>eds.enterprise_office.8c16g</description></item>
-        /// <item><description>ecd.basic.small</description></item>
-        /// <item><description>ecd.graphics.2xlarge</description></item>
-        /// <item><description>eds.hf.8c16g</description></item>
-        /// <item><description>eds.hf.12c24g</description></item>
-        /// <item><description>eds.general.8c16g</description></item>
-        /// <item><description>eds.general.16c32g</description></item>
-        /// <item><description>ecd.advanced.xlarge</description></item>
-        /// <item><description>eds.graphics.16c1t4</description></item>
-        /// <item><description>ecd.graphics.xlarge</description></item>
-        /// <item><description>ecd.performance.2xlarge</description></item>
-        /// <item><description>eds.general.8c32g</description></item>
-        /// <item><description>eds.general.2c2g</description></item>
-        /// <item><description>eds.general.2c4g</description></item>
-        /// <item><description>eds.graphics.24c1t4</description></item>
-        /// <item><description>eds.general.4c8g</description></item>
-        /// <item><description>eds.enterprise_office.2c4g</description></item>
-        /// <item><description>eds.general.4c16g</description></item>
-        /// <item><description>eds.general.2c8g</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ecd.graphics.xlarge</para>
@@ -97,14 +71,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopTypeId { get; set; }
 
         /// <summary>
-        /// <para>The specification IDs.</para>
+        /// <para>An array of instance type IDs.</para>
         /// </summary>
         [NameInMap("DesktopTypeIdList")]
         [Validation(Required=false)]
         public List<string> DesktopTypeIdList { get; set; }
 
         /// <summary>
-        /// <para>The number of GPUs.</para>
+        /// <para>The number of vGPUs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -115,13 +89,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The GPU driver type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>T4</description></item>
-        /// <item><description>A10</description></item>
-        /// <item><description>G28</description></item>
-        /// <item><description>G39</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>A10</para>
@@ -130,32 +97,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string GpuDriverType { get; set; }
 
-        /// <summary>
-        /// <para>The GPU memory size. Unit: MB.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>2048</para>
-        /// </summary>
         [NameInMap("GpuMemory")]
         [Validation(Required=false)]
         public int? GpuMemory { get; set; }
 
         /// <summary>
-        /// <para>The name of the specification family.</para>
+        /// <para>The instance type family.</para>
         /// <remarks>
-        /// <para> If both <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> are empty, all specification families will be queried.</para>
+        /// <para>If you omit both the <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> parameters, the operation returns all available WUYING Workspace instance types.</para>
         /// </remarks>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ecd.advanced</description></item>
-        /// <item><description>eds.graphics</description></item>
-        /// <item><description>ecd.basic</description></item>
-        /// <item><description>eds.enterprise_office</description></item>
-        /// <item><description>eds.hf</description></item>
-        /// <item><description>ecd.graphics</description></item>
-        /// <item><description>eds.general</description></item>
-        /// <item><description>ecd.performance</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ecd.graphics</para>
@@ -165,10 +115,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// <para>The memory size. Unit: MiB.</para>
+        /// <para>The memory size, in MiB.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4</para>
+        /// <para>4096</para>
         /// </summary>
         [NameInMap("MemorySize")]
         [Validation(Required=false)]
@@ -179,12 +129,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The sorting field. If this parameter is not provided, results are sorted by creation time in descending order.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Memory: sorts by memory size.</description></item>
-        /// <item><description>Cpu: sorts by the number of vCPUs.</description></item>
-        /// </list>
+        /// <para>The property by which to sort the results. If you omit this parameter, the results are sorted by creation time in descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Memory</para>
@@ -204,7 +149,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions that Elastic Desktop Service supports.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -215,12 +160,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The sales mode of the specification.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>MonthPackage: the monthly subscription mode.</description></item>
-        /// <item><description>FastBuy: the quick purchase mode.</description></item>
-        /// </list>
+        /// <para>The billing method of the instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FastBuy</para>
@@ -234,12 +174,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> ScopeSet { get; set; }
 
         /// <summary>
-        /// <para>The sorting order.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ASC (default): the ascending order.</description></item>
-        /// <item><description>DESC: the descending order.</description></item>
-        /// </list>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ASC</para>
@@ -249,7 +184,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SortType { get; set; }
 
         /// <summary>
-        /// <para>The number of sessions supported by the specification.</para>
+        /// <para>Filters for instance types that support at least the specified number of concurrent sessions. This parameter applies only to multi-session instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -260,11 +195,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

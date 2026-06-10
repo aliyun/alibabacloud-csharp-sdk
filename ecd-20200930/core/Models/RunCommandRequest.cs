@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RunCommandRequest : TeaModel {
         /// <summary>
-        /// <para>The content of the command. The command content can be plaintext or Base64-encoded.\
-        /// The Base64-encoded command content cannot exceed 16 KB in size.</para>
+        /// <para>The script content in plaintext or Base64-encoded format.<br>
+        /// The Base64-encoded script content cannot exceed 16 KB.<br></para>
         /// <remarks>
-        /// <para>If the command content is Base64-encoded, you must set the ContentEncoding parameter to Base64.</para>
+        /// <para>If the script content is Base64-encoded, you must set the <c>ContentEncoding</c> parameter to <c>Base64</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,12 +29,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CommandRole { get; set; }
 
         /// <summary>
-        /// <para>The encoding mode of the command content. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PlainText: The command content is not encoded.</description></item>
-        /// <item><description>Base64: The command content is Base64-encoded.</description></item>
-        /// </list>
-        /// <para>Default value: PlainText. If the specified value of this parameter is invalid, PlainText is used by default.</para>
+        /// <para>The encoding mode of the script content.</para>
+        /// <remarks>
+        /// <para>If you specify a value that is not a valid enumeration member, the system defaults to <c>PlainText</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Base64</para>
@@ -44,8 +42,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ContentEncoding { get; set; }
 
         /// <summary>
-        /// <para>The ID of cloud desktop N. Valid values of N: 1 to 50.\
-        /// If multiple cloud desktops are specified and the command execution succeeds on at least one of the cloud desktops, the operation is considered successful. If multiple cloud desktops are specified and the command execution fails on all the cloud desktops, verify the value of the parameter and try again.</para>
+        /// <para>The IDs of the cloud computers on which to run the script. You can specify up to 50 IDs.<br>
+        /// The API call is considered successful if the script runs on at least one of the specified cloud computers. The call fails only if the script fails on all of them.<br></para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesktopId")]
@@ -53,17 +51,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user. If you specify a value, you run the command as the end user that is granted specific permissions. Note: The end user has sessions on a cloud computer. That is, when the cloud computer is started, the end user logs on to an Alibaba Cloud Workspace client and connects to the cloud computer, and the cloud computer is not preempted by another end user during the connection. This parameter is not available for Linux cloud computers.</para>
+        /// <para>If you specify this parameter, the command runs with the permissions of the specified end user.</para>
+        /// <remarks>
+        /// <para>This user must have a session history on the cloud computer. This means the user must have logged in after the cloud computer started and their session was not taken over by another user. This parameter is not supported for Linux cloud computers.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>User1</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,8 +75,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The timeout period for the command to run. Unit: seconds. Default value: 60.\
-        /// A timeout error occurs if the command cannot be run because the process slows down or because a specific module or the Cloud Assistant client does not exist. When a timeout error occurs, the command process is forcibly terminated.</para>
+        /// <para>The script execution timeout, in seconds. Default value: 300.<br>
+        /// A command times out if the script cannot be run due to issues such as process conflicts, missing modules, or an unavailable Cloud Assistant client. When a command times out, the system forcibly terminates the script process.<br></para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -85,11 +86,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? Timeout { get; set; }
 
         /// <summary>
-        /// <para>The language of the O\&amp;M command. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>RunBatScript</description></item>
-        /// <item><description>RunPowerShellScript</description></item>
-        /// </list>
+        /// <para>The type of the script.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

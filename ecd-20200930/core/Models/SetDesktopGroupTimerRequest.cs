@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The cron expression for the scheduled task. This parameter is required when <c>TimerType</c> is set to 2, 3, or 4.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0 0 2 ? * 1-7</para>
+        /// <para>0 0 9 * * ?</para>
         /// </summary>
         [NameInMap("CronExpression")]
         [Validation(Required=false)]

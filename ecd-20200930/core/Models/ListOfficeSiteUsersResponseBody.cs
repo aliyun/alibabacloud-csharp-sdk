@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListOfficeSiteUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token to start the next query. If this parameter is empty, all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The usernames of the AD accounts.\
-        /// If the only Administrator and Guest users exist in the enterprise AD directory, an empty User array is returned.</para>
+        /// <para>An array that consists of the AD accounts.<br>
+        /// If the enterprise AD contains only the Administrator and Guest users, an empty Users array is returned.<br></para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The display name of the AD account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alice</para>
+            /// <para>aduser</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The username of the AD account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alice</para>
+            /// <para>aduser</para>
             /// </summary>
             [NameInMap("EndUser")]
             [Validation(Required=false)]

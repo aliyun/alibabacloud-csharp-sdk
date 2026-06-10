@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateImageRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to clear private data of users. If you set AutoCleanUserdata to <c>true</c>, the custom image clears the data directories, excluding the <c>Administrator</c> and <c>Public</c> directories, in the <c>C:\\Users</c> directory.</para>
+        /// <para>Specify whether to clear user personal data. If set to <c>true</c>, the image clears all folders under <c>C:\\Users</c>, except <c>Administrator</c> and <c>Public</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DataSnapshotIds { get; set; }
 
         /// <summary>
-        /// <para>The description of the custom image. The description must be 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the image. The description must be 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is description.</para>
@@ -44,12 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The disk data that is contained in the custom image.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SYSTEM: only contain data from system disks.</description></item>
-        /// <item><description>ALL: contain data from system disks and user disks. [default]</description></item>
-        /// </list>
+        /// <para>The disk data included in the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL</para>
@@ -59,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>The name of the image. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the image. The name must be 2 to 128 characters in length. It must start with a letter or Chinese character. It cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testImageName</para>
@@ -69,17 +64,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not publicly available.</para>
+        /// <para>This parameter is not available for use.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>To be hidden.</para>
+        /// <para>deprecated</para>
         /// </summary>
         [NameInMap("ImageResourceType")]
         [Validation(Required=false)]
         public string ImageResourceType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to view the list of regions that support WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the snapshots.</para>
+        /// <para>A list of snapshot IDs.</para>
         /// </summary>
         [NameInMap("SnapshotIds")]
         [Validation(Required=false)]

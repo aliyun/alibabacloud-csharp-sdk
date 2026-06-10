@@ -15,11 +15,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The business type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: public cloud</description></item>
-        /// <item><description>8: commercial edition.</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,8 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ModelLibrary { get; set; }
 
         /// <summary>
-        /// <para>The page number.\
-        /// Default value: 1.</para>
+        /// <para>The page number to return in a paged query.<br>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -45,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -55,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud computer policies.</para>
+        /// <para>The list of Cloud Desktop policy IDs.</para>
         /// </summary>
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
@@ -67,11 +61,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The resource type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>app: cloud applications.</description></item>
-        /// <item><description>desktop: cloud computers.</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,12 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The effective scope of the cloud computer policy.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>IP: The policy applies to specific IP addresses.</description></item>
-        /// <item><description>GLOBAL: The policy applies globally.</description></item>
-        /// </list>
+        /// <para>The scope where the Cloud Desktop policy takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GLOBAL</para>

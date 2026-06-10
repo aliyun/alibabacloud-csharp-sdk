@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The number of entries to return on each page.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 1 to 100</description></item>
-        /// <item><description>Default value: 10</description></item>
+        /// <item><description><para>Valid values: 1 to 100</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,9 +59,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The query scope. Cloud computers in a cloud computer pool are pooled cloud computers.</para>
         /// <para>Default values:</para>
         /// <list type="bullet">
-        /// <item><description>1 (default): queries non-pooled cloud computers in the office network.</description></item>
-        /// <item><description>2: queries pooled cloud computers in the office network.</description></item>
-        /// <item><description>3: queries all cloud computers in the office network.</description></item>
+        /// <item><description><para>1 (default): queries non-pooled cloud computers in the office network.</para>
+        /// </description></item>
+        /// <item><description><para>2: queries pooled cloud computers in the office network.</para>
+        /// </description></item>
+        /// <item><description><para>3: queries all cloud computers in the office network.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The CPU utilization (%).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>89</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("CpuPercent")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The GPU utilization (%).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>15</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("GpuPercent")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The I/O read and write performance. Unit: byte/s.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>124906.0</para>
+            /// <para>8919266</para>
             /// </summary>
             [NameInMap("IoSpeed")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The memory utilization (%).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>34</para>
+            /// <para>1.8368155</para>
             /// </summary>
             [NameInMap("MemPercent")]
             [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The CPU utilization (%).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>89</para>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("CpuPercent")]
                 [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The GPU usage (%).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>15</para>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("GpuPercent")]
                 [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The I/O read and write performance. Unit: byte/s.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>124906.0</para>
+                /// <para>8919266</para>
                 /// </summary>
                 [NameInMap("Iospeed")]
                 [Validation(Required=false)]
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The memory usage (%).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>34</para>
+                /// <para>1.8368155</para>
                 /// </summary>
                 [NameInMap("MemPercent")]
                 [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The path to the process.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>C:\\Program Files\\Google\\Chrome\\Application\\ch****.exe</para>
+                /// <para>C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe</para>
                 /// </summary>
                 [NameInMap("ProcessPath")]
                 [Validation(Required=false)]
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The path to the process.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>C:\\Program Files\\Google\\Chrome\\Application\\ch****.exe</para>
+            /// <para>C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe</para>
             /// </summary>
             [NameInMap("ProcessPath")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateAutoSnapshotPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The CRON expression for periodic scheduling.</para>
+        /// <para>The cron expression for the recurring schedule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-). This parameter is empty by default.</para>
+        /// <para>The name of the automatic snapshot policy. It can contain 2 to 128 English or Chinese characters. It must start with a letter or a Chinese character, and cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, colons (:), underscores (_), or hyphens (-). Default value: empty.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. For more information, see <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to get a list of regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.</para>
+        /// <para>The retention period of the automatic snapshot, in days. Valid values: 1 to 180.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>30</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("RetentionDays")]
         [Validation(Required=false)]

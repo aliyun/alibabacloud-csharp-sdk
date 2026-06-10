@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ResetDesktopsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud computer share.</para>
+        /// <para>The ID of the shared cloud desktop.</para>
         /// <list type="bullet">
-        /// <item><description>If you specify <c>DesktopId</c>, ignore <c>DesktopGroupId</c>.</description></item>
-        /// <item><description>If you leave <c>DesktopId</c> empty, the system obtains the IDs of all cloud computers within the share specified by <c>DesktopGroupId</c>.``</description></item>
+        /// <item><description><para>If you specify <c>DesktopId</c>, the system ignores <c>DesktopGroupId</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>DesktopId</c> is empty, the system uses <c>DesktopGroupId</c> to retrieve the <c>DesktopId</c> of all cloud desktops in the shared cloud desktop group.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,21 +26,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud computer shares.</para>
+        /// <para>A list of shared cloud desktop group IDs.</para>
         /// </summary>
         [NameInMap("DesktopGroupIds")]
         [Validation(Required=false)]
         public List<string> DesktopGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.</para>
+        /// <para>A list of cloud desktop IDs. You can specify 1 to 100 IDs.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image.</para>
+        /// <para>The image ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-4zfb6zj728hhr****</para>
@@ -52,15 +54,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? LastRetryTime { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the cloud computer share.</para>
+        /// <para>The billing method.</para>
         /// <remarks>
-        /// <para> This parameter takes effect when you reset a cloud computer share. If you leave this parameter empty, all cloud computers in that share are reset.</para>
+        /// <para>This parameter applies only when resetting shared cloud desktops. If you leave it empty, the system resets all cloud desktops in the shared cloud desktop group, regardless of their billing method.</para>
         /// </remarks>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PostPaid: pay-as-you-go.</description></item>
-        /// <item><description>PrePaid: subscription.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -70,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/436773.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to list regions that support WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,12 +78,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The reset scope. You can configure this parameter to reset the image or cloud computer.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ALL (default): resets the image and cloud computer.</description></item>
-        /// <item><description>IMAGE: resets only the image.</description></item>
-        /// </list>
+        /// <para>The scope of the reset operation. Set this parameter to reset either the image or the cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL</para>
@@ -96,14 +88,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResetScope { get; set; }
 
         /// <summary>
-        /// <para>The disk reset type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: does not reset disks.</description></item>
-        /// <item><description>1: resets only the system disk.</description></item>
-        /// <item><description>2: resets only the user disk.</description></item>
-        /// <item><description>3: resets the system disk and the user disk.</description></item>
-        /// </list>
+        /// <para>The reset type. This determines whether to reset and which disks to reset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The error message of the asynchronous task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The request has been failed due to some unknown error. Please try again later.</para>
+            /// <para>The request failed due to some unknown errors. Please try again later.</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]

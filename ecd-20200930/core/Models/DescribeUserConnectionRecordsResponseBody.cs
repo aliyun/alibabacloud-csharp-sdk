@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The connection duration. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3405035000</para>
+            /// <para>1800000</para>
             /// </summary>
             [NameInMap("ConnectDuration")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The ID of the cloud computer to which the end user connected.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ud-2hawufy3uedi1****</para>
+            /// <para>ecd-gx2x1dhsmucyy****</para>
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The name of the cloud computer to which the end user connected.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>testName</para>
+            /// <para>demoComputer</para>
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]

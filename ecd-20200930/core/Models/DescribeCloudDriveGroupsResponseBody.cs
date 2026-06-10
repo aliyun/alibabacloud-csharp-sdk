@@ -16,38 +16,89 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeCloudDriveGroupsResponseBodyCloudDriveGroups> CloudDriveGroups { get; set; }
         public class DescribeCloudDriveGroupsResponseBodyCloudDriveGroups : TeaModel {
+            /// <summary>
+            /// <para>List of group administrators.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[&quot;user01&quot;]</para>
+            /// </summary>
             [NameInMap("AdminUserIds")]
             [Validation(Required=false)]
             public string AdminUserIds { get; set; }
 
+            /// <summary>
+            /// <para>Administrator information for the group space.</para>
+            /// </summary>
             [NameInMap("AdminUserInfos")]
             [Validation(Required=false)]
             public List<DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos> AdminUserInfos { get; set; }
             public class DescribeCloudDriveGroupsResponseBodyCloudDriveGroupsAdminUserInfos : TeaModel {
+                /// <summary>
+                /// <para>Mailbox.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="mailto:123@aliyun.com">123@aliyun.com</a></para>
+                /// </summary>
                 [NameInMap("Email")]
                 [Validation(Required=false)]
                 public string Email { get; set; }
 
+                /// <summary>
+                /// <para>Administrator username (may be unreadable when imported from a third party).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>user01</para>
+                /// </summary>
                 [NameInMap("EndUserId")]
                 [Validation(Required=false)]
                 public string EndUserId { get; set; }
 
+                /// <summary>
+                /// <para>Job number (DingTalk)</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12345</para>
+                /// </summary>
                 [NameInMap("JobNumber")]
                 [Validation(Required=false)]
                 public string JobNumber { get; set; }
 
+                /// <summary>
+                /// <para>Administrator nickname.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>John Doe</para>
+                /// </summary>
                 [NameInMap("NickName")]
                 [Validation(Required=false)]
                 public string NickName { get; set; }
 
+                /// <summary>
+                /// <para>Phone number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12345678</para>
+                /// </summary>
                 [NameInMap("Phone")]
                 [Validation(Required=false)]
                 public string Phone { get; set; }
 
+                /// <summary>
+                /// <para>Administrator nickname.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>John Doe</para>
+                /// </summary>
                 [NameInMap("RealNickName")]
                 [Validation(Required=false)]
                 public string RealNickName { get; set; }
 
+                /// <summary>
+                /// <para>Remark.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>John Doe</para>
+                /// </summary>
                 [NameInMap("Remark")]
                 [Validation(Required=false)]
                 public string Remark { get; set; }
@@ -98,16 +149,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The name of the team space.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test Team 1</para>
+            /// <para>Test team 1</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
             public string GroupName { get; set; }
 
+            /// <summary>
+            /// <para>Organization ID of the team.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>org-aliyun-wy-org-id</para>
+            /// </summary>
             [NameInMap("OrgId")]
             [Validation(Required=false)]
             public string OrgId { get; set; }
 
+            /// <summary>
+            /// <para>Size of the recycle bin for the team space. Unit: Byte.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1024000</para>
+            /// </summary>
             [NameInMap("RecycleBinSize")]
             [Validation(Required=false)]
             public string RecycleBinSize { get; set; }
@@ -115,8 +178,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The team space status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled</description></item>
-            /// <item><description>disabled</description></item>
+            /// <item><description><para>enabled</para>
+            /// </description></item>
+            /// <item><description><para>disabled</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: enabled.</para>
             /// 

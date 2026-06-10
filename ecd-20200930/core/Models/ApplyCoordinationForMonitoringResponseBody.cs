@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The name of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TestDesktop</para>
+            /// <para>DemoComputer</para>
             /// </summary>
             [NameInMap("ResourceName")]
             [Validation(Required=false)]

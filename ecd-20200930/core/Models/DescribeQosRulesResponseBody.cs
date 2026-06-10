@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeQosRulesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of QoS rules.</para>
+        /// </summary>
         [NameInMap("QosRules")]
         [Validation(Required=false)]
         public List<DescribeQosRulesResponseBodyQosRules> QosRules { get; set; }
         public class DescribeQosRulesResponseBodyQosRules : TeaModel {
             /// <summary>
+            /// <para>The number of associated cloud desktops.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -26,6 +31,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? DesktopGroupCount { get; set; }
 
             /// <summary>
+            /// <para>The download bandwidth.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -34,6 +41,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Download { get; set; }
 
             /// <summary>
+            /// <para>The network package ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>np-5cjh3sqs1ty3s02xq</para>
             /// </summary>
@@ -42,6 +51,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NetworkPackageId { get; set; }
 
             /// <summary>
+            /// <para>The QoS rule ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qos-chvkz5ekzgcb6bo0f</para>
             /// </summary>
@@ -50,6 +61,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string QosRuleId { get; set; }
 
             /// <summary>
+            /// <para>The QoS rule name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -58,6 +71,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string QosRuleName { get; set; }
 
             /// <summary>
+            /// <para>The upload bandwidth.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -68,6 +83,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>

@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TestDesktop</para>
+            /// <para>DemoComputer</para>
             /// </summary>
             [NameInMap("ResourceName")]
             [Validation(Required=false)]
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>62f2f1f252f04e0e9d8bc****</para>
+        /// <para>3E14A18BD4D088504B9F8A8751AB****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

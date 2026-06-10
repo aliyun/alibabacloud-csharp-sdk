@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The file sharing status. Valid values: ● disabled: canceled ● enabled: valid</para>
         /// 
         /// <b>Example:</b>
-        /// <para>disabled</para>
+        /// <para>enabled</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

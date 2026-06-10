@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The ID of the storage resource.</para>
         /// <remarks>
-        /// <para> Call the DescribeDrives operation to retrieve the storage resource ID.</para>
+        /// <para>Call the DescribeDrives operation to retrieve the storage resource ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The ID of the external storage resource.</para>
         /// <remarks>
-        /// <para> Call the DescribeDrives operation to retrieve the external storage resource ID.</para>
+        /// <para>Call the DescribeDrives operation to retrieve the external storage resource ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is deprecated.</para>
+        /// <para>This parameter is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -93,8 +93,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The type of the storage resource.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NAS: File Storage NAS</description></item>
-        /// <item><description>PDS: Drive and Photo Service</description></item>
+        /// <item><description><para>NAS: File Storage NAS</para>
+        /// </description></item>
+        /// <item><description><para>PDS: Drive and Photo Service</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,8 +110,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The usage of the storage resource.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DESKTOP: data disk space</description></item>
-        /// <item><description>USER_PROFILE: space for personal data of the user</description></item>
+        /// <item><description><para>DESKTOP: data disk space</para>
+        /// </description></item>
+        /// <item><description><para>USER_PROFILE: space for personal data of the user</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

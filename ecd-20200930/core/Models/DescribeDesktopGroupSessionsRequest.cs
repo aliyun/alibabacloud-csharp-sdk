@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The user ID of the terminal that connects to the session.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xianqiu</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;asdfdfsdfsdfds&quot;</para>
+        /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6ljnKKgSRjo8yXAIT5QSvkU</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -85,11 +85,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The type of the session.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: single-session</description></item>
-        /// <item><description>1: multi-session</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -99,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? OwnType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The ID of the region. You can call the <a href="t2167755.xdita#"></a>operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -110,22 +105,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The status of the session.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Connected</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Disconnected</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Connected</para>

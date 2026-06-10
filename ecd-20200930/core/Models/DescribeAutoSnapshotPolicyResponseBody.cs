@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeAutoSnapshotPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the queried automatic snapshot policies.</para>
+        /// <para>The automatic snapshot policies.</para>
         /// </summary>
         [NameInMap("AutoSnapshotPolicies")]
         [Validation(Required=false)]
         public List<DescribeAutoSnapshotPolicyResponseBodyAutoSnapshotPolicies> AutoSnapshotPolicies { get; set; }
         public class DescribeAutoSnapshotPolicyResponseBodyAutoSnapshotPolicies : TeaModel {
             /// <summary>
-            /// <para>The time when the automatic snapshot policy was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time is displayed in UTC.</para>
+            /// <para>The time when the policy was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-11T09:14:00Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The cron expression that specifies when Elastic Desktop Service creates snapshots on the cloud computers.</para>
+            /// <para>The cron expression that is used to create snapshots.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 0 5,7 ? * 2/2</para>
@@ -40,12 +40,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The number of cloud computers to which the automatic snapshot policy is applied.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>5</para>
+            /// <para>1</para>
             /// </summary>
             [NameInMap("DesktopNum")]
             [Validation(Required=false)]
             public int? DesktopNum { get; set; }
 
+            /// <summary>
+            /// <para>The disk type for which the automatic snapshot policy is created.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>SYSTEM: system disk</para>
+            /// </description></item>
+            /// <item><description><para>DATA: data disk</para>
+            /// </description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("DiskType")]
             [Validation(Required=false)]
             public string DiskType { get; set; }
@@ -71,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region to which the automatic snapshot policy belongs.</para>
+            /// <para>The ID of the region where the automatic snapshot policy resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -81,10 +91,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The retention period of the automatic snapshots. Unit: days. Valid values: 1 to 180.</para>
+            /// <para>The retention period of automatic snapshots. Unit: days. Valid values: 1 to 180.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3</para>
+            /// <para>2</para>
             /// </summary>
             [NameInMap("RetentionDays")]
             [Validation(Required=false)]
@@ -92,22 +102,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The status of the automatic snapshot policy.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Expire: The automatic snapshot policy cannot be used because you have overdue payments in your account.</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Normal: The automatic snapshot policy is normal.</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -117,8 +111,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The points in time at which the auto snapshots were created.</para>
-            /// <para>The parameter values are a JSON array. Example: <c>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</c>. A maximum of 24 points in time are returned. The points in time are separated with commas (,).</para>
+            /// <para>The points in time when automatic snapshots are created.</para>
+            /// <para>The value is a JSON array of integers. Example: <c>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</c>. A maximum of 24 points in time can be specified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[&quot;17&quot;,&quot;18&quot;]</para>
@@ -130,7 +124,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The token that is used to start the next query. If this parameter is empty, all results haven been returned.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If the return value is empty, no more results are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -140,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A7F6612E-59CC-59F9-9DD1-91867FCC****</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeOnlineUserCountResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of AD users who have been assigned a cloud desktop.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? AdAssignedUserCount { get; set; }
 
         /// <summary>
+        /// <para>The number of users who have been assigned a cloud desktop.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? AssignedUserCount { get; set; }
 
         /// <summary>
+        /// <para>The number of online users. Online users include convenience users and AD users.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? OnlineUserCount { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>269BDB16-2CD8-4865-84BD-11C40BC21DB0</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The number of convenience users who have been assigned a cloud desktop.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>

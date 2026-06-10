@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyCloudDriveUsersRequest : TeaModel {
         /// <summary>
+        /// <para>The enterprise cloud disk ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
+        /// <para>A list of end user IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EndUserId")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> EndUserId { get; set; }
 
         /// <summary>
+        /// <para>The region ID. You can invoke <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain the list of regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

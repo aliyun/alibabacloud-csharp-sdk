@@ -10,15 +10,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDiskSpecRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the automatic payment feature.</para>
+        /// <para>Specifies whether to enable automatic payment.</para>
         /// <list type="bullet">
-        /// <item><description>If you set the value to <c>true</c>, ensure your account has sufficient balance to avoid generating abnormal orders.</description></item>
-        /// <item><description>If you set the value to <c>false</c>, go to the <b>Expenses and Costs</b> page to complete the payment based on the order number.</description></item>
-        /// </list>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true (default): enables the automatic payment feature.</description></item>
-        /// <item><description>false: generates the order and manually complete the payment.</description></item>
+        /// <item><description><para>If set to <c>true</c>, ensure your account has a sufficient balance. Otherwise, an abnormal order is generated.</para>
+        /// </description></item>
+        /// <item><description><para>If set to <c>false</c>, log on to the console. Then, go to the <b>Expenses and Costs</b> page to pay for the order using the returned order ID.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,18 +26,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer.</para>
+        /// <para>The ID of the cloud desktop.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ecd-2yjhqxo1monxxxxxx</para>
+        /// <para>ecd-2yjhqxo1monbf****</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sales promotion activity. You can call the DescribePrice operation to obtain the IDs of matching sales promotion activities.</para>
+        /// <para>The promotion ID. Call a pricing inquiry API to get a list of applicable promotion IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>youhuiquan_promotion_option_id_for_blank</para>
@@ -50,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of supported regions for WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,14 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ResellerOwnerUid { get; set; }
 
         /// <summary>
-        /// <para>The PL of the system disk. Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PL1</description></item>
-        /// <item><description>PL0</description></item>
-        /// <item><description>PL3</description></item>
-        /// <item><description>PL2</description></item>
-        /// </list>
+        /// <para>The performance level of the system disk. You can set the performance level for Graphics or High-frequency workspaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -82,14 +72,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RootDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The PL of the data disk. Only Enterprise Graphics or High Frequency cloud computers support disk PL adjustments.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PL1</description></item>
-        /// <item><description>PL0</description></item>
-        /// <item><description>PL3</description></item>
-        /// <item><description>PL2</description></item>
-        /// </list>
+        /// <para>The performance level of the data disk. You can set the performance level for Graphics or High-frequency workspaces.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>

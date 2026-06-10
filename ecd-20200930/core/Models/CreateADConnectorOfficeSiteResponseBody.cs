@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateADConnectorOfficeSiteResponseBody : TeaModel {
         /// <summary>
-        /// <para>The office network ID.</para>
+        /// <para>The ID of the office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-363353****</para>

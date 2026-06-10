@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteNetworkPackagesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of premium bandwidth plans. You can specify one or more IDs.</para>
+        /// <para>List of public network premium bandwidth IDs. You can specify one or more IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NetworkPackageId")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> NetworkPackageId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain a list of regions where WUYING Workspace is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

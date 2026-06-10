@@ -22,16 +22,26 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The download URL of the XLSX file that contains cloud computer shares. The XLSX file provides the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Cloud computer share ID/name</description></item>
-        /// <item><description>Office network ID/name</description></item>
-        /// <item><description>Cloud computer share template</description></item>
-        /// <item><description>vCPUs/Memory size</description></item>
-        /// <item><description>System disk/Data disk</description></item>
-        /// <item><description>Security policy name</description></item>
-        /// <item><description>Number of authorized users</description></item>
-        /// <item><description>Billing method</description></item>
-        /// <item><description>Creation time</description></item>
-        /// <item><description>Expiration time</description></item>
+        /// <item><description><para>Cloud computer share ID/name</para>
+        /// </description></item>
+        /// <item><description><para>Office network ID/name</para>
+        /// </description></item>
+        /// <item><description><para>Cloud computer share template</para>
+        /// </description></item>
+        /// <item><description><para>vCPUs/Memory size</para>
+        /// </description></item>
+        /// <item><description><para>System disk/Data disk</para>
+        /// </description></item>
+        /// <item><description><para>Security policy name</para>
+        /// </description></item>
+        /// <item><description><para>Number of authorized users</para>
+        /// </description></item>
+        /// <item><description><para>Billing method</para>
+        /// </description></item>
+        /// <item><description><para>Creation time</para>
+        /// </description></item>
+        /// <item><description><para>Expiration time</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

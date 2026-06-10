@@ -35,14 +35,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The task status.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>INIT: initializing</description></item>
-        /// <item><description>FAILED</description></item>
-        /// <item><description>RUNNING</description></item>
-        /// <item><description>EXPIRED</description></item>
-        /// <item><description>FINISHED</description></item>
-        /// </list>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -50,10 +42,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The sub-type of the report export task.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>DESKTOP: cloud computer</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>DESKTOP</para>

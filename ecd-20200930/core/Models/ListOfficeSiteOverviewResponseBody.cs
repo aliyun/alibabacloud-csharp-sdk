@@ -195,9 +195,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The office network type and its suitable VPC type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>standard (default): standard, exclusive VPC</description></item>
-            /// <item><description>customized: custom, user VPC</description></item>
-            /// <item><description>basic: basic, shared VPC</description></item>
+            /// <item><description><para>standard (default): standard, exclusive VPC</para>
+            /// </description></item>
+            /// <item><description><para>customized: custom, user VPC</para>
+            /// </description></item>
+            /// <item><description><para>basic: basic, shared VPC</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

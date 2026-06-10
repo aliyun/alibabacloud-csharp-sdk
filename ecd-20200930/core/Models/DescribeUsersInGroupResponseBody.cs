@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUsersInGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The authorized users.</para>
+        /// <para>A list of authorized user information.</para>
         /// </summary>
         [NameInMap("EndUsers")]
         [Validation(Required=false)]
@@ -18,11 +18,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public class DescribeUsersInGroupResponseBodyEndUsers : TeaModel {
             /// <summary>
             /// <para>The connection status.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: disconnected</description></item>
-            /// <item><description>1: connecting</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -32,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud computer.</para>
+            /// <para>The ID of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -42,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud computer.</para>
+            /// <para>The name of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testName</para>
@@ -96,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserName { get; set; }
 
             /// <summary>
-            /// <para>The mobile number of the authorized user.</para>
+            /// <para>The phone number of the authorized user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1381111****</para>
@@ -106,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserPhone { get; set; }
 
             /// <summary>
-            /// <para>The remarks.</para>
+            /// <para>The user remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Note</para>
@@ -117,11 +112,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The user account type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>SIMPLE: convenience account</description></item>
-            /// <item><description>AD_CONNECTOR: enterprise Active Directory (AD) account</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>SIMPLE</para>
@@ -131,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserType { get; set; }
 
             /// <summary>
-            /// <para>The appended information.</para>
+            /// <para>Additional information.</para>
             /// </summary>
             [NameInMap("ExternalInfo")]
             [Validation(Required=false)]
@@ -160,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The ID of the cloud computer that is used by the user.</para>
+            /// <para>The ID of the virtual cloud desktop assigned to the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ud-i896ze8hazpvl****</para>
@@ -174,7 +164,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string UserPrincipalName { get; set; }
 
             /// <summary>
-            /// <para>Details about the seats of users.</para>
+            /// <para>A list of user seat information.</para>
             /// </summary>
             [NameInMap("UserSetPropertiesModels")]
             [Validation(Required=false)]
@@ -202,11 +192,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
                 /// <summary>
                 /// <para>The property type.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>1: system property</description></item>
-                /// <item><description>2: custom property</description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -216,7 +201,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? PropertyType { get; set; }
 
                 /// <summary>
-                /// <para>Details about property values.</para>
+                /// <para>An array of property values.</para>
                 /// </summary>
                 [NameInMap("PropertyValues")]
                 [Validation(Required=false)]
@@ -233,7 +218,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public string PropertyValue { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the property value.</para>
+                    /// <para>The property value ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>123</para>
@@ -269,7 +254,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The token that is used to start the next query.</para>
+        /// <para>The token to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -279,7 +264,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The total number of authorized users that are connected to cloud computers of the cloud computer share.</para>
+        /// <para>The total number of authorized users in the cloud desktop group who meet the query conditions and are connected to a cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -289,7 +274,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? OnlineUsersCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -307,7 +292,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string UserOuPath { get; set; }
 
         /// <summary>
-        /// <para>The total number of authorized users of the cloud computer share.</para>
+        /// <para>The total number of authorized users in the cloud desktop group who meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

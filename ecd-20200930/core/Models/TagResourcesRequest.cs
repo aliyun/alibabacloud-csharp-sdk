@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The tag keys. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with <c>acs:</c> or <c>aliyun</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TestKey</para>
+            /// <para>department</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The tag values. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TestValue</para>
+            /// <para>design</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

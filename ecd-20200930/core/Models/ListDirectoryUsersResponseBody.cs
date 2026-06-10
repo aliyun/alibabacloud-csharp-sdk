@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListDirectoryUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token used to start the next query. If the value of this parameter is empty, all results are returned.</para>
+        /// <para>The token that is used to start the next query. If this parameter is empty, all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The usernames corresponding to the AD directory. If the AD directory contains only the Administrator and Guest accounts, the Users array will be empty.</para>
+        /// <para>An array that consists of the users in the AD directory. If the AD directory contains only the Administrator and Guest users, an empty \<c>Users\\</c> array is returned.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListDirectoryUsersResponseBodyUsers> Users { get; set; }
         public class ListDirectoryUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>The number of assigned cloud computers.</para>
+            /// <para>The number of assigned cloud desktops.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? AssignedDesktopNumber { get; set; }
 
             /// <summary>
-            /// <para>The display name of the user.</para>
+            /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alice</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The name of the user.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alice</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUser { get; set; }
 
             /// <summary>
-            /// <para>The mobile number.</para>
+            /// <para>The mobile phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>130********</para>

@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public class DownloadCdsFileResponseBodyDownloadFileModel : TeaModel {
             /// <summary>
             /// <para>This parameter is deprecated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>无</para>
             /// </summary>
             [NameInMap("DownloadType")]
             [Validation(Required=false)]
@@ -27,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The download URL.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://pds-XXXX-bj-1693807057.oss-cn-beijing.aliyuncs.com/A0SKfLOp%2F2%2F6662612e0570fb2bdd5549759716d433439f0572%2F6662612ee3804e4901794928b14f9a7477640ee7?di=XXXX&dr=1030&f=667d5a322ebf7409e91c485d808fb3bd8a73efbb&response-content-disposition=attachment%3B%20">https://pds-XXXX-bj-1693807057.oss-cn-beijing.aliyuncs.com/A0SKfLOp%2F2%2F6662612e0570fb2bdd5549759716d433439f0572%2F6662612ee3804e4901794928b14f9a7477640ee7?di=XXXX&amp;dr=1030&amp;f=667d5a322ebf7409e91c485d808fb3bd8a73efbb&amp;response-content-disposition=attachment%3B%20</a></para>
+            /// <para><a href="https://pds-****-bj-169380****.oss-cn-beijing.aliyuncs.com/A0SK****?di=****&dr=1030&f=667d****&response-content-disposition=attachment%3B%20">https://pds-****-bj-169380****.oss-cn-beijing.aliyuncs.com/A0SK****?di=****&amp;dr=1030&amp;f=667d****&amp;response-content-disposition=attachment%3B%20</a></para>
             /// </summary>
             [NameInMap("DownloadUrl")]
             [Validation(Required=false)]
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>This parameter is deprecated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>无</para>
             /// </summary>
             [NameInMap("ExpirationSecond")]
             [Validation(Required=false)]
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The file ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>667d5a322ebf7409e91c485d808fb3bd8a73efbb</para>
+            /// <para>667d5a322ebf7409e91c485d808fb3bd8a73****</para>
             /// </summary>
             [NameInMap("FileId")]
             [Validation(Required=false)]
@@ -72,6 +78,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>This parameter is deprecated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>无</para>
             /// </summary>
             [NameInMap("StreamUrl")]
             [Validation(Required=false)]

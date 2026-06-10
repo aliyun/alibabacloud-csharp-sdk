@@ -49,17 +49,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The IPv6 level.</para>
             /// <remarks>
-            /// <para> IPv6 is not supported.</para>
+            /// <para>IPv6 is not supported.</para>
             /// </remarks>
-            /// <para>Valid value:</para>
-            /// <list type="bullet">
-            /// <item><description><para>DISABLED</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>DISABLED</para>
@@ -116,25 +107,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>Creating</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
             /// </description></item>
             /// <item><description><para>Active</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
             /// </description></item>
             /// <item><description><para>Deleting</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

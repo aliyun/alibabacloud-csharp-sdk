@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopHostNameRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud computer.</para>
+        /// <para>The ID of the cloud desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopIds { get; set; }
 
         /// <summary>
-        /// <para>The new hostname of the cloud computer. The hostname must meet the following requirements:</para>
+        /// <para>The new hostname of the cloud desktop. The hostname must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The hostname must be 2 to 15 characters in length.</description></item>
-        /// <item><description>The hostname can contain only letters, digits, and hyphens (-). The hostname cannot start or end with a hyphen (-), contain consecutive hyphens (-), or contain only digits.</description></item>
+        /// <item><description><para>The hostname must be 2 to 15 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>The hostname can contain letters, digits, and hyphens (-). It cannot start or end with a hyphen, contain consecutive hyphens, or consist of only digits.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NewHostName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the available regions for Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

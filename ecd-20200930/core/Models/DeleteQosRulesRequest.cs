@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteQosRulesRequest : TeaModel {
         /// <summary>
+        /// <para>A list of QoS rule IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("QosRuleId")]

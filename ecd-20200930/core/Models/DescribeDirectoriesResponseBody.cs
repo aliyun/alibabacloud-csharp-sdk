@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The connection address.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para><c>172.17.**.**</c></para>
+                /// <para>172.17.XX.XX</para>
                 /// </summary>
                 [NameInMap("ADConnectorAddress")]
                 [Validation(Required=false)]

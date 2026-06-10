@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeNASFileSystemsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The NAS file systems.</para>
+        /// <para>The details of the NAS file systems.</para>
         /// </summary>
         [NameInMap("FileSystems")]
         [Validation(Required=false)]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public class DescribeNASFileSystemsResponseBodyFileSystems : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("AllowOperateUserDrive")]
@@ -26,14 +26,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? AllowOperateUserDrive { get; set; }
 
             /// <summary>
-            /// <para>The application delivery groups that are associated with the UPM-supported NAS file systems.</para>
+            /// <para>The application delivery groups associated with the UPM-supported NAS file system.</para>
             /// </summary>
             [NameInMap("AppInstanceGroups")]
             [Validation(Required=false)]
             public List<DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups> AppInstanceGroups { get; set; }
             public class DescribeNASFileSystemsResponseBodyFileSystemsAppInstanceGroups : TeaModel {
                 /// <summary>
-                /// <para>The ID of the delivery group.</para>
+                /// <para>The ID of the application delivery group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aig-0bz55ibznu9p7****</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string AppInstanceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the delivery group.</para>
+                /// <para>The name of the application delivery group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DemoDeliveryGroup</para>
@@ -55,10 +55,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The total capacity of the NAS file system. Unit: GiB.</para>
+            /// <para>The storage capacity of the NAS file system, in GiB.</para>
             /// <list type="bullet">
-            /// <item><description>The Capacity type has 10 PiB of storage, which is equal to 10,485,760 GiB.</description></item>
-            /// <item><description>The Performance type has 1 PiB of storage, which is equal to 1,048,576 GiB.</description></item>
+            /// <item><description><para>If the storage type is capacity type, the capacity is 10 PiB (10,485,760 GiB).</para>
+            /// </description></item>
+            /// <item><description><para>If the storage type is performance type, the capacity is 1 PiB (1,048,576 GiB).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// <para>The time when the NAS file system was created.</para>
+            /// <para>The creation time of the NAS file system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-10T11:39Z</para>
@@ -89,14 +91,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The cloud computer shares that are associated with the UPM-supported NAS file systems.</para>
+            /// <para>The desktop groups associated with the UPM-supported NAS file system.</para>
             /// </summary>
             [NameInMap("DesktopGroups")]
             [Validation(Required=false)]
             public List<DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups> DesktopGroups { get; set; }
             public class DescribeNASFileSystemsResponseBodyFileSystemsDesktopGroups : TeaModel {
                 /// <summary>
-                /// <para>The ID of the cloud computer share.</para>
+                /// <para>The ID of the desktop group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dg-9eeyf15b25nyl****</para>
@@ -106,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DesktopGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the cloud computer share.</para>
+                /// <para>The name of the desktop group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_dg</para>
@@ -148,15 +150,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileSystemName { get; set; }
 
             /// <summary>
-            /// <para>The status of the NAS file system. The possible values include:</para>
-            /// <list type="bullet">
-            /// <item><description>Pending: The NAS file system is being created.</description></item>
-            /// <item><description>Running: The NAS file system is running.</description></item>
-            /// <item><description>Stopped: The NAS file system is stopped.</description></item>
-            /// <item><description>Deleting: The NAS file system is being deleted.</description></item>
-            /// <item><description>Deleted: The NAS file system is deleted.</description></item>
-            /// <item><description>Invalid: The NAS file system is invalid.</description></item>
-            /// </list>
+            /// <para>The status of the NAS file system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -166,7 +160,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileSystemStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the NAS file system. The only valid value is <c>standard</c>.</para>
+            /// <para>The type of the NAS file system. Currently, only the standard type is supported. The value is always <c>standard</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>standard</para>
@@ -176,7 +170,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileSystemType { get; set; }
 
             /// <summary>
-            /// <para>The used capacity of the NAS file system. Unit: bytes.</para>
+            /// <para>The amount of storage used by the NAS file system, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -196,14 +190,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MountTargetDomain { get; set; }
 
             /// <summary>
-            /// <para>The status of the mount target. The possible values include:</para>
-            /// <list type="bullet">
-            /// <item><description>Pending: The mount target is being created.</description></item>
-            /// <item><description>Active: The mount target is enabled.</description></item>
-            /// <item><description>Inactive: The mount target is disabled.</description></item>
-            /// <item><description>Deleting: The mount target is being deleted.</description></item>
-            /// <item><description>Invalid: The mount target is invalid.</description></item>
-            /// </list>
+            /// <para>The status of the mount target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -233,7 +220,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// <para>The office networks.</para>
+            /// <para>The office networks associated with the file system.</para>
             /// </summary>
             [NameInMap("OfficeSites")]
             [Validation(Required=false)]
@@ -276,7 +263,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? ProfileCompatible { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -286,12 +273,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The storage type of the NAS file system.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Upm: the UPM-supported NAS file system.</description></item>
-            /// <item><description>ShareNas: the shared NAS file system.</description></item>
-            /// </list>
+            /// <para>The use case of the NAS file system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Upm</para>
@@ -305,11 +287,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? SizeQuota { get; set; }
 
             /// <summary>
-            /// <para>The storage type of the NAS file system. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Capacity</description></item>
-            /// <item><description>Performance</description></item>
-            /// </list>
+            /// <para>The storage type of the NAS file system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Capacity</para>
@@ -319,7 +297,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Server Message Block (SMB) access control list (ACL) feature was enabled.</para>
+            /// <para>Indicates whether the Server Message Block (SMB) access control list (ACL) feature is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -329,7 +307,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? SupportAcl { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone where the NAS file system resides.</para>
+            /// <para>The ID of the zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-f</para>
@@ -341,7 +319,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query. This parameter is empty if no additional results exist.</para>
+        /// <para>The token for the next page of results. If this parameter is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -351,7 +329,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>269BDB16-2CD8-4865-84BD-11C40BC21DB0</para>

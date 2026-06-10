@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The ID of the user to which the network disk is assigned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testUser</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The query token. Set the value to the value of the <c>NextToken</c> parameter returned in the last call to the operation. You do not need to set this parameter when you call the operation for the first time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>WyI2Mzg4MjAwMzFhNGQwZWVmN2I3MjRkZjZhZjAyMWU4YzY1MmRjZmUyIiwibiIsIm4iLDEsLTEsMTY2OTg2NTQ3NTMxMiwiNjM4ODIwMDNlNTU0YmZiZjFkYTk0MmEyYTZhMjEyZDkxODdjMjAy****</para>
+        /// <para>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

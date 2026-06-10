@@ -207,6 +207,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The resource name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>O&amp;M</para>
             /// </summary>
             [NameInMap("ResourceName")]
             [Validation(Required=false)]

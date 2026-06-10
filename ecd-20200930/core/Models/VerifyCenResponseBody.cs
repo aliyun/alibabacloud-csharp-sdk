@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The CIDR block of the route.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>172.16.111.3****</para>
+            /// <para>172.16.XX.XX</para>
             /// </summary>
             [NameInMap("DestinationCidrBlock")]
             [Validation(Required=false)]

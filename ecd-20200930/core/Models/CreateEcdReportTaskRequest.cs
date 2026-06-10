@@ -26,22 +26,38 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <item><description>DESKTOP (indicating a cloud computer report), the following filter conditions are available:</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description>KeyWord: cloud computer keyword (supports automatic recognition)</description></item>
-            /// <item><description>RegionId: region ID</description></item>
-            /// <item><description>DesktopId: cloud computer ID</description></item>
-            /// <item><description>DesktopName: cloud computer name (supports fuzzy matching)</description></item>
-            /// <item><description>OfficeSiteId: office network ID</description></item>
-            /// <item><description>OfficeSiteName: office network name (supports fuzzy matching)</description></item>
-            /// <item><description>Status: cloud computer status</description></item>
-            /// <item><description>DesktopType: desktop type</description></item>
-            /// <item><description>DesktopIP: cloud computer IP address</description></item>
-            /// <item><description>SubPayType: billing method</description></item>
-            /// <item><description>EndUserId: user name (supports fuzzy matching)</description></item>
-            /// <item><description>ExpireTime: expiration date and time, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format</description></item>
-            /// <item><description>IncludeAssignedUser: indicates whether the cloud computer is assigned to users or not</description></item>
-            /// <item><description>ResourceGroupId: resource group ID</description></item>
-            /// <item><description>PolicyId: policy ID</description></item>
-            /// <item><description>Tag:{Tag Key value}: cloud computer tag (To filter data using multiple tags, specify multiple filter condition objects.)</description></item>
+            /// <item><description><para>KeyWord: cloud computer keyword (supports automatic recognition)</para>
+            /// </description></item>
+            /// <item><description><para>RegionId: region ID</para>
+            /// </description></item>
+            /// <item><description><para>DesktopId: cloud computer ID</para>
+            /// </description></item>
+            /// <item><description><para>DesktopName: cloud computer name (supports fuzzy matching)</para>
+            /// </description></item>
+            /// <item><description><para>OfficeSiteId: office network ID</para>
+            /// </description></item>
+            /// <item><description><para>OfficeSiteName: office network name (supports fuzzy matching)</para>
+            /// </description></item>
+            /// <item><description><para>Status: cloud computer status</para>
+            /// </description></item>
+            /// <item><description><para>DesktopType: desktop type</para>
+            /// </description></item>
+            /// <item><description><para>DesktopIP: cloud computer IP address</para>
+            /// </description></item>
+            /// <item><description><para>SubPayType: billing method</para>
+            /// </description></item>
+            /// <item><description><para>EndUserId: user name (supports fuzzy matching)</para>
+            /// </description></item>
+            /// <item><description><para>ExpireTime: expiration date and time, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format</para>
+            /// </description></item>
+            /// <item><description><para>IncludeAssignedUser: indicates whether the cloud computer is assigned to users or not</para>
+            /// </description></item>
+            /// <item><description><para>ResourceGroupId: resource group ID</para>
+            /// </description></item>
+            /// <item><description><para>PolicyId: policy ID</para>
+            /// </description></item>
+            /// <item><description><para>Tag:{Tag Key value}: cloud computer tag (To filter data using multiple tags, specify multiple filter condition objects.)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,14 +70,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The value of the filter condition. Only the first value of the FilterValues parameter is used, if FilterKey is set to one of the following values:</para>
             /// <list type="bullet">
-            /// <item><description>KeyWord</description></item>
-            /// <item><description>DesktopName</description></item>
-            /// <item><description>OfficeSiteName</description></item>
-            /// <item><description>DesktopIP</description></item>
-            /// <item><description>EndUserId</description></item>
-            /// <item><description>ExpireTime</description></item>
-            /// <item><description>IncludeAssignedUser</description></item>
+            /// <item><description><para>KeyWord</para>
+            /// </description></item>
+            /// <item><description><para>DesktopName</para>
+            /// </description></item>
+            /// <item><description><para>OfficeSiteName</para>
+            /// </description></item>
+            /// <item><description><para>DesktopIP</para>
+            /// </description></item>
+            /// <item><description><para>EndUserId</para>
+            /// </description></item>
+            /// <item><description><para>ExpireTime</para>
+            /// </description></item>
+            /// <item><description><para>IncludeAssignedUser</para>
+            /// </description></item>
             /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test cloud desktop name</para>
             /// </summary>
             [NameInMap("FilterValues")]
             [Validation(Required=false)]
@@ -71,11 +97,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The language of the report. An enumerated type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>zh-CN (default): Chinese</description></item>
-        /// <item><description>en-GB: English</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -86,6 +107,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The name of the report file.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test report name</para>
         /// </summary>
         [NameInMap("ReportFileName")]
         [Validation(Required=false)]
@@ -93,10 +117,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The sub-type of the report export task.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>DESKTOP: cloud computer</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

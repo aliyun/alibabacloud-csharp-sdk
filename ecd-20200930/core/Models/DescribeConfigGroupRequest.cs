@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The name of the configuration group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ScheduledTask</para>
+        /// <para>Scheduled task configuration</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The ID of the region. Set the value to <c>cn-shanghai</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]

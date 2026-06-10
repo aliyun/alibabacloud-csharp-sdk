@@ -65,9 +65,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The file path.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>pg-4w5nk44zo5yl129dd/1mk78dugw344.mp4</para>
             /// </summary>
             [NameInMap("FilePath")]
             [Validation(Required=false)]
@@ -77,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The policy ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>pg-6dn811rzrwh9ws4z6</para>
+            /// <para>pg-6dn811rzrwh9w****</para>
             /// </summary>
             [NameInMap("PolicyGroupId")]
             [Validation(Required=false)]

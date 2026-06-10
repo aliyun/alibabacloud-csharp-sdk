@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCensRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.\
-        /// Default value: 1.</para>
+        /// <para>The page number.<br>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -21,8 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.\
-        /// Default value: 50.</para>
+        /// <para>The number of entries per page.<br>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

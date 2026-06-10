@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud computers. You can specify 1 to 100 IDs.</para>
+        /// <para>Desktop ID. Set 1 to 100.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? NeedExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>Region ID. Call <a href="t2167755.xdita#"></a>to get a list of regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

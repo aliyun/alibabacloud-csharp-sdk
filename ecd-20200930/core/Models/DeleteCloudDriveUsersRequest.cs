@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteCloudDriveUsersRequest : TeaModel {
         /// <summary>
+        /// <para>WUYING Workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string CdsId { get; set; }
 
+        /// <summary>
+        /// <para>List of end user IDs.</para>
+        /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public List<string> EndUserId { get; set; }
 
         /// <summary>
+        /// <para>Region ID. You can invoke <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain the list of regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

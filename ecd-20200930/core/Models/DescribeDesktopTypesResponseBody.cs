@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopTypesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The specifications.</para>
+        /// <para>The details of the specifications.</para>
         /// </summary>
         [NameInMap("DesktopTypes")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CpuCount { get; set; }
 
             /// <summary>
-            /// <para>The size of the data disk. Unit: GiB.</para>
+            /// <para>The size of the data disk, in GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>150</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud desktop type.</para>
+            /// <para>The specification ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd.graphics.xlarge</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopTypeId { get; set; }
 
             /// <summary>
-            /// <para>The status of the cloud desktop type. If SUFFICIENT is returned, the number of cloud desktops of the type is sufficient.</para>
+            /// <para>The availability of the specification. A value of <c>SUFFICIENT</c> indicates that the specification is in stock.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUFFICIENT</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EnvType { get; set; }
 
             /// <summary>
-            /// <para>The number of GPUs.</para>
+            /// <para>The number of GPU cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public float? GpuCount { get; set; }
 
             /// <summary>
-            /// <para>The GPU memory size. For GPU-accelerated cloud computers, this return value is significant. Unit: MB.</para>
+            /// <para>The GPU memory size in MiB. This parameter is valid only for GPU-accelerated cloud desktops.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2048</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? GpuMemory { get; set; }
 
             /// <summary>
-            /// <para>The GPU memory.</para>
+            /// <para>The GPU memory size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16 GiB</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// <para>The family of the cloud desktop type.</para>
+            /// <para>The instance type family.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd.graphics</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string InstanceTypeFamily { get; set; }
 
             /// <summary>
-            /// <para>The number of sessions supported by the specification.</para>
+            /// <para>The maximum number of concurrent sessions that is supported by the cloud desktop specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MaxSessionCount { get; set; }
 
             /// <summary>
-            /// <para>The memory size. Unit: MiB.</para>
+            /// <para>The memory size, in MiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23552</para>
@@ -129,19 +129,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MemorySize { get; set; }
 
             /// <summary>
-            /// <para>The sales modes of the specifications.</para>
+            /// <para>The purchase options for the specification.</para>
             /// </summary>
             [NameInMap("Scopes")]
             [Validation(Required=false)]
             public List<string> Scopes { get; set; }
 
             /// <summary>
-            /// <para>The inventory status of the specification.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Insufficient</description></item>
-            /// <item><description>Sufficient</description></item>
-            /// </list>
+            /// <para>The inventory status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sufficient</para>
@@ -151,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string StockState { get; set; }
 
             /// <summary>
-            /// <para>The size of the system disk. Unit: GiB.</para>
+            /// <para>The size of the system disk, in GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>150</para>
@@ -163,7 +158,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

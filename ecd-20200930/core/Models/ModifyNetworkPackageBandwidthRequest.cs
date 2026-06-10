@@ -11,24 +11,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ModifyNetworkPackageBandwidthRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to enable the automatic payment feature.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true (default): enables the auto-payment feature.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <para>Make sure that your account has sufficient balance. Otherwise, no order is generated.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <para>To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.</para>
-        /// <!-- --></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -38,11 +20,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The maximum bandwidth of the premium bandwidth plan, in Mbit/s. Valid range: The allowed range depends on the billing method:</para>
+        /// <para>The maximum bandwidth of the premium bandwidth plan, in Mbit/s.</para>
         /// <list type="bullet">
-        /// <item><description>Subscription: 2 to 1000</description></item>
-        /// <item><description>Pay-as-you-go, by data transfer (PayByTraffic): 2 to 200</description></item>
-        /// <item><description>Pay-as-you-go, by fixed bandwidth (PayByBandwidth): 2 to 1000</description></item>
+        /// <item><description><para>For subscription premium bandwidth, the valid range is 2 to 1000.</para>
+        /// </description></item>
+        /// <item><description><para>For pay-as-you-go premium bandwidth with pay-by-traffic billing, the valid range is 2 to 200.</para>
+        /// </description></item>
+        /// <item><description><para>For pay-as-you-go premium bandwidth with pay-by-bandwidth billing, the valid range is 2 to 1000.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -75,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the list of regions supported by Elastic Desktop Service (EDS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

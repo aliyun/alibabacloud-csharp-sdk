@@ -33,9 +33,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>Specifies whether to encrypt data in the NAS file system. You can use keys that are hosted by Key Management Service (KMS) to encrypt data in a file system. When you read and write the encrypted data, the data is automatically decrypted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: does not encrypt data in the NAS file system.</description></item>
-        /// <item><description>1: encrypts data in the NAS file system by using a NAS-managed key. <c>If you set </c>FileSystemType<c> to </c>standard<c> or </c>extreme<c>, you can use a NAS-managed key to encrypt data in a NAS file system.</c></description></item>
-        /// <item><description>2: encrypts data in the NAS file system by using a KMS-managed key. <c>If</c> you set FileSystemType<c> to </c>extreme<c>, you can use a KMS-managed key to encrypt data in a NAS file system.</c></description></item>
+        /// <item><description><para>0: does not encrypt data in the NAS file system.</para>
+        /// </description></item>
+        /// <item><description><para>1: encrypts data in the NAS file system by using a NAS-managed key. <c>If you set </c>FileSystemType<c> to </c>standard<c> or </c>extreme<c>, you can use a NAS-managed key to encrypt data in a NAS file system.</c></para>
+        /// </description></item>
+        /// <item><description><para>2: encrypts data in the NAS file system by using a KMS-managed key. <c>If</c> you set FileSystemType<c> to </c>extreme<c>, you can use a KMS-managed key to encrypt data in a NAS file system.</c></para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: 0.</para>
         /// 
@@ -89,8 +92,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The storage type of the NAS file system. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Capacity</description></item>
-        /// <item><description>Performance</description></item>
+        /// <item><description><para>Capacity</para>
+        /// </description></item>
+        /// <item><description><para>Performance</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Capacity.</para>
         /// <para>This parameter is required.</para>

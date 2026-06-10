@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeQosRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The network package ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NetworkPackageId { get; set; }
 
         /// <summary>
+        /// <para>The QoS rule name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

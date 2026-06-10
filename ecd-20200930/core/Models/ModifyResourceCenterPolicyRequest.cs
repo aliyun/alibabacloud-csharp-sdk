@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The IDs of the cloud computer policies that you want to associate with cloud computers.</para>
         /// <remarks>
-        /// <para> You can specify up to one cloud computer policy that takes effect globally, and up to four cloud computer policies that apply to specific IP addresses. If multiple cloud computer policies are configured for global enforcement, only the earliest-associated policy will take effect</para>
+        /// <para>You can specify up to one cloud computer policy that takes effect globally, and up to four cloud computer policies that apply to specific IP addresses. If multiple cloud computer policies are configured for global enforcement, only the earliest-associated policy will take effect</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -39,10 +39,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The service type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>app: cloud applications.</description></item>
-        /// <item><description>resourceGroup: resource groups.</description></item>
-        /// <item><description>desktop: cloud computers.</description></item>
-        /// <item><description>desktopGroup: cloud computer shares.</description></item>
+        /// <item><description><para>app: cloud applications.</para>
+        /// </description></item>
+        /// <item><description><para>resourceGroup: resource groups.</para>
+        /// </description></item>
+        /// <item><description><para>desktop: cloud computers.</para>
+        /// </description></item>
+        /// <item><description><para>desktopGroup: cloud computer shares.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -76,8 +80,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The resource type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>app: cloud applications.</description></item>
-        /// <item><description>desktop: cloud computers.</description></item>
+        /// <item><description><para>app: cloud applications.</para>
+        /// </description></item>
+        /// <item><description><para>desktop: cloud computers.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

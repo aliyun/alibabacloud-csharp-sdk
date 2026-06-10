@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>If a session is disconnected by the end user or accidentally due to a factor and the end user does not re-establish a connection with the session within the keep-alive duration, the session expires and unsaved data is deleted. If the end user successfully re-establishes a connection with the session within the keep-alive duration, the end user returns to the session and can still access the original data.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1000</para>
+            /// <para>180000</para>
             /// </summary>
             [NameInMap("KeepDuration")]
             [Validation(Required=false)]
@@ -73,8 +73,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The load balancing policy for the multi-session cloud computer pool.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: depth-first</description></item>
-            /// <item><description>1: breadth first.</description></item>
+            /// <item><description><para>0: depth-first</para>
+            /// </description></item>
+            /// <item><description><para>1: breadth first.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -110,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>When the specified threshold is reached, new cloud computers are automatically created. When the specified threshold is not reached, idle cloud computers are released.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0.9</para>
+            /// <para>0.85</para>
             /// </summary>
             [NameInMap("RatioThreshold")]
             [Validation(Required=false)]

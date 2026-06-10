@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>A pagination token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CAAAAA==</para>
+        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

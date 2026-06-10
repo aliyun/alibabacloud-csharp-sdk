@@ -118,8 +118,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The maximum number of entries to return on each page.</para>
         /// <list type="bullet">
-        /// <item><description>Maximum value: 100.</description></item>
-        /// <item><description>Default value: 10.</description></item>
+        /// <item><description><para>Maximum value: 100.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -169,8 +171,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The protocol type.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HDX: High-definition Experience (HDX) protocol</description></item>
-        /// <item><description>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</description></item>
+        /// <item><description><para>HDX: High-definition Experience (HDX) protocol</para>
+        /// </description></item>
+        /// <item><description><para>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

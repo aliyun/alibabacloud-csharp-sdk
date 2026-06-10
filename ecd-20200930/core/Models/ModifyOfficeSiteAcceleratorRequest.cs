@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyOfficeSiteAcceleratorRequest : TeaModel {
+        /// <summary>
+        /// <para>The information about the regions to accelerate.</para>
+        /// </summary>
         [NameInMap("AccelerateRegion")]
         [Validation(Required=false)]
         public List<ModifyOfficeSiteAcceleratorRequestAccelerateRegion> AccelerateRegion { get; set; }
         public class ModifyOfficeSiteAcceleratorRequestAccelerateRegion : TeaModel {
             /// <summary>
+            /// <para>The ID of the region to accelerate.</para>
+            /// <para>The number of regions that you can add is limited by the total bandwidth and the instance type of the GA instance. For more information about the number of access regions supported by each instance type, see <a href="t1855472.xdita#">Overview of GA instances</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -24,6 +29,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AccelerateRegionId { get; set; }
 
             /// <summary>
+            /// <para>The peak public bandwidth. Unit: Mbps.</para>
+            /// <remarks>
+            /// <para>For the pay-by-bandwidth metering method, the value ranges from 10 to 1000.</para>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -34,6 +43,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Bandwidth { get; set; }
 
             /// <summary>
+            /// <para>The IP protocol version used to access GA instances. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>IPv4</b> (default)</para>
+            /// </description></item>
+            /// <item><description><para><b>IPv6</b></para>
+            /// </description></item>
+            /// <item><description><para><b>DUAL_STACK</b>: IPv4 and IPv6</para>
+            /// </description></item>
+            /// </list>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description>Only standard pay-as-you-go GA instances support the DUAL_STACK option.</description></item>
+            /// </list>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>IPv4</para>
             /// </summary>
@@ -42,6 +66,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string IpVersion { get; set; }
 
             /// <summary>
+            /// <para>The Internet line type in the acceleration region. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>BGP</b>: BGP (Multi-ISP) lines.</para>
+            /// </description></item>
+            /// <item><description><para><b>BGP_PRO</b>: BGP (Multi-ISP) Pro lines.</para>
+            /// </description></item>
+            /// </list>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description><para>This parameter is required for GA instances that use the pay-by-data-transfer metering method.</para>
+            /// </description></item>
+            /// <item><description><para>The supported line types vary based on the acceleration region.</para>
+            /// </description></item>
+            /// </list>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -54,6 +93,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
+        /// <para>The office network ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +104,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

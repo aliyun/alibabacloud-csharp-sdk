@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the <c>DesktopTimers</c>** parameter. Set the value to <c>true</c>**.</para>
+        /// <para>Specifies whether to use the <c>DesktopTimers</c>\<em>\</em> parameter. Set the value to <c>true</c>\<em>\</em>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

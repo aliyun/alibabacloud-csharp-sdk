@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The ID of the user who uses the network disk.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>user01</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>user01</para>
+                /// <para>alice</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]

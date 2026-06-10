@@ -10,47 +10,47 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeImageModifiedRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The image change records.</para>
+        /// <para>Collection of image modification records.</para>
         /// </summary>
         [NameInMap("ImageModifiedRecords")]
         [Validation(Required=false)]
         public List<DescribeImageModifiedRecordsResponseBodyImageModifiedRecords> ImageModifiedRecords { get; set; }
         public class DescribeImageModifiedRecordsResponseBodyImageModifiedRecords : TeaModel {
             /// <summary>
-            /// <para>The ID of the original image.</para>
+            /// <para>ID of the original image before modification.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>m-8rnz2imrpcfuh****</para>
+            /// <para>desktopimage-windows-server-2019-64-ch-asp</para>
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The name of the original image.</para>
+            /// <para>Name of the original image before modification.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>win10-0307</para>
+            /// <para>Windows server 2019 Mainland</para>
             /// </summary>
             [NameInMap("ImageName")]
             [Validation(Required=false)]
             public string ImageName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the new image after the image was modified.</para>
+            /// <para>ID of the new image after modification.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxNewImageID</para>
+            /// <para>desktopimage-windows-server-2022-64-ch-asp</para>
             /// </summary>
             [NameInMap("NewImageId")]
             [Validation(Required=false)]
             public string NewImageId { get; set; }
 
             /// <summary>
-            /// <para>The name of the new image after the image was modified.</para>
+            /// <para>Name of the new image after modification.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xxxxImageID</para>
+            /// <para>Windows server 2022 Mainland asp</para>
             /// </summary>
             [NameInMap("NewImageName")]
             [Validation(Required=false)]
@@ -61,16 +61,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The status of the image modification.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>0: The image is being modified.</para>
-            /// </description></item>
-            /// <item><description><para>1: The image is successfully modified.</para>
-            /// </description></item>
-            /// <item><description><para>2: The image fails to be modified.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>Status of the image modification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -80,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was last modified.</para>
+            /// <para>Time when the image was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-03T02:43:44.851Z</para>
@@ -92,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>If the NextToken parameter is empty, no next page exists.</para>
+        /// <para>Token for the next page of results. An empty NextToken means no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6koN7RqHg3d2z8LKmSoe821</para>
@@ -102,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DC40EE61-7E83-59ED-AEA6-7EE9C437F352</para>
@@ -112,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of image modification records.</para>
+        /// <para>Total number of image modification records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

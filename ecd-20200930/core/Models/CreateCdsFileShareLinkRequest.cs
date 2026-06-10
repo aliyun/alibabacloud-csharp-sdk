@@ -22,6 +22,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The description of the file sharing task. The description must be 0 to 1,024 characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SharedFile</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -146,7 +149,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The ID of the end user.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>user01</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
@@ -169,6 +172,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> FileIds { get; set; }
 
+        /// <summary>
+        /// <para>Team space ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cg-i1ruuudp92qpj****</para>
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }

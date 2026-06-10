@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public DescribeRenewalPriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribeRenewalPriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
-                /// <para>The unit of currency (USD).</para>
+                /// <para>&lt;props=&quot;china&quot;&gt;The unit of currency. The value is CNY.
+                /// &lt;props=&quot;intl&quot;&gt;The unit of currency. The value is USD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -34,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The discounted amount.</para>
+                /// <para>The discount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15.8</para>
@@ -44,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public float? DiscountPrice { get; set; }
 
                 /// <summary>
-                /// <para>The orders.</para>
+                /// <para>The order details.</para>
                 /// </summary>
                 [NameInMap("OrderLines")]
                 [Validation(Required=false)]
@@ -61,14 +62,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// <para>The promotions.</para>
+                /// <para>The promotion details.</para>
                 /// </summary>
                 [NameInMap("Promotions")]
                 [Validation(Required=false)]
                 public List<DescribeRenewalPriceResponseBodyPriceInfoPricePromotions> Promotions { get; set; }
                 public class DescribeRenewalPriceResponseBodyPriceInfoPricePromotions : TeaModel {
                     /// <summary>
-                    /// <para>The description of the promotion rule.</para>
+                    /// <para>The promotion rule description.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -79,6 +80,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
                     /// <summary>
                     /// <para>The promotion description.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>新品上市，立享优惠</para>
                     /// </summary>
                     [NameInMap("PromotionDesc")]
                     [Validation(Required=false)]
@@ -96,13 +100,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
                     /// <summary>
                     /// <para>The promotion name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Featured deals</para>
                     /// </summary>
                     [NameInMap("PromotionName")]
                     [Validation(Required=false)]
                     public string PromotionName { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether an item is selected.</para>
+                    /// <para>Indicates whether the promotion is selected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -114,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 }
 
                 /// <summary>
-                /// <para>The actual price. The actual price is the original price minus the discount.</para>
+                /// <para>The final price. This is the value of <c>OriginalPrice</c> minus <c>DiscountPrice</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>63.2</para>
@@ -134,6 +141,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public class DescribeRenewalPriceResponseBodyPriceInfoRules : TeaModel {
                 /// <summary>
                 /// <para>The rule description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>买满1年，立享官网价格8.5折优惠。</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

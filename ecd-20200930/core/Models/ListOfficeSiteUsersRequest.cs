@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AssignedInfo { get; set; }
 
         /// <summary>
-        /// <para>The query string for fuzzy query.</para>
+        /// <para>The query string for fuzzy matching.</para>
         /// 
         /// <b>Example:</b>
         /// <para><em>jin</em></para>
@@ -28,10 +28,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? IncludeAssignedUser { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 1 to 100.</description></item>
-        /// <item><description>Default value: 10.</description></item>
+        /// <item><description><para>Maximum value: 100.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request or if no next query exists. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token for the next page of results. Leave this empty for the first query. For subsequent queries, use the NextToken value from the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The organizational unit (OU) of the specified AD domain.</para>
+        /// <para>The path of the organizational unit (OU) in the AD domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com/Domain Controllers</para>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OUPath { get; set; }
 
         /// <summary>
-        /// <para>The office network ID. The office network must be of the enterprise AD account type.</para>
+        /// <para>The office network ID. Only office networks that use enterprise AD accounts are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of regions where WUYING Workspace is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

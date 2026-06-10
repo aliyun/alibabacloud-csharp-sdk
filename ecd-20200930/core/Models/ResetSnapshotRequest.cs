@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ResetSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot.</para>
+        /// <para>The ID of the snapshot used to recover disk data.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string SnapshotId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether to shut down and recover the disk using the snapshot.</para>
+        /// </summary>
         [NameInMap("StopDesktop")]
         [Validation(Required=false)]
         public bool? StopDesktop { get; set; }

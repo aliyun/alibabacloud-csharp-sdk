@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The cloud desktop ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ecd-2jv6wugbkp65pxxxx</para>
+            /// <para>ecd-2jv6wugbkp65p****</para>
             /// </summary>
             [NameInMap("DesktopId")]
             [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The end user ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>wy01</para>
+            /// <para>alice</para>
             /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]

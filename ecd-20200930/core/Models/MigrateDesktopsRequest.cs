@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class MigrateDesktopsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud computers. You can specify 1 to 100 IDs.</para>
+        /// <para>The IDs of the cloud computers to migrate. You can specify 1 to 100 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesktopId")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. To get a list of supported regions, call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,12 +28,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is not publicly available.</para>
+        /// </summary>
         [NameInMap("TargetMemberIp")]
         [Validation(Required=false)]
         public string TargetMemberIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the destination office network.</para>
+        /// <para>The ID of the target office network.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,12 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TargetOfficeSiteId { get; set; }
 
         /// <summary>
-        /// <remarks>
-        /// <para>This parameter is for internal use only.</para>
-        /// </remarks>
-        /// 
-        /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </summary>
         [NameInMap("TargetSubnetId")]
         [Validation(Required=false)]

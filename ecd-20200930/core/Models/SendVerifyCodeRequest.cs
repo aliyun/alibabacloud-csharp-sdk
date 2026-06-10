@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The information that is required to send the verification code, in JSON format. When you verify the CEN instance of another Alibaba Cloud account, you must provide the ID of the CEN instance and the ID of the Alibaba Cloud account to which the instance belongs.</para>
         /// <list type="bullet">
-        /// <item><description>CenId: the ID of the CEN instance.</description></item>
-        /// <item><description>CenOwnerId: the ID of the Alibaba Cloud account to which the CEN instance belongs.</description></item>
+        /// <item><description><para>CenId: the ID of the CEN instance.</para>
+        /// </description></item>
+        /// <item><description><para>CenOwnerId: the ID of the Alibaba Cloud account to which the CEN instance belongs.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you own the CEN instance, skip this parameter. If you do not own the CEN instance, specify the ID of the Alibaba Cloud account that owns the CEN instance.</para>
+        /// <para>If you own the CEN instance, skip this parameter. If you do not own the CEN instance, specify the ID of the Alibaba Cloud account that owns the CEN instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

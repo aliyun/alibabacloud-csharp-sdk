@@ -38,22 +38,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The type of the cloud computer template.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>SYSTEM: system template</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>CUSTOM: custom template</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>
@@ -74,12 +58,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The category of the data disk.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>cloud_efficiency: the ultra disk</description></item>
-            /// <item><description>cloud_auto: the standard SSD.</description></item>
-            /// <item><description>cloud_essd: the ESSD. Take note that only specific cloud computer types support ESSDs.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_efficiency</para>
@@ -149,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The memory size. Unit: MiB.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>47104</para>
+                /// <para>4096</para>
                 /// </summary>
                 [NameInMap("MemorySize")]
                 [Validation(Required=false)]
@@ -159,12 +137,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The instance family of the cloud computer.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>eds.graphics: graphical instance family</description></item>
-            /// <item><description>eds.hf: instance family with a high clock speed</description></item>
-            /// <item><description>eds.general: general-purpose instance family</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>eds.general</para>
@@ -182,36 +154,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public class DescribeBundlesResponseBodyBundlesDisks : TeaModel {
                 /// <summary>
                 /// <para>The PL of the disk.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>PL1</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>PL0</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>PL3</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>PL2</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- --></description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PL0</para>
@@ -232,22 +174,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
                 /// <summary>
                 /// <para>The type of the disk.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>SYSTEM: system disk</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>DATA: data disk</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- --></description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SYSTEM</para>
@@ -290,13 +216,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The OS language of the image.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>en-US: English</description></item>
-            /// <item><description>zh-HK: Chinese, Traditional (Hong Kong, China)</description></item>
-            /// <item><description>zh-CN: Simplified Chinese</description></item>
-            /// <item><description>ja-JP: Japanese</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>en-US</para>
@@ -307,22 +226,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The type of the OS.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Linux</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Windows</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Windows</para>
@@ -333,50 +236,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The OS.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Ubuntu</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Windows Server 2022</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>UOS</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>CentOS</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Windows Server 2019</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Windows Server 2016</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Windows Server 2019</para>
@@ -387,11 +246,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The protocol type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>HDX: HDX protocol</description></item>
-            /// <item><description>ASP: in-house ASP</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ASP</para>
@@ -402,11 +256,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The session type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: single-session</description></item>
-            /// <item><description>1: multi-session</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -427,12 +276,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The category of the system disk.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>cloud_efficiency: the ultra disk</description></item>
-            /// <item><description>cloud_auto: the standard SSD.</description></item>
-            /// <item><description>cloud_essd: the Enterprise SSD (ESSD). Take note that only specific cloud computer types support ESSDs.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_efficiency</para>

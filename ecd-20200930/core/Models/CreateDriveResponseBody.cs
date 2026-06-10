@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The ID of the external user-level storage resource.</para>
             /// <remarks>
-            /// <para> A value is returned for this parameter only if ResourceType is set to PDS.</para>
+            /// <para>A value is returned for this parameter only if ResourceType is set to PDS.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para> This parameter is deprecated.</para>
+            /// <para>This parameter is deprecated.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -147,12 +147,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The status of the user-level storage resource.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INIT: initializing</description></item>
-            /// <item><description>MAINTAIN: maintaining</description></item>
-            /// <item><description>DELETING</description></item>
-            /// <item><description>INVALID</description></item>
-            /// <item><description>NORMAL</description></item>
-            /// <item><description>FAIL: failed</description></item>
+            /// <item><description><para>INIT: initializing</para>
+            /// </description></item>
+            /// <item><description><para>MAINTAIN: maintaining</para>
+            /// </description></item>
+            /// <item><description><para>DELETING</para>
+            /// </description></item>
+            /// <item><description><para>INVALID</para>
+            /// </description></item>
+            /// <item><description><para>NORMAL</para>
+            /// </description></item>
+            /// <item><description><para>FAIL: failed</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -165,7 +171,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The total amount of the user-level storage resource capacity.</para>
             /// <remarks>
-            /// <para> Unit: bytes.</para>
+            /// <para>Unit: bytes.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -179,8 +185,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The usage of the storage resource.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DESKTOP: data disk space</description></item>
-            /// <item><description>USER_PROFILE: space for personal data of the user</description></item>
+            /// <item><description><para>DESKTOP: data disk space</para>
+            /// </description></item>
+            /// <item><description><para>USER_PROFILE: space for personal data of the user</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -193,7 +201,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The amount of user-level storage resource capacity used.</para>
             /// <remarks>
-            /// <para> Unit: bytes.</para>
+            /// <para>Unit: bytes.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

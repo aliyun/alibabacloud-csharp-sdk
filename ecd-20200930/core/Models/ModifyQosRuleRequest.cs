@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyQosRuleRequest : TeaModel {
         /// <summary>
+        /// <para>The maximum downstream bandwidth. The unit is Mbps.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Download { get; set; }
 
         /// <summary>
+        /// <para>The ID of the QoS rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string QosRuleId { get; set; }
 
         /// <summary>
+        /// <para>The name of the QoS rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string QosRuleName { get; set; }
 
         /// <summary>
+        /// <para>The maximum upstream bandwidth. The unit is Mbps.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

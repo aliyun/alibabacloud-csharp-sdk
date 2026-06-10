@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeDesktopGroupSessionsResponseBodySessions> Sessions { get; set; }
         public class DescribeDesktopGroupSessionsResponseBodySessions : TeaModel {
             /// <summary>
-            /// <para>账号类型</para>
+            /// <para>The account type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SIMPLE</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The operating system of the client.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>windows_\&quot;Windows10Enterprise\&quot;10.0(Build22000)</para>
+            /// <para>windows</para>
             /// </summary>
             [NameInMap("ClientOS")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The version of the client.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2.0.0-R-20221030.08****</para>
+            /// <para>7.8.0</para>
             /// </summary>
             [NameInMap("ClientVersion")]
             [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The name of the cloud computer share.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test</para>
+            /// <para>DemoCCGroup</para>
             /// </summary>
             [NameInMap("DesktopGroupName")]
             [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>办公网络类型</para>
+            /// <para>The office network type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SIMPLE</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The user ID of the terminal that connects to the session.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xianqiu</para>
+            /// <para>alice</para>
             /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The end time of the most recent connection.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2022-08-31 06:56:45</para>
+            /// <para>2022-08-31 07:56:45</para>
             /// </summary>
             [NameInMap("LastSessionEndTime")]
             [Validation(Required=false)]
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The office network name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test</para>
+            /// <para>DemoOfficeNetwork</para>
             /// </summary>
             [NameInMap("OfficeSiteName")]
             [Validation(Required=false)]
@@ -188,11 +188,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The operating system type of the cloud computer.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>linux.</description></item>
-            /// <item><description>Windows.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Windows</para>
@@ -203,11 +198,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The type of the session.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: single-session</description></item>
-            /// <item><description>1: multi-session</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -218,11 +208,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The protocol type supported by the rule.</para>
-            /// <para>Valid value:</para>
-            /// <list type="bullet">
-            /// <item><description>High-definition Experience (HDX).</description></item>
-            /// <item><description>ASP.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ASP</para>
@@ -243,22 +228,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The state of the session.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Connected</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>Disconnected</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Connected</para>

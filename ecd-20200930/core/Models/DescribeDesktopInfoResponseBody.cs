@@ -10,19 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The basic information about cloud computers.</para>
+        /// <para>Basic desktop information.</para>
         /// </summary>
         [NameInMap("Desktops")]
         [Validation(Required=false)]
         public List<DescribeDesktopInfoResponseBodyDesktops> Desktops { get; set; }
         public class DescribeDesktopInfoResponseBodyDesktops : TeaModel {
             /// <summary>
-            /// <para>The connection status of the user.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Connected</description></item>
-            /// <item><description>Disconnected</description></item>
-            /// </list>
+            /// <para>User connection status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Disconnected</para>
@@ -32,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// <para>The version of the cloud computer image.</para>
+            /// <para>Desktop image version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.4.0-R-***</para>
@@ -42,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CurrentAppVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud computer pool.</para>
+            /// <para>Desktop group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dg-3uiojcc0j4kh7****</para>
@@ -52,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud computer.</para>
+            /// <para>Desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -62,18 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The status of the cloud computer.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Stopped</description></item>
-            /// <item><description>Failed</description></item>
-            /// <item><description>Starting</description></item>
-            /// <item><description>Running</description></item>
-            /// <item><description>Stopping</description></item>
-            /// <item><description>Expired</description></item>
-            /// <item><description>Deleted</description></item>
-            /// <item><description>Pending</description></item>
-            /// </list>
+            /// <para>The status of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -83,14 +67,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// <para>The information about flags that are used to manage cloud computers.</para>
+            /// <para>The management flag.</para>
             /// </summary>
             [NameInMap("ManagementFlag")]
             [Validation(Required=false)]
             public List<string> ManagementFlag { get; set; }
 
             /// <summary>
-            /// <para>The size of the update package. Unit: KB.</para>
+            /// <para>Upgrade package size, in KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>568533470</para>
@@ -100,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? NewAppSize { get; set; }
 
             /// <summary>
-            /// <para>The version number of the image that can be updated on the cloud computer.</para>
+            /// <para>Desktop upgradable image version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.6.0-R-***</para>
@@ -110,17 +94,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NewAppVersion { get; set; }
 
             /// <summary>
-            /// <para>The description of the image version that can be updated.</para>
+            /// <para>Description of the upgradable image version.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test package 03-07</para>
+            /// <para>Test upgrade package 03-07</para>
             /// </summary>
             [NameInMap("ReleaseNote")]
             [Validation(Required=false)]
             public string ReleaseNote { get; set; }
 
             /// <summary>
-            /// <para>The time when the cloud computer was first started.</para>
+            /// <para>Desktop first startup time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-06T08:31Z</para>
@@ -132,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>062B1439-709A-580E-85DF-CE97A1560565</para>

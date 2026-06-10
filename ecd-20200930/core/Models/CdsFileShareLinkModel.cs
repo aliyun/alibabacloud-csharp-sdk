@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>newDescription</para>
+        /// <para>文件分享链接。</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

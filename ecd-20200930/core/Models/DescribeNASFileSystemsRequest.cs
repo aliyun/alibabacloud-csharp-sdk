@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include only NAS file systems that support the User Profile Management (UPM) feature in the query results.</para>
+        /// <para>Specifies whether to return only NAS file systems that are compatible with User Profile Management (UPM).</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -31,8 +31,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The number of entries to return on each page.</para>
-        /// <para>Maximum value: 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Maximum value: 100.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -42,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -62,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions where Elastic Desktop Service (EDS) is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

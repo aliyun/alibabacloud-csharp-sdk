@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RebuildDesktopsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The recreation results.</para>
+        /// <para>The rebuild results.</para>
         /// </summary>
         [NameInMap("RebuildResults")]
         [Validation(Required=false)]
         public List<RebuildDesktopsResponseBodyRebuildResults> RebuildResults { get; set; }
         public class RebuildDesktopsResponseBodyRebuildResults : TeaModel {
             /// <summary>
-            /// <para>The recreation result code. If the request was successful, <c>success</c> is returned. If the request failed, an error message is returned.</para>
+            /// <para>The operation result. A value of <c>Success</c> indicates the rebuild was initiated. Otherwise, an error code is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IncorrectDesktopStatus</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the cloud computers.</para>
+            /// <para>The desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The error message. This parameter is invalid if the value of <c>Code</c> is <c>success</c>.</para>
+            /// <para>The error message. This parameter is returned only if the value of <c>Code</c> is not <c>Success</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The current status of the desktop does not support this operation.</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

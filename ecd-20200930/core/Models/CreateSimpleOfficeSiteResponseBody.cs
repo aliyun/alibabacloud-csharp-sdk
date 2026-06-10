@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateSimpleOfficeSiteResponseBody : TeaModel {
         /// <summary>
-        /// <para>The office network ID.</para>
+        /// <para>The office site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+os-c5cy7q578s8jc****</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The name of the organizational unit (OU) in the AD domain. You can call the <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> operation to obtain OUs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oldad.com/Domain Controllers</para>
+        /// <para>example.com/Domain Controllers</para>
         /// </summary>
         [NameInMap("OUName")]
         [Validation(Required=false)]
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The name of the subdomain in the enterprise AD domain.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>childexample.com</para>
+        /// <para>child.example.com</para>
         /// </summary>
         [NameInMap("SubDomainName")]
         [Validation(Required=false)]

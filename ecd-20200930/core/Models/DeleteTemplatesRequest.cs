@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class DeleteTemplatesRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

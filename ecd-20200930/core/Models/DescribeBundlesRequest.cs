@@ -21,22 +21,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The type of the cloud computer template.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>SYSTEM: system template</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>CUSTOM: custom template</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM</para>
@@ -67,12 +51,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The instance family of the cloud computers.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>eds.graphics: graphical instance families</description></item>
-        /// <item><description>eds.hf: instance families with high clock speeds</description></item>
-        /// <item><description>eds.general: general-purpose instance families</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>eds.general</para>
@@ -83,11 +61,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not available for public use.</para>
+        /// <para>This parameter is not available for public use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>This parameter is now in invitational preview and unavailable.</para>
+        /// <para>example</para>
         /// </summary>
         [NameInMap("FotaChannel")]
         [Validation(Required=false)]
@@ -95,22 +73,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>Specifies whether the cloud computers in the template belong to a cloud computer pool.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -131,13 +93,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The GPU driver type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>T4</description></item>
-        /// <item><description>A10</description></item>
-        /// <item><description>G28</description></item>
-        /// <item><description>G39</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>T4</para>
@@ -187,22 +142,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The type of the OS.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Linux</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Windows</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Windows</para>
@@ -213,11 +152,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The protocol type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>HDX: High-definition Experience (HDX) protocol</description></item>
-        /// <item><description>ASP: in-house Adaptive Streaming Protocol (ASP) (recommend)</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ASP</para>
@@ -227,7 +161,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
+        /// <para>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the regions supported by Elastic Desktop Service (EDS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -258,11 +192,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? SelectedBundle { get; set; }
 
         /// <summary>
-        /// <para>The type of the session. Valide values:</para>
-        /// <list type="bullet">
-        /// <item><description>SingleSession</description></item>
-        /// <item><description>MultipleSession</description></item>
-        /// </list>
+        /// <para>The type of the session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SingleSession</para>

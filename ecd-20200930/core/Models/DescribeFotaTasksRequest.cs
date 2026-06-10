@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>To be hidden.</para>
+        /// <para>windows</para>
         /// </summary>
         [NameInMap("FotaStatus")]
         [Validation(Required=false)]

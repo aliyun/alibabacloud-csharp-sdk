@@ -68,9 +68,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>目标复制文件所在的个人空间ID（即UserId，您可以在DescribeCloudDriveUsers接口返回的报文中获取。）或者目标复制文件所在的团队空间ID（即GroupId，您可以在DescribeCloudDriveGroups接口返回的报文中获取。）</para>
+        /// <para>目标复制文件所在的个人空间 ID（即 UserId，您可以在 DescribeCloudDriveUsers 接口返回的报文中获取。）或者目标复制文件所在的团队空间 ID（即 GroupId，您可以在 DescribeCloudDriveGroups 接口返回的报文中获取。）</para>
         /// <remarks>
-        /// <para>FileReceiverId和FileReceiverType都为空时，默认复制到文件所在的个人空间。</para>
+        /// <para>FileReceiverId 和 FileReceiverType 都为空时，默认复制到文件所在的个人空间。</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -90,6 +90,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string FileReceiverType { get; set; }
 
+        /// <summary>
+        /// <para>The team Space ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cg-hs3i1w39o68ma****</para>
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }

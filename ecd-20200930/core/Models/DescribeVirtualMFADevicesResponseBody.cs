@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeVirtualMFADevicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.If NextToken is empty, no next page exists.</para>
+        /// <para>The token to retrieve the next page of results. If this parameter is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL23as</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details of the virtual MFA devices.</para>
+        /// <para>A list of virtual MFA devices.</para>
         /// </summary>
         [NameInMap("VirtualMFADevices")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The number of consecutive failures to bind the virtual MFA device, or the number of failures on the verification of the virtual MFA device.</para>
+            /// <para>The number of consecutive failed attempts to bind or authenticate the virtual MFA device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is in invitational preview and is not publicly available.</para>
+            /// <para>This parameter is in private preview.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The name of the AD user who uses the virtual MFA device.</para>
+            /// <para>The AD username of the bound user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>usertest</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// <para>The time when the virtual MFA device was started. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the virtual MFA device was enabled. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format and in UTC, as specified by the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-12-20T14:52:28Z</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GmtEnabled { get; set; }
 
             /// <summary>
-            /// <para>The time when a locked virtual MFA device was automatically unlocked. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the locked virtual MFA device is automatically unlocked. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format and in UTC, as specified by the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-12-21T15:21:28Z</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GmtUnlock { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-269345****</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The serial number of the virtual MFA device, which is a unique identifier.</para>
+            /// <para>The serial number of the virtual MFA device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a25f297f-f2e1-4a44-bbf1-5f48a6e5****</para>
@@ -132,29 +132,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The status of the virtual MFA device.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>LOCKED</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>UNBOUND</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>NORMAL</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>

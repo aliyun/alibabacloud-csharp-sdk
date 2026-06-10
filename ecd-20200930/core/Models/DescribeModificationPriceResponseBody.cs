@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public DescribeModificationPriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribeModificationPriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
-                /// <para>The unit of currency (USD).</para>
+                /// <para>&lt;props=&quot;china&quot;&gt;The unit of currency (CNY).&lt;props=&quot;intl&quot;&gt;The unit of currency (USD).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
                     /// <summary>
                     /// <para>The promotion description.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>新品上市，立享优惠</para>
                     /// </summary>
                     [NameInMap("PromotionDesc")]
                     [Validation(Required=false)]
@@ -96,6 +99,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
                     /// <summary>
                     /// <para>The name of the promotion activity.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Featured deals</para>
                     /// </summary>
                     [NameInMap("PromotionName")]
                     [Validation(Required=false)]
@@ -134,6 +140,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public class DescribeModificationPriceResponseBodyPriceInfoRules : TeaModel {
                 /// <summary>
                 /// <para>The rule description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>买满1年，立享官网价格8.5折优惠。</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

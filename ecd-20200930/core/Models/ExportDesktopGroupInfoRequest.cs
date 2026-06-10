@@ -13,8 +13,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The billing method of the cloud computer share.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PostPaid: pay-as-you-go.</description></item>
-        /// <item><description>PrePaid: subscription.</description></item>
+        /// <item><description><para>PostPaid: pay-as-you-go.</para>
+        /// </description></item>
+        /// <item><description><para>PrePaid: subscription.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The name of the cloud computer share.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>CloudComputerPool01</para>
         /// </summary>
         [NameInMap("DesktopGroupName")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeVirtualMFADevicesRequest : TeaModel {
         /// <summary>
-        /// <para>The names of the AD users.</para>
+        /// <para>The list of Active Directory (AD) account usernames.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testuser</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 500. Default value: 100.</para>
+        /// <para>The maximum number of entries to return. Valid values: 1 to 500. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The pagination token. If a response is truncated, use the returned <c>NextToken</c> to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The office network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-269345****</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. Call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

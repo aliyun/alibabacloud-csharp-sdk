@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ClientType")]
         [Validation(Required=false)]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The ID of the bound user.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>moli</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

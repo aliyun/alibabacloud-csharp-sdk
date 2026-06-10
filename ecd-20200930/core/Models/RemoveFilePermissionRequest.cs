@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The ID of the end user.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>user01</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]

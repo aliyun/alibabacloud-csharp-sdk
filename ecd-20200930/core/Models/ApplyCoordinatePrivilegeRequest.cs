@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>co-fqsm6e8ee75w61fp9</para>
+        /// <para>co-fqsm6e8ee75w6****</para>
         /// </summary>
         [NameInMap("CoId")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The ID of the end user.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>zhangsan</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The unique identifier of the client. If you use an Alibaba Cloud Workspace client, click <b>About</b> on the client logon page to view the identifier of the client.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8b241d415da244a6936d6d6fa4f20f4d</para>
+        /// <para>3E14A18BD4D088504B9F8A8751AB****</para>
         /// </summary>
         [NameInMap("Uuid")]
         [Validation(Required=false)]

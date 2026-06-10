@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The tag keys. You can specify 1 to 20 tag keys.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TestKey</para>
+            /// <para>department</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The tag values. You can specify 1 to 20 tag values.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TestValue</para>
+            /// <para>design</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

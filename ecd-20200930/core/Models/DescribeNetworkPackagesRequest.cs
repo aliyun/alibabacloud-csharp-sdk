@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The number of entries to return on each page.</para>
         /// <list type="bullet">
-        /// <item><description>Maximum value: 100</description></item>
-        /// <item><description>Default value: 10</description></item>
+        /// <item><description><para>Maximum value: 100</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

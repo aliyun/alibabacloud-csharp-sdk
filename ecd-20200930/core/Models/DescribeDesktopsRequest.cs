@@ -9,17 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopsRequest : TeaModel {
+        /// <summary>
+        /// <para>The region ID. Call <a href="t2167755.xdita#"></a>to list regions that support Elastic Desktop Service (EDS).</para>
+        /// </summary>
         [NameInMap("BusinessChannel")]
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the cloud computer.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Postpaid (default): pay-as-you-go</description></item>
-        /// <item><description>PrePaid: subscription</description></item>
-        /// </list>
+        /// <para>The expiration time for subscription desktops.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -29,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer pool. If you specify <c>OnlyDesktopGroup</c>, ignore <c>DesktopGroupId</c>. If you leave <c>DesktopId</c> empty, all IDs of the cloud computers in the cloud computer pool are queried.````</para>
+        /// <para>The operating system type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-2i8qxpv6t1a03****</para>
@@ -39,7 +37,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer IDs. You can specify the IDs of 1 to 100 cloud computers.</para>
+        /// <para>The list of authorized users for the desktop. You can specify 1 to 100 users.</para>
+        /// <remarks>
+        /// <para>Only one user can connect to and use the desktop at a time.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -49,27 +50,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer name.</para>
+        /// <para>The directory ID. This is the same as the office site ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testDesktopName</para>
+        /// <para>DemoComputer01</para>
         /// </summary>
         [NameInMap("DesktopName")]
         [Validation(Required=false)]
         public string DesktopName { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer status.</para>
-        /// <para>Valid values:</para>
+        /// <para>The number of entries to return on each page in a paged query.</para>
         /// <list type="bullet">
-        /// <item><description>Stopped</description></item>
-        /// <item><description>Starting</description></item>
-        /// <item><description>Rebuilding</description></item>
-        /// <item><description>Running</description></item>
-        /// <item><description>Stopping</description></item>
-        /// <item><description>Expired</description></item>
-        /// <item><description>Deleted</description></item>
-        /// <item><description>Pending</description></item>
+        /// <item><description><para>Maximum value: 100.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,14 +76,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopStatus { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud computer status.</para>
+        /// <para>The elastic GPU pool ID.</para>
         /// </summary>
         [NameInMap("DesktopStatusList")]
         [Validation(Required=false)]
         public List<string> DesktopStatusList { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer type. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the IDs of all supported types.</para>
+        /// <para>The list of image IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eds.general.2c8g</para>
@@ -97,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopType { get; set; }
 
         /// <summary>
-        /// <para>The directory ID, which is the same as the office network ID.</para>
+        /// <para>The office site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-363353****</para>
@@ -107,10 +103,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The authorized users of the cloud computer. You can specify the IDs of 1 to 100 users.</para>
-        /// <remarks>
-        /// <para> During a specific period of time, only one user can connect to and use the cloud computer.</para>
-        /// </remarks>
+        /// <para>The list of authorized users to exclude from the desktop. You can specify 1 to 100 users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -120,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The list of authorized users that you want to exclude from the cloud computer. You can specify the IDs of 1 to 100 users.</para>
+        /// <para>Whether to exclude pooled desktops (desktops in a desktop pool).</para>
         /// 
         /// <b>Example:</b>
         /// <para>andy</para>
@@ -130,7 +123,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> ExcludedEndUserId { get; set; }
 
         /// <summary>
-        /// <para>The time when a subscription cloud computer expires.</para>
+        /// <para>The protocol type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-12-31T15:59:59Z</para>
@@ -140,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the information about the enterprise resource group.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -150,12 +143,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? FillResourceGroup { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to exclude pooled cloud computers.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true (default)</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
+        /// <para>The management flag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -165,7 +153,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? FilterDesktopGroup { get; set; }
 
         /// <summary>
-        /// <para>The ID of the elastic GPU pool.</para>
+        /// <para>The public network bandwidth throttling rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-0bm2iz1v6m6nx****</para>
@@ -175,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GpuInstanceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer pool.</para>
+        /// <para>The cloud computer status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-boyczi8enfyc5****</para>
@@ -185,7 +173,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the images.</para>
+        /// <para>The list of desktop statuses.</para>
         /// </summary>
         [NameInMap("ImageId")]
         [Validation(Required=false)]
@@ -196,7 +184,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? IncludeAutoSnapshotPolicy { get; set; }
 
         /// <summary>
-        /// <para>The flag that is used to manage the cloud desktops.</para>
+        /// <para>Whether to query image version information for the desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NoFlag</para>
@@ -206,11 +194,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ManagementFlag { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <list type="bullet">
-        /// <item><description>Maximum value: 100</description></item>
-        /// <item><description>Default value: 10</description></item>
-        /// </list>
+        /// <para>The token that starts the next query. An empty NextToken means no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -220,13 +204,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the shared group is a multi-cloud computer type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: a multi-cloud computer type.</description></item>
-        /// <item><description>false: a single-cloud computer type.</description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -235,7 +212,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? MultiResource { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</para>
+        /// <para>The user name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -245,7 +222,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The office network ID.</para>
+        /// <para>The name of the office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-363353****</para>
@@ -255,17 +232,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The office network name.</para>
+        /// <para>The desktop policy ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testName</para>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("OfficeSiteName")]
         [Validation(Required=false)]
         public string OfficeSiteName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query pooled cloud computers.</para>
+        /// <para>The desktop pool ID. If you specify <c>DesktopId</c>, this parameter is ignored. If <c>DesktopId</c> is empty, the system uses <c>DesktopGroupId</c> to retrieve all desktop IDs in the pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -275,14 +252,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? OnlyDesktopGroup { get; set; }
 
         /// <summary>
-        /// <para>The operating systems (OSs).</para>
+        /// <para>The desktop instance type. Call <a href="t2167746.xdita#"></a>to list supported instance types.</para>
         /// </summary>
         [NameInMap("OsTypes")]
         [Validation(Required=false)]
         public List<string> OsTypes { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The maximum number of entries to return on each page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -292,7 +269,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>Whether multiple resources exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -302,7 +279,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer policy.</para>
+        /// <para>The billing method for the desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system-all-enabled-policy</para>
@@ -312,12 +289,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The protocol.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>HDX: High-definition Experience (HDX) protocol</description></item>
-        /// <item><description>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</description></item>
-        /// </list>
+        /// <para>The desktop IDs. You can specify 1 to 100 IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ASP</para>
@@ -327,7 +299,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the network throttling rule.</para>
+        /// <para>The purchase method for the desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-5605u0gelk200****</para>
@@ -337,12 +309,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string QosRuleId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the image update information about the cloud computer.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
-        /// </list>
+        /// <para>The list of tags. Each tag is a key-value pair used to label resources. Use tags to group and manage desktops, making them easier to search and operate on in bulk. For more information, see <a href="t2042630.xdita#"></a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -352,7 +319,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? QueryFotaUpdate { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
+        /// <para>The cloud computer pool ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -363,7 +330,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the enterprise resource group.</para>
+        /// <para>Whether to query enterprise resource group information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-4hsvzbbmqdzu3s****</para>
@@ -373,7 +340,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot policy.</para>
+        /// <para>Whether to query only pooled desktops (desktops in a desktop pool).</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-hb12mclyne09xw***</para>
@@ -383,14 +350,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the cloud computer.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>duration: hourly plan (available for users in the whitelist)</description></item>
-        /// <item><description>postPaid: pay-as-you-go</description></item>
-        /// <item><description>monthPackage: monthly subscription (120-hour or 250-hour computing plan)</description></item>
-        /// <item><description>prePaid: monthly subscription (unlimited-hour computing plan)</description></item>
-        /// </list>
+        /// <para>The enterprise resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>monthPackage</para>
@@ -400,14 +360,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SubPayType { get; set; }
 
         /// <summary>
-        /// <para>The tags that you want to add to the cloud computer. A tag is a key-value pair that consists of a tag key and a tag value. Tags are used to identify resources. You can use tags to manage cloud computers by group. This facilitates search and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</para>
+        /// <para>The snapshot policy ID.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDesktopsRequestTag> Tag { get; set; }
         public class DescribeDesktopsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. If you specify the <c>Tag</c> parameter, you must also specify the <c>Key</c> parameter. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c> and contain only spaces.</para>
+            /// <para>The tag key. If you specify <c>Tag</c>, then <c>Key</c> is required. The key can be up to 128 characters long. It cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>. It cannot consist only of whitespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -417,7 +377,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The tag value. The value can be up to 128 characters long. It cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -429,7 +389,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The name of the end user.</para>
+        /// <para>The desktop name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alice</para>

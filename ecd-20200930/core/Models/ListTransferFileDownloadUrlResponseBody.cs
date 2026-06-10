@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListTransferFileDownloadUrlResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F1F01499-8F3D-5657-91AD-48177EB****</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of download URL information for the files.</para>
+        /// </summary>
         [NameInMap("Urls")]
         [Validation(Required=false)]
         public List<ListTransferFileDownloadUrlResponseBodyUrls> Urls { get; set; }
         public class ListTransferFileDownloadUrlResponseBodyUrls : TeaModel {
             /// <summary>
+            /// <para>The file ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>trf-i4pz8emx2k2fr****</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileId { get; set; }
 
             /// <summary>
+            /// <para>The name of the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>document.txt</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileName { get; set; }
 
             /// <summary>
+            /// <para>The status of the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DELETED</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The download URL of the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxsy-transfer.oss-cn-beijing.aliyuncs.com/xxxx">http://xxsy-transfer.oss-cn-beijing.aliyuncs.com/xxxx</a></para>
             /// </summary>

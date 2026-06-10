@@ -32,12 +32,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The instance type of the cloud computers. You can call the <a href="https://help.aliyun.com/document_detail/436974.html">DescribeBundles</a> operation to query cloud computer templates and obtain the instance types supported by the cloud computers from the <c>DesktopType</c> response parameter.</para>
         /// <remarks>
-        /// <para> If you want the template to use a non-GPU-accelerated image, you can only select a non-GPU-accelerated instance type. If you want the template to use a GPU-accelerated image, you can only select a GPU-accelerated instance type.</para>
+        /// <para>If you want the template to use a non-GPU-accelerated image, you can only select a non-GPU-accelerated instance type. If you want the template to use a GPU-accelerated image, you can only select a GPU-accelerated instance type.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ecd.basic.large</para>
+        /// <para>eds.enterprise_office.2c4g</para>
         /// </summary>
         [NameInMap("DesktopType")]
         [Validation(Required=false)]
@@ -57,10 +57,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The OS language. This parameter is available only for system images. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Simplified Chinese</description></item>
-        /// <item><description>zh-HK: Traditional Chinese (Hong Kong)</description></item>
-        /// <item><description>en-US: American English</description></item>
-        /// <item><description>ja-JP: Japanese</description></item>
+        /// <item><description><para>zh-CN: Simplified Chinese</para>
+        /// </description></item>
+        /// <item><description><para>zh-HK: Traditional Chinese (Hong Kong)</para>
+        /// </description></item>
+        /// <item><description><para>en-US: American English</para>
+        /// </description></item>
+        /// <item><description><para>ja-JP: Japanese</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

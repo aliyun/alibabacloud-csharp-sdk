@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyCloudDriveUsersResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D2E005C4-8CA3-5F1D-9917-E75BE3BF****</para>
         /// </summary>

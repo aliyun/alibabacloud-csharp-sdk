@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateOfficeSiteAcceleratorRequest : TeaModel {
         /// <summary>
-        /// <para>The regions to include in global acceleration.</para>
+        /// <para>A list of regions where access points provide acceleration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AccelerateRegion")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<CreateOfficeSiteAcceleratorRequestAccelerateRegion> AccelerateRegion { get; set; }
         public class CreateOfficeSiteAcceleratorRequestAccelerateRegion : TeaModel {
             /// <summary>
-            /// <para>The ID of the region to include in global acceleration.</para>
+            /// <para>The ID of the acceleration region.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AccelerateRegionId { get; set; }
 
             /// <summary>
-            /// <para>The bandwidth that you want to allocate to the acceleration region. Unit: Mbit/s.</para>
+            /// <para>The bandwidth allocated to the acceleration region. Unit: Mbps.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,16 +40,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>The IP version used to connect to the GA instance.</para>
+            /// <para>The IP protocol version used to access the GA instance.</para>
             /// <remarks>
-            /// <para> Only pay-as-you-go standard GA instances support <c>DUAL_STACK</c>.</para>
+            /// <para>Only standard pay-as-you-go GA instances support <c>DUAL_STACK</c>.</para>
             /// </remarks>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>DUAL_STACK: IPv4 and IPv6.</description></item>
-            /// <item><description>IPv6: IPv6.</description></item>
-            /// <item><description>IPv4 (default): IPv4.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>IPv4</para>
@@ -59,20 +53,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string IpVersion { get; set; }
 
             /// <summary>
-            /// <para>The line type of the elastic IP address (EIP) in the acceleration region.</para>
+            /// <para>The line type.</para>
             /// <remarks>
+            /// <list type="bullet">
+            /// <item><description><para>This parameter is required for pay-by-data-transfer GA instances.</para>
+            /// </description></item>
+            /// <item><description><para>The supported line types vary by acceleration region.</para>
+            /// </description></item>
+            /// </list>
             /// </remarks>
-            /// <list type="bullet">
-            /// <item><description><para>This parameter is required only if the bandwidth metering method of the GA instance is <b>pay-by-data transfer</b>.</para>
-            /// </description></item>
-            /// <item><description><para>Different acceleration regions support different line types of EIPs.</para>
-            /// </description></item>
-            /// </list>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>BGP: BGP (Multi-ISP) lines.</description></item>
-            /// <item><description>BGP_PRO: BGP (Multi-ISP) Pro.</description></item>
-            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

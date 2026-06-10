@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeAutoSnapshotPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries to return per page.</para>
         /// <list type="bullet">
-        /// <item><description>Maximum value: 50.</description></item>
-        /// <item><description>Default value: 50.</description></item>
+        /// <item><description><para>Maximum value: 50</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 50</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6mqIGdPhID94rjhZFGsvpJo</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. To query the regions supported by Elastic Desktop Service, call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The domain name of the existing AD subdomain.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>childexample.com</para>
+        /// <para>child.example.com</para>
         /// </summary>
         [NameInMap("SubDomainName")]
         [Validation(Required=false)]

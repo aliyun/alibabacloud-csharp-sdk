@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The query interval. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>60</description></item>
-        /// <item><description>120</description></item>
+        /// <item><description><para>60</para>
+        /// </description></item>
+        /// <item><description><para>120</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The ID of the region. Set the value to <c>cn-shanghai</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -76,8 +76,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The type of the resource.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RESOURCE_GROUP: the resource group</description></item>
-            /// <item><description>CLOUD_DESKTOP: the cloud computer service.</description></item>
+            /// <item><description><para>RESOURCE_GROUP: the resource group</para>
+            /// </description></item>
+            /// <item><description><para>CLOUD_DESKTOP: the cloud computer service.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

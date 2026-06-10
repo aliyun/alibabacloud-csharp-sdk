@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? CustomStartTimePeriod { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer share.</para>
+        /// <para>The ID of the desktop group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,12 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to ignore deletion flags.</para>
-        /// <para>Default value: true. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: ignores deletion flags. The cloud computers that were deleted are returned.</description></item>
-        /// <item><description>false: does not ignore deletion flags. The cloud computers that were deleted are not returned.</description></item>
-        /// </list>
+        /// <para>Specifies whether to return deleted desktops.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -44,10 +39,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? IgnoreDeleted { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The maximum number of entries to return on a single page.</para>
         /// <list type="bullet">
-        /// <item><description>Default value: 10.</description></item>
-        /// <item><description>Maximum value: 100.</description></item>
+        /// <item><description><para>Maximum value: 100.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token that is used to start the next query. If this parameter is empty, all results are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -68,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the cloud computer share.</para>
+        /// <para>The billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -78,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

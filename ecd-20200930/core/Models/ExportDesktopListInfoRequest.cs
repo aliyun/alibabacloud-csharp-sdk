@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The name of the cloud computer.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>testName</para>
+        /// <para>DemoComputer01</para>
         /// </summary>
         [NameInMap("DesktopName")]
         [Validation(Required=false)]

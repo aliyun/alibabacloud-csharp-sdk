@@ -32,6 +32,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The template name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Shanghai template1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateCdsFileRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk.</para>
+        /// <para>Enterprise cloud disk ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,54 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The policy that is used when the file that you want to upload has the same name as an existing file in the cloud disk.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>refuse</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>denies creating the file</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// <item><description><para>auto_rename</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>automatically renames the file</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// <item><description><para>ignore</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>allows the file to use the same name as the existing file in the cloud disk</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// <item><description><para>over_write</para>
-        /// <!-- -->
-        /// 
-        /// <para>:</para>
-        /// <!-- -->
-        /// 
-        /// <para>overwrites the existing file in the cloud disk</para>
-        /// <!-- -->
-        /// 
-        /// <para>.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>How to handle files with the same name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ignore</para>
@@ -78,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ConflictPolicy { get; set; }
 
         /// <summary>
-        /// <para>The user ID.</para>
+        /// <para>User ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test1</para>
@@ -88,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The hash value of the SHA1 algorithm that is used by the file.</para>
+        /// <para>SHA-1 hash value of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C4A8D09CA3762AF61E59520943DC26494F8****</para>
@@ -98,18 +51,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileHash { get; set; }
 
         /// <summary>
-        /// <para>The file size. Unit: bytes.</para>
+        /// <para>File size. Unit: Byte.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2048</para>
+        /// <para>1048576</para>
         /// </summary>
         [NameInMap("FileLength")]
         [Validation(Required=false)]
         public long? FileLength { get; set; }
 
         /// <summary>
-        /// <para>The file name.</para>
+        /// <para>File name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,23 +73,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The file type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>file</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>folder</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>File type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -146,12 +83,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string FileType { get; set; }
 
+        /// <summary>
+        /// <para>Team space ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cg-i1ruuudp92qpj****</para>
+        /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent folder.</para>
+        /// <para>Parent file ID. Get this from the <c>FileId</c> parameter returned by the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>637c9163b453b1a384874264ba79f3f9eab9****</para>
@@ -161,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ParentFileId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>Region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to list regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

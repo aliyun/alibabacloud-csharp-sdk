@@ -9,12 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetUserProfilePathRulesResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The request ID.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

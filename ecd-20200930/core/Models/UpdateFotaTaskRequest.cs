@@ -35,8 +35,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>Specifies whether to automatically push the image update task.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Running: automatically pushes the image update task.</description></item>
-        /// <item><description>Pending: does not automatically push the image update task.</description></item>
+        /// <item><description><para>Running: automatically pushes the image update task.</para>
+        /// </description></item>
+        /// <item><description><para>Pending: does not automatically push the image update task.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

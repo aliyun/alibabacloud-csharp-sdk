@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.\
+        /// <para>The number of the page to return.<br>
         /// Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -55,9 +55,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The statistic collection interval. Unit: seconds.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>3600: 1 hour</description></item>
-        /// <item><description>10800: 3 hours</description></item>
-        /// <item><description>86400: 24 hours</description></item>
+        /// <item><description><para>3600: 1 hour</para>
+        /// </description></item>
+        /// <item><description><para>10800: 3 hours</para>
+        /// </description></item>
+        /// <item><description><para>86400: 24 hours</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

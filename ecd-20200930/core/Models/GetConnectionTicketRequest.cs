@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The command that you want to run to configure a custom application in user mode. After you obtain the credential, the application is automatically started. Parameter description in the command:</para>
         /// <list type="bullet">
-        /// <item><description>appPath: the path of the application startup file. Example: <c>&quot;C:\\\\Program Files (x86)\\\\000\\\\000.exe&quot;</c>. Use double slashes (\\\) as the delimiter. Type of the parameter value: string.</description></item>
-        /// <item><description>appParameter: the startup arguments of the application. Example: <c>&quot;meetingid 000 meetingname aaa&quot;</c>. Separate multiple arguments with spaces. Type of the parameter value: string.</description></item>
+        /// <item><description><para>appPath: the path of the application startup file. Example: <c>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</c>. Use double slashes (\) as the delimiter. Type of the parameter value: string.</para>
+        /// </description></item>
+        /// <item><description><para>appParameter: the startup arguments of the application. Example: <c>&quot;meetingid 000 meetingname aaa&quot;</c>. Separate multiple arguments with spaces. Type of the parameter value: string.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The ID of the end user of the cloud computer. The end user must be the current end user of the cloud computer.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alice</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The ID of the cloud computer connection task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2afbad19-778a-4fc5-9674-1f19c63862da</para>
+        /// <para>2afbad19-778a-4fc5-9674-1f19c638****</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

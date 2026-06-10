@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ListDirectoryUsersRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not publicly available. The value can be 1 or left empty.</para>
+        /// <para>This parameter is not publicly available. You can only set this parameter to <c>1</c> or leave it empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AssignedInfo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the AD directory.</para>
+        /// <para>The AD directory ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.</para>
+        /// <para>The string for a fuzzy search. The operation returns all results that contain this string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the users with assigned cloud computers only.</para>
+        /// <para>Specifies whether to return only users who are assigned cloud desktops.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -54,8 +54,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The number of entries to return on each page.</para>
-        /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 10.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Maximum value: 100.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to start the next query. If the value of this parameter is empty, all results are returned.</para>
+        /// <para>The token used to start the next query. If this value is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The organizational unit (OU) in the specified AD domain.</para>
+        /// <para>The path of the organizational unit (OU) in the AD domain. You can call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the OU path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com/Domain Controllers</para>
@@ -85,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OUPath { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. To get a list of regions that WUYING Workspace supports, call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,12 +100,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The sort type.</para>
-        /// <para>Valide values:</para>
-        /// <list type="bullet">
-        /// <item><description>asc: cloud computers assigned to users on bottom</description></item>
-        /// <item><description>desc: cloud computers assigned to users on top</description></item>
-        /// </list>
+        /// <para>The sorting method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>

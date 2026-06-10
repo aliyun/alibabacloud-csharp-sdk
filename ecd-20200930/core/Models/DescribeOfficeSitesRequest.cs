@@ -16,8 +16,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The number of entries to return on each page.</para>
         /// <list type="bullet">
-        /// <item><description>Maximum value: 100.</description></item>
-        /// <item><description>Default value: 10.</description></item>
+        /// <item><description><para>Maximum value: 100.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query.</para>
+        /// <para>The token used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The office network IDs. You can specify the IDs of 1 to 100 office networks.</para>
+        /// <para>The office network IDs. You can specify 1 to 100 office network IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-363353****</para>
@@ -48,23 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The account type of the office network.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>SIMPLE: convenience account</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>AD_CONNECTOR: enterprise Active Directory (AD) account</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The type of account for the office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SIMPLE</para>
@@ -74,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,12 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The security protection setting of the office network.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SASE: SASE is configured.</description></item>
-        /// <item><description>OFF: No security protection setting is configured.</description></item>
-        /// </list>
+        /// <para>The security protection setting for the office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SASE</para>
@@ -101,71 +82,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The office network status.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>REGISTERING: The office network is being registered.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>DEREGISTERING: The office network is being deregistered.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>REGISTERED: The office network is registered.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>NEEDCONFIGTRUST: A trust relationship is required for the office network.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>CONFIGTRUSTFAILED: A trust relationship fails to be configured for the office network.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>DEREGISTERED: The office network is deregistered.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>ERROR: One or more configurations of the office network are invalid.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>CONFIGTRUSTING: A trust relationship is being configured for the office network.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>NEEDCONFIGUSER: Users are required for the office network.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>REGISTERED</para>
@@ -176,9 +92,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The ID of the virtual private cloud (VPC).</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>vpc-uf6bpyqivwl5f3pvoxxu0</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

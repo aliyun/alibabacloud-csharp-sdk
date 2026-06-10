@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeClientEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The user events.</para>
+        /// <para>The list of user events.</para>
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
         public List<DescribeClientEventsResponseBodyEvents> Events { get; set; }
         public class DescribeClientEventsResponseBodyEvents : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account with which the event is associated.</para>
+            /// <para>The ID of the Alibaba Cloud account associated with the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>112259558861****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AliUid { get; set; }
 
             /// <summary>
-            /// <para>The number of bytes that are received.</para>
+            /// <para>The number of bytes received.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8665</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BytesReceived { get; set; }
 
             /// <summary>
-            /// <para>The number of bytes that are sent.</para>
+            /// <para>The number of bytes sent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2345</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// <para>The OS that the client runs.</para>
+            /// <para>The operating system of the client.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Darwin 17.7.0 x64</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientVersion { get; set; }
 
             /// <summary>
-            /// <para>The description.</para>
+            /// <para>The description of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The desktop group ID.</para>
+            /// <para>The ID of the desktop group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dg-kadkdfaf****</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// <para>The desktop group name.</para>
+            /// <para>The name of the desktop group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testName</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupName { get; set; }
 
             /// <summary>
-            /// <para>The cloud desktop ID.</para>
+            /// <para>The ID of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-8fupvkhg0aayu****</para>
@@ -120,14 +120,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The IP address of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>10.10.<em>.</em></para>
+            /// <para>10.10.XX.XX</para>
             /// </summary>
             [NameInMap("DesktopIp")]
             [Validation(Required=false)]
             public string DesktopIp { get; set; }
 
             /// <summary>
-            /// <para>The cloud desktop name.</para>
+            /// <para>The name of the cloud desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the directory to which the cloud desktop belongs.</para>
+            /// <para>The ID of the cloud desktop\&quot;s directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-bh77qa8nmjot4****</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DirectoryType { get; set; }
 
             /// <summary>
-            /// <para>The information about the end user that connects to the cloud desktop from the EDS client. The information can be a RAM user ID or an AD username.</para>
+            /// <para>The ID of the end user. The value can be the ID of a RAM user or the username of an AD user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>28961708130834****</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EventId { get; set; }
 
             /// <summary>
-            /// <para>The time when the event occurred.</para>
+            /// <para>The time the event occurred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-30T06:32:31Z</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EventTime { get; set; }
 
             /// <summary>
-            /// <para>The event type. Valid values:</para>
+            /// <para>The event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DESKTOP_DISCONNECT</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EventType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the workspace to which the cloud desktop belongs.</para>
+            /// <para>The ID of the cloud desktop\&quot;s office site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-bh77qa8nmjot4****</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The workspace name.</para>
+            /// <para>The name of the office site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -217,23 +217,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// <para>The account type of the workspace.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>SIMPLE: convenience account</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>AD_CONNECTOR: enterprise AD account</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
+            /// <para>The type of account system for the office site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SIMPLE</para>
@@ -253,10 +237,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The status of the event. If you set the EventType parameter to <c>DESKTOP_DISCONNECT</c> or <c>GET_CONNECTION_TICKET</c>, this parameter is returned. Valid values:</para>
+            /// <para>The status of the event. This parameter is returned for <c>DESKTOP_DISCONNECT</c> and <c>GET_CONNECTION_TICKET</c> events. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>200\. The value indicates that the request is successful.</description></item>
-            /// <item><description>An error message. The value indicates that the request failed. Example: FailedToGetConnectionTicket.</description></item>
+            /// <item><description><para><c>200</c>: Success.</para>
+            /// </description></item>
+            /// <item><description><para>An error message, such as <c>FailedToGetConnectionTicket</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -287,7 +273,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The pagination token. If this parameter is empty, all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>

@@ -19,12 +19,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: the Enterprise edition.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -56,8 +52,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The size of the data disk. Unit: GiB. Valid values: 40 to 2040. Increments: 10 GiB.</para>
-            /// <para>**</para>
-            /// <para><b>Keep in mind</b> that the larger the ESSD disk capacity, the higher the available PL (for example, PL2 is available for disks larger than 460 GiB). A higher PL comes with a higher cost. Select an ESSD based on your specific needs.</para>
+            /// <remarks>
+            /// <para>Notice: </para>
+            /// </remarks>
+            /// <para>The larger the ESSD disk capacity, the higher the available PL (for example, PL2 is available for disks larger than 460 GiB). A higher PL comes with a higher cost. Select an ESSD based on your specific needs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -81,9 +79,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The template description. It must meet the following criteria:</para>
         /// <list type="bullet">
-        /// <item><description>It can be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>It can contain letters, digits, and special characters, including spaces. Note: You can use carriage returns to break lines.</description></item>
+        /// <item><description><para>It can be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// </description></item>
+        /// <item><description><para>It can contain letters, digits, and special characters, including spaces. Note: You can use carriage returns to break lines.</para>
+        /// </description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Design department template</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -123,9 +126,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The service type. Set the value to <c>CloudDesktop</c>.</para>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>CloudDesktop</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The regions of the template. You can create cloud computers by using a template only within the same region as the template itself.</para>
         /// <remarks>
-        /// <para> You can specify up to 20 regions.</para>
+        /// <para>You can specify up to 20 regions.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RegionConfigList")]
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+            /// <para>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -196,11 +196,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>Specifies whether to enable disk encryption.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>false (default): disables disk encryption.</description></item>
-            /// <item><description>true: enables disk encryption.</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -210,7 +205,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnable { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Key Management Service (KMS) key that you want to use to encrypt disks. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to query KMS keys.</para>
+            /// <para>The ID of the Key Management Service (KMS) key that you want to use to encrypt disks. You can call the <a href="t22712.xdita#"></a>operation to query KMS keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a7b3c0c8-b3a2-4876-b1cc-*********</para>
@@ -261,14 +256,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>区域配置管理</para>
+        /// <para>The site configurations.</para>
         /// </summary>
         [NameInMap("SiteConfigList")]
         [Validation(Required=false)]
         public List<CreateTemplateRequestSiteConfigList> SiteConfigList { get; set; }
         public class CreateTemplateRequestSiteConfigList : TeaModel {
             /// <summary>
-            /// <para>应用管控策略ID</para>
+            /// <para>The application control policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bwr-5a5371e0db954d********</para>
@@ -278,7 +273,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AppRuleId { get; set; }
 
             /// <summary>
-            /// <para>站点ID。</para>
+            /// <para>The site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mainland</para>
@@ -292,14 +287,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The performance level (PL) of the system disk.</para>
         /// <remarks>
-        /// <para> Only cloud computers of the Graphics or High Frequency type support Enterprise SSDs (ESSDs).</para>
+        /// <para>Only cloud computers of the Graphics or High Frequency type support Enterprise SSDs (ESSDs).</para>
         /// </remarks>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PL1: a PL1 ESSD.</description></item>
-        /// <item><description>PL0: a PL0 ESSD.</description></item>
-        /// <item><description>AutoPL: an AutoPL ESSD.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>AutoPL</para>
@@ -311,7 +300,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The size of the system disk. Unit: GiB. Valid values: 40 to 500. Increments: 10 GiB.</para>
         /// <remarks>
-        /// <para> The system disk size must be at least as large as the configured image size.</para>
+        /// <para>The system disk size must be at least as large as the configured image size.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -324,11 +313,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The template name. It must meet the following criteria:</para>
         /// <list type="bullet">
-        /// <item><description>It can be 2 to 126 characters in length.</description></item>
-        /// <item><description>It must begin with a letter and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Note: Periods (.) are not supported in the name.</description></item>
+        /// <item><description><para>It can be 2 to 126 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>It must begin with a letter and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// </description></item>
+        /// <item><description><para>It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Note: Periods (.) are not supported in the name.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>My cloud desktop template 001</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

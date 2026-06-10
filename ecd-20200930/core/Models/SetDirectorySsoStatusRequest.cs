@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>Specifies whether to enable SSO. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables SSO.</description></item>
-        /// <item><description>false: disables SSO.</description></item>
+        /// <item><description><para>true: enables SSO.</para>
+        /// </description></item>
+        /// <item><description><para>false: disables SSO.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -207,8 +207,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The protocol type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>HDX: High-definition Experience (HDX) protocol</description></item>
-            /// <item><description>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</description></item>
+            /// <item><description><para>HDX: High-definition Experience (HDX) protocol</para>
+            /// </description></item>
+            /// <item><description><para>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

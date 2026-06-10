@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCustomizedListHeadersRequest : TeaModel {
         /// <summary>
+        /// <para>The language type for exporting the WUYING Workspace list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string LangType { get; set; }
 
         /// <summary>
+        /// <para>The list type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>desktop</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ListType { get; set; }
 
         /// <summary>
+        /// <para>The region ID. You can invoke <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain the list of regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

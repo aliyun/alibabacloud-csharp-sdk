@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The total number of file list entries.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Count")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The file creator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>user01</para>
+            /// <para><a href="mailto:demo_user01@cn-shanghai.148875033399">demo_user01@cn-shanghai.148875033399</a>****</para>
             /// </summary>
             [NameInMap("Creator")]
             [Validation(Required=false)]
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>Modifier.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>user02</para>
+            /// <para><a href="mailto:demo_user02@cn-shanghai.148875033399">demo_user02@cn-shanghai.148875033399</a>****</para>
             /// </summary>
             [NameInMap("Modifier")]
             [Validation(Required=false)]
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The name of the file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>fvt-appcenterp4qwa</para>
+            /// <para>SampleFile.pdf</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The token used to start the next query. If the <c>NextToken</c> is empty, the next query does not exist.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>WyI2MzhmMjA2ZTFmZGZlZGVjZDk3OTRlNzVhZmIwMDFiZmM5NWQ3YTgwIiwibiIsIm4iLDEsLTEsMTY3MDMyNDMzNTAzMSwiNjM4ZjIwNmZjNDFkMzIwOTZmZWU0NGYxODkwY2I5ZjI0Mjg0NzM2****</para>
+        /// <para>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

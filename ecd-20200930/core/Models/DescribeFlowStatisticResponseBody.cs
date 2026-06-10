@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The number of available cloud computers in the office network.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("DesktopCount")]
         [Validation(Required=false)]

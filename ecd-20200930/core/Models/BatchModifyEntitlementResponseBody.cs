@@ -44,11 +44,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The assign result for each cloud computer.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>FAILED</description></item>
-                /// <item><description>NOT_STARTED</description></item>
-                /// <item><description>STARTED</description></item>
-                /// <item><description>PROCESSING</description></item>
-                /// <item><description>FINISHED</description></item>
+                /// <item><description><para>FAILED</para>
+                /// </description></item>
+                /// <item><description><para>NOT_STARTED</para>
+                /// </description></item>
+                /// <item><description><para>STARTED</para>
+                /// </description></item>
+                /// <item><description><para>PROCESSING</para>
+                /// </description></item>
+                /// <item><description><para>FINISHED</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -64,11 +69,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The result.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>FAILED</description></item>
-            /// <item><description>NOT_STARTED</description></item>
-            /// <item><description>STARTED</description></item>
-            /// <item><description>PROCESSING</description></item>
-            /// <item><description>FINISHED</description></item>
+            /// <item><description><para>FAILED</para>
+            /// </description></item>
+            /// <item><description><para>NOT_STARTED</para>
+            /// </description></item>
+            /// <item><description><para>STARTED</para>
+            /// </description></item>
+            /// <item><description><para>PROCESSING</para>
+            /// </description></item>
+            /// <item><description><para>FINISHED</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

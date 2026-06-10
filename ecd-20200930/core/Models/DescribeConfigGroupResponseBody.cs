@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The description of the configuration group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ScheduledTask</para>
+            /// <para>Scheduled task information</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -54,6 +54,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GroupId { get; set; }
 
             /// <summary>
+            /// <para>Used for frontend display. The system scheduled task description uses a code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE_DESC</para>
             /// </summary>
@@ -62,6 +64,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string InnerTimerDesc { get; set; }
 
             /// <summary>
+            /// <para>Used for frontend display; maps the system scheduled task name to a code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>INNER_TIMER_10_MINUTES_HIBERNATE_NO_UPDATE</para>
             /// </summary>
@@ -69,10 +73,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string InnerTimerName { get; set; }
 
+            /// <summary>
+            /// <para>Used for system scheduled task checks. The current scheduled task does not support detach or attach operations.</para>
+            /// </summary>
             [NameInMap("IsBind")]
             [Validation(Required=false)]
             public bool? IsBind { get; set; }
 
+            /// <summary>
+            /// <para>Used for system scheduled task checks. The current scheduled task does not support modification.</para>
+            /// </summary>
             [NameInMap("IsUpdate")]
             [Validation(Required=false)]
             public bool? IsUpdate { get; set; }
@@ -81,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The name of the configuration group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ScheduledTask</para>
+            /// <para>Scheduled task</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

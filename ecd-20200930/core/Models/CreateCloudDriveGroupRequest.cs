@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateCloudDriveGroupRequest : TeaModel {
         /// <summary>
+        /// <para>List of user IDs to be set as team space administrators.</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
         /// </summary>

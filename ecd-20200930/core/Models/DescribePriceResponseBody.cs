@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The unit of currency (USD).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>CNY</para>
+                /// <para>CNY/USD</para>
                 /// </summary>
                 [NameInMap("Currency")]
                 [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The discounted amount.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>0</para>
+                /// <para>15.8</para>
                 /// </summary>
                 [NameInMap("DiscountPrice")]
                 [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The original price.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2.796</para>
+                /// <para>79.0</para>
                 /// </summary>
                 [NameInMap("OriginalPrice")]
                 [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     /// <para>The description of the promotion.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Get started with new services with a discount.</para>
+                    /// <para>新品上市，立享优惠</para>
                     /// </summary>
                     [NameInMap("PromotionDesc")]
                     [Validation(Required=false)]
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     /// <para>The promotion name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Special Offer</para>
+                    /// <para>Featured deals</para>
                     /// </summary>
                     [NameInMap("PromotionName")]
                     [Validation(Required=false)]
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The actual price. The original price minus the discounted amount equals the actual price.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2.796</para>
+                /// <para>63.2</para>
                 /// </summary>
                 [NameInMap("TradePrice")]
                 [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The description of the rule.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Receive a 15% discount on a one-year subscription.</para>
+                /// <para>买满1年，立享官网价格8.5折优惠。</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

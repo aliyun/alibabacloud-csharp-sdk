@@ -85,6 +85,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cg-hvyou5jbob3b0****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

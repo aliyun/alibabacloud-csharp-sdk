@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The tag keys.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TestKey</para>
+            /// <para>department</para>
             /// </summary>
             [NameInMap("TagKey")]
             [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The tag values.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TestValue</para>
+            /// <para>design</para>
             /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]

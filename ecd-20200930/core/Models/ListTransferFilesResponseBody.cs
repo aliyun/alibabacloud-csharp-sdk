@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The file name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test file</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -58,6 +61,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <list type="bullet">
             /// <item><description>A value is returned for this parameter only when the object is stored in a custom OSS bucket.</description></item>
             /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Test file_0982836423402342</para>
             /// </summary>
             [NameInMap("OssFileName")]
             [Validation(Required=false)]
@@ -92,9 +98,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The file status.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DELETING</description></item>
-            /// <item><description>DELETED</description></item>
-            /// <item><description>UPLOADED</description></item>
+            /// <item><description><para>DELETING</para>
+            /// </description></item>
+            /// <item><description><para>DELETED</para>
+            /// </description></item>
+            /// <item><description><para>UPLOADED</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,25 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateNetworkPackageRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the automatic payment feature.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true (default): enables the auto-payment feature.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <para>Make sure that your account has sufficient balance. Otherwise, no order is generated.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <para>To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.</para>
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>Specifies whether to enable auto-payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -38,23 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal for the premium bandwidth plan.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>Specifies whether to enable auto-renewal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -64,16 +30,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The bandwidth provided by the premium bandwidth plan. Unit: Mbit/s.</para>
+        /// <para>The bandwidth of the network package, in Mbps.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values if the premium bandwidth plan is a subscription plan: 2 to 1000.</description></item>
-        /// <item><description>Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by data transfer (PayByTraffic): 2 to 200.</description></item>
-        /// <item><description>Valid values if the premium bandwidth plan is a pay-as-you-go plan that charges by fixed bandwidth (PayByBandwidth): 2 to 1000.</description></item>
+        /// <item><description><para>For subscription network packages, the value range is 2 to 1,000.</para>
+        /// </description></item>
+        /// <item><description><para>For pay-as-you-go network packages that are billed by traffic, the value range is 2 to 200.</para>
+        /// </description></item>
+        /// <item><description><para>For pay-as-you-go network packages that are billed by bandwidth, the value range is 2 to 1,000.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("Bandwidth")]
         [Validation(Required=false)]
@@ -84,17 +53,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ChannelCookie { get; set; }
 
         /// <summary>
-        /// <para>The charge type of the premium bandwidth plan.</para>
+        /// <para>The billing method for the network package.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid value when the <c>PayType</c> parameter is set to <c>PrePaid</c>:</para>
+        /// <item><description><para>When <c>PayType</c> is set to <c>PrePaid</c>, the only valid value is:</para>
         /// <list type="bullet">
-        /// <item><description>PayByBandwidth: charges by fixed bandwidth.</description></item>
+        /// <item><description><c>PayByBandwidth</c>: pay-by-bandwidth.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values when the <c>PayType</c> parameter is set to <c>PostPaid</c>:</para>
+        /// <item><description><para>When <c>PayType</c> is set to <c>PostPaid</c>, valid values are:</para>
         /// <list type="bullet">
-        /// <item><description>PayByTraffic: charges by data transfer.</description></item>
-        /// <item><description>PayByBandwidth: charges by fixed bandwidth.</description></item>
+        /// <item><description><para><c>PayByTraffic</c>: pay-by-traffic.</para>
+        /// </description></item>
+        /// <item><description><para><c>PayByBandwidth</c>: pay-by-bandwidth.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -117,12 +88,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the premium bandwidth plan.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>PostPaid: pay-as-you-go</description></item>
-        /// <item><description>PrePaid: subscription</description></item>
-        /// </list>
+        /// <para>The billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -132,11 +98,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when the <c>PayType</c> parameter is set to <c>PrePaid</c>. The valid values of this parameter vary based on the <c>PeriodUnit</c> value.</para>
+        /// <para>The subscription duration of the network package. This parameter is required and applies only when <c>PayType</c> is set to <c>PrePaid</c>. The valid values for this parameter depend on the value of <c>PeriodUnit</c>.</para>
         /// <list type="bullet">
-        /// <item><description>Valid value when the <c>PeriodUnit</c> parameter is set to <c>Week</c>: 1</description></item>
-        /// <item><description>Valid values when the <c>PeriodUnit</c> parameter is set to <c>Month</c>: 1, 2, 3, and 6</description></item>
-        /// <item><description>Valid values when the <c>PeriodUnit</c> parameter is set to <c>Year</c>: 1, 2, and 3</description></item>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Week</c>, the only valid value is 1.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values are 1, 2, 3, and 6.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values are 1, 2, and 3.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: 1.</para>
         /// 
@@ -148,40 +117,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when the <c>PayType</c> parameter is set to <c>PrePaid</c>.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Month</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Year</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Week</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The unit of the subscription duration for the network package. This parameter is required and applies only when <c>PayType</c> is set to <c>PrePaid</c>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Month</para>
+        /// <para>Week</para>
         /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the sales promotion.</para>
+        /// <para>The promotion ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23141</para>
@@ -191,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to get the list of regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

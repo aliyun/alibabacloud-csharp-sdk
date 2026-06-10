@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou+cds-64326*****</para>
+        /// <para>cn-hangzhou+cds-643267****</para>
         /// </summary>
         [NameInMap("CdsId")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test.txt</para>
+        /// <para>NewFileName.txt</para>
         /// </summary>
         [NameInMap("FileName")]
         [Validation(Required=false)]

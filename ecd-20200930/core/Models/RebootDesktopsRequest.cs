@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? CreateSnapshot { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud computers. You can specify 1 to 100 IDs.</para>
+        /// <para>An array of 1 to 100 desktop IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +24,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to install system patches.</para>
+        /// </summary>
         [NameInMap("OsUpdate")]
         [Validation(Required=false)]
         public bool? OsUpdate { get; set; }
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PatchId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of regions where Elastic Desktop Service is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

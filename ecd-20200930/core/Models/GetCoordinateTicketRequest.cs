@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The name of the convenience user account. If you initiate the request as an administrator, you do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alice</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution result of the operation. If the request was successful, <c>success</c> is returned. If the request failed, an error message is returned.</para>
+        /// <para>The result of the operation. A value of <c>success</c> indicates that the operation was successful. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned. This parameter is not returned if the value of Code is <c>success</c>.</para>
+        /// <para>The error message. This parameter is not returned if the value of Code is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful. Valid values: true false</para>
+        /// <para>Indicates whether the operation was successful. Valid values: true and false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

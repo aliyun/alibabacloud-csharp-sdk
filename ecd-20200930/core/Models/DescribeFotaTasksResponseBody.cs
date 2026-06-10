@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The returned error message. This parameter is not returned if the Code value is a <c>success</c> message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>The parameter is not specified.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

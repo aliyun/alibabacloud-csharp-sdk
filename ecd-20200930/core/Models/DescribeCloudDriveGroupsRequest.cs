@@ -43,8 +43,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The team space status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled</description></item>
-        /// <item><description>disabled</description></item>
+        /// <item><description><para>enabled</para>
+        /// </description></item>
+        /// <item><description><para>disabled</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: enabled.</para>
         /// 
@@ -58,8 +60,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>Specifies whether the space is increased.</para>
         /// <list type="bullet">
-        /// <item><description>binding: increased</description></item>
-        /// <item><description>unbound: not increased</description></item>
+        /// <item><description><para>binding: increased</para>
+        /// </description></item>
+        /// <item><description><para>unbound: not increased</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: null. The default value indicates that all spaces are queried.</para>
         /// 
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The team name for fuzzy search.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test Team 1</para>
+        /// <para>Test team 1</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
@@ -93,8 +97,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The team type.</para>
         /// <list type="bullet">
-        /// <item><description>org: organizational structure</description></item>
-        /// <item><description>directory: workspace</description></item>
+        /// <item><description><para>org: organizational structure</para>
+        /// </description></item>
+        /// <item><description><para>directory: workspace</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: null. The default value indicates that all types of teams are queried.</para>
         /// 
@@ -108,8 +114,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The number of entries to return on each page.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 1 to 100</description></item>
-        /// <item><description>Default value: 20</description></item>
+        /// <item><description><para>Valid values: 1 to 100</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 20</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

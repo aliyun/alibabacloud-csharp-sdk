@@ -34,6 +34,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> DownloadUploadEndUserIds { get; set; }
 
+        /// <summary>
+        /// <para>List of end user IDs with neither upload nor download permissions. These users cannot download files from the enterprise file storage to on-premises devices or upload files from on-premises devices to the enterprise file storage.</para>
+        /// </summary>
         [NameInMap("NoDownloadNoUploadEndUserIds")]
         [Validation(Required=false)]
         public List<string> NoDownloadNoUploadEndUserIds { get; set; }

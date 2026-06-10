@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AfterStatus { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer IDs. You can specify the IDs of 1 to 20 cloud computers.</para>
+        /// <para>The IDs of the cloud computers to rebuild. You can specify 1 to 20 IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,14 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The OS language. Only system images are supported, and Linux cloud computers support only English.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>en-US: English</description></item>
-        /// <item><description>zh-HK: Traditional Chinese (Hong Kong, China)</description></item>
-        /// <item><description>zh-CN: Simplified Chinese</description></item>
-        /// <item><description>ja-JP: Japanese</description></item>
-        /// </list>
+        /// <para>The operating system language. This parameter applies only to system images. For Linux cloud computers, only English is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en-US</para>
@@ -52,26 +45,29 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The operation type on the data disk.</para>
+        /// <para>Specifies how to handle the data disk.</para>
         /// <remarks>
-        /// <para> This parameter is empty by default regardless of whether data disks are attached to the cloud computer.</para>
+        /// <para>This parameter is optional.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>No data disks are attached to the cloud computer:\
-        /// No operation is performed on the data disks of the cloud computer regardless of the value of this parameter.</para>
+        /// <item><description><para>If a cloud computer does not have a data disk, this parameter is ignored.<br></para>
         /// </description></item>
-        /// <item><description><para>Data disks are attached to the cloud computer:</para>
+        /// <item><description><para>If a cloud computer has a data disk:</para>
         /// <ol>
-        /// <item><description><para>The OS of the cloud computer is the same as the OS of the destination image:</para>
+        /// <item><description><para>If the new image has the same operating system as the original one:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the OperateType parameter to <c>replace</c>, the data in the data disks of the cloud computer is replaced.</description></item>
-        /// <item><description>If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is retained.</description></item>
+        /// <item><description><para>If you set this parameter to <c>replace</c>, the data disk is replaced.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify this parameter, the data disk is retained.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>The OS of the cloud computer is different from the OS of the destination image:</para>
+        /// <item><description><para>If the new image has a different operating system:</para>
         /// <list type="bullet">
-        /// <item><description>If you set the OperateType parameter to <c>replace</c>, the data in the data disks of the cloud computer is replaced.</description></item>
-        /// <item><description>If you leave the OperateType parameter empty, the data in the data disks of the cloud computer is cleared.</description></item>
+        /// <item><description><para>If you set this parameter to <c>replace</c>, the data disk is replaced.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify this parameter, the data disk is erased.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </ol>
@@ -86,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OperateType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
+        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to find the regions where Elastic Desktop Service is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

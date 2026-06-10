@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCloudDriveUsersResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of user personal drives.</para>
+        /// </summary>
         [NameInMap("CloudDriveUsers")]
         [Validation(Required=false)]
         public List<DescribeCloudDriveUsersResponseBodyCloudDriveUsers> CloudDriveUsers { get; set; }
         public class DescribeCloudDriveUsersResponseBodyCloudDriveUsers : TeaModel {
             /// <summary>
+            /// <para>The ID of the user personal drive.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -21,11 +26,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DriveId { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the end user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alice</para>
+            /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
             public string EndUserId { get; set; }
 
             /// <summary>
+            /// <para>The status of the user personal drive.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
             /// </summary>
@@ -34,32 +47,40 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>Maximum storage capacity for the user’s personal drive, in bytes.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>10240000</para>
+            /// <para>104857600</para>
             /// </summary>
             [NameInMap("TotalSize")]
             [Validation(Required=false)]
             public long? TotalSize { get; set; }
 
             /// <summary>
+            /// <para>The used storage space, in bytes.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>20490</para>
+            /// <para>10485760</para>
             /// </summary>
             [NameInMap("UsedSize")]
             [Validation(Required=false)]
             public long? UsedSize { get; set; }
 
             /// <summary>
+            /// <para>The internal ID of the user.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>abc</para>
+            /// <para><a href="mailto:alice@cn-shanghai.148875033399">alice@cn-shanghai.148875033399</a>****</para>
             /// </summary>
             [NameInMap("UserId")]
             [Validation(Required=false)]
             public string UserId { get; set; }
 
             /// <summary>
+            /// <para>The name of the end user.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>abc</para>
+            /// <para>alice</para>
             /// </summary>
             [NameInMap("UserName")]
             [Validation(Required=false)]
@@ -68,6 +89,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
+        /// <para>The token for the next page of results. An empty value indicates that all results have been returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</para>
         /// </summary>
@@ -76,6 +99,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F083AAE5-7AA9-53BB-9060-AFFB2C18****</para>
         /// </summary>

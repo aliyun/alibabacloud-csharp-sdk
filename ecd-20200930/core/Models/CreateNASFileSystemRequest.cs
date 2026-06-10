@@ -20,12 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Whether the file system is encrypted. Uses KMS service-managed keys to encrypt the file system\&quot;s on-disk data. No decryption is required when reading and writing encrypted data. Possible values and their meanings:</para>
-        /// <list type="bullet">
-        /// <item><description>0: Not encrypted.</description></item>
-        /// <item><description>1: Encrypted using NAS-managed keys.</description></item>
-        /// </list>
-        /// <para>Default value: 0</para>
+        /// <para>Whether the file system is encrypted. Uses KMS service-managed keys to encrypt the file system\&quot;s on-disk data. No decryption is required when reading and writing encrypted data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -38,9 +33,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>Name of the NAS file system.
         /// The file name must follow these rules:</para>
         /// <list type="bullet">
-        /// <item><description>Length: 2 to 128 English or Chinese characters.</description></item>
-        /// <item><description>Must start with an uppercase or lowercase letter or a Chinese character, cannot start with http:// or https://.</description></item>
-        /// <item><description>Can include numbers, underscores (_), or hyphens (-).</description></item>
+        /// <item><description><para>Length: 2 to 128 English or Chinese characters.</para>
+        /// </description></item>
+        /// <item><description><para>Must start with an uppercase or lowercase letter or a Chinese character, cannot start with http\:// or https\://.</para>
+        /// </description></item>
+        /// <item><description><para>Can include numbers, underscores (_), or hyphens (-).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,12 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Storage specification type of the NAS file system. Allowed values:</para>
-        /// <list type="bullet">
-        /// <item><description>Capacity: Capacity type.</description></item>
-        /// <item><description>Performance: Performance type.</description></item>
-        /// </list>
-        /// <para>Default value: Capacity</para>
+        /// <para>Storage specification type of the NAS file system.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Capacity</para>

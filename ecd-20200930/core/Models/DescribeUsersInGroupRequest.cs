@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUsersInGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The status of the desktop connection for the end user.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>0: Disconnected.</description></item>
-        /// <item><description>1: Connected.</description></item>
-        /// </list>
+        /// <para>The connection status of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -25,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? ConnectState { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer share.</para>
+        /// <para>The shared cloud desktop ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,14 +41,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the authorized users.</para>
+        /// <para>A list of authorized user IDs.</para>
         /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
         public List<string> EndUserIds { get; set; }
 
         /// <summary>
-        /// <para>The query string for fuzzy match. If you specify this parameter, the system returns all results that contain the string.</para>
+        /// <para>The string for a partial match query. Results that contain this string are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -63,10 +58,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description>Maximum value: 100.</description></item>
-        /// <item><description>Default value: 10.</description></item>
+        /// <item><description><para>Maximum value: 100.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</para>
+        /// <para>The token to start the next query. An empty value indicates that all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -87,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the organization to which the end user belongs.</para>
+        /// <para>The ID of the organization to which the user belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>org-d0fua2oyukw8j****</para>
@@ -98,21 +95,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>Specifies whether to query user details.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true (default)</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("QueryUserDetail")]
         [Validation(Required=false)]
         public bool? QueryUserDetail { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to get a list of regions where WUYING Workspace is available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

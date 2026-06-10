@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>Indicates whether the data is returned.</para>
         /// <para>Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,8 +60,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>Indicates whether the operation was successful.</para>
         /// <para>Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

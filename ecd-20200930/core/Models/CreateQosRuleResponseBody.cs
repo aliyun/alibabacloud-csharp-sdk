@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateQosRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the created QoS rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qos-5605u0gelk200****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string QosRuleId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>51592A88-0F2C-55E6-AD2C-2AD9C10D****</para>
         /// </summary>

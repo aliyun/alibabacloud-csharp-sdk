@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>RAM</para>
+        /// <para>SIMPLE</para>
         /// </summary>
         [NameInMap("DirectoryType")]
         [Validation(Required=false)]

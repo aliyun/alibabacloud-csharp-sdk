@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>47.100.XX.XX</para>
+        /// <para>192.168.0.0/16</para>
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]

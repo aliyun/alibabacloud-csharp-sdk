@@ -20,8 +20,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The ACL type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>allow: whitelist</description></item>
-            /// <item><description>disable: blacklist</description></item>
+            /// <item><description><para>allow: whitelist</para>
+            /// </description></item>
+            /// <item><description><para>disable: blacklist</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The ID of the instance to which the ACL applies. You can specify an office network ID or a cloud computer ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ecd-fsafeweh***</para>
+            /// <para>ecd-22poqua477xo4****</para>
             /// </summary>
             [NameInMap("SourceId")]
             [Validation(Required=false)]
@@ -45,8 +47,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The granularity of the ACL.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>desktop: cloud computer</description></item>
-            /// <item><description>vpc: office network</description></item>
+            /// <item><description><para>desktop: cloud computer</para>
+            /// </description></item>
+            /// <item><description><para>vpc: office network</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

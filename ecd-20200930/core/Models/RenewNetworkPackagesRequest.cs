@@ -10,25 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RenewNetworkPackagesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the automatic payment feature.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true (default): enables the auto-payment feature.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <para>Make sure that your account has sufficient balance. Otherwise, no order is generated.</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false: disables the auto-payment feature. In this case, an order is generated but you need to make the payment manually.</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <para>To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.</para>
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>Whether to enable automatic payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -42,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The IDs of premium bandwidth plans. You can specify up to 100 IDs.</para>
+        /// <para>A list of premium public bandwidth IDs. You can specify 1 to 100 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NetworkPackageId")]
@@ -50,12 +32,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> NetworkPackageId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration if you specify subscription as the new billing method for the cloud desktop. The unit of the value is specified by the <c>PeriodUnit</c> parameter. This parameter takes effect only when the <c>ChargeType</c> parameter is set to <c>PrePaid</c>.</para>
+        /// <para>The renewal duration. Valid values depend on the value of <c>PeriodUnit</c>.</para>
         /// <list type="bullet">
-        /// <item><description>If the <c>PeriodUnit</c> parameter is set to <c>Week</c>, the valid value of the Period parameter is 1.</description></item>
-        /// <item><description>If the <c>PeriodUnit</c> parameter is set to <c>Month</c>, the valid values of the Period parameter are 1, 2, 3, and 6.</description></item>
-        /// <item><description>If the <c>PeriodUnit</c> parameter is set to <c>Year</c>, the valid values of the Period parameter are 1, 2, 3, 4, and 5.</description></item>
+        /// <item><description><para>If <c>PeriodUnit</c> is <c>Week</c>, valid values are: 1.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>PeriodUnit</c> is <c>Month</c>, valid values are: 1, 2, 3, or 6.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>PeriodUnit</c> is <c>Year</c>, valid values are: 1, 2, or 3.</para>
+        /// </description></item>
         /// </list>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -65,12 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal duration specified by the Period parameter. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
-        /// </list>
-        /// <para>Default value: Month.</para>
+        /// <para>The unit for the renewal duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -90,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to list regions that support WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

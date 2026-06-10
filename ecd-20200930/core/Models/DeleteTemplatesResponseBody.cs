@@ -63,8 +63,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>Indicates whether the request was successful.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request is successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description><para>true: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
