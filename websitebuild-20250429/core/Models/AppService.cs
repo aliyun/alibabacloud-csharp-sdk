@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("NodeList")]
+        [Validation(Required=false)]
+        public List<TreeNode> NodeList { get; set; }
+
         [NameInMap("Profile")]
         [Validation(Required=false)]
         public AppServiceProfile Profile { get; set; }

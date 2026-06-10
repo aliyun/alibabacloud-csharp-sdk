@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string GmtModified { get; set; }
 
+        [NameInMap("Group")]
+        [Validation(Required=false)]
+        public AppServiceGroup Group { get; set; }
+
         [NameInMap("InstanceBizId")]
         [Validation(Required=false)]
         public string InstanceBizId { get; set; }
@@ -40,6 +44,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
+
+        [NameInMap("NodeList")]
+        [Validation(Required=false)]
+        public List<TreeNode> NodeList { get; set; }
 
         [NameInMap("OperationAddress")]
         [Validation(Required=false)]

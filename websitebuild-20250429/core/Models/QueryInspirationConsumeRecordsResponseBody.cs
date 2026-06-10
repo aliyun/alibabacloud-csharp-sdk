@@ -128,6 +128,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 [Validation(Required=false)]
                 public string MetaData { get; set; }
 
+                [NameInMap("RecordKey")]
+                [Validation(Required=false)]
+                public string RecordKey { get; set; }
+
                 /// <summary>
                 /// <para>Consumption scenario Name (such as AI application development, AI creative image generation, AI Video creation, AI Content creation)</para>
                 /// 
