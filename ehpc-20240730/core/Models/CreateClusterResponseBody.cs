@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request result. Valid values:</para>
+        /// <para>Indicates whether the request succeeded. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description><para>true: The request succeeded.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

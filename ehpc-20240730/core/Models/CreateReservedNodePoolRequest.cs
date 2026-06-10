@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class CreateReservedNodePoolRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The number of reserved nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public int? Count { get; set; }
 
         /// <summary>
+        /// <para>The description of the reserved node pool.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The suffix of the hostnames for the reserved nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ed</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string HostPostfix { get; set; }
 
         /// <summary>
+        /// <para>The prefix of the hostnames for the reserved nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cloud</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string HostPrefix { get; set; }
 
         /// <summary>
+        /// <para>The name of the reserved node pool.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>nodepool</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the vSwitch.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1lfcjbfb099rrjn****</para>
         /// </summary>

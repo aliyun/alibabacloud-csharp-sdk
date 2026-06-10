@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class GetQueueResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queue configurations.</para>
+        /// <para>The configuration of the queue.</para>
         /// </summary>
         [NameInMap("Queue")]
         [Validation(Required=false)]
         public GetQueueResponseBodyQueue Queue { get; set; }
         public class GetQueueResponseBodyQueue : TeaModel {
             /// <summary>
-            /// <para>The auto scale-out policy of the queue.</para>
+            /// <para>The strategy used for automatic scale-out of the queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PriorityInstanceType</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string AllocationStrategy { get; set; }
 
             /// <summary>
-            /// <para>The hardware configurations of the compute nodes in the queue.</para>
+            /// <para>The hardware configurations of compute nodes in the queue.</para>
             /// </summary>
             [NameInMap("ComputeNodes")]
             [Validation(Required=false)]
@@ -42,10 +42,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether auto scale-in is enabled for the queue. Valid values:</para>
+            /// <para>Specifies whether automatic scale-in is enabled for the queue. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,10 +58,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public bool? EnableScaleIn { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether auto scale-out is enabled for the queue. Valid values:</para>
+            /// <para>Specifies whether automatic scale-out is enabled for the queue. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -70,7 +74,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public bool? EnableScaleOut { get; set; }
 
             /// <summary>
-            /// <para>The hostname prefix of the compute nodes in the queue.</para>
+            /// <para>The hostname prefix for compute nodes in the queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>compute</para>
@@ -80,7 +84,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string HostnamePrefix { get; set; }
 
             /// <summary>
-            /// <para>The hostname suffix of the compute nodes in the queue.</para>
+            /// <para>The hostname suffix for compute nodes in the queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo</para>
@@ -100,10 +104,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public int? InitialCount { get; set; }
 
             /// <summary>
-            /// <para>The type of the network between compute nodes in the queue. Valid values:</para>
+            /// <para>The network type between compute nodes in the queue. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>vpc</description></item>
-            /// <item><description>eRDMA</description></item>
+            /// <item><description><para>vpc</para>
+            /// </description></item>
+            /// <item><description><para>eRDMA</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -114,14 +120,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string InterConnect { get; set; }
 
             /// <summary>
-            /// <para>The nodes for which deletion protection is enabled in the queue.</para>
+            /// <para>The list of nodes with deletion protection enabled in the queue.</para>
             /// </summary>
             [NameInMap("KeepAliveNodes")]
             [Validation(Required=false)]
             public List<string> KeepAliveNodes { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of compute nodes that the queue can contain.</para>
+            /// <para>The maximum number of compute nodes that the queue maintains.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -131,7 +137,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public int? MaxCount { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of nodes that are delivered to the queue in each scale-out cycle.</para>
+            /// <para>The minimum number of nodes delivered per scale-out cycle.</para>
             /// 
             /// <b>Example:</b>
             /// <para>99</para>
@@ -141,7 +147,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public long? MaxCountPerCycle { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of compute nodes that the queue must contain.</para>
+            /// <para>The minimum number of compute nodes that the queue maintains.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -151,7 +157,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public int? MinCount { get; set; }
 
             /// <summary>
-            /// <para>The queue name.</para>
+            /// <para>The name of the queue.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -162,7 +168,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string QueueName { get; set; }
 
             /// <summary>
-            /// <para>The Resource Access Management (RAM) role that is assumed by compute nodes in the queue.</para>
+            /// <para>The name of the RAM role attached to compute nodes in the queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliyunECSInstanceForEHPCRole</para>
@@ -172,7 +178,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string RamRole { get; set; }
 
             /// <summary>
-            /// <para>Preset node pool ID.</para>
+            /// <para>The ID of the reserved node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rnp-756vlp7a</para>
@@ -190,7 +196,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The available vSwitches for compute nodes in the queue. Valid values of N: 1 to 5.</para>
+            /// <para>The list of virtual switches available to compute nodes in the queue. N ranges from 1 to 5.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
@@ -199,7 +205,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE7****</para>

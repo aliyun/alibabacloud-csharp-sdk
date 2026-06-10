@@ -427,13 +427,13 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Create a pay-as-you-go or subscription cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>Before you call this operation, make sure that you are familiar with the billing and pricing of E-HPC. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">Overview</a>.</para>
+        /// <h2>API</h2>
+        /// <para>Before using this interface, ensure you understand the E-HPC billing method and pricing. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -532,6 +532,14 @@ namespace AlibabaCloud.SDK.EHPC20240730
             {
                 query["DeletionProtection"] = request.DeletionProtection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrowInterval))
+            {
+                query["GrowInterval"] = request.GrowInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleInterval))
+            {
+                query["IdleInterval"] = request.IdleInterval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsEnterpriseSecurityGroup))
             {
                 query["IsEnterpriseSecurityGroup"] = request.IsEnterpriseSecurityGroup;
@@ -589,13 +597,13 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Create a pay-as-you-go or subscription cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>Before you call this operation, make sure that you are familiar with the billing and pricing of E-HPC. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">Overview</a>.</para>
+        /// <h2>API</h2>
+        /// <para>Before using this interface, ensure you understand the E-HPC billing method and pricing. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -694,6 +702,14 @@ namespace AlibabaCloud.SDK.EHPC20240730
             {
                 query["DeletionProtection"] = request.DeletionProtection;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GrowInterval))
+            {
+                query["GrowInterval"] = request.GrowInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdleInterval))
+            {
+                query["IdleInterval"] = request.IdleInterval;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsEnterpriseSecurityGroup))
             {
                 query["IsEnterpriseSecurityGroup"] = request.IsEnterpriseSecurityGroup;
@@ -751,13 +767,13 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Create a pay-as-you-go or subscription cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>Before you call this operation, make sure that you are familiar with the billing and pricing of E-HPC. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">Overview</a>.</para>
+        /// <h2>API</h2>
+        /// <para>Before using this interface, ensure you understand the E-HPC billing method and pricing. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -775,13 +791,13 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a pay-as-you-go or subscription Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Create a pay-as-you-go or subscription cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2><a href="#"></a>Usage notes</h2>
-        /// <para>Before you call this operation, make sure that you are familiar with the billing and pricing of E-HPC. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">Overview</a>.</para>
+        /// <h2>API</h2>
+        /// <para>Before using this interface, ensure you understand the E-HPC billing method and pricing. For more information, see <a href="https://help.aliyun.com/document_detail/2842985.html">billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -967,13 +983,8 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Creates a batch of compute nodes for an E-HPC cluster.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateNodesRequest
@@ -1076,13 +1087,8 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Creates a batch of compute nodes for an E-HPC cluster.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateNodesRequest
@@ -1185,13 +1191,8 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Creates a batch of compute nodes for an E-HPC cluster.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateNodesRequest
@@ -1208,13 +1209,8 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates compute nodes for an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Creates a batch of compute nodes for an E-HPC cluster.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <h2><a href="#"></a></h2>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateNodesRequest
@@ -1371,7 +1367,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预设节点池</para>
+        /// <para>Creates a reserved node pool. A reserved node pool reserves a batch of active IP addresses from a vSwitch. It maps each IP address to a hostname based on a rule and maintains the resources for the node pool. When you use the reserved node pool to scale nodes, the corresponding resources are allocated or released.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1437,7 +1433,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预设节点池</para>
+        /// <para>Creates a reserved node pool. A reserved node pool reserves a batch of active IP addresses from a vSwitch. It maps each IP address to a hostname based on a rule and maintains the resources for the node pool. When you use the reserved node pool to scale nodes, the corresponding resources are allocated or released.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1503,7 +1499,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预设节点池</para>
+        /// <para>Creates a reserved node pool. A reserved node pool reserves a batch of active IP addresses from a vSwitch. It maps each IP address to a hostname based on a rule and maintains the resources for the node pool. When you use the reserved node pool to scale nodes, the corresponding resources are allocated or released.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1521,7 +1517,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建预设节点池</para>
+        /// <para>Creates a reserved node pool. A reserved node pool reserves a batch of active IP addresses from a vSwitch. It maps each IP address to a hostname based on a rule and maintains the resources for the node pool. When you use the reserved node pool to scale nodes, the corresponding resources are allocated or released.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2163,7 +2159,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群预设节点池</para>
+        /// <para>Deletes the specified reserved node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2209,7 +2205,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群预设节点池</para>
+        /// <para>Deletes the specified reserved node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2255,7 +2251,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群预设节点池</para>
+        /// <para>Deletes the specified reserved node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2273,7 +2269,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除集群预设节点池</para>
+        /// <para>Deletes the specified reserved node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2843,7 +2839,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Query information about a specified E-HPC cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2885,7 +2881,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Query information about a specified E-HPC cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2927,7 +2923,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Query information about a specified E-HPC cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2945,7 +2941,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Query information about a specified E-HPC cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3411,7 +3407,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Query the details of a specified queue in an E-HPC cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3457,7 +3453,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Query the details of a specified queue in an E-HPC cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3503,7 +3499,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Query the details of a specified queue in an E-HPC cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3521,7 +3517,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Query the details of a specified queue in an E-HPC cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5491,7 +5487,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询产品支持的地域列表。</para>
+        /// <para>Queries the available regions for the product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5545,7 +5541,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询产品支持的地域列表。</para>
+        /// <para>Queries the available regions for the product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5599,7 +5595,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询产品支持的地域列表。</para>
+        /// <para>Queries the available regions for the product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5617,7 +5613,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询产品支持的地域列表。</para>
+        /// <para>Queries the available regions for the product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6887,8 +6883,13 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Updates the configuration of a specified queue in an E-HPC cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you update a queue configuration, the system sets all fields based on the parameters in your current request. If you call this operation multiple times, only the parameters from the last call take effect.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateQueueRequest
@@ -6939,8 +6940,13 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Updates the configuration of a specified queue in an E-HPC cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you update a queue configuration, the system sets all fields based on the parameters in your current request. If you call this operation multiple times, only the parameters from the last call take effect.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateQueueRequest
@@ -6991,8 +6997,13 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Updates the configuration of a specified queue in an E-HPC cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you update a queue configuration, the system sets all fields based on the parameters in your current request. If you call this operation multiple times, only the parameters from the last call take effect.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateQueueRequest
@@ -7009,8 +7020,13 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of a queue in an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Updates the configuration of a specified queue in an E-HPC cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>When you update a queue configuration, the system sets all fields based on the parameters in your current request. If you call this operation multiple times, only the parameters from the last call take effect.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateQueueRequest

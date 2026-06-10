@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
     public class UpdateQueueShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The cluster ID.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> to get the cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ehpc-hz-FYUr32****</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The information about the queue to be updated.</para>
+        /// <para>The queue information to update.</para>
         /// </summary>
         [NameInMap("Queue")]
         [Validation(Required=false)]

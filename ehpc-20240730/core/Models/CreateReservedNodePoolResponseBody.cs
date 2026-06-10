@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class CreateReservedNodePoolResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the reserved node pool.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rnp-cdx****</para>
         /// </summary>

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class CreateNodesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> operation to query the cluster ID.</para>
+        /// <para>The ID of the cluster.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> to obtain the cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ehpc-hz-FYUr32****</para>
@@ -21,18 +21,21 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The hardware configurations of the compute nodes.</para>
+        /// <para>Specifies the hardware configuration of the compute node.</para>
         /// </summary>
         [NameInMap("ComputeNode")]
         [Validation(Required=false)]
         public string ComputeNodeShrink { get; set; }
 
         /// <summary>
-        /// <para>The number of compute nodes that you want to add. Valid values: 1 to 99. The MinCount value must be smaller than the Count value.</para>
+        /// <para>The number of compute nodes to add. Valid values: 1 to 99. The value of MinCount must be less than the value of Count.</para>
         /// <list type="bullet">
-        /// <item><description>If the number of available Elastic Compute Service (ECS) instances is smaller than the MinCount value, the nodes fail to be added.</description></item>
-        /// <item><description>If the number of available ECS instances is larger than the MinCount value but smaller than the Count value, nodes are added based on the MinCount value.</description></item>
-        /// <item><description>If the number of available ECS instances is larger than the Count value, nodes are added based on the Count value.</description></item>
+        /// <item><description><para>If the ECS inventory is less than MinCount, the operation fails.</para>
+        /// </description></item>
+        /// <item><description><para>If the ECS inventory is between MinCount and Count, the number of nodes specified by MinCount is added.</para>
+        /// </description></item>
+        /// <item><description><para>If the ECS inventory is greater than Count, the number of nodes specified by Count is added.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,7 +46,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>Deployment set ID. You can obtain the deployment set ID through <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a>. Currently, only deployment sets with a low network latency strategy are supported.</para>
+        /// <para>The ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a> operation to obtain the ID. Only deployment sets that use the low-latency network policy are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ds-bp1frxuzdg87zh4pzq****</para>
@@ -53,10 +56,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string DeploymentSetId { get; set; }
 
         /// <summary>
-        /// <para>The type of the network between compute nodes. Valid values:</para>
+        /// <para>Specifies the network type for communication between compute nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>vpc</description></item>
-        /// <item><description>eRDMA</description></item>
+        /// <item><description><para>vpc</para>
+        /// </description></item>
+        /// <item><description><para>eRDMA</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +72,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string HPCInterConnect { get; set; }
 
         /// <summary>
-        /// <para>The hostname prefix of the added compute nodes.</para>
+        /// <para>The hostname prefix for the compute nodes in the queue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>compute</para>
@@ -77,7 +82,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string HostnamePrefix { get; set; }
 
         /// <summary>
-        /// <para>The hostname suffix of the added compute nodes.</para>
+        /// <para>The hostname suffix of the compute nodes in the queue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo</para>
@@ -86,12 +91,15 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public string HostnameSuffix { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the reserved node pool.</para>
+        /// </summary>
         [NameInMap("Hostnames")]
         [Validation(Required=false)]
         public string HostnamesShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable deletion protection for the added compute nodes.</para>
+        /// <para>Specifies whether deletion protection is enabled for the compute node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -109,7 +117,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public int? MinCount { get; set; }
 
         /// <summary>
-        /// <para>The name of the queue for which you want to create compute nodes.</para>
+        /// <para>The name of the queue to which the compute nodes belong.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test1</para>
@@ -119,7 +127,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string QueueName { get; set; }
 
         /// <summary>
-        /// <para>The Resource Access Management (RAM) role to be assumed by the added nodes.</para>
+        /// <para>The name of the authorized instance role to be attached to the compute nodes in the queue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunServiceRoleForOOSBandwidthScheduler</para>
@@ -129,7 +137,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string RamRole { get; set; }
 
         /// <summary>
-        /// <para>Preset node pool ID.</para>
+        /// <para>The ID of the reserved node pool.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rnp-756vlp7a</para>
@@ -139,7 +147,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ReservedNodePoolId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch to be used by the added nodes.</para>
+        /// <para>The ID of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1lfcjbfb099rrjn****</para>

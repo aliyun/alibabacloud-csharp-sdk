@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public class DescribeAddonTemplateResponseBodyAddon : TeaModel {
             /// <summary>
             /// <para>The addon description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Logon node, mainly used for connecting to the E-HPC cluster environment and submitting user tasks.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -35,6 +38,9 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 
             /// <summary>
             /// <para>The addon label.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Logon node</para>
             /// </summary>
             [NameInMap("Label")]
             [Validation(Required=false)]
@@ -162,6 +168,9 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public class DescribeAddonTemplateResponseBodyAddonServicesSpecInputParams : TeaModel {
                     /// <summary>
                     /// <para>The help information of the parameter.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>MySQL installation root directory</para>
                     /// </summary>
                     [NameInMap("HelpText")]
                     [Validation(Required=false)]
@@ -169,6 +178,9 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 
                     /// <summary>
                     /// <para>The parameter label.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>MySQL installation path</para>
                     /// </summary>
                     [NameInMap("Label")]
                     [Validation(Required=false)]

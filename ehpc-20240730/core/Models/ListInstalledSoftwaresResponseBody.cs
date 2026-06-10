@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class ListInstalledSoftwaresResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The list of installed software.</para>
-        /// </summary>
         [NameInMap("AdditionalPackages")]
         [Validation(Required=false)]
         public ListInstalledSoftwaresResponseBodyAdditionalPackages AdditionalPackages { get; set; }
@@ -20,76 +17,30 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             [Validation(Required=false)]
             public List<ListInstalledSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfos> AdditionalPackageInfos { get; set; }
             public class ListInstalledSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfos : TeaModel {
-                /// <summary>
-                /// <para>The category into which the software falls.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>NWP</para>
-                /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
-                /// <summary>
-                /// <para>The time when the software was installed.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2024-03-05 18:24:08</para>
-                /// </summary>
                 [NameInMap("CreateTime")]
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
-                /// <summary>
-                /// <para>The software description.</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The URL of the software icon.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="https://gw.alicdn.com/imgextra/i2/O1CN01FIkxZ81LmE0fvrAyR_!!6000000001341-55-tps-6349-1603.svg">https://gw.alicdn.com/imgextra/i2/O1CN01FIkxZ81LmE0fvrAyR_!!6000000001341-55-tps-6349-1603.svg</a></para>
-                /// </summary>
                 [NameInMap("Icon")]
                 [Validation(Required=false)]
                 public string Icon { get; set; }
 
-                /// <summary>
-                /// <para>The software name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>gromacs</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <para>The installation status of the software.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Installed</description></item>
-                /// <item><description>Uninstalled</description></item>
-                /// <item><description>Installing</description></item>
-                /// <item><description>Exception</description></item>
-                /// </list>
-                /// 
-                /// <b>Example:</b>
-                /// <para>Installed</para>
-                /// </summary>
                 [NameInMap("Status")]
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
-                /// <summary>
-                /// <para>The software version.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>2024.1</para>
-                /// </summary>
                 [NameInMap("Version")]
                 [Validation(Required=false)]
                 public string Version { get; set; }

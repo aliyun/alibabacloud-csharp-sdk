@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public class ListAddonTemplatesResponseBodyAddons : TeaModel {
             /// <summary>
             /// <para>The addon description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Logon node, mainly used for connecting to the E-HPC cluster environment and submitting user tasks.</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -25,6 +28,9 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 
             /// <summary>
             /// <para>The addon label</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Logon node</para>
             /// </summary>
             [NameInMap("Label")]
             [Validation(Required=false)]

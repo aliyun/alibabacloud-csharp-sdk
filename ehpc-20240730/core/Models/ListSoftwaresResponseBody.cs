@@ -9,9 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class ListSoftwaresResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The information about the software that can be installed in the cluster.</para>
-        /// </summary>
         [NameInMap("AdditionalPackages")]
         [Validation(Required=false)]
         public ListSoftwaresResponseBodyAdditionalPackages AdditionalPackages { get; set; }
@@ -20,46 +17,22 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             [Validation(Required=false)]
             public List<ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfos> AdditionalPackageInfos { get; set; }
             public class ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfos : TeaModel {
-                /// <summary>
-                /// <para>The application category.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>NWP</para>
-                /// </summary>
                 [NameInMap("Category")]
                 [Validation(Required=false)]
                 public string Category { get; set; }
 
-                /// <summary>
-                /// <para>The software description.</para>
-                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
-                /// <summary>
-                /// <para>The URL of the software icon.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para><a href="https://gw.alicdn.com/imgextra/i2/O1CN01FIkxZ81LmE0fvrAyR_!!6000000001341-55-tps-6349-1603.svg">https://gw.alicdn.com/imgextra/i2/O1CN01FIkxZ81LmE0fvrAyR_!!6000000001341-55-tps-6349-1603.svg</a></para>
-                /// </summary>
                 [NameInMap("Icon")]
                 [Validation(Required=false)]
                 public string Icon { get; set; }
 
-                /// <summary>
-                /// <para>The software name.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>gromacs</para>
-                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
-                /// <summary>
-                /// <para>The information about the software versions that can be installed in the cluster.</para>
-                /// </summary>
                 [NameInMap("Versions")]
                 [Validation(Required=false)]
                 public ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersions Versions { get; set; }
@@ -68,19 +41,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                     [Validation(Required=false)]
                     public List<ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersionsVersionInfos> VersionInfos { get; set; }
                     public class ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersionsVersionInfos : TeaModel {
-                        /// <summary>
-                        /// <para>Indicates whether the version is the latest.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>false</para>
-                        /// </summary>
                         [NameInMap("Latest")]
                         [Validation(Required=false)]
                         public string Latest { get; set; }
 
-                        /// <summary>
-                        /// <para>The information about the supported OSs.</para>
-                        /// </summary>
                         [NameInMap("SupportOs")]
                         [Validation(Required=false)]
                         public ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersionsVersionInfosSupportOs SupportOs { get; set; }
@@ -89,26 +53,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                             [Validation(Required=false)]
                             public List<ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersionsVersionInfosSupportOsSupportOsInfos> SupportOsInfos { get; set; }
                             public class ListSoftwaresResponseBodyAdditionalPackagesAdditionalPackageInfosVersionsVersionInfosSupportOsSupportOsInfos : TeaModel {
-                                /// <summary>
-                                /// <para>The OS architecture. Valid values:</para>
-                                /// <list type="bullet">
-                                /// <item><description>x86_64</description></item>
-                                /// <item><description>arm64</description></item>
-                                /// </list>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>x86_64</para>
-                                /// </summary>
                                 [NameInMap("Architecture")]
                                 [Validation(Required=false)]
                                 public string Architecture { get; set; }
 
-                                /// <summary>
-                                /// <para>The image tag.</para>
-                                /// 
-                                /// <b>Example:</b>
-                                /// <para>Alibaba Cloud Linux  3.2104 LTS 64 bit ARM Edition</para>
-                                /// </summary>
                                 [NameInMap("OsTag")]
                                 [Validation(Required=false)]
                                 public string OsTag { get; set; }
@@ -117,12 +65,6 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 
                         }
 
-                        /// <summary>
-                        /// <para>The software version.</para>
-                        /// 
-                        /// <b>Example:</b>
-                        /// <para>2024.1</para>
-                        /// </summary>
                         [NameInMap("Version")]
                         [Validation(Required=false)]
                         public string Version { get; set; }

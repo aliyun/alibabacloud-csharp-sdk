@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class GetClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The E-HPC Util version.</para>
+        /// <para>The E-HPC Util version used by the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0.31</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClientVersion { get; set; }
 
         /// <summary>
-        /// <para>The cluster type. Valid values:</para>
+        /// <para>The cluster series. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Standard</description></item>
-        /// <item><description>Serverless</description></item>
+        /// <item><description><para>Standard</para>
+        /// </description></item>
+        /// <item><description><para>Serverless</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterCategory { get; set; }
 
         /// <summary>
-        /// <para>The time when the cluster was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
+        /// <para>The cluster creation time. The time follows the ISO 8601 standard and is in UTC+0. The format is yyyy-MM-ddTHH:mmZ. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-08-06T12:43:01.000Z</para>
@@ -44,14 +46,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The post-processing script of the cluster.</para>
+        /// <para>The cluster post-processing script.</para>
         /// </summary>
         [NameInMap("ClusterCustomConfiguration")]
         [Validation(Required=false)]
         public GetClusterResponseBodyClusterCustomConfiguration ClusterCustomConfiguration { get; set; }
         public class GetClusterResponseBodyClusterCustomConfiguration : TeaModel {
             /// <summary>
-            /// <para>The arguments that are used to run the script after the scrip is installed.</para>
+            /// <para>The runtime parameters of the post-installation script.</para>
             /// 
             /// <b>Example:</b>
             /// <para>E-HPC cn-hangzhou</para>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string Args { get; set; }
 
             /// <summary>
-            /// <para>The URL that is used to download the post-processing script.</para>
+            /// <para>The download URL of the post-processing script.</para>
             /// 
             /// <b>Example:</b>
             /// <para>http://*****</para>
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The E-HPC cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ehpc-hz-FYUr32****</para>
@@ -85,9 +87,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         /// <summary>
         /// <para>The deployment type of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Integrated: The cluster is deployed on a public cloud.</description></item>
-        /// <item><description>Hybrid: The cluster is deployed on a hybrid cloud.</description></item>
-        /// <item><description>Custom: The cluster is a custom cluster.</description></item>
+        /// <item><description><para>Integrated: Public cloud</para>
+        /// </description></item>
+        /// <item><description><para>Hybrid: Hybrid cloud</para>
+        /// </description></item>
+        /// <item><description><para>Custom: Custom cluster</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +103,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterMode { get; set; }
 
         /// <summary>
-        /// <para>The time when the cluster was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
+        /// <para>The cluster modification time. The time follows the ISO 8601 standard and is in UTC+0. The format is yyyy-MM-ddTHH:mmZ. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-08-06T12:43:01.000Z</para>
@@ -108,7 +113,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The cluster name.</para>
+        /// <para>The E-HPC cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>slurm22.05.8-cluster-20240614</para>
@@ -118,17 +123,26 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The cluster state. Valid values:</para>
+        /// <para>The cluster status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>uninit: The cluster is being installed.</description></item>
-        /// <item><description>creating: The cluster is being created.</description></item>
-        /// <item><description>initing: The cluster is being initialized.</description></item>
-        /// <item><description>running: The cluster is running.</description></item>
-        /// <item><description>exception: The cluster has run into an exception.</description></item>
-        /// <item><description>raleasing: The cluster is being released.</description></item>
-        /// <item><description>stopping: The cluster is being stopped.</description></item>
-        /// <item><description>stopped: The cluster is stopped.</description></item>
-        /// <item><description>pending: The cluster is waiting to be configured.</description></item>
+        /// <item><description><para>uninit: Installing</para>
+        /// </description></item>
+        /// <item><description><para>creating: Creating</para>
+        /// </description></item>
+        /// <item><description><para>initing: Initializing</para>
+        /// </description></item>
+        /// <item><description><para>running: Running</para>
+        /// </description></item>
+        /// <item><description><para>exception: Abnormal</para>
+        /// </description></item>
+        /// <item><description><para>releasing: Releasing</para>
+        /// </description></item>
+        /// <item><description><para>stopping: Stopping</para>
+        /// </description></item>
+        /// <item><description><para>stopped: Stopped</para>
+        /// </description></item>
+        /// <item><description><para>pending: Pending configuration</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -139,7 +153,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch used by the cluster.</para>
+        /// <para>The virtual switch ID used by the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1p2uugqsjppno******</para>
@@ -149,7 +163,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) used by the cluster.</para>
+        /// <para>The Virtual Private Cloud (VPC) ID used by the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-uf6u3lk1pjy28eg*****</para>
@@ -159,10 +173,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterVpcId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether deletion protection is enabled for the cluster. Valid values:</para>
+        /// <para>Indicates whether delete protection is enabled for the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Enable delete protection.</para>
+        /// </description></item>
+        /// <item><description><para>false: Do not enable delete protection.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -173,7 +189,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string DeleteProtection { get; set; }
 
         /// <summary>
-        /// <para>The E-HPC version.</para>
+        /// <para>The E-HPC product version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0.0</para>
@@ -183,10 +199,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string EhpcVersion { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether automatic scale-in is enabled for the cluster. Valid values:</para>
+        /// <para>Indicates whether auto scale-in is enabled for the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Enable</para>
+        /// </description></item>
+        /// <item><description><para>false: Disable</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -197,10 +215,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public bool? EnableScaleIn { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether automatic scale-out is enabled for the cluster. Valid values:</para>
+        /// <para>Indicates whether auto scale-out is enabled for the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Enable</para>
+        /// </description></item>
+        /// <item><description><para>false: Disable</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -211,7 +231,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public bool? EnableScaleOut { get; set; }
 
         /// <summary>
-        /// <para>The interval at which the cluster is automatically scaled out.</para>
+        /// <para>The interval for cluster auto scale-out.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -221,7 +241,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public int? GrowInterval { get; set; }
 
         /// <summary>
-        /// <para>The idle duration of the compute nodes allowed by the cluster.</para>
+        /// <para>The idle time of the cluster\&quot;s compute nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -231,29 +251,36 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public int? IdleInterval { get; set; }
 
         /// <summary>
-        /// <para>The management node configurations.</para>
+        /// <para>The cluster control plane node configuration.</para>
         /// </summary>
         [NameInMap("Manager")]
         [Validation(Required=false)]
         public GetClusterResponseBodyManager Manager { get; set; }
         public class GetClusterResponseBodyManager : TeaModel {
             /// <summary>
-            /// <para>The configurations of the domain name resolution service.</para>
+            /// <para>The domain name resolution service configuration.</para>
             /// </summary>
             [NameInMap("DNS")]
             [Validation(Required=false)]
             public GetClusterResponseBodyManagerDNS DNS { get; set; }
             public class GetClusterResponseBodyManagerDNS : TeaModel {
                 /// <summary>
-                /// <para>The state of the domain name resolution service. Valid values:</para>
+                /// <para>The domain name resolution service status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>uninit: The service is being installed.</description></item>
-                /// <item><description>initing: The service is being initialized.</description></item>
-                /// <item><description>running: The service is running.</description></item>
-                /// <item><description>exception: The service has run into an exception.</description></item>
-                /// <item><description>releasing: The service is being released.</description></item>
-                /// <item><description>stopped: The service is stopped.</description></item>
-                /// <item><description>pending: The service is waiting to be configured.</description></item>
+                /// <item><description><para>uninit: Installing</para>
+                /// </description></item>
+                /// <item><description><para>initing: Initializing</para>
+                /// </description></item>
+                /// <item><description><para>running: Running</para>
+                /// </description></item>
+                /// <item><description><para>exception: Abnormal</para>
+                /// </description></item>
+                /// <item><description><para>releasing: Releasing</para>
+                /// </description></item>
+                /// <item><description><para>stopped: Stopped</para>
+                /// </description></item>
+                /// <item><description><para>pending: Pending configuration</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -264,7 +291,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The resolution type.</para>
+                /// <para>The domain name resolution type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nis</para>
@@ -274,7 +301,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The version of the resolution service.</para>
+                /// <para>The domain name resolution version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.31</para>
@@ -286,22 +313,29 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             }
 
             /// <summary>
-            /// <para>The information about the domain account service.</para>
+            /// <para>The domain account service information.</para>
             /// </summary>
             [NameInMap("DirectoryService")]
             [Validation(Required=false)]
             public GetClusterResponseBodyManagerDirectoryService DirectoryService { get; set; }
             public class GetClusterResponseBodyManagerDirectoryService : TeaModel {
                 /// <summary>
-                /// <para>The state of the domain account service. Valid values:</para>
+                /// <para>The domain account service status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>uninit: The service is being installed.</description></item>
-                /// <item><description>initing: The service is being initialized.</description></item>
-                /// <item><description>running: The service is running.</description></item>
-                /// <item><description>exception: The service has run into an exception.</description></item>
-                /// <item><description>releasing: The service is being released.</description></item>
-                /// <item><description>stopped: The service is stopped.</description></item>
-                /// <item><description>pending: The service is waiting to be configured.</description></item>
+                /// <item><description><para>uninit: Installing</para>
+                /// </description></item>
+                /// <item><description><para>initing: Initializing</para>
+                /// </description></item>
+                /// <item><description><para>running: Running</para>
+                /// </description></item>
+                /// <item><description><para>exception: Abnormal</para>
+                /// </description></item>
+                /// <item><description><para>releasing: Releasing</para>
+                /// </description></item>
+                /// <item><description><para>stopped: Stopped</para>
+                /// </description></item>
+                /// <item><description><para>pending: Pending configuration</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -312,7 +346,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The type of the domain account.</para>
+                /// <para>The domain account type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nis</para>
@@ -322,7 +356,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The version of the domain account service.</para>
+                /// <para>The domain account version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.31</para>
@@ -334,7 +368,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             }
 
             /// <summary>
-            /// <para>The configurations of the management node.</para>
+            /// <para>The control plane node configuration.</para>
             /// </summary>
             [NameInMap("ManagerNode")]
             [Validation(Required=false)]
@@ -365,7 +399,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public bool? EnableHt { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the management node.</para>
+                /// <para>The expiration time of the control plane node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2099-12-31T15:59Z</para>
@@ -383,10 +417,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string ImageId { get; set; }
 
                 /// <summary>
-                /// <para>The instance billing method of the management node. Valid values:</para>
+                /// <para>The billing method of the control plane node instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PostPaid: pay-as-you-go</description></item>
-                /// <item><description>PrePaid: subscription</description></item>
+                /// <item><description><para>PostPaid: Pay-as-you-go</para>
+                /// </description></item>
+                /// <item><description><para>PrePaid: Subscription</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -397,7 +433,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string InstanceChargeType { get; set; }
 
                 /// <summary>
-                /// <para>The instance ID of the management node.</para>
+                /// <para>The control plane node instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-bp1a170jgea1vl******</para>
@@ -407,7 +443,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The instance type of the management node.</para>
+                /// <para>The control plane node instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.g6.4xlarge</para>
@@ -481,22 +517,29 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             }
 
             /// <summary>
-            /// <para>The information about the scheduler.</para>
+            /// <para>The scheduler service information.</para>
             /// </summary>
             [NameInMap("Scheduler")]
             [Validation(Required=false)]
             public GetClusterResponseBodyManagerScheduler Scheduler { get; set; }
             public class GetClusterResponseBodyManagerScheduler : TeaModel {
                 /// <summary>
-                /// <para>The scheduler state. Valid values:</para>
+                /// <para>The scheduler service status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>uninit: The scheduler is being installed.</description></item>
-                /// <item><description>initing: The scheduler is being initialized.</description></item>
-                /// <item><description>running: The scheduler is running.</description></item>
-                /// <item><description>exception: The scheduler has run into an exception.</description></item>
-                /// <item><description>releasing: The scheduler is being released.</description></item>
-                /// <item><description>stopped: The scheduler is stopped.</description></item>
-                /// <item><description>pending: The scheduler is waiting to be configured.</description></item>
+                /// <item><description><para>uninit: Installing</para>
+                /// </description></item>
+                /// <item><description><para>initing: Initializing</para>
+                /// </description></item>
+                /// <item><description><para>running: Running</para>
+                /// </description></item>
+                /// <item><description><para>exception: Abnormal</para>
+                /// </description></item>
+                /// <item><description><para>releasing: Releasing</para>
+                /// </description></item>
+                /// <item><description><para>stopped: Stopped</para>
+                /// </description></item>
+                /// <item><description><para>pending: Pending configuration</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -509,11 +552,16 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
                 /// <summary>
                 /// <para>The scheduler type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>SLURM</description></item>
-                /// <item><description>PBS</description></item>
-                /// <item><description>OPENGRIDSCHEDULER</description></item>
-                /// <item><description>LSF_PLUGIN</description></item>
-                /// <item><description>PBS_PLUGIN</description></item>
+                /// <item><description><para>SLURM</para>
+                /// </description></item>
+                /// <item><description><para>PBS</para>
+                /// </description></item>
+                /// <item><description><para>OPENGRIDSCHEDULER</para>
+                /// </description></item>
+                /// <item><description><para>LSF_PLUGIN</para>
+                /// </description></item>
+                /// <item><description><para>PBS_PLUGIN</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -538,7 +586,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         }
 
         /// <summary>
-        /// <para>The maximum total number of vCPUs that can be used by all compute nodes managed by the cluster.</para>
+        /// <para>The total number of cores of compute nodes the cluster can manage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -548,7 +596,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string MaxCoreCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of compute nodes that the cluster can manage.</para>
+        /// <para>The number of compute nodes the cluster can manage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -558,17 +606,19 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string MaxCount { get; set; }
 
         /// <summary>
-        /// <para>The monitoring details of the cluster.</para>
+        /// <para>The cluster monitoring details.</para>
         /// </summary>
         [NameInMap("MonitorSpec")]
         [Validation(Required=false)]
         public GetClusterResponseBodyMonitorSpec MonitorSpec { get; set; }
         public class GetClusterResponseBodyMonitorSpec : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the monitoring component of compute nodes is enabled for the cluster. Valid values:</para>
+            /// <para>Indicates whether the monitoring component for compute nodes is enabled for the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: Enable</para>
+            /// </description></item>
+            /// <item><description><para>false: Disable</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -601,7 +651,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The scheduler specifications of the cluster.</para>
+        /// <para>The cluster scheduling details.</para>
         /// </summary>
         [NameInMap("SchedulerSpec")]
         [Validation(Required=false)]
@@ -614,8 +664,10 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             /// <summary>
             /// <para>Indicates whether the topology awareness feature is enabled for the cluster. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: Enable</para>
+            /// </description></item>
+            /// <item><description><para>false: Disable</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

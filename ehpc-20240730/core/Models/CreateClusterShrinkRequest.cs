@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class CreateClusterShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of software that you want to install in the cluster. Valid values of N: 0 to 10.</para>
+        /// <para>A list of software to install in the cluster. You can specify up to 10 packages.</para>
         /// </summary>
         [NameInMap("AdditionalPackages")]
         [Validation(Required=false)]
         public string AdditionalPackagesShrink { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the custom addons in the cluster. Only one addon is supported.</para>
+        /// <para>The configuration of the custom service component for the cluster. Only one component is supported.</para>
         /// </summary>
         [NameInMap("Addons")]
         [Validation(Required=false)]
         public string AddonsShrink { get; set; }
 
         /// <summary>
-        /// <para>The client version. By default, the latest version is used.</para>
+        /// <para>The version of the E-HPC client. By default, the latest version is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.1.0</para>
@@ -34,10 +34,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClientVersion { get; set; }
 
         /// <summary>
-        /// <para>The cluster type. Valid values:</para>
+        /// <para>The edition of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Standard</description></item>
-        /// <item><description>Serverless</description></item>
+        /// <item><description><para>Standard</para>
+        /// </description></item>
+        /// <item><description><para>Serverless</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,21 +50,21 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterCategory { get; set; }
 
         /// <summary>
-        /// <para>The access credentials of the cluster.</para>
+        /// <para>The security credentials for the cluster.</para>
         /// </summary>
         [NameInMap("ClusterCredentials")]
         [Validation(Required=false)]
         public string ClusterCredentialsShrink { get; set; }
 
         /// <summary>
-        /// <para>The post-processing script of the cluster.</para>
+        /// <para>The post-processing script for the cluster.</para>
         /// </summary>
         [NameInMap("ClusterCustomConfiguration")]
         [Validation(Required=false)]
         public string ClusterCustomConfigurationShrink { get; set; }
 
         /// <summary>
-        /// <para>The cluster description. The description must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
+        /// <para>The description of the cluster. The description must be 2 to 128 characters long and can contain letters, Chinese characters, digits, hyphens (-), and underscores (_).</para>
         /// 
         /// <b>Example:</b>
         /// <para>slurm22.05.8-cluster-20240718</para>
@@ -72,11 +74,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The deployment mode of the cluster. Valid values:</para>
+        /// <para>The cluster\&quot;s deployment type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Integrated</description></item>
-        /// <item><description>Hybrid</description></item>
-        /// <item><description>Custom</description></item>
+        /// <item><description><para>Integrated: An integrated cluster.</para>
+        /// </description></item>
+        /// <item><description><para>Hybrid: A hybrid cloud cluster.</para>
+        /// </description></item>
+        /// <item><description><para>Custom: A custom cluster.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -87,7 +92,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterMode { get; set; }
 
         /// <summary>
-        /// <para>The cluster name. The name must be 1 to 128 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
+        /// <para>The name of the cluster. The name must be 2 to 128 characters long and can contain letters, Chinese characters, digits, hyphens (-), and underscores (_).</para>
         /// 
         /// <b>Example:</b>
         /// <para>slurm22.05.8-cluster-20240718</para>
@@ -97,8 +102,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch that you want the cluster to use. The vSwitch must reside in the VPC that is specified by the <c>ClusterVpcId</c> parameter.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a> operation to query information about the created VPCs and vSwitches.</para>
+        /// <para>The ID of the VSwitch for the cluster. The VSwitch must be in the VPC specified by <c>ClusterVpcId</c>.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/448581.html">DescribeVpcs</a> operation to find available VPCs and VSwitches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-f8za5p0mwzgdu3wgx****</para>
@@ -108,7 +113,7 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC) in which the cluster resides.</para>
+        /// <para>The ID of the VPC for the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-m5efjevmclc0xdmys****</para>
@@ -118,10 +123,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterVpcId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable deletion protection for the cluster. Deletion protection decides whether the cluster can be deleted in the console or by calling the <a href="https://help.aliyun.com/document_detail/424406.html">DeleteCluster</a> operation. Valid values:</para>
+        /// <para>Specifies whether to enable deletion protection for the cluster. This feature prevents the cluster from being deleted via the console or the <a href="https://help.aliyun.com/document_detail/424406.html">DeleteCluster</a> operation.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Enables deletion protection.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disables deletion protection.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -132,13 +139,23 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         [Validation(Required=false)]
         public bool? DeletionProtection { get; set; }
 
+        [NameInMap("GrowInterval")]
+        [Validation(Required=false)]
+        public int? GrowInterval { get; set; }
+
+        [NameInMap("IdleInterval")]
+        [Validation(Required=false)]
+        public int? IdleInterval { get; set; }
+
         /// <summary>
-        /// <para>Specifies whether to use an advanced security group. Valid values:</para>
+        /// <para>Specifies whether to use an enterprise security group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: automatically creates and uses an advanced security group.</description></item>
-        /// <item><description>false: automatically creates and uses a basic security group.</description></item>
+        /// <item><description><para>true: The system automatically creates and uses an enterprise security group.</para>
+        /// </description></item>
+        /// <item><description><para>false: The system automatically creates and uses a security group.</para>
+        /// </description></item>
         /// </list>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/605897.html">Basic security groups and advanced security groups</a>.</para>
+        /// <para>For more information about how to select a security group type, see <a href="https://help.aliyun.com/document_detail/605897.html">Security groups and enterprise security groups</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -148,14 +165,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public bool? IsEnterpriseSecurityGroup { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the cluster management node.</para>
+        /// <para>Configuration for the cluster manager node.</para>
         /// </summary>
         [NameInMap("Manager")]
         [Validation(Required=false)]
         public string ManagerShrink { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of vCPUs that can be used by compute nodes in the cluster. Valid values: 0 to 100,000.</para>
+        /// <para>The maximum number of CPU cores that the cluster can manage across all compute nodes. Valid values: 0 to 100,000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -175,15 +192,15 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public int? MaxCount { get; set; }
 
         /// <summary>
-        /// <para>The queues in the cluster. The number of queues can be 0 to 8.</para>
+        /// <para>Configuration for the cluster queues. You can specify up to 8 queues.</para>
         /// </summary>
         [NameInMap("Queues")]
         [Validation(Required=false)]
         public string QueuesShrink { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the cluster belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to obtain the IDs of the resource groups.</para>
+        /// <para>The ID of the resource group.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to find resource group IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4******</para>
@@ -193,8 +210,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group to which the cluster belongs.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> operation to query available security groups in the current region.</para>
+        /// <para>The ID of the security group for the cluster.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> operation to find available security groups in the current region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp13n61xsydodfyg****</para>
@@ -204,14 +221,14 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The shared storage resources of the cluster.</para>
+        /// <para>Configuration for the cluster\&quot;s shared storage.</para>
         /// </summary>
         [NameInMap("SharedStorages")]
         [Validation(Required=false)]
         public string SharedStoragesShrink { get; set; }
 
         /// <summary>
-        /// <para>The tags of the cluster.</para>
+        /// <para>The list of tags to add to the cluster. You can add up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

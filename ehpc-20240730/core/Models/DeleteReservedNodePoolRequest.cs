@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
     public class DeleteReservedNodePoolRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ehpc-hz-FYUr32****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The reserved node pool ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rnp-cdx****</para>
         /// </summary>

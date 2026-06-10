@@ -94,6 +94,9 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
 
             /// <summary>
             /// <para>The OS name in Chinese.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CentOS  7.9 64位</para>
             /// </summary>
             [NameInMap("OSName")]
             [Validation(Required=false)]
