@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public List<string> Items { get; set; }
 
+        [NameInMap("metricSource")]
+        [Validation(Required=false)]
+        public string MetricSource { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>Cluster ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>This field exists when paging is used and indicates the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -25,11 +29,19 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public long? Current { get; set; }
 
+        /// <summary>
+        /// <para>Filter by ECS instance ID</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-8vbfd3g9vs32sfuvv38h</para>
+        /// </summary>
         [NameInMap("instance")]
         [Validation(Required=false)]
         public string Instance { get; set; }
 
         /// <summary>
+        /// <para>Page size. Default value is 20. Valid range: [1, 100].</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Filter instances by area</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>Filter instances by status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Running</para>
         /// </summary>

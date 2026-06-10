@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetServiceFuncStatusRequest : TeaModel {
         /// <summary>
+        /// <para>channel name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Channel { get; set; }
 
         /// <summary>
+        /// <para>Diagnosis parameters. Different types of diagnosis require different diagnosis parameters. You can use this field to filter records whose parameter values match the specified values.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("params")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public GetServiceFuncStatusRequestParams Params { get; set; }
         public class GetServiceFuncStatusRequestParams : TeaModel {
             /// <summary>
+            /// <para>feature name</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,6 +40,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string FunctionName { get; set; }
 
             /// <summary>
+            /// <para>instance ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>i-2zei55fwj8nnu31h3z46</para>
             /// </summary>
@@ -45,6 +50,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Instance { get; set; }
 
             /// <summary>
+            /// <para>User ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1338904783509062</para>
             /// </summary>
@@ -55,6 +62,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
+        /// <para>Service Name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

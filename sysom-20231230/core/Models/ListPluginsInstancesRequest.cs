@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListPluginsInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>This field exists when paging is used and indicates the current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Current { get; set; }
 
         /// <summary>
+        /// <para>Filter by instance ID or instance name. Fuzzy query is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i-bpxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceIdName { get; set; }
 
         /// <summary>
+        /// <para>Filter by instance tags.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;key&quot;:&quot;app&quot;,&quot;value&quot;:&quot;sysom-aliyun-com&quot;}</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceTag { get; set; }
 
         /// <summary>
+        /// <para>Filter instances by plugin installation status.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string OperationType { get; set; }
 
         /// <summary>
+        /// <para>Page size. Default value is 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -52,6 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>If this parameter is specified, the response filters and returns the instance list for the specified agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +72,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string PluginId { get; set; }
 
         /// <summary>
+        /// <para>Filter instances by area.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

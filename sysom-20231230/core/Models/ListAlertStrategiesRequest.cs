@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAlertStrategiesRequest : TeaModel {
         /// <summary>
+        /// <para>Current page number (starting from 1)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? Current { get; set; }
 
         /// <summary>
+        /// <para>Maximum number of records to retrieve in a single request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Alert policy name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>strategy1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Pagination token for the next request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c2f78a783f49457caba6bace6f6f79e4</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Page size</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

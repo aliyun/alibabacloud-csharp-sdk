@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotSpotUniqListRequest : TeaModel {
         /// <summary>
+        /// <para>End time</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? BegEnd { get; set; }
 
         /// <summary>
+        /// <para>Start time</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? BegStart { get; set; }
 
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
+        /// <para>Process ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>
@@ -48,6 +53,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Pid { get; set; }
 
         /// <summary>
+        /// <para>Table name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>prof_on</para>
         /// </summary>
@@ -56,7 +63,11 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Table { get; set; }
 
         /// <summary>
+        /// <para>Identity flag</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>默认需要为&quot;flag&quot;，待查询的字段</para>
         /// </summary>
         [NameInMap("uniq")]
         [Validation(Required=false)]

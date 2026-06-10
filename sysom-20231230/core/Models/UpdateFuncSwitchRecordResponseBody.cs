@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateFuncSwitchRecordResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code  </para>
+        /// <list type="bullet">
+        /// <item><description>If <c>code == Success</c>, authorization succeeded.  </description></item>
+        /// <item><description>Any other status code indicates authorization failed. When authorization fails, check the <c>message</c> field for detailed error information.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,11 +23,16 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Returned data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public UpdateFuncSwitchRecordResponseBodyData Data { get; set; }
         public class UpdateFuncSwitchRecordResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Job ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>63fc5acb99e642d793f42912612e8001</para>
             /// </summary>
@@ -32,6 +43,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
+        /// <para>Error message  </para>
+        /// <list type="bullet">
+        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>result: code=1 msg=(Request failed, status_code != 200)</para>
         /// </summary>

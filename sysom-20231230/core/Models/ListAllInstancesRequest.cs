@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAllInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>Current page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Current { get; set; }
 
         /// <summary>
+        /// <para>List of filter information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Filters { get; set; }
 
         /// <summary>
+        /// <para>Instance type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceType { get; set; }
 
         /// <summary>
+        /// <para>Managed type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>managed</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ManagedType { get; set; }
 
         /// <summary>
+        /// <para>Maximum number of records to retrieve in a single request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -50,6 +60,11 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Paging cursor.  </para>
+        /// <remarks>
+        /// <para>If this parameter is not empty, it indicates that more data is available.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>U+w1wv2R4ZWR5oZLXD0+Dp4dD+2BRJj42DLT6GrZysw=</para>
         /// </summary>
@@ -58,6 +73,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Number of entries returned per page. Default value: pageSize=10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -66,6 +83,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>Plugin ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>01fc4a0b-f199-4885-9861-b4054a310fe7</para>
         /// </summary>
@@ -74,6 +93,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string PluginId { get; set; }
 
         /// <summary>
+        /// <para>Region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

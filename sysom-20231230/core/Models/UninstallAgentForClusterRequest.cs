@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UninstallAgentForClusterRequest : TeaModel {
         /// <summary>
+        /// <para>Widget ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>Widget version</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3.4.0-1</para>
         /// </summary>
@@ -26,6 +30,11 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AgentVersion { get; set; }
 
         /// <summary>
+        /// <para>Cluster ID.  </para>
+        /// <remarks>
+        /// <para>This cluster ID must be the ID of an ACK cluster.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>c822f83bb45994ddbac9326b4c2f04f35</para>
         /// </summary>

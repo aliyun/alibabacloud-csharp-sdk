@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAlertStrategyRequest : TeaModel {
         /// <summary>
+        /// <para>Policy ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

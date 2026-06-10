@@ -40,8 +40,6 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>2D693121-C925-5154-8DF6-C09A8B369822</para>
         /// </summary>

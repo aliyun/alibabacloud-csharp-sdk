@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotspotTrackingRequest : TeaModel {
         /// <summary>
+        /// <para>End time</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? BegEnd { get; set; }
 
         /// <summary>
+        /// <para>Start time</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,13 +32,18 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? BegStart { get; set; }
 
         /// <summary>
+        /// <para>Hot spot type</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alloc</para>
         /// </summary>
         [NameInMap("hot_type")]
         [Validation(Required=false)]
         public string HotType { get; set; }
 
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,6 +54,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
+        /// <para>Process PID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1657494</para>
         /// </summary>
@@ -55,6 +64,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Pid { get; set; }
 
         /// <summary>
+        /// <para>Query table name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

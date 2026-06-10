@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetDiagnosisResultResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code  </para>
+        /// <list type="bullet">
+        /// <item><description>If <c>code == &quot;Success&quot;</c>, authorization succeeded.  </description></item>
+        /// <item><description>Other status codes indicate authorization failed. When authorization fails, view the <c>message</c> field to obtain detailed error information.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,11 +23,16 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Returned data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetDiagnosisResultResponseBodyData Data { get; set; }
         public class GetDiagnosisResultResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Error code (0 indicates no error)</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -30,6 +41,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public int? Code { get; set; }
 
             /// <summary>
+            /// <para>Diagnosis command</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///     &quot;jobs&quot;:[
@@ -52,11 +65,19 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [Validation(Required=false)]
             public object Command { get; set; }
 
+            /// <summary>
+            /// <para>Creation Time</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025-12-03 16:30:28</para>
+            /// </summary>
             [NameInMap("created_at")]
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
 
             /// <summary>
+            /// <para>Error message</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Diagnosis failed</para>
             /// </summary>
@@ -65,6 +86,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ErrMsg { get; set; }
 
             /// <summary>
+            /// <para>Diagnosis parameters</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///     &quot;type&quot;:&quot;all&quot;,
@@ -79,6 +102,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public object Params { get; set; }
 
             /// <summary>
+            /// <para>Diagnosis result</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///     &quot;summary&quot;:&quot;  memory cgroup leak&quot;,
@@ -303,6 +328,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public object Result { get; set; }
 
             /// <summary>
+            /// <para>Diagnosis Type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>memgraph</para>
             /// </summary>
@@ -311,6 +338,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ServiceName { get; set; }
 
             /// <summary>
+            /// <para>The execution status of the diagnostic task.<br>Valid values:  </para>
+            /// <list type="bullet">
+            /// <item><description><b>Ready</b>: Ready  </description></item>
+            /// <item><description><b>Running</b>: Running  </description></item>
+            /// <item><description><b>Success</b>: Succeeded  </description></item>
+            /// <item><description><b>Fail</b>: Failed</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Running</para>
             /// </summary>
@@ -319,6 +354,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>Job ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>grcuU21a</para>
             /// </summary>
@@ -326,11 +363,19 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
+            /// <summary>
+            /// <para>Update Time</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2025-12-03 16:30:28</para>
+            /// </summary>
             [NameInMap("updated_at")]
             [Validation(Required=false)]
             public string UpdatedAt { get; set; }
 
             /// <summary>
+            /// <para>Diagnosis details URL</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/diagnose/detail/qe3Z34sa</para>
             /// </summary>
@@ -341,6 +386,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
+        /// <para>Error message  </para>
+        /// <list type="bullet">
+        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -349,6 +400,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request RequestId</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9515E5A0-8905-59B0-9BBF-5F0BE568C3A0</para>
         /// </summary>

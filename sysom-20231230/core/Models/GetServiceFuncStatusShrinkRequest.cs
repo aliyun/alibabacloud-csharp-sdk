@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetServiceFuncStatusShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>channel name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Channel { get; set; }
 
         /// <summary>
+        /// <para>Diagnosis parameters. Different types of diagnosis require different diagnosis parameters. You can use this field to filter records whose parameter values match the specified values.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("params")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ParamsShrink { get; set; }
 
         /// <summary>
+        /// <para>Service Name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

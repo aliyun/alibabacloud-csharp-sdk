@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetVmcoreDiagnosisTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code  </para>
+        /// <list type="bullet">
+        /// <item><description><c>code == Success</c> indicates successful authorization;  </description></item>
+        /// <item><description>Other status codes indicate authorization failure. When authorization fails, view the <c>message</c> field to obtain detailed error information.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,11 +23,16 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Return Result</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetVmcoreDiagnosisTaskResponseBodyData Data { get; set; }
         public class GetVmcoreDiagnosisTaskResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Creation Time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-12-02T17:36:12</para>
             /// </summary>
@@ -30,6 +41,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
+            /// <para>Diagnosis Result</para>
+            /// 
             /// <b>Example:</b>
             /// <para>result</para>
             /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string DiagnoseResult { get; set; }
 
             /// <summary>
+            /// <para>Diagnosis error message</para>
+            /// 
             /// <b>Example:</b>
             /// <para>error message</para>
             /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
+            /// <para>Job ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>bbe94a98-4192-4172-b856-95777e0a55d7</para>
             /// </summary>
@@ -54,6 +71,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>Task Status</para>
+            /// 
             /// <b>Example:</b>
             /// <para>running</para>
             /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string TaskStatus { get; set; }
 
             /// <summary>
+            /// <para>Task Type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vmcore</para>
             /// </summary>
@@ -69,11 +90,16 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [Validation(Required=false)]
             public string TaskType { get; set; }
 
+            /// <summary>
+            /// <para>Download links for files associated with the job</para>
+            /// </summary>
             [NameInMap("urls")]
             [Validation(Required=false)]
             public GetVmcoreDiagnosisTaskResponseBodyDataUrls Urls { get; set; }
             public class GetVmcoreDiagnosisTaskResponseBodyDataUrls : TeaModel {
                 /// <summary>
+                /// <para>Download link for the debuginfo-common RPM package</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo-common/file/path</a></para>
                 /// </summary>
@@ -82,6 +108,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string DebuginfoCommonUrl { get; set; }
 
                 /// <summary>
+                /// <para>Link to download the debuginfo RPM package</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/debuginfo/file/path</a></para>
                 /// </summary>
@@ -90,6 +118,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string DebuginfoUrl { get; set; }
 
                 /// <summary>
+                /// <para>Download link for the dmesg log</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/dmesg/file/path</a></para>
                 /// </summary>
@@ -98,6 +128,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string DmesgUrl { get; set; }
 
                 /// <summary>
+                /// <para>Download link for the vmcore file</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path">https://bucket-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/vmcore/file/path</a></para>
                 /// </summary>
@@ -110,6 +142,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
+        /// <para>Error message  </para>
+        /// <list type="bullet">
+        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>SysomOpenAPIException: SysomOpenAPI.InvalidParameter Invalid params, should be json string or dict</para>
         /// </summary>

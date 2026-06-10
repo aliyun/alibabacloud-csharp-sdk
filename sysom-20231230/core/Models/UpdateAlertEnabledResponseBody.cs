@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateAlertEnabledResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code  </para>
+        /// <list type="bullet">
+        /// <item><description>If <c>code == Success</c>, authorization succeeded.  </description></item>
+        /// <item><description>Other status codes indicate authorization failed. When authorization fails, view the <c>message</c> field to obtain detailed error message.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,11 +23,38 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Returned data</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;uid&quot;: &quot;1808078950770264&quot;,
+        ///     &quot;name&quot;: &quot;test-name&quot;,
+        ///     &quot;strategy&quot;: {
+        ///       &quot;items&quot;: [
+        ///         &quot;节点CPU使用率检测&quot;
+        ///       ],
+        ///       &quot;clusters&quot;: [
+        ///         &quot;cluster1&quot;
+        ///       ]
+        ///     },
+        ///     &quot;enabled&quot;: true,
+        ///     &quot;id&quot;: 1,
+        ///     &quot;created_at&quot;: 1753172727,
+        ///     &quot;updated_at&quot;: 1753172727
+        ///   }</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public object Data { get; set; }
 
         /// <summary>
+        /// <para>Error message  </para>
+        /// <list type="bullet">
+        /// <item><description>If <c>code == Success</c>, this field is empty.  </description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>

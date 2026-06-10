@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateAlertStrategyRequest : TeaModel {
         /// <summary>
+        /// <para>Whether the alert policy is enabled</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>Alert policy ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +36,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public bool? K8sLabel { get; set; }
 
         /// <summary>
+        /// <para>Alert policy name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,12 +47,16 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Alert policy details</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("strategy")]
         [Validation(Required=false)]
         public UpdateAlertStrategyRequestStrategy Strategy { get; set; }
         public class UpdateAlertStrategyRequestStrategy : TeaModel {
+            /// <summary>
+            /// <para>Set of clusters that receive alerts</para>
+            /// </summary>
             [NameInMap("clusters")]
             [Validation(Required=false)]
             public List<string> Clusters { get; set; }
@@ -58,6 +65,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [Validation(Required=false)]
             public List<int?> Destinations { get; set; }
 
+            /// <summary>
+            /// <para>Set of abnormal items that receive alerts</para>
+            /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<string> Items { get; set; }

@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHealthPercentageResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code  </para>
+        /// <list type="bullet">
+        /// <item><description><c>code == Success</c> indicates that authorization succeeded.  </description></item>
+        /// <item><description>Other status codes indicate that authorization failed. When authorization fails, view the <c>message</c> field to obtain detailed error information.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>SysomOpenAPI.ServerError</para>
         /// </summary>
@@ -17,11 +23,16 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Returned data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<GetHealthPercentageResponseBodyData> Data { get; set; }
         public class GetHealthPercentageResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Health level of the edge zone/pod</para>
+            /// 
             /// <b>Example:</b>
             /// <para>health</para>
             /// </summary>
@@ -30,6 +41,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Type { get; set; }
 
             /// <summary>
+            /// <para>Quantity</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -40,6 +53,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
+        /// <para>Error Details</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotspotPidListResponseBody : TeaModel {
         /// <summary>
+        /// <para>error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SysomOpenAPI.InvalidParameter</para>
         /// </summary>
@@ -17,14 +19,23 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data returned</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetHotspotPidListResponseBodyData Data { get; set; }
         public class GetHotspotPidListResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>List of column names</para>
+            /// </summary>
             [NameInMap("columns")]
             [Validation(Required=false)]
             public List<string> Columns { get; set; }
 
+            /// <summary>
+            /// <para>List of process information</para>
+            /// </summary>
             [NameInMap("values")]
             [Validation(Required=false)]
             public List<List<string>> Values { get; set; }
@@ -32,6 +43,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
+        /// <para>Response message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>

@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class CheckInstanceSupportResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code  </para>
+        /// <list type="bullet">
+        /// <item><description><c>code == Success</c> indicates that authorization succeeded.  </description></item>
+        /// <item><description>Other status codes indicate that authorization failed. When authorization fails, view the <c>message</c> field to obtain detailed error information.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,11 +23,16 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Returned data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<CheckInstanceSupportResponseBodyData> Data { get; set; }
         public class CheckInstanceSupportResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>ECS instance ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>i-wz9d00ut2ska3mlyhn6j</para>
             /// </summary>
@@ -30,6 +41,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Instance { get; set; }
 
             /// <summary>
+            /// <para>When <c>success</c> is false, this value is not empty and indicates the reason why the instance cannot be managed by SysOM.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>instance not found in ecs</para>
             /// </summary>
@@ -38,6 +51,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Reason { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the instance can be managed by SysOM.  </para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: The instance can be managed by SysOM.  </para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The instance cannot be managed by SysOM.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -48,6 +69,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
+        /// <para>Error message. When code != Success, the error message is stored here.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</para>
         /// </summary>

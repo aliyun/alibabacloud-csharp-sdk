@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateAlertEnabledRequest : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the alert policy is enabled</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>Alert policy ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAIQueryResultRequest : TeaModel {
         /// <summary>
+        /// <para>AI analysis ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>16896fa8-37f6-4c70-bb32-67fa9817d426</para>
         /// </summary>

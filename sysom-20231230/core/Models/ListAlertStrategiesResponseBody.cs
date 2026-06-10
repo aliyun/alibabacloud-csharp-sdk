@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAlertStrategiesResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code  </para>
+        /// <list type="bullet">
+        /// <item><description>If <c>code == Success</c>, authorization succeeded.  </description></item>
+        /// <item><description>Other status codes indicate authorization failed. When authorization fails, view the <c>message</c> field to obtain detailed error message.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,11 +23,16 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Return Result.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListAlertStrategiesResponseBodyData> Data { get; set; }
         public class ListAlertStrategiesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Creation Time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1753669116286</para>
             /// </summary>
@@ -30,6 +41,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
+            /// <para>Whether the alert policy is enabled</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -38,6 +51,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
+            /// <para>Policy ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -50,6 +65,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public bool? K8sLabel { get; set; }
 
             /// <summary>
+            /// <para>Policy Name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>strategy1</para>
             /// </summary>
@@ -57,10 +74,16 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>Details of the alert policy</para>
+            /// </summary>
             [NameInMap("strategy")]
             [Validation(Required=false)]
             public ListAlertStrategiesResponseBodyDataStrategy Strategy { get; set; }
             public class ListAlertStrategiesResponseBodyDataStrategy : TeaModel {
+                /// <summary>
+                /// <para>Set of clusters that accept alerts</para>
+                /// </summary>
                 [NameInMap("clusters")]
                 [Validation(Required=false)]
                 public List<string> Clusters { get; set; }
@@ -69,6 +92,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 [Validation(Required=false)]
                 public List<int?> Destinations { get; set; }
 
+                /// <summary>
+                /// <para>List of abnormal items that accept alerts</para>
+                /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]
                 public List<string> Items { get; set; }
@@ -76,6 +102,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             }
 
             /// <summary>
+            /// <para>User ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1880327028143673</para>
             /// </summary>
@@ -84,6 +112,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Uid { get; set; }
 
             /// <summary>
+            /// <para>Update Time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1753237017710</para>
             /// </summary>
@@ -94,6 +124,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
+        /// <para>Maximum number of returned records</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -102,6 +134,12 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Error message  </para>
+        /// <list type="bullet">
+        /// <item><description>If <c>code == Success</c>, this field is empty;  </description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -110,6 +148,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Pagination token for the next request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c2f78a783f49457caba6bace6f6f79e4</para>
         /// </summary>
@@ -128,6 +168,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Total number of records</para>
+        /// 
         /// <b>Example:</b>
         /// <para>92</para>
         /// </summary>

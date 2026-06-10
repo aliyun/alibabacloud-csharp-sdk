@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotspotAnalysisRequest : TeaModel {
         /// <summary>
+        /// <para>Application Type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AppType { get; set; }
 
         /// <summary>
+        /// <para>End time</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? BegEnd { get; set; }
 
         /// <summary>
+        /// <para>Start time</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? BegStart { get; set; }
 
         /// <summary>
+        /// <para>instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
+        /// <para>Process PID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1657494</para>
         /// </summary>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Pid { get; set; }
 
         /// <summary>
+        /// <para>Name of the queried Table</para>
+        /// 
         /// <b>Example:</b>
         /// <para>prof_on</para>
         /// </summary>

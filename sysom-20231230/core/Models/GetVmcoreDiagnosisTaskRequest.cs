@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetVmcoreDiagnosisTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Job ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

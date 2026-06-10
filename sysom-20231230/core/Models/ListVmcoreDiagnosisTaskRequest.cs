@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListVmcoreDiagnosisTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Indicates jobs from the past days days, up to a maximum of 30 days</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

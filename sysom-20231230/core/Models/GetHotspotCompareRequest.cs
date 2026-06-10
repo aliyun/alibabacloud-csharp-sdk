@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotspotCompareRequest : TeaModel {
         /// <summary>
+        /// <para>End time 1</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Beg1End { get; set; }
 
         /// <summary>
+        /// <para>Start time 1</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Beg1Start { get; set; }
 
         /// <summary>
+        /// <para>End time 2</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Beg2End { get; set; }
 
         /// <summary>
+        /// <para>Start time 2</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,11 +53,18 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public long? Beg2Start { get; set; }
 
+        /// <summary>
+        /// <para>Hot spot type</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>alloc</para>
+        /// </summary>
         [NameInMap("hot_type")]
         [Validation(Required=false)]
         public string HotType { get; set; }
 
         /// <summary>
+        /// <para>Instance 1</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +75,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance1 { get; set; }
 
         /// <summary>
+        /// <para>Instance 2</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +86,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance2 { get; set; }
 
         /// <summary>
+        /// <para>Process of instance 1</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -82,6 +96,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Pid1 { get; set; }
 
         /// <summary>
+        /// <para>Process of instance 2</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i-2zei55fwj8nnu31h3z46</para>
         /// </summary>
@@ -90,6 +106,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Pid2 { get; set; }
 
         /// <summary>
+        /// <para>Query table name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
