@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DescribeDocRequest : TeaModel {
         /// <summary>
+        /// <para>The key that identifies the workspace. If this parameter is omitted, the default workspace is used. You can find this key on the workspace management page of your root account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The knowledge ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? KnowledgeId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return detailed information for paragraphs. true: Detailed information is returned. false: Detailed information is not returned (default).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

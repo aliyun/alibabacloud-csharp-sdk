@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteLgfResponseBody : TeaModel {
         /// <summary>
-        /// <para>LGF ID</para>
+        /// <para>The ID of the LGF configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2342424</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? LgfId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dgw2342424qw42</para>
         /// </summary>

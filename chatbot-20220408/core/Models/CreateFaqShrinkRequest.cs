@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateFaqShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The agent key. If omitted, the default agent is used. Find this key on the Agent Management page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The ID of the knowledge category.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? CategoryId { get; set; }
 
         /// <summary>
+        /// <para>The knowledge end time. The time is in UTC and in ISO 8601 format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2030-12-31T16:00:00Z</para>
         /// </summary>
@@ -35,11 +40,19 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string EndDate { get; set; }
 
+        /// <summary>
+        /// <para>The content of the default solution. Required if the fallback feature is enabled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试答案</para>
+        /// </summary>
         [NameInMap("SolutionContent")]
         [Validation(Required=false)]
         public string SolutionContent { get; set; }
 
         /// <summary>
+        /// <para>The type of the default solution. Valid values: <c>0</c> (plain text) and <c>1</c> (rich text).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -48,6 +61,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? SolutionType { get; set; }
 
         /// <summary>
+        /// <para>The knowledge start time. The time is in UTC and in ISO 8601 format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-05-25T16:28:36Z</para>
         /// </summary>
@@ -55,12 +70,19 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string StartDate { get; set; }
 
+        /// <summary>
+        /// <para>A list of tag IDs to associate with the knowledge.</para>
+        /// </summary>
         [NameInMap("TagIdList")]
         [Validation(Required=false)]
         public string TagIdListShrink { get; set; }
 
         /// <summary>
+        /// <para>The knowledge title. Max length: 120 characters.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试标题</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

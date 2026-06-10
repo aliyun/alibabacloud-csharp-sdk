@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteCategoryRequest : TeaModel {
         /// <summary>
+        /// <para>The agent key. If not specified, the default agent is used. You can obtain the key from the agent management page of your main account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the category.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

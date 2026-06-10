@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class GenerateUserAccessTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The key of the business space. If you do not specify this parameter, the system accesses the default business space. You can obtain the key from the Business Management page of your main account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>
@@ -18,14 +20,15 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>a***<a href="mailto:bcx@gmail.com">bcx@gmail.com</a></para>
+        /// <para>The user\&quot;s email address.</para>
         /// </summary>
         [NameInMap("Email")]
         [Validation(Required=false)]
         public string Email { get; set; }
 
         /// <summary>
+        /// <para>This parameter is reserved. You do not need to specify it.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -34,6 +37,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? ExpireTime { get; set; }
 
         /// <summary>
+        /// <para>Additional information formatted as a JSON string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;xx&quot;: 123,
@@ -59,6 +64,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ExtraInfo { get; set; }
 
         /// <summary>
+        /// <para>The external user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,6 +75,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ForeignId { get; set; }
 
         /// <summary>
+        /// <para>The visitor\&quot;s nickname.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -79,8 +86,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Nick { get; set; }
 
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>1381111****</para>
+        /// <para>The user\&quot;s telephone number.</para>
         /// </summary>
         [NameInMap("Telephone")]
         [Validation(Required=false)]

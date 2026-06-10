@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class InitIMConnectResponseBody : TeaModel {
         /// <summary>
+        /// <para>The return code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The IM connection information, returned as a JSON string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{     &quot;imDomain&quot;: &quot;im.alimebot.com&quot;,     &quot;appKey&quot;: &quot;WDg2VfNv&quot;,     &quot;token&quot;: &quot;QUM4SndaY3VPMjhkQldDZUNOR0ZaTmZ5R3NBY0FKWHJ4OGc4dERZbEJzcjNIKzFiS1RyTjhXRUpBYmVpQlpsakprNDRFVkdxcy9HWVk2RXZvalU3bHhxRkJlc1NBUXZwdHFKOTE2UTNwamQ4b1U4N3dEbmhyRjc4R2hOQStvMnMrYkV2dlVpSHNvWC96SEVNZWRqMjBuMXdjNklpamJzaDNWYllnUldDZGhJPQ==&quot;   }</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>The response message. If the request fails, this parameter provides the exception message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter.Invalid</para>
         /// </summary>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E6988CE6-41CF-1103-9BEC-2B20D26C0B52</para>
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The key of the business space. You can obtain the key on the Business Management page of the primary account. If you do not set this parameter, the default business space is accessed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>
@@ -18,14 +20,18 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The name of the chatbot. A fuzzy search is supported.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>scenario_im</para>
+        /// <para>售前客服</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of instances to return on each page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The type of the chatbot.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>scenario_im</para>
         /// </summary>

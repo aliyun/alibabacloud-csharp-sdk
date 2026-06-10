@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The workspace key. If you omit this parameter, the default workspace is used. You can get this key from the Business Management page in your Alibaba Cloud account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the chatbot instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>chatbot-cn-mp90s2lrk00050</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The new description of the chatbot.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>用于C端问答的机器人</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Introduction { get; set; }
 
         /// <summary>
+        /// <para>The new name of the chatbot. The maximum length is 50 characters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>智能客服-小C</para>
         /// </summary>

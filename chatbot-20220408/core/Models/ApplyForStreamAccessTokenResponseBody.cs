@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ApplyForStreamAccessTokenResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request token for the service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>63ba97b4f18a4a04f715c81e8e643938</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AccessToken { get; set; }
 
         /// <summary>
+        /// <para>Channel ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cc9e88c0-4f41-4f1d-a1a9-91a72d2aa27d</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Key of the workspace, used to add signature to stream requests</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cc9e88c0-4f41-4f1d-a1a9-91a72d2aa27d</para>
         /// </summary>

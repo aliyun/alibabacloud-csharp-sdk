@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateIntentResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the updated intent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>234234234534</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? IntentId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dfaf23dfas234234234534</para>
         /// </summary>

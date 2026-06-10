@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CancelChatResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Indicates whether the operation was successful.</para>
+        /// </summary>
         [NameInMap("CancelResult")]
         [Validation(Required=false)]
         public bool? CancelResult { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E3E5C779-A630-45AC-B0F2-A4506A4212F1</para>
         /// </summary>

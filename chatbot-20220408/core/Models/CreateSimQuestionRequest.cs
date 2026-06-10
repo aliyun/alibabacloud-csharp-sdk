@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateSimQuestionRequest : TeaModel {
         /// <summary>
+        /// <para>The business space key. If omitted, the default business space is used. You can find the key on the business management page of your main account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The knowledge ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +31,11 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? KnowledgeId { get; set; }
 
         /// <summary>
+        /// <para>The similar question title. Maximum length: 120 characters.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试相似问标题</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

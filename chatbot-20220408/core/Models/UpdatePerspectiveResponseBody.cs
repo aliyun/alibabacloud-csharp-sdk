@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdatePerspectiveResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FC384CE1-8D42-1900-84E1-F33F990F2B5E</para>
         /// </summary>

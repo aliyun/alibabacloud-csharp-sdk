@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateUserSayResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2356fg3wf34634vdt23wef2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the updated user say.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34512323</para>
         /// </summary>

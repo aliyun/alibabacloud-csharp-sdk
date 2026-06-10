@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateDSEntityValueResponseBody : TeaModel {
         /// <summary>
+        /// <para>The entity member ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2434543453</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? EntityValueId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>g763hg48j3f3</para>
         /// </summary>

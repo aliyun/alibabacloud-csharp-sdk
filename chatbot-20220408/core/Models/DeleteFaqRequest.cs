@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteFaqRequest : TeaModel {
         /// <summary>
+        /// <para>The business space key. If you do not specify this parameter, the default business space is used. You can obtain the key from the Business Management page of your Alibaba Cloud account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the knowledge item.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

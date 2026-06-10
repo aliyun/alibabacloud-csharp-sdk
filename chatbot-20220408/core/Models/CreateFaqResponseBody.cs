@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateFaqResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the newly created knowledge.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001979424</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? KnowledgeId { get; set; }
 
         /// <summary>
+        /// <para>The unique request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>28805A7C-D695-548C-A31B-67E52C2C274F</para>
         /// </summary>

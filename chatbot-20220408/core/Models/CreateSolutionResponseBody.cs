@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateSolutionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F55D90C1-31BE-4B2A-AA3F-25EFC36F9419</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the knowledge answer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100001089003</para>
         /// </summary>

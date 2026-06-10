@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateConnQuestionRequest : TeaModel {
         /// <summary>
+        /// <para>The key of the business space. If you omit this parameter, the default business space is used. You can obtain the key from the Business Management page of your main account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The ID of the associated question.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? ConnQuestionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

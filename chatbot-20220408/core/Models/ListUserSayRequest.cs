@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListUserSayRequest : TeaModel {
         /// <summary>
+        /// <para>The key of the business space. If you omit this parameter, the default business space is used. You can obtain the key from the Business Management page of your Alibaba Cloud account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The keywords used to filter user says. The query returns only user says that contain these keywords.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>您做核酸了嘛</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The ID of the bot.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the intent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? IntentId { get; set; }
 
         /// <summary>
+        /// <para>The page number. The default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. The default value is 10. The maximum value is 1000.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

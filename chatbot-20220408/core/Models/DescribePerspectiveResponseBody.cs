@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DescribePerspectiveResponseBody : TeaModel {
         /// <summary>
+        /// <para>The creation time in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-07-27T07:05:37Z</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The modification time in UTC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-07-26T07:05:37Z</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string ModifyTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the perspective.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>移动端视角</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The perspective code (used for the Q\&amp;A API).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FZJBY3raWr</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string PerspectiveCode { get; set; }
 
         /// <summary>
+        /// <para>The ID of the perspective.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3001</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string PerspectiveId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F285D735-D580-18A8-B97F-B2E72B00F101</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the perspective is user-defined.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public bool? SelfDefine { get; set; }
 
         /// <summary>
+        /// <para>The status of the perspective. Valid values: 3 (Enabled) and 1 (Disabled).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

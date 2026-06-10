@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateIntentResponseBody : TeaModel {
         /// <summary>
+        /// <para>The intent ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>43546474</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? IntentId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>df56gjh5et34g3g3</para>
         /// </summary>

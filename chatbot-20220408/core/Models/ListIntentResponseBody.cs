@@ -9,15 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListIntentResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of intents.</para>
+        /// </summary>
         [NameInMap("Intents")]
         [Validation(Required=false)]
         public List<ListIntentResponseBodyIntents> Intents { get; set; }
         public class ListIntentResponseBodyIntents : TeaModel {
+            /// <summary>
+            /// <para>The intent alias.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>查天气意图</para>
+            /// </summary>
             [NameInMap("AliasName")]
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
             /// <summary>
+            /// <para>The time at which the intent was created, in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
             /// </summary>
@@ -26,6 +37,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the user who created the intent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123231</para>
             /// </summary>
@@ -34,6 +47,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateUserId { get; set; }
 
             /// <summary>
+            /// <para>The name of the user who created the intent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -42,6 +57,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateUserName { get; set; }
 
             /// <summary>
+            /// <para>The intent ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>234234234234</para>
             /// </summary>
@@ -49,11 +66,19 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             [Validation(Required=false)]
             public long? IntentId { get; set; }
 
+            /// <summary>
+            /// <para>The intent name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>查天气意图</para>
+            /// </summary>
             [NameInMap("IntentName")]
             [Validation(Required=false)]
             public string IntentName { get; set; }
 
             /// <summary>
+            /// <para>The time at which the intent was last modified, in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
             /// </summary>
@@ -62,6 +87,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the user who last modified the intent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123231</para>
             /// </summary>
@@ -70,6 +97,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyUserId { get; set; }
 
             /// <summary>
+            /// <para>The name of the user who last modified the intent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -77,11 +106,16 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             [Validation(Required=false)]
             public string ModifyUserName { get; set; }
 
+            /// <summary>
+            /// <para>A list of slots associated with the intent.</para>
+            /// </summary>
             [NameInMap("SlotInfos")]
             [Validation(Required=false)]
             public List<ListIntentResponseBodyIntentsSlotInfos> SlotInfos { get; set; }
             public class ListIntentResponseBodyIntentsSlotInfos : TeaModel {
                 /// <summary>
+                /// <para>Indicates whether the slot can accept multiple values.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -90,6 +124,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 public bool? Array { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the slot contains sensitive data.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -98,6 +134,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 public bool? Encrypt { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the slot value is collected interactively.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -105,11 +143,19 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 [Validation(Required=false)]
                 public bool? Interactive { get; set; }
 
+                /// <summary>
+                /// <para>The slot name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>天气</para>
+                /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The slot ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>12134223</para>
                 /// </summary>
@@ -117,6 +163,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
                 [Validation(Required=false)]
                 public string SlotId { get; set; }
 
+                /// <summary>
+                /// <para>The slot value (entity name).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>天气</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -126,6 +178,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -134,6 +188,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of intents per page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -142,6 +198,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23dsfa34r2s2s2sd12</para>
         /// </summary>
@@ -150,6 +208,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of intents.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

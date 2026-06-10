@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateDSEntityRequest : TeaModel {
         /// <summary>
+        /// <para>The key for the <c>business space</c>. If you omit this parameter, the default <c>business space</c> is used. You can get the key from the Business Management page of your <c>main account</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The <c>entity name</c>. The name can contain Chinese characters, uppercase and lowercase letters, digits, and underscores (_).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string EntityName { get; set; }
 
         /// <summary>
+        /// <para>The <c>entity type</c>. Valid values: <c>synonyms</c> and <c>regex</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>synonyms</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string EntityType { get; set; }
 
         /// <summary>
+        /// <para>The <c>instance ID</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

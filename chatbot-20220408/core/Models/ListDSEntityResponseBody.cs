@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListDSEntityResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of entities.</para>
+        /// </summary>
         [NameInMap("Entities")]
         [Validation(Required=false)]
         public List<ListDSEntityResponseBodyEntities> Entities { get; set; }
         public class ListDSEntityResponseBodyEntities : TeaModel {
             /// <summary>
+            /// <para>The creation time in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the user who created the entity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123231</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateUserId { get; set; }
 
             /// <summary>
+            /// <para>The name of the user who created the entity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateUserName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the entity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>234564567445</para>
             /// </summary>
@@ -45,11 +56,19 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             [Validation(Required=false)]
             public long? EntityId { get; set; }
 
+            /// <summary>
+            /// <para>The entity name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>书实体</para>
+            /// </summary>
             [NameInMap("EntityName")]
             [Validation(Required=false)]
             public string EntityName { get; set; }
 
             /// <summary>
+            /// <para>The entity type. Valid values: <c>synonyms</c>, <c>regex</c>, and <c>system</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>synonyms</para>
             /// </summary>
@@ -58,6 +77,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string EntityType { get; set; }
 
             /// <summary>
+            /// <para>The update time in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
             /// </summary>
@@ -66,6 +87,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the user who last modified the entity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123231</para>
             /// </summary>
@@ -74,6 +97,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string ModifyUserId { get; set; }
 
             /// <summary>
+            /// <para>The name of the user who last modified the entity.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -81,6 +106,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             [Validation(Required=false)]
             public string ModifyUserName { get; set; }
 
+            /// <summary>
+            /// <para>The code for the system entity, such as <c>sys_date</c>. This parameter is blank for custom entities.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sys_date</para>
+            /// </summary>
             [NameInMap("SysEntityCode")]
             [Validation(Required=false)]
             public string SysEntityCode { get; set; }
@@ -88,6 +119,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
+        /// <para>The current page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -96,6 +129,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -104,6 +139,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ga4h345defgwet2sdf223</para>
         /// </summary>
@@ -112,6 +149,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total count of matching entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

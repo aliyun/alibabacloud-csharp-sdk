@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ListLgfResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of advanced semantic configurations.</para>
+        /// </summary>
         [NameInMap("Lgfs")]
         [Validation(Required=false)]
         public List<ListLgfResponseBodyLgfs> Lgfs { get; set; }
         public class ListLgfResponseBodyLgfs : TeaModel {
             /// <summary>
+            /// <para>The creation time, in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the intent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>256756734345</para>
             /// </summary>
@@ -30,7 +37,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? IntentId { get; set; }
 
             /// <summary>
-            /// <para>LGF ID</para>
+            /// <para>The LGF ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? LgfId { get; set; }
 
             /// <summary>
+            /// <para>The modification time, in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-08-12T16:00:01Z</para>
             /// </summary>
@@ -47,6 +56,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
 
+            /// <summary>
+            /// <para>The LGF rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>.{0,5}北京天气</para>
+            /// </summary>
             [NameInMap("RuleText")]
             [Validation(Required=false)]
             public string RuleText { get; set; }
@@ -54,6 +69,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
+        /// <para>The returned page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -62,6 +79,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -70,6 +89,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34fg57h2gh5783</para>
         /// </summary>
@@ -78,6 +99,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total count of matching entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

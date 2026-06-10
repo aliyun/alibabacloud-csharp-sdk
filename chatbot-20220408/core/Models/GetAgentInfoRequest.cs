@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class GetAgentInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>beebot_bot_public_cn-ca36x8v3n1x</para>
         /// </summary>

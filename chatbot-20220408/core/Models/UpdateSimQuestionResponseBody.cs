@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class UpdateSimQuestionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DFB71B34-4188-4EA2-9988-EF3014E75910</para>
         /// </summary>

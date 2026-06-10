@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class GetAgentInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The agent details.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAgentInfoResponseBodyData Data { get; set; }
         public class GetAgentInfoResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The agent key. It is used to specify the agent in Platform as a Service (PaaS) API calls.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4e7400028e6f4a7393ed3acf6a7b8927_p_beebot_public</para>
             /// </summary>
@@ -21,6 +26,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             [Validation(Required=false)]
             public string AgentKey { get; set; }
 
+            /// <summary>
+            /// <para>The agent name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>业务空间_881</para>
+            /// </summary>
             [NameInMap("AgentName")]
             [Validation(Required=false)]
             public string AgentName { get; set; }
@@ -28,6 +39,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         }
 
         /// <summary>
+        /// <para>The error message returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Parameter.Invalid</para>
         /// </summary>
@@ -36,7 +49,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FC384CE1-8D42-1900-84E1-F33F990F2B5E</para>
@@ -46,6 +59,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

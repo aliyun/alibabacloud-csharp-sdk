@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class ApplyForStreamAccessTokenRequest : TeaModel {
         /// <summary>
+        /// <para>Workspace key. If not set, the default workspace is accessed. The key value can be obtained from the Alibaba Cloud account workspace Management page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>

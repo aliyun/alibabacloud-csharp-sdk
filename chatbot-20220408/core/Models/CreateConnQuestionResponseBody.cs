@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateConnQuestionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The outline ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000002123</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? OutlineId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C191B48B-9268-4FB1-A3C2-5143B4A91D0C</para>
         /// </summary>

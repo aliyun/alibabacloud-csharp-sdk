@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteIntentResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the deleted intent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? IntentId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3464dfg3qwr34tf34</para>
         /// </summary>

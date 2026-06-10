@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteCategoryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4B3E0DE3-DC57-5BFE-88D4-ADD8ED024F55</para>
         /// </summary>

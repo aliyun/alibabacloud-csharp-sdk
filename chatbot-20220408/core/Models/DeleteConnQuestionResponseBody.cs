@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteConnQuestionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FC323352-3AD7-59A1-9088-A64470BAFC9D</para>
         /// </summary>

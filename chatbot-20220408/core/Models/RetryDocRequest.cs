@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class RetryDocRequest : TeaModel {
         /// <summary>
+        /// <para>The key for the business space. If you do not specify this parameter, the default business space is used. You can obtain the key from the Business Management page of your primary account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>e2a20f74cd9042558002c0f7dc873739_p_outbound_public</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The knowledge ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

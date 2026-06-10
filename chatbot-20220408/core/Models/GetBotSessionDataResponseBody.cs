@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class GetBotSessionDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>The API call latency, in milliseconds (ms).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>116</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string CostTime { get; set; }
 
+        /// <summary>
+        /// <para>An array of objects containing the data details.</para>
+        /// </summary>
         [NameInMap("Datas")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Datas { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15CD94CC-CBEB-4189-806C-A132D1F45D51</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeletePerspectiveResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FC384CE1-8D42-1900-84E1-F33F990F2B5E</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the perspective was successfully deleted.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

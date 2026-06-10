@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class DeleteLgfRequest : TeaModel {
         /// <summary>
+        /// <para>The key of the business space. If omitted, the default business space is used. You can find this key on the Business Management page of your primary account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The robot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The intent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? IntentId { get; set; }
 
         /// <summary>
-        /// <para>lgf Id</para>
+        /// <para>The ID of the LGF configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

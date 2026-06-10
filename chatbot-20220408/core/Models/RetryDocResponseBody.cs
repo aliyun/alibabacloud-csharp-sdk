@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class RetryDocResponseBody : TeaModel {
         /// <summary>
+        /// <para>The knowledge ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001905617</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public long? KnowledgeId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6419BA93-D111-5225-8998-13E63E6D3940</para>

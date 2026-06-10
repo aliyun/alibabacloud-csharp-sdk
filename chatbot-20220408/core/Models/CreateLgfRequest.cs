@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
 {
     public class CreateLgfRequest : TeaModel {
         /// <summary>
+        /// <para>The key for the business space. If you omit this parameter, the default business space is used. You can find the key on the Business Management page of your main account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         public string AgentKey { get; set; }
 
         /// <summary>
+        /// <para>The chatbot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,11 +30,15 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The LGF definition.</para>
+        /// </summary>
         [NameInMap("LgfDefinition")]
         [Validation(Required=false)]
         public CreateLgfRequestLgfDefinition LgfDefinition { get; set; }
         public class CreateLgfRequestLgfDefinition : TeaModel {
             /// <summary>
+            /// <para>The intent ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -42,7 +49,11 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
             public long? IntentId { get; set; }
 
             /// <summary>
+            /// <para>The LGF configuration.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>.{0,10}北京天气</para>
             /// </summary>
             [NameInMap("RuleText")]
             [Validation(Required=false)]
