@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListGlobalQuestionsRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>361c8a53-0e29-42f3-8aa7-c7752d010399</para>
+        /// <para>dd8c2b62-4660-457f-9597-6723b5722aff</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to display on each page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,10 +43,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The scenario ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>aa279896-64a6-4182-864c-4f2b04ec8d17</para>
+        /// <para>f63b0dfc-848a-42f3-9329-8854e232e977</para>
         /// </summary>
         [NameInMap("ScriptId")]
         [Validation(Required=false)]

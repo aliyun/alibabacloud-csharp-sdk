@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DeleteIntentRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the intent to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string IntentId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the script that contains the intent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

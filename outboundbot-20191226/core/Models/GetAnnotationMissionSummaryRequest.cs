@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetAnnotationMissionSummaryRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the annotation task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50e53ac8-24a4-46d5-b174-ee88867f4780</para>
         /// </summary>

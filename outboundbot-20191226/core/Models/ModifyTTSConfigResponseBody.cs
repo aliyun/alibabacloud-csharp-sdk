@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyTTSConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>API status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>API message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>f765d3ee-ec03-4765-b235-6877501d99d1</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -49,11 +59,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <para>TTS configuration</para>
+        /// </summary>
         [NameInMap("TTSConfig")]
         [Validation(Required=false)]
         public ModifyTTSConfigResponseBodyTTSConfig TTSConfig { get; set; }
         public class ModifyTTSConfigResponseBodyTTSConfig : TeaModel {
             /// <summary>
+            /// <para>Instance ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>291cfc6a-8703-4bdd-a99d-9cba32d5288a</para>
             /// </summary>
@@ -62,16 +77,20 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>语调
-            /// [-500,500]之间整数。默认值为0。</para>
-            /// <para>大于0表示升高音高。</para>
-            /// <para>小于0表示降低音高。</para>
+            /// <para>Pitch. An integer between -500 and 500. Default is 0.</para>
+            /// <para>A value greater than 0 raises pitch.</para>
+            /// <para>A value less than 0 lowers pitch.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("PitchRate")]
             [Validation(Required=false)]
             public string PitchRate { get; set; }
 
             /// <summary>
+            /// <para>Scenario ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>947e0875-b5d4-4b33-b18c-7b2cf85bcb4f</para>
             /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ScriptId { get; set; }
 
             /// <summary>
+            /// <para>Speech rate</para>
+            /// 
             /// <b>Example:</b>
             /// <para>50</para>
             /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string SpeechRate { get; set; }
 
             /// <summary>
+            /// <para>Configuration ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2a07b634-e15d-445f-bbcb-fc4ea2df7b87</para>
             /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string TTSConfigId { get; set; }
 
             /// <summary>
+            /// <para>Voice model</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xiaoyun</para>
             /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Voice { get; set; }
 
             /// <summary>
+            /// <para>Volume</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class CreateBeebotIntentLgfShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The LGF definition.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LgfDefinition")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string LgfDefinitionShrink { get; set; }
 
         /// <summary>
+        /// <para>The scenario ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

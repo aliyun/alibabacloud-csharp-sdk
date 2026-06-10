@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DeleteContactWhiteListRequest : TeaModel {
         /// <summary>
+        /// <para>Contact whitelist ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>111111</para>
+        /// <para>08c32b67-43cd-4d6a-b7ea-d057xxxxxxxx</para>
         /// </summary>
         [NameInMap("ContactWhiteListId")]
         [Validation(Required=false)]
         public string ContactWhiteListId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,8 +32,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Operator information</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>160131</para>
+        /// <para>测试人</para>
         /// </summary>
         [NameInMap("Operator")]
         [Validation(Required=false)]

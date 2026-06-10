@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DescribeTagHitsSummaryRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,10 +21,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The job group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8a4c6d3d-5ed6-44ca-b779-16c20f8862be</para>
+        /// <para>292eba45-df08-4065-87e7-7e587a1ce4ce</para>
         /// </summary>
         [NameInMap("JobGroupId")]
         [Validation(Required=false)]

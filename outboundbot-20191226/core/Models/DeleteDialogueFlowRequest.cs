@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DeleteDialogueFlowRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the dialogue flow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>40a1457a-d2f3-43cf-ac81-c9e14cf07d88</para>
+        /// <para>caab25d1-1f30-4996-8135-0036f5661b43</para>
         /// </summary>
         [NameInMap("DialogueFlowId")]
         [Validation(Required=false)]
         public string DialogueFlowId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the script.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

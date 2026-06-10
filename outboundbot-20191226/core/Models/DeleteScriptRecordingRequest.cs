@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DeleteScriptRecordingRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance to which the recording belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the scenario to which the recording belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,10 +32,13 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
+        /// <para>A list of recording IDs. If this parameter is empty, all recordings are selected by default.</para>
+        /// <remarks>
+        /// <para>Obtain the recording IDs from the ListScriptRecording operation.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
-        /// <para>[
-        ///       &quot;d17d5bfa-4972-4389-9718-f9602edabe48&quot;
-        /// ]</para>
+        /// <para>[&quot;d17d5bfa-4972-4389-9718-f9602edabe48&quot;]</para>
         /// </summary>
         [NameInMap("UuidsJson")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class SaveContactWhiteListRequest : TeaModel {
         /// <summary>
+        /// <para>The contact whitelist. This parameter is deprecated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,14 +20,17 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<string> ContactWhiteListList { get; set; }
 
         /// <summary>
+        /// <para>The whitelist. This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>{}</para>
+        /// <para>[{&quot;phoneNumber&quot;:&quot;132322&quot;,&quot;remark&quot;:&quot;123321&quot;,&quot;name&quot;:&quot;ccc1&quot;,&quot;creator&quot;:&quot;ccc222&quot;}]</para>
         /// </summary>
         [NameInMap("ContactWhiteListsJson")]
         [Validation(Required=false)]
         public string ContactWhiteListsJson { get; set; }
 
         /// <summary>
+        /// <para>The instance ID. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

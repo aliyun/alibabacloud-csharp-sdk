@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class SuspendCallRequest : TeaModel {
         /// <summary>
+        /// <para>The list of called numbers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<string> CalledNumbers { get; set; }
 
         /// <summary>
+        /// <para>The task group ID. This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>f745881b-343d-43e4-9c51-31b7b063031c</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID. This parameter is required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

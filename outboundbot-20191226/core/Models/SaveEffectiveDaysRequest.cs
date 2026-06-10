@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class SaveEffectiveDaysRequest : TeaModel {
         /// <summary>
+        /// <para>The effective time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? EffectiveDays { get; set; }
 
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string EntryId { get; set; }
 
         /// <summary>
+        /// <para>Policy level</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

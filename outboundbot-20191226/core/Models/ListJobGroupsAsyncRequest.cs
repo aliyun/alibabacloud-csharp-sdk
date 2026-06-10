@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListJobGroupsAsyncRequest : TeaModel {
         /// <summary>
+        /// <para>The ID returned by an asynchronous call to <c>ListJobGroup</c>. Use this ID to retrieve the results of the asynchronous query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

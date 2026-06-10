@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetAssignJobsAsyncResultRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the asynchronous task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The instance information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;InstanceId\&quot;: \&quot;ob369xifpi2074\&quot;, \&quot;AutoUpgradeObVersion\&quot;: False}</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public ModifyInstanceResponseBodyInstance Instance { get; set; }
         public class ModifyInstanceResponseBodyInstance : TeaModel {
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1578469042851</para>
             /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? CreationTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123123</para>
             /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? CreatorId { get; set; }
 
             /// <summary>
+            /// <para>The name of the creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -57,11 +69,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public string CreatorName { get; set; }
 
+            /// <summary>
+            /// <para>The instance description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>这是第一个实例</para>
+            /// </summary>
             [NameInMap("InstanceDescription")]
             [Validation(Required=false)]
             public string InstanceDescription { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>90515b5-6115-4ccf-83e2-52d5bfaf2ddf</para>
             /// </summary>
@@ -69,11 +89,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>第一个实例</para>
+            /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of concurrent conversations.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -82,6 +110,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? MaxConcurrentConversation { get; set; }
 
             /// <summary>
+            /// <para>The name of the owner.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -92,6 +122,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -100,6 +132,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -108,6 +142,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

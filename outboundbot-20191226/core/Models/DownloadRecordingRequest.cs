@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DownloadRecordingRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,28 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to retrieve voice slice recordings.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("NeedVoiceSliceRecording")]
         [Validation(Required=false)]
         public bool? NeedVoiceSliceRecording { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to swap the left and right audio channels. The default value is <c>false</c>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("SwapChannels")]
+        [Validation(Required=false)]
+        public bool? SwapChannels { get; set; }
+
+        /// <summary>
+        /// <para>The call ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DeleteGlobalQuestionRequest : TeaModel {
         /// <summary>
+        /// <para>The global question ID.</para>
+        /// <remarks>
+        /// <para>You can call the ListGlobalQuestions operation to obtain the ID.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string GlobalQuestionId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,10 +35,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The script ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>aa279896-64a6-4182-864c-4f2b04ec8d17</para>
+        /// <para>0fe7f71c-8771-42ef-9bb1-19aa16ae7120</para>
         /// </summary>
         [NameInMap("ScriptId")]
         [Validation(Required=false)]

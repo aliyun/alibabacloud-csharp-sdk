@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListAgentProfilesRequest : TeaModel {
         /// <summary>
+        /// <para>The IP address of the application. This is an optional system field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string AppIp { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The scenario ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>d004cfd2-6a81-491c-83c6-cbe186620c95</para>
         /// </summary>

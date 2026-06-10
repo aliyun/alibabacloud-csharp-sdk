@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListDownloadTasksRequest : TeaModel {
+        /// <summary>
+        /// <para>Instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ae4572af-376f-439f-8970-38764acbaa91</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Page number</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +31,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Count</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

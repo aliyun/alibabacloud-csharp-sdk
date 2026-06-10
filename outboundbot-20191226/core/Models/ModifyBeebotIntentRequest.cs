@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyBeebotIntentRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,18 +21,29 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Intent definition</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IntentDefinition")]
         [Validation(Required=false)]
         public ModifyBeebotIntentRequestIntentDefinition IntentDefinition { get; set; }
         public class ModifyBeebotIntentRequestIntentDefinition : TeaModel {
+            /// <summary>
+            /// <para>Intent alias</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>嗯明白了</para>
+            /// </summary>
             [NameInMap("AliasName")]
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
             /// <summary>
+            /// <para>Intent name</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>知道了么</para>
             /// </summary>
             [NameInMap("IntentName")]
             [Validation(Required=false)]
@@ -40,6 +52,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>Intent ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +63,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? IntentId { get; set; }
 
         /// <summary>
+        /// <para>Scenario ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

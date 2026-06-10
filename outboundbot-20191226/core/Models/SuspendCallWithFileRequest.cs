@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class SuspendCallWithFileRequest : TeaModel {
         /// <summary>
+        /// <para>File path. Required.</para>
+        /// <remarks>
+        /// <para>Get the value for this parameter by calling the GetJobDataUploadParams operation. Use the Folder value returned in the response as the FilePath value.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>
@@ -18,6 +23,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string FilePath { get; set; }
 
         /// <summary>
+        /// <para>Task group ID. Required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0197261b-30e6-467b-83d6-7f72af868b03</para>
         /// </summary>
@@ -26,6 +33,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>Instance ID. Required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>a4274627-265f-4e14-b2d6-4ee7d4f8593e</para>
         /// </summary>

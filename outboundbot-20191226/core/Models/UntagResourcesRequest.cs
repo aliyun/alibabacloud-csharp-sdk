@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>Remove all tags. This parameter takes effect only when TagKey.N is empty. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: false</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +27,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? All { get; set; }
 
         /// <summary>
+        /// <para>Region</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +38,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>List of resource IDs. Default value: list of instance IDs. Valid values for n: 1 to 50</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -35,15 +46,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>Resource type. Default value: INSTANCE</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>instance</para>
+        /// <para>INSTANCE</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>List of tag keys. Valid values for n: 1 to 20</para>
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyOutboundCallNumberResponseBody : TeaModel {
         /// <summary>
+        /// <para>API status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Response message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -33,19 +39,26 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>Number information</para>
+        /// </summary>
         [NameInMap("OutboundCallNumber")]
         [Validation(Required=false)]
         public ModifyOutboundCallNumberResponseBodyOutboundCallNumber OutboundCallNumber { get; set; }
         public class ModifyOutboundCallNumberResponseBodyOutboundCallNumber : TeaModel {
             /// <summary>
+            /// <para>Outbound call number</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>10088</para>
+            /// <para>10088xxxx</para>
             /// </summary>
             [NameInMap("Number")]
             [Validation(Required=false)]
             public string Number { get; set; }
 
             /// <summary>
+            /// <para>Number ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>fa0e21e9-caab-4629-9121-1e341243d599</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string OutboundCallNumberId { get; set; }
 
             /// <summary>
+            /// <para>Rate limiting period</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string RateLimitCount { get; set; }
 
             /// <summary>
+            /// <para>Rate limiting count</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation succeeded</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

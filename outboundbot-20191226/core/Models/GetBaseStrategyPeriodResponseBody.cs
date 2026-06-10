@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetBaseStrategyPeriodResponseBody : TeaModel {
         /// <summary>
+        /// <para>API status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Response message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the period applies only to weekends</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -41,11 +49,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public bool? OnlyWeekdays { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the period applies only to weekdays</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("OnlyWorkdays")]
         [Validation(Required=false)]
         public bool? OnlyWorkdays { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call succeeded</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Time periods when the strategy runs</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -70,6 +90,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<GetBaseStrategyPeriodResponseBodyWorkingTime> WorkingTime { get; set; }
         public class GetBaseStrategyPeriodResponseBodyWorkingTime : TeaModel {
             /// <summary>
+            /// <para>Start time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>00:00:00</para>
             /// </summary>
@@ -78,6 +100,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string BeginTime { get; set; }
 
             /// <summary>
+            /// <para>Daily start time, in milliseconds</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -86,6 +110,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? BeginTimeMillis { get; set; }
 
             /// <summary>
+            /// <para>End time</para>
+            /// 
             /// <b>Example:</b>
             /// <para>00:00:00</para>
             /// </summary>
@@ -94,6 +120,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string EndTime { get; set; }
 
             /// <summary>
+            /// <para>Daily end time, in milliseconds</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>

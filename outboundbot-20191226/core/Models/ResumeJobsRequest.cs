@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ResumeJobsRequest : TeaModel {
         /// <summary>
+        /// <para>Filter condition: Specifies whether to restart all jobs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? All { get; set; }
 
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Filter condition: Task group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>de48407d-309e-451a-81ec-6fb11f8fdbf3</para>
         /// </summary>
@@ -38,6 +42,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobGroupId { get; set; }
 
         /// <summary>
+        /// <para>Job ID list.</para>
+        /// <remarks>
+        /// <para>This parameter is required when All is false.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>b72425bd-7871-4050-838e-033d80d754b7</para>
         /// </summary>
@@ -46,6 +55,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<string> JobId { get; set; }
 
         /// <summary>
+        /// <para>Third-party ID of the job.</para>
+        /// <remarks>
+        /// <para>This is the ReferenceId uploaded by the customer when uploading the outbound list.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>d5971d98-7312-4f0e-a918-a17d67133e28</para>
         /// </summary>
@@ -54,6 +68,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<string> JobReferenceId { get; set; }
 
         /// <summary>
+        /// <para>Filter condition: Scenario ID (historical parameter, deprecated).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>b016fbdb-b81c-4c06-8870-cb36b8783b6d</para>
         /// </summary>

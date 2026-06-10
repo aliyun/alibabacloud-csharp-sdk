@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class CreateBeebotIntentRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,18 +21,32 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The description of the intent.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IntentDefinition")]
         [Validation(Required=false)]
         public CreateBeebotIntentRequestIntentDefinition IntentDefinition { get; set; }
         public class CreateBeebotIntentRequestIntentDefinition : TeaModel {
+            /// <summary>
+            /// <para>The intent alias.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>嗯明白了</para>
+            /// </summary>
             [NameInMap("AliasName")]
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
             /// <summary>
+            /// <para>The intent name.</para>
+            /// <remarks>
+            /// <para>This is the intent code. It serves as a unique identifier.</para>
+            /// </remarks>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>知道了</para>
             /// </summary>
             [NameInMap("IntentName")]
             [Validation(Required=false)]
@@ -40,6 +55,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>The scenario ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

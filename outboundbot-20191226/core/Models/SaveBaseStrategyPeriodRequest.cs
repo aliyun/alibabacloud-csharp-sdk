@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class SaveBaseStrategyPeriodRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string EntryId { get; set; }
 
         /// <summary>
+        /// <para>Make outbound calls only on weekdays. Defaults to false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -27,11 +30,22 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public bool? OnlyWeekdays { get; set; }
 
+        /// <summary>
+        /// <para>Make outbound calls only on non-holiday days. Defaults to false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("OnlyWorkdays")]
         [Validation(Required=false)]
         public bool? OnlyWorkdays { get; set; }
 
         /// <summary>
+        /// <para>Policy level (required)</para>
+        /// <list type="bullet">
+        /// <item><description>2: Instance</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -40,6 +54,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? StrategyLevel { get; set; }
 
         /// <summary>
+        /// <para>Running time (deprecated)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -48,8 +64,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public List<string> WorkingTime { get; set; }
 
         /// <summary>
+        /// <para>Running time</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;beginTime\&quot;:\&quot;09:00:00\&quot;,\&quot;beginTimeMillis\&quot;:324000000000,\&quot;endTime\&quot;:\&quot;21:00:00\&quot;,\&quot;endTimeMillis\&quot;:756000000000}]</para>
+        /// <para>[{&quot;beginTime&quot;:&quot;09:00:00&quot;,&quot;endTime&quot;:&quot;21:00:00&quot;}]</para>
         /// </summary>
         [NameInMap("WorkingTimeFramesJson")]
         [Validation(Required=false)]

@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListDialogueFlowsRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>361c8a53-0e29-42f3-8aa7-c7752d010399</para>
+        /// <para>b5b0a30f-69e7-4147-98b5-553fc526361d</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The script ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

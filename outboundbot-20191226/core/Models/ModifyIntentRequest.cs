@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyIntentRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The intent description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>询问车险意图</para>
+        /// </summary>
         [NameInMap("IntentDescription")]
         [Validation(Required=false)]
         public string IntentDescription { get; set; }
 
         /// <summary>
+        /// <para>The intent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,13 +42,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string IntentId { get; set; }
 
         /// <summary>
+        /// <para>The intent name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>车险如何办理</para>
         /// </summary>
         [NameInMap("IntentName")]
         [Validation(Required=false)]
         public string IntentName { get; set; }
 
         /// <summary>
+        /// <para>The keywords. The value must be a JSON array of strings.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>
@@ -49,6 +63,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Keywords { get; set; }
 
         /// <summary>
+        /// <para>The script ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +74,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
+        /// <para>The user utterances. The value must be a JSON array of strings.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;车险如何办理&quot;]</para>
         /// </summary>
         [NameInMap("Utterances")]
         [Validation(Required=false)]

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetAfterAnswerDelayPlaybackRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string EntryId { get; set; }
 
         /// <summary>
+        /// <para>Policy level (required)</para>
+        /// <list type="bullet">
+        /// <item><description>2: Instance</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

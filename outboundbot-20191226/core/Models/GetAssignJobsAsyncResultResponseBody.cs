@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetAssignJobsAsyncResultResponseBody : TeaModel {
         /// <summary>
+        /// <para>The API status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The task group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>d3550dd1-360d-4fe5-b4b2-667a4a664dab</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string JobGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The list of job IDs.</para>
+        /// </summary>
         [NameInMap("JobsId")]
         [Validation(Required=false)]
         public List<string> JobsId { get; set; }
 
         /// <summary>
+        /// <para>The API message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the asynchronous task timed out.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? Timeout { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the result has been fully generated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

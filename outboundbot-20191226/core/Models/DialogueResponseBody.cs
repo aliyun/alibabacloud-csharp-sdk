@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DialogueResponseBody : TeaModel {
         /// <summary>
+        /// <para>Interface status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Returns dialogue information</para>
+        /// </summary>
         [NameInMap("Feedback")]
         [Validation(Required=false)]
         public DialogueResponseBodyFeedback Feedback { get; set; }
         public class DialogueResponseBodyFeedback : TeaModel {
             /// <summary>
+            /// <para>Instruction for IVR</para>
+            /// 
             /// <b>Example:</b>
             /// <para>broadcast</para>
             /// </summary>
@@ -29,16 +36,28 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public string Action { get; set; }
 
+            /// <summary>
+            /// <para>Instruction parameters</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>&quot;&quot;</para>
+            /// </summary>
             [NameInMap("ActionParams")]
             [Validation(Required=false)]
             public string ActionParams { get; set; }
 
+            /// <summary>
+            /// <para>Dialogue text</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>你好，我是**客服</para>
+            /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>已废弃</para>
+            /// <para>Deprecated</para>
             /// 
             /// <b>Example:</b>
             /// <para>“”</para>
@@ -48,6 +67,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ContentParams { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the broadcast can be interrupted</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -58,6 +79,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -66,6 +89,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Interface message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -74,6 +99,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -82,6 +109,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

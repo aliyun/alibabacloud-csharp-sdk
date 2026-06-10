@@ -10,13 +10,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class PublishScriptRequest : TeaModel {
         /// <summary>
+        /// <para>A description of the publication.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>本次发布了xxxx内容</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +32,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the scenario to publish.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

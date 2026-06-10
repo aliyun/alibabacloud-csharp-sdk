@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class CreateTagRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,24 +21,33 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the script.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>797203ac-3874-422f-838f-d4cd63c72681</para>
+        /// <para>0fe7f71c-8771-42ef-9bb1-19aa16ae7120</para>
         /// </summary>
         [NameInMap("ScriptId")]
         [Validation(Required=false)]
         public string ScriptId { get; set; }
 
         /// <summary>
+        /// <para>The tag group name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>目标学历</para>
         /// </summary>
         [NameInMap("TagGroup")]
         [Validation(Required=false)]
         public string TagGroup { get; set; }
 
         /// <summary>
+        /// <para>The tag name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>研究生</para>
         /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]

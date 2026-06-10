@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListScriptVoiceConfigsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The API status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -41,15 +49,23 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The paginated list of script voice configurations.</para>
+        /// </summary>
         [NameInMap("ScriptVoiceConfigs")]
         [Validation(Required=false)]
         public ListScriptVoiceConfigsResponseBodyScriptVoiceConfigs ScriptVoiceConfigs { get; set; }
         public class ListScriptVoiceConfigsResponseBodyScriptVoiceConfigs : TeaModel {
+            /// <summary>
+            /// <para>An array of script voice configuration objects.</para>
+            /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListScriptVoiceConfigsResponseBodyScriptVoiceConfigsList> List { get; set; }
             public class ListScriptVoiceConfigsResponseBodyScriptVoiceConfigsList : TeaModel {
                 /// <summary>
+                /// <para>The instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>bdd49242-114c-4045-b1d1-25ccc1756c75</para>
                 /// </summary>
@@ -57,11 +73,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                /// <summary>
+                /// <para>The text content of the script.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>请问你是 @name 吗</para>
+                /// </summary>
                 [NameInMap("ScriptContent")]
                 [Validation(Required=false)]
                 public string ScriptContent { get; set; }
 
                 /// <summary>
+                /// <para>The script ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>a7441a05-43bb-4a2d-acb0-365f245d7a5b</para>
                 /// </summary>
@@ -70,6 +94,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string ScriptId { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the voice configuration.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2c8fa91f-9856-4145-90f2-08252f09bc18</para>
                 /// </summary>
@@ -78,6 +104,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string ScriptVoiceConfigId { get; set; }
 
                 /// <summary>
+                /// <para>The relationship between the script and the audio file.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>&quot;&quot;</para>
                 /// </summary>
@@ -86,6 +114,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string ScriptWaveformRelation { get; set; }
 
                 /// <summary>
+                /// <para>The source of the script.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>DIALOGUE_FLOW</para>
                 /// </summary>
@@ -94,6 +124,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Source { get; set; }
 
                 /// <summary>
+                /// <para>The voice type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>TTS</para>
                 /// </summary>
@@ -104,6 +136,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -112,6 +146,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>The number of entries per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -120,6 +156,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -130,6 +168,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

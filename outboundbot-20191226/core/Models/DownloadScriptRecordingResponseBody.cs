@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DownloadScriptRecordingResponseBody : TeaModel {
         /// <summary>
+        /// <para>API status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Parameters</para>
+        /// </summary>
         [NameInMap("DownloadParams")]
         [Validation(Required=false)]
         public DownloadScriptRecordingResponseBodyDownloadParams DownloadParams { get; set; }
         public class DownloadScriptRecordingResponseBodyDownloadParams : TeaModel {
             /// <summary>
+            /// <para>Recording file name</para>
+            /// 
             /// <b>Example:</b>
             /// <para>281eb174-3865-41c1-9274-7b6813edadab.wav</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string FileName { get; set; }
 
             /// <summary>
+            /// <para>A URL pointing to the recording file. Use this address for playback or download.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://tiangong-staging.oss-cn-shanghai.aliyuncs.com/record/281eb174-3865-41c1-9274-7b6813edadab.wav?Expires=1578624046&OSSAccessKeyId=LTAI****cqw&Signature=dL2dxWS6VcdZrvG9xOMOBMSP3Fg%3D">http://tiangong-staging.oss-cn-shanghai.aliyuncs.com/record/281eb174-3865-41c1-9274-7b6813edadab.wav?Expires=1578624046&amp;OSSAccessKeyId=LTAI****cqw&amp;Signature=dL2dxWS6VcdZrvG9xOMOBMSP3Fg%3D</a></para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>API message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Success</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

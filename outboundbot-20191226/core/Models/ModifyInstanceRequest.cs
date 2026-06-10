@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>A list of calling numbers.</para>
+        /// <remarks>
+        /// <para>This parameter is optional.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>[&quot;95187&quot;]</para>
         /// </summary>
@@ -17,11 +22,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public List<string> CallingNumber { get; set; }
 
+        /// <summary>
+        /// <para>The description of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>这是新的实例</para>
+        /// </summary>
         [NameInMap("InstanceDescription")]
         [Validation(Required=false)]
         public string InstanceDescription { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Outbound Bot instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,11 +43,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>新实例</para>
+        /// </summary>
         [NameInMap("InstanceName")]
         [Validation(Required=false)]
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of concurrent conversations.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListBeebotIntentLgfResponseBody : TeaModel {
         /// <summary>
+        /// <para>The internal request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>497CFAFF-48CC-161A-AD2C-252DED569037</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string BeebotRequestId { get; set; }
 
         /// <summary>
+        /// <para>The API status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The list of LGFs.</para>
+        /// </summary>
         [NameInMap("Lgfs")]
         [Validation(Required=false)]
         public List<ListBeebotIntentLgfResponseBodyLgfs> Lgfs { get; set; }
         public class ListBeebotIntentLgfResponseBodyLgfs : TeaModel {
             /// <summary>
+            /// <para>The time when the template was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-04-21 10:54:18.+0800</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The intent ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10717802</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? IntentId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the utterance template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5666117</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? LgfId { get; set; }
 
             /// <summary>
+            /// <para>The time when the template was last modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-04-21 10:54:18.+0800</para>
             /// </summary>
@@ -69,6 +86,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public string ModifyTime { get; set; }
 
+            /// <summary>
+            /// <para>The content of the utterance template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>我是一个问法模版</para>
+            /// </summary>
             [NameInMap("RuleText")]
             [Validation(Required=false)]
             public string RuleText { get; set; }
@@ -76,6 +99,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>The message returned by the API.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -84,6 +109,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -92,6 +119,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -100,6 +129,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -108,6 +139,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -116,6 +149,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

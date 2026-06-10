@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetRealtimeConcurrencyReportResponseBody : TeaModel {
         /// <summary>
+        /// <para>API status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Response message</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Report generation time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1743474900488</para>
         /// </summary>
@@ -41,15 +49,23 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public long? ReportDate { get; set; }
 
+        /// <summary>
+        /// <para>Report details.</para>
+        /// </summary>
         [NameInMap("Reports")]
         [Validation(Required=false)]
         public GetRealtimeConcurrencyReportResponseBodyReports Reports { get; set; }
         public class GetRealtimeConcurrencyReportResponseBodyReports : TeaModel {
+            /// <summary>
+            /// <para>Report collection data</para>
+            /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<GetRealtimeConcurrencyReportResponseBodyReportsList> List { get; set; }
             public class GetRealtimeConcurrencyReportResponseBodyReportsList : TeaModel {
                 /// <summary>
+                /// <para>Instance ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>85bf7efa-a07c-498a-850e-99a5849b8589</para>
                 /// </summary>
@@ -57,11 +73,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 [Validation(Required=false)]
                 public string InstanceId { get; set; }
 
+                /// <summary>
+                /// <para>Instance name</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>智能外呼场景</para>
+                /// </summary>
                 [NameInMap("InstanceName")]
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
                 /// <summary>
+                /// <para>Job ID</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>c62e6789-28a8-41db-941e-171a01d3b3b9</para>
                 /// </summary>
@@ -69,11 +93,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 [Validation(Required=false)]
                 public string JobGroupId { get; set; }
 
+                /// <summary>
+                /// <para>Job name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>第一个作业组</para>
+                /// </summary>
                 [NameInMap("JobGroupName")]
                 [Validation(Required=false)]
                 public string JobGroupName { get; set; }
 
                 /// <summary>
+                /// <para>Maximum configured concurrency limit</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -82,6 +114,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? MaxConcurrencyLimit { get; set; }
 
                 /// <summary>
+                /// <para>Minimum concurrency limit for the job</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -90,6 +124,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? MinConcurrencyLimit { get; set; }
 
                 /// <summary>
+                /// <para>Occupied concurrency value</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -98,6 +134,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public long? OccupiedConcurrencyCount { get; set; }
 
                 /// <summary>
+                /// <para>Report generation time</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1743474900488</para>
                 /// </summary>
@@ -108,6 +146,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
+            /// <para>Page number</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -116,6 +156,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>Page size</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -124,6 +166,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>Total count</para>
+            /// 
             /// <b>Example:</b>
             /// <para>16</para>
             /// </summary>
@@ -134,6 +178,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -142,6 +188,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Is successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

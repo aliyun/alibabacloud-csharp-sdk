@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class CreateJobGroupExportTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Job group ID. Required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>baf6dfdc-eb79-4c63-ab19-c56388b1fbdd</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobGroupId { get; set; }
 
         /// <summary>
+        /// <para>Parameters that control task execution for the import.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>

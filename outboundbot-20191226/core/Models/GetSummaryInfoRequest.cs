@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetSummaryInfoRequest : TeaModel {
         /// <summary>
+        /// <para>List of instance IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[]</para>
         /// </summary>

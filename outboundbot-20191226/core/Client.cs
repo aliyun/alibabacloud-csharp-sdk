@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建外呼任务</para>
+        /// <para>Creates outbound call jobs in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建外呼任务</para>
+        /// <para>Creates outbound call jobs in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建外呼任务</para>
+        /// <para>Creates outbound call jobs in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建外呼任务</para>
+        /// <para>Creates outbound call jobs in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步创建外呼任务</para>
+        /// <para>Asynchronously creates outbound jobs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步创建外呼任务</para>
+        /// <para>Asynchronously creates outbound jobs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步创建外呼任务</para>
+        /// <para>Asynchronously creates outbound jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步创建外呼任务</para>
+        /// <para>Asynchronously creates outbound jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -385,6 +385,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await AssignJobsAsyncWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels jobs that are pending or in progress. This operation cannot cancel jobs that are already in a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelJobsRequest
         /// </param>
@@ -442,6 +447,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CancelJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels jobs that are pending or in progress. This operation cannot cancel jobs that are already in a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelJobsRequest
         /// </param>
@@ -499,6 +509,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CancelJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels jobs that are pending or in progress. This operation cannot cancel jobs that are already in a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelJobsRequest
         /// </param>
@@ -512,6 +527,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CancelJobsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels jobs that are pending or in progress. This operation cannot cancel jobs that are already in a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CancelJobsRequest
         /// </param>
@@ -525,6 +545,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CancelJobsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group of a resource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
         /// </param>
@@ -566,6 +591,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ChangeResourceGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group of a resource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
         /// </param>
@@ -607,6 +637,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ChangeResourceGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group of a resource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
         /// </param>
@@ -620,6 +655,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ChangeResourceGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Changes the resource group of a resource.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
         /// </param>
@@ -633,6 +673,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ChangeResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can create an intelligent configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAgentProfileRequest
         /// </param>
@@ -722,6 +767,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateAgentProfileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can create an intelligent configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAgentProfileRequest
         /// </param>
@@ -811,6 +861,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateAgentProfileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can create an intelligent configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAgentProfileRequest
         /// </param>
@@ -824,6 +879,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CreateAgentProfileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can create an intelligent configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAgentProfileRequest
         /// </param>
@@ -839,7 +899,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标注任务</para>
+        /// <para>Creates an annotation task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -955,7 +1015,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标注任务</para>
+        /// <para>Creates an annotation task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1071,7 +1131,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标注任务</para>
+        /// <para>Creates an annotation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1089,7 +1149,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标注任务</para>
+        /// <para>Creates an annotation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1107,7 +1167,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务</para>
+        /// <para>Deprecated. Do not use this operation to batch-create outbound calling jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1181,7 +1241,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务</para>
+        /// <para>Deprecated. Do not use this operation to batch-create outbound calling jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1255,7 +1315,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务</para>
+        /// <para>Deprecated. Do not use this operation to batch-create outbound calling jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1273,7 +1333,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务</para>
+        /// <para>Deprecated. Do not use this operation to batch-create outbound calling jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1291,7 +1351,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBatchRepeatJob</para>
+        /// <para>Copy an existing task group to reinitiate an outbound task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1385,7 +1445,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBatchRepeatJob</para>
+        /// <para>Copy an existing task group to reinitiate an outbound task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1479,7 +1539,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBatchRepeatJob</para>
+        /// <para>Copy an existing task group to reinitiate an outbound task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1497,7 +1557,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBatchRepeatJob</para>
+        /// <para>Copy an existing task group to reinitiate an outbound task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1515,7 +1575,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBeebotIntent</para>
+        /// <para>Creates an intent for a small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1571,7 +1631,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBeebotIntent</para>
+        /// <para>Creates an intent for a small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1627,7 +1687,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBeebotIntent</para>
+        /// <para>Creates an intent for a small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1645,7 +1705,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBeebotIntent</para>
+        /// <para>Creates an intent for a small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1663,7 +1723,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBeebotIntentLgf</para>
+        /// <para>Creates a user utterance template for an intent in a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1719,7 +1779,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBeebotIntentLgf</para>
+        /// <para>Creates a user utterance template for an intent in a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1775,7 +1835,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBeebotIntentLgf</para>
+        /// <para>Creates a user utterance template for an intent in a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1793,7 +1853,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBeebotIntentLgf</para>
+        /// <para>Creates a user utterance template for an intent in a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1811,7 +1871,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBeebotIntentUserSay</para>
+        /// <para>Creates a user utterance for an intent in a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1867,7 +1927,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBeebotIntentUserSay</para>
+        /// <para>Creates a user utterance for an intent in a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1923,7 +1983,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBeebotIntentUserSay</para>
+        /// <para>Creates a user utterance for an intent in a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1941,7 +2001,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateBeebotIntentUserSay</para>
+        /// <para>Creates a user utterance for an intent in a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1957,6 +2017,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CreateBeebotIntentUserSayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This legacy canvas API creates a dialogue flow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDialogueFlowRequest
         /// </param>
@@ -2006,6 +2071,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateDialogueFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This legacy canvas API creates a dialogue flow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDialogueFlowRequest
         /// </param>
@@ -2055,6 +2125,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateDialogueFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This legacy canvas API creates a dialogue flow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDialogueFlowRequest
         /// </param>
@@ -2068,6 +2143,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CreateDialogueFlowWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This legacy canvas API creates a dialogue flow.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDialogueFlowRequest
         /// </param>
@@ -2081,6 +2161,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CreateDialogueFlowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a URL for a Download Hub task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDownloadUrlRequest
         /// </param>
@@ -2114,6 +2199,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateDownloadUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a URL for a Download Hub task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDownloadUrlRequest
         /// </param>
@@ -2147,6 +2237,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateDownloadUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a URL for a Download Hub task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDownloadUrlRequest
         /// </param>
@@ -2160,6 +2255,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CreateDownloadUrlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a URL for a Download Hub task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDownloadUrlRequest
         /// </param>
@@ -2173,6 +2273,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CreateDownloadUrlWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a global question in a legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateGlobalQuestionRequest
         /// </param>
@@ -2230,6 +2335,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateGlobalQuestionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a global question in a legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateGlobalQuestionRequest
         /// </param>
@@ -2287,6 +2397,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateGlobalQuestionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a global question in a legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateGlobalQuestionRequest
         /// </param>
@@ -2300,6 +2415,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CreateGlobalQuestionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a global question in a legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateGlobalQuestionRequest
         /// </param>
@@ -2313,6 +2433,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CreateGlobalQuestionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an outbound call instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -2370,6 +2495,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an outbound call instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -2427,6 +2557,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an outbound call instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -2440,6 +2575,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CreateInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an outbound call instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateInstanceRequest
         /// </param>
@@ -2455,7 +2595,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例绑定号码</para>
+        /// <para>Binds a number to a business instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2501,7 +2641,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例绑定号码</para>
+        /// <para>Binds a number to a business instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2547,7 +2687,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例绑定号码</para>
+        /// <para>Binds a number to a business instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2565,7 +2705,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建实例绑定号码</para>
+        /// <para>Binds a number to a business instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2581,6 +2721,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CreateInstanceBindNumberWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an intent in a legacy canvas script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIntentRequest
         /// </param>
@@ -2638,6 +2783,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateIntentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an intent in a legacy canvas script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIntentRequest
         /// </param>
@@ -2695,6 +2845,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateIntentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an intent in a legacy canvas script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIntentRequest
         /// </param>
@@ -2708,6 +2863,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CreateIntentWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an intent in a legacy canvas script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateIntentRequest
         /// </param>
@@ -2721,6 +2881,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CreateIntentWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a job data parsing task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateJobDataParsingTaskRequest
         /// </param>
@@ -2762,6 +2927,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateJobDataParsingTaskResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a job data parsing task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateJobDataParsingTaskRequest
         /// </param>
@@ -2803,6 +2973,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateJobDataParsingTaskResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a job data parsing task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateJobDataParsingTaskRequest
         /// </param>
@@ -2816,6 +2991,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CreateJobDataParsingTaskWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a job data parsing task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateJobDataParsingTaskRequest
         /// </param>
@@ -2831,7 +3011,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务组</para>
+        /// <para>Create a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2921,7 +3101,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务组</para>
+        /// <para>Create a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3011,7 +3191,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务组</para>
+        /// <para>Create a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3029,7 +3209,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务组</para>
+        /// <para>Create a job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3047,7 +3227,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务组到处任务</para>
+        /// <para>Creates an export task for an outbound job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3097,7 +3277,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务组到处任务</para>
+        /// <para>Creates an export task for an outbound job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3147,7 +3327,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务组到处任务</para>
+        /// <para>Creates an export task for an outbound job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3165,7 +3345,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务组到处任务</para>
+        /// <para>Creates an export task for an outbound job group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3183,7 +3363,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建场景</para>
+        /// <para>Create a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3301,7 +3481,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建场景</para>
+        /// <para>Create a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3419,7 +3599,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建场景</para>
+        /// <para>Create a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3437,7 +3617,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建场景</para>
+        /// <para>Create a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3453,6 +3633,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CreateScriptWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a recording for the broadcast script.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateScriptWaveformRequest
         /// </param>
@@ -3506,6 +3696,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateScriptWaveformResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a recording for the broadcast script.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateScriptWaveformRequest
         /// </param>
@@ -3559,6 +3759,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateScriptWaveformResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a recording for the broadcast script.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateScriptWaveformRequest
         /// </param>
@@ -3572,6 +3782,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CreateScriptWaveformWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a recording for the broadcast script.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateScriptWaveformRequest
         /// </param>
@@ -3585,6 +3805,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CreateScriptWaveformWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a tag for use in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTagRequest
         /// </param>
@@ -3634,6 +3859,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateTagResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a tag for use in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTagRequest
         /// </param>
@@ -3683,6 +3913,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<CreateTagResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a tag for use in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTagRequest
         /// </param>
@@ -3696,6 +3931,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return CreateTagWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a tag for use in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateTagRequest
         /// </param>
@@ -3711,7 +3951,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>外呼历史导出</para>
+        /// <para>Create an asynchronous task to export outbound call history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3749,7 +3989,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>外呼历史导出</para>
+        /// <para>Create an asynchronous task to export outbound call history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3787,7 +4027,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>外呼历史导出</para>
+        /// <para>Create an asynchronous task to export outbound call history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3805,7 +4045,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>外呼历史导出</para>
+        /// <para>Create an asynchronous task to export outbound call history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3823,7 +4063,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建密钥</para>
+        /// <para>Creates a key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3857,7 +4097,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建密钥</para>
+        /// <para>Creates a key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3891,7 +4131,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建密钥</para>
+        /// <para>Creates a key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3909,7 +4149,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建密钥</para>
+        /// <para>Creates a key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3925,6 +4165,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await CreateTenantKeyWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes Large Language Model (LLM) agents.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// DeleteAgentProfilesRequest
         /// </param>
@@ -3972,6 +4217,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteAgentProfilesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes Large Language Model (LLM) agents.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// DeleteAgentProfilesRequest
         /// </param>
@@ -4019,6 +4269,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteAgentProfilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes Large Language Model (LLM) agents.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAgentProfilesRequest
         /// </param>
@@ -4032,6 +4287,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DeleteAgentProfilesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes Large Language Model (LLM) agents.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAgentProfilesRequest
         /// </param>
@@ -4047,7 +4307,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清空归属地号码库</para>
+        /// <para>Deletes all entries from the number district database. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -4077,7 +4337,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清空归属地号码库</para>
+        /// <para>Deletes all entries from the number district database. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -4107,7 +4367,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清空归属地号码库</para>
+        /// <para>Deletes all entries from the number district database. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4121,7 +4381,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>清空归属地号码库</para>
+        /// <para>Deletes all entries from the number district database. This operation is deprecated.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4135,7 +4395,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteBeebotIntent</para>
+        /// <para>Delete an intent in a small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4185,7 +4445,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteBeebotIntent</para>
+        /// <para>Delete an intent in a small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4235,7 +4495,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteBeebotIntent</para>
+        /// <para>Delete an intent in a small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4253,7 +4513,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteBeebotIntent</para>
+        /// <para>Delete an intent in a small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4271,7 +4531,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteBeebotIntentLgf</para>
+        /// <para>Deletes utterance templates for intents in small model scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4325,7 +4585,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteBeebotIntentLgf</para>
+        /// <para>Deletes utterance templates for intents in small model scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4379,7 +4639,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteBeebotIntentLgf</para>
+        /// <para>Deletes utterance templates for intents in small model scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4397,7 +4657,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteBeebotIntentLgf</para>
+        /// <para>Deletes utterance templates for intents in small model scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4415,7 +4675,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteBeebotIntentUserSay</para>
+        /// <para>Delete user queries for intents in the small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4469,7 +4729,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteBeebotIntentUserSay</para>
+        /// <para>Delete user queries for intents in the small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4523,7 +4783,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteBeebotIntentUserSay</para>
+        /// <para>Delete user queries for intents in the small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4541,7 +4801,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteBeebotIntentUserSay</para>
+        /// <para>Delete user queries for intents in the small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4557,6 +4817,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DeleteBeebotIntentUserSayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can delete a do-not-call list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContactBlockListRequest
         /// </param>
@@ -4602,6 +4867,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteContactBlockListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can delete a do-not-call list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContactBlockListRequest
         /// </param>
@@ -4647,6 +4917,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteContactBlockListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can delete a do-not-call list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContactBlockListRequest
         /// </param>
@@ -4660,6 +4935,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DeleteContactBlockListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can delete a do-not-call list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContactBlockListRequest
         /// </param>
@@ -4673,6 +4953,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DeleteContactBlockListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the global outbound calling policy whitelist.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContactWhiteListRequest
         /// </param>
@@ -4718,6 +5003,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteContactWhiteListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the global outbound calling policy whitelist.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContactWhiteListRequest
         /// </param>
@@ -4763,6 +5053,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteContactWhiteListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the global outbound calling policy whitelist.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContactWhiteListRequest
         /// </param>
@@ -4776,6 +5071,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DeleteContactWhiteListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the global outbound calling policy whitelist.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteContactWhiteListRequest
         /// </param>
@@ -4789,6 +5089,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DeleteContactWhiteListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dialogue flow. This is a legacy canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDialogueFlowRequest
         /// </param>
@@ -4834,6 +5139,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteDialogueFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dialogue flow. This is a legacy canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDialogueFlowRequest
         /// </param>
@@ -4879,6 +5189,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteDialogueFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dialogue flow. This is a legacy canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDialogueFlowRequest
         /// </param>
@@ -4892,6 +5207,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DeleteDialogueFlowWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a dialogue flow. This is a legacy canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDialogueFlowRequest
         /// </param>
@@ -4905,6 +5225,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DeleteDialogueFlowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a global question from a legacy canvas script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGlobalQuestionRequest
         /// </param>
@@ -4950,6 +5275,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteGlobalQuestionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a global question from a legacy canvas script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGlobalQuestionRequest
         /// </param>
@@ -4995,6 +5325,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteGlobalQuestionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a global question from a legacy canvas script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGlobalQuestionRequest
         /// </param>
@@ -5008,6 +5343,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DeleteGlobalQuestionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a global question from a legacy canvas script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteGlobalQuestionRequest
         /// </param>
@@ -5021,6 +5361,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DeleteGlobalQuestionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Intelligent Outbound Calling instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -5058,6 +5403,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Intelligent Outbound Calling instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -5095,6 +5445,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Intelligent Outbound Calling instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -5108,6 +5463,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DeleteInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an Intelligent Outbound Calling instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteInstanceRequest
         /// </param>
@@ -5121,6 +5481,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DeleteInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an intent. This is a legacy API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteIntentRequest
         /// </param>
@@ -5166,6 +5531,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteIntentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an intent. This is a legacy API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteIntentRequest
         /// </param>
@@ -5211,6 +5581,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteIntentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an intent. This is a legacy API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteIntentRequest
         /// </param>
@@ -5224,6 +5599,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DeleteIntentWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an intent. This is a legacy API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteIntentRequest
         /// </param>
@@ -5237,6 +5617,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DeleteIntentWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a job group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteJobGroupRequest
         /// </param>
@@ -5278,6 +5663,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteJobGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a job group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteJobGroupRequest
         /// </param>
@@ -5319,6 +5709,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteJobGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a job group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteJobGroupRequest
         /// </param>
@@ -5332,6 +5727,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DeleteJobGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a job group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteJobGroupRequest
         /// </param>
@@ -5345,6 +5745,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DeleteJobGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an outbound call number. This API is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteOutboundCallNumberRequest
         /// </param>
@@ -5386,6 +5791,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteOutboundCallNumberResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an outbound call number. This API is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteOutboundCallNumberRequest
         /// </param>
@@ -5427,6 +5837,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteOutboundCallNumberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an outbound call number. This API is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteOutboundCallNumberRequest
         /// </param>
@@ -5440,6 +5855,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DeleteOutboundCallNumberWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an outbound call number. This API is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteOutboundCallNumberRequest
         /// </param>
@@ -5453,6 +5873,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DeleteOutboundCallNumberWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScriptRequest
         /// </param>
@@ -5494,6 +5919,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteScriptResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScriptRequest
         /// </param>
@@ -5535,6 +5965,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScriptRequest
         /// </param>
@@ -5548,6 +5983,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DeleteScriptWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScriptRequest
         /// </param>
@@ -5561,6 +6001,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DeleteScriptWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes uploaded recordings for a small-model scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScriptRecordingRequest
         /// </param>
@@ -5606,6 +6051,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteScriptRecordingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes uploaded recordings for a small-model scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScriptRecordingRequest
         /// </param>
@@ -5651,6 +6101,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteScriptRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes uploaded recordings for a small-model scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScriptRecordingRequest
         /// </param>
@@ -5664,6 +6119,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DeleteScriptRecordingWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes uploaded recordings for a small-model scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScriptRecordingRequest
         /// </param>
@@ -5677,6 +6137,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DeleteScriptRecordingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a script recording.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScriptWaveformRequest
         /// </param>
@@ -5722,6 +6187,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteScriptWaveformResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a script recording.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScriptWaveformRequest
         /// </param>
@@ -5767,6 +6237,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DeleteScriptWaveformResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a script recording.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScriptWaveformRequest
         /// </param>
@@ -5780,6 +6255,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DeleteScriptWaveformWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Delete a script recording.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteScriptWaveformRequest
         /// </param>
@@ -5795,12 +6275,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeBeebotIntent</para>
+        /// <para>Retrieves the intent in the small model scenario.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>**</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5850,12 +6330,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeBeebotIntent</para>
+        /// <para>Retrieves the intent in the small model scenario.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>**</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5905,12 +6385,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeBeebotIntent</para>
+        /// <para>Retrieves the intent in the small model scenario.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>**</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5928,12 +6408,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeBeebotIntent</para>
+        /// <para>Retrieves the intent in the small model scenario.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>**</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5949,6 +6429,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DescribeBeebotIntentWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves performance statistics for task labels.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDialogueNodeStatisticsRequest
         /// </param>
@@ -5994,6 +6479,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeDialogueNodeStatisticsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves performance statistics for task labels.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDialogueNodeStatisticsRequest
         /// </param>
@@ -6039,6 +6529,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeDialogueNodeStatisticsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves performance statistics for task labels.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDialogueNodeStatisticsRequest
         /// </param>
@@ -6052,6 +6547,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DescribeDialogueNodeStatisticsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves performance statistics for task labels.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDialogueNodeStatisticsRequest
         /// </param>
@@ -6067,7 +6567,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeDsReports</para>
+        /// <para>Describes DS reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6113,7 +6613,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeDsReports</para>
+        /// <para>Describes DS reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6159,7 +6659,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeDsReports</para>
+        /// <para>Describes DS reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6177,7 +6677,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeDsReports</para>
+        /// <para>Describes DS reports.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6193,6 +6693,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DescribeDsReportsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a global question in a legacy canvas script.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeGlobalQuestionRequest
         /// </param>
@@ -6238,6 +6748,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeGlobalQuestionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a global question in a legacy canvas script.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeGlobalQuestionRequest
         /// </param>
@@ -6283,6 +6803,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeGlobalQuestionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a global question in a legacy canvas script.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeGlobalQuestionRequest
         /// </param>
@@ -6296,6 +6826,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DescribeGlobalQuestionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of a global question in a legacy canvas script.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeGlobalQuestionRequest
         /// </param>
@@ -6311,7 +6851,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务组数据统计</para>
+        /// <para>Returns the execution status of tasks in a task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6357,7 +6897,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务组数据统计</para>
+        /// <para>Returns the execution status of tasks in a task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6403,7 +6943,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务组数据统计</para>
+        /// <para>Returns the execution status of tasks in a task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6421,7 +6961,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务组数据统计</para>
+        /// <para>Returns the execution status of tasks in a task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6439,7 +6979,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeInstance</para>
+        /// <para>Queries the details of an Outbound Calling instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6481,7 +7021,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeInstance</para>
+        /// <para>Queries the details of an Outbound Calling instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6523,7 +7063,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeInstance</para>
+        /// <para>Queries the details of an Outbound Calling instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6541,7 +7081,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeInstance</para>
+        /// <para>Queries the details of an Outbound Calling instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6557,6 +7097,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DescribeInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an intent. This is a legacy Canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIntentRequest
         /// </param>
@@ -6602,6 +7147,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeIntentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an intent. This is a legacy Canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIntentRequest
         /// </param>
@@ -6647,6 +7197,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeIntentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an intent. This is a legacy Canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIntentRequest
         /// </param>
@@ -6660,6 +7215,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DescribeIntentWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an intent. This is a legacy Canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeIntentRequest
         /// </param>
@@ -6675,7 +7235,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeIntentStatistics</para>
+        /// <para>Queries the performance statistics of intents for a task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6725,7 +7285,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeIntentStatistics</para>
+        /// <para>Queries the performance statistics of intents for a task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6775,7 +7335,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeIntentStatistics</para>
+        /// <para>Queries the performance statistics of intents for a task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6793,7 +7353,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeIntentStatistics</para>
+        /// <para>Queries the performance statistics of intents for a task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6811,7 +7371,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取job信息</para>
+        /// <para>Retrieves the conversation data for a specific job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6861,7 +7421,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取job信息</para>
+        /// <para>Retrieves the conversation data for a specific job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6911,7 +7471,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取job信息</para>
+        /// <para>Retrieves the conversation data for a specific job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6929,7 +7489,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取job信息</para>
+        /// <para>Retrieves the conversation data for a specific job.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6945,6 +7505,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DescribeJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the parsing progress of an uploaded job file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeJobDataParsingTaskProgressRequest
         /// </param>
@@ -6986,6 +7551,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeJobDataParsingTaskProgressResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the parsing progress of an uploaded job file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeJobDataParsingTaskProgressRequest
         /// </param>
@@ -7027,6 +7597,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeJobDataParsingTaskProgressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the parsing progress of an uploaded job file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeJobDataParsingTaskProgressRequest
         /// </param>
@@ -7040,6 +7615,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DescribeJobDataParsingTaskProgressWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the parsing progress of an uploaded job file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeJobDataParsingTaskProgressRequest
         /// </param>
@@ -7055,7 +7635,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeJobGroup</para>
+        /// <para>Retrieves data for intelligent outbound call job groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7105,7 +7685,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeJobGroup</para>
+        /// <para>Retrieves data for intelligent outbound call job groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7155,7 +7735,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeJobGroup</para>
+        /// <para>Retrieves data for intelligent outbound call job groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7173,7 +7753,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeJobGroup</para>
+        /// <para>Retrieves data for intelligent outbound call job groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7189,6 +7769,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DescribeJobGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the progress of a task group export task. This operation is deprecated. Use ListDownloadTasks instead.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeJobGroupExportTaskProgressRequest
         /// </param>
@@ -7230,6 +7815,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeJobGroupExportTaskProgressResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the progress of a task group export task. This operation is deprecated. Use ListDownloadTasks instead.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeJobGroupExportTaskProgressRequest
         /// </param>
@@ -7271,6 +7861,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeJobGroupExportTaskProgressResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the progress of a task group export task. This operation is deprecated. Use ListDownloadTasks instead.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeJobGroupExportTaskProgressRequest
         /// </param>
@@ -7284,6 +7879,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DescribeJobGroupExportTaskProgressWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the progress of a task group export task. This operation is deprecated. Use ListDownloadTasks instead.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeJobGroupExportTaskProgressRequest
         /// </param>
@@ -7299,7 +7899,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景信息</para>
+        /// <para>Returns information about a script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7345,7 +7945,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景信息</para>
+        /// <para>Returns information about a script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7391,7 +7991,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景信息</para>
+        /// <para>Returns information about a script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7409,7 +8009,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景信息</para>
+        /// <para>Returns information about a script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7425,6 +8025,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DescribeScriptWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the voice configuration of a script created in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeScriptVoiceConfigRequest
         /// </param>
@@ -7470,6 +8075,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeScriptVoiceConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the voice configuration of a script created in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeScriptVoiceConfigRequest
         /// </param>
@@ -7515,6 +8125,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeScriptVoiceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the voice configuration of a script created in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeScriptVoiceConfigRequest
         /// </param>
@@ -7528,6 +8143,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DescribeScriptVoiceConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Describes the voice configuration of a script created in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeScriptVoiceConfigRequest
         /// </param>
@@ -7541,6 +8161,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DescribeScriptVoiceConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the text-to-speech (TTS) configuration information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTTSConfigRequest
         /// </param>
@@ -7582,6 +8207,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeTTSConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the text-to-speech (TTS) configuration information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTTSConfigRequest
         /// </param>
@@ -7623,6 +8253,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeTTSConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the text-to-speech (TTS) configuration information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTTSConfigRequest
         /// </param>
@@ -7636,6 +8271,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DescribeTTSConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the text-to-speech (TTS) configuration information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTTSConfigRequest
         /// </param>
@@ -7649,6 +8289,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DescribeTTSConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Preview text-to-speech (TTS) audio.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTTSDemoRequest
         /// </param>
@@ -7734,6 +8379,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeTTSDemoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Preview text-to-speech (TTS) audio.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTTSDemoRequest
         /// </param>
@@ -7819,6 +8469,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeTTSDemoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Preview text-to-speech (TTS) audio.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTTSDemoRequest
         /// </param>
@@ -7832,6 +8487,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DescribeTTSDemoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Preview text-to-speech (TTS) audio.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTTSDemoRequest
         /// </param>
@@ -7845,6 +8505,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DescribeTTSDemoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries statistics about tag hits. This is a legacy canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagHitsSummaryRequest
         /// </param>
@@ -7886,6 +8551,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeTagHitsSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries statistics about tag hits. This is a legacy canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagHitsSummaryRequest
         /// </param>
@@ -7927,6 +8597,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DescribeTagHitsSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries statistics about tag hits. This is a legacy canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagHitsSummaryRequest
         /// </param>
@@ -7940,6 +8615,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DescribeTagHitsSummaryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries statistics about tag hits. This is a legacy canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTagHitsSummaryRequest
         /// </param>
@@ -7955,7 +8635,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>号码绑定实例列表</para>
+        /// <para>Lists the instances to which a phone number is bound in a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7997,7 +8677,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>号码绑定实例列表</para>
+        /// <para>Lists the instances to which a phone number is bound in a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8039,7 +8719,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>号码绑定实例列表</para>
+        /// <para>Lists the instances to which a phone number is bound in a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8057,7 +8737,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>号码绑定实例列表</para>
+        /// <para>Lists the instances to which a phone number is bound in a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8073,6 +8753,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DescribeTenantBindNumberWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This robot dialogue interface handles CC callback outbound calls. (Deprecated)</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DialogueRequest
         /// </param>
@@ -8150,6 +8835,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DialogueResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This robot dialogue interface handles CC callback outbound calls. (Deprecated)</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DialogueRequest
         /// </param>
@@ -8227,6 +8917,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DialogueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This robot dialogue interface handles CC callback outbound calls. (Deprecated)</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DialogueRequest
         /// </param>
@@ -8240,6 +8935,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DialogueWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This robot dialogue interface handles CC callback outbound calls. (Deprecated)</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DialogueRequest
         /// </param>
@@ -8255,7 +8955,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DownloadRecording</para>
+        /// <para>Downloads a call recording.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8279,6 +8979,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedVoiceSliceRecording))
             {
                 query["NeedVoiceSliceRecording"] = request.NeedVoiceSliceRecording;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwapChannels))
+            {
+                query["SwapChannels"] = request.SwapChannels;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
@@ -8305,7 +9009,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DownloadRecording</para>
+        /// <para>Downloads a call recording.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8329,6 +9033,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NeedVoiceSliceRecording))
             {
                 query["NeedVoiceSliceRecording"] = request.NeedVoiceSliceRecording;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SwapChannels))
+            {
+                query["SwapChannels"] = request.SwapChannels;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
@@ -8355,7 +9063,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DownloadRecording</para>
+        /// <para>Downloads a call recording.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8373,7 +9081,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DownloadRecording</para>
+        /// <para>Downloads a call recording.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8389,6 +9097,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DownloadRecordingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Download script recordings by retrieving their URLs. This operation is intended for small model scenarios.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DownloadScriptRecordingRequest
         /// </param>
@@ -8434,6 +9147,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DownloadScriptRecordingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Download script recordings by retrieving their URLs. This operation is intended for small model scenarios.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DownloadScriptRecordingRequest
         /// </param>
@@ -8479,6 +9197,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DownloadScriptRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Download script recordings by retrieving their URLs. This operation is intended for small model scenarios.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DownloadScriptRecordingRequest
         /// </param>
@@ -8492,6 +9215,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DownloadScriptRecordingWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Download script recordings by retrieving their URLs. This operation is intended for small model scenarios.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DownloadScriptRecordingRequest
         /// </param>
@@ -8505,6 +9233,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DownloadScriptRecordingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Duplicates an existing script. This operation applies only to the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DuplicateScriptRequest
         /// </param>
@@ -8550,6 +9283,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DuplicateScriptResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Duplicates an existing script. This operation applies only to the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DuplicateScriptRequest
         /// </param>
@@ -8595,6 +9333,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<DuplicateScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Duplicates an existing script. This operation applies only to the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DuplicateScriptRequest
         /// </param>
@@ -8608,6 +9351,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return DuplicateScriptWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Duplicates an existing script. This operation applies only to the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DuplicateScriptRequest
         /// </param>
@@ -8621,6 +9369,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await DuplicateScriptWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports a scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportScriptRequest
         /// </param>
@@ -8662,6 +9415,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ExportScriptResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports a scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportScriptRequest
         /// </param>
@@ -8703,6 +9461,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ExportScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports a scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportScriptRequest
         /// </param>
@@ -8716,6 +9479,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ExportScriptWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exports a scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ExportScriptRequest
         /// </param>
@@ -8729,6 +9497,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ExportScriptWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upload a hotword list file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GenerateUploadUrlRequest
         /// </param>
@@ -8770,6 +9543,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GenerateUploadUrlResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upload a hotword list file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GenerateUploadUrlRequest
         /// </param>
@@ -8811,6 +9589,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GenerateUploadUrlResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upload a hotword list file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GenerateUploadUrlRequest
         /// </param>
@@ -8824,6 +9607,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GenerateUploadUrlWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upload a hotword list file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GenerateUploadUrlRequest
         /// </param>
@@ -8837,6 +9625,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GenerateUploadUrlWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the delay before audio playback begins after a call is answered.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAfterAnswerDelayPlaybackRequest
         /// </param>
@@ -8878,6 +9671,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetAfterAnswerDelayPlaybackResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the delay before audio playback begins after a call is answered.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAfterAnswerDelayPlaybackRequest
         /// </param>
@@ -8919,6 +9717,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetAfterAnswerDelayPlaybackResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the delay before audio playback begins after a call is answered.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAfterAnswerDelayPlaybackRequest
         /// </param>
@@ -8932,6 +9735,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GetAfterAnswerDelayPlaybackWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the delay before audio playback begins after a call is answered.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAfterAnswerDelayPlaybackRequest
         /// </param>
@@ -8945,6 +9753,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetAfterAnswerDelayPlaybackWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the configuration of an agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAgentProfileRequest
         /// </param>
@@ -8990,6 +9803,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetAgentProfileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the configuration of an agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAgentProfileRequest
         /// </param>
@@ -9035,6 +9853,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetAgentProfileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the configuration of an agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAgentProfileRequest
         /// </param>
@@ -9048,6 +9871,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GetAgentProfileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the configuration of an agent.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAgentProfileRequest
         /// </param>
@@ -9061,6 +9889,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetAgentProfileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an agent profile template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAgentProfileTemplateRequest
         /// </param>
@@ -9102,6 +9935,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetAgentProfileTemplateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an agent profile template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAgentProfileTemplateRequest
         /// </param>
@@ -9143,6 +9981,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetAgentProfileTemplateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an agent profile template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAgentProfileTemplateRequest
         /// </param>
@@ -9156,6 +9999,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GetAgentProfileTemplateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an agent profile template.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAgentProfileTemplateRequest
         /// </param>
@@ -9169,6 +10017,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetAgentProfileTemplateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>null</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAnnotationMissionSummaryRequest
         /// </param>
@@ -9206,6 +10059,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetAnnotationMissionSummaryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>null</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAnnotationMissionSummaryRequest
         /// </param>
@@ -9243,6 +10101,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetAnnotationMissionSummaryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>null</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAnnotationMissionSummaryRequest
         /// </param>
@@ -9256,6 +10119,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GetAnnotationMissionSummaryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>null</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAnnotationMissionSummaryRequest
         /// </param>
@@ -9385,6 +10253,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetAnnotationMissionTagInfoListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information such as the Automatic Speech Recognition (ASR) model list and hotword list. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAsrServerInfoRequest
         /// </param>
@@ -9426,6 +10299,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetAsrServerInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information such as the Automatic Speech Recognition (ASR) model list and hotword list. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAsrServerInfoRequest
         /// </param>
@@ -9467,6 +10345,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetAsrServerInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information such as the Automatic Speech Recognition (ASR) model list and hotword list. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAsrServerInfoRequest
         /// </param>
@@ -9480,6 +10363,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GetAsrServerInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves information such as the Automatic Speech Recognition (ASR) model list and hotword list. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetAsrServerInfoRequest
         /// </param>
@@ -9495,7 +10383,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异步外呼任务上传结果</para>
+        /// <para>Retrieves the result of an asynchronous outbound call task upload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9537,7 +10425,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异步外呼任务上传结果</para>
+        /// <para>Retrieves the result of an asynchronous outbound call task upload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9579,7 +10467,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异步外呼任务上传结果</para>
+        /// <para>Retrieves the result of an asynchronous outbound call task upload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9597,7 +10485,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取异步外呼任务上传结果</para>
+        /// <para>Retrieves the result of an asynchronous outbound call task upload.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9615,7 +10503,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统策略配置</para>
+        /// <para>Retrieve the global outbound time periods for the outbound calling system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9661,7 +10549,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统策略配置</para>
+        /// <para>Retrieve the global outbound time periods for the outbound calling system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9707,7 +10595,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统策略配置</para>
+        /// <para>Retrieve the global outbound time periods for the outbound calling system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9725,7 +10613,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取系统策略配置</para>
+        /// <para>Retrieve the global outbound time periods for the outbound calling system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9741,6 +10629,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetBaseStrategyPeriodWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the remaining concurrency for the caller\&quot;s account.</para>
+        /// </summary>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -9766,6 +10659,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetConcurrentConversationQuotaResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the remaining concurrency for the caller\&quot;s account.</para>
+        /// </summary>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -9791,6 +10689,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetConcurrentConversationQuotaResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the remaining concurrency for the caller\&quot;s account.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetConcurrentConversationQuotaResponse
         /// </returns>
@@ -9800,6 +10703,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GetConcurrentConversationQuotaWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the remaining concurrency for the caller\&quot;s account.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// GetConcurrentConversationQuotaResponse
         /// </returns>
@@ -9811,7 +10719,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetContactBlockList</para>
+        /// <para>Retrieves the list of contacts blocked for outbound calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9865,7 +10773,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetContactBlockList</para>
+        /// <para>Retrieves the list of contacts blocked for outbound calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9919,7 +10827,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetContactBlockList</para>
+        /// <para>Retrieves the list of contacts blocked for outbound calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9937,7 +10845,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetContactBlockList</para>
+        /// <para>Retrieves the list of contacts blocked for outbound calls.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9955,7 +10863,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetContactWhiteList</para>
+        /// <para>Retrieves the global outbound call policy whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10009,7 +10917,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetContactWhiteList</para>
+        /// <para>Retrieves the global outbound call policy whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10063,7 +10971,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetContactWhiteList</para>
+        /// <para>Retrieves the global outbound call policy whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10081,7 +10989,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetContactWhiteList</para>
+        /// <para>Retrieves the global outbound call policy whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10097,6 +11005,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetContactWhiteListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current concurrency of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCurrentConcurrencyRequest
         /// </param>
@@ -10134,6 +11047,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetCurrentConcurrencyResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current concurrency of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCurrentConcurrencyRequest
         /// </param>
@@ -10171,6 +11089,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<GetCurrentConcurrencyResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current concurrency of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCurrentConcurrencyRequest
         /// </param>
@@ -10184,6 +11107,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return GetCurrentConcurrencyWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the current concurrency of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetCurrentConcurrencyRequest
         /// </param>
@@ -10199,7 +11127,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetEmptyNumberNoMoreCallsInfo</para>
+        /// <para>A query-based feature toggle that disables outbound calls to nonexistent numbers in the global dimension.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10245,7 +11173,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetEmptyNumberNoMoreCallsInfo</para>
+        /// <para>A query-based feature toggle that disables outbound calls to nonexistent numbers in the global dimension.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10291,7 +11219,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetEmptyNumberNoMoreCallsInfo</para>
+        /// <para>A query-based feature toggle that disables outbound calls to nonexistent numbers in the global dimension.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10309,7 +11237,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetEmptyNumberNoMoreCallsInfo</para>
+        /// <para>A query-based feature toggle that disables outbound calls to nonexistent numbers in the global dimension.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10327,7 +11255,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取上传信息</para>
+        /// <para>Retrieves the parameters for uploading job data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10385,7 +11313,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取上传信息</para>
+        /// <para>Retrieves the parameters for uploading job data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10443,7 +11371,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取上传信息</para>
+        /// <para>Retrieves the parameters for uploading job data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10461,7 +11389,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取上传信息</para>
+        /// <para>Retrieves the parameters for uploading job data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10479,7 +11407,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetMaxAttemptsPerDay</para>
+        /// <para>Retrieves the maximum number of daily call attempts allowed for a specified called number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10525,7 +11453,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetMaxAttemptsPerDay</para>
+        /// <para>Retrieves the maximum number of daily call attempts allowed for a specified called number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10571,7 +11499,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetMaxAttemptsPerDay</para>
+        /// <para>Retrieves the maximum number of daily call attempts allowed for a specified called number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10589,7 +11517,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetMaxAttemptsPerDay</para>
+        /// <para>Retrieves the maximum number of daily call attempts allowed for a specified called number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10607,7 +11535,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取号码库模板下载链接</para>
+        /// <para>Retrieves the download URL for the number library template. This API is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -10637,7 +11565,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取号码库模板下载链接</para>
+        /// <para>Retrieves the download URL for the number library template. This API is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -10667,7 +11595,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取号码库模板下载链接</para>
+        /// <para>Retrieves the download URL for the number library template. This API is deprecated.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10681,7 +11609,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取号码库模板下载链接</para>
+        /// <para>Retrieves the download URL for the number library template. This API is deprecated.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -10695,7 +11623,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取非对称加密算法公钥</para>
+        /// <para>Retrieves the public key for an asymmetric encryption algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10729,7 +11657,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取非对称加密算法公钥</para>
+        /// <para>Retrieves the public key for an asymmetric encryption algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10763,7 +11691,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取非对称加密算法公钥</para>
+        /// <para>Retrieves the public key for an asymmetric encryption algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10781,7 +11709,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取非对称加密算法公钥</para>
+        /// <para>Retrieves the public key for an asymmetric encryption algorithm.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10799,7 +11727,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetRealtimeConcurrencyReport</para>
+        /// <para>Queries the current concurrency list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10837,7 +11765,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetRealtimeConcurrencyReport</para>
+        /// <para>Queries the current concurrency list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10875,7 +11803,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetRealtimeConcurrencyReport</para>
+        /// <para>Queries the current concurrency list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10893,7 +11821,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetRealtimeConcurrencyReport</para>
+        /// <para>Queries the current concurrency list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10911,7 +11839,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetSummaryInfo</para>
+        /// <para>Summary information for outbound call instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10953,7 +11881,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetSummaryInfo</para>
+        /// <para>Summary information for outbound call instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10995,7 +11923,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetSummaryInfo</para>
+        /// <para>Summary information for outbound call instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11013,7 +11941,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetSummaryInfo</para>
+        /// <para>Summary information for outbound call instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11031,7 +11959,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据TaskId获取Task信息</para>
+        /// <para>Retrieve a task by its UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11069,7 +11997,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据TaskId获取Task信息</para>
+        /// <para>Retrieve a task by its UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11107,7 +12035,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据TaskId获取Task信息</para>
+        /// <para>Retrieve a task by its UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11125,7 +12053,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据TaskId获取Task信息</para>
+        /// <para>Retrieve a task by its UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11143,7 +12071,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetVersion</para>
+        /// <para>Retrieve the application version information.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -11173,7 +12101,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetVersion</para>
+        /// <para>Retrieve the application version information.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -11203,7 +12131,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetVersion</para>
+        /// <para>Retrieve the application version information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11217,7 +12145,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetVersion</para>
+        /// <para>Retrieve the application version information.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11229,6 +12157,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await GetVersionWithOptionsAsync(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Import a scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportScriptRequest
         /// </param>
@@ -11274,6 +12207,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ImportScriptResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Import a scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportScriptRequest
         /// </param>
@@ -11319,6 +12257,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ImportScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Import a scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportScriptRequest
         /// </param>
@@ -11332,6 +12275,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ImportScriptWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Import a scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ImportScriptRequest
         /// </param>
@@ -11481,6 +12429,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await InflightTaskTimeoutWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the publication history of an agent configuration in a Large Language Model (LLM) scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAgentProfilesRequest
         /// </param>
@@ -11526,6 +12479,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListAgentProfilesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the publication history of an agent configuration in a Large Language Model (LLM) scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAgentProfilesRequest
         /// </param>
@@ -11571,6 +12529,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListAgentProfilesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the publication history of an agent configuration in a Large Language Model (LLM) scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAgentProfilesRequest
         /// </param>
@@ -11584,6 +12547,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListAgentProfilesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the publication history of an agent configuration in a Large Language Model (LLM) scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListAgentProfilesRequest
         /// </param>
@@ -11599,7 +12567,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>租户绑定号码列表</para>
+        /// <para>Lists the phone numbers bound to the tenant.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -11629,7 +12597,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>租户绑定号码列表</para>
+        /// <para>Lists the phone numbers bound to the tenant.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -11659,7 +12627,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>租户绑定号码列表</para>
+        /// <para>Lists the phone numbers bound to the tenant.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11673,7 +12641,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>租户绑定号码列表</para>
+        /// <para>Lists the phone numbers bound to the tenant.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -11687,7 +12655,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标注中心</para>
+        /// <para>Lists annotation missions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11761,7 +12729,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标注中心</para>
+        /// <para>Lists annotation missions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11835,7 +12803,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标注中心</para>
+        /// <para>Lists annotation missions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11853,7 +12821,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标注中心</para>
+        /// <para>Lists annotation missions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12029,6 +12997,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListAnnotationMissionSessionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists API plugins.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListApiPluginsRequest
         /// </param>
@@ -12078,6 +13051,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListApiPluginsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists API plugins.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListApiPluginsRequest
         /// </param>
@@ -12127,6 +13105,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListApiPluginsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists API plugins.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListApiPluginsRequest
         /// </param>
@@ -12140,6 +13123,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListApiPluginsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists API plugins.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListApiPluginsRequest
         /// </param>
@@ -12155,7 +13143,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListBeebotIntent</para>
+        /// <para>Lists intents for small-model scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12213,7 +13201,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListBeebotIntent</para>
+        /// <para>Lists intents for small-model scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12271,7 +13259,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListBeebotIntent</para>
+        /// <para>Lists intents for small-model scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12289,7 +13277,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListBeebotIntent</para>
+        /// <para>Lists intents for small-model scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12307,7 +13295,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListBeebotIntentLgf</para>
+        /// <para>Lists the utterance templates for a specified intent in a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12369,7 +13357,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListBeebotIntentLgf</para>
+        /// <para>Lists the utterance templates for a specified intent in a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12431,7 +13419,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListBeebotIntentLgf</para>
+        /// <para>Lists the utterance templates for a specified intent in a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12449,7 +13437,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListBeebotIntentLgf</para>
+        /// <para>Lists the utterance templates for a specified intent in a scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12467,7 +13455,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListBeebotIntentUserSay</para>
+        /// <para>Lists user utterances for intents in small model scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12529,7 +13517,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListBeebotIntentUserSay</para>
+        /// <para>Lists user utterances for intents in small model scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12591,7 +13579,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListBeebotIntentUserSay</para>
+        /// <para>Lists user utterances for intents in small model scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12609,7 +13597,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListBeebotIntentUserSay</para>
+        /// <para>Lists user utterances for intents in small model scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12625,6 +13613,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListBeebotIntentUserSayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the instances of the Yunxiao Mi chatbot service in Alibaba Cloud.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListChatbotInstancesRequest
         /// </param>
@@ -12670,6 +13663,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListChatbotInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the instances of the Yunxiao Mi chatbot service in Alibaba Cloud.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListChatbotInstancesRequest
         /// </param>
@@ -12715,6 +13713,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListChatbotInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the instances of the Yunxiao Mi chatbot service in Alibaba Cloud.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListChatbotInstancesRequest
         /// </param>
@@ -12728,6 +13731,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListChatbotInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the instances of the Yunxiao Mi chatbot service in Alibaba Cloud.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListChatbotInstancesRequest
         /// </param>
@@ -12741,6 +13749,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListChatbotInstancesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the dialogue flows of a script in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDialogueFlowsRequest
         /// </param>
@@ -12782,6 +13795,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListDialogueFlowsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the dialogue flows of a script in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDialogueFlowsRequest
         /// </param>
@@ -12823,6 +13841,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListDialogueFlowsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the dialogue flows of a script in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDialogueFlowsRequest
         /// </param>
@@ -12836,6 +13859,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListDialogueFlowsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the dialogue flows of a script in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDialogueFlowsRequest
         /// </param>
@@ -12849,6 +13877,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListDialogueFlowsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of download tasks in Download Hub.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDownloadTasksRequest
         /// </param>
@@ -12882,6 +13915,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListDownloadTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of download tasks in Download Hub.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDownloadTasksRequest
         /// </param>
@@ -12915,6 +13953,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListDownloadTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of download tasks in Download Hub.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDownloadTasksRequest
         /// </param>
@@ -12928,6 +13971,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListDownloadTasksWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of download tasks in Download Hub.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListDownloadTasksRequest
         /// </param>
@@ -12941,6 +13989,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListDownloadTasksWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the ListFlashSmsTemplates operation to query flash SMS templates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsTemplatesRequest
         /// </param>
@@ -12974,6 +14027,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListFlashSmsTemplatesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the ListFlashSmsTemplates operation to query flash SMS templates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsTemplatesRequest
         /// </param>
@@ -13007,6 +14065,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListFlashSmsTemplatesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the ListFlashSmsTemplates operation to query flash SMS templates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsTemplatesRequest
         /// </param>
@@ -13020,6 +14083,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListFlashSmsTemplatesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call the ListFlashSmsTemplates operation to query flash SMS templates.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListFlashSmsTemplatesRequest
         /// </param>
@@ -13033,6 +14101,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListFlashSmsTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of key questions. This is a legacy canvas interface.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListGlobalQuestionsRequest
         /// </param>
@@ -13082,6 +14155,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListGlobalQuestionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of key questions. This is a legacy canvas interface.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListGlobalQuestionsRequest
         /// </param>
@@ -13131,6 +14209,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListGlobalQuestionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of key questions. This is a legacy canvas interface.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListGlobalQuestionsRequest
         /// </param>
@@ -13144,6 +14227,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListGlobalQuestionsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of key questions. This is a legacy canvas interface.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListGlobalQuestionsRequest
         /// </param>
@@ -13157,6 +14245,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListGlobalQuestionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists Outbound Calling Bot service instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesRequest
         /// </param>
@@ -13210,6 +14303,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListInstancesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists Outbound Calling Bot service instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesRequest
         /// </param>
@@ -13263,6 +14361,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListInstancesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists Outbound Calling Bot service instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesRequest
         /// </param>
@@ -13276,6 +14379,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListInstancesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists Outbound Calling Bot service instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListInstancesRequest
         /// </param>
@@ -13291,7 +14399,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>意图列表</para>
+        /// <para>Query intent for the Annotation Center list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13365,7 +14473,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>意图列表</para>
+        /// <para>Query intent for the Annotation Center list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13439,7 +14547,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>意图列表</para>
+        /// <para>Query intent for the Annotation Center list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13457,7 +14565,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>意图列表</para>
+        /// <para>Query intent for the Annotation Center list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13473,6 +14581,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListIntentionsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves intents from the legacy canvas interface.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntentsRequest
         /// </param>
@@ -13526,6 +14639,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListIntentsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves intents from the legacy canvas interface.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntentsRequest
         /// </param>
@@ -13579,6 +14697,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListIntentsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves intents from the legacy canvas interface.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntentsRequest
         /// </param>
@@ -13592,6 +14715,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListIntentsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves intents from the legacy canvas interface.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListIntentsRequest
         /// </param>
@@ -13605,6 +14733,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListIntentsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of outbound call task groups.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobGroupsRequest
         /// </param>
@@ -13674,6 +14807,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListJobGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of outbound call task groups.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobGroupsRequest
         /// </param>
@@ -13743,6 +14881,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListJobGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of outbound call task groups.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobGroupsRequest
         /// </param>
@@ -13756,6 +14899,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListJobGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of outbound call task groups.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobGroupsRequest
         /// </param>
@@ -13769,6 +14917,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListJobGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of outbound call tasks asynchronously. Call this operation to retrieve the results of a <c>ListJobGroup</c> call that included the <c>Async</c> parameter.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobGroupsAsyncRequest
         /// </param>
@@ -13802,6 +14955,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListJobGroupsAsyncResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of outbound call tasks asynchronously. Call this operation to retrieve the results of a <c>ListJobGroup</c> call that included the <c>Async</c> parameter.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobGroupsAsyncRequest
         /// </param>
@@ -13835,6 +14993,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListJobGroupsAsyncResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of outbound call tasks asynchronously. Call this operation to retrieve the results of a <c>ListJobGroup</c> call that included the <c>Async</c> parameter.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobGroupsAsyncRequest
         /// </param>
@@ -13848,6 +15011,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListJobGroupsAsyncWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of outbound call tasks asynchronously. Call this operation to retrieve the results of a <c>ListJobGroup</c> call that included the <c>Async</c> parameter.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobGroupsAsyncRequest
         /// </param>
@@ -13863,7 +15031,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListJobs</para>
+        /// <para>Query multiple jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13909,7 +15077,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListJobs</para>
+        /// <para>Query multiple jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13955,7 +15123,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListJobs</para>
+        /// <para>Query multiple jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13973,7 +15141,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListJobs</para>
+        /// <para>Query multiple jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13989,6 +15157,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListJobsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists jobs by job group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobsByGroupRequest
         /// </param>
@@ -14046,6 +15219,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListJobsByGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists jobs by job group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobsByGroupRequest
         /// </param>
@@ -14103,6 +15281,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListJobsByGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists jobs by job group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobsByGroupRequest
         /// </param>
@@ -14116,6 +15299,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListJobsByGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists jobs by job group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListJobsByGroupRequest
         /// </param>
@@ -14129,6 +15317,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListJobsByGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List outbound call numbers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListOutboundCallNumbersRequest
         /// </param>
@@ -14174,6 +15367,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListOutboundCallNumbersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List outbound call numbers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListOutboundCallNumbersRequest
         /// </param>
@@ -14219,6 +15417,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListOutboundCallNumbersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List outbound call numbers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListOutboundCallNumbersRequest
         /// </param>
@@ -14232,6 +15435,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListOutboundCallNumbersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>List outbound call numbers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListOutboundCallNumbersRequest
         /// </param>
@@ -14245,6 +15453,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListOutboundCallNumbersWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists tags for business resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListResourceTagsRequest
         /// </param>
@@ -14290,6 +15503,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListResourceTagsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists tags for business resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListResourceTagsRequest
         /// </param>
@@ -14335,6 +15553,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListResourceTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists tags for business resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListResourceTagsRequest
         /// </param>
@@ -14348,6 +15571,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListResourceTagsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists tags for business resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListResourceTagsRequest
         /// </param>
@@ -14361,6 +15589,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListResourceTagsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the publication history of the small model for outbound calls.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScriptPublishHistoriesRequest
         /// </param>
@@ -14410,6 +15643,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListScriptPublishHistoriesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the publication history of the small model for outbound calls.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScriptPublishHistoriesRequest
         /// </param>
@@ -14459,6 +15697,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListScriptPublishHistoriesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the publication history of the small model for outbound calls.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScriptPublishHistoriesRequest
         /// </param>
@@ -14472,6 +15715,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListScriptPublishHistoriesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the publication history of the small model for outbound calls.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScriptPublishHistoriesRequest
         /// </param>
@@ -14485,6 +15733,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListScriptPublishHistoriesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of recording files. Use this operation in small model scenarios.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScriptRecordingRequest
         /// </param>
@@ -14550,6 +15803,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListScriptRecordingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of recording files. Use this operation in small model scenarios.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScriptRecordingRequest
         /// </param>
@@ -14615,6 +15873,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListScriptRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of recording files. Use this operation in small model scenarios.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScriptRecordingRequest
         /// </param>
@@ -14628,6 +15891,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListScriptRecordingWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the list of recording files. Use this operation in small model scenarios.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListScriptRecordingRequest
         /// </param>
@@ -14643,7 +15911,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景中当前使用的变量</para>
+        /// <para>Queries the variables used in a script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14693,7 +15961,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景中当前使用的变量</para>
+        /// <para>Queries the variables used in a script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14743,7 +16011,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景中当前使用的变量</para>
+        /// <para>Queries the variables used in a script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14761,7 +16029,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取场景中当前使用的变量</para>
+        /// <para>Queries the variables used in a script.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14777,6 +16045,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListScriptVariablesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the audio in a legacy canvas scene.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListScriptVoiceConfigsRequest
         /// </param>
@@ -14826,6 +16104,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListScriptVoiceConfigsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the audio in a legacy canvas scene.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListScriptVoiceConfigsRequest
         /// </param>
@@ -14875,6 +16163,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListScriptVoiceConfigsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the audio in a legacy canvas scene.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListScriptVoiceConfigsRequest
         /// </param>
@@ -14888,6 +16186,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListScriptVoiceConfigsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists the audio in a legacy canvas scene.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListScriptVoiceConfigsRequest
         /// </param>
@@ -14903,9 +16211,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>View the script list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14963,9 +16269,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>View the script list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15023,9 +16327,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>View the script list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15043,9 +16345,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>View the script list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15061,6 +16361,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListScriptsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the tag relationships for resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -15114,6 +16419,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListTagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the tag relationships for resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -15167,6 +16477,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListTagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the tag relationships for resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -15180,6 +16495,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListTagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the tag relationships for resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagResourcesRequest
         /// </param>
@@ -15193,6 +16513,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags of a script. This is a legacy canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagsRequest
         /// </param>
@@ -15234,6 +16559,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListTagsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags of a script. This is a legacy canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagsRequest
         /// </param>
@@ -15275,6 +16605,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ListTagsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags of a script. This is a legacy canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagsRequest
         /// </param>
@@ -15288,6 +16623,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ListTagsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the tags of a script. This is a legacy canvas API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListTagsRequest
         /// </param>
@@ -15301,6 +16641,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ListTagsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the agent configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ModifyAgentProfileRequest
         /// </param>
@@ -15392,6 +16737,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyAgentProfileResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the agent configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// ModifyAgentProfileRequest
         /// </param>
@@ -15483,6 +16833,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyAgentProfileResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the agent configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAgentProfileRequest
         /// </param>
@@ -15496,6 +16851,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ModifyAgentProfileWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify the agent configuration.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAgentProfileRequest
         /// </param>
@@ -15509,6 +16869,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ModifyAgentProfileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status and name of an annotation task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAnnotationMissionRequest
         /// </param>
@@ -15558,6 +16923,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyAnnotationMissionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status and name of an annotation task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAnnotationMissionRequest
         /// </param>
@@ -15607,6 +16977,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyAnnotationMissionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status and name of an annotation task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAnnotationMissionRequest
         /// </param>
@@ -15620,6 +16995,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ModifyAnnotationMissionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the status and name of an annotation task.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAnnotationMissionRequest
         /// </param>
@@ -15633,6 +17013,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ModifyAnnotationMissionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies batch jobs. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyBatchJobsRequest
         /// </param>
@@ -15706,6 +17091,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyBatchJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies batch jobs. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyBatchJobsRequest
         /// </param>
@@ -15779,6 +17169,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyBatchJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies batch jobs. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyBatchJobsRequest
         /// </param>
@@ -15792,6 +17187,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ModifyBatchJobsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies batch jobs. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyBatchJobsRequest
         /// </param>
@@ -15807,7 +17207,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyBeebotIntent</para>
+        /// <para>Modify the intent for a small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15867,7 +17267,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyBeebotIntent</para>
+        /// <para>Modify the intent for a small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15927,7 +17327,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyBeebotIntent</para>
+        /// <para>Modify the intent for a small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15945,7 +17345,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyBeebotIntent</para>
+        /// <para>Modify the intent for a small-model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15963,7 +17363,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyBeebotIntentLgf</para>
+        /// <para>Modifies the intent utterance template for a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16023,7 +17423,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyBeebotIntentLgf</para>
+        /// <para>Modifies the intent utterance template for a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16083,7 +17483,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyBeebotIntentLgf</para>
+        /// <para>Modifies the intent utterance template for a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16101,7 +17501,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyBeebotIntentLgf</para>
+        /// <para>Modifies the intent utterance template for a small model scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16119,7 +17519,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyBeebotIntentUserSay</para>
+        /// <para>Modifies a user utterance for an intent in a Beebot scenario.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16179,7 +17579,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyBeebotIntentUserSay</para>
+        /// <para>Modifies a user utterance for an intent in a Beebot scenario.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16239,7 +17639,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyBeebotIntentUserSay</para>
+        /// <para>Modifies a user utterance for an intent in a Beebot scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16257,7 +17657,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyBeebotIntentUserSay</para>
+        /// <para>Modifies a user utterance for an intent in a Beebot scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16273,6 +17673,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ModifyBeebotIntentUserSayWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a dialogue flow. This is a legacy API for the canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDialogueFlowRequest
         /// </param>
@@ -16326,6 +17731,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyDialogueFlowResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a dialogue flow. This is a legacy API for the canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDialogueFlowRequest
         /// </param>
@@ -16379,6 +17789,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyDialogueFlowResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a dialogue flow. This is a legacy API for the canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDialogueFlowRequest
         /// </param>
@@ -16392,6 +17807,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ModifyDialogueFlowWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a dialogue flow. This is a legacy API for the canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDialogueFlowRequest
         /// </param>
@@ -16405,6 +17825,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ModifyDialogueFlowWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the global no-call feature for nonexistent numbers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyEmptyNumberNoMoreCallsInfoRequest
         /// </param>
@@ -16450,6 +17875,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyEmptyNumberNoMoreCallsInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the global no-call feature for nonexistent numbers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyEmptyNumberNoMoreCallsInfoRequest
         /// </param>
@@ -16495,6 +17925,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyEmptyNumberNoMoreCallsInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the global no-call feature for nonexistent numbers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyEmptyNumberNoMoreCallsInfoRequest
         /// </param>
@@ -16508,6 +17943,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ModifyEmptyNumberNoMoreCallsInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables or disables the global no-call feature for nonexistent numbers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyEmptyNumberNoMoreCallsInfoRequest
         /// </param>
@@ -16521,6 +17961,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ModifyEmptyNumberNoMoreCallsInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a global question in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGlobalQuestionRequest
         /// </param>
@@ -16582,6 +18027,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyGlobalQuestionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a global question in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGlobalQuestionRequest
         /// </param>
@@ -16643,6 +18093,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyGlobalQuestionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a global question in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGlobalQuestionRequest
         /// </param>
@@ -16656,6 +18111,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ModifyGlobalQuestionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a global question in the legacy canvas.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyGlobalQuestionRequest
         /// </param>
@@ -16669,6 +18129,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ModifyGlobalQuestionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an Outbound Bot instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRequest
         /// </param>
@@ -16722,6 +18187,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an Outbound Bot instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRequest
         /// </param>
@@ -16775,6 +18245,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an Outbound Bot instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRequest
         /// </param>
@@ -16788,6 +18263,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ModifyInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an Outbound Bot instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyInstanceRequest
         /// </param>
@@ -16801,6 +18281,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ModifyInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an intent in the legacy canvas. This is a legacy API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyIntentRequest
         /// </param>
@@ -16862,6 +18347,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyIntentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an intent in the legacy canvas. This is a legacy API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyIntentRequest
         /// </param>
@@ -16923,6 +18413,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyIntentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an intent in the legacy canvas. This is a legacy API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyIntentRequest
         /// </param>
@@ -16936,6 +18431,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ModifyIntentWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies an intent in the legacy canvas. This is a legacy API.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyIntentRequest
         /// </param>
@@ -16951,7 +18451,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改任务组</para>
+        /// <para>Modify an intelligent outbound call task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17049,7 +18549,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改任务组</para>
+        /// <para>Modify an intelligent outbound call task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17147,7 +18647,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改任务组</para>
+        /// <para>Modify an intelligent outbound call task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17165,7 +18665,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改任务组</para>
+        /// <para>Modify an intelligent outbound call task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17183,7 +18683,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyOutboundCallNumber</para>
+        /// <para>Modifies an outbound call number. This API is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17241,7 +18741,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyOutboundCallNumber</para>
+        /// <para>Modifies an outbound call number. This API is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17299,7 +18799,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyOutboundCallNumber</para>
+        /// <para>Modifies an outbound call number. This API is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17317,7 +18817,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyOutboundCallNumber</para>
+        /// <para>Modifies an outbound call number. This API is deprecated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17335,7 +18835,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改场景</para>
+        /// <para>Modify script information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17469,7 +18969,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改场景</para>
+        /// <para>Modify script information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17603,7 +19103,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改场景</para>
+        /// <para>Modify script information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17621,7 +19121,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改场景</para>
+        /// <para>Modify script information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17637,6 +19137,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ModifyScriptWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the voice configuration of a script in a legacy canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyScriptVoiceConfigRequest
         /// </param>
@@ -17690,6 +19200,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyScriptVoiceConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the voice configuration of a script in a legacy canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyScriptVoiceConfigRequest
         /// </param>
@@ -17743,6 +19263,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyScriptVoiceConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the voice configuration of a script in a legacy canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyScriptVoiceConfigRequest
         /// </param>
@@ -17756,6 +19286,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ModifyScriptVoiceConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the voice configuration of a script in a legacy canvas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>**</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyScriptVoiceConfigRequest
         /// </param>
@@ -17769,6 +19309,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ModifyScriptVoiceConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the text-to-speech (TTS) configuration for an existing canvas scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTTSConfigRequest
         /// </param>
@@ -17834,6 +19379,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyTTSConfigResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the text-to-speech (TTS) configuration for an existing canvas scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTTSConfigRequest
         /// </param>
@@ -17899,6 +19449,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyTTSConfigResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the text-to-speech (TTS) configuration for an existing canvas scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTTSConfigRequest
         /// </param>
@@ -17912,6 +19467,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ModifyTTSConfigWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the text-to-speech (TTS) configuration for an existing canvas scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTTSConfigRequest
         /// </param>
@@ -17925,6 +19485,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ModifyTTSConfigWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies tag groups for the legacy canvas interface.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTagGroupsRequest
         /// </param>
@@ -17974,6 +19539,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyTagGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies tag groups for the legacy canvas interface.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTagGroupsRequest
         /// </param>
@@ -18023,6 +19593,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ModifyTagGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies tag groups for the legacy canvas interface.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTagGroupsRequest
         /// </param>
@@ -18036,6 +19611,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ModifyTagGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies tag groups for the legacy canvas interface.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyTagGroupsRequest
         /// </param>
@@ -18049,6 +19629,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ModifyTagGroupsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishing a scenario</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PublishScriptRequest
         /// </param>
@@ -18094,6 +19679,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<PublishScriptResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishing a scenario</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PublishScriptRequest
         /// </param>
@@ -18139,6 +19729,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<PublishScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishing a scenario</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PublishScriptRequest
         /// </param>
@@ -18152,6 +19747,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return PublishScriptWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishing a scenario</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PublishScriptRequest
         /// </param>
@@ -18165,6 +19765,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await PublishScriptWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes the debug version of a script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PublishScriptForDebugRequest
         /// </param>
@@ -18206,6 +19811,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<PublishScriptForDebugResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes the debug version of a script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PublishScriptForDebugRequest
         /// </param>
@@ -18247,6 +19857,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<PublishScriptForDebugResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes the debug version of a script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PublishScriptForDebugRequest
         /// </param>
@@ -18260,6 +19875,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return PublishScriptForDebugWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes the debug version of a script.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// PublishScriptForDebugRequest
         /// </param>
@@ -18275,7 +19895,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>QueryJobs</para>
+        /// <para>You can query the list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18353,7 +19973,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>QueryJobs</para>
+        /// <para>You can query the list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18431,7 +20051,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>QueryJobs</para>
+        /// <para>You can query the list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18449,7 +20069,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>QueryJobs</para>
+        /// <para>You can query the list of jobs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18467,7 +20087,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取外呼任务结果信息</para>
+        /// <para>Find tasks by result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18561,7 +20181,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取外呼任务结果信息</para>
+        /// <para>Find tasks by result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18655,7 +20275,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取外呼任务结果信息</para>
+        /// <para>Find tasks by result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18673,7 +20293,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取外呼任务结果信息</para>
+        /// <para>Find tasks by result.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18689,6 +20309,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await QueryJobsWithResultWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This legacy canvas interface retrieves the list of recorded speech transcripts.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryScriptWaveformsRequest
         /// </param>
@@ -18734,6 +20359,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<QueryScriptWaveformsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This legacy canvas interface retrieves the list of recorded speech transcripts.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryScriptWaveformsRequest
         /// </param>
@@ -18779,6 +20409,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<QueryScriptWaveformsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This legacy canvas interface retrieves the list of recorded speech transcripts.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryScriptWaveformsRequest
         /// </param>
@@ -18792,6 +20427,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return QueryScriptWaveformsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This legacy canvas interface retrieves the list of recorded speech transcripts.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryScriptWaveformsRequest
         /// </param>
@@ -18805,6 +20445,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await QueryScriptWaveformsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries scenario information by status.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryScriptsByStatusRequest
         /// </param>
@@ -18854,6 +20499,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<QueryScriptsByStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries scenario information by status.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryScriptsByStatusRequest
         /// </param>
@@ -18903,6 +20553,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<QueryScriptsByStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries scenario information by status.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryScriptsByStatusRequest
         /// </param>
@@ -18916,6 +20571,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return QueryScriptsByStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries scenario information by status.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryScriptsByStatusRequest
         /// </param>
@@ -18929,6 +20589,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await QueryScriptsByStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CC sends the call failure reason to the outbound calling system. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RecordFailureRequest
         /// </param>
@@ -18994,6 +20659,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<RecordFailureResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CC sends the call failure reason to the outbound calling system. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RecordFailureRequest
         /// </param>
@@ -19059,6 +20729,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<RecordFailureResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CC sends the call failure reason to the outbound calling system. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RecordFailureRequest
         /// </param>
@@ -19072,6 +20747,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return RecordFailureWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>CC sends the call failure reason to the outbound calling system. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RecordFailureRequest
         /// </param>
@@ -19085,6 +20765,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await RecordFailureWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes paused jobs.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeJobsRequest
         /// </param>
@@ -19142,6 +20827,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ResumeJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes paused jobs.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeJobsRequest
         /// </param>
@@ -19199,6 +20889,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<ResumeJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes paused jobs.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeJobsRequest
         /// </param>
@@ -19212,6 +20907,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return ResumeJobsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resumes paused jobs.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResumeJobsRequest
         /// </param>
@@ -19225,6 +20925,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await ResumeJobsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Roll back a published small model scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RollbackScriptRequest
         /// </param>
@@ -19270,6 +20975,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<RollbackScriptResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Roll back a published small model scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RollbackScriptRequest
         /// </param>
@@ -19315,6 +21025,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<RollbackScriptResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Roll back a published small model scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RollbackScriptRequest
         /// </param>
@@ -19328,6 +21043,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return RollbackScriptWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Roll back a published small model scenario.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RollbackScriptRequest
         /// </param>
@@ -19343,7 +21063,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存接听后延迟播报时间</para>
+        /// <para>Sets the delay before playback starts after the call is answered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19393,7 +21113,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存接听后延迟播报时间</para>
+        /// <para>Sets the delay before playback starts after the call is answered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19443,7 +21163,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存接听后延迟播报时间</para>
+        /// <para>Sets the delay before playback starts after the call is answered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19461,7 +21181,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存接听后延迟播报时间</para>
+        /// <para>Sets the delay before playback starts after the call is answered.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19477,6 +21197,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SaveAfterAnswerDelayPlaybackWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can save a list of annotation chat instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveAnnotationMissionSessionListRequest
         /// </param>
@@ -19538,6 +21263,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveAnnotationMissionSessionListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can save a list of annotation chat instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveAnnotationMissionSessionListRequest
         /// </param>
@@ -19599,6 +21329,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveAnnotationMissionSessionListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can save a list of annotation chat instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveAnnotationMissionSessionListRequest
         /// </param>
@@ -19612,6 +21347,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SaveAnnotationMissionSessionListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can save a list of annotation chat instances.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveAnnotationMissionSessionListRequest
         /// </param>
@@ -19625,6 +21365,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SaveAnnotationMissionSessionListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves instance tags in a batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveAnnotationMissionTagInfoListRequest
         /// </param>
@@ -19674,6 +21419,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveAnnotationMissionTagInfoListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves instance tags in a batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveAnnotationMissionTagInfoListRequest
         /// </param>
@@ -19723,6 +21473,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveAnnotationMissionTagInfoListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves instance tags in a batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveAnnotationMissionTagInfoListRequest
         /// </param>
@@ -19736,6 +21491,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SaveAnnotationMissionTagInfoListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves instance tags in a batch.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveAnnotationMissionTagInfoListRequest
         /// </param>
@@ -19751,7 +21511,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑基础策略有效时间窗口</para>
+        /// <para>Modifies the global outbound call time window in system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19813,7 +21573,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑基础策略有效时间窗口</para>
+        /// <para>Modifies the global outbound call time window in system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19875,7 +21635,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑基础策略有效时间窗口</para>
+        /// <para>Modifies the global outbound call time window in system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19893,7 +21653,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑基础策略有效时间窗口</para>
+        /// <para>Modifies the global outbound call time window in system administration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19911,7 +21671,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存外呼黑名单列表</para>
+        /// <para>Adds contacts to the instance\&quot;s blocklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19961,7 +21721,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存外呼黑名单列表</para>
+        /// <para>Adds contacts to the instance\&quot;s blocklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20011,7 +21771,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存外呼黑名单列表</para>
+        /// <para>Adds contacts to the instance\&quot;s blocklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20029,7 +21789,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存外呼黑名单列表</para>
+        /// <para>Adds contacts to the instance\&quot;s blocklist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20047,7 +21807,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存外呼白名单</para>
+        /// <para>Saves an outbound call whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20097,7 +21857,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存外呼白名单</para>
+        /// <para>Saves an outbound call whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20147,7 +21907,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存外呼白名单</para>
+        /// <para>Saves an outbound call whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20165,7 +21925,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存外呼白名单</para>
+        /// <para>Saves an outbound call whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20181,6 +21941,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SaveContactWhiteListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the validity period of a basic policy. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveEffectiveDaysRequest
         /// </param>
@@ -20226,6 +21991,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveEffectiveDaysResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the validity period of a basic policy. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveEffectiveDaysRequest
         /// </param>
@@ -20271,6 +22041,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SaveEffectiveDaysResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the validity period of a basic policy. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveEffectiveDaysRequest
         /// </param>
@@ -20284,6 +22059,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SaveEffectiveDaysWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves the validity period of a basic policy. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SaveEffectiveDaysRequest
         /// </param>
@@ -20299,7 +22079,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存每日最大外呼量</para>
+        /// <para>Sets the maximum number of daily outbound call attempts to a specific number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20349,7 +22129,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存每日最大外呼量</para>
+        /// <para>Sets the maximum number of daily outbound call attempts to a specific number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20399,7 +22179,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存每日最大外呼量</para>
+        /// <para>Sets the maximum number of daily outbound call attempts to a specific number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20417,7 +22197,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存每日最大外呼量</para>
+        /// <para>Sets the maximum number of daily outbound call attempts to a specific number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20435,7 +22215,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>外呼历史查询</para>
+        /// <para>Search for tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20473,7 +22253,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>外呼历史查询</para>
+        /// <para>Search for tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20511,7 +22291,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>外呼历史查询</para>
+        /// <para>Search for tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20529,7 +22309,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>外呼历史查询</para>
+        /// <para>Search for tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20547,7 +22327,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启一个任务</para>
+        /// <para>This API initiates a call directly, bypassing the outbound call scheduling system. It is available only to users on the whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20609,7 +22389,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启一个任务</para>
+        /// <para>This API initiates a call directly, bypassing the outbound call scheduling system. It is available only to users on the whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20671,7 +22451,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启一个任务</para>
+        /// <para>This API initiates a call directly, bypassing the outbound call scheduling system. It is available only to users on the whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20689,7 +22469,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启一个任务</para>
+        /// <para>This API initiates a call directly, bypassing the outbound call scheduling system. It is available only to users on the whitelist.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20705,6 +22485,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await StartJobWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a draft job group. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitBatchJobsRequest
         /// </param>
@@ -20746,6 +22531,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SubmitBatchJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a draft job group. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitBatchJobsRequest
         /// </param>
@@ -20787,6 +22577,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SubmitBatchJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a draft job group. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitBatchJobsRequest
         /// </param>
@@ -20800,6 +22595,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SubmitBatchJobsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a draft job group. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitBatchJobsRequest
         /// </param>
@@ -20813,6 +22613,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SubmitBatchJobsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a recording of an outbound call. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitRecordingRequest
         /// </param>
@@ -20862,6 +22667,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SubmitRecordingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a recording of an outbound call. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitRecordingRequest
         /// </param>
@@ -20911,6 +22721,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SubmitRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a recording of an outbound call. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitRecordingRequest
         /// </param>
@@ -20924,6 +22739,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SubmitRecordingWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a recording of an outbound call. This operation is deprecated.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitRecordingRequest
         /// </param>
@@ -20937,6 +22757,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SubmitRecordingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submit the scenario for release review.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitScriptReviewRequest
         /// </param>
@@ -20986,6 +22811,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SubmitScriptReviewResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submit the scenario for release review.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitScriptReviewRequest
         /// </param>
@@ -21035,6 +22865,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SubmitScriptReviewResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submit the scenario for release review.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitScriptReviewRequest
         /// </param>
@@ -21048,6 +22883,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SubmitScriptReviewWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submit the scenario for release review.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SubmitScriptReviewRequest
         /// </param>
@@ -21063,7 +22903,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>止呼</para>
+        /// <para>Suspends outbound calls for a list of phone numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21113,7 +22953,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>止呼</para>
+        /// <para>Suspends outbound calls for a list of phone numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21163,7 +23003,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>止呼</para>
+        /// <para>Suspends outbound calls for a list of phone numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21181,7 +23021,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>止呼</para>
+        /// <para>Suspends outbound calls for a list of phone numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21199,7 +23039,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SuspendCallWithFile</para>
+        /// <para>Suspends outbound calls using data from a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21249,7 +23089,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SuspendCallWithFile</para>
+        /// <para>Suspends outbound calls using data from a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21299,7 +23139,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SuspendCallWithFile</para>
+        /// <para>Suspends outbound calls using data from a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21317,7 +23157,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SuspendCallWithFile</para>
+        /// <para>Suspends outbound calls using data from a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21333,6 +23173,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SuspendCallWithFileWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can pause the job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendJobsRequest
         /// </param>
@@ -21390,6 +23235,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SuspendJobsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can pause the job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendJobsRequest
         /// </param>
@@ -21447,6 +23297,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<SuspendJobsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can pause the job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendJobsRequest
         /// </param>
@@ -21460,6 +23315,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return SuspendJobsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can pause the job.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// SuspendJobsRequest
         /// </param>
@@ -21473,11 +23333,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await SuspendJobsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to instance resources.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>\<em>\</em></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21529,11 +23392,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<TagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to instance resources.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>\<em>\</em></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21585,11 +23451,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<TagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to instance resources.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>\<em>\</em></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21605,11 +23474,14 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds tags to instance resources.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>\<em>\</em></para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21627,7 +23499,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TaskPreparing</para>
+        /// <para>Prepares a task for execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21677,7 +23549,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TaskPreparing</para>
+        /// <para>Prepares a task for execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21727,7 +23599,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TaskPreparing</para>
+        /// <para>Prepares a task for execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21745,7 +23617,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>TaskPreparing</para>
+        /// <para>Prepares a task for execution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21761,6 +23633,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await TaskPreparingWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a call during an active session.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TerminateCallRequest
         /// </param>
@@ -21802,6 +23679,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<TerminateCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a call during an active session.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TerminateCallRequest
         /// </param>
@@ -21843,6 +23725,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<TerminateCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a call during an active session.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TerminateCallRequest
         /// </param>
@@ -21856,6 +23743,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TerminateCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Terminates a call during an active session.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TerminateCallRequest
         /// </param>
@@ -21869,6 +23761,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await TerminateCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Remove tags from resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UntagResourcesRequest
         /// </param>
@@ -21922,6 +23819,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<UntagResourcesResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Remove tags from resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UntagResourcesRequest
         /// </param>
@@ -21975,6 +23877,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<UntagResourcesResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Remove tags from resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UntagResourcesRequest
         /// </param>
@@ -21988,6 +23895,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return UntagResourcesWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Remove tags from resources.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UntagResourcesRequest
         /// </param>
@@ -22001,6 +23913,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return await UntagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upload recording files.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UploadScriptRecordingRequest
         /// </param>
@@ -22054,6 +23971,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<UploadScriptRecordingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upload recording files.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UploadScriptRecordingRequest
         /// </param>
@@ -22107,6 +24029,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return TeaModel.ToObject<UploadScriptRecordingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upload recording files.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UploadScriptRecordingRequest
         /// </param>
@@ -22120,6 +24047,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
             return UploadScriptRecordingWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Upload recording files.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UploadScriptRecordingRequest
         /// </param>
@@ -22135,12 +24067,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>WithdrawScriptReview</para>
+        /// <para>Revoke script review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>**</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22186,12 +24118,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>WithdrawScriptReview</para>
+        /// <para>Revoke script review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>**</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22237,12 +24169,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>WithdrawScriptReview</para>
+        /// <para>Revoke script review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>**</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22260,12 +24192,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>WithdrawScriptReview</para>
+        /// <para>Revoke script review.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>**</para>
         /// </description>
         /// 
         /// <param name="request">

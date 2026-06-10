@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyEmptyNumberNoMoreCallsInfoRequest : TeaModel {
         /// <summary>
+        /// <para>Enable or disable the nonexistent number no-call feature.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? EmptyNumberNoMoreCalls { get; set; }
 
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string EntryId { get; set; }
 
         /// <summary>
+        /// <para>Policy level. Use 2 for business instances.</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: system</para>
+        /// </description></item>
+        /// <item><description><para>1: tenant</para>
+        /// </description></item>
+        /// <item><description><para>2: instance</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

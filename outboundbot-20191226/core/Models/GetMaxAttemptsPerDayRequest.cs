@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetMaxAttemptsPerDayRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string EntryId { get; set; }
 
         /// <summary>
+        /// <para>The policy level. The default value is 2 for a business instance.</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: System</para>
+        /// </description></item>
+        /// <item><description><para>1: Tenant</para>
+        /// </description></item>
+        /// <item><description><para>2: Instance</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

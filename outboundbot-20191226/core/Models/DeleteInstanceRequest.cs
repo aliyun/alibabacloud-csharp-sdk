@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DeleteInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

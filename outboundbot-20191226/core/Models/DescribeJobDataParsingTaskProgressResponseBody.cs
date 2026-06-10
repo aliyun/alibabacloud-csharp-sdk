@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DescribeJobDataParsingTaskProgressResponseBody : TeaModel {
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Parsing progress.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public DescribeJobDataParsingTaskProgressResponseBodyProgress Progress { get; set; }
         public class DescribeJobDataParsingTaskProgressResponseBodyProgress : TeaModel {
             /// <summary>
+            /// <para>Error code for a failed parsing task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Permission.JobStatus</para>
             /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string FailErrorCode { get; set; }
 
             /// <summary>
+            /// <para>Reason for failure.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CreateCorpus</para>
             /// </summary>
@@ -57,11 +69,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public string FailReason { get; set; }
 
+            /// <summary>
+            /// <para>Download URL for the file that lists parsing failures. This field is deprecated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxxx</para>
+            /// </summary>
             [NameInMap("FeedbackUrl")]
             [Validation(Required=false)]
             public string FeedbackUrl { get; set; }
 
             /// <summary>
+            /// <para>Number of jobs processed so far.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -70,6 +90,20 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? HandledJobCount { get; set; }
 
             /// <summary>
+            /// <para>Status of the job.</para>
+            /// <list type="bullet">
+            /// <item><description><para>Pending: The job is waiting to start.</para>
+            /// </description></item>
+            /// <item><description><para>InProgress: The job is running.</para>
+            /// </description></item>
+            /// <item><description><para>Finished: The job completed successfully.</para>
+            /// </description></item>
+            /// <item><description><para>PartialFinished: The job completed partially.</para>
+            /// </description></item>
+            /// <item><description><para>Failed: The job failed.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Pending</para>
             /// </summary>
@@ -78,6 +112,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>Total number of jobs in the task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -88,6 +124,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -96,6 +134,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

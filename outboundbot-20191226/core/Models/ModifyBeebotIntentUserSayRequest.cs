@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyBeebotIntentUserSayRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The scenario ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
+        /// <para>The definition of the user utterance.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserSayDefinition")]
@@ -37,13 +40,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public ModifyBeebotIntentUserSayRequestUserSayDefinition UserSayDefinition { get; set; }
         public class ModifyBeebotIntentUserSayRequestUserSayDefinition : TeaModel {
             /// <summary>
+            /// <para>The content of the user utterance.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>你知道xxxxx么？</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The intent ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -56,6 +64,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>The user utterance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

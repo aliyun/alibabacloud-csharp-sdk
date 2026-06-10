@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class CreateDialogueFlowRequest : TeaModel {
         /// <summary>
+        /// <para>The type of the dialogue flow. Use <c>MainFlow</c> for a main flow or <c>SubFlow</c> for a subflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,13 +21,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string DialogueFlowType { get; set; }
 
         /// <summary>
+        /// <para>The dialogue flow name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>主流程</para>
         /// </summary>
         [NameInMap("DialogueName")]
         [Validation(Required=false)]
         public string DialogueName { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +43,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The script ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListFlashSmsTemplatesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the flash SMS configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ConfigId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,15 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the flash SMS provider.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Uincall: Beijing Uincall Communication Co., Ltd.</para>
+        /// </description></item>
+        /// <item><description><para>ShangHaiTianNan: Shanghai Tiannan</para>
+        /// </description></item>
+        /// <item><description><para>HeDao: Galacos</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

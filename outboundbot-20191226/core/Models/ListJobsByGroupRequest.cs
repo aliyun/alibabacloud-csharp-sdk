@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListJobsByGroupRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Job failure reason</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NoAnswer</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobFailureReason { get; set; }
 
         /// <summary>
+        /// <para>Job group ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobGroupId { get; set; }
 
         /// <summary>
+        /// <para>Job status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>
         /// </summary>
@@ -46,6 +52,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobStatus { get; set; }
 
         /// <summary>
+        /// <para>Page number</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +63,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Number of entries per page</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code of the API</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The message of the API</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The token to start the next query</para>
+        /// 
         /// <b>Example:</b>
         /// <para>b949ae1f-01dc-4191-ae5a-70fbe6772fd8</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call is successful</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -57,11 +69,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
+        /// <summary>
+        /// <para>Resources</para>
+        /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
+            /// <para>Resource ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>b949ae1f-01dc-4191-ae5a-70fbe6772fd8</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ResourceId { get; set; }
 
             /// <summary>
+            /// <para>Resource type</para>
+            /// 
             /// <b>Example:</b>
             /// <para>instance</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ResourceType { get; set; }
 
             /// <summary>
+            /// <para>Tag key</para>
+            /// 
             /// <b>Example:</b>
             /// <para>key1</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string TagKey { get; set; }
 
             /// <summary>
+            /// <para>Tag value</para>
+            /// 
             /// <b>Example:</b>
             /// <para>value1</para>
             /// </summary>

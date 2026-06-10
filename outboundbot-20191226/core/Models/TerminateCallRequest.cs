@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class TerminateCallRequest : TeaModel {
         /// <summary>
+        /// <para>ID of the call.</para>
+        /// <remarks>
+        /// <para>You can get this ID by calling the DescribeJob operation.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string CallId { get; set; }
 
         /// <summary>
+        /// <para>ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

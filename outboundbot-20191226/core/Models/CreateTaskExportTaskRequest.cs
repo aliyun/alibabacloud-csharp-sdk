@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class CreateTaskExportTaskRequest : TeaModel {
         /// <summary>
+        /// <para>Start time of the call time range (inclusive)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1646496000000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? ActualTimeGte { get; set; }
 
         /// <summary>
+        /// <para>End time of the call time range (inclusive)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1646582400000</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? ActualTimeLte { get; set; }
 
         /// <summary>
+        /// <para>Minimum call duration</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? CallDurationGte { get; set; }
 
         /// <summary>
+        /// <para>Maximum call duration</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? CallDurationLte { get; set; }
 
         /// <summary>
+        /// <para>Called number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>11111111111</para>
         /// </summary>
@@ -54,6 +64,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string CallingNumber { get; set; }
 
         /// <summary>
+        /// <para>Whether the call was answered</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -62,6 +74,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? HasAnswered { get; set; }
 
         /// <summary>
+        /// <para>Whether the call ended because the contact rejected it</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -70,6 +84,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? HasHangUpByRejection { get; set; }
 
         /// <summary>
+        /// <para>Whether the conversation ended normally</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -78,6 +94,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? HasReachedEndOfFlow { get; set; }
 
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,6 +105,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Task group ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cb731aee-0a5b-4c2b-924c-d9e82eb1d8d7</para>
         /// </summary>
@@ -95,11 +114,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string JobGroupId { get; set; }
 
+        /// <summary>
+        /// <para>Task name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试_20220217_160147</para>
+        /// </summary>
         [NameInMap("JobGroupNameQuery")]
         [Validation(Required=false)]
         public string JobGroupNameQuery { get; set; }
 
         /// <summary>
+        /// <para>Job ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>82097dd5-54df-475f-beba-eec8f4b7a3e1</para>
         /// </summary>
@@ -108,6 +135,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>Job status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Succeeded</para>
         /// </summary>
@@ -116,6 +145,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string JobStatusStringList { get; set; }
 
         /// <summary>
+        /// <para>Other ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>64ebe700-91b4-49cb-b457-0b7c0b598a86</para>
         /// </summary>
@@ -124,6 +155,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string OtherId { get; set; }
 
         /// <summary>
+        /// <para>Page number, starting from 0</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -132,6 +165,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageIndex { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -140,6 +175,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The start time for the ring duration search.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -148,6 +185,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? RecordingDurationGte { get; set; }
 
         /// <summary>
+        /// <para>End time of the ring duration search.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -155,11 +194,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public long? RecordingDurationLte { get; set; }
 
+        /// <summary>
+        /// <para>Scenario name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试</para>
+        /// </summary>
         [NameInMap("ScriptNameQuery")]
         [Validation(Required=false)]
         public string ScriptNameQuery { get; set; }
 
         /// <summary>
+        /// <para>Sort field</para>
+        /// 
         /// <b>Example:</b>
         /// <para>actualTime</para>
         /// </summary>
@@ -168,6 +215,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string SortBy { get; set; }
 
         /// <summary>
+        /// <para>Sort order. Valid values: asc (ascending), desc (descending)</para>
+        /// 
         /// <b>Example:</b>
         /// <para>desc</para>
         /// </summary>
@@ -176,6 +225,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string SortOrder { get; set; }
 
         /// <summary>
+        /// <para>Start time of the task creation time range</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1646496000000</para>
         /// </summary>
@@ -184,6 +235,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? TaskCreateTimeGte { get; set; }
 
         /// <summary>
+        /// <para>End time of the task creation time range</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1646582400000</para>
         /// </summary>
@@ -192,6 +245,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? TaskCreateTimeLte { get; set; }
 
         /// <summary>
+        /// <para>Task ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>64ebe700-91b4-49cb-b457-0b7c0b598a86</para>
         /// </summary>
@@ -200,6 +255,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>Call status</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Succeeded,Failed</para>
         /// </summary>
@@ -208,6 +265,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string TaskStatusStringList { get; set; }
 
         /// <summary>
+        /// <para>User ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>82097dd5-54df-475f-beba-eec8f4b7a3e1</para>
         /// </summary>

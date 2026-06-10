@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListBeebotIntentResponseBody : TeaModel {
         /// <summary>
+        /// <para>The internal request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>497CFAFF-48CC-161A-AD2C-252DED569037</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string BeebotRequestId { get; set; }
 
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -33,15 +39,26 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The list of intents.</para>
+        /// </summary>
         [NameInMap("Intents")]
         [Validation(Required=false)]
         public List<ListBeebotIntentResponseBodyIntents> Intents { get; set; }
         public class ListBeebotIntentResponseBodyIntents : TeaModel {
+            /// <summary>
+            /// <para>The intent alias.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>嗯明白了</para>
+            /// </summary>
             [NameInMap("AliasName")]
             [Validation(Required=false)]
             public string AliasName { get; set; }
 
             /// <summary>
+            /// <para>The time when the intent was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-04-21 16:03:15.+0800</para>
             /// </summary>
@@ -50,6 +67,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the user who created the intent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1252504</para>
             /// </summary>
@@ -58,6 +77,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string CreateUserId { get; set; }
 
             /// <summary>
+            /// <para>The name of the account that created the intent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:xxx@voice-navigator-testonaliyun.com">xxx@voice-navigator-testonaliyun.com</a></para>
             /// </summary>
@@ -66,6 +87,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string CreateUserName { get; set; }
 
             /// <summary>
+            /// <para>The intent ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10717802</para>
             /// </summary>
@@ -73,11 +96,22 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public long? IntentId { get; set; }
 
+            /// <summary>
+            /// <para>The intent name.</para>
+            /// <remarks>
+            /// <para>This is the intent code. It uniquely identifies the intent.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>知道了</para>
+            /// </summary>
             [NameInMap("IntentName")]
             [Validation(Required=false)]
             public string IntentName { get; set; }
 
             /// <summary>
+            /// <para>The time when the intent was last modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-04-21 16:03:15.+0800</para>
             /// </summary>
@@ -86,6 +120,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>Modify User ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1252504</para>
             /// </summary>
@@ -94,6 +130,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string ModifyUserId { get; set; }
 
             /// <summary>
+            /// <para>Modify the account name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:xxx@voice-navigator-testonaliyun.com">xxx@voice-navigator-testonaliyun.com</a></para>
             /// </summary>
@@ -104,6 +142,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>The message returned by the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -112,6 +152,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -120,6 +162,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -128,6 +172,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -136,6 +182,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -144,6 +192,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

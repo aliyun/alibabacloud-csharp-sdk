@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListFlashSmsTemplatesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,15 +19,26 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListFlashSmsTemplatesResponseBodyData> Data { get; set; }
         public class ListFlashSmsTemplatesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The content of the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>您好，xxx来电。</para>
+            /// </summary>
             [NameInMap("TemplateContent")]
             [Validation(Required=false)]
             public string TemplateContent { get; set; }
 
             /// <summary>
+            /// <para>The ID of the flash SMS template.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>17*******************01</para>
             /// </summary>
@@ -33,6 +46,12 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public string TemplateId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the template.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>模板1</para>
+            /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
@@ -40,6 +59,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -47,11 +68,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EC08CC41-6870-5594-939A-F758F057898F</para>
         /// </summary>
@@ -60,6 +89,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call succeeded. A value of true indicates a successful call. A value of false indicates a failed call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

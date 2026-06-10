@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListOutboundCallNumbersResponseBody : TeaModel {
         /// <summary>
+        /// <para>API status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>API message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -33,15 +39,23 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>List of outbound call numbers.</para>
+        /// </summary>
         [NameInMap("OutboundCallNumbers")]
         [Validation(Required=false)]
         public ListOutboundCallNumbersResponseBodyOutboundCallNumbers OutboundCallNumbers { get; set; }
         public class ListOutboundCallNumbersResponseBodyOutboundCallNumbers : TeaModel {
+            /// <summary>
+            /// <para>List of outbound call number data.</para>
+            /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
             public List<ListOutboundCallNumbersResponseBodyOutboundCallNumbersList> List { get; set; }
             public class ListOutboundCallNumbersResponseBodyOutboundCallNumbersList : TeaModel {
                 /// <summary>
+                /// <para>Phone number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10088</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string Number { get; set; }
 
                 /// <summary>
+                /// <para>ID of the phone number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>fa0e21e9-caab-4629-9121-1e341243d599</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string OutboundCallNumberId { get; set; }
 
                 /// <summary>
+                /// <para>Time window for rate limiting, in seconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
                 public string RateLimitCount { get; set; }
 
                 /// <summary>
+                /// <para>Maximum number of calls allowed in the time window.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
                 /// </summary>
@@ -76,6 +96,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             }
 
             /// <summary>
+            /// <para>Page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -84,6 +106,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
+            /// <para>Number of entries on the page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -92,6 +116,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>Total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -102,6 +128,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -110,6 +138,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

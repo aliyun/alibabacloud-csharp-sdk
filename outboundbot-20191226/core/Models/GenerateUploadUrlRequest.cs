@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GenerateUploadUrlRequest : TeaModel {
         /// <summary>
+        /// <para>File name, including the extension</para>
+        /// 
         /// <b>Example:</b>
         /// <para>faaf8508-9542-4ac4-84a2-0ddcbb5f79a6 (2).json</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string FileName { get; set; }
 
         /// <summary>
+        /// <para>Upload URL key</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3b9b5dc6d67ee9fa</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class SaveMaxAttemptsPerDayRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,14 +21,21 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string EntryId { get; set; }
 
         /// <summary>
+        /// <para>Daily maximum redial attempts. Default is 3 if not specified.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>5</para>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("MaxAttemptsPerDay")]
         [Validation(Required=false)]
         public int? MaxAttemptsPerDay { get; set; }
 
         /// <summary>
+        /// <para>Policy level (required)</para>
+        /// <list type="bullet">
+        /// <item><description>2: Instance</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

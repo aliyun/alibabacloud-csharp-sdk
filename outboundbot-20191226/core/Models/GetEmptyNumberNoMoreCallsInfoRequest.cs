@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetEmptyNumberNoMoreCallsInfoRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,16 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string EntryId { get; set; }
 
         /// <summary>
+        /// <para>Strategy level. Set to 2 for business instances.</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: System</para>
+        /// </description></item>
+        /// <item><description><para>1: Tenant</para>
+        /// </description></item>
+        /// <item><description><para>2: Instance</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

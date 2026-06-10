@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class TaskPreparingRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the account that owns the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1971226538081821</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? InstanceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

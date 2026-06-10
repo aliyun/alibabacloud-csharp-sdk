@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class RollbackScriptRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,16 +21,21 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Version to roll back to</para>
+        /// <remarks>
+        /// <para>For valid values, see the ListScriptPublishHistories operation.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1579055782000</para>
+        /// <para>1578965079000</para>
         /// </summary>
         [NameInMap("RollbackVersion")]
         [Validation(Required=false)]
         public string RollbackVersion { get; set; }
 
         /// <summary>
+        /// <para>Script ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

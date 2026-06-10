@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class GetAsrServerInfoRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>024f8cf0-c842-4c01-b74b-c8667e4579c7</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string EntryId { get; set; }
 
         /// <summary>
+        /// <para>Policy level</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class SubmitRecordingRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Script recording data</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string MergedRecording { get; set; }
 
         /// <summary>
+        /// <para>Script recording data</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;contactId&quot;:&quot;3d35c0487cc041abb7ad0ce61752601f&quot;,&quot;duration&quot;:27,&quot;fileName&quot;:&quot;ce2659e5-a20b-4f8e-91b5-5cd909c6b96e_3d35c0487cc041abb7ad0ce61752601f.wav&quot;,&quot;filePath&quot;:&quot;oss://ForCompatibility/waveforms/&quot;,&quot;startTime&quot;:1579057583670,&quot;type&quot;:&quot;Source&quot;}</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ResourceRecording { get; set; }
 
         /// <summary>
+        /// <para>Task ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,17 +10,28 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class SubmitScriptReviewRequest : TeaModel {
         /// <summary>
+        /// <para>Description</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>第一版本提交审核</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Source of review submission</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MAINSITE</para>
+        /// </summary>
         [NameInMap("From")]
         [Validation(Required=false)]
         public string From { get; set; }
 
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +42,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Script ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>b0f35dd1-0337-402e-9c4f-3a6c2426950a</para>
+        /// <para>af81a389-91f0-4157-8d82-720edd02b66a</para>
         /// </summary>
         [NameInMap("ScriptId")]
         [Validation(Required=false)]

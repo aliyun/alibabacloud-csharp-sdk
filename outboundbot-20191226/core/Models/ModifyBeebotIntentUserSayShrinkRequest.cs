@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyBeebotIntentUserSayShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The scenario ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
+        /// <para>The definition of the user utterance.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UserSayDefinition")]
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string UserSayDefinitionShrink { get; set; }
 
         /// <summary>
+        /// <para>The user utterance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

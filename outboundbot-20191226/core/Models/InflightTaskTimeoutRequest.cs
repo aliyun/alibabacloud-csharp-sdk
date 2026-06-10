@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class InflightTaskTimeoutRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Alibaba Cloud account ID of the instance owner</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1864632921948620</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? InstanceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>Task ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

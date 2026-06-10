@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ListChatbotInstancesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Chatbot list details</para>
+        /// </summary>
         [NameInMap("Bots")]
         [Validation(Required=false)]
         public List<ListChatbotInstancesResponseBodyBots> Bots { get; set; }
         public class ListChatbotInstancesResponseBodyBots : TeaModel {
             /// <summary>
+            /// <para>Profile picture URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://ccrm.wengine.cn/ccrm/system/common/fileDownload/noToken?fileId=975cdeaa064846e3b6004abd9ba1d7c8">https://ccrm.wengine.cn/ccrm/system/common/fileDownload/noToken?fileId=975cdeaa064846e3b6004abd9ba1d7c8</a></para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string Avatar { get; set; }
 
             /// <summary>
+            /// <para>Creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-01-18T02:36:00Z</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>Instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>e874fcf0-d2f4-4e62-9377-b6f35fe55210</para>
             /// </summary>
@@ -37,11 +46,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>Chatbot description.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>这是直播的描述</para>
+            /// </summary>
             [NameInMap("Introduction")]
             [Validation(Required=false)]
             public string Introduction { get; set; }
 
             /// <summary>
+            /// <para>Language used by the chatbot, such as zh-cn or en-us.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>zh-cn</para>
             /// </summary>
@@ -49,11 +66,19 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             [Validation(Required=false)]
             public string LanguageCode { get; set; }
 
+            /// <summary>
+            /// <para>Chatbot name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>智能回访2</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Time zone of the chatbot. See Common Time Zone Codes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>
             /// </summary>
@@ -64,6 +89,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>Response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -72,6 +99,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -80,6 +109,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -88,6 +119,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -96,6 +129,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>Number of items per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -104,6 +139,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</para>
         /// </summary>
@@ -112,6 +149,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -120,6 +159,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Total number of items.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

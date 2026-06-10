@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class DialogueRequest : TeaModel {
         /// <summary>
+        /// <para>Action to perform for outbound calls. Hangup ends the call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>broadcast</para>
         /// </summary>
@@ -17,11 +19,18 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string ActionKey { get; set; }
 
+        /// <summary>
+        /// <para>Parameters required to perform the action. (Deprecated)</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;&quot;</para>
+        /// </summary>
         [NameInMap("ActionParams")]
         [Validation(Required=false)]
         public string ActionParams { get; set; }
 
         /// <summary>
+        /// <para>Call ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +41,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string CallId { get; set; }
 
         /// <summary>
+        /// <para>Call type, typically Outbound</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,6 +52,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string CallType { get; set; }
 
         /// <summary>
+        /// <para>Called number</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +63,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string CalledNumber { get; set; }
 
         /// <summary>
+        /// <para>Calling number</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +74,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string CallingNumber { get; set; }
 
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +85,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Scenario ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6cea9bed-63e6-439e-ae4c-b3333efff53d</para>
         /// </summary>
@@ -80,7 +95,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScenarioId { get; set; }
 
         /// <summary>
-        /// <para>场景id</para>
+        /// <para>Scenario ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>c5c5d8c0-c0f1-48a7-be2b-dc46006d888a</para>
@@ -90,6 +105,8 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
+        /// <para>Task ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ff44709e-39a6-43ba-959b-20fcabe3e496</para>
         /// </summary>
@@ -98,7 +115,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>User utterance</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>是的</para>
         /// </summary>
         [NameInMap("Utterance")]
         [Validation(Required=false)]

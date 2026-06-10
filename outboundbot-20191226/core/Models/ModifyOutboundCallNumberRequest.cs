@@ -10,26 +10,29 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyOutboundCallNumberRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>52e80b02-0126-4556-a1e6-ef5b3747ed53/a9a3ddc7-d7d7-48cd-82b5-b31bb5510e71_2a66f8ad-dfbb-4980-9b84-439171295a11.xlsx</para>
+        /// <para>8fa1953f-4a84-46d8-b80c-8ce9cf684fb3</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The number to modify</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10088</para>
+        /// <para>10088xxx</para>
         /// </summary>
         [NameInMap("Number")]
         [Validation(Required=false)]
         public string Number { get; set; }
 
         /// <summary>
+        /// <para>Number ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string OutboundCallNumberId { get; set; }
 
         /// <summary>
+        /// <para>Number of rate limiting rules</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public int? RateLimitCount { get; set; }
 
         /// <summary>
+        /// <para>Rate limiting time window, in seconds</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

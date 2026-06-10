@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyBeebotIntentLgfRequest : TeaModel {
         /// <summary>
+        /// <para>Instance ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Utterance Template Definition</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LgfDefinition")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public ModifyBeebotIntentLgfRequestLgfDefinition LgfDefinition { get; set; }
         public class ModifyBeebotIntentLgfRequestLgfDefinition : TeaModel {
             /// <summary>
+            /// <para>Intent ID</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,7 +40,11 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
             public long? IntentId { get; set; }
 
             /// <summary>
+            /// <para>Intent Configuration</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>我是一个问法模版</para>
             /// </summary>
             [NameInMap("RuleText")]
             [Validation(Required=false)]
@@ -46,6 +53,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         }
 
         /// <summary>
+        /// <para>Utterance Template ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +64,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public long? LgfId { get; set; }
 
         /// <summary>
+        /// <para>Scenario ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

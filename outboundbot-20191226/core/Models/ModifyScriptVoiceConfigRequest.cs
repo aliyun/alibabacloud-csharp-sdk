@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
 {
     public class ModifyScriptVoiceConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The script ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         public string ScriptId { get; set; }
 
         /// <summary>
+        /// <para>The script voice configuration ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,15 +42,31 @@ namespace AlibabaCloud.SDK.OutboundBot20191226.Models
         [Validation(Required=false)]
         public string ScriptVoiceConfigId { get; set; }
 
+        /// <summary>
+        /// <para>Maps script segments to audio recordings. This parameter is required only when Type is set to WAVEFORM.</para>
+        /// <remarks>
+        /// <para>To obtain the value for the ScriptWaveformId parameter, call the CreateScriptWaveform operation. The ScriptContent parameter specifies the text that corresponds to the audio segment.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[{&quot;ScriptContent&quot;:&quot;请问你是&quot;,&quot;ScriptWaveformId&quot;:&quot;07db2f0a-acb2-4e68-b9f4-66397414f50c&quot;},{&quot;ScriptContent&quot;:&quot;吗？&quot;,&quot;ScriptWaveformId&quot;:&quot;c2a69440-03e3-406e-b0a9-a9791fccb31b&quot;}]</para>
+        /// </summary>
         [NameInMap("ScriptWaveformRelation")]
         [Validation(Required=false)]
         public string ScriptWaveformRelation { get; set; }
 
         /// <summary>
+        /// <para>The audio source type.</para>
+        /// <list type="bullet">
+        /// <item><description><para>WAVEFORM: A pre-recorded audio file.</para>
+        /// </description></item>
+        /// <item><description><para>TTS: Audio generated from text using the text-to-speech (TTS) service.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>WAVEFORM</para>
+        /// <para>TTS</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
