@@ -487,6 +487,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public string QuestionDescription { get; set; }
 
+            [NameInMap("questionSample")]
+            [Validation(Required=false)]
+            public string QuestionSample { get; set; }
+
             [NameInMap("scriptPointId")]
             [Validation(Required=false)]
             public string ScriptPointId { get; set; }

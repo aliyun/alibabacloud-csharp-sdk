@@ -13,6 +13,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public List<ListAgentsResponseBodyList> List { get; set; }
         public class ListAgentsResponseBodyList : TeaModel {
+            [NameInMap("agentIconUrl")]
+            [Validation(Required=false)]
+            public string AgentIconUrl { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>840016700254633984</para>
@@ -32,6 +36,14 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [NameInMap("agentScene")]
             [Validation(Required=false)]
             public string AgentScene { get; set; }
+
+            [NameInMap("characterAgeStage")]
+            [Validation(Required=false)]
+            public string CharacterAgeStage { get; set; }
+
+            [NameInMap("characterName")]
+            [Validation(Required=false)]
+            public string CharacterName { get; set; }
 
             [NameInMap("charactersDescription")]
             [Validation(Required=false)]
