@@ -13,9 +13,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>API key generation mode.</para>
         /// 
         /// <b>Example:</b>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>Custom</para>
         /// </summary>
         [NameInMap("ApiKeyGenerateMode")]
         [Validation(Required=false)]
@@ -59,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>AWS-Region</para>
             /// 
             /// <b>Example:</b>
-            /// <para>us-west-2</para>
+            /// <para>us-east-1</para>
             /// </summary>
             [NameInMap("awsRegion")]
             [Validation(Required=false)]
@@ -88,7 +86,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>Default model name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>qwen-turbo</para>
+        /// <para>gpt-4</para>
         /// </summary>
         [NameInMap("defaultModelName")]
         [Validation(Required=false)]
@@ -108,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>Enable outlier detection.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>false</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("enableOutlierDetection")]
         [Validation(Required=false)]
@@ -135,7 +133,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>Service identifier.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>svc-d33onfmm1hkn5duhuqjg</para>
+            /// <para>svc-cvaeb0um1hkqp79k72v0</para>
             /// </summary>
             [NameInMap("serviceId")]
             [Validation(Required=false)]
@@ -145,7 +143,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>Name of the service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>service-hello</para>
+            /// <para>auto-ai-service</para>
             /// </summary>
             [NameInMap("serviceName")]
             [Validation(Required=false)]
@@ -155,7 +153,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>Workspace identifier.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>plw-d5g7qsem1hkmih54g210</para>
+            /// <para>cb89d4de30042df4459442589664e00d</para>
             /// </summary>
             [NameInMap("workspaceId")]
             [Validation(Required=false)]
@@ -174,7 +172,27 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The Large Language Model (LLM) provider.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>qwen</para>
+        /// <para>qwen
+        /// moonshot
+        /// baichuan
+        /// yi
+        /// zhipuai
+        /// 360ai
+        /// hunyuan
+        /// stepfun
+        /// spark
+        /// openai
+        /// claude
+        /// anthropic
+        /// doubao
+        /// minimax
+        /// gemini
+        /// azure
+        /// deepseek
+        /// custom
+        /// pai-eas
+        /// bedrock
+        /// vertex</para>
         /// </summary>
         [NameInMap("provider")]
         [Validation(Required=false)]
@@ -198,7 +216,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>Vertex AI authentication key.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;type\&quot;:\&quot;service_account\&quot;,\&quot;project_id\&quot;:\&quot;xxx\&quot;,\&quot;private_key\&quot;:\&quot;-----BEGIN PRIVATE KEY-----\&quot;,\&quot;client_email\&quot;:\&quot;<a href="mailto:xxx@xxx.iam.gserviceaccount.com">xxx@xxx.iam.gserviceaccount.com</a>\&quot;,\&quot;token_uri\&quot;:\&quot;<a href="https://oauth2.googleapis.com/token%5C%5C%22%7D">https://oauth2.googleapis.com/token\\&quot;}</a></para>
+            /// <para>{\&quot;type\&quot;:\&quot;service_account\&quot;,\&quot;project_id\&quot;:\&quot;my-project\&quot;,\&quot;private_key\&quot;:\&quot;-----BEGIN PRIVATE KEY-----...\&quot;,\&quot;client_email\&quot;:\&quot;<a href="mailto:xxx@xxx.iam.gserviceaccount.com">xxx@xxx.iam.gserviceaccount.com</a>\&quot;,\&quot;token_uri\&quot;:\&quot;<a href="https://oauth2.googleapis.com/token%5C%5C%22%7D">https://oauth2.googleapis.com/token\\&quot;}</a></para>
             /// </summary>
             [NameInMap("vertexAuthKey")]
             [Validation(Required=false)]
@@ -208,7 +226,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>Vertex AI auth service name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>custom-vertex-auth</para>
+            /// <para>google-oauth2</para>
             /// </summary>
             [NameInMap("vertexAuthServiceName")]
             [Validation(Required=false)]
@@ -218,7 +236,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>Vertex AI project ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>my-gcp-project-123</para>
+            /// <para>my-project</para>
             /// </summary>
             [NameInMap("vertexProjectId")]
             [Validation(Required=false)]

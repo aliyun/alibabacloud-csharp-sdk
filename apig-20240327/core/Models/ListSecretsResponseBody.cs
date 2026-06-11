@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>Code of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>Ok</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>Unix timestamp when the secret was created</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1234567890</para>
+                /// <para>1725617840096</para>
                 /// </summary>
                 [NameInMap("createTimestamp")]
                 [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>Name of the secret</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test-secret</para>
+                /// <para>my_secret</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>Number of resources referencing this secret</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>5</para>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("referenceCount")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>Source of the ID</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxxxx</para>
+                /// <para>sec-d5e6shmm1hkoxxxxxxxx</para>
                 /// </summary>
                 [NameInMap("secretId")]
                 [Validation(Required=false)]
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>Unix timestamp when the secret was last updated</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1234567890</para>
+                /// <para>1721116090326</para>
                 /// </summary>
                 [NameInMap("updateTimestamp")]
                 [Validation(Required=false)]
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>Total number of records matching the query</para>
             /// 
             /// <b>Example:</b>
-            /// <para>104</para>
+            /// <para>10</para>
             /// </summary>
             [NameInMap("totalSize")]
             [Validation(Required=false)]
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2F270C0B-7D6A-5DA7-93E2-******</para>
+        /// <para>3A3D1392-0F71-5A10-9AE8-89C434696966</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

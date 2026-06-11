@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>Gateway type for filtering secrets of specific gateway type</para>
         /// 
         /// <b>Example:</b>
-        /// <para>API</para>
+        /// <para>AI</para>
         /// </summary>
         [NameInMap("gatewayType")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>Secret name for fuzzy matching, supports filtering secrets by name</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test-secret</para>
+        /// <para>my_secret</para>
         /// </summary>
         [NameInMap("nameLike")]
         [Validation(Required=false)]

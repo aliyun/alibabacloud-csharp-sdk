@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>API ID</para>
         /// 
         /// <b>Example:</b>
-        /// <para>api-c9uuekzmia8q2****</para>
+        /// <para>api-ctl7no6m1h****</para>
         /// </summary>
         [NameInMap("apiId")]
         [Validation(Required=false)]

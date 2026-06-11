@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The API description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>for test only</para>
+        /// <para>测试专用API</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -66,6 +66,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>Specifies whether to enable authentication.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("enabelAuth")]
         [Validation(Required=false)]

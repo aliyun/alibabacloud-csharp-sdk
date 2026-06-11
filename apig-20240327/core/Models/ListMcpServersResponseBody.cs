@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>My MCP Server</para>
+                /// <para>这是xxx的xx项目测试环境</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The HTTP-to-MCP configurations.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>mcp spec content</para>
+                /// <para>HTTP转MCP Config base64值</para>
                 /// </summary>
                 [NameInMap("mcpServerConfig")]
                 [Validation(Required=false)]
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The synchronized MCP server ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>nacos-mcp-001</para>
+                    /// <para>同步的MCP Server ID</para>
                     /// </summary>
                     [NameInMap("importMcpServerId")]
                     [Validation(Required=false)]
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The type of the MCP server. Valid values: RealMCP and AssemblyMCP.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>RealMCP</para>
+                /// <para>可选值：RealMCP、AssemblyMCP</para>
                 /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]

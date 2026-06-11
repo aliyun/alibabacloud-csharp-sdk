@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DeployHttpApiResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response status code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -19,10 +19,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public DeployHttpApiResponseBodyData Data { get; set; }
         public class DeployHttpApiResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The ID of the HTTP API.</para>
+            /// </summary>
             [NameInMap("httpApiId")]
             [Validation(Required=false)]
             public string HttpApiId { get; set; }
@@ -30,7 +36,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +46,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0C2D1C68-0D93-5561-8EE6-FDB7BF067A30</para>

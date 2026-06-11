@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The environment ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The source ID.</para>
+        /// <para>更新API描述</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

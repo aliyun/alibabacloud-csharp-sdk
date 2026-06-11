@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The VPC name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test-vpc</para>
+            /// <para>商品中心预发环境专有网络</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]

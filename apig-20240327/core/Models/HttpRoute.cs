@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The description of the route</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Route for user management API</para>
+        /// <para>商品中心预发路由</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The environment alias</para>
             /// 
             /// <b>Example:</b>
-            /// <para>prod</para>
+            /// <para>商品中心预发环境</para>
             /// </summary>
             [NameInMap("alias")]
             [Validation(Required=false)]

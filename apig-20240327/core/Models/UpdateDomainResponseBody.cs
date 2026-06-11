@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The released version ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>apr-xxx</para>
+            /// <para>apr-xxxxx</para>
             /// </summary>
             [NameInMap("deployRevisionId")]
             [Validation(Required=false)]

@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This is the description.</para>
+            /// <para>测试专用消费者</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]

@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
     public class ListPluginClassesRequest : TeaModel {
         /// <summary>
         /// <para>The alias keyword for a fuzzy search.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OAuth2 认证</para>
         /// </summary>
         [NameInMap("aliasLike")]
         [Validation(Required=false)]

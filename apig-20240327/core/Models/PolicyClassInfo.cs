@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The template alias.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Rate Limit</para>
+        /// <para>并发控制</para>
         /// </summary>
         [NameInMap("alias")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The template description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Limits the number of requests per unit of time</para>
+        /// <para>通过控制并发线程数以保证系统的稳定性。适用于应用内部或下游依赖出现不稳定的场景，例如慢SQL、下游应用响应时间变长等。</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

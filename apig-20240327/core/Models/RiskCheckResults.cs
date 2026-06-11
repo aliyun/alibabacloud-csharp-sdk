@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The risk description</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The version is outdated</para>
+            /// <para>{&quot;desc&quot;:&quot;单节点实例存在架构风险，单点故障会导致服务不可用。建议扩容到2节点及以上。&quot;}</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The risk title</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Version Risk</para>
+            /// <para>单节点架构风险</para>
             /// </summary>
             [NameInMap("riskName")]
             [Validation(Required=false)]
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The risk situation</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Current version is 2 releases behind</para>
+            /// <para>{&quot;desc&quot;:&quot;集群节点数为1，不具备高可用能力&quot;}</para>
             /// </summary>
             [NameInMap("situation")]
             [Validation(Required=false)]
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The fix suggestion</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Upgrade to the latest version</para>
+            /// <para>{&quot;desc&quot;:&quot;扩容到2节点及以上&quot;,&quot;links&quot;:[{&quot;descEn&quot;:&quot;click to upgrade specification&quot;,&quot;type&quot;:&quot;upgrade&quot;,&quot;desc&quot;:&quot;点击扩容&quot;}]}</para>
             /// </summary>
             [NameInMap("suggestion")]
             [Validation(Required=false)]

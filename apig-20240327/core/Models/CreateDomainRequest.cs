@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The <a href="https://help.aliyun.com/document_detail/151181.html">resource group ID</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aekzoiafjtr7zyq</para>
+        /// <para>rg-aekzhiv7derfweq</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]

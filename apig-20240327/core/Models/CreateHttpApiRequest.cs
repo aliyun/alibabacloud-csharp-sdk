@@ -40,6 +40,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string BasePath { get; set; }
 
+        /// <summary>
+        /// <para>ID of the gateway to which the API belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gw-abc123xyz789</para>
+        /// </summary>
         [NameInMap("belongGatewayId")]
         [Validation(Required=false)]
         public string BelongGatewayId { get; set; }
@@ -55,13 +61,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>$.parameters[0].schema.properties.aiProtocols.items.description</para>
         /// 
         /// <b>Example:</b>
-        /// <para>$.parameters[0].schema.properties.aiProtocols.items.example</para>
+        /// <para>测试专用API。</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>Whether to preview without execution.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("dryRun")]
         [Validation(Required=false)]
         [Obsolete]
@@ -207,6 +220,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The conflict merge strategy for import.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ExistFirst</para>
+        /// </summary>
         [NameInMap("strategy")]
         [Validation(Required=false)]
         public string Strategy { get; set; }

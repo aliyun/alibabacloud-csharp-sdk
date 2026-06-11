@@ -325,7 +325,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The environment alias.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test</para>
+            /// <para>测试</para>
             /// </summary>
             [NameInMap("alias")]
             [Validation(Required=false)]
@@ -362,7 +362,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The instance name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Instance 1</para>
+                /// <para>实例1</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]

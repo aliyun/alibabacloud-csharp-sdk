@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The CA certificate ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>876****-cn-hangzhou</para>
+            /// <para>8237***-cn-hangzhou</para>
             /// </summary>
             [NameInMap("caCertIdentifier")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The certificate ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>645****-cn-hangzhou</para>
+            /// <para>2382***-cn-hangzhou</para>
             /// </summary>
             [NameInMap("certIdentifier")]
             [Validation(Required=false)]
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rg-aekzvlxzgo5b4si</para>
+            /// <para>rg-aekztduhoagat4y</para>
             /// </summary>
             [NameInMap("resourceGroupId")]
             [Validation(Required=false)]
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The total number of resources.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>1</para>
+                /// <para>30</para>
                 /// </summary>
                 [NameInMap("totalCount")]
                 [Validation(Required=false)]

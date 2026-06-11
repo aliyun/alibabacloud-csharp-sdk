@@ -10,20 +10,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class UpdateHttpApiRouteRequest : TeaModel {
         /// <summary>
-        /// <para>The backend service configurations for the route.</para>
+        /// <para>The configuration of the backend service for the route.</para>
         /// </summary>
         [NameInMap("backendConfig")]
         [Validation(Required=false)]
         public UpdateHttpApiRouteRequestBackendConfig BackendConfig { get; set; }
         public class UpdateHttpApiRouteRequestBackendConfig : TeaModel {
             /// <summary>
-            /// <para>The backend service scenario. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>SingleService</description></item>
-            /// <item><description>MultiServiceByRatio</description></item>
-            /// <item><description>Redirect</description></item>
-            /// <item><description>Mock</description></item>
-            /// </list>
+            /// <para>The backend service scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SingleService</para>
@@ -33,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Scene { get; set; }
 
             /// <summary>
-            /// <para>The list of backend services.</para>
+            /// <para>A list of backend services.</para>
             /// </summary>
             [NameInMap("services")]
             [Validation(Required=false)]
             public List<UpdateHttpApiRouteRequestBackendConfigServices> Services { get; set; }
             public class UpdateHttpApiRouteRequestBackendConfigServices : TeaModel {
                 /// <summary>
-                /// <para>The service port (omit for dynamic ports).</para>
+                /// <para>The service port. This parameter is not required for dynamic ports.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8080</para>
@@ -52,8 +46,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The service protocol. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>HTTP</description></item>
-                /// <item><description>HTTPS</description></item>
+                /// <item><description><para>HTTP</para>
+                /// </description></item>
+                /// <item><description><para>HTTPS</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -84,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Version { get; set; }
 
                 /// <summary>
-                /// <para>The traffic weight percentage.</para>
+                /// <para>The percentage of traffic.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>49</para>
@@ -98,17 +94,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The route description.</para>
+        /// <para>The description of the route.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test route</para>
+        /// <para>商品中心服务路由</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of domain IDs.</para>
+        /// <para>A list of domain name IDs.</para>
         /// </summary>
         [NameInMap("domainIds")]
         [Validation(Required=false)]
@@ -125,7 +121,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The route match rule.</para>
+        /// <para>The route matching rule.</para>
         /// </summary>
         [NameInMap("match")]
         [Validation(Required=false)]

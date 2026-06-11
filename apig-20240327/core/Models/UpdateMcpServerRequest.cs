@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Updated MCP server description</para>
+        /// <para>商品中心服务路由</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

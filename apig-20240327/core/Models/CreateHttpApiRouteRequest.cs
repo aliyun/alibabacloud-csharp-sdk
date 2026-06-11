@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The route description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>User logon route</para>
+        /// <para>用户登录路由。</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

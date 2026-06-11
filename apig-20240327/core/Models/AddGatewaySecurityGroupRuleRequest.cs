@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The description of security group rule N.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ProductCenterSG</para>
+        /// <para>商品中心访问安全组</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

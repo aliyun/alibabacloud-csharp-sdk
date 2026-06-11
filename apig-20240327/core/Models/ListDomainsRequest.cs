@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gw-xxx</para>
+        /// <para>gw-xxxxxx</para>
         /// </summary>
         [NameInMap("gatewayId")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-ahr5uil8raz0rq3b</para>
+        /// <para>rg-aek27lpqyiie6qy</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]

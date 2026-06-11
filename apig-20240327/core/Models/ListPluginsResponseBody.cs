@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The alias.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>key-based rate limit</para>
+                    /// <para>基于 Key 限流</para>
                     /// </summary>
                     [NameInMap("alias")]
                     [Validation(Required=false)]
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The description of the version.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>version description</para>
+                    /// <para>版本描述</para>
                     /// </summary>
                     [NameInMap("versionDescription")]
                     [Validation(Required=false)]

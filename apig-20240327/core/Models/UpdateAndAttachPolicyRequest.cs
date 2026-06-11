@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The policy description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This is the description.</para>
+        /// <para>这是策略描述。</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

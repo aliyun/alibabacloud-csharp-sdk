@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketProductPublicationConifg : TeaModel {
+        /// <summary>
+        /// <para>The unique identifier for the publication.</para>
+        /// </summary>
         [NameInMap("publicationId")]
         [Validation(Required=false)]
         public string PublicationId { get; set; }

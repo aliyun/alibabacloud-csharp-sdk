@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class Service : TeaModel {
         /// <summary>
-        /// <para>The address details, which can be IP addresses or domain names.</para>
+        /// <para>A list of service addresses, such as IP addresses or domain names.</para>
         /// </summary>
         [NameInMap("addresses")]
         [Validation(Required=false)]
         public List<string> Addresses { get; set; }
 
         /// <summary>
-        /// <para>The agent service configuration</para>
+        /// <para>The agent service configuration.</para>
         /// </summary>
         [NameInMap("agentServiceConfig")]
         [Validation(Required=false)]
         public AgentServiceConfig AgentServiceConfig { get; set; }
 
         /// <summary>
-        /// <para>The AI service configurations.</para>
+        /// <para>The AI service configuration.</para>
         /// </summary>
         [NameInMap("aiServiceConfig")]
         [Validation(Required=false)]
         public AiServiceConfig AiServiceConfig { get; set; }
 
         /// <summary>
-        /// <para>The creation time (unix timestamp).</para>
+        /// <para>The creation timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725617840096</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The express type</para>
+        /// <para>The execution type for the cloud workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>StartExecution</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The service group name.</para>
+        /// <para>The name of the service group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>publich</para>
@@ -71,19 +71,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The health check configurations.</para>
+        /// <para>The health check configuration.</para>
         /// </summary>
         [NameInMap("healthCheck")]
         [Validation(Required=false)]
         public ServiceHealthCheck HealthCheck { get; set; }
 
         /// <summary>
-        /// <para>The health check status.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Unhealthy</description></item>
-        /// <item><description>Healthy</description></item>
-        /// </list>
+        /// <para>The health status. Valid values: <c>Healthy</c> or <c>Unhealthy</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Healthy</para>
@@ -93,7 +88,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string HealthStatus { get; set; }
 
         /// <summary>
-        /// <para>The label details for service version configuration</para>
+        /// <para>A list of labels for the service.</para>
         /// </summary>
         [NameInMap("labelDetails")]
         [Validation(Required=false)]
@@ -110,7 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The namespace of the service.</para>
+        /// <para>The namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PUBLIC</para>
@@ -120,14 +115,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The outlier endpoints list</para>
+        /// <para>A list of outlier endpoints.</para>
         /// </summary>
         [NameInMap("outlierEndpoints")]
         [Validation(Required=false)]
         public List<string> OutlierEndpoints { get; set; }
 
         /// <summary>
-        /// <para>The list of objects containing port details.</para>
+        /// <para>A list of port configurations.</para>
         /// </summary>
         [NameInMap("ports")]
         [Validation(Required=false)]
@@ -154,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>The protocol. Valid values: TCP and UDP.</para>
+            /// <para>The protocol. Valid values: <c>TCP</c> or <c>UDP</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TCP</para>
@@ -166,7 +161,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The service protocol type.</para>
+        /// <para>The service protocol.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>
@@ -176,7 +171,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The function qualifier name.</para>
+        /// <para>The function qualifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LATEST</para>
@@ -196,7 +191,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The service unique ID.</para>
+        /// <para>The unique service ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>svc-cr6pk4tlhtgm***</para>
@@ -206,7 +201,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The source type.</para>
+        /// <para>The source type of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MSE_NACOS</para>
@@ -216,14 +211,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of unhealthy endpoints.</para>
+        /// <para>A list of unhealthy endpoints.</para>
         /// </summary>
         [NameInMap("unhealthyEndpoints")]
         [Validation(Required=false)]
         public List<string> UnhealthyEndpoints { get; set; }
 
         /// <summary>
-        /// <para>The last modified time (unix timestamp).</para>
+        /// <para>The update timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725868548440</para>
@@ -232,24 +227,39 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public long? UpdateTimestamp { get; set; }
 
+        /// <summary>
+        /// <para>A list of service versions.</para>
+        /// </summary>
         [NameInMap("versions")]
         [Validation(Required=false)]
         public List<ServiceVersions> Versions { get; set; }
         public class ServiceVersions : TeaModel {
+            /// <summary>
+            /// <para>The labels of the version.</para>
+            /// </summary>
             [NameInMap("labels")]
             [Validation(Required=false)]
             public List<ServiceVersionsLabels> Labels { get; set; }
             public class ServiceVersionsLabels : TeaModel {
+                /// <summary>
+                /// <para>The key of the label.</para>
+                /// </summary>
                 [NameInMap("key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The value of the label.</para>
+                /// </summary>
                 [NameInMap("value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The version name.</para>
+            /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }

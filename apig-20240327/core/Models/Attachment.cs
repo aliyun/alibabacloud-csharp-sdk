@@ -9,31 +9,44 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class Attachment : TeaModel {
+        /// <summary>
+        /// <para>The attachment point ID.</para>
+        /// </summary>
         [NameInMap("attachResourceId")]
         [Validation(Required=false)]
         public string AttachResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs.</para>
+        /// <para>A list of attached resource IDs.</para>
         /// </summary>
         [NameInMap("attachResourceIds")]
         [Validation(Required=false)]
         public List<string> AttachResourceIds { get; set; }
 
+        /// <summary>
+        /// <para>A list of parent resource IDs.</para>
+        /// </summary>
         [NameInMap("attachResourceParentIds")]
         [Validation(Required=false)]
         public List<string> AttachResourceParentIds { get; set; }
 
         /// <summary>
-        /// <para>The supported mount point type. Valid values:</para>
+        /// <para>The supported attachment point types for the policy.</para>
         /// <list type="bullet">
-        /// <item><description>HttpApi: an HTTP API</description></item>
-        /// <item><description>Operation: an operation in an HTTP API</description></item>
-        /// <item><description>GatewayRoute: a gateway route</description></item>
-        /// <item><description>GatewayService: a gateway service</description></item>
-        /// <item><description>GatewayServicePort: a gateway service port</description></item>
-        /// <item><description>Domain: a gateway domain name</description></item>
-        /// <item><description>Gateway: a gateway instance</description></item>
+        /// <item><description><para><c>HttpApi</c>: An HTTP API.</para>
+        /// </description></item>
+        /// <item><description><para><c>Operation</c>: An operation of an HTTP API.</para>
+        /// </description></item>
+        /// <item><description><para><c>GatewayRoute</c>: A gateway route.</para>
+        /// </description></item>
+        /// <item><description><para><c>GatewayService</c>: A gateway service.</para>
+        /// </description></item>
+        /// <item><description><para><c>GatewayServicePort</c>: A gateway service port.</para>
+        /// </description></item>
+        /// <item><description><para><c>Domain</c>: A gateway domain.</para>
+        /// </description></item>
+        /// <item><description><para><c>Gateway</c>: A gateway.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AttachResourceType { get; set; }
 
         /// <summary>
-        /// <para>The environment to which the mounted resource belongs. If an asterisk (\*) is returned as the environment ID, the mounted resource is not related to the environment.</para>
+        /// <para>The ID of the environment for the attached resource. An asterisk (<c>*</c>) indicates that the policy attachment is not environment-specific.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-cq7l5s5lhtgi6qasrdc0</para>
@@ -54,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The instance to which the mounted resource belongs.</para>
+        /// <para>The ID of the gateway for the attached resource.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cpr4f9dlhtgq5ksfgmb0</para>
@@ -64,7 +77,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The mount ID.</para>
+        /// <para>The policy attachment ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pr-cq7l5s5lhtgi6qasrdc0</para>

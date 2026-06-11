@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The parameter description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This is a description.</para>
+            /// <para>body参数描述</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -51,17 +51,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// 
             /// <b>Example:</b>
             /// <para>{
-            ///       &quot;type&quot;: &quot;object&quot;,
-            ///       &quot;required&quot;: [
-            ///           &quot;result&quot;
-            ///       ],
-            ///       &quot;properties&quot;: {
-            ///           &quot;result&quot;: {
-            ///               &quot;type&quot;: &quot;string&quot;,
-            ///               &quot;description&quot;: &quot;Operation result. \&quot;ok\&quot; indicates success.&quot;
-            ///           }
-            ///       }
-            ///   }</para>
+            ///     &quot;type&quot;: &quot;object&quot;,
+            ///     &quot;required&quot;: [
+            ///         &quot;result&quot;
+            ///     ],
+            ///     &quot;properties&quot;: {
+            ///         &quot;result&quot;: {
+            ///             &quot;type&quot;: &quot;string&quot;,
+            ///             &quot;description&quot;: &quot;操作结果，\&quot;ok\&quot; 表示成功&quot;
+            ///         }
+            ///     }
+            /// }</para>
             /// </summary>
             [NameInMap("jsonSchema")]
             [Validation(Required=false)]

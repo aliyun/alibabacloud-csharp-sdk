@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>Test environment</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The environment description.</para>
+            /// <para>测试环境</para>
             /// </summary>
             [NameInMap("alias")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>Testing environment for xx project of xxx</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The instance information.</para>
+            /// <para>这是xxx的xx项目测试环境</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]

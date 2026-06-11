@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public class CreateSourceRequestK8sSourceConfigAuthorizeSecurityGroupRules : TeaModel {
                 /// <summary>
                 /// <para>The rule description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>预发网关访问安全组</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]

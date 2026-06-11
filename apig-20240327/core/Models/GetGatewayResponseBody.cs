@@ -74,11 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The port information.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The protocol. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>TCP</description></item>
-                /// <item><description>UDP</description></item>
-                /// </list>
+                /// <para>默认环境</para>
                 /// </summary>
                 [NameInMap("alias")]
                 [Validation(Required=false)]
@@ -468,7 +464,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The resource tags.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The resource tag.</para>
+                /// <para>杭州VPC虚拟交换机</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -507,7 +503,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>=</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>$.errorCode</para>
+                /// <para>杭州VPC</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -536,7 +532,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The zone name</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Hangzhou Zone I</para>
+                /// <para>杭州可用区E</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
@@ -553,7 +549,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The VSwitch name</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>vswitch-name</para>
+                    /// <para>杭州VPC虚拟交换机</para>
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]

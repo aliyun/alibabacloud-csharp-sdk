@@ -35,6 +35,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public class ListPluginClassesResponseBodyDataItems : TeaModel {
                 /// <summary>
                 /// <para>The alias of the plugin.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>OAuth2 认证</para>
                 /// </summary>
                 [NameInMap("alias")]
                 [Validation(Required=false)]
@@ -42,6 +45,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                 /// <summary>
                 /// <para>The description of the plugin.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>基于 OAuth2 实现身份认证和鉴权。</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]

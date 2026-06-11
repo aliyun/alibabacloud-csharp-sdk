@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>apiKey</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sk-xxx</para>
+            /// <para>app-xxx</para>
             /// </summary>
             [NameInMap("apiKey")]
             [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>API Key</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sk-xxx</para>
+            /// <para>app-xxx</para>
             /// </summary>
             [NameInMap("apiKey")]
             [Validation(Required=false)]
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>aliyun</para>
+        /// <para>qwen</para>
         /// </summary>
         [NameInMap("provider")]
         [Validation(Required=false)]

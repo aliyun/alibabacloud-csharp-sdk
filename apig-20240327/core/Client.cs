@@ -39,6 +39,328 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>新增网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于对AI网关增加基于消费者的配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</para>
+        /// <remarks>
+        /// <para> 推荐调用逻辑：</para>
+        /// <list type="bullet">
+        /// <item><description>一、先 dryRun 预检检验是否存在规则冲突</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>传dryRun=true</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>返回含conflictHash的冲突预览</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>二、确认后正式提交</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>无冲突：dryRun=false,overwrite=false</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddGatewayQuotaRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddGatewayQuotaRuleResponse
+        /// </returns>
+        public AddGatewayQuotaRuleResponse AddGatewayQuotaRuleWithOptions(string gatewayId, AddGatewayQuotaRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConflictHash))
+            {
+                body["conflictHash"] = request.ConflictHash;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerGroupIds))
+            {
+                body["consumerGroupIds"] = request.ConsumerGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerIds))
+            {
+                body["consumerIds"] = request.ConsumerIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["dryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Overwrite))
+            {
+                body["overwrite"] = request.Overwrite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodType))
+            {
+                body["periodType"] = request.PeriodType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaDimension))
+            {
+                body["quotaDimension"] = request.QuotaDimension;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaLimit))
+            {
+                body["quotaLimit"] = request.QuotaLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                body["ruleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["timezone"] = request.Timezone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WindowAlignment))
+            {
+                body["windowAlignment"] = request.WindowAlignment;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddGatewayQuotaRule",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddGatewayQuotaRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于对AI网关增加基于消费者的配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</para>
+        /// <remarks>
+        /// <para> 推荐调用逻辑：</para>
+        /// <list type="bullet">
+        /// <item><description>一、先 dryRun 预检检验是否存在规则冲突</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>传dryRun=true</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>返回含conflictHash的冲突预览</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>二、确认后正式提交</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>无冲突：dryRun=false,overwrite=false</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddGatewayQuotaRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddGatewayQuotaRuleResponse
+        /// </returns>
+        public async Task<AddGatewayQuotaRuleResponse> AddGatewayQuotaRuleWithOptionsAsync(string gatewayId, AddGatewayQuotaRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConflictHash))
+            {
+                body["conflictHash"] = request.ConflictHash;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerGroupIds))
+            {
+                body["consumerGroupIds"] = request.ConsumerGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerIds))
+            {
+                body["consumerIds"] = request.ConsumerIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["dryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Overwrite))
+            {
+                body["overwrite"] = request.Overwrite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodType))
+            {
+                body["periodType"] = request.PeriodType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaDimension))
+            {
+                body["quotaDimension"] = request.QuotaDimension;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaLimit))
+            {
+                body["quotaLimit"] = request.QuotaLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                body["ruleName"] = request.RuleName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["timezone"] = request.Timezone;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WindowAlignment))
+            {
+                body["windowAlignment"] = request.WindowAlignment;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddGatewayQuotaRule",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddGatewayQuotaRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于对AI网关增加基于消费者的配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</para>
+        /// <remarks>
+        /// <para> 推荐调用逻辑：</para>
+        /// <list type="bullet">
+        /// <item><description>一、先 dryRun 预检检验是否存在规则冲突</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>传dryRun=true</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>返回含conflictHash的冲突预览</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>二、确认后正式提交</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>无冲突：dryRun=false,overwrite=false</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddGatewayQuotaRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddGatewayQuotaRuleResponse
+        /// </returns>
+        public AddGatewayQuotaRuleResponse AddGatewayQuotaRule(string gatewayId, AddGatewayQuotaRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AddGatewayQuotaRuleWithOptions(gatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>新增网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于对AI网关增加基于消费者的配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</para>
+        /// <remarks>
+        /// <para> 推荐调用逻辑：</para>
+        /// <list type="bullet">
+        /// <item><description>一、先 dryRun 预检检验是否存在规则冲突</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>传dryRun=true</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>返回含conflictHash的冲突预览</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>二、确认后正式提交</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>无冲突：dryRun=false,overwrite=false</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddGatewayQuotaRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddGatewayQuotaRuleResponse
+        /// </returns>
+        public async Task<AddGatewayQuotaRuleResponse> AddGatewayQuotaRuleAsync(string gatewayId, AddGatewayQuotaRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AddGatewayQuotaRuleWithOptionsAsync(gatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds a security group that authorizes an instance to access services.</para>
         /// </summary>
         /// 
@@ -1557,7 +1879,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud-native gateway.</para>
+        /// <para>The zone information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1643,7 +1965,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud-native gateway.</para>
+        /// <para>The zone information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1729,7 +2051,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud-native gateway.</para>
+        /// <para>The zone information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1748,7 +2070,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a cloud-native gateway.</para>
+        /// <para>The zone information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1767,7 +2089,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an HTTP API.</para>
+        /// <para>$.parameters[0].schema.properties.ingressConfig.example</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1885,7 +2207,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an HTTP API.</para>
+        /// <para>$.parameters[0].schema.properties.ingressConfig.example</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2003,7 +2325,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an HTTP API.</para>
+        /// <para>$.parameters[0].schema.properties.ingressConfig.example</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2022,7 +2344,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an HTTP API.</para>
+        /// <para>$.parameters[0].schema.properties.ingressConfig.example</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3587,7 +3909,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service source.</para>
+        /// <para>Create a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3649,7 +3971,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service source.</para>
+        /// <para>Create a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3711,7 +4033,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service source.</para>
+        /// <para>Create a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3730,7 +4052,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a service source.</para>
+        /// <para>Create a source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4279,6 +4601,144 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteGatewayWithOptionsAsync(gatewayId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于对 AI 网关删除某条基于消费者的配额规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewayQuotaRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewayQuotaRuleResponse
+        /// </returns>
+        public DeleteGatewayQuotaRuleResponse DeleteGatewayQuotaRuleWithOptions(string gatewayId, string ruleId, DeleteGatewayQuotaRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGatewayQuotaRule",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGatewayQuotaRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于对 AI 网关删除某条基于消费者的配额规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewayQuotaRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewayQuotaRuleResponse
+        /// </returns>
+        public async Task<DeleteGatewayQuotaRuleResponse> DeleteGatewayQuotaRuleWithOptionsAsync(string gatewayId, string ruleId, DeleteGatewayQuotaRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteGatewayQuotaRule",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteGatewayQuotaRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于对 AI 网关删除某条基于消费者的配额规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewayQuotaRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewayQuotaRuleResponse
+        /// </returns>
+        public DeleteGatewayQuotaRuleResponse DeleteGatewayQuotaRule(string gatewayId, string ruleId, DeleteGatewayQuotaRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteGatewayQuotaRuleWithOptions(gatewayId, ruleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于对 AI 网关删除某条基于消费者的配额规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteGatewayQuotaRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteGatewayQuotaRuleResponse
+        /// </returns>
+        public async Task<DeleteGatewayQuotaRuleResponse> DeleteGatewayQuotaRuleAsync(string gatewayId, string ruleId, DeleteGatewayQuotaRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteGatewayQuotaRuleWithOptionsAsync(gatewayId, ruleId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5130,6 +5590,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Deletes a key value.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>接口支持创建多个服务。</para>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -5165,6 +5630,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Deletes a key value.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>接口支持创建多个服务。</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -5202,6 +5672,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Deletes a key value.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>接口支持创建多个服务。</para>
+        /// </description>
+        /// 
         /// <returns>
         /// DeleteSecretResponse
         /// </returns>
@@ -5216,6 +5691,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Deletes a key value.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>接口支持创建多个服务。</para>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteSecretResponse
@@ -5433,7 +5913,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a service source.</para>
+        /// <para>Delete a service source.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5469,7 +5949,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a service source.</para>
+        /// <para>Delete a service source.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5505,7 +5985,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a service source.</para>
+        /// <para>Delete a service source.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5520,7 +6000,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a service source.</para>
+        /// <para>Delete a service source.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5535,7 +6015,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploy HttpApi</para>
+        /// <para>Deploy an HTTP API, including REST and HTTP API routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5589,7 +6069,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploy HttpApi</para>
+        /// <para>Deploy an HTTP API, including REST and HTTP API routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5643,7 +6123,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploy HttpApi</para>
+        /// <para>Deploy an HTTP API, including REST and HTTP API routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5662,7 +6142,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deploy HttpApi</para>
+        /// <para>Deploy an HTTP API, including REST and HTTP API routes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5783,7 +6263,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports an HTTP API.</para>
+        /// <para>Exports the specified HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5837,7 +6317,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports an HTTP API.</para>
+        /// <para>Exports the specified HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5891,7 +6371,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports an HTTP API.</para>
+        /// <para>Exports the specified HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5910,7 +6390,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports an HTTP API.</para>
+        /// <para>Exports the specified HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6733,6 +7213,330 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询网关配额限流规则详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于查询 AI 网关上某条消费者配额规则。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayQuotaRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayQuotaRuleResponse
+        /// </returns>
+        public GetGatewayQuotaRuleResponse GetGatewayQuotaRuleWithOptions(string gatewayId, string ruleId, GetGatewayQuotaRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerPageNumber))
+            {
+                query["consumerPageNumber"] = request.ConsumerPageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerPageSize))
+            {
+                query["consumerPageSize"] = request.ConsumerPageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithConsumers))
+            {
+                query["withConsumers"] = request.WithConsumers;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGatewayQuotaRule",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGatewayQuotaRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关配额限流规则详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于查询 AI 网关上某条消费者配额规则。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayQuotaRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayQuotaRuleResponse
+        /// </returns>
+        public async Task<GetGatewayQuotaRuleResponse> GetGatewayQuotaRuleWithOptionsAsync(string gatewayId, string ruleId, GetGatewayQuotaRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerPageNumber))
+            {
+                query["consumerPageNumber"] = request.ConsumerPageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerPageSize))
+            {
+                query["consumerPageSize"] = request.ConsumerPageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithConsumers))
+            {
+                query["withConsumers"] = request.WithConsumers;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGatewayQuotaRule",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGatewayQuotaRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关配额限流规则详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于查询 AI 网关上某条消费者配额规则。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayQuotaRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayQuotaRuleResponse
+        /// </returns>
+        public GetGatewayQuotaRuleResponse GetGatewayQuotaRule(string gatewayId, string ruleId, GetGatewayQuotaRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetGatewayQuotaRuleWithOptions(gatewayId, ruleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关配额限流规则详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于查询 AI 网关上某条消费者配额规则。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayQuotaRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayQuotaRuleResponse
+        /// </returns>
+        public async Task<GetGatewayQuotaRuleResponse> GetGatewayQuotaRuleAsync(string gatewayId, string ruleId, GetGatewayQuotaRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetGatewayQuotaRuleWithOptionsAsync(gatewayId, ruleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关配额限流规则主体用量详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于获取配额规则下的某个消费者用量详情。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayQuotaRuleSubjectUsageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayQuotaRuleSubjectUsageResponse
+        /// </returns>
+        public GetGatewayQuotaRuleSubjectUsageResponse GetGatewayQuotaRuleSubjectUsageWithOptions(string gatewayId, string ruleId, string subjectId, GetGatewayQuotaRuleSubjectUsageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGatewayQuotaRuleSubjectUsage",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId) + "/subjects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subjectId) + "/usage",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGatewayQuotaRuleSubjectUsageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关配额限流规则主体用量详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于获取配额规则下的某个消费者用量详情。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayQuotaRuleSubjectUsageRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayQuotaRuleSubjectUsageResponse
+        /// </returns>
+        public async Task<GetGatewayQuotaRuleSubjectUsageResponse> GetGatewayQuotaRuleSubjectUsageWithOptionsAsync(string gatewayId, string ruleId, string subjectId, GetGatewayQuotaRuleSubjectUsageRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGatewayQuotaRuleSubjectUsage",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId) + "/subjects/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(subjectId) + "/usage",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGatewayQuotaRuleSubjectUsageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关配额限流规则主体用量详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于获取配额规则下的某个消费者用量详情。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayQuotaRuleSubjectUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayQuotaRuleSubjectUsageResponse
+        /// </returns>
+        public GetGatewayQuotaRuleSubjectUsageResponse GetGatewayQuotaRuleSubjectUsage(string gatewayId, string ruleId, string subjectId, GetGatewayQuotaRuleSubjectUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetGatewayQuotaRuleSubjectUsageWithOptions(gatewayId, ruleId, subjectId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关配额限流规则主体用量详情</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于获取配额规则下的某个消费者用量详情。注意，只针对于版本大于 2.1.19 的 AI 网关生效。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetGatewayQuotaRuleSubjectUsageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGatewayQuotaRuleSubjectUsageResponse
+        /// </returns>
+        public async Task<GetGatewayQuotaRuleSubjectUsageResponse> GetGatewayQuotaRuleSubjectUsageAsync(string gatewayId, string ruleId, string subjectId, GetGatewayQuotaRuleSubjectUsageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetGatewayQuotaRuleSubjectUsageWithOptionsAsync(gatewayId, ruleId, subjectId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Read HttpApi</para>
         /// </summary>
         /// 
@@ -7039,12 +7843,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information of an MCP server.</para>
+        /// <para>Get the MCP server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// <para>This API supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -7080,12 +7884,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information of an MCP server.</para>
+        /// <para>Get the MCP server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// <para>This API supports creating multiple services.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -7121,12 +7925,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information of an MCP server.</para>
+        /// <para>Get the MCP server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// <para>This API supports creating multiple services.</para>
         /// </description>
         /// 
         /// <returns>
@@ -7141,12 +7945,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed information of an MCP server.</para>
+        /// <para>Get the MCP server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to create multiple services at a time.</para>
+        /// <para>This API supports creating multiple services.</para>
         /// </description>
         /// 
         /// <returns>
@@ -7722,6 +8526,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Gets the key value.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>接口支持创建多个服务。</para>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -7757,6 +8566,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Gets the key value.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>接口支持创建多个服务。</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -7794,6 +8608,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Gets the key value.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>接口支持创建多个服务。</para>
+        /// </description>
+        /// 
         /// <returns>
         /// GetSecretValueResponse
         /// </returns>
@@ -7808,6 +8627,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Gets the key value.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>接口支持创建多个服务。</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetSecretValueResponse
@@ -8155,7 +8979,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports HTTP APIs. You can call this operation to import OpenAPI 2.0 and OpenAPI 3.0.x definition files to create REST APIs.</para>
+        /// <para>Import an OpenAPI 2.0 or 3.0.x definition file to create a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8249,7 +9073,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports HTTP APIs. You can call this operation to import OpenAPI 2.0 and OpenAPI 3.0.x definition files to create REST APIs.</para>
+        /// <para>Import an OpenAPI 2.0 or 3.0.x definition file to create a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8343,7 +9167,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports HTTP APIs. You can call this operation to import OpenAPI 2.0 and OpenAPI 3.0.x definition files to create REST APIs.</para>
+        /// <para>Import an OpenAPI 2.0 or 3.0.x definition file to create a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8362,7 +9186,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Imports HTTP APIs. You can call this operation to import OpenAPI 2.0 and OpenAPI 3.0.x definition files to create REST APIs.</para>
+        /// <para>Import an OpenAPI 2.0 or 3.0.x definition file to create a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9202,6 +10026,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>获取网关外的服务信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>接口支持创建多个服务。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListExternalServicesRequest
         /// </param>
@@ -9263,6 +10092,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>获取网关外的服务信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>接口支持创建多个服务。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListExternalServicesRequest
@@ -9326,6 +10160,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>获取网关外的服务信息</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>接口支持创建多个服务。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListExternalServicesRequest
         /// </param>
@@ -9344,6 +10183,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>获取网关外的服务信息</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>接口支持创建多个服务。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListExternalServicesRequest
@@ -9459,6 +10303,188 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListGatewayFeaturesWithOptionsAsync(gatewayId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关周期配额规则列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于查询网关上绑定的消费者配额规则列表</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListGatewayQuotaRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGatewayQuotaRulesResponse
+        /// </returns>
+        public ListGatewayQuotaRulesResponse ListGatewayQuotaRulesWithOptions(string gatewayId, ListGatewayQuotaRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGatewayQuotaRules",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGatewayQuotaRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关周期配额规则列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于查询网关上绑定的消费者配额规则列表</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListGatewayQuotaRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGatewayQuotaRulesResponse
+        /// </returns>
+        public async Task<ListGatewayQuotaRulesResponse> ListGatewayQuotaRulesWithOptionsAsync(string gatewayId, ListGatewayQuotaRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListGatewayQuotaRules",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListGatewayQuotaRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关周期配额规则列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于查询网关上绑定的消费者配额规则列表</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListGatewayQuotaRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGatewayQuotaRulesResponse
+        /// </returns>
+        public ListGatewayQuotaRulesResponse ListGatewayQuotaRules(string gatewayId, ListGatewayQuotaRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListGatewayQuotaRulesWithOptions(gatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询网关周期配额规则列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于查询网关上绑定的消费者配额规则列表</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListGatewayQuotaRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListGatewayQuotaRulesResponse
+        /// </returns>
+        public async Task<ListGatewayQuotaRulesResponse> ListGatewayQuotaRulesAsync(string gatewayId, ListGatewayQuotaRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListGatewayQuotaRulesWithOptionsAsync(gatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9887,7 +10913,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the routes of an HTTP API.</para>
+        /// <para>Gets the route list for an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9989,7 +11015,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the routes of an HTTP API.</para>
+        /// <para>Gets the route list for an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10091,7 +11117,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the routes of an HTTP API.</para>
+        /// <para>Gets the route list for an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10110,7 +11136,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the routes of an HTTP API.</para>
+        /// <para>Gets the route list for an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11717,8 +12743,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥列表</para>
+        /// <para>List keys.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API supports creating multiple services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSecretsRequest
@@ -11775,8 +12806,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥列表</para>
+        /// <para>List keys.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API supports creating multiple services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSecretsRequest
@@ -11833,8 +12869,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥列表</para>
+        /// <para>List keys.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API supports creating multiple services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSecretsRequest
@@ -11852,8 +12893,13 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询密钥列表</para>
+        /// <para>List keys.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The API supports creating multiple services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSecretsRequest
@@ -12613,6 +13659,288 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RemoveConsumerAuthorizationRuleWithOptionsAsync(consumerAuthorizationRuleId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于重置网关上某条配额限流规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效；重置将清零规则上消费者历史用量。</para>
+        /// <remarks>
+        /// <para> 推荐调用逻辑：</para>
+        /// <list type="bullet">
+        /// <item><description>一、先 dryRun 预检检验是否存在规则冲突</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>传dryRun=true</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>返回含conflictHash的冲突预览</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>二、确认后正式提交</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>无冲突：dryRun=false,overwrite=false</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetGatewayQuotaRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetGatewayQuotaRuleResponse
+        /// </returns>
+        public ResetGatewayQuotaRuleResponse ResetGatewayQuotaRuleWithOptions(string gatewayId, string ruleId, ResetGatewayQuotaRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConflictHash))
+            {
+                body["conflictHash"] = request.ConflictHash;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["dryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Overwrite))
+            {
+                body["overwrite"] = request.Overwrite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodType))
+            {
+                body["periodType"] = request.PeriodType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaLimit))
+            {
+                body["quotaLimit"] = request.QuotaLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["timezone"] = request.Timezone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetGatewayQuotaRule",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId) + "/reset",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetGatewayQuotaRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于重置网关上某条配额限流规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效；重置将清零规则上消费者历史用量。</para>
+        /// <remarks>
+        /// <para> 推荐调用逻辑：</para>
+        /// <list type="bullet">
+        /// <item><description>一、先 dryRun 预检检验是否存在规则冲突</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>传dryRun=true</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>返回含conflictHash的冲突预览</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>二、确认后正式提交</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>无冲突：dryRun=false,overwrite=false</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetGatewayQuotaRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetGatewayQuotaRuleResponse
+        /// </returns>
+        public async Task<ResetGatewayQuotaRuleResponse> ResetGatewayQuotaRuleWithOptionsAsync(string gatewayId, string ruleId, ResetGatewayQuotaRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConflictHash))
+            {
+                body["conflictHash"] = request.ConflictHash;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["dryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Overwrite))
+            {
+                body["overwrite"] = request.Overwrite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PeriodType))
+            {
+                body["periodType"] = request.PeriodType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaLimit))
+            {
+                body["quotaLimit"] = request.QuotaLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["timezone"] = request.Timezone;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetGatewayQuotaRule",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId) + "/reset",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetGatewayQuotaRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于重置网关上某条配额限流规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效；重置将清零规则上消费者历史用量。</para>
+        /// <remarks>
+        /// <para> 推荐调用逻辑：</para>
+        /// <list type="bullet">
+        /// <item><description>一、先 dryRun 预检检验是否存在规则冲突</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>传dryRun=true</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>返回含conflictHash的冲突预览</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>二、确认后正式提交</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>无冲突：dryRun=false,overwrite=false</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetGatewayQuotaRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetGatewayQuotaRuleResponse
+        /// </returns>
+        public ResetGatewayQuotaRuleResponse ResetGatewayQuotaRule(string gatewayId, string ruleId, ResetGatewayQuotaRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ResetGatewayQuotaRuleWithOptions(gatewayId, ruleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>重置网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于重置网关上某条配额限流规则。注意，只针对于版本大于 2.1.19 的 AI 网关生效；重置将清零规则上消费者历史用量。</para>
+        /// <remarks>
+        /// <para> 推荐调用逻辑：</para>
+        /// <list type="bullet">
+        /// <item><description>一、先 dryRun 预检检验是否存在规则冲突</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>传dryRun=true</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>返回含conflictHash的冲突预览</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>二、确认后正式提交</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>无冲突：dryRun=false,overwrite=false</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetGatewayQuotaRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetGatewayQuotaRuleResponse
+        /// </returns>
+        public async Task<ResetGatewayQuotaRuleResponse> ResetGatewayQuotaRuleAsync(string gatewayId, string ruleId, ResetGatewayQuotaRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ResetGatewayQuotaRuleWithOptionsAsync(gatewayId, ruleId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13951,7 +15279,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an environment.</para>
+        /// <para>UpdateEnvironment</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14007,7 +15335,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an environment.</para>
+        /// <para>UpdateEnvironment</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14063,7 +15391,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an environment.</para>
+        /// <para>UpdateEnvironment</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14088,7 +15416,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an environment.</para>
+        /// <para>UpdateEnvironment</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14239,7 +15567,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a Cloud-native API Gateway instance.</para>
+        /// <para>The response message returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14285,7 +15613,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a Cloud-native API Gateway instance.</para>
+        /// <para>The response message returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14331,7 +15659,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a Cloud-native API Gateway instance.</para>
+        /// <para>The response message returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14350,7 +15678,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the name of a Cloud-native API Gateway instance.</para>
+        /// <para>The response message returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14365,6 +15693,462 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateGatewayNameWithOptionsAsync(gatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于编辑网关上某条配额规则。注意，只针对于版本大于2.1.19的AI网关生效；编辑将保留规则上消费者历史用量。</para>
+        /// <remarks>
+        /// <para> 推荐调用逻辑：</para>
+        /// <list type="bullet">
+        /// <item><description>一、先 dryRun 预检检验是否存在规则冲突</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>传dryRun=true</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>返回含conflictHash的冲突预览</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>二、确认后正式提交</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>无冲突：dryRun=false,overwrite=false</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayQuotaRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayQuotaRuleResponse
+        /// </returns>
+        public UpdateGatewayQuotaRuleResponse UpdateGatewayQuotaRuleWithOptions(string gatewayId, string ruleId, UpdateGatewayQuotaRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddIds))
+            {
+                body["addIds"] = request.AddIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConflictHash))
+            {
+                body["conflictHash"] = request.ConflictHash;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerGroupIds))
+            {
+                body["consumerGroupIds"] = request.ConsumerGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["dryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Overwrite))
+            {
+                body["overwrite"] = request.Overwrite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaLimit))
+            {
+                body["quotaLimit"] = request.QuotaLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveIds))
+            {
+                body["removeIds"] = request.RemoveIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                body["ruleName"] = request.RuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGatewayQuotaRule",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGatewayQuotaRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于编辑网关上某条配额规则。注意，只针对于版本大于2.1.19的AI网关生效；编辑将保留规则上消费者历史用量。</para>
+        /// <remarks>
+        /// <para> 推荐调用逻辑：</para>
+        /// <list type="bullet">
+        /// <item><description>一、先 dryRun 预检检验是否存在规则冲突</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>传dryRun=true</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>返回含conflictHash的冲突预览</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>二、确认后正式提交</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>无冲突：dryRun=false,overwrite=false</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayQuotaRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayQuotaRuleResponse
+        /// </returns>
+        public async Task<UpdateGatewayQuotaRuleResponse> UpdateGatewayQuotaRuleWithOptionsAsync(string gatewayId, string ruleId, UpdateGatewayQuotaRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddIds))
+            {
+                body["addIds"] = request.AddIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConflictHash))
+            {
+                body["conflictHash"] = request.ConflictHash;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConsumerGroupIds))
+            {
+                body["consumerGroupIds"] = request.ConsumerGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                body["dryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Overwrite))
+            {
+                body["overwrite"] = request.Overwrite;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuotaLimit))
+            {
+                body["quotaLimit"] = request.QuotaLimit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RemoveIds))
+            {
+                body["removeIds"] = request.RemoveIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleName))
+            {
+                body["ruleName"] = request.RuleName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGatewayQuotaRule",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGatewayQuotaRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于编辑网关上某条配额规则。注意，只针对于版本大于2.1.19的AI网关生效；编辑将保留规则上消费者历史用量。</para>
+        /// <remarks>
+        /// <para> 推荐调用逻辑：</para>
+        /// <list type="bullet">
+        /// <item><description>一、先 dryRun 预检检验是否存在规则冲突</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>传dryRun=true</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>返回含conflictHash的冲突预览</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>二、确认后正式提交</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>无冲突：dryRun=false,overwrite=false</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayQuotaRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayQuotaRuleResponse
+        /// </returns>
+        public UpdateGatewayQuotaRuleResponse UpdateGatewayQuotaRule(string gatewayId, string ruleId, UpdateGatewayQuotaRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateGatewayQuotaRuleWithOptions(gatewayId, ruleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于编辑网关上某条配额规则。注意，只针对于版本大于2.1.19的AI网关生效；编辑将保留规则上消费者历史用量。</para>
+        /// <remarks>
+        /// <para> 推荐调用逻辑：</para>
+        /// <list type="bullet">
+        /// <item><description>一、先 dryRun 预检检验是否存在规则冲突</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>传dryRun=true</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>返回含conflictHash的冲突预览</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>二、确认后正式提交</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>无冲突：dryRun=false,overwrite=false</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>有冲突且确认覆盖：dryRun=false,overwrite=true, conflictHash=&lt;上一步返回的值＞</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayQuotaRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayQuotaRuleResponse
+        /// </returns>
+        public async Task<UpdateGatewayQuotaRuleResponse> UpdateGatewayQuotaRuleAsync(string gatewayId, string ruleId, UpdateGatewayQuotaRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateGatewayQuotaRuleWithOptionsAsync(gatewayId, ruleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启/停用网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于启用或者停用网关上某个配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayQuotaRuleStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayQuotaRuleStatusResponse
+        /// </returns>
+        public UpdateGatewayQuotaRuleStatusResponse UpdateGatewayQuotaRuleStatusWithOptions(string gatewayId, string ruleId, UpdateGatewayQuotaRuleStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClearHistory))
+            {
+                body["clearHistory"] = request.ClearHistory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGatewayQuotaRuleStatus",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId) + "/status",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGatewayQuotaRuleStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启/停用网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于启用或者停用网关上某个配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayQuotaRuleStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayQuotaRuleStatusResponse
+        /// </returns>
+        public async Task<UpdateGatewayQuotaRuleStatusResponse> UpdateGatewayQuotaRuleStatusWithOptionsAsync(string gatewayId, string ruleId, UpdateGatewayQuotaRuleStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClearHistory))
+            {
+                body["clearHistory"] = request.ClearHistory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
+            {
+                body["enable"] = request.Enable;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGatewayQuotaRuleStatus",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/quota-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(ruleId) + "/status",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGatewayQuotaRuleStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启/停用网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于启用或者停用网关上某个配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayQuotaRuleStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayQuotaRuleStatusResponse
+        /// </returns>
+        public UpdateGatewayQuotaRuleStatusResponse UpdateGatewayQuotaRuleStatus(string gatewayId, string ruleId, UpdateGatewayQuotaRuleStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateGatewayQuotaRuleStatusWithOptions(gatewayId, ruleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>启/停用网关配额限流规则</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于启用或者停用网关上某个配额规则。注意，只针对于版本大于2.1.19的AI网关生效。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayQuotaRuleStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayQuotaRuleStatusResponse
+        /// </returns>
+        public async Task<UpdateGatewayQuotaRuleStatusResponse> UpdateGatewayQuotaRuleStatusAsync(string gatewayId, string ruleId, UpdateGatewayQuotaRuleStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateGatewayQuotaRuleStatusWithOptionsAsync(gatewayId, ruleId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14725,7 +16509,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the route of an HTTP API.</para>
+        /// <para>Updates a route of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14795,7 +16579,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the route of an HTTP API.</para>
+        /// <para>Updates a route of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14865,7 +16649,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the route of an HTTP API.</para>
+        /// <para>Updates a route of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14884,7 +16668,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the route of an HTTP API.</para>
+        /// <para>Updates a route of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15583,7 +17367,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a service. You can call this operation to update the health check, DNS domain name, and fixed address configurations of a service.</para>
+        /// <para>Update a service. You can update the health check configuration of the service, and the configuration information of DNS domain names and static addresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15661,7 +17445,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a service. You can call this operation to update the health check, DNS domain name, and fixed address configurations of a service.</para>
+        /// <para>Update a service. You can update the health check configuration of the service, and the configuration information of DNS domain names and static addresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15739,7 +17523,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a service. You can call this operation to update the health check, DNS domain name, and fixed address configurations of a service.</para>
+        /// <para>Update a service. You can update the health check configuration of the service, and the configuration information of DNS domain names and static addresses.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15758,7 +17542,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a service. You can call this operation to update the health check, DNS domain name, and fixed address configurations of a service.</para>
+        /// <para>Update a service. You can update the health check configuration of the service, and the configuration information of DNS domain names and static addresses.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -52,6 +52,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                     /// <summary>
                     /// <para>The parameter description.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>作用于请求与响应环节，启用gzip会对请求响应进行压缩，会减少网关流量，增加网关cpu消耗</para>
                     /// </summary>
                     [NameInMap("description")]
                     [Validation(Required=false)]
@@ -186,6 +189,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                         /// <summary>
                         /// <para>The display value.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>保持不变</para>
                         /// </summary>
                         [NameInMap("label")]
                         [Validation(Required=false)]

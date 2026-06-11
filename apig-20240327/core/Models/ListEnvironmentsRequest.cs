@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>Environment alias, fuzzy search.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>production</para>
+        /// <para>测试</para>
         /// </summary>
         [NameInMap("aliasLike")]
         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>Resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aek2sy66mftleiq</para>
+        /// <para>rg-aek2nqpppkzplmq</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]

@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>Description</para>
         /// 
         /// <b>Example:</b>
-        /// <para>this is a timeout policy description</para>
+        /// <para>这是一条网关超时策略</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

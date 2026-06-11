@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiDeployConfig : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic deployment.</para>
+        /// <para>Whether to enable automatic deployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? AutoDeploy { get; set; }
 
         /// <summary>
-        /// <para>The publishing scenario.</para>
+        /// <para>Deployment scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SingleService</para>
@@ -34,31 +34,31 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> BuiltinRouteNames { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the custom domain names.</para>
+        /// <para>List of custom domain IDs.</para>
         /// </summary>
         [NameInMap("customDomainIds")]
         [Validation(Required=false)]
         public List<string> CustomDomainIds { get; set; }
 
         /// <summary>
-        /// <para>The information about the custom domain names.</para>
+        /// <para>List of custom domain details.</para>
         /// </summary>
         [NameInMap("customDomainInfos")]
         [Validation(Required=false)]
         public List<HttpApiDeployConfigCustomDomainInfos> CustomDomainInfos { get; set; }
         public class HttpApiDeployConfigCustomDomainInfos : TeaModel {
             /// <summary>
-            /// <para>The domain name ID.</para>
+            /// <para>Domain ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>d-cshee6dlhtgkf4muio3g</para>
+            /// <para>d-cshee6dlhtgk******</para>
             /// </summary>
             [NameInMap("domainId")]
             [Validation(Required=false)]
             public string DomainId { get; set; }
 
             /// <summary>
-            /// <para>The domain name.</para>
+            /// <para>Domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hello-server.com</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The protocol.</para>
+            /// <para>Protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The environment ID.</para>
+        /// <para>Environment ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env-xxx</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>Gateway instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-xx</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The instance information.</para>
+        /// <para>Gateway information.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GatewayInfo GatewayInfo { get; set; }
 
         /// <summary>
-        /// <para>网关类型</para>
+        /// <para>Gateway type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The Mock settings.</para>
+        /// <para>Mock configuration.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -152,14 +152,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpApiMockContract Mock { get; set; }
 
         /// <summary>
-        /// <para>The policy configurations.</para>
+        /// <para>List of policy configurations.</para>
         /// </summary>
         [NameInMap("policyConfigs")]
         [Validation(Required=false)]
         public List<HttpApiPolicyConfigs> PolicyConfigs { get; set; }
 
         /// <summary>
-        /// <para>routeBackend</para>
+        /// <para>Backend service information.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -169,14 +169,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public Backend RouteBackend { get; set; }
 
         /// <summary>
-        /// <para>The service configurations.</para>
+        /// <para>List of service configurations.</para>
         /// </summary>
         [NameInMap("serviceConfigs")]
         [Validation(Required=false)]
         public List<HttpApiDeployConfigServiceConfigs> ServiceConfigs { get; set; }
         public class HttpApiDeployConfigServiceConfigs : TeaModel {
             /// <summary>
-            /// <para>Legacy gateway service ID for backward compatibility</para>
+            /// <para>Gateway service ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gw-svc-abc123</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayServiceId { get; set; }
 
             /// <summary>
-            /// <para>Intent classification code</para>
+            /// <para>Intent code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>INQUIRY</para>
@@ -196,14 +196,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string IntentCode { get; set; }
 
             /// <summary>
-            /// <para>Match conditions</para>
+            /// <para>Matching conditions.</para>
             /// </summary>
             [NameInMap("match")]
             [Validation(Required=false)]
             public HttpApiBackendMatchConditions Match { get; set; }
 
             /// <summary>
-            /// <para>The model name.</para>
+            /// <para>Model name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen-max</para>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The model name matching rule.</para>
+            /// <para>Model name matching rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen-*</para>
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelNamePattern { get; set; }
 
             /// <summary>
-            /// <para>Multi-service routing strategy type</para>
+            /// <para>Multi-service routing strategy type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ByWeight</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string MultiServiceRouteStrategy { get; set; }
 
             /// <summary>
-            /// <para>Service display name</para>
+            /// <para>Service display name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Qwen-Max-Service</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Observability metrics-based routing config</para>
+            /// <para>Observability-based routing configuration.</para>
             /// 
             /// <b>if can be null:</b>
             /// <c>true</c>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public HttpApiDeployConfigServiceConfigsObservabilityRouteConfig ObservabilityRouteConfig { get; set; }
             public class HttpApiDeployConfigServiceConfigsObservabilityRouteConfig : TeaModel {
                 /// <summary>
-                /// <para>Routing mode</para>
+                /// <para>Routing mode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LeastBusy</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Mode { get; set; }
 
                 /// <summary>
-                /// <para>Queue size</para>
+                /// <para>Queue size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public int? QueueSize { get; set; }
 
                 /// <summary>
-                /// <para>Max traffic ratio per single service</para>
+                /// <para>Maximum traffic ratio for a single service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.8</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Service port number</para>
+            /// <para>Service port number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? Port { get; set; }
 
             /// <summary>
-            /// <para>Service protocol</para>
+            /// <para>Service protocol (HTTP/HTTPS).</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP</para>
@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>The service ID.</para>
+            /// <para>Service ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>svc-xxx</para>
@@ -315,17 +315,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>Service version tag for tag-based routing scenarios</para>
+            /// <para>Service version tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>v2</para>
+            /// <para>V2</para>
             /// </summary>
             [NameInMap("version")]
             [Validation(Required=false)]
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>The service weight.</para>
+            /// <para>Service weight.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -337,24 +337,24 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The information about the sub-domain names.</para>
+        /// <para>List of second-level domain details.</para>
         /// </summary>
         [NameInMap("subDomains")]
         [Validation(Required=false)]
         public List<HttpApiDeployConfigSubDomains> SubDomains { get; set; }
         public class HttpApiDeployConfigSubDomains : TeaModel {
             /// <summary>
-            /// <para>The domain name ID.</para>
+            /// <para>Domain ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>d-csmn42um1hksudfk9eng</para>
+            /// <para>d-csmn42um******</para>
             /// </summary>
             [NameInMap("domainId")]
             [Validation(Required=false)]
             public string DomainId { get; set; }
 
             /// <summary>
-            /// <para>The domain name.</para>
+            /// <para>Domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -364,7 +364,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The network type.</para>
+            /// <para>Network type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Intranet</para>
@@ -374,7 +374,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string NetworkType { get; set; }
 
             /// <summary>
-            /// <para>The protocol.</para>
+            /// <para>Protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>Response status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>Ok</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]

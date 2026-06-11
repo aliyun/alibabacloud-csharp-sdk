@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The response content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Mock content.</para>
+        /// <para>Mock测试</para>
         /// </summary>
         [NameInMap("responseContent")]
         [Validation(Required=false)]

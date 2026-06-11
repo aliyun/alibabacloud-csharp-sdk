@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The parameter description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The example description.</para>
+        /// <para>用户ID</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

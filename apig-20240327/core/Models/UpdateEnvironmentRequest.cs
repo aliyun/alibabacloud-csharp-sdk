@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The request ID, which is used to trace the API call link.</para>
+        /// <para>测试环境</para>
         /// </summary>
         [NameInMap("alias")]
         [Validation(Required=false)]
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The response message returned.</para>
+        /// <para>这是xx的xx项目测试环境</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

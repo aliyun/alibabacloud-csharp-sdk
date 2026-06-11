@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The response description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>This is a description.</para>
+            /// <para>正常接口响应</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             ///     &quot;properties&quot;: {
             ///         &quot;result&quot;: {
             ///             &quot;type&quot;: &quot;string&quot;,
-            ///             &quot;description&quot;: &quot;This is a description.&quot;
+            ///             &quot;description&quot;: &quot;操作结果，\&quot;ok\&quot; 表示成功&quot;
             ///         }
             ///     }
             /// }</para>

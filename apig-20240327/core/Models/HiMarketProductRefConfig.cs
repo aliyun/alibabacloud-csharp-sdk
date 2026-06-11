@@ -9,40 +9,67 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HiMarketProductRefConfig : TeaModel {
+        /// <summary>
+        /// <para>Reference settings for the API gateway.</para>
+        /// </summary>
         [NameInMap("apigRefConfig")]
         [Validation(Required=false)]
         public HiMarketProductRefConfigApigRefConfig ApigRefConfig { get; set; }
         public class HiMarketProductRefConfigApigRefConfig : TeaModel {
+            /// <summary>
+            /// <para>Unique identifier for the agent API.</para>
+            /// </summary>
             [NameInMap("agentApiId")]
             [Validation(Required=false)]
             public string AgentApiId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the agent API.</para>
+            /// </summary>
             [NameInMap("agentApiName")]
             [Validation(Required=false)]
             public string AgentApiName { get; set; }
 
+            /// <summary>
+            /// <para>Unique identifier for the MCP route.</para>
+            /// </summary>
             [NameInMap("mcpRouteId")]
             [Validation(Required=false)]
             public string McpRouteId { get; set; }
 
+            /// <summary>
+            /// <para>Unique identifier for the MCP server.</para>
+            /// </summary>
             [NameInMap("mcpServerId")]
             [Validation(Required=false)]
             public string McpServerId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the MCP server.</para>
+            /// </summary>
             [NameInMap("mcpServerName")]
             [Validation(Required=false)]
             public string McpServerName { get; set; }
 
+            /// <summary>
+            /// <para>Unique identifier for the model API.</para>
+            /// </summary>
             [NameInMap("modelApiId")]
             [Validation(Required=false)]
             public string ModelApiId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the model API.</para>
+            /// </summary>
             [NameInMap("modelApiName")]
             [Validation(Required=false)]
             public string ModelApiName { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>Unique identifier for the gateway.</para>
+        /// </summary>
         [NameInMap("gatewayId")]
         [Validation(Required=false)]
         public string GatewayId { get; set; }

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             /// <para>The consumer ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cs-cu08olem1hkokaut34i0</para>
+            /// <para>cs-******</para>
             /// </summary>
             [NameInMap("consumerId")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The environment ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>env-cti17hem1hktoruj98ug</para>
+                /// <para>env-******</para>
                 /// </summary>
                 [NameInMap("environmentId")]
                 [Validation(Required=false)]

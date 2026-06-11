@@ -36,11 +36,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The types of resource attachments.</para>
                 /// <list type="bullet">
-                /// <item><description>HttpApi</description></item>
-                /// <item><description>Operation</description></item>
-                /// <item><description>GatewayRoute</description></item>
-                /// <item><description>GatewayDomain</description></item>
-                /// <item><description>Gateway</description></item>
+                /// <item><description><para>HttpApi</para>
+                /// </description></item>
+                /// <item><description><para>Operation</para>
+                /// </description></item>
+                /// <item><description><para>GatewayRoute</para>
+                /// </description></item>
+                /// <item><description><para>GatewayDomain</para>
+                /// </description></item>
+                /// <item><description><para>Gateway</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

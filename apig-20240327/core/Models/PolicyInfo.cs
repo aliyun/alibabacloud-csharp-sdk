@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The policy class alias.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>流量控制</para>
         /// </summary>
         [NameInMap("classAlias")]
         [Validation(Required=false)]
@@ -47,6 +50,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <item><description>OIDCAuth: implements global OIDC authentication. Supported: Gateway.</description></item>
         /// <item><description>ExternalZAuth: implements custom authentication. Supported: Gateway.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>RateLimit</para>
         /// </summary>
         [NameInMap("className")]
         [Validation(Required=false)]
@@ -128,6 +134,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The policy type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>策略类型</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]
