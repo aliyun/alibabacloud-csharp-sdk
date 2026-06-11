@@ -18,8 +18,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error code was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// <item><description><para>If success is false, a business error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If success is true, an empty value is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -31,8 +33,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If the value of success was false, an error message was returned.</description></item>
-        /// <item><description>If the value of success was true, a null value was returned.</description></item>
+        /// <item><description><para>Returns an error message if success is false.</para>
+        /// </description></item>
+        /// <item><description><para>Returns an empty value if success is true.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

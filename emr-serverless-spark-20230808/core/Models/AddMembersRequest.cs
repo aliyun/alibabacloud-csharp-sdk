@@ -11,6 +11,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
     public class AddMembersRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Ram User Example value: acs:ram::113545727984****:user/20468369839086****</para>
+        /// <para>Ram Role Example value: acs:ram::113545727984****:role/aliyunemrsparkjobrundefaultrole</para>
         /// </summary>
         [NameInMap("memberArns")]
         [Validation(Required=false)]

@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to run the workflow in the production environment.</para>
+        /// <para>Specifies whether the workflow runs in a production environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? IsProd { get; set; }
 
         /// <summary>
-        /// <para>The workflow ID.</para>
+        /// <para>The workflow definition ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? ProcessDefinitionCode { get; set; }
 
         /// <summary>
-        /// <para>The code of the service.</para>
+        /// <para>The product code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The queue on which the workflow runs.</para>
+        /// <para>The runtime queue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root_queue</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string VersionHashCode { get; set; }
 
         /// <summary>
-        /// <para>The version number of the workflow.</para>
+        /// <para>The version number of the workflow definition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

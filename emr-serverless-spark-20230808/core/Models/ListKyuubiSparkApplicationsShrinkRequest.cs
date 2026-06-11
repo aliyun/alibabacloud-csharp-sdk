@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListKyuubiSparkApplicationsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application that is submitted by using a Kyuubi gateway.</para>
+        /// <para>The ID of the Spark application submitted by Kyuubi, used for searching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spark-339f844005b6404c95f9f7c7a13b****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Spark application that is submitted by using a Kyuubi gateway.</para>
+        /// <para>The name of the Spark application submitted by Kyuubi, used for searching.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kyuubi-connection-spark-sql-anonymous-fa9a5e73-b4b1-474a-b****</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string LatestSqlStatementStatuses { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return.</para>
+        /// <para>The maximum number of records to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? MinDuration { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The range of start time.</para>
+        /// <para>The time range when the task started.</para>
         /// </summary>
         [NameInMap("startTime")]
         [Validation(Required=false)]

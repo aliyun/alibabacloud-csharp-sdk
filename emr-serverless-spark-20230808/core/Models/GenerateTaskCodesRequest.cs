@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GenerateTaskCodesRequest : TeaModel {
         /// <summary>
+        /// <para>The number of codes to generate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? GenNum { get; set; }
 
         /// <summary>
+        /// <para>The product namespace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ProductNamespace { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

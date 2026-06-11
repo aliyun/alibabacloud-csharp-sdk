@@ -21,11 +21,6 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         /// <summary>
         /// <para>The type of the version.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>stable</description></item>
-        /// <item><description>Beta</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>stable</para>
@@ -35,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ReleaseType { get; set; }
 
         /// <summary>
-        /// <para>The version of EMR Serverless Spark.</para>
+        /// <para>The EMR Serverless Spark version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esr-2.1 (Spark 3.3.1, Scala 2.12, Java Runtime)</para>
@@ -46,11 +41,6 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         /// <summary>
         /// <para>The status of the version.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ONLINE</description></item>
-        /// <item><description>OFFLINE</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ONLINE</para>

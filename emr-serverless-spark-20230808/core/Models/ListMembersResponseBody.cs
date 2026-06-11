@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListMembersResponseBody : TeaModel {
         /// <summary>
-        /// <para>一次获取的最大记录数。</para>
+        /// <para>The maximum number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -19,19 +19,22 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The list of members.</para>
+        /// </summary>
         [NameInMap("members")]
         [Validation(Required=false)]
         public List<ListMembersResponseBodyMembers> Members { get; set; }
         public class ListMembersResponseBodyMembers : TeaModel {
             /// <summary>
-            /// <para>针对此用户允许的操作列表。</para>
+            /// <para>The list of operations allowed for this user.</para>
             /// </summary>
             [NameInMap("actions")]
             [Validation(Required=false)]
             public List<ListMembersResponseBodyMembersActions> Actions { get; set; }
             public class ListMembersResponseBodyMembersActions : TeaModel {
                 /// <summary>
-                /// <para>行为 arn。</para>
+                /// <para>The ARN of the action.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:emr::w-1234****abcd:action/add_MEMBER</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ActionArn { get; set; }
 
                 /// <summary>
-                /// <para>权限名称。</para>
+                /// <para>The name of the permission.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>add</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ActionName { get; set; }
 
                 /// <summary>
-                /// <para>action 依赖列表。</para>
+                /// <para>The list of action dependencies.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;view&quot;]</para>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public List<string> Dependencies { get; set; }
 
                 /// <summary>
-                /// <para>action 描述。</para>
+                /// <para>The description of the action.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>add members</para>
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>权限展示名称。</para>
+                /// <para>The display name of the permission.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>add members</para>
@@ -83,6 +86,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
+            /// <para>The time when the member was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1753412502000</para>
             /// </summary>
@@ -91,7 +96,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>用户展示名称。</para>
+            /// <para>The display name of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jia***test</para>
@@ -101,7 +106,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>用户 arn。</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:emr::w-1234*<em><b>abcd:member/202265</b></em>**276</para>
@@ -111,21 +116,21 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string MemberArn { get; set; }
 
             /// <summary>
-            /// <para>用户角色列表。</para>
+            /// <para>The list of roles in the workspace.</para>
             /// </summary>
             [NameInMap("roles")]
             [Validation(Required=false)]
             public List<ListMembersResponseBodyMembersRoles> Roles { get; set; }
             public class ListMembersResponseBodyMembersRoles : TeaModel {
                 /// <summary>
-                /// <para>权限列表。</para>
+                /// <para>The list of permissions.</para>
                 /// </summary>
                 [NameInMap("actions")]
                 [Validation(Required=false)]
                 public List<ListMembersResponseBodyMembersRolesActions> Actions { get; set; }
                 public class ListMembersResponseBodyMembersRolesActions : TeaModel {
                     /// <summary>
-                    /// <para>行为 arn。</para>
+                    /// <para>The ARN of the action.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>acs:emr::w-1234****abcd:action/add_MEMBER</para>
@@ -135,7 +140,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                     public string ActionArn { get; set; }
 
                     /// <summary>
-                    /// <para>权限名称。</para>
+                    /// <para>The name of the permission.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>add</para>
@@ -145,7 +150,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                     public string ActionName { get; set; }
 
                     /// <summary>
-                    /// <para>action 依赖列表。</para>
+                    /// <para>The list of action dependencies.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>[&quot;view&quot;]</para>
@@ -155,7 +160,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                     public List<string> Dependencies { get; set; }
 
                     /// <summary>
-                    /// <para>action 描述。</para>
+                    /// <para>The description of the action.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>add members</para>
@@ -165,7 +170,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>权限展示名称。</para>
+                    /// <para>The display name of the permission.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>add members</para>
@@ -177,7 +182,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 }
 
                 /// <summary>
-                /// <para>创建时间。</para>
+                /// <para>The time when the role was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1753412502000</para>
@@ -187,7 +192,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>描述。</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DataScience</para>
@@ -197,7 +202,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>角色 arn。</para>
+                /// <para>The ARN of the role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:emr::w-1234****abcd:role/DataScience</para>
@@ -207,7 +212,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string RoleArn { get; set; }
 
                 /// <summary>
-                /// <para>角色名称。</para>
+                /// <para>The name of the role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DataScience</para>
@@ -219,7 +224,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>用户名称。</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jia<em><b>test@195</b></em>**7311.onaliyun.com</para>
@@ -229,7 +234,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string UserName { get; set; }
 
             /// <summary>
-            /// <para>用户类型。</para>
+            /// <para>The type of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MEMBER</para>
@@ -239,6 +244,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string UserType { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the member is visible.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -249,7 +256,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>下一页TOKEN。</para>
+        /// <para>The token for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -259,7 +266,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -269,7 +276,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>记录总数。</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

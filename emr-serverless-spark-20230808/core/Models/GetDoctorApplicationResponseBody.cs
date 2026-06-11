@@ -18,6 +18,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public class GetDoctorApplicationResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The diagnostics list.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Normal.</para>
             /// </summary>
             [NameInMap("suggestions")]
             [Validation(Required=false)]

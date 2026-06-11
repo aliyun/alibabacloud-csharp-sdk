@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>jr-1a2bc3</para>
+        /// <para>jr-f09a8fda2396****</para>
         /// </summary>
         [NameInMap("jobRunId")]
         [Validation(Required=false)]

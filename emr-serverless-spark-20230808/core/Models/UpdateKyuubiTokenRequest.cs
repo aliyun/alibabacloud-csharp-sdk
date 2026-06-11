@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class UpdateKyuubiTokenRequest : TeaModel {
+        /// <summary>
+        /// <para>The auto-expiration settings.</para>
+        /// </summary>
         [NameInMap("autoExpireConfiguration")]
         [Validation(Required=false)]
         public UpdateKyuubiTokenRequestAutoExpireConfiguration AutoExpireConfiguration { get; set; }
         public class UpdateKyuubiTokenRequestAutoExpireConfiguration : TeaModel {
             /// <summary>
+            /// <para>Specifies whether to enable automatic expiration for the token.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? Enable { get; set; }
 
             /// <summary>
+            /// <para>The expiration period, in days.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>365</para>
             /// </summary>
@@ -31,11 +38,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         }
 
+        /// <summary>
+        /// <para>The ARNs of authorized users.</para>
+        /// </summary>
         [NameInMap("memberArns")]
         [Validation(Required=false)]
         public List<string> MemberArns { get; set; }
 
         /// <summary>
+        /// <para>The token name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dev_serverless_spark</para>
         /// </summary>
@@ -48,6 +60,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<string> SparkRole { get; set; }
 
         /// <summary>
+        /// <para>The token. It must be 32 characters long and contain only lowercase letters and digits.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rjy7ejhej9gkzjjuun49jnx2xk8if2cu</para>
         /// </summary>
@@ -56,6 +70,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Token { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

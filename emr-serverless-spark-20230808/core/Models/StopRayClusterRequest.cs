@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class StopRayClusterRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Ray cluster instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ray-k7nm8ahl5te4tg91-ey7blpbg</para>
         /// </summary>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string QueueName { get; set; }
 
         /// <summary>
-        /// <para>The session ID.</para>
+        /// <para>The session cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sc-xxxxxxxxxxx</para>

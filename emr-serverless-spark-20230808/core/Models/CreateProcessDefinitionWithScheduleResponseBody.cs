@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateProcessDefinitionWithScheduleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The code that is returned by the backend server.</para>
+        /// <para>The API return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1400009</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public CreateProcessDefinitionWithScheduleResponseBodyData Data { get; set; }
         public class CreateProcessDefinitionWithScheduleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The workflow ID.</para>
+            /// <para>The ID of the workflow definition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>160************</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? Code { get; set; }
 
             /// <summary>
-            /// <para>The serial number of the workflow.</para>
+            /// <para>The serial number of the workflow definition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12342</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The description of the returned code.</para>
+        /// <para>A detailed message for the return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No permission for resource action</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>

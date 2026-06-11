@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetSqlStatementResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetSqlStatementResponseBodyData Data { get; set; }
         public class GetSqlStatementResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of time that is consumed by SQL queries.</para>
+            /// <para>A list of execution times for the SQL query.</para>
             /// </summary>
             [NameInMap("executionTime")]
             [Validation(Required=false)]
             public List<long?> ExecutionTime { get; set; }
 
             /// <summary>
-            /// <para>The error code.</para>
+            /// <para>The error code for the SQL query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ERROR-102</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string SqlErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error message.</para>
+            /// <para>The error message for the SQL query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>error message</para>
@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string SqlErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The query results.</para>
+            /// <para>A list of SQL query results.</para>
             /// </summary>
             [NameInMap("sqlOutputs")]
             [Validation(Required=false)]
             public List<GetSqlStatementResponseBodyDataSqlOutputs> SqlOutputs { get; set; }
             public class GetSqlStatementResponseBodyDataSqlOutputs : TeaModel {
                 /// <summary>
-                /// <para>The queried data, which is a string in the JSON format.</para>
+                /// <para>The query data. The data is a JSON-serialized string.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{\&quot;values\&quot;:[\&quot;test_db\&quot;,\&quot;test_table\&quot;,false]}</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string RowsFilePath { get; set; }
 
                 /// <summary>
-                /// <para>The information about the schema, which is a string in the JSON format.</para>
+                /// <para>The details of the schema. The details are a JSON-serialized string.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;type\&quot;:\&quot;struct\&quot;,\&quot;fields\&quot;:[{\&quot;name\&quot;:\&quot;namespace\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}},{\&quot;name\&quot;:\&quot;tableName\&quot;,\&quot;type\&quot;:\&quot;string\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}},{\&quot;name\&quot;:\&quot;isTemporary\&quot;,\&quot;type\&quot;:\&quot;boolean\&quot;,\&quot;nullable\&quot;:false,\&quot;metadata\&quot;:{}}]}</para>
@@ -77,15 +77,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The query status.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>running</description></item>
-            /// <item><description>available</description></item>
-            /// <item><description>cancelled</description></item>
-            /// <item><description>error</description></item>
-            /// <item><description>cancelling</description></item>
-            /// </list>
+            /// <para>The state of the query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -95,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The query ID.</para>
+            /// <para>The statement ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>st-1231311abadfaa</para>

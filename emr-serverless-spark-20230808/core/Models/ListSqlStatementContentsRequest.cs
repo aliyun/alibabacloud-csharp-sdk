@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListSqlStatementContentsRequest : TeaModel {
         /// <summary>
+        /// <para>The full path of the file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss://oss-<b><b>.cn-hangzhou.oss-dls.aliyuncs.com/w-86a9a4da</b>*<b>a1/spark/logs/jr-b737b</b></b>6164d/driver/st-afde7******bb3f</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string FileName { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of records to return for a single request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2000</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token that specifies the position from which to start reading the results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

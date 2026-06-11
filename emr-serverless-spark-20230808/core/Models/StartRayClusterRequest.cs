@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class StartRayClusterRequest : TeaModel {
         /// <summary>
+        /// <para>The token used to ensure idempotence.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c533e141-bf99-4236-8b6b-30e133db113c</para>
         /// </summary>

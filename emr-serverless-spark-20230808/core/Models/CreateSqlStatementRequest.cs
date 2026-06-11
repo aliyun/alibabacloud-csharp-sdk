@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateSqlStatementRequest : TeaModel {
         /// <summary>
-        /// <para>The SQL code. You can specify one or more SQL statements.</para>
+        /// <para>The SQL code. This parameter accepts one or more SQL statements for execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SHOW TABLES</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string CodeContent { get; set; }
 
         /// <summary>
-        /// <para>The default Data Lake Formation (DLF) catalog ID.</para>
+        /// <para>The ID of the default DLF Catalog.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default_catalog</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DefaultDatabase { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. Valid values: 1 to 10000.</para>
+        /// <para>The limit value. The value must be between 1 and 10000, inclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The SQL session ID. You can create an SQL session in the workspace created in EMR Serverless Spark.</para>
+        /// <para>The ID of the SQL session. The session must be created in the Session Manager module of the EMR Serverless Spark workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sc-dfahdfjafhajd****</para>

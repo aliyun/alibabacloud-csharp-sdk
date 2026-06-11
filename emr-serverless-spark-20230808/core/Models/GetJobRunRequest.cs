@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetJobRunRequest : TeaModel {
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID. For example, cn-hangzhou represents the Hangzhou region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

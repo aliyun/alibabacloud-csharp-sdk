@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class StartJobRunRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// <para>The idempotence token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8e6aae2810c8f67229ca70bb31cd6028</para>
+        /// <para>8e6aae2810c8f67229ca70bb31cd****</para>
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The code type of the job. Valid values:</para>
+        /// <para>The job type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SQL</description></item>
-        /// <item><description>JAR</description></item>
-        /// <item><description>PYTHON</description></item>
+        /// <item><description><para>SQL</para>
+        /// </description></item>
+        /// <item><description><para>JAR</para>
+        /// </description></item>
+        /// <item><description><para>PYTHON</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,31 +38,31 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string CodeType { get; set; }
 
         /// <summary>
-        /// <para>The advanced configurations of Spark.</para>
+        /// <para>The advanced Spark configurations.</para>
         /// </summary>
         [NameInMap("configurationOverrides")]
         [Validation(Required=false)]
         public StartJobRunRequestConfigurationOverrides ConfigurationOverrides { get; set; }
         public class StartJobRunRequestConfigurationOverrides : TeaModel {
             /// <summary>
-            /// <para>The SparkConf objects.</para>
+            /// <para>The list of Spark configurations.</para>
             /// </summary>
             [NameInMap("configurations")]
             [Validation(Required=false)]
             public List<StartJobRunRequestConfigurationOverridesConfigurations> Configurations { get; set; }
             public class StartJobRunRequestConfigurationOverridesConfigurations : TeaModel {
                 /// <summary>
-                /// <para>The configuration file of SparkConf.</para>
+                /// <para>The configuration file to which the Spark configuration belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>spark-default.conf</para>
+                /// <para>spark-defaults.conf</para>
                 /// </summary>
                 [NameInMap("configFileName")]
                 [Validation(Required=false)]
                 public string ConfigFileName { get; set; }
 
                 /// <summary>
-                /// <para>The key of SparkConf.</para>
+                /// <para>The key of the Spark configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>spark.app.name</para>
@@ -69,7 +72,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ConfigItemKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of SparkConf.</para>
+                /// <para>The value of the Spark configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_app</para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The version of the Spark engine.</para>
+        /// <para>The version that is displayed in the console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esr-3.3.1</para>
@@ -93,7 +96,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DisplayReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>The timeout period of the job.</para>
+        /// <para>The timeout period for the job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -103,7 +106,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? ExecutionTimeoutSeconds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Fusion engine for acceleration.</para>
+        /// <para>Specifies whether to enable the Fusion engine for acceleration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -113,7 +116,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public bool? Fusion { get; set; }
 
         /// <summary>
-        /// <para>The information about Spark Driver.</para>
+        /// <para>The information about the Spark driver.</para>
         /// </summary>
         [NameInMap("jobDriver")]
         [Validation(Required=false)]
@@ -130,7 +133,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>The name of the job.</para>
+        /// <para>The job name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spark_job_name</para>
@@ -140,7 +143,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The version number of Spark.</para>
+        /// <para>The version of the Spark engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esr-3.3.1</para>
@@ -150,7 +153,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ReleaseVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the resource queue on which the Spark job runs.</para>
+        /// <para>The resource queue on which the Spark job runs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev_queue</para>
@@ -160,7 +163,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ResourceQueueId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the job.</para>
+        /// <para>The list of job tags.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]

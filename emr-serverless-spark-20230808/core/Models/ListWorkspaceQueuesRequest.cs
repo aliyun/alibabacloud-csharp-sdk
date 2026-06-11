@@ -11,11 +11,6 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
     public class ListWorkspaceQueuesRequest : TeaModel {
         /// <summary>
         /// <para>The environment type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>dev</description></item>
-        /// <item><description>production</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>production</para>

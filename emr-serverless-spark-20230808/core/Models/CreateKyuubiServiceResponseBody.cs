@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateKyuubiServiceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateKyuubiServiceResponseBodyData Data { get; set; }
         public class CreateKyuubiServiceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Kyuubi Service ID。</para>
+            /// <para>The Kyuubi service ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kb-f99935b350fb4****7ef700b8b4197a3</para>
@@ -26,6 +29,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
         /// </summary>

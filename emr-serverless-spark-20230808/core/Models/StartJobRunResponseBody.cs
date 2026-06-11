@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class StartJobRunResponseBody : TeaModel {
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The job run ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>jr-54321</para>
+        /// <para>jr-f09a8fda2396****</para>
         /// </summary>
         [NameInMap("jobRunId")]
         [Validation(Required=false)]

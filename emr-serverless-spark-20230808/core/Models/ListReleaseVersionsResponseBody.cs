@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListReleaseVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of records to return on a single page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The versions.</para>
+        /// <para>The list of versions.</para>
         /// </summary>
         [NameInMap("releaseVersions")]
         [Validation(Required=false)]
         public List<ListReleaseVersionsResponseBodyReleaseVersions> ReleaseVersions { get; set; }
         public class ListReleaseVersionsResponseBodyReleaseVersions : TeaModel {
             /// <summary>
-            /// <para>The version number of open source Spark.</para>
+            /// <para>The community version number of Spark.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Spark 3.3.1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string CommunityVersion { get; set; }
 
             /// <summary>
-            /// <para>The CPU architectures.</para>
+            /// <para>The list of CPU architectures.</para>
             /// </summary>
             [NameInMap("cpuArchitectures")]
             [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DisplayReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the Fusion engine is used for acceleration.</para>
+            /// <para>Indicates whether the Fusion engine is enabled for acceleration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? Fusion { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the version was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1716215854101</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The type of the Infrastructure as a Service (IaaS) layer.</para>
+            /// <para>The type of the IaaS layer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ASI</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ReleaseVersion { get; set; }
 
             /// <summary>
-            /// <para>The version of Scala.</para>
+            /// <para>The Scala version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.12</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

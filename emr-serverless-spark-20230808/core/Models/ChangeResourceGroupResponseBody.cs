@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ChangeResourceGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The unique ID generated for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8CE06D75-E6A2-505D-9B4B-31DEE3D98A04</para>

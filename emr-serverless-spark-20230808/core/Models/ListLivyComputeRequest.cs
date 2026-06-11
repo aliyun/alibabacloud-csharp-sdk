@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListLivyComputeRequest : TeaModel {
         /// <summary>
+        /// <para>The environment ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ev-cq31c7tlhtgm9nrrlj4g</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

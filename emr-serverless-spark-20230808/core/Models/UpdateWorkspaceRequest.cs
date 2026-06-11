@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class UpdateWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>The resource cap for the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Cu { get; set; }
 
         /// <summary>
+        /// <para>The number of GPUs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -25,11 +29,23 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public int? Gpu { get; set; }
 
+        /// <summary>
+        /// <para>The GPU specifications.</para>
+        /// </summary>
         [NameInMap("gpuSpec")]
         [Validation(Required=false)]
         public List<string> GpuSpec { get; set; }
 
         /// <summary>
+        /// <para>The IP whitelist.</para>
+        /// </summary>
+        [NameInMap("ipWhiteList")]
+        [Validation(Required=false)]
+        public List<string> IpWhiteList { get; set; }
+
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-acfmwpi66knkxny</para>
         /// </summary>
@@ -37,11 +53,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>Details for converting a pay-as-you-go workspace to a subscription plan.</para>
+        /// </summary>
         [NameInMap("subscription")]
         [Validation(Required=false)]
         public UpdateWorkspaceRequestSubscription Subscription { get; set; }
         public class UpdateWorkspaceRequestSubscription : TeaModel {
             /// <summary>
+            /// <para>Indicates whether to enable auto-renewal. Required for subscription plans.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -50,6 +71,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string AutoRenew { get; set; }
 
             /// <summary>
+            /// <para>The auto-renewal duration. Required for subscription plans.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -58,6 +81,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string AutoRenewPeriod { get; set; }
 
             /// <summary>
+            /// <para>The unit for the auto-renewal duration. Required for subscription plans.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MONTH</para>
             /// </summary>
@@ -66,6 +91,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string AutoRenewPeriodUnit { get; set; }
 
             /// <summary>
+            /// <para>A unique, case-sensitive token to ensure request idempotence.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>my-token-asxkxxxxxxx</para>
             /// </summary>
@@ -74,6 +101,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ClientToken { get; set; }
 
             /// <summary>
+            /// <para>The subscription duration. This parameter is required for subscription plans.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1799</para>
             /// </summary>
@@ -82,6 +111,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Duration { get; set; }
 
             /// <summary>
+            /// <para>The unit of the subscription period.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>MONTH</para>
             /// </summary>
@@ -89,6 +120,9 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string PaymentDurationUnit { get; set; }
 
+            /// <summary>
+            /// <para>The queues to convert to the subscription plan.</para>
+            /// </summary>
             [NameInMap("queue")]
             [Validation(Required=false)]
             public List<string> Queue { get; set; }
@@ -96,6 +130,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>w-975bcfda9625****</para>
         /// </summary>
@@ -104,6 +140,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
+        /// <para>The workspace name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -112,6 +150,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string WorkspaceName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

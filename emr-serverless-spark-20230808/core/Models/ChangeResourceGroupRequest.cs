@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the region where the resource is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the destination resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource to move.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource type. Set this to <c>Workspace</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Workspace</para>
         /// </summary>

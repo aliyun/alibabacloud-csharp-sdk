@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class EditWorkspaceQueueRequest : TeaModel {
+        /// <summary>
+        /// <para>The environment types.</para>
+        /// </summary>
         [NameInMap("environments")]
         [Validation(Required=false)]
         public List<string> Environments { get; set; }
@@ -17,11 +20,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public List<string> GpuSpec { get; set; }
 
+        /// <summary>
+        /// <para>The resource specifications.</para>
+        /// </summary>
         [NameInMap("resourceSpec")]
         [Validation(Required=false)]
         public EditWorkspaceQueueRequestResourceSpec ResourceSpec { get; set; }
         public class EditWorkspaceQueueRequestResourceSpec : TeaModel {
             /// <summary>
+            /// <para>The maximum resource capacity of the Workspace Queue.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000</para>
             /// </summary>
@@ -48,6 +56,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
+        /// <para>The Workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>w-975bcfda9625****</para>
         /// </summary>
@@ -56,6 +66,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the Workspace Queue.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dev_queue</para>
         /// </summary>
@@ -64,6 +76,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string WorkspaceQueueName { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

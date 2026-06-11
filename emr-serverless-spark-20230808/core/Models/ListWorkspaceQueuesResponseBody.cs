@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListWorkspaceQueuesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of records to return in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<ListWorkspaceQueuesResponseBodyQueues> Queues { get; set; }
         public class ListWorkspaceQueuesResponseBodyQueues : TeaModel {
             /// <summary>
-            /// <para>The operations allowed for the queue.</para>
+            /// <para>The list of allowed operations for the queue.</para>
             /// </summary>
             [NameInMap("allowActions")]
             [Validation(Required=false)]
             public List<ListWorkspaceQueuesResponseBodyQueuesAllowActions> AllowActions { get; set; }
             public class ListWorkspaceQueuesResponseBodyQueuesAllowActions : TeaModel {
                 /// <summary>
-                /// <para>The Alibaba Cloud Resource Name (ARN) of a behavior.</para>
+                /// <para>The Alibaba Cloud Resource Name (ARN) of the behavior.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:emr::workspaceId:action/create_queue</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ActionArn { get; set; }
 
                 /// <summary>
-                /// <para>The name of the permission.</para>
+                /// <para>The permission name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>view</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ActionName { get; set; }
 
                 /// <summary>
-                /// <para>The dependencies of the operation.</para>
+                /// <para>The list of action dependencies.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[&quot;view&quot;]</para>
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public List<string> Dependencies { get; set; }
 
                 /// <summary>
-                /// <para>The description of the operation.</para>
+                /// <para>The action description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>文件目录遍历、文件浏览</para>
+                /// <para>Directory traversal and file browsing</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>The time when the workspace was created.</para>
+            /// <para>The creation time of the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684115879955</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user who created the queue.</para>
+            /// <para>The UID of the user who created the queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>237109</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The environment types of the queue.</para>
+            /// <para>The list of environment types for the queue.</para>
             /// </summary>
             [NameInMap("environments")]
             [Validation(Required=false)]
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public List<string> GpuSpec { get; set; }
 
             /// <summary>
-            /// <para>The maximum capacity of resources that can be used in the queue.</para>
+            /// <para>The maximum resource capacity of the queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string MaxResource { get; set; }
 
             /// <summary>
-            /// <para>The minimum capacity of resources that can be used in the queue.</para>
+            /// <para>The minimum resource capacity of the queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</para>
@@ -149,8 +149,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             /// <summary>
             /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PayAsYouGo</description></item>
-            /// <item><description>Pre</description></item>
+            /// <item><description><para>PayAsYouGo: pay-as-you-go</para>
+            /// </description></item>
+            /// <item><description><para>Pre: subscription</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -183,7 +185,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string QueueCategory { get; set; }
 
             /// <summary>
-            /// <para>The name of the queue.</para>
+            /// <para>The queue name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev_queue</para>
@@ -203,7 +205,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string QueueScope { get; set; }
 
             /// <summary>
-            /// <para>The status of the queue.</para>
+            /// <para>The queue status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -213,14 +215,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string QueueStatus { get; set; }
 
             /// <summary>
-            /// <para>The type of the queue. Valid values:</para>
+            /// <para>The queue type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>instance</description></item>
-            /// <item><description>instanceChildren</description></item>
+            /// <item><description><para>instance: A queue for a single task.</para>
+            /// </description></item>
+            /// <item><description><para>instanceChildren: A queue for a parent task.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>instance, instanceChildren</para>
+            /// <para>instance</para>
             /// </summary>
             [NameInMap("queueType")]
             [Validation(Required=false)]
@@ -237,7 +241,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The capacity of resources that are used in the queue.</para>
+            /// <para>The used resource capacity of the queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;cpu&quot;: &quot;2&quot;,&quot;memory&quot;: &quot;2Gi&quot;}</para>
@@ -269,7 +273,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

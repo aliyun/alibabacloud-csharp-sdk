@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class CreateSqlStatementResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CreateSqlStatementResponseBodyData Data { get; set; }
         public class CreateSqlStatementResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The interactive query ID.</para>
+            /// <para>The ID of the interactive query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>st-1231dfafadfa***</para>

@@ -11,12 +11,6 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
     public class ListSessionClustersRequest : TeaModel {
         /// <summary>
         /// <para>The session type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>NOTEBOOK</description></item>
-        /// <item><description>THRIFT</description></item>
-        /// <item><description>SQL</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>SQL</para>
@@ -26,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return.</para>
+        /// <para>The maximum number of records to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -36,17 +30,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the request to retrieve a new page of results.</para>
+        /// <para>The token that marks the start of the next page of results.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the queue.</para>
+        /// <para>The queue name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root</para>

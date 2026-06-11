@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class StartProcessInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The code that is returned by the backend server.</para>
+        /// <para>The return code from the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1400009</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;sessionBizId\&quot;: \&quot;sc-dc85644dba1c8c63\&quot;, \&quot;bizId\&quot;: \&quot;st-aeed3b0d4f87418a9a9dcbd757477658\&quot;, \&quot;gmtCreated\&quot;: \&quot;Thu Sep 12 02:28:45 UTC 2024\&quot;}</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public object Data { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the workflow fails to be run manually.</para>
+        /// <para>Indicates whether the manual workflow run failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The description of the returned code.</para>
+        /// <para>The detailed description of the return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No permission for resource action</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>

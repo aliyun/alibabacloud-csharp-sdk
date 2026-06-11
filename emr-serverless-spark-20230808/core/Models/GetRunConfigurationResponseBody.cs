@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class GetRunConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>请求ID。</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -19,19 +19,22 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The run configuration.</para>
+        /// </summary>
         [NameInMap("runConfiguration")]
         [Validation(Required=false)]
         public GetRunConfigurationResponseBodyRunConfiguration RunConfiguration { get; set; }
         public class GetRunConfigurationResponseBodyRunConfiguration : TeaModel {
             /// <summary>
-            /// <para>应用配置项</para>
+            /// <para>The list of Spark configuration parameters.</para>
             /// </summary>
             [NameInMap("applicationConfigs")]
             [Validation(Required=false)]
             public List<GetRunConfigurationResponseBodyRunConfigurationApplicationConfigs> ApplicationConfigs { get; set; }
             public class GetRunConfigurationResponseBodyRunConfigurationApplicationConfigs : TeaModel {
                 /// <summary>
-                /// <para>应用配置文件名。 应用配置文件名。 <c>spark-defaults.conf</c></para>
+                /// <para>The name of the application configuration file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>spark-defaults.conf</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ConfigFileName { get; set; }
 
                 /// <summary>
-                /// <para>配置项键。 配置项键。 <c>dfs.namenode.checkpoint.period</c></para>
+                /// <para>The key of the configuration item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>spark.driver.cores</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string ConfigItemKey { get; set; }
 
                 /// <summary>
-                /// <para>配置项值。 配置项值。 <c>3600s</c></para>
+                /// <para>The value of the configuration item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -62,11 +65,16 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             }
 
+            /// <summary>
+            /// <para>The log configuration.</para>
+            /// </summary>
             [NameInMap("logConfig")]
             [Validation(Required=false)]
             public GetRunConfigurationResponseBodyRunConfigurationLogConfig LogConfig { get; set; }
             public class GetRunConfigurationResponseBodyRunConfigurationLogConfig : TeaModel {
                 /// <summary>
+                /// <para>The log level.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>INFO</para>
                 /// </summary>
@@ -75,6 +83,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string LogLevel { get; set; }
 
                 /// <summary>
+                /// <para>The log path.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>oss://test</para>
                 /// </summary>
@@ -85,7 +95,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>运行配置。</para>
+            /// <para>The list of runtime parameters.</para>
             /// </summary>
             [NameInMap("runtimeConfigs")]
             [Validation(Required=false)]
