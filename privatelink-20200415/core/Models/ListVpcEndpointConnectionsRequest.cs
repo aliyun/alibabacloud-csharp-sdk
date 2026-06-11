@@ -12,13 +12,20 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// <para>The state of the endpoint connection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Pending</b>: The endpoint connection is being modified.</description></item>
-        /// <item><description><b>Connecting</b>: The endpoint connection is being established.</description></item>
-        /// <item><description><b>Connected</b>: The endpoint connection is established.</description></item>
-        /// <item><description><b>Disconnecting</b>: The endpoint is being disconnected from the endpoint service.</description></item>
-        /// <item><description><b>Disconnected</b>: The endpoint is disconnected from the endpoint service.</description></item>
-        /// <item><description><b>Deleting</b>: The connection is being deleted.</description></item>
-        /// <item><description><b>ServiceDeleted</b>: The corresponding endpoint service has been deleted.</description></item>
+        /// <item><description><para><b>Pending</b>: The endpoint connection is being modified.</para>
+        /// </description></item>
+        /// <item><description><para><b>Connecting</b>: The endpoint connection is being established.</para>
+        /// </description></item>
+        /// <item><description><para><b>Connected</b>: The endpoint is connected to the endpoint service.</para>
+        /// </description></item>
+        /// <item><description><para><b>Disconnecting</b>: The endpoint is being disconnected from the endpoint service.</para>
+        /// </description></item>
+        /// <item><description><para><b>Disconnected</b>: The endpoint is disconnected from the endpoint service.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deleting</b>: The endpoint connection is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>ServiceDeleted</b>: The corresponding endpoint service is deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +56,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public long? EndpointOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint elastic network interface (ENI).</para>
+        /// <para>The endpoint elastic network interface (ENI) ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-hp32lk0pyv6o94hs****</para>
@@ -59,7 +66,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string EniId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>50</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>1000</b>. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -69,10 +76,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token that is used for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</description></item>
-        /// <item><description>If a next request is to be performed, set the value to the value of <b>NextToken</b> that is returned from the last call.</description></item>
+        /// <item><description>You do not need to specify this parameter for the first query or if no next query is to be sent.</description></item>
+        /// <item><description>If a next query is to be sent, set the value to the value of <b>NextToken</b> that is returned from the last API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,8 +90,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the endpoint connection.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the endpoint connections that you want to query.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +102,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the replaced service resource in smooth migration scenarios.</para>
+        /// <para>The ID of the service resource that is replaced in the smooth migration scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb-hp32z1wp5peaoox2q****</para>

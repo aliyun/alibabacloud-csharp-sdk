@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class ListVpcEndpointConnectionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The endpoint connections.</para>
+        /// <para>The information about the endpoint connections.</para>
         /// </summary>
         [NameInMap("Connections")]
         [Validation(Required=false)]
         public List<ListVpcEndpointConnectionsResponseBodyConnections> Connections { get; set; }
         public class ListVpcEndpointConnectionsResponseBodyConnections : TeaModel {
             /// <summary>
-            /// <para>The bandwidth of the endpoint connection. Valid values: <b>1024 to 10240</b>. Unit: Mbit/s.</para>
+            /// <para>The bandwidth of the endpoint connection. Unit: Mbit/s.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1024</para>
+            /// <para>3072</para>
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
@@ -29,13 +29,20 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             /// <summary>
             /// <para>The state of the endpoint connection. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Pending</b>: The connection is being modified.</description></item>
-            /// <item><description><b>Connecting</b>: The connection is being established.</description></item>
-            /// <item><description><b>Connected</b>: The connection is established.</description></item>
-            /// <item><description><b>Disconnecting</b>: The endpoint is being disconnected from the endpoint service.</description></item>
-            /// <item><description><b>Disconnected</b>: The endpoint is disconnected from the endpoint service.</description></item>
-            /// <item><description><b>Deleting</b>: The connection is being deleted.</description></item>
-            /// <item><description><b>ServiceDeleted</b>: The corresponding endpoint service has been deleted.</description></item>
+            /// <item><description><para><b>Pending</b>: The endpoint connection is being modified.</para>
+            /// </description></item>
+            /// <item><description><para><b>Connecting</b>: The endpoint connection is being established.</para>
+            /// </description></item>
+            /// <item><description><para><b>Connected</b>: The endpoint is connected to the endpoint service.</para>
+            /// </description></item>
+            /// <item><description><para><b>Disconnecting</b>: The endpoint is being disconnected from the endpoint service.</para>
+            /// </description></item>
+            /// <item><description><para><b>Disconnected</b>: The endpoint is disconnected from the endpoint service.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleting</b>: The endpoint connection is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para><b>ServiceDeleted</b>: The corresponding endpoint service is deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,6 +72,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public long? EndpointOwnerId { get; set; }
 
+            /// <summary>
+            /// <para>The region ID of the endpoint.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-hangzhou</para>
+            /// </summary>
             [NameInMap("EndpointRegionId")]
             [Validation(Required=false)]
             public string EndpointRegionId { get; set; }
@@ -80,7 +93,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string EndpointVpcId { get; set; }
 
             /// <summary>
-            /// <para>The time when the endpoint connection was modified.</para>
+            /// <para>The time when the connection was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-09-28T10:34:46Z</para>
@@ -102,8 +115,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             /// <summary>
             /// <para>Indicates whether the endpoint and the endpoint service belong to the same Alibaba Cloud account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,16 +138,33 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public string ServiceId { get; set; }
 
+            /// <summary>
+            /// <para>The region ID of the endpoint service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-huhehaote</para>
+            /// </summary>
             [NameInMap("ServiceRegionId")]
             [Validation(Required=false)]
             public string ServiceRegionId { get; set; }
 
+            /// <summary>
+            /// <list type="bullet">
+            /// <item><description><para>Scalability: automatic scaling. In this mode, the bandwidth configured for the endpoint connection does not take effect.</para>
+            /// </description></item>
+            /// <item><description><para>BandwidthLimit: the bandwidth limit of the endpoint connection. The bandwidth limit is the value of Bandwidth.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>BandwidthLimit</para>
+            /// </summary>
             [NameInMap("TrafficControlMode")]
             [Validation(Required=false)]
             public string TrafficControlMode { get; set; }
 
             /// <summary>
-            /// <para>The zones.</para>
+            /// <para>The zone information.</para>
             /// </summary>
             [NameInMap("Zones")]
             [Validation(Required=false)]
@@ -149,7 +181,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
                 public string EniId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the replaced endpoint ENI in smooth migration scenarios.</para>
+                /// <para>The ID of the endpoint ENI that is replaced in the smooth migration scenario.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eni-hp32lk0pyv6o94hs****</para>
@@ -159,7 +191,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
                 public string ReplacedEniId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the replaced service resource in smooth migration scenarios.</para>
+                /// <para>The ID of the service resource that is replaced in the smooth migration scenario.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>lb-hp32z1wp5peaoox2q****</para>
@@ -179,7 +211,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch to which the endpoint belongs.</para>
+                /// <para>The vSwitch to which the endpoint belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-hp3uf6045ljdhd5zr****</para>
@@ -212,7 +244,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
                 /// <para>The state of the zone. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>Creating</b>: The zone is being created.</description></item>
-                /// <item><description><b>Wait</b>: The zone is to be connected.</description></item>
+                /// <item><description><b>Wait</b>: The zone is waiting to be connected.</description></item>
                 /// <item><description><b>Connected</b>: The zone is connected.</description></item>
                 /// <item><description><b>Deleting</b>: The zone is being deleted.</description></item>
                 /// <item><description><b>Disconnecting</b>: The zone is being disconnected.</description></item>
@@ -234,7 +266,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -244,10 +276,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token that is used for the next query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is returned for <b>NextToken</b>, no next requests are performed.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value can be used in the next request to retrieve a new page of results.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query is to be sent.</description></item>
+        /// <item><description>If a value of <b>NextToken</b> is returned, the value is the token that is used for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -268,7 +300,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The number of entries returned in the endpoint connection list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

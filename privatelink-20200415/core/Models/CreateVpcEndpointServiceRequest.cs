@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class CreateVpcEndpointServiceRequest : TeaModel {
         /// <summary>
-        /// <para>The protocol. Valid values:</para>
+        /// <para>The IP version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IPv4</b> (default)</description></item>
-        /// <item><description><b>DualStack</b></description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> You can set the protocol to DualStack only for endpoint services whose backend resource type is NLB. An endpoint service supports dual-stack only if its backend resources support dual-stack.</para>
+        /// <item><description><b>IPv4</b> (default): IPv4.</description></item>
+        /// <item><description><b>DualStack</b>: dual stack.<remarks>
+        /// <para>Only endpoint services whose backend resource type is nlb or gwlb support DualStack. If the endpoint service supports dual stack, its backend resources must also support dual stack.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// <para>Specifies whether to automatically accept endpoint connection requests. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: automatically accepts endpoint connection requests.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): does not automatically accept endpoint connection requests.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +44,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>You can use the client to generate the value, but you must ensure that it is unique among different requests. <b>ClientToken</b> can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe637760</para>
@@ -52,10 +54,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request.</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: performs only a dry run. The system checks the request for required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,10 +70,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The payer. Valid values:</para>
+        /// <para>The payer of the endpoint service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Endpoint</b>: service consumer</description></item>
-        /// <item><description><b>EndpointService</b>: service provider</description></item>
+        /// <item><description><para><b>Endpoint</b>: the service consumer.</para>
+        /// </description></item>
+        /// <item><description><para><b>EndpointService</b>: the service provider.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,8 +86,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string Payer { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the endpoint service.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the endpoint service is created.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/469325.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +98,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The service resources of the endpoint service. You can create at most 10 resources. After the resource is created, you can continue to add service resources to the endpoint.</para>
+        /// <para>The list of service resources of the endpoint service. You can add at most 10 service resources when you create the endpoint service. After the endpoint service is created, you can continue to add service resources.</para>
         /// </summary>
         [NameInMap("Resource")]
         [Validation(Required=false)]
@@ -109,15 +115,17 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The type of the service resource that is added to the endpoint service. You can add up to 20 service resources to the endpoint service. Valid values:</para>
+            /// <para>The type of the service resource that is added to the endpoint service. You can add at most 20 service resources to an endpoint service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>slb</b>: CLB instance</description></item>
-            /// <item><description><b>alb</b>: ALB instance</description></item>
-            /// <item><description><b>nlb</b>: NLB instance</description></item>
+            /// <item><description><para><b>slb</b>: a Classic Load Balancer (CLB) instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>alb</b>: an Application Load Balancer (ALB) instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>nlb</b>: a Network Load Balancer (NLB) instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>gwlb</b>: a Gateway Load Balancer (GWLB) instance.</para>
+            /// </description></item>
             /// </list>
-            /// <remarks>
-            /// <para> In regions where PrivateLink is supported, CLB instances deployed in virtual private clouds (VPCs) can serve as the service resources of the endpoint service. You cannot access TCP/SSL listeners configured for NLB instances.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>slb</para>
@@ -127,7 +135,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the cluster.</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-huhehaote-a</para>
@@ -139,7 +147,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmy*****</para>
@@ -161,12 +169,17 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// <para>The type of the service resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>slb</b>: Classic Load Balancer (CLB) instance</description></item>
-        /// <item><description><b>alb</b>: Application Load Balancer (ALB) instance</description></item>
-        /// <item><description><b>nlb</b>: Network Load Balancer (NLB) instance</description></item>
+        /// <item><description><para><b>slb</b>: a Classic Load Balancer (CLB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>alb</b>: an Application Load Balancer (ALB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>nlb</b>: a Network Load Balancer (NLB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>gwlb</b>: a Gateway Load Balancer (GWLB) instance.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You cannot access TCP/SSL listeners configured for NLB instances.</para>
+        /// <para>TCPSSL listeners of NLB instances cannot be accessed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -179,10 +192,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to enable IPv6 for the endpoint service. Valid values:</para>
+        /// <para>Specifies whether the endpoint service supports IPv6. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: yes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): no.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -193,20 +208,23 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Obsolete]
         public bool? ServiceSupportIPv6 { get; set; }
 
+        /// <summary>
+        /// <para>The list of regions in which the endpoint service is available. Service consumers can initiate endpoint connections from the regions in the list.</para>
+        /// </summary>
         [NameInMap("SupportedRegionList")]
         [Validation(Required=false)]
         public List<string> SupportedRegionList { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the resource.</para>
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateVpcEndpointServiceRequestTag> Tag { get; set; }
         public class CreateVpcEndpointServiceRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag to add to the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be at most 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -216,8 +234,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag to add to the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be at most 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prod</para>
@@ -229,10 +247,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:</para>
+        /// <para>Specifies whether to enable zone affinity for endpoint domain name resolution. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: yes.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): no.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

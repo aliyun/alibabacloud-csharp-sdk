@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// <para>Specifies whether to remove all tags from the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you specify both the All and TagKey.N parameters, the All parameter does not take effect.</para>
+        /// <para>If you specify both the All and TagKey.N parameters, the All parameter does not take effect.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -30,7 +32,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
         /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token.******** The request ID may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the request ID as the client token.\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em> The request ID may be different for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,8 +45,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <c>2xx HTTP</c> status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a <c>2xx HTTP</c> status code is returned and the operation is performed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,13 +81,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>vpcendpoint</b>: endpoint</description></item>
-        /// <item><description><b>vpcendpointservice</b>: endpoint service</description></item>
+        /// <item><description><para><b>vpcendpoint</b>: endpoint</para>
+        /// </description></item>
+        /// <item><description><para><b>vpcendpointservice</b>: endpoint service</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>slb</para>
+        /// <para>vpcendpoint</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

@@ -9,18 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class UpdateVpcEndpointServiceAttributeRequest : TeaModel {
+        /// <summary>
+        /// <para>The remote regions to add to the list of supported regions.</para>
+        /// </summary>
         [NameInMap("AddSupportedRegionSet")]
         [Validation(Required=false)]
         public List<string> AddSupportedRegionSet { get; set; }
 
         /// <summary>
-        /// <para>The protocol. Valid values:</para>
+        /// <para>The IP version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IPv4</b></description></item>
-        /// <item><description><b>DualStack</b></description></item>
+        /// <item><description><para><b>IPv4</b>: IPv4.</para>
+        /// </description></item>
+        /// <item><description><para><b>DualStack</b>: dual-stack.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can set the protocol to DualStack only for endpoint services whose backend resource type is NLB.</para>
+        /// <para>Only endpoint services that use an NLB or GWLB instance as the service resource support the <b>DualStack</b> IP version.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,10 +36,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string AddressIpVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically accept endpoint connection requests. Valid values:</para>
+        /// <para>Specifies whether to automatically accept endpoint connections. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: automatically accepts endpoint connections.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: does not automatically accept endpoint connections.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,8 +52,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public bool? AutoAcceptEnabled { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>A client-generated token that ensures the idempotence of the request.</para>
+        /// <para>Your client must generate a unique token for each request. <b>ClientToken</b> can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe637760</para>
@@ -56,28 +63,33 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The default maximum bandwidth of the endpoint connection. Unit: Mbit/s. Default value: <b>3072</b>.</para>
+        /// <para>The default maximum connection bandwidth. The default value is <b>3072</b>. Unit: Mbps.</para>
         /// <para>Valid values: <b>100</b> to <b>10240</b>.</para>
         /// <remarks>
-        /// <para> You can specify this parameter only if you specify Classic Load Balancer (CLB) instances or Application Load Balancer (ALB) instances as service resources.</para>
+        /// <para>You can set this parameter only if the service resource is a CLB or ALB instance, but not an NLB instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>3072</para>
         /// </summary>
         [NameInMap("ConnectBandwidth")]
         [Validation(Required=false)]
         public int? ConnectBandwidth { get; set; }
 
+        /// <summary>
+        /// <para>The remote regions to remove from the list of supported regions.</para>
+        /// </summary>
         [NameInMap("DeleteSupportedRegionSet")]
         [Validation(Required=false)]
         public List<string> DeleteSupportedRegionSet { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the required parameters, request format, and service limits. If the request fails the dry run, the system returns an error message. If the request passes the dry run, the system returns the <c>DryRunOperation</c> error code.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the check, the system returns a 2xx HTTP status code and performs the operation.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +101,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
         /// <summary>
         /// <para>The region ID of the endpoint service.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to get the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -110,7 +122,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ServiceDescription { get; set; }
 
         /// <summary>
-        /// <para>The endpoint service ID.</para>
+        /// <para>The ID of the endpoint service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -123,10 +135,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Specifies whether to enable IPv6. Valid values:</para>
+        /// <para>Specifies whether to enable IPv6 for the endpoint service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: Enables IPv6.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Disables IPv6.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,10 +152,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public bool? ServiceSupportIPv6 { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to first resolve the domain name of the nearest endpoint that is associated with the endpoint service. Valid values:</para>
+        /// <para>Specifies whether to enable zone affinity for the endpoint service. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default)</description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b> (default): Enables zone affinity.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disables zone affinity.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

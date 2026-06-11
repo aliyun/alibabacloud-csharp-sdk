@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token that is used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is returned for <b>NextToken</b>, no next requests are performed.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value can be used in the next request to retrieve a new page of results.</description></item>
+        /// <item><description><para>If this parameter is empty, no next page exists.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned, use the value to retrieve the next page of results.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,14 +49,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3</para>
+        /// <para>12</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The information about the zones.</para>
+        /// <para>The collection of zone information.</para>
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string EniIp { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the endpoint.</para>
+            /// <para>The ID of the region where the endpoint is deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-huhehaote</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the vSwitch in the zone. The system automatically creates an endpoint elastic network interface (ENI) in the vSwitch.</para>
+            /// <para>The vSwitch in the zone. The system automatically creates an endpoint elastic network interface (ENI) in the vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-hjkshjvdkdvd****</para>
@@ -102,10 +104,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
             /// <summary>
             /// <para>The domain name of the zone.</para>
-            /// <para>After the endpoint in the zone is connected to the endpoint service, you can access the service resources of the endpoint service by using the domain name of the zone.</para>
+            /// <para>After an endpoint connection is established, use this domain name to access the service resources of the endpoint service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ep-hp3f033dp24c5yc9****-cn-huhehaote.epsrv-hp3itcpowf37m3d5****.cn-huhehaote-a.privatelink.aliyuncs.com</para>
+            /// <para>ep-hp3f033dp24c5yc9****-cn-huhehaote-a.epsrv-hp3itcpowf37m3d5****.cn-huhehaote.privatelink.aliyuncs.com</para>
             /// </summary>
             [NameInMap("ZoneDomain")]
             [Validation(Required=false)]
@@ -122,29 +124,32 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ZoneId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the endpoint service supports IPv6. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b> (default)</description></item>
-            /// </list>
+            /// <para>The IPv6 address of the endpoint ENI.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>false</para>
+            /// <para>2408:4005:3b6:<b><b>:6955:c3cb:34c:</b></b></para>
             /// </summary>
             [NameInMap("ZoneIpv6Address")]
             [Validation(Required=false)]
             public string ZoneIpv6Address { get; set; }
 
             /// <summary>
-            /// <para>The state of the zone. Valid values:</para>
+            /// <para>The status of the zone. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b>: The zone is being created.</description></item>
-            /// <item><description><b>Wait</b>: The zone is to be connected.</description></item>
-            /// <item><description><b>Connected</b>: The zone is connected.</description></item>
-            /// <item><description><b>Deleting</b>: The zone is being deleted.</description></item>
-            /// <item><description><b>Disconnecting</b>: The zone is being disconnected.</description></item>
-            /// <item><description><b>Disconnected</b>: The zone is disconnected.</description></item>
-            /// <item><description><b>Connecting</b>: The zone is being connected.</description></item>
+            /// <item><description><para><b>Creating</b>: The zone is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>Wait</b>: The zone is waiting to be connected.</para>
+            /// </description></item>
+            /// <item><description><para><b>Connected</b>: The zone is connected.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleting</b>: The zone is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para><b>Disconnecting</b>: The zone is being disconnected.</para>
+            /// </description></item>
+            /// <item><description><para><b>Disconnected</b>: The zone is disconnected.</para>
+            /// </description></item>
+            /// <item><description><para><b>Connecting</b>: The zone is being connected.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

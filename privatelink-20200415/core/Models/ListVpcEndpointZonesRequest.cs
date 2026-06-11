@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class ListVpcEndpointZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the endpoint for which you want to query zones.</para>
-        /// <para>After you specify an endpoint ID, the system queries the zones of the specified endpoint.</para>
+        /// <para>The ID of the endpoint.</para>
+        /// <para>After you specify the endpoint ID, the system queries the zones of the endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>50</b>. Default value: <b>50</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>1000</b>. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -32,10 +32,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token that is used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</description></item>
-        /// <item><description>If a next request is to be performed, set the parameter to the value of <b>NextToken</b> that is returned from the last call.</description></item>
+        /// <item><description><para>If this is your first query, you do not need to specify this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If a next page exists, set the value to the <b>NextToken</b> value that is returned from the previous call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,8 +48,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the endpoint.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

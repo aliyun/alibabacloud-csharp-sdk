@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class ListVpcEndpointServicesByEndUserRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>1000</b>. Default value: <b>50</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>1000</b>. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The pagination token.</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</description></item>
-        /// <item><description>If a next request is to be performed, set the value to the value of <b>NextToken</b> that is returned from the last call.</description></item>
+        /// <item><description><para>If this is your first request, do not specify this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If more results are available, set this parameter to the <b>NextToken</b> value from the previous response to retrieve the next page.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,8 +36,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the endpoint.</para>
-        /// <para>You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint service that you want to query.</para>
+        /// <para>The ID of the endpoint service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>epsrv-hp3vpx8yqxblby3i****</para>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the endpoint service that you want to query.</para>
+        /// <para>The name of the endpoint service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3xdsq46ael67lo****</para>
@@ -75,13 +77,19 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
+        /// <summary>
+        /// <para>The region ID of the endpoint service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
         [NameInMap("ServiceRegionId")]
         [Validation(Required=false)]
         public string ServiceRegionId { get; set; }
 
         /// <summary>
         /// <para>The type of the endpoint service.</para>
-        /// <para>Set the value to <b>Interface</b>. You can specify CLB and ALB instances as service resources for the endpoint service.</para>
+        /// <para>Only <b>Interface</b> is supported. An interface endpoint allows you to use Application Load Balancers (ALBs), Classic Load Balancers (CLBs), and Network Load Balancers (NLBs) as service resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Interface</para>
@@ -91,15 +99,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>A list of tags to filter resources. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListVpcEndpointServicesByEndUserRequestTag> Tag { get; set; }
         public class ListVpcEndpointServicesByEndUserRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The key of the tag. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -109,8 +117,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The value of the tag. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

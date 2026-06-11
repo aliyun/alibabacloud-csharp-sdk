@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is returned for <b>NextToken</b>, no next requests are performed.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value can be used in the next request to retrieve a new page of results.</description></item>
+        /// <item><description><para>If no value is returned for <b>NextToken</b>, no next requests are performed.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value can be used in the next request to retrieve a new page of results.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,8 +55,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             /// <summary>
             /// <para>Indicates whether automatic resource allocation is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -117,8 +121,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             /// <summary>
             /// <para>Indicates whether IPv6 is enabled for the endpoint service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b></para>
+            /// </description></item>
+            /// <item><description><para><b>false</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

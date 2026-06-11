@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class ListVpcEndpointsRequest : TeaModel {
         /// <summary>
-        /// <para>The protocol. Valid values:</para>
+        /// <para>The IP version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>IPv4</b></description></item>
-        /// <item><description><b>DualStack</b></description></item>
+        /// <item><description><para><b>IPv4</b>: IPv4</para>
+        /// </description></item>
+        /// <item><description><para><b>DualStack</b>: dual stack</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,15 +26,22 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string AddressIpVersion { get; set; }
 
         /// <summary>
-        /// <para>The state of the endpoint connection. Valid values:</para>
+        /// <para>The connection state of the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Pending</b>: The endpoint connection is being modified.</description></item>
-        /// <item><description><b>Connecting</b>: The endpoint connection is being established.</description></item>
-        /// <item><description><b>Connected</b>: The endpoint connection is established.</description></item>
-        /// <item><description><b>Disconnecting</b>: The endpoint is being disconnected from the endpoint service.</description></item>
-        /// <item><description><b>Disconnected</b>: The endpoint is disconnected from the endpoint service.</description></item>
-        /// <item><description><b>Deleting</b>: The connection is being deleted.</description></item>
-        /// <item><description><b>ServiceDeleted</b>: The corresponding endpoint service has been deleted.</description></item>
+        /// <item><description><para><b>Pending</b>: The endpoint connection is being modified.</para>
+        /// </description></item>
+        /// <item><description><para><b>Connecting</b>: The endpoint is connecting.</para>
+        /// </description></item>
+        /// <item><description><para><b>Connected</b>: The endpoint is connected.</para>
+        /// </description></item>
+        /// <item><description><para><b>Disconnecting</b>: The endpoint is disconnecting.</para>
+        /// </description></item>
+        /// <item><description><para><b>Disconnected</b>: The endpoint is disconnected.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deleting</b>: The endpoint is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>ServiceDeleted</b>: The endpoint service with which the endpoint is associated has been deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,12 +72,16 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string EndpointName { get; set; }
 
         /// <summary>
-        /// <para>The state of the endpoint. Valid values:</para>
+        /// <para>The status of the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Creating</b>: The endpoint is being created.</description></item>
-        /// <item><description><b>Active</b>: The endpoint is available.</description></item>
-        /// <item><description><b>Pending</b>: The endpoint is being modified.</description></item>
-        /// <item><description><b>Deleting</b>: The endpoint is being deleted.</description></item>
+        /// <item><description><para><b>Creating</b>: The endpoint is being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>Active</b>: The endpoint is available.</para>
+        /// </description></item>
+        /// <item><description><para><b>Pending</b>: The endpoint is being modified.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deleting</b>: The endpoint is being deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,8 +94,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// <para>The type of the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Interface</b>: interface endpoint</description></item>
-        /// <item><description><b>Reverse</b>: reverse endpoint</description></item>
+        /// <item><description><para><b>Interface</b>: an interface endpoint</para>
+        /// </description></item>
+        /// <item><description><para><b>Reverse</b>: a reverse endpoint</para>
+        /// </description></item>
+        /// <item><description><para><b>GatewayLoadBalancer</b>: a Gateway Load Balancer-type endpoint</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,7 +110,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string EndpointType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1</b> to <b>1000</b>. Default value: <b>50</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>1</b> to <b>1000</b>. Default value: <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -103,10 +120,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token that is used to retrieve the next page of results.</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</description></item>
-        /// <item><description>If a next request is to be performed, set the parameter to the value of <b>NextToken</b> that is returned from the last call.</description></item>
+        /// <item><description><para>If this is your first query or no next page is available, you do not need to specify this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If a next page is available, set the value to the <b>NextToken</b> value that is returned from the previous call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,8 +136,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the endpoint.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the endpoint is deployed.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,6 +167,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         [Validation(Required=false)]
         public string ServiceName { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region where the endpoint service is deployed.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-huhehaote</para>
+        /// </summary>
         [NameInMap("ServiceRegionId")]
         [Validation(Required=false)]
         public string ServiceRegionId { get; set; }
@@ -160,8 +185,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public List<ListVpcEndpointsRequestTag> Tag { get; set; }
         public class ListVpcEndpointsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag added to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
+            /// <para>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -172,7 +197,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
             /// <summary>
             /// <para>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

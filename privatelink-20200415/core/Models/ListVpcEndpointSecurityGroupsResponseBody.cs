@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is returned for <b>NextToken</b>, no next requests are performed.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value can be used in the next request to retrieve a new page of results.</description></item>
+        /// <item><description><para>If no value is returned for <b>NextToken</b>, no next requests are performed.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned for <b>NextToken</b>, the value can be used in the next request to retrieve a new page of results.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,9 +65,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             /// <summary>
             /// <para>The associate status of the security group, valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Attaching: The security group is being attached.</description></item>
-            /// <item><description>Attached: The security group is attached.</description></item>
-            /// <item><description>Detaching: The security group is being detached.</description></item>
+            /// <item><description><para>Attaching: The security group is being attached.</para>
+            /// </description></item>
+            /// <item><description><para>Attached: The security group is attached.</para>
+            /// </description></item>
+            /// <item><description><para>Detaching: The security group is being detached.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

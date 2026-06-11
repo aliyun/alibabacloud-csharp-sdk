@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class GetVpcEndpointAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the endpoint whose attributes you want to query.</para>
+        /// <para>The ID of the endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the endpoint whose attributes you want to query.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the endpoint.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

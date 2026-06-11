@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// <para>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</description></item>
-        /// <item><description>If a next request is to be performed, set the parameter to the value of NextToken that is returned from the last call.</description></item>
+        /// <item><description><para>If this is your first request and no next requests are to be performed, you do not need to specify this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If a next request is to be performed, set the parameter to the value of NextToken that is returned from the last call.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,8 +55,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             /// <summary>
             /// <para>The type of the resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>vpcendpoint</b>: endpoint</description></item>
-            /// <item><description><b>vpcendpointservice</b>: endpoint service</description></item>
+            /// <item><description><para><b>vpcendpoint</b>: endpoint</para>
+            /// </description></item>
+            /// <item><description><para><b>vpcendpointservice</b>: endpoint service</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results. Valid values:</para>
+        /// <para>The token that is used to retrieve the next page of results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If no value is returned for <b>NextToken</b>, no next requests are performed.</description></item>
-        /// <item><description>If a value is returned for <b>NextToken</b>, the value can be used in the next request to retrieve a new page of results.</description></item>
+        /// <item><description><para>If this parameter is empty, all results have been returned.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned, use it in a subsequent request to retrieve the next page of results.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,17 +46,19 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about endpoint services.</para>
+        /// <para>The endpoint services.</para>
         /// </summary>
         [NameInMap("Services")]
         [Validation(Required=false)]
         public List<ListVpcEndpointServicesByEndUserResponseBodyServices> Services { get; set; }
         public class ListVpcEndpointServicesByEndUserResponseBodyServices : TeaModel {
             /// <summary>
-            /// <para>The protocol. Valid values:</para>
+            /// <para>The IP version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>IPv4</b></description></item>
-            /// <item><description><b>DualStack</b></description></item>
+            /// <item><description><para><b>IPv4</b>: The service supports IPv4.</para>
+            /// </description></item>
+            /// <item><description><para><b>DualStack</b>: The service supports both IPv4 and IPv6 (dual stack).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -64,6 +68,18 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public string AddressIpVersion { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether connection requests are automatically accepted. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: Connection requests are automatically accepted.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Connection requests must be manually accepted.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("AutoAcceptEnabled")]
             [Validation(Required=false)]
             public bool? AutoAcceptEnabled { get; set; }
@@ -71,8 +87,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             /// <summary>
             /// <para>The payer. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Endpoint</b>: the service consumer</description></item>
-            /// <item><description><b>EndpointService</b>: the service provider</description></item>
+            /// <item><description><para><b>Endpoint</b>: the service consumer.</para>
+            /// </description></item>
+            /// <item><description><para><b>EndpointService</b>: the service provider.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,7 +101,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string Payer { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmy*****</para>
@@ -93,7 +111,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The domain name of the endpoint service that can be associated with the endpoint.</para>
+            /// <para>The domain name of the endpoint service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>epsrv-hp3vpx8yqxblby3i****.cn-huhehaote.privatelink.aliyuncs.com</para>
@@ -103,7 +121,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ServiceDomain { get; set; }
 
             /// <summary>
-            /// <para>The ID of the endpoint service that can be associated with the endpoint.</para>
+            /// <para>The ID of the endpoint service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>epsrv-hp3vpx8yqxblby3i****</para>
@@ -113,7 +131,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the endpoint service that can be associated with the endpoint.</para>
+            /// <para>The name of the endpoint service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>com.aliyuncs.privatelink.cn-huhehaote.epsrv-hp3vpx8yqxblby3i****</para>
@@ -123,11 +141,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The type of the service resource. Valid values:</para>
+            /// <para>The service resource type.</para>
             /// <list type="bullet">
-            /// <item><description><b>slb</b>: Classic Load Balancer (CLB) instance</description></item>
-            /// <item><description><b>alb</b>: Application Load Balancer (ALB) instance</description></item>
-            /// <item><description><b>nlb</b>: Network Load Balancer (NLB) instance</description></item>
+            /// <item><description><para><b>slb</b>: A Classic Load Balancer (CLB) instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>alb</b>: An Application Load Balancer (ALB) instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>nlb</b>: A Network Load Balancer (NLB) instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -138,10 +159,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ServiceResourceType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether IPv6 is enabled. Valid values:</para>
+            /// <para>Specifies whether the endpoint service supports IPv6. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: The endpoint service supports IPv6.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The endpoint service does not support IPv6.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -153,7 +176,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 
             /// <summary>
             /// <para>The type of the endpoint service.</para>
-            /// <para>Only <b>Interface</b> is returned, which indicates an interface endpoint. You can specify <b>CLB</b> and <b>ALB</b> instances as service resources.</para>
+            /// <para>The value is always <b>Interface</b>. This indicates an interface endpoint where you can add service resources such as Application Load Balancer (ALB), Classic Load Balancer (CLB), and Network Load Balancer (NLB).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Interface</para>
@@ -163,14 +186,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// <para>The list of tags.</para>
+            /// <para>A list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListVpcEndpointServicesByEndUserResponseBodyServicesTags> Tags { get; set; }
             public class ListVpcEndpointServicesByEndUserResponseBodyServicesTags : TeaModel {
                 /// <summary>
-                /// <para>The key of the tag.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FinanceDept</para>
@@ -180,7 +203,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the tag.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FinanceJoshua</para>
@@ -195,12 +218,24 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
             [Validation(Required=false)]
             public bool? VpcEndpointPolicySupported { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether zone affinity is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>true</b>: Zone affinity is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Zone affinity is disabled.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("ZoneAffinityEnabled")]
             [Validation(Required=false)]
             public bool? ZoneAffinityEnabled { get; set; }
 
             /// <summary>
-            /// <para>The zones of the endpoint service that can be associated with the endpoint.</para>
+            /// <para>The zones where the endpoint service is available.</para>
             /// </summary>
             [NameInMap("Zones")]
             [Validation(Required=false)]
@@ -209,7 +244,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>29</para>

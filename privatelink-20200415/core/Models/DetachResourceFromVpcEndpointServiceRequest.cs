@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
     public class DetachResourceFromVpcEndpointServiceRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate a value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a unique token for each request. The token can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe637760</para>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><b>true</b>: Performs a dry run. The system checks the request for potential issues, including missing required parameters, incorrect request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Sends the request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,8 +37,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the endpoint.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the endpoint service is deployed. Call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to get a region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The service resource ID.</para>
+        /// <para>The ID of the service resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,10 +59,16 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the service resource. Valid values:</para>
+        /// <para>The type of the service resource.</para>
         /// <list type="bullet">
-        /// <item><description><b>slb</b>: a Classic Load Balancer (CLB) instance that supports PrivateLink. In addition, the CLB instance is deployed in a virtual private cloud (VPC).</description></item>
-        /// <item><description><b>alb</b>: an Application Load Balancer (ALB) instance that supports PrivateLink. In addition, the ALB instance is deployed in a VPC.</description></item>
+        /// <item><description><para><b>slb</b>: Classic Load Balancer (CLB).</para>
+        /// </description></item>
+        /// <item><description><para><b>alb</b>: Application Load Balancer (ALB).</para>
+        /// </description></item>
+        /// <item><description><para><b>nlb</b>: Network Load Balancer (NLB).</para>
+        /// </description></item>
+        /// <item><description><para><b>gwlb</b>: Gateway Load Balancer (GWLB).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +79,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The endpoint service ID.</para>
+        /// <para>The ID of the endpoint service from which you want to remove the service resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +90,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone that you want to remove.</para>
+        /// <para>The ID of the zone. This parameter is required if the service resource is an ALB, a NLB, or a GWLB. Call the <a href="https://help.aliyun.com/document_detail/120468.html">DescribeRegions</a> operation to get a zone ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-c</para>

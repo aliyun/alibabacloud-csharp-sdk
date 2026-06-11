@@ -34,8 +34,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
         /// <summary>
         /// <para>The type of resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VpcEndpoint</b>: endpoint</description></item>
-        /// <item><description><b>VpcEndpointService</b>: endpoint service</description></item>
+        /// <item><description><para><b>VpcEndpoint</b>: endpoint</para>
+        /// </description></item>
+        /// <item><description><para><b>VpcEndpointService</b>: endpoint service</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

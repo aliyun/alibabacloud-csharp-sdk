@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415.Models
 {
     public class UpdateVpcEndpointAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</para>

@@ -44,8 +44,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you add an account ID to the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
+        /// <item><description>Before you add an account ID to the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
         /// <item><description>You cannot repeatedly call the <b>AddUserToVpcEndpointService</b> operation to add the ID of an Alibaba Cloud account to the whitelist of an endpoint service within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -118,8 +118,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you add an account ID to the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
+        /// <item><description>Before you add an account ID to the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
         /// <item><description>You cannot repeatedly call the <b>AddUserToVpcEndpointService</b> operation to add the ID of an Alibaba Cloud account to the whitelist of an endpoint service within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -192,8 +192,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you add an account ID to the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
+        /// <item><description>Before you add an account ID to the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
         /// <item><description>You cannot repeatedly call the <b>AddUserToVpcEndpointService</b> operation to add the ID of an Alibaba Cloud account to the whitelist of an endpoint service within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -218,8 +218,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you add an account ID to the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
+        /// <item><description>Before you add an account ID to the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
         /// <item><description>You cannot repeatedly call the <b>AddUserToVpcEndpointService</b> operation to add the ID of an Alibaba Cloud account to the whitelist of an endpoint service within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -244,10 +244,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>AddZoneToVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to query the state of the zone.
-        ///     *   If the zone is in the <b>Creating</b> state, the zone is being added.
-        ///     *   If the zone is in the Wait state, the zone is added.</para>
         /// <list type="bullet">
+        /// <item><description><b>AddZoneToVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to query the state of the zone.<list type="bullet">
+        /// <item><description>If the zone is in the <b>Creating</b> state, the zone is being added.</description></item>
+        /// <item><description>If the zone is in the Wait state, the zone is added.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>AddZoneToVpcEndpoint</b> operation to add a zone to an endpoint within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -328,10 +330,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>AddZoneToVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to query the state of the zone.
-        ///     *   If the zone is in the <b>Creating</b> state, the zone is being added.
-        ///     *   If the zone is in the Wait state, the zone is added.</para>
         /// <list type="bullet">
+        /// <item><description><b>AddZoneToVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to query the state of the zone.<list type="bullet">
+        /// <item><description>If the zone is in the <b>Creating</b> state, the zone is being added.</description></item>
+        /// <item><description>If the zone is in the Wait state, the zone is added.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>AddZoneToVpcEndpoint</b> operation to add a zone to an endpoint within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -412,10 +416,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>AddZoneToVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to query the state of the zone.
-        ///     *   If the zone is in the <b>Creating</b> state, the zone is being added.
-        ///     *   If the zone is in the Wait state, the zone is added.</para>
         /// <list type="bullet">
+        /// <item><description><b>AddZoneToVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to query the state of the zone.<list type="bullet">
+        /// <item><description>If the zone is in the <b>Creating</b> state, the zone is being added.</description></item>
+        /// <item><description>If the zone is in the Wait state, the zone is added.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>AddZoneToVpcEndpoint</b> operation to add a zone to an endpoint within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -440,10 +446,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>AddZoneToVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to query the state of the zone.
-        ///     *   If the zone is in the <b>Creating</b> state, the zone is being added.
-        ///     *   If the zone is in the Wait state, the zone is added.</para>
         /// <list type="bullet">
+        /// <item><description><b>AddZoneToVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to query the state of the zone.<list type="bullet">
+        /// <item><description>If the zone is in the <b>Creating</b> state, the zone is being added.</description></item>
+        /// <item><description>If the zone is in the Wait state, the zone is added.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>AddZoneToVpcEndpoint</b> operation to add a zone to an endpoint within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -468,9 +476,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you add a service resource to an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>AttachResourceToVpcEndpointService</b> operation to add a service resource to an endpoint service within a specified period of time.</description></item>
+        /// <item><description>Before you add a service resource to an endpoint service, ensure that the endpoint service is in the <b>Active</b> state. Call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
+        /// <item><description>The <b>AttachResourceToVpcEndpointService</b> operation does not support concurrently adding service resources to the same endpoint service instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -546,9 +554,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you add a service resource to an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>AttachResourceToVpcEndpointService</b> operation to add a service resource to an endpoint service within a specified period of time.</description></item>
+        /// <item><description>Before you add a service resource to an endpoint service, ensure that the endpoint service is in the <b>Active</b> state. Call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
+        /// <item><description>The <b>AttachResourceToVpcEndpointService</b> operation does not support concurrently adding service resources to the same endpoint service instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -624,9 +632,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you add a service resource to an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>AttachResourceToVpcEndpointService</b> operation to add a service resource to an endpoint service within a specified period of time.</description></item>
+        /// <item><description>Before you add a service resource to an endpoint service, ensure that the endpoint service is in the <b>Active</b> state. Call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
+        /// <item><description>The <b>AttachResourceToVpcEndpointService</b> operation does not support concurrently adding service resources to the same endpoint service instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -650,9 +658,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you add a service resource to an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>AttachResourceToVpcEndpointService</b> operation to add a service resource to an endpoint service within a specified period of time.</description></item>
+        /// <item><description>Before you add a service resource to an endpoint service, ensure that the endpoint service is in the <b>Active</b> state. Call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
+        /// <item><description>The <b>AttachResourceToVpcEndpointService</b> operation does not support concurrently adding service resources to the same endpoint service instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -676,10 +684,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>AttachSecurityGroupToVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> operation to query the state of the endpoint.
-        ///     *   If the endpoint is in the <b>Pending</b> state, the endpoint is being associated with the security group.
-        ///     *   If the endpoint is in the <b>Active</b> state, the endpoint is associated with the security group.</para>
         /// <list type="bullet">
+        /// <item><description><b>AttachSecurityGroupToVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> operation to query the state of the endpoint.<list type="bullet">
+        /// <item><description>If the endpoint is in the <b>Pending</b> state, the endpoint is being associated with the security group.</description></item>
+        /// <item><description>If the endpoint is in the <b>Active</b> state, the endpoint is associated with the security group.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>AttachSecurityGroupToVpcEndpoint</b> operation to associate an endpoint with a security group within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -748,10 +758,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>AttachSecurityGroupToVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> operation to query the state of the endpoint.
-        ///     *   If the endpoint is in the <b>Pending</b> state, the endpoint is being associated with the security group.
-        ///     *   If the endpoint is in the <b>Active</b> state, the endpoint is associated with the security group.</para>
         /// <list type="bullet">
+        /// <item><description><b>AttachSecurityGroupToVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> operation to query the state of the endpoint.<list type="bullet">
+        /// <item><description>If the endpoint is in the <b>Pending</b> state, the endpoint is being associated with the security group.</description></item>
+        /// <item><description>If the endpoint is in the <b>Active</b> state, the endpoint is associated with the security group.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>AttachSecurityGroupToVpcEndpoint</b> operation to associate an endpoint with a security group within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -820,10 +832,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>AttachSecurityGroupToVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> operation to query the state of the endpoint.
-        ///     *   If the endpoint is in the <b>Pending</b> state, the endpoint is being associated with the security group.
-        ///     *   If the endpoint is in the <b>Active</b> state, the endpoint is associated with the security group.</para>
         /// <list type="bullet">
+        /// <item><description><b>AttachSecurityGroupToVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> operation to query the state of the endpoint.<list type="bullet">
+        /// <item><description>If the endpoint is in the <b>Pending</b> state, the endpoint is being associated with the security group.</description></item>
+        /// <item><description>If the endpoint is in the <b>Active</b> state, the endpoint is associated with the security group.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>AttachSecurityGroupToVpcEndpoint</b> operation to associate an endpoint with a security group within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -848,10 +862,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>AttachSecurityGroupToVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> operation to query the state of the endpoint.
-        ///     *   If the endpoint is in the <b>Pending</b> state, the endpoint is being associated with the security group.
-        ///     *   If the endpoint is in the <b>Active</b> state, the endpoint is associated with the security group.</para>
         /// <list type="bullet">
+        /// <item><description><b>AttachSecurityGroupToVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> operation to query the state of the endpoint.<list type="bullet">
+        /// <item><description>If the endpoint is in the <b>Pending</b> state, the endpoint is being associated with the security group.</description></item>
+        /// <item><description>If the endpoint is in the <b>Active</b> state, the endpoint is associated with the security group.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>AttachSecurityGroupToVpcEndpoint</b> operation to associate an endpoint with a security group within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -1010,9 +1026,6 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// <para>Queries whether PrivateLink is activated.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// CheckProductOpenRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -1043,9 +1056,6 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// <para>Queries whether PrivateLink is activated.</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// CheckProductOpenRequest
-        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -1106,10 +1116,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateVpcEndpoint</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to check whether the endpoint is created.</para>
+        /// <para><em>CreateVpcEndpoint</em>* is an asynchronous operation. After you send the request, the system returns an instance ID and starts creating the endpoint in the background. You can call <a href="https://help.aliyun.com/document_detail/469349.html">GetVpcEndpointAttribute</a> to check the endpoint\&quot;s creation status:</para>
         /// <list type="bullet">
-        /// <item><description>If the endpoint is in the <b>Creating</b> state, the endpoint is being created.</description></item>
-        /// <item><description>If the endpoint is in the <b>Active</b> state, the endpoint is created.</description></item>
+        /// <item><description><b>Creating</b>: The endpoint is being created.</description></item>
+        /// <item><description><b>Active</b>: The endpoint is available.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1237,10 +1247,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateVpcEndpoint</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to check whether the endpoint is created.</para>
+        /// <para><em>CreateVpcEndpoint</em>* is an asynchronous operation. After you send the request, the system returns an instance ID and starts creating the endpoint in the background. You can call <a href="https://help.aliyun.com/document_detail/469349.html">GetVpcEndpointAttribute</a> to check the endpoint\&quot;s creation status:</para>
         /// <list type="bullet">
-        /// <item><description>If the endpoint is in the <b>Creating</b> state, the endpoint is being created.</description></item>
-        /// <item><description>If the endpoint is in the <b>Active</b> state, the endpoint is created.</description></item>
+        /// <item><description><b>Creating</b>: The endpoint is being created.</description></item>
+        /// <item><description><b>Active</b>: The endpoint is available.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1368,10 +1378,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateVpcEndpoint</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to check whether the endpoint is created.</para>
+        /// <para><em>CreateVpcEndpoint</em>* is an asynchronous operation. After you send the request, the system returns an instance ID and starts creating the endpoint in the background. You can call <a href="https://help.aliyun.com/document_detail/469349.html">GetVpcEndpointAttribute</a> to check the endpoint\&quot;s creation status:</para>
         /// <list type="bullet">
-        /// <item><description>If the endpoint is in the <b>Creating</b> state, the endpoint is being created.</description></item>
-        /// <item><description>If the endpoint is in the <b>Active</b> state, the endpoint is created.</description></item>
+        /// <item><description><b>Creating</b>: The endpoint is being created.</description></item>
+        /// <item><description><b>Active</b>: The endpoint is available.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1395,10 +1405,10 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>CreateVpcEndpoint</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to check whether the endpoint is created.</para>
+        /// <para><em>CreateVpcEndpoint</em>* is an asynchronous operation. After you send the request, the system returns an instance ID and starts creating the endpoint in the background. You can call <a href="https://help.aliyun.com/document_detail/469349.html">GetVpcEndpointAttribute</a> to check the endpoint\&quot;s creation status:</para>
         /// <list type="bullet">
-        /// <item><description>If the endpoint is in the <b>Creating</b> state, the endpoint is being created.</description></item>
-        /// <item><description>If the endpoint is in the <b>Active</b> state, the endpoint is created.</description></item>
+        /// <item><description><b>Creating</b>: The endpoint is being created.</description></item>
+        /// <item><description><b>Active</b>: The endpoint is available.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1417,14 +1427,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an endpoint service.</para>
+        /// <para>Creates an endpoint service by calling the CreateVpcEndpointService operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you create an endpoint service, make sure that you have created a Server Load Balancer (SLB) instance that supports PrivateLink. For more information, see <a href="https://help.aliyun.com/document_detail/174064.html">CreateLoadBalancer</a>.</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateVpcEndpointService</b> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.<list type="bullet">
+        /// <item><description>Before you create an endpoint service, make sure that you have created a load balancer resource that supports PrivateLink. For more information, see <a href="https://help.aliyun.com/document_detail/174064.html">Create a load balancer instance</a>.</description></item>
+        /// <item><description><b>CreateVpcEndpointService</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. The endpoint service is not created at the time the request is returned. You can call <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> to query the creation status of the endpoint service:<list type="bullet">
         /// <item><description>If the endpoint service is in the <b>Creating</b> state, the endpoint service is being created.</description></item>
         /// <item><description>If the endpoint service is in the <b>Active</b> state, the endpoint service is created.</description></item>
         /// </list>
@@ -1527,14 +1537,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an endpoint service.</para>
+        /// <para>Creates an endpoint service by calling the CreateVpcEndpointService operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you create an endpoint service, make sure that you have created a Server Load Balancer (SLB) instance that supports PrivateLink. For more information, see <a href="https://help.aliyun.com/document_detail/174064.html">CreateLoadBalancer</a>.</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateVpcEndpointService</b> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.<list type="bullet">
+        /// <item><description>Before you create an endpoint service, make sure that you have created a load balancer resource that supports PrivateLink. For more information, see <a href="https://help.aliyun.com/document_detail/174064.html">Create a load balancer instance</a>.</description></item>
+        /// <item><description><b>CreateVpcEndpointService</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. The endpoint service is not created at the time the request is returned. You can call <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> to query the creation status of the endpoint service:<list type="bullet">
         /// <item><description>If the endpoint service is in the <b>Creating</b> state, the endpoint service is being created.</description></item>
         /// <item><description>If the endpoint service is in the <b>Active</b> state, the endpoint service is created.</description></item>
         /// </list>
@@ -1637,14 +1647,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an endpoint service.</para>
+        /// <para>Creates an endpoint service by calling the CreateVpcEndpointService operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you create an endpoint service, make sure that you have created a Server Load Balancer (SLB) instance that supports PrivateLink. For more information, see <a href="https://help.aliyun.com/document_detail/174064.html">CreateLoadBalancer</a>.</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateVpcEndpointService</b> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.<list type="bullet">
+        /// <item><description>Before you create an endpoint service, make sure that you have created a load balancer resource that supports PrivateLink. For more information, see <a href="https://help.aliyun.com/document_detail/174064.html">Create a load balancer instance</a>.</description></item>
+        /// <item><description><b>CreateVpcEndpointService</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. The endpoint service is not created at the time the request is returned. You can call <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> to query the creation status of the endpoint service:<list type="bullet">
         /// <item><description>If the endpoint service is in the <b>Creating</b> state, the endpoint service is being created.</description></item>
         /// <item><description>If the endpoint service is in the <b>Active</b> state, the endpoint service is created.</description></item>
         /// </list>
@@ -1667,14 +1677,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an endpoint service.</para>
+        /// <para>Creates an endpoint service by calling the CreateVpcEndpointService operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you create an endpoint service, make sure that you have created a Server Load Balancer (SLB) instance that supports PrivateLink. For more information, see <a href="https://help.aliyun.com/document_detail/174064.html">CreateLoadBalancer</a>.</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateVpcEndpointService</b> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.<list type="bullet">
+        /// <item><description>Before you create an endpoint service, make sure that you have created a load balancer resource that supports PrivateLink. For more information, see <a href="https://help.aliyun.com/document_detail/174064.html">Create a load balancer instance</a>.</description></item>
+        /// <item><description><b>CreateVpcEndpointService</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. The endpoint service is not created at the time the request is returned. You can call <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> to query the creation status of the endpoint service:<list type="bullet">
         /// <item><description>If the endpoint service is in the <b>Creating</b> state, the endpoint service is being created.</description></item>
         /// <item><description>If the endpoint service is in the <b>Active</b> state, the endpoint service is created.</description></item>
         /// </list>
@@ -1702,11 +1712,11 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you delete an endpoint, you must delete the zones that are added to the endpoint.</para>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to check whether the endpoint is deleted.<list type="bullet">
-        /// <item><description>If the endpoint is in the <b>Deleting</b> state, the endpoint is being deleted.</description></item>
-        /// <item><description>If the endpoint cannot be queried, the endpoint is deleted.</description></item>
+        /// <item><description>Before you delete an endpoint, make sure that all zones associated with the endpoint have been deleted.</description></item>
+        /// <item><description><b>DeleteVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and deletes the endpoint in the background. You can call the <a href="https://help.aliyun.com/document_detail/469349.html">GetVpcEndpointAttribute</a> operation to query the status of the endpoint.<list type="bullet">
+        /// <item><description>If the endpoint status is <b>Deleting</b>, the endpoint is being deleted.</description></item>
+        /// <item><description>If the endpoint cannot be queried, the endpoint has been deleted.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1772,11 +1782,11 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you delete an endpoint, you must delete the zones that are added to the endpoint.</para>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to check whether the endpoint is deleted.<list type="bullet">
-        /// <item><description>If the endpoint is in the <b>Deleting</b> state, the endpoint is being deleted.</description></item>
-        /// <item><description>If the endpoint cannot be queried, the endpoint is deleted.</description></item>
+        /// <item><description>Before you delete an endpoint, make sure that all zones associated with the endpoint have been deleted.</description></item>
+        /// <item><description><b>DeleteVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and deletes the endpoint in the background. You can call the <a href="https://help.aliyun.com/document_detail/469349.html">GetVpcEndpointAttribute</a> operation to query the status of the endpoint.<list type="bullet">
+        /// <item><description>If the endpoint status is <b>Deleting</b>, the endpoint is being deleted.</description></item>
+        /// <item><description>If the endpoint cannot be queried, the endpoint has been deleted.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1842,11 +1852,11 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you delete an endpoint, you must delete the zones that are added to the endpoint.</para>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to check whether the endpoint is deleted.<list type="bullet">
-        /// <item><description>If the endpoint is in the <b>Deleting</b> state, the endpoint is being deleted.</description></item>
-        /// <item><description>If the endpoint cannot be queried, the endpoint is deleted.</description></item>
+        /// <item><description>Before you delete an endpoint, make sure that all zones associated with the endpoint have been deleted.</description></item>
+        /// <item><description><b>DeleteVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and deletes the endpoint in the background. You can call the <a href="https://help.aliyun.com/document_detail/469349.html">GetVpcEndpointAttribute</a> operation to query the status of the endpoint.<list type="bullet">
+        /// <item><description>If the endpoint status is <b>Deleting</b>, the endpoint is being deleted.</description></item>
+        /// <item><description>If the endpoint cannot be queried, the endpoint has been deleted.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1872,11 +1882,11 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you delete an endpoint, you must delete the zones that are added to the endpoint.</para>
         /// <list type="bullet">
-        /// <item><description><b>DeleteVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to check whether the endpoint is deleted.<list type="bullet">
-        /// <item><description>If the endpoint is in the <b>Deleting</b> state, the endpoint is being deleted.</description></item>
-        /// <item><description>If the endpoint cannot be queried, the endpoint is deleted.</description></item>
+        /// <item><description>Before you delete an endpoint, make sure that all zones associated with the endpoint have been deleted.</description></item>
+        /// <item><description><b>DeleteVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and deletes the endpoint in the background. You can call the <a href="https://help.aliyun.com/document_detail/469349.html">GetVpcEndpointAttribute</a> operation to query the status of the endpoint.<list type="bullet">
+        /// <item><description>If the endpoint status is <b>Deleting</b>, the endpoint is being deleted.</description></item>
+        /// <item><description>If the endpoint cannot be queried, the endpoint has been deleted.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -1902,8 +1912,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you delete an endpoint service, you must disconnect the endpoint from the endpoint service and remove the service resources.</para>
         /// <list type="bullet">
+        /// <item><description>Before you delete an endpoint service, you must disconnect the endpoint from the endpoint service and remove the service resources.</description></item>
         /// <item><description><b>DeleteVpcEndpointService</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> operation to check whether the endpoint service is deleted.<list type="bullet">
         /// <item><description>If the endpoint service is in the <b>Deleting</b> state, the endpoint service is being deleted.</description></item>
         /// <item><description>If the endpoint service cannot be queried, the endpoint service is deleted.</description></item>
@@ -1973,8 +1983,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you delete an endpoint service, you must disconnect the endpoint from the endpoint service and remove the service resources.</para>
         /// <list type="bullet">
+        /// <item><description>Before you delete an endpoint service, you must disconnect the endpoint from the endpoint service and remove the service resources.</description></item>
         /// <item><description><b>DeleteVpcEndpointService</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> operation to check whether the endpoint service is deleted.<list type="bullet">
         /// <item><description>If the endpoint service is in the <b>Deleting</b> state, the endpoint service is being deleted.</description></item>
         /// <item><description>If the endpoint service cannot be queried, the endpoint service is deleted.</description></item>
@@ -2044,8 +2054,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you delete an endpoint service, you must disconnect the endpoint from the endpoint service and remove the service resources.</para>
         /// <list type="bullet">
+        /// <item><description>Before you delete an endpoint service, you must disconnect the endpoint from the endpoint service and remove the service resources.</description></item>
         /// <item><description><b>DeleteVpcEndpointService</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> operation to check whether the endpoint service is deleted.<list type="bullet">
         /// <item><description>If the endpoint service is in the <b>Deleting</b> state, the endpoint service is being deleted.</description></item>
         /// <item><description>If the endpoint service cannot be queried, the endpoint service is deleted.</description></item>
@@ -2075,8 +2085,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you delete an endpoint service, you must disconnect the endpoint from the endpoint service and remove the service resources.</para>
         /// <list type="bullet">
+        /// <item><description>Before you delete an endpoint service, you must disconnect the endpoint from the endpoint service and remove the service resources.</description></item>
         /// <item><description><b>DeleteVpcEndpointService</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183542.html">GetVpcEndpointServiceAttribute</a> operation to check whether the endpoint service is deleted.<list type="bullet">
         /// <item><description>If the endpoint service is in the <b>Deleting</b> state, the endpoint service is being deleted.</description></item>
         /// <item><description>If the endpoint service cannot be queried, the endpoint service is deleted.</description></item>
@@ -2101,7 +2111,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions and zones.</para>
+        /// <para>Calls the DescribeRegions operation to query the list of regions supported by PrivateLink.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2151,7 +2161,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions and zones.</para>
+        /// <para>Calls the DescribeRegions operation to query the list of regions supported by PrivateLink.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2201,7 +2211,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions and zones.</para>
+        /// <para>Calls the DescribeRegions operation to query the list of regions supported by PrivateLink.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2219,7 +2229,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries available regions and zones.</para>
+        /// <para>Calls the DescribeRegions operation to query the list of regions supported by PrivateLink.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2237,7 +2247,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of zones in a specified region.</para>
+        /// <para>Queries the zones supported by PrivateLink in a specified region. In cross-region scenarios, the supported zones on the endpoint side and the endpoint service side are independent of each other. This operation allows you to query the supported zones for the endpoint side and the endpoint service side separately.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2254,6 +2264,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegion))
+            {
+                query["CrossRegion"] = request.CrossRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegionSide))
+            {
+                query["CrossRegionSide"] = request.CrossRegionSide;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2287,7 +2305,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of zones in a specified region.</para>
+        /// <para>Queries the zones supported by PrivateLink in a specified region. In cross-region scenarios, the supported zones on the endpoint side and the endpoint service side are independent of each other. This operation allows you to query the supported zones for the endpoint side and the endpoint service side separately.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2304,6 +2322,14 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegion))
+            {
+                query["CrossRegion"] = request.CrossRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CrossRegionSide))
+            {
+                query["CrossRegionSide"] = request.CrossRegionSide;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -2337,7 +2363,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of zones in a specified region.</para>
+        /// <para>Queries the zones supported by PrivateLink in a specified region. In cross-region scenarios, the supported zones on the endpoint side and the endpoint service side are independent of each other. This operation allows you to query the supported zones for the endpoint side and the endpoint service side separately.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2355,7 +2381,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of zones in a specified region.</para>
+        /// <para>Queries the zones supported by PrivateLink in a specified region. In cross-region scenarios, the supported zones on the endpoint side and the endpoint service side are independent of each other. This operation allows you to query the supported zones for the endpoint side and the endpoint service side separately.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2378,9 +2404,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you remove a service resource from an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>DetachResourceFromVpcEndpointService</b> operation to remove a service resource from an endpoint service within a specified period of time.</description></item>
+        /// <item><description>Before you remove a service resource from an endpoint service, make sure that the endpoint service is in the <b>Active</b> status. Call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
+        /// <item><description>The <b>DetachResourceFromVpcEndpointService</b> operation does not support the concurrent removal of service resources from the same endpoint service instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2456,9 +2482,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you remove a service resource from an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>DetachResourceFromVpcEndpointService</b> operation to remove a service resource from an endpoint service within a specified period of time.</description></item>
+        /// <item><description>Before you remove a service resource from an endpoint service, make sure that the endpoint service is in the <b>Active</b> status. Call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
+        /// <item><description>The <b>DetachResourceFromVpcEndpointService</b> operation does not support the concurrent removal of service resources from the same endpoint service instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2534,9 +2560,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you remove a service resource from an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>DetachResourceFromVpcEndpointService</b> operation to remove a service resource from an endpoint service within a specified period of time.</description></item>
+        /// <item><description>Before you remove a service resource from an endpoint service, make sure that the endpoint service is in the <b>Active</b> status. Call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
+        /// <item><description>The <b>DetachResourceFromVpcEndpointService</b> operation does not support the concurrent removal of service resources from the same endpoint service instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2560,9 +2586,9 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you remove a service resource from an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>DetachResourceFromVpcEndpointService</b> operation to remove a service resource from an endpoint service within a specified period of time.</description></item>
+        /// <item><description>Before you remove a service resource from an endpoint service, make sure that the endpoint service is in the <b>Active</b> status. Call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
+        /// <item><description>The <b>DetachResourceFromVpcEndpointService</b> operation does not support the concurrent removal of service resources from the same endpoint service instance.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2586,10 +2612,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>DetachSecurityGroupFromVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> to check whether the endpoint is disassociated from the security group.
-        ///     *   If the endpoint is in the <b>Pending</b> state, the endpoint is being disassociated from the security group.
-        ///     *   If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.</para>
         /// <list type="bullet">
+        /// <item><description><b>DetachSecurityGroupFromVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> to check whether the endpoint is disassociated from the security group.<list type="bullet">
+        /// <item><description>If the endpoint is in the <b>Pending</b> state, the endpoint is being disassociated from the security group.</description></item>
+        /// <item><description>If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>DetachSecurityGroupFromVpcEndpoint</b> operation to disassociate an endpoint from a security group within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -2658,10 +2686,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>DetachSecurityGroupFromVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> to check whether the endpoint is disassociated from the security group.
-        ///     *   If the endpoint is in the <b>Pending</b> state, the endpoint is being disassociated from the security group.
-        ///     *   If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.</para>
         /// <list type="bullet">
+        /// <item><description><b>DetachSecurityGroupFromVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> to check whether the endpoint is disassociated from the security group.<list type="bullet">
+        /// <item><description>If the endpoint is in the <b>Pending</b> state, the endpoint is being disassociated from the security group.</description></item>
+        /// <item><description>If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>DetachSecurityGroupFromVpcEndpoint</b> operation to disassociate an endpoint from a security group within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -2730,10 +2760,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>DetachSecurityGroupFromVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> to check whether the endpoint is disassociated from the security group.
-        ///     *   If the endpoint is in the <b>Pending</b> state, the endpoint is being disassociated from the security group.
-        ///     *   If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.</para>
         /// <list type="bullet">
+        /// <item><description><b>DetachSecurityGroupFromVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> to check whether the endpoint is disassociated from the security group.<list type="bullet">
+        /// <item><description>If the endpoint is in the <b>Pending</b> state, the endpoint is being disassociated from the security group.</description></item>
+        /// <item><description>If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>DetachSecurityGroupFromVpcEndpoint</b> operation to disassociate an endpoint from a security group within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -2758,10 +2790,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>DetachSecurityGroupFromVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> to check whether the endpoint is disassociated from the security group.
-        ///     *   If the endpoint is in the <b>Pending</b> state, the endpoint is being disassociated from the security group.
-        ///     *   If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.</para>
         /// <list type="bullet">
+        /// <item><description><b>DetachSecurityGroupFromVpcEndpoint</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183558.html">ListVpcEndpoints</a> to check whether the endpoint is disassociated from the security group.<list type="bullet">
+        /// <item><description>If the endpoint is in the <b>Pending</b> state, the endpoint is being disassociated from the security group.</description></item>
+        /// <item><description>If you cannot query the endpoint in the security group, the endpoint is disassociated from the security group.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>DetachSecurityGroupFromVpcEndpoint</b> operation to disassociate an endpoint from a security group within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -2786,10 +2820,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>DisableVpcEndpointConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the state of the endpoint connection.
-        ///     *   If the endpoint connection is in the <b>Disconnecting</b> state, the endpoint is being disconnected from the endpoint service.
-        ///     *   If the endpoint connection is in the <b>Disconnected</b> state, the endpoint is disconnected from the endpoint service.</para>
         /// <list type="bullet">
+        /// <item><description><b>DisableVpcEndpointConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the state of the endpoint connection.<list type="bullet">
+        /// <item><description>If the endpoint connection is in the <b>Disconnecting</b> state, the endpoint is being disconnected from the endpoint service.</description></item>
+        /// <item><description>If the endpoint connection is in the <b>Disconnected</b> state, the endpoint is disconnected from the endpoint service.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>DisableVpcEndpointConnection</b> operation to allow an endpoint service to reject a connection request from an endpoint within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -2858,10 +2894,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>DisableVpcEndpointConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the state of the endpoint connection.
-        ///     *   If the endpoint connection is in the <b>Disconnecting</b> state, the endpoint is being disconnected from the endpoint service.
-        ///     *   If the endpoint connection is in the <b>Disconnected</b> state, the endpoint is disconnected from the endpoint service.</para>
         /// <list type="bullet">
+        /// <item><description><b>DisableVpcEndpointConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the state of the endpoint connection.<list type="bullet">
+        /// <item><description>If the endpoint connection is in the <b>Disconnecting</b> state, the endpoint is being disconnected from the endpoint service.</description></item>
+        /// <item><description>If the endpoint connection is in the <b>Disconnected</b> state, the endpoint is disconnected from the endpoint service.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>DisableVpcEndpointConnection</b> operation to allow an endpoint service to reject a connection request from an endpoint within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -2930,10 +2968,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>DisableVpcEndpointConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the state of the endpoint connection.
-        ///     *   If the endpoint connection is in the <b>Disconnecting</b> state, the endpoint is being disconnected from the endpoint service.
-        ///     *   If the endpoint connection is in the <b>Disconnected</b> state, the endpoint is disconnected from the endpoint service.</para>
         /// <list type="bullet">
+        /// <item><description><b>DisableVpcEndpointConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the state of the endpoint connection.<list type="bullet">
+        /// <item><description>If the endpoint connection is in the <b>Disconnecting</b> state, the endpoint is being disconnected from the endpoint service.</description></item>
+        /// <item><description>If the endpoint connection is in the <b>Disconnected</b> state, the endpoint is disconnected from the endpoint service.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>DisableVpcEndpointConnection</b> operation to allow an endpoint service to reject a connection request from an endpoint within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -2958,10 +2998,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>DisableVpcEndpointConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the state of the endpoint connection.
-        ///     *   If the endpoint connection is in the <b>Disconnecting</b> state, the endpoint is being disconnected from the endpoint service.
-        ///     *   If the endpoint connection is in the <b>Disconnected</b> state, the endpoint is disconnected from the endpoint service.</para>
         /// <list type="bullet">
+        /// <item><description><b>DisableVpcEndpointConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the state of the endpoint connection.<list type="bullet">
+        /// <item><description>If the endpoint connection is in the <b>Disconnecting</b> state, the endpoint is being disconnected from the endpoint service.</description></item>
+        /// <item><description>If the endpoint connection is in the <b>Disconnected</b> state, the endpoint is disconnected from the endpoint service.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>DisableVpcEndpointConnection</b> operation to allow an endpoint service to reject a connection request from an endpoint within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -2986,8 +3028,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the zone associated with the endpoint is <b>Connected</b> or <b>Migrated</b>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the zone associated with the endpoint is <b>Connected</b> or <b>Migrated</b>.</description></item>
         /// <item><description><b>DisableVpcEndpointZoneConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to query the status of the task.<list type="bullet">
         /// <item><description>If the zone is in the <b>Disconnecting</b> state, the task is running.</description></item>
         /// <item><description>If the zone is in the <b>Disconnected</b> state, the task is successful.</description></item>
@@ -3069,8 +3111,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the zone associated with the endpoint is <b>Connected</b> or <b>Migrated</b>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the zone associated with the endpoint is <b>Connected</b> or <b>Migrated</b>.</description></item>
         /// <item><description><b>DisableVpcEndpointZoneConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to query the status of the task.<list type="bullet">
         /// <item><description>If the zone is in the <b>Disconnecting</b> state, the task is running.</description></item>
         /// <item><description>If the zone is in the <b>Disconnected</b> state, the task is successful.</description></item>
@@ -3152,8 +3194,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the zone associated with the endpoint is <b>Connected</b> or <b>Migrated</b>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the zone associated with the endpoint is <b>Connected</b> or <b>Migrated</b>.</description></item>
         /// <item><description><b>DisableVpcEndpointZoneConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to query the status of the task.<list type="bullet">
         /// <item><description>If the zone is in the <b>Disconnecting</b> state, the task is running.</description></item>
         /// <item><description>If the zone is in the <b>Disconnected</b> state, the task is successful.</description></item>
@@ -3183,8 +3225,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the zone associated with the endpoint is <b>Connected</b> or <b>Migrated</b>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the zone associated with the endpoint is <b>Connected</b> or <b>Migrated</b>.</description></item>
         /// <item><description><b>DisableVpcEndpointZoneConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to query the status of the task.<list type="bullet">
         /// <item><description>If the zone is in the <b>Disconnecting</b> state, the task is running.</description></item>
         /// <item><description>If the zone is in the <b>Disconnected</b> state, the task is successful.</description></item>
@@ -3209,16 +3251,18 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Accepts connection requests from an endpoint.</para>
+        /// <para>Calls the EnableVpcEndpointConnection operation, and the endpoint service accepts the connection request from the endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>EnableVpcEndpointConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the state of the endpoint connection.
-        ///     *   If the state is <b>Connecting</b>, the endpoint connection is being established.
-        ///     *   If the state is <b>Connected</b>, the endpoint connection is established.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>EnableVpcEndpointConnection</b> operation to allow an endpoint service of an Alibaba Cloud account to accept a connection request from an endpoint within a specified period of time.</description></item>
+        /// <item><description><b>EnableVpcEndpointConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the endpoint service connection is not yet established, and the connection task is still being run in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the status of the endpoint service connection:<list type="bullet">
+        /// <item><description>If the connection is in the <b>Connecting</b> state, the endpoint service connection is being established.</description></item>
+        /// <item><description>If the connection is in the <b>Connected</b> state, the endpoint service connection is established.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The <b>EnableVpcEndpointConnection</b> operation does not support concurrently accepting endpoint connection requests under the same Alibaba Cloud account (primary account).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3289,16 +3333,18 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Accepts connection requests from an endpoint.</para>
+        /// <para>Calls the EnableVpcEndpointConnection operation, and the endpoint service accepts the connection request from the endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>EnableVpcEndpointConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the state of the endpoint connection.
-        ///     *   If the state is <b>Connecting</b>, the endpoint connection is being established.
-        ///     *   If the state is <b>Connected</b>, the endpoint connection is established.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>EnableVpcEndpointConnection</b> operation to allow an endpoint service of an Alibaba Cloud account to accept a connection request from an endpoint within a specified period of time.</description></item>
+        /// <item><description><b>EnableVpcEndpointConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the endpoint service connection is not yet established, and the connection task is still being run in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the status of the endpoint service connection:<list type="bullet">
+        /// <item><description>If the connection is in the <b>Connecting</b> state, the endpoint service connection is being established.</description></item>
+        /// <item><description>If the connection is in the <b>Connected</b> state, the endpoint service connection is established.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The <b>EnableVpcEndpointConnection</b> operation does not support concurrently accepting endpoint connection requests under the same Alibaba Cloud account (primary account).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3369,16 +3415,18 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Accepts connection requests from an endpoint.</para>
+        /// <para>Calls the EnableVpcEndpointConnection operation, and the endpoint service accepts the connection request from the endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>EnableVpcEndpointConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the state of the endpoint connection.
-        ///     *   If the state is <b>Connecting</b>, the endpoint connection is being established.
-        ///     *   If the state is <b>Connected</b>, the endpoint connection is established.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>EnableVpcEndpointConnection</b> operation to allow an endpoint service of an Alibaba Cloud account to accept a connection request from an endpoint within a specified period of time.</description></item>
+        /// <item><description><b>EnableVpcEndpointConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the endpoint service connection is not yet established, and the connection task is still being run in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the status of the endpoint service connection:<list type="bullet">
+        /// <item><description>If the connection is in the <b>Connecting</b> state, the endpoint service connection is being established.</description></item>
+        /// <item><description>If the connection is in the <b>Connected</b> state, the endpoint service connection is established.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The <b>EnableVpcEndpointConnection</b> operation does not support concurrently accepting endpoint connection requests under the same Alibaba Cloud account (primary account).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3397,16 +3445,18 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Accepts connection requests from an endpoint.</para>
+        /// <para>Calls the EnableVpcEndpointConnection operation, and the endpoint service accepts the connection request from the endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>EnableVpcEndpointConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the state of the endpoint connection.
-        ///     *   If the state is <b>Connecting</b>, the endpoint connection is being established.
-        ///     *   If the state is <b>Connected</b>, the endpoint connection is established.</para>
         /// <list type="bullet">
-        /// <item><description>You cannot repeatedly call the <b>EnableVpcEndpointConnection</b> operation to allow an endpoint service of an Alibaba Cloud account to accept a connection request from an endpoint within a specified period of time.</description></item>
+        /// <item><description><b>EnableVpcEndpointConnection</b> is an asynchronous operation. After a request is sent, the system returns a request ID. However, the endpoint service connection is not yet established, and the connection task is still being run in the background. You can call the <a href="https://help.aliyun.com/document_detail/183568.html">GetVpcEndpointAttribute</a> operation to query the status of the endpoint service connection:<list type="bullet">
+        /// <item><description>If the connection is in the <b>Connecting</b> state, the endpoint service connection is being established.</description></item>
+        /// <item><description>If the connection is in the <b>Connected</b> state, the endpoint service connection is established.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The <b>EnableVpcEndpointConnection</b> operation does not support concurrently accepting endpoint connection requests under the same Alibaba Cloud account (primary account).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3430,8 +3480,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the associated zone is <b>Disconnected</b>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the associated zone is <b>Disconnected</b>.</description></item>
         /// <item><description><b>EnableVpcEndpointZoneConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to check whether the endpoint service accepts a connection request from the endpoint in the associated zone.<list type="bullet">
         /// <item><description>If the zone is in the <b>Connecting</b> state, the endpoint service is accepting the connection request from the endpoint.</description></item>
         /// <item><description>If the zone is in the <b>Connected</b> state, the endpoint service has accepted the connection request from the endpoint.</description></item>
@@ -3509,8 +3559,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the associated zone is <b>Disconnected</b>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the associated zone is <b>Disconnected</b>.</description></item>
         /// <item><description><b>EnableVpcEndpointZoneConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to check whether the endpoint service accepts a connection request from the endpoint in the associated zone.<list type="bullet">
         /// <item><description>If the zone is in the <b>Connecting</b> state, the endpoint service is accepting the connection request from the endpoint.</description></item>
         /// <item><description>If the zone is in the <b>Connected</b> state, the endpoint service has accepted the connection request from the endpoint.</description></item>
@@ -3588,8 +3638,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the associated zone is <b>Disconnected</b>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the associated zone is <b>Disconnected</b>.</description></item>
         /// <item><description><b>EnableVpcEndpointZoneConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to check whether the endpoint service accepts a connection request from the endpoint in the associated zone.<list type="bullet">
         /// <item><description>If the zone is in the <b>Connecting</b> state, the endpoint service is accepting the connection request from the endpoint.</description></item>
         /// <item><description>If the zone is in the <b>Connected</b> state, the endpoint service has accepted the connection request from the endpoint.</description></item>
@@ -3619,8 +3669,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the associated zone is <b>Disconnected</b>.</para>
         /// <list type="bullet">
+        /// <item><description>You can call this operation only when the state of the endpoint is <b>Connected</b> and the state of the associated zone is <b>Disconnected</b>.</description></item>
         /// <item><description><b>EnableVpcEndpointZoneConnection</b> is an asynchronous operation. After you send a request, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to check whether the endpoint service accepts a connection request from the endpoint in the associated zone.<list type="bullet">
         /// <item><description>If the zone is in the <b>Connecting</b> state, the endpoint service is accepting the connection request from the endpoint.</description></item>
         /// <item><description>If the zone is in the <b>Connected</b> state, the endpoint service has accepted the connection request from the endpoint.</description></item>
@@ -3645,7 +3695,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an endpoint.</para>
+        /// <para>Use <c>GetVpcEndpointAttribute</c> to query the attributes of a specified endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3695,7 +3745,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an endpoint.</para>
+        /// <para>Use <c>GetVpcEndpointAttribute</c> to query the attributes of a specified endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3745,7 +3795,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an endpoint.</para>
+        /// <para>Use <c>GetVpcEndpointAttribute</c> to query the attributes of a specified endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3763,7 +3813,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an endpoint.</para>
+        /// <para>Use <c>GetVpcEndpointAttribute</c> to query the attributes of a specified endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3781,7 +3831,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an endpoint service.</para>
+        /// <para>Call <c>GetVpcEndpointServiceAttribute</c> to retrieve the properties of an endpoint service in your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3831,7 +3881,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an endpoint service.</para>
+        /// <para>Call <c>GetVpcEndpointServiceAttribute</c> to retrieve the properties of an endpoint service in your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3881,7 +3931,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an endpoint service.</para>
+        /// <para>Call <c>GetVpcEndpointServiceAttribute</c> to retrieve the properties of an endpoint service in your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3899,7 +3949,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the attributes of an endpoint service.</para>
+        /// <para>Call <c>GetVpcEndpointServiceAttribute</c> to retrieve the properties of an endpoint service in your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3922,8 +3972,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You must specify <b>ResourceId.N</b> or <b>Tag.N</b> in the request to specify the object that you want to query.</para>
         /// <list type="bullet">
+        /// <item><description>You must specify <b>ResourceId.N</b> or <b>Tag.N</b> in the request to specify the object that you want to query.</description></item>
         /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair (Tag.N.Key and Tag.N.Value). If you specify only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you specify only <b>Tag.N.Value</b>, an error message is returned.</description></item>
         /// <item><description>If you specify <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
         /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
@@ -3994,8 +4044,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You must specify <b>ResourceId.N</b> or <b>Tag.N</b> in the request to specify the object that you want to query.</para>
         /// <list type="bullet">
+        /// <item><description>You must specify <b>ResourceId.N</b> or <b>Tag.N</b> in the request to specify the object that you want to query.</description></item>
         /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair (Tag.N.Key and Tag.N.Value). If you specify only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you specify only <b>Tag.N.Value</b>, an error message is returned.</description></item>
         /// <item><description>If you specify <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
         /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
@@ -4066,8 +4116,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You must specify <b>ResourceId.N</b> or <b>Tag.N</b> in the request to specify the object that you want to query.</para>
         /// <list type="bullet">
+        /// <item><description>You must specify <b>ResourceId.N</b> or <b>Tag.N</b> in the request to specify the object that you want to query.</description></item>
         /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair (Tag.N.Key and Tag.N.Value). If you specify only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you specify only <b>Tag.N.Value</b>, an error message is returned.</description></item>
         /// <item><description>If you specify <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
         /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
@@ -4094,8 +4144,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You must specify <b>ResourceId.N</b> or <b>Tag.N</b> in the request to specify the object that you want to query.</para>
         /// <list type="bullet">
+        /// <item><description>You must specify <b>ResourceId.N</b> or <b>Tag.N</b> in the request to specify the object that you want to query.</description></item>
         /// <item><description><b>Tag.N</b> is a resource tag that consists of a key-value pair (Tag.N.Key and Tag.N.Value). If you specify only <b>Tag.N.Key</b>, all tag values that are associated with the specified key are returned. If you specify only <b>Tag.N.Value</b>, an error message is returned.</description></item>
         /// <item><description>If you specify <b>Tag.N</b> and <b>ResourceId.N</b> to filter tags, <b>ResourceId.N</b> must match all specified key-value pairs.</description></item>
         /// <item><description>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</description></item>
@@ -4117,7 +4167,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries endpoint connections.</para>
+        /// <para>Queries endpoint connections by calling the ListVpcEndpointConnections operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4203,7 +4253,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries endpoint connections.</para>
+        /// <para>Queries endpoint connections by calling the ListVpcEndpointConnections operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4289,7 +4339,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries endpoint connections.</para>
+        /// <para>Queries endpoint connections by calling the ListVpcEndpointConnections operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4307,7 +4357,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries endpoint connections.</para>
+        /// <para>Queries endpoint connections by calling the ListVpcEndpointConnections operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4325,7 +4375,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security groups that are associated with an endpoint.</para>
+        /// <para>Queries the security group that is associated with an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4383,7 +4433,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security groups that are associated with an endpoint.</para>
+        /// <para>Queries the security group that is associated with an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4441,7 +4491,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security groups that are associated with an endpoint.</para>
+        /// <para>Queries the security group that is associated with an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4459,7 +4509,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the security groups that are associated with an endpoint.</para>
+        /// <para>Queries the security group that is associated with an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4797,7 +4847,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoint services.</para>
+        /// <para>Call the ListVpcEndpointServices operation to query the endpoint services owned by your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4895,7 +4945,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoint services.</para>
+        /// <para>Call the ListVpcEndpointServices operation to query the endpoint services owned by your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4993,7 +5043,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoint services.</para>
+        /// <para>Call the ListVpcEndpointServices operation to query the endpoint services owned by your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5011,7 +5061,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoint services.</para>
+        /// <para>Call the ListVpcEndpointServices operation to query the endpoint services owned by your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5029,7 +5079,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoint services that can be associated with the endpoint created within the current account.</para>
+        /// <para>Call the ListVpcEndpointServicesByEndUser operation to retrieve a list of endpoint services for which the current account is whitelisted. This list includes services that you can connect to by creating new endpoints, as well as services that are already connected to your existing ones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5107,7 +5157,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoint services that can be associated with the endpoint created within the current account.</para>
+        /// <para>Call the ListVpcEndpointServicesByEndUser operation to retrieve a list of endpoint services for which the current account is whitelisted. This list includes services that you can connect to by creating new endpoints, as well as services that are already connected to your existing ones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5185,7 +5235,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoint services that can be associated with the endpoint created within the current account.</para>
+        /// <para>Call the ListVpcEndpointServicesByEndUser operation to retrieve a list of endpoint services for which the current account is whitelisted. This list includes services that you can connect to by creating new endpoints, as well as services that are already connected to your existing ones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5203,7 +5253,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoint services that can be associated with the endpoint created within the current account.</para>
+        /// <para>Call the ListVpcEndpointServicesByEndUser operation to retrieve a list of endpoint services for which the current account is whitelisted. This list includes services that you can connect to by creating new endpoints, as well as services that are already connected to your existing ones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5221,7 +5271,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones of an endpoint.</para>
+        /// <para>Call the ListVpcEndpointZones operation to query the zones of an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5279,7 +5329,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones of an endpoint.</para>
+        /// <para>Call the ListVpcEndpointZones operation to query the zones of an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5337,7 +5387,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones of an endpoint.</para>
+        /// <para>Call the ListVpcEndpointZones operation to query the zones of an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5355,7 +5405,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones of an endpoint.</para>
+        /// <para>Call the ListVpcEndpointZones operation to query the zones of an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5373,7 +5423,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoints.</para>
+        /// <para>The <c>ListVpcEndpoints</c> operation lists endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5471,7 +5521,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoints.</para>
+        /// <para>The <c>ListVpcEndpoints</c> operation lists endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5569,7 +5619,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoints.</para>
+        /// <para>The <c>ListVpcEndpoints</c> operation lists endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5587,7 +5637,7 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoints.</para>
+        /// <para>The <c>ListVpcEndpoints</c> operation lists endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5730,8 +5780,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you remove an account ID from the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
+        /// <item><description>Before you remove an account ID from the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
         /// <item><description>You cannot repeatedly call the <b>RemoveUserFromVpcEndpointService</b> operation to remove the ID of an Alibaba Cloud account from the whitelist of an endpoint service within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -5804,8 +5854,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you remove an account ID from the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
+        /// <item><description>Before you remove an account ID from the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
         /// <item><description>You cannot repeatedly call the <b>RemoveUserFromVpcEndpointService</b> operation to remove the ID of an Alibaba Cloud account from the whitelist of an endpoint service within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -5878,8 +5928,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you remove an account ID from the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
+        /// <item><description>Before you remove an account ID from the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
         /// <item><description>You cannot repeatedly call the <b>RemoveUserFromVpcEndpointService</b> operation to remove the ID of an Alibaba Cloud account from the whitelist of an endpoint service within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -5904,8 +5954,8 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  Before you remove an account ID from the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</para>
         /// <list type="bullet">
+        /// <item><description>Before you remove an account ID from the whitelist of an endpoint service, make sure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
         /// <item><description>You cannot repeatedly call the <b>RemoveUserFromVpcEndpointService</b> operation to remove the ID of an Alibaba Cloud account from the whitelist of an endpoint service within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -5930,10 +5980,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>RemoveZoneFromVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to check whether the zone of the endpoint is deleted.
-        ///     *   If the zone of the endpoint is in the <b>Deleting</b> state, the zone is being deleted.
-        ///     *   If the zone cannot be queried, the zone is deleted.</para>
         /// <list type="bullet">
+        /// <item><description><b>RemoveZoneFromVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to check whether the zone of the endpoint is deleted.<list type="bullet">
+        /// <item><description>If the zone of the endpoint is in the <b>Deleting</b> state, the zone is being deleted.</description></item>
+        /// <item><description>If the zone cannot be queried, the zone is deleted.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>RemoveZoneFromVpcEndpoint</b> operation to delete a zone of an endpoint within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -6002,10 +6054,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>RemoveZoneFromVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to check whether the zone of the endpoint is deleted.
-        ///     *   If the zone of the endpoint is in the <b>Deleting</b> state, the zone is being deleted.
-        ///     *   If the zone cannot be queried, the zone is deleted.</para>
         /// <list type="bullet">
+        /// <item><description><b>RemoveZoneFromVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to check whether the zone of the endpoint is deleted.<list type="bullet">
+        /// <item><description>If the zone of the endpoint is in the <b>Deleting</b> state, the zone is being deleted.</description></item>
+        /// <item><description>If the zone cannot be queried, the zone is deleted.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>RemoveZoneFromVpcEndpoint</b> operation to delete a zone of an endpoint within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -6074,10 +6128,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>RemoveZoneFromVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to check whether the zone of the endpoint is deleted.
-        ///     *   If the zone of the endpoint is in the <b>Deleting</b> state, the zone is being deleted.
-        ///     *   If the zone cannot be queried, the zone is deleted.</para>
         /// <list type="bullet">
+        /// <item><description><b>RemoveZoneFromVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to check whether the zone of the endpoint is deleted.<list type="bullet">
+        /// <item><description>If the zone of the endpoint is in the <b>Deleting</b> state, the zone is being deleted.</description></item>
+        /// <item><description>If the zone cannot be queried, the zone is deleted.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>RemoveZoneFromVpcEndpoint</b> operation to delete a zone of an endpoint within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -6102,10 +6158,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  <b>RemoveZoneFromVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to check whether the zone of the endpoint is deleted.
-        ///     *   If the zone of the endpoint is in the <b>Deleting</b> state, the zone is being deleted.
-        ///     *   If the zone cannot be queried, the zone is deleted.</para>
         /// <list type="bullet">
+        /// <item><description><b>RemoveZoneFromVpcEndpoint</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/183560.html">ListVpcEndpointZones</a> operation to check whether the zone of the endpoint is deleted.<list type="bullet">
+        /// <item><description>If the zone of the endpoint is in the <b>Deleting</b> state, the zone is being deleted.</description></item>
+        /// <item><description>If the zone cannot be queried, the zone is deleted.</description></item>
+        /// </list>
+        /// </description></item>
         /// <item><description>You cannot repeatedly call the <b>RemoveZoneFromVpcEndpoint</b> operation to delete a zone of an endpoint within a specified period of time.</description></item>
         /// </list>
         /// </description>
@@ -6513,12 +6571,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an endpoint.</para>
+        /// <para>The <c>UpdateVpcEndpointAttribute</c> operation modifies the properties of an endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointAttribute</b> operation to modify the attributes of an endpoint that belongs to an Alibaba Cloud account within a specified period of time.</para>
+        /// <para>The <b>UpdateVpcEndpointAttribute</b> operation cannot be called concurrently to modify endpoint properties for the same Alibaba Cloud main account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6604,12 +6662,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an endpoint.</para>
+        /// <para>The <c>UpdateVpcEndpointAttribute</c> operation modifies the properties of an endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointAttribute</b> operation to modify the attributes of an endpoint that belongs to an Alibaba Cloud account within a specified period of time.</para>
+        /// <para>The <b>UpdateVpcEndpointAttribute</b> operation cannot be called concurrently to modify endpoint properties for the same Alibaba Cloud main account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6695,12 +6753,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an endpoint.</para>
+        /// <para>The <c>UpdateVpcEndpointAttribute</c> operation modifies the properties of an endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointAttribute</b> operation to modify the attributes of an endpoint that belongs to an Alibaba Cloud account within a specified period of time.</para>
+        /// <para>The <b>UpdateVpcEndpointAttribute</b> operation cannot be called concurrently to modify endpoint properties for the same Alibaba Cloud main account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6718,12 +6776,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an endpoint.</para>
+        /// <para>The <c>UpdateVpcEndpointAttribute</c> operation modifies the properties of an endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointAttribute</b> operation to modify the attributes of an endpoint that belongs to an Alibaba Cloud account within a specified period of time.</para>
+        /// <para>The <b>UpdateVpcEndpointAttribute</b> operation cannot be called concurrently to modify endpoint properties for the same Alibaba Cloud main account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6741,12 +6799,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an endpoint connection.</para>
+        /// <para>Calls the UpdateVpcEndpointConnectionAttribute operation to modify the attributes of an endpoint connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointConnectionAttribute</b> operation to modify the bandwidth of an endpoint connection that belongs to an Alibaba Cloud account within a specified period of time.</para>
+        /// <para>The <b>UpdateVpcEndpointConnectionAttribute</b> operation does not support concurrent modifications of the endpoint connection bandwidth within the same Alibaba Cloud account (primary account).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6816,12 +6874,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an endpoint connection.</para>
+        /// <para>Calls the UpdateVpcEndpointConnectionAttribute operation to modify the attributes of an endpoint connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointConnectionAttribute</b> operation to modify the bandwidth of an endpoint connection that belongs to an Alibaba Cloud account within a specified period of time.</para>
+        /// <para>The <b>UpdateVpcEndpointConnectionAttribute</b> operation does not support concurrent modifications of the endpoint connection bandwidth within the same Alibaba Cloud account (primary account).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6891,12 +6949,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an endpoint connection.</para>
+        /// <para>Calls the UpdateVpcEndpointConnectionAttribute operation to modify the attributes of an endpoint connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointConnectionAttribute</b> operation to modify the bandwidth of an endpoint connection that belongs to an Alibaba Cloud account within a specified period of time.</para>
+        /// <para>The <b>UpdateVpcEndpointConnectionAttribute</b> operation does not support concurrent modifications of the endpoint connection bandwidth within the same Alibaba Cloud account (primary account).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6914,12 +6972,12 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an endpoint connection.</para>
+        /// <para>Calls the UpdateVpcEndpointConnectionAttribute operation to modify the attributes of an endpoint connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointConnectionAttribute</b> operation to modify the bandwidth of an endpoint connection that belongs to an Alibaba Cloud account within a specified period of time.</para>
+        /// <para>The <b>UpdateVpcEndpointConnectionAttribute</b> operation does not support concurrent modifications of the endpoint connection bandwidth within the same Alibaba Cloud account (primary account).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6937,12 +6995,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an endpoint service.</para>
+        /// <para>The UpdateVpcEndpointServiceAttribute operation modifies the attributes of an endpoint service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointServiceAttribute</b> operation to modify the attributes of an endpoint service that belongs to an Alibaba Cloud account within a specified period of time.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you modify the attributes of an endpoint service, ensure that the service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to check the status of the endpoint service.</description></item>
+        /// <item><description>The <b>UpdateVpcEndpointServiceAttribute</b> operation does not support concurrent modifications to the attributes of an endpoint service within the same Alibaba Cloud account (root user).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7032,12 +7093,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an endpoint service.</para>
+        /// <para>The UpdateVpcEndpointServiceAttribute operation modifies the attributes of an endpoint service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointServiceAttribute</b> operation to modify the attributes of an endpoint service that belongs to an Alibaba Cloud account within a specified period of time.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you modify the attributes of an endpoint service, ensure that the service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to check the status of the endpoint service.</description></item>
+        /// <item><description>The <b>UpdateVpcEndpointServiceAttribute</b> operation does not support concurrent modifications to the attributes of an endpoint service within the same Alibaba Cloud account (root user).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7127,12 +7191,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an endpoint service.</para>
+        /// <para>The UpdateVpcEndpointServiceAttribute operation modifies the attributes of an endpoint service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointServiceAttribute</b> operation to modify the attributes of an endpoint service that belongs to an Alibaba Cloud account within a specified period of time.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you modify the attributes of an endpoint service, ensure that the service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to check the status of the endpoint service.</description></item>
+        /// <item><description>The <b>UpdateVpcEndpointServiceAttribute</b> operation does not support concurrent modifications to the attributes of an endpoint service within the same Alibaba Cloud account (root user).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7150,12 +7217,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of an endpoint service.</para>
+        /// <para>The UpdateVpcEndpointServiceAttribute operation modifies the attributes of an endpoint service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointServiceAttribute</b> operation to modify the attributes of an endpoint service that belongs to an Alibaba Cloud account within a specified period of time.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you modify the attributes of an endpoint service, ensure that the service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to check the status of the endpoint service.</description></item>
+        /// <item><description>The <b>UpdateVpcEndpointServiceAttribute</b> operation does not support concurrent modifications to the attributes of an endpoint service within the same Alibaba Cloud account (root user).</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7173,12 +7243,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a service resource that is added to an endpoint service.</para>
+        /// <para>The UpdateVpcEndpointServiceResourceAttribute operation enables or disables automatic allocation for a service resource of an endpoint service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointServiceResourceAttribute</b> operation to modify the attributes of a service resource that is added to an endpoint service within a specified period of time.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you modify the properties of a service resource, ensure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
+        /// <item><description>The <b>UpdateVpcEndpointServiceResourceAttribute</b> operation does not support concurrent modifications to the properties of service resources that belong to the same endpoint service.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7248,12 +7321,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a service resource that is added to an endpoint service.</para>
+        /// <para>The UpdateVpcEndpointServiceResourceAttribute operation enables or disables automatic allocation for a service resource of an endpoint service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointServiceResourceAttribute</b> operation to modify the attributes of a service resource that is added to an endpoint service within a specified period of time.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you modify the properties of a service resource, ensure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
+        /// <item><description>The <b>UpdateVpcEndpointServiceResourceAttribute</b> operation does not support concurrent modifications to the properties of service resources that belong to the same endpoint service.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7323,12 +7399,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a service resource that is added to an endpoint service.</para>
+        /// <para>The UpdateVpcEndpointServiceResourceAttribute operation enables or disables automatic allocation for a service resource of an endpoint service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointServiceResourceAttribute</b> operation to modify the attributes of a service resource that is added to an endpoint service within a specified period of time.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you modify the properties of a service resource, ensure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
+        /// <item><description>The <b>UpdateVpcEndpointServiceResourceAttribute</b> operation does not support concurrent modifications to the properties of service resources that belong to the same endpoint service.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7346,12 +7425,15 @@ namespace AlibabaCloud.SDK.Privatelink20200415
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the attributes of a service resource that is added to an endpoint service.</para>
+        /// <para>The UpdateVpcEndpointServiceResourceAttribute operation enables or disables automatic allocation for a service resource of an endpoint service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot repeatedly call the <b>UpdateVpcEndpointServiceResourceAttribute</b> operation to modify the attributes of a service resource that is added to an endpoint service within a specified period of time.</para>
+        /// <list type="bullet">
+        /// <item><description>Before you modify the properties of a service resource, ensure that the endpoint service is in the <b>Active</b> state. You can call the <a href="https://help.aliyun.com/document_detail/469330.html">GetVpcEndpointServiceAttribute</a> operation to query the status of the endpoint service.</description></item>
+        /// <item><description>The <b>UpdateVpcEndpointServiceResourceAttribute</b> operation does not support concurrent modifications to the properties of service resources that belong to the same endpoint service.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
