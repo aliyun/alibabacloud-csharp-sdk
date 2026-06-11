@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QuerySmartqPermissionByCubeIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>617277******************ABA47E31</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Basic information of the dataset.</para>
+        /// <para>The basic information about the dataset.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public QuerySmartqPermissionByCubeIdResponseBodyResult Result { get; set; }
         public class QuerySmartqPermissionByCubeIdResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Dataset ID.</para>
+            /// <para>The ID of the dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7c7223ae-****-3c744528014b</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string CubeId { get; set; }
 
             /// <summary>
-            /// <para>Dataset name.</para>
+            /// <para>The name of the dataset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string CubeName { get; set; }
 
             /// <summary>
-            /// <para>Whether the current user has permission for the smart question. Note: \&quot;HasPerssion\&quot; seems to be a typo, it should probably be \&quot;HasPermission\&quot;.</para>
+            /// <para>Indicates whether the current user has permissions for Smart Q\&amp;A.</para>
             /// </summary>
             [NameInMap("HasPerssion")]
             [Validation(Required=false)]
@@ -56,10 +56,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Possible values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

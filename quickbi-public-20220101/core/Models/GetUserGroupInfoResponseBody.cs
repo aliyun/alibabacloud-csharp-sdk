@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Description of the user group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>测试描述</para>
             /// </summary>
             [NameInMap("UsergroupDesc")]
             [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Name of the user group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>测试用户组01</para>
             /// </summary>
             [NameInMap("UsergroupName")]
             [Validation(Required=false)]

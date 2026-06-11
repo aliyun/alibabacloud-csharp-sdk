@@ -39,13 +39,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add selected groups of people incrementally for a single row and column permission rule.</para>
+        /// <para>Adds specified users and user groups to a row-level permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.\n</para>
+        /// <para>This API operation supports only the new row-level permission model in Quick BI. If you are using the previous row-level permission model, you must migrate to the new model before you call this operation. To migrate, go to Organization Management &gt; Security Settings &gt; Upgrade Row-level Permissions, and then click <b>One-click Upgrade</b>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -88,13 +88,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add selected groups of people incrementally for a single row and column permission rule.</para>
+        /// <para>Adds specified users and user groups to a row-level permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.\n</para>
+        /// <para>This API operation supports only the new row-level permission model in Quick BI. If you are using the previous row-level permission model, you must migrate to the new model before you call this operation. To migrate, go to Organization Management &gt; Security Settings &gt; Upgrade Row-level Permissions, and then click <b>One-click Upgrade</b>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -137,13 +137,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add selected groups of people incrementally for a single row and column permission rule.</para>
+        /// <para>Adds specified users and user groups to a row-level permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.\n</para>
+        /// <para>This API operation supports only the new row-level permission model in Quick BI. If you are using the previous row-level permission model, you must migrate to the new model before you call this operation. To migrate, go to Organization Management &gt; Security Settings &gt; Upgrade Row-level Permissions, and then click <b>One-click Upgrade</b>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -162,13 +162,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add selected groups of people incrementally for a single row and column permission rule.</para>
+        /// <para>Adds specified users and user groups to a row-level permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>: You can only Quick BI the new row-column permission model. If you are still using the old row-column permission model, migrate to the new row-column permission model before you call this operation. To migrate row-level permissions to the new row-level permission model, perform the following steps: Choose Organizations&gt; Security Configurations&gt; Upgrade Row-Level Permissions. On the Upgrade Row-Level Permissions page, click <b>Upgrade</b>.\n</para>
+        /// <para>This API operation supports only the new row-level permission model in Quick BI. If you are using the previous row-level permission model, you must migrate to the new model before you call this operation. To migrate, go to Organization Management &gt; Security Settings &gt; Upgrade Row-level Permissions, and then click <b>One-click Upgrade</b>.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -187,12 +187,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the whitelist of the row and column permissions for a specified dataset.</para>
+        /// <para>Modifies the whitelist for row-level and column-level permissions of a specified dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ROW_LEVEL</para>
+        /// <remarks>
+        /// <para>This API operation supports only the new permission model for row-level and column-level permissions in Quick BI. If you are using the old permission model, you must migrate to the new one before you call this operation. To perform a one-click migration, you can go to Organization Management &gt; Security Configuration &gt; Upgrade to New Row-level and Column-level Permissions and click <b>One-click Upgrade</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -250,12 +252,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the whitelist of the row and column permissions for a specified dataset.</para>
+        /// <para>Modifies the whitelist for row-level and column-level permissions of a specified dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ROW_LEVEL</para>
+        /// <remarks>
+        /// <para>This API operation supports only the new permission model for row-level and column-level permissions in Quick BI. If you are using the old permission model, you must migrate to the new one before you call this operation. To perform a one-click migration, you can go to Organization Management &gt; Security Configuration &gt; Upgrade to New Row-level and Column-level Permissions and click <b>One-click Upgrade</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -313,12 +317,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the whitelist of the row and column permissions for a specified dataset.</para>
+        /// <para>Modifies the whitelist for row-level and column-level permissions of a specified dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ROW_LEVEL</para>
+        /// <remarks>
+        /// <para>This API operation supports only the new permission model for row-level and column-level permissions in Quick BI. If you are using the old permission model, you must migrate to the new one before you call this operation. To perform a one-click migration, you can go to Organization Management &gt; Security Configuration &gt; Upgrade to New Row-level and Column-level Permissions and click <b>One-click Upgrade</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -336,12 +342,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the whitelist of the row and column permissions for a specified dataset.</para>
+        /// <para>Modifies the whitelist for row-level and column-level permissions of a specified dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>ROW_LEVEL</para>
+        /// <remarks>
+        /// <para>This API operation supports only the new permission model for row-level and column-level permissions in Quick BI. If you are using the old permission model, you must migrate to the new one before you call this operation. To perform a one-click migration, you can go to Organization Management &gt; Security Configuration &gt; Upgrade to New Row-level and Column-level Permissions and click <b>One-click Upgrade</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -359,7 +367,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据源</para>
+        /// <para>Adds a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -401,7 +409,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据源</para>
+        /// <para>Adds a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -443,7 +451,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据源</para>
+        /// <para>Adds a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -461,7 +469,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据源</para>
+        /// <para>Adds a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -631,7 +639,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add an organization member.</para>
+        /// <para>Add organization members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -703,7 +711,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add an organization member.</para>
+        /// <para>Add organization members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -775,7 +783,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add an organization member.</para>
+        /// <para>Add organization members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -793,7 +801,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add an organization member.</para>
+        /// <para>Add organization members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1195,7 +1203,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a member to the specified workspace.</para>
+        /// <para>Adds a member to a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1245,7 +1253,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a member to the specified workspace.</para>
+        /// <para>Adds a member to a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1295,7 +1303,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a member to the specified workspace.</para>
+        /// <para>Adds a member to a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1313,7 +1321,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add a member to the specified workspace.</para>
+        /// <para>Adds a member to a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1331,7 +1339,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增作品的协同授权记录</para>
+        /// <para>Adds an authorization for a work.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1393,7 +1401,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增作品的协同授权记录</para>
+        /// <para>Adds an authorization for a work.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1455,7 +1463,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增作品的协同授权记录</para>
+        /// <para>Adds an authorization for a work.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1473,7 +1481,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增作品的协同授权记录</para>
+        /// <para>Adds an authorization for a work.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2619,7 +2627,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查给定的cubeId是否存在</para>
+        /// <para>Checks whether a dataset with the specified CubeId exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2661,7 +2669,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查给定的cubeId是否存在</para>
+        /// <para>Checks whether a dataset with the specified CubeId exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2703,7 +2711,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查给定的cubeId是否存在</para>
+        /// <para>Checks whether a dataset with the specified CubeId exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2721,7 +2729,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查给定的cubeId是否存在</para>
+        /// <para>Checks whether a dataset with the specified CubeId exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2739,7 +2747,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>判断用户是否属于组织</para>
+        /// <para>Checks if a user is a member of an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2781,7 +2789,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>判断用户是否属于组织</para>
+        /// <para>Checks if a user is a member of an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2823,7 +2831,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>判断用户是否属于组织</para>
+        /// <para>Checks if a user is a member of an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2841,7 +2849,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>判断用户是否属于组织</para>
+        /// <para>Checks if a user is a member of an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2987,7 +2995,127 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据自定义sql创建数据集</para>
+        /// <para>删除单条配置的标签值缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearDynamicTagCacheRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearDynamicTagCacheResponse
+        /// </returns>
+        public ClearDynamicTagCacheResponse ClearDynamicTagCacheWithOptions(ClearDynamicTagCacheRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ClearDynamicTagCache",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ClearDynamicTagCacheResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除单条配置的标签值缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearDynamicTagCacheRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearDynamicTagCacheResponse
+        /// </returns>
+        public async Task<ClearDynamicTagCacheResponse> ClearDynamicTagCacheWithOptionsAsync(ClearDynamicTagCacheRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ClearDynamicTagCache",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ClearDynamicTagCacheResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除单条配置的标签值缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearDynamicTagCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearDynamicTagCacheResponse
+        /// </returns>
+        public ClearDynamicTagCacheResponse ClearDynamicTagCache(ClearDynamicTagCacheRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ClearDynamicTagCacheWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除单条配置的标签值缓存</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ClearDynamicTagCacheRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ClearDynamicTagCacheResponse
+        /// </returns>
+        public async Task<ClearDynamicTagCacheResponse> ClearDynamicTagCacheAsync(ClearDynamicTagCacheRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ClearDynamicTagCacheWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a dataset from a custom SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3045,7 +3173,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据自定义sql创建数据集</para>
+        /// <para>Creates a dataset from a custom SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3103,7 +3231,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据自定义sql创建数据集</para>
+        /// <para>Creates a dataset from a custom SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3121,7 +3249,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据自定义sql创建数据集</para>
+        /// <para>Creates a dataset from a custom SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3139,7 +3267,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据物理表名称创建数据集</para>
+        /// <para>Creates a dataset from a physical table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3201,7 +3329,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据物理表名称创建数据集</para>
+        /// <para>Creates a dataset from a physical table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3263,7 +3391,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据物理表名称创建数据集</para>
+        /// <para>Creates a dataset from a physical table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3281,7 +3409,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据物理表名称创建数据集</para>
+        /// <para>Creates a dataset from a physical table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3503,7 +3631,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate an embedding ticket for Smart Q.</para>
+        /// <para>Generates a ticket to embed Copilot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3565,7 +3693,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate an embedding ticket for Smart Q.</para>
+        /// <para>Generates a ticket to embed Copilot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3627,7 +3755,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate an embedding ticket for Smart Q.</para>
+        /// <para>Generates a ticket to embed Copilot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3645,7 +3773,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate an embedding ticket for Smart Q.</para>
+        /// <para>Generates a ticket to embed Copilot.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3807,7 +3935,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3877,7 +4005,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3947,7 +4075,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3965,7 +4093,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4519,12 +4647,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a selected group of people for a single row and column permission rule.</para>
+        /// <para>Deletes specified users from a row-level permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>{&quot;ruleId&quot;:&quot;a5bb24da-<em><b>-a891683e14da&quot;,&quot;cubeId&quot;:&quot;7c7223ae-</b></em>-3c744528014b&quot;,&quot;delModel&quot;:{&quot;userGroups&quot;:[&quot;0d5fb19b-<em><b>-1248fc27ca51&quot;,&quot;3d2c23d4-</b></em>-f6390f325c2d&quot;],&quot;users&quot;:[&quot;4334<em><b>358&quot;,&quot;Huang</b></em>3fa822&quot;]}}</para>
+        /// <remarks>
+        /// <para>This API supports only the new row-level permission model of Quick BI. If you use the old row-level permissions, you must migrate to the new model before you call this API. To migrate, go to Organization Management &gt; Security Settings &gt; Upgrade to New Row-level Permissions and click <b>One-click Upgrade</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -4566,12 +4696,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a selected group of people for a single row and column permission rule.</para>
+        /// <para>Deletes specified users from a row-level permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>{&quot;ruleId&quot;:&quot;a5bb24da-<em><b>-a891683e14da&quot;,&quot;cubeId&quot;:&quot;7c7223ae-</b></em>-3c744528014b&quot;,&quot;delModel&quot;:{&quot;userGroups&quot;:[&quot;0d5fb19b-<em><b>-1248fc27ca51&quot;,&quot;3d2c23d4-</b></em>-f6390f325c2d&quot;],&quot;users&quot;:[&quot;4334<em><b>358&quot;,&quot;Huang</b></em>3fa822&quot;]}}</para>
+        /// <remarks>
+        /// <para>This API supports only the new row-level permission model of Quick BI. If you use the old row-level permissions, you must migrate to the new model before you call this API. To migrate, go to Organization Management &gt; Security Settings &gt; Upgrade to New Row-level Permissions and click <b>One-click Upgrade</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -4613,12 +4745,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a selected group of people for a single row and column permission rule.</para>
+        /// <para>Deletes specified users from a row-level permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>{&quot;ruleId&quot;:&quot;a5bb24da-<em><b>-a891683e14da&quot;,&quot;cubeId&quot;:&quot;7c7223ae-</b></em>-3c744528014b&quot;,&quot;delModel&quot;:{&quot;userGroups&quot;:[&quot;0d5fb19b-<em><b>-1248fc27ca51&quot;,&quot;3d2c23d4-</b></em>-f6390f325c2d&quot;],&quot;users&quot;:[&quot;4334<em><b>358&quot;,&quot;Huang</b></em>3fa822&quot;]}}</para>
+        /// <remarks>
+        /// <para>This API supports only the new row-level permission model of Quick BI. If you use the old row-level permissions, you must migrate to the new model before you call this API. To migrate, go to Organization Management &gt; Security Settings &gt; Upgrade to New Row-level Permissions and click <b>One-click Upgrade</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -4636,12 +4770,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a selected group of people for a single row and column permission rule.</para>
+        /// <para>Deletes specified users from a row-level permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>{&quot;ruleId&quot;:&quot;a5bb24da-<em><b>-a891683e14da&quot;,&quot;cubeId&quot;:&quot;7c7223ae-</b></em>-3c744528014b&quot;,&quot;delModel&quot;:{&quot;userGroups&quot;:[&quot;0d5fb19b-<em><b>-1248fc27ca51&quot;,&quot;3d2c23d4-</b></em>-f6390f325c2d&quot;],&quot;users&quot;:[&quot;4334<em><b>358&quot;,&quot;Huang</b></em>3fa822&quot;]}}</para>
+        /// <remarks>
+        /// <para>This API supports only the new row-level permission model of Quick BI. If you use the old row-level permissions, you must migrate to the new model before you call this API. To migrate, go to Organization Management &gt; Security Settings &gt; Upgrade to New Row-level Permissions and click <b>One-click Upgrade</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -4659,12 +4795,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a single row or column permission rule.</para>
+        /// <para>Deletes a row-level permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the training dataset that you want to remove from the specified custom linguistic model.</para>
+        /// <remarks>
+        /// <para>This operation supports only the new Quick BI row-level permission model. If you are using the old model, you must upgrade before you call this operation. To upgrade, go to Organization Management &gt; Security Configurations &gt; Upgrade Row-level Permissions and click <b>Upgrade Now</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -4710,12 +4848,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a single row or column permission rule.</para>
+        /// <para>Deletes a row-level permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the training dataset that you want to remove from the specified custom linguistic model.</para>
+        /// <remarks>
+        /// <para>This operation supports only the new Quick BI row-level permission model. If you are using the old model, you must upgrade before you call this operation. To upgrade, go to Organization Management &gt; Security Configurations &gt; Upgrade Row-level Permissions and click <b>Upgrade Now</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -4761,12 +4901,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a single row or column permission rule.</para>
+        /// <para>Deletes a row-level permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the training dataset that you want to remove from the specified custom linguistic model.</para>
+        /// <remarks>
+        /// <para>This operation supports only the new Quick BI row-level permission model. If you are using the old model, you must upgrade before you call this operation. To upgrade, go to Organization Management &gt; Security Configurations &gt; Upgrade Row-level Permissions and click <b>Upgrade Now</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -4784,12 +4926,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a single row or column permission rule.</para>
+        /// <para>Deletes a row-level permission rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The ID of the training dataset that you want to remove from the specified custom linguistic model.</para>
+        /// <remarks>
+        /// <para>This operation supports only the new Quick BI row-level permission model. If you are using the old model, you must upgrade before you call this operation. To upgrade, go to Organization Management &gt; Security Configurations &gt; Upgrade Row-level Permissions and click <b>Upgrade Now</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -5799,7 +5943,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取订阅任务列表信息</para>
+        /// <para>Retrieves a list of tracking tasks. Note: If the caller\&quot;s AccessKey (AK) does not have permission to view tracking tasks of other users, this operation returns only the tasks that the caller is authorized to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5853,7 +5997,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取订阅任务列表信息</para>
+        /// <para>Retrieves a list of tracking tasks. Note: If the caller\&quot;s AccessKey (AK) does not have permission to view tracking tasks of other users, this operation returns only the tasks that the caller is authorized to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5907,7 +6051,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取订阅任务列表信息</para>
+        /// <para>Retrieves a list of tracking tasks. Note: If the caller\&quot;s AccessKey (AK) does not have permission to view tracking tasks of other users, this operation returns only the tasks that the caller is authorized to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5925,7 +6069,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取订阅任务列表信息</para>
+        /// <para>Retrieves a list of tracking tasks. Note: If the caller\&quot;s AccessKey (AK) does not have permission to view tracking tasks of other users, this operation returns only the tasks that the caller is authorized to access.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6343,7 +6487,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取空间下加速引擎管控页任务信息。</para>
+        /// <para>Retrieves information about acceleration tasks in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6401,7 +6545,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取空间下加速引擎管控页任务信息。</para>
+        /// <para>Retrieves information about acceleration tasks in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6459,7 +6603,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取空间下加速引擎管控页任务信息。</para>
+        /// <para>Retrieves information about acceleration tasks in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6477,7 +6621,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取空间下加速引擎管控页任务信息。</para>
+        /// <para>Retrieves information about acceleration tasks in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7339,6 +7483,110 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取当前组织的动态标签列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDynamicTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDynamicTagResponse
+        /// </returns>
+        public ListDynamicTagResponse ListDynamicTagWithOptions(ListDynamicTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDynamicTag",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDynamicTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前组织的动态标签列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDynamicTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDynamicTagResponse
+        /// </returns>
+        public async Task<ListDynamicTagResponse> ListDynamicTagWithOptionsAsync(ListDynamicTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDynamicTag",
+                Version = "2022-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDynamicTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前组织的动态标签列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDynamicTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDynamicTagResponse
+        /// </returns>
+        public ListDynamicTagResponse ListDynamicTag(ListDynamicTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDynamicTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取当前组织的动态标签列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDynamicTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDynamicTagResponse
+        /// </returns>
+        public async Task<ListDynamicTagResponse> ListDynamicTagAsync(ListDynamicTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDynamicTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Overview</para>
         /// </summary>
         /// 
@@ -7715,7 +7963,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the list of authorization details for a BI portal menu.</para>
+        /// <para>Retrieves a list of authorization details for the menus in a BI portal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7757,7 +8005,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the list of authorization details for a BI portal menu.</para>
+        /// <para>Retrieves a list of authorization details for the menus in a BI portal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7799,7 +8047,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the list of authorization details for a BI portal menu.</para>
+        /// <para>Retrieves a list of authorization details for the menus in a BI portal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7817,7 +8065,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the list of authorization details for a BI portal menu.</para>
+        /// <para>Retrieves a list of authorization details for the menus in a BI portal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8387,7 +8635,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据门户菜单的白名单列表</para>
+        /// <para>Retrieves the whitelist for a BI portal menu.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8429,7 +8677,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据门户菜单的白名单列表</para>
+        /// <para>Retrieves the whitelist for a BI portal menu.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8471,7 +8719,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据门户菜单的白名单列表</para>
+        /// <para>Retrieves the whitelist for a BI portal menu.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8489,7 +8737,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据门户菜单的白名单列表</para>
+        /// <para>Retrieves the whitelist for a BI portal menu.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8779,7 +9027,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户所有空间角色列表</para>
+        /// <para>Queries all workspace roles of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8821,7 +9069,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户所有空间角色列表</para>
+        /// <para>Queries all workspace roles of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8863,7 +9111,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户所有空间角色列表</para>
+        /// <para>Queries all workspace roles of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8881,7 +9129,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户所有空间角色列表</para>
+        /// <para>Queries all workspace roles of a user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9319,7 +9567,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量编辑仪表板的小Q问数状态</para>
+        /// <para>Modifies the Q-Assistant status for multiple dashboards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9365,7 +9613,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量编辑仪表板的小Q问数状态</para>
+        /// <para>Modifies the Q-Assistant status for multiple dashboards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9411,7 +9659,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量编辑仪表板的小Q问数状态</para>
+        /// <para>Modifies the Q-Assistant status for multiple dashboards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9429,7 +9677,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量编辑仪表板的小Q问数状态</para>
+        /// <para>Modifies the Q-Assistant status for multiple dashboards.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9447,7 +9695,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据集的加速任务运行日志</para>
+        /// <para>Queries the run logs of acceleration tasks for a specified dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9505,7 +9753,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据集的加速任务运行日志</para>
+        /// <para>Queries the run logs of acceleration tasks for a specified dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9563,7 +9811,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据集的加速任务运行日志</para>
+        /// <para>Queries the run logs of acceleration tasks for a specified dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9581,7 +9829,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定数据集的加速任务运行日志</para>
+        /// <para>Queries the run logs of acceleration tasks for a specified dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9743,7 +9991,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query audit log information.</para>
+        /// <para>Queries audit log information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9817,7 +10065,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query audit log information.</para>
+        /// <para>Queries audit log information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9891,7 +10139,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query audit log information.</para>
+        /// <para>Queries audit log information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9909,7 +10157,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query audit log information.</para>
+        /// <para>Queries audit log information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10623,18 +10871,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke the open data service API.</para>
+        /// <para>Calls a DataService Studio API to query data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Prerequisites</h3>
-        /// <para>You need to create a data service API through Quick BI\&quot;s data service. For more details, see: <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</para>
-        /// <h3>Usage Restrictions</h3>
+        /// <para>Create an API in <a href="https://help.aliyun.com/document_detail/144980.html">DataService Studio</a> before calling this operation.</para>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>The data service feature is only available to professional edition customers.</description></item>
-        /// <item><description>The timeout for data service API calls is 60s, and the QPS for a single API is 10 times/second.</description></item>
-        /// <item><description>If row-level permissions are enabled on the dataset referenced by the data service API, the API call will also be intercepted by the row-level permission policy.</description></item>
+        /// <item><description>Requires Quick BI Professional Edition.</description></item>
+        /// <item><description>API call timeout: 60s. QPS limit per API: 10.</description></item>
+        /// <item><description>Row-level permissions on the referenced dataset also apply to API calls.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10689,18 +10937,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke the open data service API.</para>
+        /// <para>Calls a DataService Studio API to query data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Prerequisites</h3>
-        /// <para>You need to create a data service API through Quick BI\&quot;s data service. For more details, see: <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</para>
-        /// <h3>Usage Restrictions</h3>
+        /// <para>Create an API in <a href="https://help.aliyun.com/document_detail/144980.html">DataService Studio</a> before calling this operation.</para>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>The data service feature is only available to professional edition customers.</description></item>
-        /// <item><description>The timeout for data service API calls is 60s, and the QPS for a single API is 10 times/second.</description></item>
-        /// <item><description>If row-level permissions are enabled on the dataset referenced by the data service API, the API call will also be intercepted by the row-level permission policy.</description></item>
+        /// <item><description>Requires Quick BI Professional Edition.</description></item>
+        /// <item><description>API call timeout: 60s. QPS limit per API: 10.</description></item>
+        /// <item><description>Row-level permissions on the referenced dataset also apply to API calls.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10755,18 +11003,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke the open data service API.</para>
+        /// <para>Calls a DataService Studio API to query data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Prerequisites</h3>
-        /// <para>You need to create a data service API through Quick BI\&quot;s data service. For more details, see: <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</para>
-        /// <h3>Usage Restrictions</h3>
+        /// <para>Create an API in <a href="https://help.aliyun.com/document_detail/144980.html">DataService Studio</a> before calling this operation.</para>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>The data service feature is only available to professional edition customers.</description></item>
-        /// <item><description>The timeout for data service API calls is 60s, and the QPS for a single API is 10 times/second.</description></item>
-        /// <item><description>If row-level permissions are enabled on the dataset referenced by the data service API, the API call will also be intercepted by the row-level permission policy.</description></item>
+        /// <item><description>Requires Quick BI Professional Edition.</description></item>
+        /// <item><description>API call timeout: 60s. QPS limit per API: 10.</description></item>
+        /// <item><description>Row-level permissions on the referenced dataset also apply to API calls.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10785,18 +11033,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Invoke the open data service API.</para>
+        /// <para>Calls a DataService Studio API to query data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Prerequisites</h3>
-        /// <para>You need to create a data service API through Quick BI\&quot;s data service. For more details, see: <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</para>
-        /// <h3>Usage Restrictions</h3>
+        /// <para>Create an API in <a href="https://help.aliyun.com/document_detail/144980.html">DataService Studio</a> before calling this operation.</para>
+        /// <h3>Limits</h3>
         /// <list type="bullet">
-        /// <item><description>The data service feature is only available to professional edition customers.</description></item>
-        /// <item><description>The timeout for data service API calls is 60s, and the QPS for a single API is 10 times/second.</description></item>
-        /// <item><description>If row-level permissions are enabled on the dataset referenced by the data service API, the API call will also be intercepted by the row-level permission policy.</description></item>
+        /// <item><description>Requires Quick BI Professional Edition.</description></item>
+        /// <item><description>API call timeout: 60s. QPS limit per API: 10.</description></item>
+        /// <item><description>Row-level permissions on the referenced dataset also apply to API calls.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11295,12 +11543,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified dataset, including the data source, directory, and dataset model.</para>
+        /// <para>Retrieves the details of a specified dataset, including its data source, directory, and dataset model.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).</para>
+        /// <para>The response includes the data source, directory, and a dataset model containing dimensions, measures, physical fields, custom SQL text, and relationships.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11342,12 +11590,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified dataset, including the data source, directory, and dataset model.</para>
+        /// <para>Retrieves the details of a specified dataset, including its data source, directory, and dataset model.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).</para>
+        /// <para>The response includes the data source, directory, and a dataset model containing dimensions, measures, physical fields, custom SQL text, and relationships.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11389,12 +11637,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified dataset, including the data source, directory, and dataset model.</para>
+        /// <para>Retrieves the details of a specified dataset, including its data source, directory, and dataset model.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).</para>
+        /// <para>The response includes the data source, directory, and a dataset model containing dimensions, measures, physical fields, custom SQL text, and relationships.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11412,12 +11660,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a specified dataset, including the data source, directory, and dataset model.</para>
+        /// <para>Retrieves the details of a specified dataset, including its data source, directory, and dataset model.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).</para>
+        /// <para>The response includes the data source, directory, and a dataset model containing dimensions, measures, physical fields, custom SQL text, and relationships.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11563,7 +11811,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</para>
+        /// <para>Queries the datasets in a specified workspace. The results are sorted in descending order by creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11625,7 +11873,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</para>
+        /// <para>Queries the datasets in a specified workspace. The results are sorted in descending order by creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11687,7 +11935,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</para>
+        /// <para>Queries the datasets in a specified workspace. The results are sorted in descending order by creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11705,7 +11953,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</para>
+        /// <para>Queries the datasets in a specified workspace. The results are sorted in descending order by creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11723,7 +11971,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the Dataset has Enabled Smart Query</para>
+        /// <para>Checks whether Intelligent Q&amp;A is enabled for a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11765,7 +12013,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the Dataset has Enabled Smart Query</para>
+        /// <para>Checks whether Intelligent Q&amp;A is enabled for a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11807,7 +12055,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the Dataset has Enabled Smart Query</para>
+        /// <para>Checks whether Intelligent Q&amp;A is enabled for a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11825,7 +12073,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the Dataset has Enabled Smart Query</para>
+        /// <para>Checks whether Intelligent Q&amp;A is enabled for a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12559,7 +12807,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of workspaces under the current organization.</para>
+        /// <para>Lists the workspaces in the current organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12613,7 +12861,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of workspaces under the current organization.</para>
+        /// <para>Lists the workspaces in the current organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12667,7 +12915,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of workspaces under the current organization.</para>
+        /// <para>Lists the workspaces in the current organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12685,7 +12933,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of workspaces under the current organization.</para>
+        /// <para>Lists the workspaces in the current organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13391,7 +13639,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if a user has permission for a specific smart question dataset</para>
+        /// <para>Queries the permissions of a user on a Smart Q&amp;A dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13437,7 +13685,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if a user has permission for a specific smart question dataset</para>
+        /// <para>Queries the permissions of a user on a Smart Q&amp;A dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13483,7 +13731,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if a user has permission for a specific smart question dataset</para>
+        /// <para>Queries the permissions of a user on a Smart Q&amp;A dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13501,7 +13749,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if a user has permission for a specific smart question dataset</para>
+        /// <para>Queries the permissions of a user on a Smart Q&amp;A dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14015,7 +14263,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user information based on the Alibaba Cloud ID or Alibaba Cloud account name.</para>
+        /// <para>Queries user information by Alibaba Cloud ID or Alibaba Cloud account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14061,7 +14309,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user information based on the Alibaba Cloud ID or Alibaba Cloud account name.</para>
+        /// <para>Queries user information by Alibaba Cloud ID or Alibaba Cloud account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14107,7 +14355,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user information based on the Alibaba Cloud ID or Alibaba Cloud account name.</para>
+        /// <para>Queries user information by Alibaba Cloud ID or Alibaba Cloud account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14125,7 +14373,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user information based on the Alibaba Cloud ID or Alibaba Cloud account name.</para>
+        /// <para>Queries user information by Alibaba Cloud ID or Alibaba Cloud account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14143,7 +14391,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user information based on the user ID.</para>
+        /// <para>Queries user information by user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14185,7 +14433,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user information based on the user ID.</para>
+        /// <para>Queries user information by user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14227,7 +14475,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user information based on the user ID.</para>
+        /// <para>Queries user information by user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14245,7 +14493,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries user information based on the user ID.</para>
+        /// <para>Queries user information by user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14263,7 +14511,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the members of an organization.</para>
+        /// <para>Lists organization members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14301,7 +14549,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the members of an organization.</para>
+        /// <para>Lists organization members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14339,7 +14587,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the members of an organization.</para>
+        /// <para>Lists organization members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14357,7 +14605,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the members of an organization.</para>
+        /// <para>Lists organization members.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16371,12 +16619,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Management of Smart Q\\\\\\&amp;A Authorizations</para>
+        /// <para>Manages authorizations for Intelligent Q&amp;A in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used for batch management of smart Q&amp;A authorizations. Repeatedly adding an authorization will be treated as a new addition; repeatedly deleting an authorization will be skipped by default and will not be recorded in the audit log.</para>
+        /// <para>Manages authorizations for Intelligent Q\&amp;A in batches. Granting an existing authorization is treated as a new grant operation. By default, an attempt to delete an authorization that does not exist is skipped and no audit log is recorded.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16438,12 +16686,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Management of Smart Q\\\\\\&amp;A Authorizations</para>
+        /// <para>Manages authorizations for Intelligent Q&amp;A in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used for batch management of smart Q&amp;A authorizations. Repeatedly adding an authorization will be treated as a new addition; repeatedly deleting an authorization will be skipped by default and will not be recorded in the audit log.</para>
+        /// <para>Manages authorizations for Intelligent Q\&amp;A in batches. Granting an existing authorization is treated as a new grant operation. By default, an attempt to delete an authorization that does not exist is skipped and no audit log is recorded.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16505,12 +16753,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Management of Smart Q\\\\\\&amp;A Authorizations</para>
+        /// <para>Manages authorizations for Intelligent Q&amp;A in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used for batch management of smart Q&amp;A authorizations. Repeatedly adding an authorization will be treated as a new addition; repeatedly deleting an authorization will be skipped by default and will not be recorded in the audit log.</para>
+        /// <para>Manages authorizations for Intelligent Q\&amp;A in batches. Granting an existing authorization is treated as a new grant operation. By default, an attempt to delete an authorization that does not exist is skipped and no audit log is recorded.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16528,12 +16776,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Management of Smart Q\\\\\\&amp;A Authorizations</para>
+        /// <para>Manages authorizations for Intelligent Q&amp;A in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used for batch management of smart Q&amp;A authorizations. Repeatedly adding an authorization will be treated as a new addition; repeatedly deleting an authorization will be skipped by default and will not be recorded in the audit log.</para>
+        /// <para>Manages authorizations for Intelligent Q\&amp;A in batches. Granting an existing authorization is treated as a new grant operation. By default, an attempt to delete an authorization that does not exist is skipped and no audit log is recorded.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16551,12 +16799,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Capability Open</para>
+        /// <para>Runs an intelligent Q&amp;A query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Special Note: When a user is authorized to call this API, it is assumed that the user has the permission to query the corresponding data by passing in the userId as that user.</para>
+        /// <para>Note: Authorized users can query data as another user by passing the userId of the target user.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16610,12 +16858,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Capability Open</para>
+        /// <para>Runs an intelligent Q&amp;A query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Special Note: When a user is authorized to call this API, it is assumed that the user has the permission to query the corresponding data by passing in the userId as that user.</para>
+        /// <para>Note: Authorized users can query data as another user by passing the userId of the target user.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16669,12 +16917,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Capability Open</para>
+        /// <para>Runs an intelligent Q&amp;A query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Special Note: When a user is authorized to call this API, it is assumed that the user has the permission to query the corresponding data by passing in the userId as that user.</para>
+        /// <para>Note: Authorized users can query data as another user by passing the userId of the target user.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16692,12 +16940,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Capability Open</para>
+        /// <para>Runs an intelligent Q&amp;A query.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Special Note: When a user is authorized to call this API, it is assumed that the user has the permission to query the corresponding data by passing in the userId as that user.</para>
+        /// <para>Note: Authorized users can query data as another user by passing the userId of the target user.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16715,7 +16963,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义sql数据集</para>
+        /// <para>Updates a dataset that is based on a custom SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16773,7 +17021,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义sql数据集</para>
+        /// <para>Updates a dataset that is based on a custom SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16831,7 +17079,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义sql数据集</para>
+        /// <para>Updates a dataset that is based on a custom SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16849,7 +17097,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义sql数据集</para>
+        /// <para>Updates a dataset that is based on a custom SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16867,16 +17115,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of the row and column permission switch for a dataset.</para>
+        /// <para>Updates the row-level and column-level permission status for a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The execution result of the interface. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
-        /// </list>
+        /// <remarks>
+        /// <para>This API operation supports only the new row-level and column-level permission model in Quick BI. If you are using the old permission model, you must migrate to the new model before calling this operation. To migrate, navigate to Organization Management &gt; Security Configuration &gt; Upgrade to New Row-level and Column-level Permissions, and then click <b>One-click Upgrade</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -16926,16 +17172,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of the row and column permission switch for a dataset.</para>
+        /// <para>Updates the row-level and column-level permission status for a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The execution result of the interface. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
-        /// </list>
+        /// <remarks>
+        /// <para>This API operation supports only the new row-level and column-level permission model in Quick BI. If you are using the old permission model, you must migrate to the new model before calling this operation. To migrate, navigate to Organization Management &gt; Security Configuration &gt; Upgrade to New Row-level and Column-level Permissions, and then click <b>One-click Upgrade</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -16985,16 +17229,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of the row and column permission switch for a dataset.</para>
+        /// <para>Updates the row-level and column-level permission status for a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The execution result of the interface. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
-        /// </list>
+        /// <remarks>
+        /// <para>This API operation supports only the new row-level and column-level permission model in Quick BI. If you are using the old permission model, you must migrate to the new model before calling this operation. To migrate, navigate to Organization Management &gt; Security Configuration &gt; Upgrade to New Row-level and Column-level Permissions, and then click <b>One-click Upgrade</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -17012,16 +17254,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the status of the row and column permission switch for a dataset.</para>
+        /// <para>Updates the row-level and column-level permission status for a dataset.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The execution result of the interface. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
-        /// </list>
+        /// <remarks>
+        /// <para>This API operation supports only the new row-level and column-level permission model in Quick BI. If you are using the old permission model, you must migrate to the new model before calling this operation. To migrate, navigate to Organization Management &gt; Security Configuration &gt; Upgrade to New Row-level and Column-level Permissions, and then click <b>One-click Upgrade</b>.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -17039,7 +17279,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Data Source Configuration</para>
+        /// <para>Modifies a data source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17081,7 +17321,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Data Source Configuration</para>
+        /// <para>Modifies a data source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17123,7 +17363,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Data Source Configuration</para>
+        /// <para>Modifies a data source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17141,7 +17381,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Data Source Configuration</para>
+        /// <para>Modifies a data source configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17415,7 +17655,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a specified member in an organization.</para>
+        /// <para>Update the information of a specific member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17485,7 +17725,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a specified member in an organization.</para>
+        /// <para>Update the information of a specific member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17555,7 +17795,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a specified member in an organization.</para>
+        /// <para>Update the information of a specific member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17573,7 +17813,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a specified member in an organization.</para>
+        /// <para>Update the information of a specific member in an organization.</para>
         /// </summary>
         /// 
         /// <param name="request">

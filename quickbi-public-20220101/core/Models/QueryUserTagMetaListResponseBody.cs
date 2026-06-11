@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The description of the tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Used to distinguish some positions</para>
+            /// <para>用于区分部分职位</para>
             /// </summary>
             [NameInMap("TagDescription")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Position</para>
+            /// <para>职位</para>
             /// </summary>
             [NameInMap("TagName")]
             [Validation(Required=false)]

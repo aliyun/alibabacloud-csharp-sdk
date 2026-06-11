@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class CreateWorkspaceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>685072****************4e79e718f</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12423twfasva********</para>
         /// </summary>
@@ -26,6 +30,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string Result { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

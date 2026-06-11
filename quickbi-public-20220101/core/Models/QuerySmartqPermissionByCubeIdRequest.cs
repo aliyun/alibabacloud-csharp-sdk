@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QuerySmartqPermissionByCubeIdRequest : TeaModel {
         /// <summary>
-        /// <para>Dataset ID.</para>
+        /// <para>The ID of the dataset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CubeId { get; set; }
 
         /// <summary>
-        /// <para>User ID.</para>
+        /// <para>The ID of the user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

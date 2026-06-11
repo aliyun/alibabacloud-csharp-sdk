@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>测试用户组</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]

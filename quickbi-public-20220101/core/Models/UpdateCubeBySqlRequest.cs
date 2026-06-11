@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateCubeBySqlRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the dataset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CubeId { get; set; }
 
         /// <summary>
+        /// <para>The custom SQL statement.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CustomSql { get; set; }
 
         /// <summary>
+        /// <para>The ID of the data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string DsId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Quick BI user. The user must have permissions to create datasets. This ID is not your Alibaba Cloud account ID. Call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=api-workbench.api_explorer.0.0.672f50daGq9ooV%5C&params=%7B%7D%5C&tab=DOC%5C&sdkStyle=old%5C&RegionId=cn-hangzhou">QueryUserInfoByAccount</a> operation to obtain the user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

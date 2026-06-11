@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Job Positions within the Department</para>
+        /// <para>部门内的工作职位</para>
         /// </summary>
         [NameInMap("TagDescription")]
         [Validation(Required=false)]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Department</para>
+        /// <para>职位</para>
         /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]

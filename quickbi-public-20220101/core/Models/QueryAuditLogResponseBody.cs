@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryAuditLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>78C1AA2D-9201-599E-A0BA-6FC462E57A95</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Array of logs.</para>
+        /// <para>An array of log objects.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<QueryAuditLogResponseBodyResult> Result { get; set; }
         public class QueryAuditLogResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Log time.</para>
+            /// <para>The time when the log was generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-16 13:17:39</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Operator account.</para>
+            /// <para>The account name of the operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wukaibis</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string OperatorAccountName { get; set; }
 
             /// <summary>
-            /// <para>Operator\&quot;s nickname.</para>
+            /// <para>The nickname of the operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>buc_344078</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string OperatorName { get; set; }
 
             /// <summary>
-            /// <para>Operation type.</para>
+            /// <para>The operation type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CREATE</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string OperatorType { get; set; }
 
             /// <summary>
-            /// <para>Target ID.</para>
+            /// <para>The ID of the operation target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1113***************8500</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string TargetId { get; set; }
 
             /// <summary>
-            /// <para>Target name.</para>
+            /// <para>The name of the operation target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string TargetName { get; set; }
 
             /// <summary>
-            /// <para>Target type.</para>
+            /// <para>The type of the operation target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USER</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string TargetType { get; set; }
 
             /// <summary>
-            /// <para>Workspace ID.</para>
+            /// <para>The workspace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>87c6b145-090c-43e1-9426-8f93be23****</para>
@@ -109,10 +109,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Possible values: </para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request succeeded </description></item>
-        /// <item><description>false: The request failed</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

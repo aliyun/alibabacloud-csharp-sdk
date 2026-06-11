@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Tag description. Format check: maximum length of 255 characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>部门内的职位</para>
         /// </summary>
         [NameInMap("TagDescription")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>职位</para>
         /// </summary>
         [NameInMap("TagName")]
         [Validation(Required=false)]

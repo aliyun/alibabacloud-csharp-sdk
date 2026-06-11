@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddDataLevelPermissionWhiteListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the training dataset that you want to remove from the specified custom linguistic model.</para>
+        /// <para>The ID of the dataset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CubeId { get; set; }
 
         /// <summary>
-        /// <para>Operation Type: You can set this parameter to one of the following values.</para>
+        /// <para>The operation to perform. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ADD: Add a whitelist</description></item>
-        /// <item><description>DELETE: deletes a whitelist.</description></item>
+        /// <item><description><para>ADD: adds users or user groups to the whitelist.</para>
+        /// </description></item>
+        /// <item><description><para>DELETE: removes users or user groups from the whitelist.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,10 +37,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string OperateType { get; set; }
 
         /// <summary>
-        /// <para>The type of row-level permissions.</para>
+        /// <para>The type of permission. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ROW_LEVEL: row-level permissions,</description></item>
-        /// <item><description>COLUMN_LEVEL: column-level permissions</description></item>
+        /// <item><description><para>ROW_LEVEL: row-level permission</para>
+        /// </description></item>
+        /// <item><description><para>COLUMN_LEVEL: column-level permission</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,6 +53,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RuleType { get; set; }
 
         /// <summary>
+        /// <para>The IDs of the users or user groups to add to the whitelist.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If you set TargetType to 1 (user), specify the user IDs.</para>
+        /// </description></item>
+        /// <item><description><para>When <c>TargetType=2</c> (user group), the value is the user group ID.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>43342<em><b>435,1553a</b></em>*41231</para>
         /// </summary>
@@ -57,10 +69,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string TargetIds { get; set; }
 
         /// <summary>
-        /// <para>Modify the type of the whitelist:</para>
+        /// <para>The type of object to add to the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: user</description></item>
-        /// <item><description>2: user group</description></item>
+        /// <item><description><para>1: user</para>
+        /// </description></item>
+        /// <item><description><para>2: user group</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

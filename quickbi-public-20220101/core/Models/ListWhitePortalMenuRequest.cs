@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListWhitePortalMenuRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the BI portal.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

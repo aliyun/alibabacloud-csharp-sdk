@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>Whether to enable the embedding feature for the work. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables embedding.</description></item>
-        /// <item><description>false: disables embedding.</description></item>
+        /// <item><description><para>true: enables embedding.</para>
+        /// </description></item>
+        /// <item><description><para>false: disables embedding.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

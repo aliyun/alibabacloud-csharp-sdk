@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>User group description</para>
+        /// <para>用户分组描述</para>
         /// </summary>
         [NameInMap("UserGroupDescription")]
         [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Hangzhou Financial Report</para>
+        /// <para>杭州财报</para>
         /// </summary>
         [NameInMap("UserGroupName")]
         [Validation(Required=false)]

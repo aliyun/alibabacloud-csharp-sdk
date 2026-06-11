@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>38C0FEC8-****-415C-A9F1-****422BDB65</para>
+        /// <para>38C0FEC8-1510-415C-A9F1-9AE9422BDB65</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Mail ID</para>
             /// 
             /// <b>Example:</b>
-            /// <para>c38f73f4c5*****c808c41b3f4d23b7852</para>
+            /// <para>c38f73f4c5xxxxxc808c41b3f4d23b7852</para>
             /// </summary>
             [NameInMap("mailId")]
             [Validation(Required=false)]

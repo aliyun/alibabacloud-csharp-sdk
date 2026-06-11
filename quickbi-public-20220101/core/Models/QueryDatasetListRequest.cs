@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDatasetListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of the folder.</para>
+        /// <list type="bullet">
+        /// <item><description>If you specify this parameter, all datasets in the folder are returned.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>schemaad8aad00-9c55-4984-a767-b4e0ec60****</para>
@@ -20,17 +23,23 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>Information about the directory where the dataset is located</para>
+        /// <para>The keyword used to search for datasets by name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Queries the datasets of a specified workspace. The datasets are sorted in descending order by creation time.</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace.</para>
+        /// <para>The page number of the dataset list.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Start value: 1</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 1</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,9 +49,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Specifies the directory ID.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// <list type="bullet">
-        /// <item><description>If this field is not empty, all datasets in the directory are obtained.</description></item>
+        /// <item><description><para>Default value: 10</para>
+        /// </description></item>
+        /// <item><description><para>Maximum value: 1000</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,7 +65,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>Specifies whether to recursively include datasets in subdirectories. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Returns all datasets in the folder specified by DirectoryId and its subdirectories.</para>
+        /// </description></item>
+        /// <item><description><para>false: Returns only the datasets in the folder specified by DirectoryId.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -63,7 +81,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? WithChildren { get; set; }
 
         /// <summary>
-        /// <para>The name of the data source.</para>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

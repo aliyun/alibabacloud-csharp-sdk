@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class SmartqAuthorizeRequest : TeaModel {
         /// <summary>
-        /// <para>Array of dataset IDs, separated by English commas. <notice>This parameter will be converted to the corresponding question resource ID for authorization. Therefore, if the input cubeId does not correspond to any question resource, an error indicating that the question resource does not exist will be reported. Please ensure the correctness of the cubeId.</notice></para>
+        /// <para>An array of dataset IDs. Separate multiple IDs with commas.</para>
+        /// <remarks>
+        /// <para>Notice: This parameter is converted to the corresponding Q\&amp;A resource ID for authorization. If a \<c>cubeId\\</c> does not correspond to an existing Q\&amp;A resource, an error is reported that the Q\&amp;A resource does not exist. Ensure that the \<c>cubeId\\</c> is correct.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>wasdasd<em><b><b><b>1235235sd,ASDAS</b></b></b></em>**ASDAW123</para>
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CubeIds { get; set; }
 
         /// <summary>
-        /// <para>Expiration time, with a default of seven days.
+        /// <para>The expiration time. The default is seven days.
         /// Format: 2099-12-31</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string ExpireDay { get; set; }
 
         /// <summary>
-        /// <para>Array of analysis theme IDs, separated by English commas.</para>
+        /// <para>An array of analysis subject IDs. Separate multiple IDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wasdasd<em><b><b><b>1235235sd,ASDAS</b></b></b></em>**ASDAW123</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string LlmCubeThemes { get; set; }
 
         /// <summary>
-        /// <para>Array of Q&amp;A resource IDs, separated by English commas.</para>
+        /// <para>An array of Q\&amp;A resource IDs. Separate multiple IDs with commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wasdasd<em><b><b><b>1235235sd,ASDAS</b></b></b></em>**ASDAW123</para>
@@ -51,10 +54,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string LlmCubes { get; set; }
 
         /// <summary>
-        /// <para>Operation type. The values are as follows:</para>
+        /// <para>The operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Add authorization</description></item>
-        /// <item><description>1: Remove authorization</description></item>
+        /// <item><description><para>0: Grant authorization</para>
+        /// </description></item>
+        /// <item><description><para>1: Delete authorization</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,9 +71,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? OperationType { get; set; }
 
         /// <summary>
-        /// <para>Array of user IDs, separated by English commas.</para>
+        /// <para>An array of user IDs. Separate multiple IDs with commas.</para>
         /// <remarks>
-        /// <para>Notice: The number of user IDs per request * (number of Q&amp;A resources + number of analysis themes) cannot exceed 100.</para>
+        /// <para>Notice: The number of user IDs × (the number of Q\&amp;A resources + the number of analysis subjects) in a single request cannot exceed 100.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

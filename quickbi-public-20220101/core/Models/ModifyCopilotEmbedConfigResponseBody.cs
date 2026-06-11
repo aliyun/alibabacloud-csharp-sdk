@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4BAA469******A9289FEE</para>
+        /// <para>4BAA4694-CC27-555F-B15A-688AA9289FEE</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

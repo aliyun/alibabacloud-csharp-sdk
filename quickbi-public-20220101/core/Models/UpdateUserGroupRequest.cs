@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Description</para>
+        /// <para>描述信息</para>
         /// </summary>
         [NameInMap("UserGroupDescription")]
         [Validation(Required=false)]

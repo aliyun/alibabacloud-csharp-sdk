@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     /// <para>Description of the error code.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>TEST</para>
+                    /// <para>账号已存在</para>
                     /// </summary>
                     [NameInMap("CodeDesc")]
                     [Validation(Required=false)]

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Name, for fuzzy search.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>测试</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]

@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
     public class QueryUserByMobileAccountRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ding</para>
         /// </summary>
         [NameInMap("MobileType")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>sasda</para>
         /// </summary>
         [NameInMap("MobileUserId")]
         [Validation(Required=false)]

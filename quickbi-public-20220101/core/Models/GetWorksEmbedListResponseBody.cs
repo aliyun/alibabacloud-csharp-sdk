@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Report name</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>测试哦</para>
                 /// </summary>
                 [NameInMap("WorksName")]
                 [Validation(Required=false)]

@@ -10,20 +10,22 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryUserListRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword of the username or nickname of the organization member.</para>
+        /// <para>The keyword to search for organization members by username or nickname.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test user</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Current page number for organization member list:</para>
+        /// <para>The page number to return.</para>
         /// <list type="bullet">
-        /// <item><description>Pages start from page 1.</description></item>
-        /// <item><description>Default value: 1.</description></item>
+        /// <item><description><para>Starting value: 1</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 1</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +36,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page in a paged query.</para>
+        /// <para>The number of organization members to return per page.</para>
         /// <list type="bullet">
-        /// <item><description>Default value: 10.</description></item>
-        /// <item><description>Maximum value: 1,000.</description></item>
+        /// <item><description><para>Default value: 10</para>
+        /// </description></item>
+        /// <item><description><para>Maximum value: 1000</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

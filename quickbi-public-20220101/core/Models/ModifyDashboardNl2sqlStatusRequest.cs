@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ModifyDashboardNl2sqlStatusRequest : TeaModel {
         /// <summary>
+        /// <para>An array of dashboard IDs. Separate multiple IDs with commas.</para>
+        /// <remarks>
+        /// <para>Notice: The number of IDs cannot exceed 50.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string DashboardIds { get; set; }
 
         /// <summary>
+        /// <para>The status identifier. 0 indicates disabled and 1 indicates enabled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

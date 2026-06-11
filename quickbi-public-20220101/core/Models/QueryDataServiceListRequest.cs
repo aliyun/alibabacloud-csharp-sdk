@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Data service name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>测试sql</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

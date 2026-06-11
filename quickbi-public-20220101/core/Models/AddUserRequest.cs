@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddUserRequest : TeaModel {
         /// <summary>
-        /// <para>Aliyun account ID.</para>
-        /// <remarks>
-        /// <para>Warning: For versions of Quick BI released after December 31, 2024, AccountId will be a required parameter. Please modify your API before this date.</para>
-        /// </remarks>
-        /// <para>&lt;props=&quot;china&quot;&gt;Published only on the China site</para>
+        /// <para>The ID of the Alibaba Cloud account.&gt;Warning: The <c>AccountId</c> parameter will be required in Quick BI versions released after December 31, 2024. We recommend that you update your API calls to include this parameter before then.</para>
         /// 
         /// <b>Example:</b>
         /// <para>191476xxxxx23754</para>
@@ -26,10 +22,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Aliyun account name.</para>
+        /// <para>The name of the Alibaba Cloud account.</para>
         /// <list type="bullet">
-        /// <item><description>Note: If it is a sub-account, the format should be \&quot;primary account: sub-account\&quot;. For example: <a href="mailto:master_test@aliyun.com">master_test@aliyun.com</a>:subaccount</description></item>
-        /// <item><description>Format check: Maximum length of 50 characters.</description></item>
+        /// <item><description><para>For a sub-account, use the format <c>master account:sub-account</c>. Example: <c>master_test@aliyun.com:subaccount</c>.</para>
+        /// </description></item>
+        /// <item><description><para>The maximum length is 50 characters.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,12 +41,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Whether to assign the organization administrator role. Value range: </para>
+        /// <para>Specifies whether to assign the organization administrator role. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Yes </description></item>
-        /// <item><description>false: No</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
-        /// <para><notice>This parameter is deprecated and not recommended for use. It is invalid when RoleIds is provided.</notice></para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>This parameter is deprecated. It is ignored if <c>RoleIds</c> is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -64,12 +67,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>Whether to assign the organization permission administrator role. Value range: </para>
+        /// <para>Specifies whether to assign the permission administrator role. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Yes </description></item>
-        /// <item><description>false: No</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
-        /// <para><notice>This parameter is deprecated and not recommended for use. It is invalid when RoleIds is provided.</notice></para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>This parameter is deprecated. It is ignored if <c>RoleIds</c> is specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -79,31 +87,52 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Obsolete]
         public bool? AuthAdminUser { get; set; }
 
+        /// <summary>
+        /// <para>The Copilot modules to enable for the user. To enable multiple modules, specify their codes separated by a comma (,).</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>qreport</c>: Q Report</para>
+        /// </description></item>
+        /// <item><description><para><c>qExploreNum</c>: Q Explore</para>
+        /// </description></item>
+        /// <item><description><para><c>smartQAskNum</c>: Q\&amp;A with Data</para>
+        /// </description></item>
+        /// <item><description><para><c>smartQDevNum</c>: Q-assisted Building</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>qreport,qExploreNum</para>
+        /// </summary>
         [NameInMap("CopilotModules")]
         [Validation(Required=false)]
         public string CopilotModules { get; set; }
 
         /// <summary>
-        /// <para>Aliyun account nickname.</para>
+        /// <para>The user\&quot;s nickname.</para>
         /// <list type="bullet">
-        /// <item><description>Format check: Maximum length of 50 characters.</description></item>
-        /// <item><description>Special format validation: Chinese and English characters, numbers, _ \ / | () ] [</description></item>
+        /// <item><description><para>The maximum length is 50 characters.</para>
+        /// </description></item>
+        /// <item><description><para>The nickname can contain Chinese characters, letters, digits, and the following special characters: <c>_ \\ / | () []</c>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ddd</para>
+        /// <para>张三</para>
         /// </summary>
         [NameInMap("NickName")]
         [Validation(Required=false)]
         public string NickName { get; set; }
 
         /// <summary>
-        /// <para>Preset or custom organization role IDs bound to the user, separated by commas, with a maximum of 3. Value range:</para>
+        /// <para>The IDs of the predefined or custom organization roles to assign. You can specify up to three role IDs, separated by commas (,). Valid values for predefined roles:</para>
         /// <list type="bullet">
-        /// <item><description>Organization Administrator (preset role): 111111111</description></item>
-        /// <item><description>Permission Administrator (preset role): 111111112</description></item>
-        /// <item><description>Regular User (preset role): 111111113</description></item>
+        /// <item><description><para><c>111111111</c>: organization administrator</para>
+        /// </description></item>
+        /// <item><description><para><c>111111112</c>: permission administrator</para>
+        /// </description></item>
+        /// <item><description><para><c>111111113</c>: regular user</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,11 +143,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RoleIds { get; set; }
 
         /// <summary>
-        /// <para>The user type of the organization member. Value range:</para>
+        /// <para>The type of the organization member. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: Developer</description></item>
-        /// <item><description>2: Visitor</description></item>
-        /// <item><description>3: Analyst</description></item>
+        /// <item><description><para>1: developer</para>
+        /// </description></item>
+        /// <item><description><para>2: viewer</para>
+        /// </description></item>
+        /// <item><description><para>3: analyst</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

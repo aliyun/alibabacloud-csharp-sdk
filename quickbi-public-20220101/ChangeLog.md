@@ -1,3 +1,8 @@
+2026-06-11 Version: 1.17.0
+- Support API ClearDynamicTagCache.
+- Support API ListDynamicTag.
+
+
 2026-04-20 Version: 1.16.0
 - Support API AddWorksAuthorization.
 - Update API AddUser: add request parameters CopilotModules.

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListPortalMenuAuthorizationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of authorization details of the portal menu.</para>
+        /// <para>A list of authorization details for the BI portal menus.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListPortalMenuAuthorizationResponseBodyResult> Result { get; set; }
         public class ListPortalMenuAuthorizationResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The menu ID of the BI portal leaf node.</para>
+            /// <para>The ID of the leaf-node menu in the BI portal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>54kqgoa****</para>
@@ -37,13 +37,28 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string MenuId { get; set; }
 
             /// <summary>
-            /// <para>The details of the object to which the menu is authorized.</para>
+            /// <para>The details of the authorization objects for the menu.</para>
             /// </summary>
             [NameInMap("Receivers")]
             [Validation(Required=false)]
             public List<ListPortalMenuAuthorizationResponseBodyResultReceivers> Receivers { get; set; }
             public class ListPortalMenuAuthorizationResponseBodyResultReceivers : TeaModel {
                 /// <summary>
+                /// <para>The authorization type for the menu. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>1: View</para>
+                /// </description></item>
+                /// <item><description><para>11: Edit</para>
+                /// </description></item>
+                /// <item><description><para>3: Export and view</para>
+                /// </description></item>
+                /// <item><description><para>10: Manage data entry</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
                 /// </summary>
@@ -53,6 +68,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 
                 /// <summary>
                 /// <para>The ID of the authorization object.</para>
+                /// <remarks>
+                /// <list type="bullet">
+                /// <item><description><para>If the authorization object is an organization, this ID is the organization ID.</para>
+                /// </description></item>
+                /// <item><description><para>If the authorization object is a workspace, this ID is the workspace ID.</para>
+                /// </description></item>
+                /// </list>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>121344444790****</para>
@@ -64,8 +87,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <summary>
                 /// <para>The type of the authorization object. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: user</description></item>
-                /// <item><description>1: user group</description></item>
+                /// <item><description><para>0: User</para>
+                /// </description></item>
+                /// <item><description><para>1: User group</para>
+                /// </description></item>
+                /// <item><description><para>2: Organization</para>
+                /// </description></item>
+                /// <item><description><para>3: Workspace</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -78,10 +107,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>Whether only authorization is visible. Valid values:</para>
+            /// <para>Indicates whether the menu is visible only to authorized users. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Only the authorization is visible.</description></item>
-            /// <item><description>false: Both are visible.</description></item>
+            /// <item><description><para>true: The menu is visible only to authorized users.</para>
+            /// </description></item>
+            /// <item><description><para>false: The menu is visible to all users.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,10 +125,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,11 +10,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateUserRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the organization administrator. Valid values:</para>
+        /// <para>Whether to assign the organization administrator role to the user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para><c>true</c></para>
+        /// </description></item>
+        /// <item><description><para><c>false</c></para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>This parameter is deprecated and is ignored if RoleIds is also specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -27,11 +33,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? AdminUser { get; set; }
 
         /// <summary>
-        /// <para>Indicate whether the RAM user is a permission administrator. Valid values:</para>
+        /// <para>Whether to assign the permission administrator role to the user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para><c>true</c></para>
+        /// </description></item>
+        /// <item><description><para><c>false</c></para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>This parameter is deprecated and is ignored if RoleIds is also specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,15 +52,30 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public bool? AuthAdminUser { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>[
+        ///     {
+        ///         &quot;moduleType&quot;: &quot;smartQAskNum&quot;,
+        ///         &quot;status&quot;: 1
+        ///     },
+        ///     {
+        ///         &quot;moduleType&quot;: &quot;smartQDevNum&quot;,
+        ///         &quot;status&quot;: 0
+        ///     }
+        /// ]</para>
+        /// </summary>
         [NameInMap("CopilotModules")]
         [Validation(Required=false)]
         public string CopilotModules { get; set; }
 
         /// <summary>
-        /// <para>User status: </para>
+        /// <para>The user status:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: Active</description></item>
-        /// <item><description><b>true</b>: Inactive</description></item>
+        /// <item><description><para><b><c>false</c></b>: active</para>
+        /// </description></item>
+        /// <item><description><para><b><c>true</c></b>: inactive</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,21 +86,31 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? IsDeleted { get; set; }
 
         /// <summary>
-        /// <para>The nickname of the account.</para>
+        /// <para>The nickname of the user.</para>
         /// <list type="bullet">
-        /// <item><description>Format check: The value can be up to 50 characters in length.</description></item>
-        /// <item><description>Special format verification: Chinese and English digits_ \ / | () ] [</description></item>
+        /// <item><description><para>The nickname can be up to 50 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>The nickname can contain Chinese characters, letters, digits, and the following special characters: <c>_ \\ / | () ] [</c></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Xiao Zhang</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("NickName")]
         [Validation(Required=false)]
         public string NickName { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the preset or custom organization roles bound to the user, separated by English commas \&quot;,\&quot;, with a maximum of 3. The value range is as follows: - Organization Administrator (preset role): 111111111 - Permission Administrator (preset role): 111111112 - Regular User (preset role): 111111113</para>
+        /// <para>The IDs of the built-in or custom organization roles to assign to the user. Specify up to three comma-separated role IDs.</para>
+        /// <list type="bullet">
+        /// <item><description><para>organization administrator (built-in role): 111111111</para>
+        /// </description></item>
+        /// <item><description><para>permission administrator (built-in role): 111111112</para>
+        /// </description></item>
+        /// <item><description><para>standard user (built-in role): 111111113</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>111111111,456</para>
@@ -83,7 +120,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RoleIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user to be updated. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</para>
+        /// <para>The ID of the Quick BI user to update. This is not an Alibaba Cloud UID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,11 +131,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The type of user who is a member of the organization. Valid values:</para>
+        /// <para>The user type of the organization member. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1 : developer</description></item>
-        /// <item><description>2 : visitors</description></item>
-        /// <item><description>3 : Analyst</description></item>
+        /// <item><description><para><c>1</c>: developer</para>
+        /// </description></item>
+        /// <item><description><para><c>2</c>: viewer</para>
+        /// </description></item>
+        /// <item><description><para><c>3</c>: analyst</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

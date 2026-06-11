@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Attention</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>当前API返回的分页参数如TotalNum等即将下线，如有使用请及时修改</para>
             /// </summary>
             [NameInMap("Attention")]
             [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the work.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test report</para>
+                /// <para>测试报表</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The Alibaba Cloud account name of the work owner.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>李四</para>
                 /// </summary>
                 [NameInMap("OwnerName")]
                 [Validation(Required=false)]
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the workspace to which the work belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test Workspace</para>
+                /// <para>测试工作空间</para>
                 /// </summary>
                 [NameInMap("WorkspaceName")]
                 [Validation(Required=false)]

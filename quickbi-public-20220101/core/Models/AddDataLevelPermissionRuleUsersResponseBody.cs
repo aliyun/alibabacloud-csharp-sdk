@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddDataLevelPermissionRuleUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</para>
@@ -20,7 +20,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The execution result of the interface. Valid values:\n\n*   true: The request was successful.\n*   false: The request failed.\n</para>
+        /// <para>The result of the API operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request fails.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +36,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? Result { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:\n\n*   true: The request was successful.\n*   false: The request failed.\n</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The request is successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request fails.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

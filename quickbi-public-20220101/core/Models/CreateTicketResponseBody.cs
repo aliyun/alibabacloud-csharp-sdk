@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string Result { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Value range: </para>
+        /// <para>Indicates whether the request was successful. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>true: Request succeeded </description></item>
-        /// <item><description>false: Request failed</description></item>
+        /// <item><description><para>true: Request succeeded</para>
+        /// </description></item>
+        /// <item><description><para>false: Request failed</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

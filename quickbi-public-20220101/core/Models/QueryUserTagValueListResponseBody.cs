@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Tag name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Position</para>
+            /// <para>职位</para>
             /// </summary>
             [NameInMap("TagName")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Supervisor</para>
+            /// <para>主管</para>
             /// </summary>
             [NameInMap("TagValue")]
             [Validation(Required=false)]

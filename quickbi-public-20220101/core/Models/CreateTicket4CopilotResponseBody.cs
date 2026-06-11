@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class CreateTicket4CopilotResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D787************05DF8D885</para>
+        /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>ID of the Smart Q module to be embedded.</para>
+        /// <para>The generated ticket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f5eeb52e-d9c2-4a8b-80e3-47ab55c2****</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string Result { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Possible values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request succeeded</description></item>
-        /// <item><description>false: The request failed</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

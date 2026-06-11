@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D78*********DF8D885</para>
+        /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

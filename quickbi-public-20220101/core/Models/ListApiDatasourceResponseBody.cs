@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the API data source.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test data source</para>
+                /// <para>测试数据源</para>
                 /// </summary>
                 [NameInMap("ShowName")]
                 [Validation(Required=false)]

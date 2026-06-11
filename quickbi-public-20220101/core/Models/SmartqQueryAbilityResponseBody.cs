@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class SmartqQueryAbilityResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D787E1A3-A************2B05DF8D885</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public SmartqQueryAbilityResponseBodyResult Result { get; set; }
         public class SmartqQueryAbilityResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Suggested chart type.</para>
+            /// <para>The recommended chart type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NEW_TABLE</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ChartType { get; set; }
 
             /// <summary>
-            /// <para>Summary information.</para>
+            /// <para>The summary.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Schedule</para>
+            /// <para>test</para>
             /// 
             /// <b>if can be null:</b>
             /// <c>true</c>
@@ -49,12 +49,15 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             [Validation(Required=false)]
             public string ConclusionText { get; set; }
 
+            /// <summary>
+            /// <para>The list of data that is returned only in multi-step scenarios. Each element corresponds to a set of chart data.</para>
+            /// </summary>
             [NameInMap("DataList")]
             [Validation(Required=false)]
             public List<string> DataList { get; set; }
 
             /// <summary>
-            /// <para>Visualized logical SQL.</para>
+            /// <para>The visual logical SQL statement.</para>
             /// 
             /// <b>Example:</b>
             /// <para>select * ****</para>
@@ -64,14 +67,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string LogicSql { get; set; }
 
             /// <summary>
-            /// <para>List of column tuple types.</para>
+            /// <para>A list of column tuple types.</para>
             /// </summary>
             [NameInMap("MetaType")]
             [Validation(Required=false)]
             public List<SmartqQueryAbilityResponseBodyResultMetaType> MetaType { get; set; }
             public class SmartqQueryAbilityResponseBodyResultMetaType : TeaModel {
                 /// <summary>
-                /// <para>Column tuple name.</para>
+                /// <para>The name of the column tuple.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Polar***STPS</para>
@@ -81,6 +84,17 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The type of the metadata. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>Dimension</para>
+                /// </description></item>
+                /// <item><description><para>Measure</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Dimension</para>
+                /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
                 /// </summary>
@@ -89,7 +103,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Column tuple type.</para>
+                /// <para>The type of the column tuple.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string</para>
@@ -101,14 +115,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
-            /// <para>Array of data value lists.</para>
+            /// <para>An array of data value lists.</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
             public List<SmartqQueryAbilityResponseBodyResultValues> Values { get; set; }
             public class SmartqQueryAbilityResponseBodyResultValues : TeaModel {
                 /// <summary>
-                /// <para>Data values for each row.</para>
+                /// <para>The data values in a row.</para>
                 /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
@@ -122,7 +136,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
-        /// <para>Whether the operation was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

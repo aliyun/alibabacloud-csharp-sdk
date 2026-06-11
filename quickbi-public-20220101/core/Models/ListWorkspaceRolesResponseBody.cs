@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Role name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Space administrator</para>
+            /// <para>空间管理员</para>
             /// </summary>
             [NameInMap("RoleName")]
             [Validation(Required=false)]

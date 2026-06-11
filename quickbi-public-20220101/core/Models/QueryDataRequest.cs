@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDataRequest : TeaModel {
         /// <summary>
-        /// <para>The API ID in the data service. For more information, see: <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</para>
+        /// <para>The API ID in <a href="https://help.aliyun.com/document_detail/144980.html">DataService Studio</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,18 +21,18 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string ApiId { get; set; }
 
         /// <summary>
-        /// <para>The query conditions for the data service, passed in as Key and Value pairs. A map-type string. Here, Key is the name of the request parameter, and Value is the value of the request parameter. Key and Value must appear in pairs.</para>
+        /// <para>Filter conditions as a JSON map string. Each key is a request parameter name, and each value is the parameter value.</para>
         /// <para><b>Note:</b></para>
         /// <list type="bullet">
-        /// <item><description><para>When the operator of the request parameter is set to <b>enumeration filtering</b>, the value can contain multiple values, and the format of the value should be a JSON-formatted List. For example: <c>area=[&quot;East China&quot;,&quot;North China&quot;,&quot;South China&quot;]</c></para>
+        /// <item><description><para>If the operator of a request parameter is set to <b>Enumeration Filter</b>, the value can contain multiple values. In this case, the value must be in the format of a JSON list. For example: <c>area=[&quot;East China&quot;,&quot;North China&quot;,&quot;South China&quot;]</c></para>
         /// </description></item>
-        /// <item><description><para>For dates, different formats are provided based on the type:</para>
+        /// <item><description><para>For dates, use the following formats based on the date type:</para>
         /// <list type="bullet">
         /// <item><description><para>Year: 2019</para>
         /// </description></item>
         /// <item><description><para>Quarter: 2019Q1</para>
         /// </description></item>
-        /// <item><description><para>Month: 201901 (with leading zero)</para>
+        /// <item><description><para>Month: 201901 (with a leading zero)</para>
         /// </description></item>
         /// <item><description><para>Week: 2019-52</para>
         /// </description></item>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>{ &quot;area&quot;: [&quot;test&quot;, &quot;test&quot;],  &quot;shopping_date&quot;: &quot;2019Q1&quot;,  }</para>
         /// </summary>
         [NameInMap("Conditions")]
         [Validation(Required=false)]
         public string Conditions { get; set; }
 
         /// <summary>
-        /// <para>A list of return parameter names, in a List-type string.</para>
+        /// <para>A JSON array of field names to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;area&quot;, &quot;city&quot;, &quot;price&quot;, &quot;date&quot;]</para>
@@ -66,13 +66,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string ReturnFields { get; set; }
 
         /// <summary>
-        /// <para>The userId in Quick BI. For how to obtain the userId, see: <a href="https://next.api.aliyun.com/document/quickbi-public/2022-01-01/QueryUserInfoByAccount">Query User Information by Account Interface</a></para>
+        /// <para>The Quick BI user ID. Obtain this value from <a href="https://next.api.aliyun.com/document/quickbi-public/2022-01-01/QueryUserInfoByAccount">QueryUserInfoByAccount</a>.</para>
         /// <remarks>
-        /// <para>This parameter is used to specify the identity of the person using the data service, which can be used in conjunction with the row and column permission configurations of the dataset.</para>
+        /// <para>Specifies the user identity for DataService Studio, used with row-level and column-level permission configurations.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>Notice: If the parameter is not passed, an empty string is passed, or null is passed, the default userId will be the owner of the current Quick BI organization.</notice></para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>If omitted, empty, or null, defaults to the Quick BI organization owner\&quot;s user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b5d8fd9348cc4327****afb604</para>

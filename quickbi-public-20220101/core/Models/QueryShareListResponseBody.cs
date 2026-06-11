@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the sharing target.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>小张</para>
             /// </summary>
             [NameInMap("ShareToName")]
             [Validation(Required=false)]

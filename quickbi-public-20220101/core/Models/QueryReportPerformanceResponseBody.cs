@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>自定义模板</para>
             /// </summary>
             [NameInMap("WorkspaceName")]
             [Validation(Required=false)]

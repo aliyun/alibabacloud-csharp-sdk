@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>BCE45E6D-****-4F94-86BB-****2B1615FF</para>
+        /// <para>BCE45E6D-9304-4F94-86BB-5A772B1615FF</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Nickname of the organization member.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test User</para>
+                /// <para>测试用户</para>
                 /// </summary>
                 [NameInMap("NickName")]
                 [Validation(Required=false)]

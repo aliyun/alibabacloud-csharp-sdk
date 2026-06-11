@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class DeleteDataLevelRuleConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the dataset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CubeId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the row-level permission rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Agent nickname.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>smartq</para>
+        /// <para>小Q</para>
         /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
@@ -37,12 +37,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Map&lt;String,Object&gt; data=new HashMap&lt;&gt;();
-        ///         data.put(&quot;allTheme&quot;,true);
-        ///         //data.put(&quot;allCube&quot;,true);
-        ///         //data.put(&quot;themes&quot;,Lists.newArrayList(&quot;1111&quot;,&quot;22222&quot;));
-        ///         //data.put(&quot;llmCubes&quot;,Lists.newArrayList(&quot;33333&quot;,&quot;44444&quot;));
-        ///         request.setDataRange(JSON.toJSONString(data));</para>
+        /// <para>如果客户要授权所有分析主题，则 {allTheme: true}
+        /// 如果客户要授权所有问数资源，则 {allCube: true}
+        /// 如果客户要授权部分问数资源，则 {llmCubes: [12314,12345]}
+        /// 如果客户要授权部分分析主题，则 {themes: [12314,12345]}</para>
         /// </summary>
         [NameInMap("DataRange")]
         [Validation(Required=false)]
@@ -52,7 +50,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Module name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>smartq</para>
+        /// <para>小Q</para>
         /// </summary>
         [NameInMap("ModuleName")]
         [Validation(Required=false)]

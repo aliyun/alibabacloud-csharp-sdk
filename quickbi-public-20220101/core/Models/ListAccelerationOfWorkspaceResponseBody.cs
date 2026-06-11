@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListAccelerationOfWorkspaceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D787E****************05DF8D885</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The acceleration task model.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public ListAccelerationOfWorkspaceResponseBodyResult Result { get; set; }
         public class ListAccelerationOfWorkspaceResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <para>An array of acceleration task information.</para>
+            /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<ListAccelerationOfWorkspaceResponseBodyResultData> Data { get; set; }
             public class ListAccelerationOfWorkspaceResponseBodyResultData : TeaModel {
                 /// <summary>
+                /// <para>The name of the creator.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>system</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string CreatorName { get; set; }
 
                 /// <summary>
+                /// <para>The dataset ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>d14e*********fef8de29fd</para>
                 /// </summary>
@@ -41,11 +53,19 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public string CubeId { get; set; }
 
+                /// <summary>
+                /// <para>The dataset name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
                 [NameInMap("CubeName")]
                 [Validation(Required=false)]
                 public string CubeName { get; set; }
 
                 /// <summary>
+                /// <para>The time when acceleration was enabled.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20250911 00:00:00</para>
                 /// </summary>
@@ -54,6 +74,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string EnableQuickindexTime { get; set; }
 
                 /// <summary>
+                /// <para>The task history ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>QWDAASG*******8SAD</para>
                 /// </summary>
@@ -62,6 +84,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string JobHistoryId { get; set; }
 
                 /// <summary>
+                /// <para>The acceleration task ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>b30b74**********b3b</para>
                 /// </summary>
@@ -70,6 +94,22 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string JobId { get; set; }
 
                 /// <summary>
+                /// <para>The status of the task. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>0: Pending</para>
+                /// </description></item>
+                /// <item><description><para>1: Running</para>
+                /// </description></item>
+                /// <item><description><para>2: Succeeded</para>
+                /// </description></item>
+                /// <item><description><para>3: Failed</para>
+                /// </description></item>
+                /// <item><description><para>4: Canceled</para>
+                /// </description></item>
+                /// <item><description><para>5: Warning</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
                 /// </summary>
@@ -78,6 +118,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public int? JobStatus { get; set; }
 
                 /// <summary>
+                /// <para>The time when the task was last modified.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20250911 00:00:00</para>
                 /// </summary>
@@ -86,6 +128,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string LastModifyTime { get; set; }
 
                 /// <summary>
+                /// <para>The size.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>47045632</para>
                 /// </summary>
@@ -96,6 +140,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             }
 
             /// <summary>
+            /// <para>The next page. A value of NULL or 0 indicates that there is no next page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>null</para>
             /// </summary>
@@ -104,6 +150,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? Next { get; set; }
 
             /// <summary>
+            /// <para>The page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -112,6 +160,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageNum { get; set; }
 
             /// <summary>
+            /// <para>The number of rows per page that you set when you call the operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -120,6 +170,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The previous page. A value of NULL or 0 indicates that there is no previous page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -128,6 +180,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? Pre { get; set; }
 
             /// <summary>
+            /// <para>The total number of rows.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>18</para>
             /// </summary>
@@ -136,6 +190,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? TotalNum { get; set; }
 
             /// <summary>
+            /// <para>The total number of pages.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -146,6 +202,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

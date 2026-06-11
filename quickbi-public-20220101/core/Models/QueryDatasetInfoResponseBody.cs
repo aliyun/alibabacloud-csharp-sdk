@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Test directory</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The name of the directory.</para>
+                /// <para>测试目录</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The path of the directory ID, for example, aa/bb/cc/dd.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The path name of the directory ID, for example, one-level directory /two-level directory.</para>
+                /// <para>测试目录</para>
                 /// </summary>
                 [NameInMap("PathName")]
                 [Validation(Required=false)]
@@ -543,7 +543,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The unique ID of the data source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The name of the dataset owner.</para>
+            /// <para>大娃</para>
             /// </summary>
             [NameInMap("OwnerName")]
             [Validation(Required=false)]
@@ -577,7 +577,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Big Baby</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The name of the workspace in which the dataset resides.</para>
+            /// <para>测试空间</para>
             /// </summary>
             [NameInMap("WorkspaceName")]
             [Validation(Required=false)]

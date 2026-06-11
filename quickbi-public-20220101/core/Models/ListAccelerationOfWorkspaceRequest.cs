@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListAccelerationOfWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>The user ID in Quick BI. This is not your Alibaba Cloud account ID. Call the QueryUserInfoByAccount operation to obtain the user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1***************139</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CreatorId { get; set; }
 
         /// <summary>
+        /// <para>The name of the dataset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CubeName { get; set; }
 
         /// <summary>
+        /// <para>The page number. If this parameter is left empty, the default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -34,6 +40,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of rows on each page for a paged query.</para>
+        /// <list type="bullet">
+        /// <item><description>Default value: 10.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -42,6 +53,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

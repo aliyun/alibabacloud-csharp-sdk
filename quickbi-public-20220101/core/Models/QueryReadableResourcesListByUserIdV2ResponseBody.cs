@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Work remarks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>asdas</para>
+            /// <para>备注</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the directory to which it belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>asdas</para>
+                /// <para>测试目录</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The hierarchical structure of directory names, separated by『/』.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>asdas/safas</para>
+                /// <para>一级目录/二级目录</para>
                 /// </summary>
                 [NameInMap("PathName")]
                 [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Alibaba Cloud account name of the modifier.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>asdas</para>
+            /// <para>李四</para>
             /// </summary>
             [NameInMap("ModifyName")]
             [Validation(Required=false)]
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Alibaba Cloud account name of the owner.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>asdas</para>
+            /// <para>张三</para>
             /// </summary>
             [NameInMap("OwnerName")]
             [Validation(Required=false)]
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the work.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>asdas</para>
+            /// <para>测试报表</para>
             /// </summary>
             [NameInMap("WorkName")]
             [Validation(Required=false)]
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the workspace to which the work belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>asdas</para>
+            /// <para>测试工作空间</para>
             /// </summary>
             [NameInMap("WorkspaceName")]
             [Validation(Required=false)]

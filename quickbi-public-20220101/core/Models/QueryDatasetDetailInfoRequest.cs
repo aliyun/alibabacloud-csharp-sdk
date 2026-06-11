@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryDatasetDetailInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the training dataset that you want to remove from the specified custom linguistic model.</para>
+        /// <para>The dataset ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

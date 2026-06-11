@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the add-on.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>线图</para>
             /// </summary>
             [NameInMap("ComponentName")]
             [Validation(Required=false)]
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>测试空间</para>
             /// </summary>
             [NameInMap("WorkspaceName")]
             [Validation(Required=false)]

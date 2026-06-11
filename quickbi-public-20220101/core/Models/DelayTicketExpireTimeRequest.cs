@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>The time to postpone.</para>
         /// <list type="bullet">
-        /// <item><description>Unit: minutes. Valid values: 0 to 240. Unit: minutes. Valid values: 4 hours.</description></item>
-        /// <item><description>Expired bills cannot be extended.</description></item>
+        /// <item><description><para>Unit: minutes. Valid values: 0 to 240. Unit: minutes. Valid values: 4 hours.</para>
+        /// </description></item>
+        /// <item><description><para>Expired bills cannot be extended.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

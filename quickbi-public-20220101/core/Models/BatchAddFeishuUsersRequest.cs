@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Information of the users to be added</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;ad<b><b>fd&quot;: &quot;TEST&quot;, &quot;82</b></b>5a&quot;: &quot;TEST&quot;}&quot;</para>
+        /// <para>{&quot;ad<b><b>fd&quot;: &quot;张三&quot;, &quot;82</b></b>5a&quot;: &quot;李四&quot;}&quot;</para>
         /// </summary>
         [NameInMap("FeishuUsers")]
         [Validation(Required=false)]

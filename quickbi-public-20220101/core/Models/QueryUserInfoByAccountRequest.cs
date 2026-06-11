@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryUserInfoByAccountRequest : TeaModel {
         /// <summary>
-        /// <para>Enter the name or ID of the Alibaba Cloud account that you want to query.</para>
+        /// <para>The Alibaba Cloud account name or Alibaba Cloud ID of the user.</para>
         /// <list type="bullet">
-        /// <item><description><para>When you enter an account name:</para>
+        /// <item><description><para>If you enter an account name:</para>
         /// <list type="bullet">
-        /// <item><description>If the organization user is a master account, such as main_account, the query account format is master account. That is, the main account main_account to be entered.</description></item>
-        /// <item><description>If the organization user is a RAM user, such as a <a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>, the query account format is the head of the RAM user, that is, the RAM user to be entered is zhangsan.</description></item>
+        /// <item><description><para>If the organization member is a root account, such as <c>main_account</c>, enter the root account name. For example, <c>main_account</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If the organization member is a RAM user, such as <c>zhangsan@test.onaliyun.com</c>, enter the prefix of the username before the at sign (@). For example, <c>zhangsan</c>.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>ID:</para>
+        /// <item><description><para>If you enter an Alibaba Cloud ID:</para>
         /// <list type="bullet">
-        /// <item><description>Enter the UID of the account to query the account information.</description></item>
+        /// <item><description>Enter the complete user ID (UID) of the account.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string Account { get; set; }
 
         /// <summary>
-        /// <para>When a duplicate error occurs while querying the sub-account, enter the primary account\&quot;s username, for example, <a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>.</para>
+        /// <para>To resolve a &quot;duplicate user&quot; error when querying a RAM user, specify the name of the root account to which the user belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a></para>

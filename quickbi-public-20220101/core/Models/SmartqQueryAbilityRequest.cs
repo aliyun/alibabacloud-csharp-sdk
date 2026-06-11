@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class SmartqQueryAbilityRequest : TeaModel {
         /// <summary>
-        /// <para>Dataset ID.</para>
+        /// <para>The ID of the dataset. To obtain the ID, navigate to \<em>\<em>Workbench\</em>\</em> &gt; \<em>\<em>Dataset\</em>\</em> in the Quick BI console. Open the dataset and find the \<c>cubeId\\</c> in the URL.</para>
+        /// <para>In multi-table scenarios, this parameter must be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7c7223ae-****-3c744528014b</para>
@@ -20,17 +21,19 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CubeId { get; set; }
 
         /// <summary>
+        /// <para>A list of dataset IDs. The model selects one or more tables from the list to generate an answer based on the question. This parameter is required for multi-table scenarios and is not used for single-table scenarios.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>123124</para>
+        /// <para>7c7****-3c744528014b,a876asd***yhashd2</para>
         /// </summary>
         [NameInMap("MultipleCubeIds")]
         [Validation(Required=false)]
         public string MultipleCubeIds { get; set; }
 
         /// <summary>
-        /// <para>User ID.</para>
+        /// <para>The ID of the user.</para>
         /// <remarks>
-        /// <para>Notice: If this field is not filled, the data will be queried by default as the organization owner.</para>
+        /// <para>Notice: If you do not specify this parameter, data is queried as the organization owner by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,11 +44,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>Question text.</para>
+        /// <para>The question in text format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This year\&quot;s sales data</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("UserQuestion")]
         [Validation(Required=false)]

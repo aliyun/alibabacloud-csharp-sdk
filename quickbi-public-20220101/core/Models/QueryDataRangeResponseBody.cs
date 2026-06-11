@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>D787E1A3-A93C-****-B626-C2B05DF8D885</para>
+        /// <para>D787E1A3-A93C-424A-B626-C2B05DF8D885</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Alias of the LlmCube resource.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>测试</para>
                 /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Nickname of the creator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>zhuge</para>
+                /// <para>诸葛</para>
                 /// </summary>
                 [NameInMap("CreateUser")]
                 [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     /// <para>Alias of the LLM cube resource.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>test</para>
+                    /// <para>测哈</para>
                     /// </summary>
                     [NameInMap("Alias")]
                     [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                     /// <para>Nickname of the creator.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>zhuge</para>
+                    /// <para>诸葛</para>
                     /// </summary>
                     [NameInMap("CreateUser")]
                     [Validation(Required=false)]
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Nickname of the creator.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>zhuge</para>
+                /// <para>诸葛</para>
                 /// </summary>
                 [NameInMap("CreateUser")]
                 [Validation(Required=false)]
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Nickname of the analysis theme.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test theme</para>
+                /// <para>测试主题</para>
                 /// </summary>
                 [NameInMap("ThemeName")]
                 [Validation(Required=false)]

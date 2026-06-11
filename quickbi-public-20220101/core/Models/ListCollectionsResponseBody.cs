@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the work.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>奇异博士</para>
             /// </summary>
             [NameInMap("WorksName")]
             [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Workspace Name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>测试工作空间</para>
             /// </summary>
             [NameInMap("WorkspaceName")]
             [Validation(Required=false)]

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Keyword for the username or nickname of the user group member.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>小刘</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]

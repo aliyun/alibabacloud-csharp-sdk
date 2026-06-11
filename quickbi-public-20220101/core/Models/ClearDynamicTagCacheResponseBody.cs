@@ -8,36 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
-    public class AddDataSourceResponseBody : TeaModel {
+    public class ClearDynamicTagCacheResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>D787E1********DF8D885</para>
+        /// <para>78C17888****C462E57A95</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data source.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>472b241b-c651-<b><b>-</b></b>-ee719d6faf45</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public string Result { get; set; }
+        public bool? Result { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
-        /// </description></item>
-        /// </list>
-        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

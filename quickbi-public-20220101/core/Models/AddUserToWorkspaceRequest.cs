@@ -10,13 +10,20 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class AddUserToWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The preset space role ID. Value range:</para>
+        /// <para>The ID of the role in the workspace. Predefined roles:</para>
         /// <list type="bullet">
-        /// <item><description>25: Space Administrator</description></item>
-        /// <item><description>26: Space Developer</description></item>
-        /// <item><description>27: Space Analyst</description></item>
-        /// <item><description>30: Space Viewer</description></item>
+        /// <item><description><para>25: workspace administrator</para>
+        /// </description></item>
+        /// <item><description><para>26: workspace developer</para>
+        /// </description></item>
+        /// <item><description><para>27: workspace analyst</para>
+        /// </description></item>
+        /// <item><description><para>30: workspace viewer</para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>Custom role IDs are supported in version 6.0.3 and later.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

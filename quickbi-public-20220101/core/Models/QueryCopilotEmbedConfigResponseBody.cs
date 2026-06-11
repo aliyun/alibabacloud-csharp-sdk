@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Robot\&quot;s nickname.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>little Q</para>
+            /// <para>小Q</para>
             /// </summary>
             [NameInMap("AgentName")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Nickname of the creator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>zhangsan</para>
+            /// <para>诸葛</para>
             /// </summary>
             [NameInMap("CreateUserName")]
             [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Module name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>little Q</para>
+            /// <para>小Q</para>
             /// </summary>
             [NameInMap("ModuleName")]
             [Validation(Required=false)]

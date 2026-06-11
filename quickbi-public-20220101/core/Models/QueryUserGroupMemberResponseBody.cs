@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Name or nickname of the user group or its member.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>小刘的测试用户组</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Name of the parent user group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>财务组</para>
             /// </summary>
             [NameInMap("ParentUserGroupName")]
             [Validation(Required=false)]

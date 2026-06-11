@@ -10,20 +10,22 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class QueryOrganizationWorkspaceListRequest : TeaModel {
         /// <summary>
-        /// <para>Keyword for the workspace name.</para>
+        /// <para>The keyword for searching workspaces.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>程序</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>Current page number of the workspace list:</para>
+        /// <para>The page number to return.</para>
         /// <list type="bullet">
-        /// <item><description>Starting value: 1</description></item>
-        /// <item><description>Default value: 1</description></item>
+        /// <item><description><para>Start value: 1</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 1</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +36,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Number of rows per page in a paginated query:</para>
+        /// <para>The number of workspaces per page.</para>
         /// <list type="bullet">
-        /// <item><description>Default value: 10</description></item>
-        /// <item><description>Maximum value: 1000</description></item>
+        /// <item><description><para>Default value: 10</para>
+        /// </description></item>
+        /// <item><description><para>Maximum value: 1000</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>User ID in Quick BI.</para>
+        /// <para>The user ID in Quick BI.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fe67f61a35a94b7da1a34ba174a7****</para>

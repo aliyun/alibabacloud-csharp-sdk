@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>Keyword of the name of the work.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test report</para>
+        /// <para>测试报表</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]

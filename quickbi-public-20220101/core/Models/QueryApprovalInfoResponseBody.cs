@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Applicant\&quot;s nickname.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Li Fei</para>
+                /// <para>李飞</para>
                 /// </summary>
                 [NameInMap("ApplicantName")]
                 [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Application reason.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Development needs</para>
+                /// <para>开发需要</para>
                 /// </summary>
                 [NameInMap("ApplyReason")]
                 [Validation(Required=false)]
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Handling reason.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Development needs</para>
+                /// <para>开发需要</para>
                 /// </summary>
                 [NameInMap("HandleReason")]
                 [Validation(Required=false)]
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the resource for which permission is requested (e.g., report name, space name...).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test Resources</para>
+                /// <para>测试资源</para>
                 /// </summary>
                 [NameInMap("ResourceName")]
                 [Validation(Required=false)]
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the workspace.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test Workspace</para>
+                /// <para>测试工作空间</para>
                 /// </summary>
                 [NameInMap("WorkspaceName")]
                 [Validation(Required=false)]

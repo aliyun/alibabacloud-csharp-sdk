@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Nickname of the organization member.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test user</para>
+                /// <para>测试用户</para>
                 /// </summary>
                 [NameInMap("NickName")]
                 [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Workspace name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test space</para>
+                /// <para>测试空间</para>
                 /// </summary>
                 [NameInMap("WorkspaceName")]
                 [Validation(Required=false)]

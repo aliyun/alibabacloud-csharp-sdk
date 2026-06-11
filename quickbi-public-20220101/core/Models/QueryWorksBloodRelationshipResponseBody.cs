@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the component.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Line</para>
+            /// <para>线图</para>
             /// </summary>
             [NameInMap("ComponentName")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Chinese name of the component type</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ddd</para>
+            /// <para>交叉表</para>
             /// </summary>
             [NameInMap("ComponentTypeCnName")]
             [Validation(Required=false)]
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the owning location.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Column (Measure)</para>
+                /// <para>列（度量）</para>
                 /// </summary>
                 [NameInMap("AreaName")]
                 [Validation(Required=false)]
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>Calculate field expression.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>BI_DATEADD([date], 100, \&quot;day\&quot;)</para>
+                /// <para>BI_DATEADD([时间], 100, \&quot;day\&quot;)</para>
                 /// </summary>
                 [NameInMap("Expression")]
                 [Validation(Required=false)]

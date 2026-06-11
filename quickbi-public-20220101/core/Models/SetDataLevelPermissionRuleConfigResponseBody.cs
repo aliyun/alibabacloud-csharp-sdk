@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         ///     },
         ///     &quot;ruleId&quot;: &quot;3971fa8e-f7e0-</b></b>-b6e3-5b3167dd7247&quot;,
         ///     &quot;ruleLevelType&quot;: &quot;COLUMN_LEVEL&quot;,
-        ///     &quot;ruleName&quot;: &quot;test&quot;,
+        ///     &quot;ruleName&quot;: &quot;name&quot;,
         ///     &quot;ruleTargetScope&quot;: &quot;ALL&quot;
         /// }</para>
         /// </summary>
@@ -50,8 +50,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. The value range is as follows:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request succeeded</description></item>
-        /// <item><description>false: The request failed</description></item>
+        /// <item><description><para>true: The request succeeded</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

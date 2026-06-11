@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Product Director</para>
+        /// <para>产品总监</para>
         /// </summary>
         [NameInMap("TagValue")]
         [Validation(Required=false)]

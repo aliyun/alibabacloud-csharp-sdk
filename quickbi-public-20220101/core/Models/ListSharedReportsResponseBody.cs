@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the work.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test report</para>
+                /// <para>测试报表</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The Alibaba Cloud account name of the work owner.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test account</para>
+                /// <para>test账号</para>
                 /// </summary>
                 [NameInMap("OwnerName")]
                 [Validation(Required=false)]
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the workspace to which the work belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Test Workspace</para>
+                /// <para>测试工作空间</para>
                 /// </summary>
                 [NameInMap("WorkspaceName")]
                 [Validation(Required=false)]
